@@ -1,0 +1,424 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="report-form-container">
+    <h2>Submit New Report</h2>
+    <form action="{{ url_for('citizen.submit_report') }}" method="POST" enctype="multipart/form-data" id="reportForm">
+        <div class="form-group">
+            <label for="title">Issue Title</label>
+            <input type="text" name="title" id="title" class="form-control" required placeholder="Brief title of the issue">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select name="category" id="category" class="form-control" required>
+                    <option value="">Select Category</option>
+                    <option value="Roads">Roads & Potholes</option>
+                    <option value="Water">Water Supply</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="Sanitation">Sanitation & Garbage</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority" class="form-control" required>
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                    <option value="critical">Critical</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Issue Description</label>
+            <textarea name="description" id="description" class="form-control" rows="4" required placeholder="Provide details about the issue..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Location</label>
+            <p class="text-muted">Location will be auto-fetched, but you can adjust it on the map.</p>
+            <div id="map" style="height: 350px; margin-bottom: 1rem; border-radius: 8px;"></div>
+            <div class="form-row">
+                <input type="hidden" name="latitude" id="latitude">
+                <input type="hidden" name="longitude" id="longitude">
+                <div class="form-group">
+                    <label for="city">City/District</label>
+                    <input type="text" name="city" id="city" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" name="state" id="state" class="form-control" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Upload Images (Max 3, Max 5MB each)</label>
+            <div class="image-actions" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                <button type="button" id="openCamera" class="btn btn-secondary"><i class="fas fa-camera"></i> Live Geo-Camera</button>
+                <label class="btn btn-info" style="margin: 0; cursor: pointer;">
+                    <i class="fas fa-upload"></i> Upload Files
+                    <input type="file" id="imageInput" multiple accept="image/*" style="display: none;">
+                </label>
+            </div>
+            
+            <!-- Camera Container -->
+            <div id="cameraContainer" style="display: none; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1rem; background: #000; padding: 1rem; border-radius: 8px;">
+                <video id="video" width="100%" height="auto" autoplay playsinline style="border-radius: 4px;"></video>
+                <div class="camera-btns">
+                    <button type="button" id="captureBtn" class="btn btn-success">Capture Photo</button>
+                    <button type="button" id="switchCamera" class="btn btn-info"><i class="fas fa-sync"></i> Switch</button>
+                    <button type="button" id="closeCamera" class="btn btn-danger">Close Camera</button>
+                </div>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+
+            <div id="image-preview" class="preview-container"></div>
+            <!-- Hidden inputs to store file objects for submission -->
+            <div id="hidden-file-container"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Voice Note</label>
+            <div class="voice-controls">
+                <button type="button" id="startRecord" class="btn btn-secondary"><i class="fas fa-microphone"></i> Record</button>
+                <button type="button" id="stopRecord" class="btn btn-danger" disabled><i class="fas fa-stop"></i> Stop</button>
+                <div id="recordingStatus" class="recording-status"></div>
+            </div>
+            <div class="or-separator">OR upload file</div>
+            <input type="file" name="voice" id="voiceFile" class="form-control" accept="audio/*">
+            <div id="audio-preview-container" class="preview-container" style="display:none; margin-top: 1rem;">
+                <audio id="audioPlayback" controls></audio>
+                <button type="button" id="removeAudio" class="btn btn-sm btn-danger">Remove</button>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Report</button>
+    </form>
+</div>
+
+<style>
+    .report-form-container { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow); max-width: 850px; margin: 0 auto; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .preview-container { display: flex; gap: 1rem; margin-top: 0.5rem; flex-wrap: wrap; }
+    .preview-item { position: relative; width: 120px; height: 120px; }
+    .preview-img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
+    .remove-preview { position: absolute; top: -5px; right: -5px; background: red; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; border: none; }
+    .voice-controls { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .recording-status { color: var(--danger-color); font-weight: bold; }
+    .or-separator { text-align: center; margin: 0.5rem 0; color: #888; font-size: 0.9rem; }
+    .btn-lg { padding: 1rem; font-size: 1.2rem; margin-top: 2rem; }
+    .camera-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .disabled { opacity: 0.6; cursor: not-allowed !important; pointer-events: none; }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    // --- Mapping Logic ---
+    let map, marker;
+    let currentLat = 0, currentLng = 0;
+
+    function initMap() {
+        const defaultLocation = [22.5726, 88.3639];
+        map = L.map('map').setView(defaultLocation, 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        marker = L.marker(defaultLocation, { draggable: true }).addTo(map);
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const pos = [position.coords.latitude, position.coords.longitude];
+                currentLat = pos[0];
+                currentLng = pos[1];
+                map.setView(pos, 15);
+                marker.setLatLng(pos);
+                updateLocationFields(pos[0], pos[1]);
+            });
+        }
+        marker.on('dragend', (e) => {
+            const pos = e.target.getLatLng();
+            currentLat = pos.lat;
+            currentLng = pos.lng;
+            updateLocationFields(pos.lat, pos.lng);
+        });
+        map.on('click', (e) => {
+            marker.setLatLng(e.latlng);
+            currentLat = e.latlng.lat;
+            currentLng = e.latlng.lng;
+            updateLocationFields(e.latlng.lat, e.latlng.lng);
+        });
+    }
+
+    function updateLocationFields(lat, lng) {
+        document.getElementById("latitude").value = lat;
+        document.getElementById("longitude").value = lng;
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.address) {
+                    document.getElementById("city").value = data.address.city || data.address.town || data.address.village || data.address.district || "";
+                    document.getElementById("state").value = data.address.state || "";
+                }
+            });
+    }
+
+    // --- Image & Geo-Camera Logic ---
+    let capturedFiles = [];
+    const imageInput = document.getElementById('imageInput');
+    const previewContainer = document.getElementById('image-preview');
+    const form = document.getElementById('reportForm');
+
+    function updatePreview() {
+        previewContainer.innerHTML = '';
+        capturedFiles.forEach((file, index) => {
+            const div = document.createElement('div');
+            div.className = 'preview-item';
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            img.className = 'preview-img';
+            const btn = document.createElement('button');
+            btn.className = 'remove-preview';
+            btn.innerHTML = '&times;';
+            btn.onclick = () => {
+                capturedFiles.splice(index, 1);
+                updatePreview();
+                checkImageLimit();
+            };
+            div.appendChild(img);
+            div.appendChild(btn);
+            previewContainer.appendChild(div);
+        });
+        checkImageLimit();
+    }
+
+    function checkImageLimit() {
+        const limitReached = capturedFiles.length >= 3;
+        openCameraBtn.disabled = limitReached;
+        imageInput.parentElement.classList.toggle('disabled', limitReached);
+        if (limitReached) {
+            imageInput.disabled = true;
+            if (cameraContainer.style.display !== 'none') {
+                closeCameraBtn.click();
+            }
+        } else {
+            imageInput.disabled = false;
+        }
+    }
+
+    imageInput.addEventListener('change', function() {
+        const files = Array.from(this.files);
+        files.forEach(file => {
+            if (capturedFiles.length < 3) {
+                if (file.size <= 5 * 1024 * 1024) {
+                    capturedFiles.push(file);
+                } else {
+                    alert(`File ${file.name} exceeds 5MB limit`);
+                }
+            }
+        });
+        updatePreview();
+        this.value = ''; // Reset input to allow re-selection
+    });
+
+    // Camera Logic
+    const openCameraBtn = document.getElementById('openCamera');
+    const closeCameraBtn = document.getElementById('closeCamera');
+    const captureBtn = document.getElementById('captureBtn');
+    const switchCameraBtn = document.getElementById('switchCamera');
+    const cameraContainer = document.getElementById('cameraContainer');
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    let stream = null;
+    let useFrontCamera = false;
+
+    openCameraBtn.onclick = async () => {
+        if (capturedFiles.length >= 3) {
+            alert('Maximum 3 images reached');
+            return;
+        }
+        startCamera();
+    };
+
+    switchCameraBtn.onclick = () => {
+        useFrontCamera = !useFrontCamera;
+        startCamera();
+    };
+
+    async function startCamera() {
+        if (stream) {
+            stream.getTracks().forEach(track => track.stop());
+        }
+        try {
+            const constraints = {
+                video: { facingMode: useFrontCamera ? "user" : "environment" }
+            };
+            stream = await navigator.mediaDevices.getUserMedia(constraints);
+            video.srcObject = stream;
+            cameraContainer.style.display = 'flex';
+            openCameraBtn.disabled = true;
+        } catch (err) {
+            alert('Camera access denied or not available');
+            console.error(err);
+        }
+    }
+
+    closeCameraBtn.onclick = () => {
+        if (stream) {
+            stream.getTracks().forEach(track => track.stop());
+            stream = null;
+        }
+        cameraContainer.style.display = 'none';
+        openCameraBtn.disabled = capturedFiles.length >= 3;
+    };
+
+    captureBtn.onclick = () => {
+        if (capturedFiles.length >= 3) {
+            alert('Maximum 3 images reached');
+            closeCameraBtn.click();
+            return;
+        }
+
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const ctx = canvas.getContext('2d');
+        
+        // Mirror if front camera
+        if (useFrontCamera) {
+            ctx.translate(canvas.width, 0);
+            ctx.scale(-1, 1);
+        }
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        if (useFrontCamera) {
+            ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+        }
+
+        // Add Watermark
+        const now = new Date();
+        const dateStr = now.toLocaleDateString();
+        const timeStr = now.toLocaleTimeString();
+        const latStr = currentLat.toFixed(6);
+        const lngStr = currentLng.toFixed(6);
+        
+        // Watermark Background
+        const padding = 20;
+        const fontSize = Math.max(16, Math.floor(canvas.width / 40));
+        const boxHeight = fontSize * 3.5;
+        
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+        ctx.fillRect(0, canvas.height - boxHeight, canvas.width, boxHeight);
+        
+        ctx.fillStyle = 'white';
+        ctx.font = `bold ${fontSize}px Arial`;
+        ctx.textBaseline = 'top';
+        
+        const line1 = `CIRS Geo-Camera | ${dateStr} ${timeStr}`;
+        const line2 = `Location: ${latStr}, ${lngStr}`;
+        const city = document.getElementById('city').value;
+        const state = document.getElementById('state').value;
+        const line3 = (city && state) ? `${city}, ${state}` : (city || state || "Location data pending...");
+
+        ctx.fillText(line1, padding, canvas.height - boxHeight + 10);
+        ctx.font = `${fontSize * 0.9}px Arial`;
+        ctx.fillText(line2, padding, canvas.height - boxHeight + 10 + fontSize * 1.2);
+        ctx.fillText(line3, padding, canvas.height - boxHeight + 10 + fontSize * 2.3);
+
+        canvas.toBlob((blob) => {
+            const file = new File([blob], `geo_capture_${Date.now()}.jpg`, { type: "image/jpeg" });
+            capturedFiles.push(file);
+            updatePreview();
+            if (capturedFiles.length >= 3) {
+                closeCameraBtn.click();
+            }
+        }, 'image/jpeg', 0.85);
+    };
+
+    // Final Submission Logic
+    form.onsubmit = (e) => {
+        if (capturedFiles.length === 0) {
+            alert('Please upload or capture at least one image of the issue.');
+            e.preventDefault();
+            return;
+        }
+
+        const dataTransfer = new DataTransfer();
+        capturedFiles.forEach(file => dataTransfer.items.add(file));
+        
+        // Create or find the images input
+        let hiddenInput = form.querySelector('input[name="images"]');
+        if (!hiddenInput) {
+            hiddenInput = document.createElement('input');
+            hiddenInput.type = 'file';
+            hiddenInput.name = 'images';
+            hiddenInput.multiple = true;
+            hiddenInput.style.display = 'none';
+            form.appendChild(hiddenInput);
+        }
+        hiddenInput.files = dataTransfer.files;
+    };
+
+    // --- Voice Logic ---
+    let mediaRecorder;
+    let audioChunks = [];
+    const startBtn = document.getElementById('startRecord');
+    const stopBtn = document.getElementById('stopRecord');
+    const audioPlayback = document.getElementById('audioPlayback');
+    const audioPreviewContainer = document.getElementById('audio-preview-container');
+    const voiceFile = document.getElementById('voiceFile');
+    const removeAudioBtn = document.getElementById('removeAudio');
+
+    startBtn.onclick = async () => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.start();
+            audioChunks = [];
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+            document.getElementById('recordingStatus').innerText = 'Recording...';
+            
+            mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data);
+            mediaRecorder.onstop = () => {
+                const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                audioPlayback.src = audioUrl;
+                audioPreviewContainer.style.display = 'flex';
+                
+                const file = new File([audioBlob], "recorded_voice.wav", { type: "audio/wav" });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                voiceFile.files = dataTransfer.files;
+            };
+        } catch (err) {
+            alert('Microphone access denied');
+        }
+    };
+
+    stopBtn.onclick = () => {
+        mediaRecorder.stop();
+        startBtn.disabled = false;
+        stopBtn.disabled = true;
+        document.getElementById('recordingStatus').innerText = '';
+    };
+
+    voiceFile.onchange = () => {
+        if (voiceFile.files.length > 0) {
+            const file = voiceFile.files[0];
+            audioPlayback.src = URL.createObjectURL(file);
+            audioPreviewContainer.style.display = 'flex';
+        }
+    };
+
+    removeAudioBtn.onclick = () => {
+        voiceFile.value = '';
+        audioPreviewContainer.style.display = 'none';
+        audioPlayback.src = '';
+    };
+
+    window.onload = initMap;
+</script>
+{% endblock %}

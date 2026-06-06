@@ -1,0 +1,9 @@
+flask
+flask-sqlalchemy
+flask-login
+flask-socketio
+flask-wtf
+python-dotenv
+cloudinary
+pyjwt
+psycopg2-binary

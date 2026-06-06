@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="status-container">
+    <h2>My Submitted Reports</h2>
+
+    <!-- Filters -->
+    <div class="filter-section">
+        <form method="GET" class="filter-form">
+            <div class="filter-group">
+                <label>From:</label>
+                <input type="date" name="start_date" class="form-control" value="{{ start_date }}">
+            </div>
+            <div class="filter-group">
+                <label>To:</label>
+                <input type="date" name="end_date" class="form-control" value="{{ end_date }}">
+            </div>
+            <div class="filter-group btn-group">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <a href="{{ url_for('citizen.status') }}" class="btn btn-secondary">Clear</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="reports-list">
+        {% if not reports %}
+            <p class="text-center">No reports found matching the criteria.</p>
+        {% endif %}
+        
+        {% for report in reports %}
+            <div class="report-card">
+                <div class="report-header">
+                    <h3>{{ report.title }}</h3>
+                    <div class="header-meta">
+                        <span class="status status-{{ report.status }}">{{ report.status|replace('_', ' ')|capitalize }}</span>
+                        <span class="date">{{ report.created_at.strftime('%Y-%m-%d') }}</span>
+                    </div>
+                </div>
+                <div class="report-details">
+                    <p><strong>Category:</strong> {{ report.category }}</p>
+                    <p><strong>Priority:</strong> <span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span></p>
+                    <p><strong>Location:</strong> {{ report.city or 'Unknown' }}, {{ report.state or 'Unknown' }}</p>
+                    <p><strong>Upvotes:</strong> {{ report.upvotes_count }}</p>
+                </div>
+                <p class="report-desc">{{ report.description }}</p>
+                
+                <div class="report-actions">
+                    <button class="btn btn-sm btn-info" onclick="toggleMap({{ report.id }}, {{ report.latitude }}, {{ report.longitude }})">
+                        <i class="fas fa-map-marker-alt"></i> View Marked Location
+                    </button>
+                    {% if report.status in ['acknowledged', 'in_progress', 'resolved'] %}
+                        <button class="btn btn-sm btn-warning" onclick="openChat({{ report.id }})">
+                            <i class="fas fa-comments"></i> Message
+                        </button>
+                    {% endif %}
+                    {% if report.status == 'resolved' %}
+                        <form action="{{ url_for('citizen.reopen_report', report_id=report.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to reopen this report?')">
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fas fa-undo"></i> Reopen
+                            </button>
+                        </form>
+                    {% endif %}
+                </div>
+
+                <div id="map-{{ report.id }}" class="report-mini-map" style="display:none; height: 250px; margin-top: 1rem; border-radius: 8px;"></div>
+
+                <div class="report-media">
+                    {% if report.images %}
+                        <div class="media-group">
+                            <h4>Images:</h4>
+                            <div class="image-grid">
+                                {% for img in report.images %}
+                                    <img src="{{ img.url }}" alt="Report Image" class="report-img" onclick="window.open(this.src)">
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    
+                    {% if report.voice_notes %}
+                        <div class="media-group">
+                            <h4>Voice Note:</h4>
+                            {% for voice in report.voice_notes %}
+                                <audio controls>
+                                    <source src="{{ voice.url }}" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .filter-section { background: white; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; }
+    .filter-form { display: flex; gap: 1.5rem; align-items: flex-end; }
+    .filter-group { flex: 1; }
+    .btn-group { display: flex; gap: 0.5rem; }
+
+    .report-card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; }
+    .report-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+    .header-meta { display: flex; gap: 1rem; align-items: center; }
+    .report-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1rem; background: #f9fafb; padding: 1rem; border-radius: 8px; }
+    .report-desc { margin-bottom: 1rem; }
+    .image-grid { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .report-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .report-img:hover { transform: scale(1.05); }
+    .media-group { margin-top: 1rem; }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    const maps = {};
+
+    function toggleMap(id, lat, lng) {
+        const mapDiv = document.getElementById(`map-${id}`);
+        if (mapDiv.style.display === 'none') {
+            mapDiv.style.display = 'block';
+            if (!maps[id]) {
+                const map = L.map(`map-${id}`).setView([lat, lng], 15);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+                L.marker([lat, lng]).addTo(map);
+                maps[id] = map;
+            } else {
+                setTimeout(() => maps[id].invalidateSize(), 100);
+            }
+        } else {
+            mapDiv.style.display = 'none';
+        }
+    }
+</script>
+{% endblock %}

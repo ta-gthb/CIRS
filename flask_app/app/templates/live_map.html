@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="live-map-container">
+    <h2>Live Map - Community Issues</h2>
+    <div id="live-map" style="height: 700px; border-radius: 12px; box-shadow: var(--shadow); border: 4px solid white;"></div>
+    
+    <div class="map-legend">
+        <h4>Legend</h4>
+        <div class="legend-item"><span class="dot critical"></span> Critical</div>
+        <div class="legend-item"><span class="dot high"></span> High</div>
+        <div class="legend-item"><span class="dot medium"></span> Medium</div>
+        <div class="legend-item"><span class="dot low"></span> Low</div>
+    </div>
+</div>
+
+<style>
+    .map-legend { background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; display: flex; gap: 2rem; box-shadow: var(--shadow); justify-content: center; }
+    .legend-item { display: flex; align-items: center; gap: 0.5rem; font-weight: 500; }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot.critical { background: #dc3545; }
+    .dot.high { background: #fd7e14; }
+    .dot.medium { background: #ffc107; }
+    .dot.low { background: #6c757d; }
+    
+    .popup-note { min-width: 150px; }
+    .popup-note h4 { margin-bottom: 0.5rem; color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
+    .popup-note p { margin-bottom: 0.3rem; font-size: 0.9rem; }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    function initMap() {
+        const defaultCenter = [22.5726, 88.3639];
+        const map = L.map('live-map').setView(defaultCenter, 6);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const reports = [
+            {% for report in reports %}
+                {% if report.latitude and report.longitude %}
+                {
+                    lat: {{ report.latitude }},
+                    lng: {{ report.longitude }},
+                    title: "{{ report.title|replace('"', '\\"') }}",
+                    category: "{{ report.category }}",
+                    priority: "{{ report.priority }}",
+                    status: "{{ report.status }}"
+                },
+                {% endif %}
+            {% endfor %}
+        ];
+
+        reports.forEach(report => {
+            const markerColor = getMarkerColor(report.priority);
+            const marker = L.circleMarker([report.lat, report.lng], {
+                radius: 10,
+                fillColor: markerColor,
+                color: "#fff",
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.8
+            }).addTo(map);
+
+            const popupContent = `
+                <div class="popup-note">
+                    <h4>${report.title}</h4>
+                    <p><strong>Category:</strong> ${report.category}</p>
+                    <p><strong>Priority:</strong> <span style="color:${markerColor}; font-weight:bold;">${report.priority.toUpperCase()}</span></p>
+                    <p><strong>Status:</strong> ${report.status.replace('_', ' ')}</p>
+                </div>
+            `;
+            marker.bindPopup(popupContent);
+        });
+
+        if (reports.length > 0) {
+            const group = new L.featureGroup(reports.map(r => L.marker([r.lat, r.lng])));
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
+    }
+
+    function getMarkerColor(priority) {
+        switch(priority.toLowerCase()) {
+            case 'critical': return '#dc3545';
+            case 'high': return '#fd7e14';
+            case 'medium': return '#ffc107';
+            case 'low': return '#6c757d';
+            default: return '#007bff';
+        }
+    }
+
+    window.onload = initMap;
+</script>
+{% endblock %}

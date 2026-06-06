@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="profile-container">
+    <h2>Admin Officer Profile</h2>
+    <div class="profile-card">
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>Role:</strong> Authority / Admin Officer</p>
+        <p><strong>Assigned State:</strong> {{ user.assigned_state }}</p>
+        <p><strong>Assigned District:</strong> {{ user.assigned_district }}</p>
+    </div>
+</div>
+
+<style>
+    .profile-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="citizen-dashboard">
+    <div class="welcome-section">
+        <h2>Welcome to Your Dashboard</h2>
+        <p>Your portal for reporting and tracking civic issues in your community.</p>
+        <div class="dashboard-actions">
+            <a href="{{ url_for('citizen.submit_report') }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-plus-circle"></i> Submit New Report
+            </a>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <section class="nearby-issues">
+            <h3>Trending/Nearby Issues</h3>
+            <p class="text-muted">High-priority and trending reports in the portal.</p>
+            <div class="reports-feed">
+                {% if reports %}
+                    {% for report in reports %}
+                        <div class="report-feed-item">
+                            <div class="feed-header">
+                                <h4>{{ report.title }}</h4>
+                                <span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span>
+                            </div>
+                            <p>{{ report.description[:100] }}...</p>
+                            <div class="feed-footer">
+                                <span class="upvote-count"><i class="fas fa-arrow-up"></i> {{ report.upvotes_count }}</span>
+                                <span class="report-location"><i class="fas fa-map-marker-alt"></i> {{ report.city or 'General' }}</span>
+                                <button class="btn btn-sm btn-outline-primary" onclick="upvoteReport({{ report.id }}, this)">Upvote</button>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No issues reported yet.</p>
+                {% endif %}
+            </div>
+            <div class="view-all">
+                <a href="{{ url_for('citizen.public_forum') }}" class="btn btn-link">View All in Public Forum</a>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h3>Quick Links</h3>
+            <div class="links-grid">
+                <a href="{{ url_for('citizen.status') }}" class="link-card">
+                    <i class="fas fa-tasks"></i>
+                    <span>Track My Reports</span>
+                </a>
+                <a href="{{ url_for('citizen.live_map') }}" class="link-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>View Live Map</span>
+                </a>
+                <a href="{{ url_for('citizen.profile') }}" class="link-card">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Manage Profile</span>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
+
+<style>
+    .welcome-section { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; text-align: center; }
+    .welcome-section h2 { margin-bottom: 1rem; color: var(--primary-color); }
+    .dashboard-actions { margin-top: 1.5rem; }
+    .dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
+    
+    .nearby-issues { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow); }
+    .report-feed-item { border-bottom: 1px solid #eee; padding: 1rem 0; }
+    .feed-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+    .feed-footer { display: flex; gap: 1.5rem; align-items: center; margin-top: 0.5rem; font-size: 0.9rem; color: #666; }
+    
+    .quick-links { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow); }
+    .links-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1rem; }
+    .link-card { display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid #eee; border-radius: 8px; text-decoration: none; color: var(--text-color); transition: background 0.3s; }
+    .link-card:hover { background: #f8f9fa; border-color: var(--primary-color); }
+    .link-card i { font-size: 1.5rem; color: var(--primary-color); }
+    
+    .btn-lg { padding: 1rem 2rem; font-size: 1.2rem; }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function upvoteReport(reportId, btn) {
+        fetch(`/citizen/upvote/${reportId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const countSpan = btn.parentElement.querySelector('.upvote-count');
+                countSpan.innerHTML = `<i class="fas fa-arrow-up"></i> ${data.upvotes}`;
+                btn.disabled = true;
+                btn.innerText = 'Upvoted';
+            } else {
+                alert(data.message);
+            }
+        });
+    }
+</script>
+{% endblock %}

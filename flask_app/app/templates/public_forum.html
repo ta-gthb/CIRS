@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="forum-container">
+    <h2>Public Forum</h2>
+    <div class="reports-list">
+        {% for report in reports %}
+            <div class="report-card">
+                <div class="report-header">
+                    <h3>{{ report.title }}</h3>
+                    <span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span>
+                    <span class="status status-{{ report.status }}">{{ report.status|replace('_', ' ')|capitalize }}</span>
+                </div>
+                <p class="report-meta">Posted on {{ report.created_at.strftime('%Y-%m-%d') }} by {{ report.author.name or 'Anonymous' }}</p>
+                <p class="report-desc">{{ report.description }}</p>
+                
+                <div class="report-actions">
+                    <button class="upvote-btn" onclick="upvoteReport({{ report.id }}, this)">
+                        <i class="far fa-thumbs-up"></i> <span class="count">{{ report.upvotes_count }}</span> Upvotes
+                    </button>
+                    <span class="comment-count"><i class="far fa-comment"></i> {{ report.comments|length }} Comments</span>
+                </div>
+
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    {% for comment in report.comments %}
+                        <div class="comment">
+                            <p><strong>{{ comment.user.name or 'Anonymous' }}:</strong> {{ comment.content }}</p>
+                            <small class="text-muted">{{ comment.created_at.strftime('%Y-%m-%d %H:%M') }}</small>
+                        </div>
+                    {% endfor %}
+                    
+                    <form action="{{ url_for('citizen.add_comment', report_id=report.id) }}" method="POST" class="comment-form">
+                        <input type="text" name="content" placeholder="Add a comment..." required class="form-control">
+                        <button type="submit" class="btn btn-sm btn-primary">Post</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .report-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+    .report-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .report-meta {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+    }
+    .report-actions {
+        margin: 1rem 0;
+        display: flex;
+        gap: 2rem;
+    }
+    .comments-section {
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+    .comment {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f9f9f9;
+    }
+    .comment-form {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .upvote-btn {
+        background: none;
+        border: none;
+        color: #007bff;
+        cursor: pointer;
+        padding: 0;
+        font-size: 1rem;
+    }
+    .upvote-btn:hover {
+        text-decoration: underline;
+    }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    function upvoteReport(reportId, btn) {
+        fetch(`/citizen/upvote/${reportId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                btn.querySelector('.count').innerText = data.upvotes;
+                btn.classList.add('upvoted');
+            } else {
+                alert(data.message);
+            }
+        });
+    }
+</script>
+{% endblock %}

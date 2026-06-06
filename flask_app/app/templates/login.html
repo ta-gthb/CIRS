@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-card">
+    <h2>Login / Register</h2>
+    <form method="POST" id="loginForm">
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <div class="box-input-container phone-container">
+                {% for i in range(10) %}
+                <input type="text" class="box-input phone-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                {% endfor %}
+            </div>
+            <input type="hidden" name="phone" id="fullPhone">
+        </div>
+        <div class="form-group">
+            <label>I am a:</label>
+            <div class="role-selector">
+                <input type="radio" name="role" value="citizen" id="citizen" checked>
+                <label for="citizen">Citizen</label>
+                <input type="radio" name="role" value="authority" id="authority">
+                <label for="authority">Officer</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send OTP</button>
+    </form>
+    <p class="hint">Demo OTP: 1234</p>
+</div>
+
+<style>
+    .auth-card { max-width: 500px; margin: 2rem auto; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow); text-align: center; }
+    .box-input-container { display: flex; justify-content: center; gap: 8px; margin-top: 1rem; }
+    .box-input { width: 35px; height: 45px; text-align: center; font-size: 1.2rem; border: 1px solid #ddd; border-radius: 6px; }
+    .box-input:focus { border-color: var(--primary-color); outline: none; box-shadow: 0 0 0 2px rgba(0,123,255,0.25); }
+    .phone-container .box-input { width: 30px; }
+    .role-selector { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; }
+    .hint { margin-top: 1rem; color: #666; font-size: 0.9rem; }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const boxes = document.querySelectorAll('.phone-box');
+    const fullPhone = document.getElementById('fullPhone');
+    const form = document.getElementById('loginForm');
+
+    boxes.forEach((box, idx) => {
+        box.addEventListener('input', (e) => {
+            if (e.target.value.length === 1 && idx < boxes.length - 1) {
+                boxes[idx + 1].focus();
+            }
+        });
+
+        box.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !e.target.value && idx > 0) {
+                boxes[idx - 1].focus();
+            }
+        });
+    });
+
+    form.addEventListener('submit', (e) => {
+        let phoneVal = '';
+        boxes.forEach(box => phoneVal += box.value);
+        if (phoneVal.length !== 10) {
+            e.preventDefault();
+            alert('Please enter 10 digits');
+        } else {
+            fullPhone.value = phoneVal;
+        }
+    });
+</script>
+{% endblock %}

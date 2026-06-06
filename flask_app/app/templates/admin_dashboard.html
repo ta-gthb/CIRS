@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="admin-dashboard">
+    <h2>Admin Officer Dashboard</h2>
+    <p class="text-muted">Welcome, {{ current_user.name }}. Assigned to: {{ current_user.assigned_district }}, {{ current_user.assigned_state }}</p>
+
+    <!-- Filters -->
+    <div class="filter-section">
+        <form method="GET" class="filter-form">
+            <div class="filter-group">
+                <label>Priority:</label>
+                <select name="priority" class="form-control">
+                    <option value="">All Priorities</option>
+                    <option value="critical" {% if priority_filter == 'critical' %}selected{% endif %}>Critical</option>
+                    <option value="high" {% if priority_filter == 'high' %}selected{% endif %}>High</option>
+                    <option value="medium" {% if priority_filter == 'medium' %}selected{% endif %}>Medium</option>
+                    <option value="low" {% if priority_filter == 'low' %}selected{% endif %}>Low</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>From:</label>
+                <input type="date" name="start_date" class="form-control" value="{{ start_date }}">
+            </div>
+            <div class="filter-group">
+                <label>To:</label>
+                <input type="date" name="end_date" class="form-control" value="{{ end_date }}">
+            </div>
+            <div class="filter-group btn-group">
+                <button type="submit" class="btn btn-primary">Filter</button>
+                <a href="{{ url_for('admin.dashboard') }}" class="btn btn-secondary">Clear</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>{{ total_assigned }}</h3>
+            <p>Total Reports</p>
+        </div>
+        <div class="stat-card">
+            <h3>{{ pending }}</h3>
+            <p>Pending</p>
+        </div>
+        <div class="stat-card">
+            <h3>{{ acknowledged }}</h3>
+            <p>Approved</p>
+        </div>
+        <div class="stat-card">
+            <h3>{{ resolved }}</h3>
+            <p>Resolved</p>
+        </div>
+    </div>
+
+    <div class="admin-tasks">
+        <div class="task-section">
+            <h3>Manage Reports</h3>
+            {% if reports %}
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Citizen ID</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for report in reports %}
+                            <tr>
+                                <td>{{ report.title }}</td>
+                                <td><code>{{ report.author.citizen_id or 'N/A' }}</code></td>
+                                <td><span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span></td>
+                                <td><span class="status status-{{ report.status }}">{{ report.status|replace('_', ' ')|capitalize }}</span></td>
+                                <td>{{ report.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-info" onclick="viewReportDetails({{ report.id }})">View</button>
+                                    {% if report.status == 'pending' %}
+                                        <a href="{{ url_for('admin.approve_report', report_id=report.id) }}" class="btn btn-sm btn-success">Approve</a>
+                                    {% endif %}
+                                    {% if report.status != 'resolved' %}
+                                        <button class="btn btn-sm btn-primary" onclick="openResolveModal({{ report.id }})">Resolve</button>
+                                    {% endif %}
+                                    {% if report.status in ['acknowledged', 'in_progress'] %}
+                                        <button class="btn btn-sm btn-warning" onclick="openChat({{ report.id }})">Message</button>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No reports found matching filters.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Details Modal -->
+<div id="detailsModal" class="modal">
+    <div class="modal-content large">
+        <h3>Report Details</h3>
+        <div id="reportInfo"></div>
+        <div id="adminMap" style="height: 300px; margin-top: 1rem; border-radius: 8px;"></div>
+        <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" onclick="closeDetailsModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Resolve Modal -->
+<div id="resolveModal" class="modal">
+    <div class="modal-content">
+        <h3>Resolve Report</h3>
+        <form id="resolveForm" method="POST">
+            <textarea name="notes" class="form-control" placeholder="Enter resolution notes..." required style="width: 100%; min-height: 100px; margin-bottom: 1rem;"></textarea>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" onclick="closeResolveModal()">Cancel</button>
+                <button type="submit" class="btn btn-success">Mark as Resolved</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    .filter-section { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; }
+    .filter-form { display: flex; gap: 1.5rem; align-items: flex-end; flex-wrap: wrap; }
+    .filter-group { flex: 1; min-width: 150px; }
+    .filter-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+    .btn-group { display: flex; gap: 0.5rem; }
+    
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow); }
+    .task-section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); overflow-x: auto; }
+    .admin-table { width: 100%; border-collapse: collapse; }
+    .admin-table th, .admin-table td { text-align: left; padding: 1rem; border-bottom: 1px solid #eee; }
+    
+    .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+    .modal-content { background: white; margin: 10% auto; padding: 2rem; border-radius: 12px; width: 40%; }
+    .modal-content.large { width: 70%; margin: 5% auto; max-height: 85vh; overflow-y: auto; }
+    .report-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
+    .media-section { margin-top: 1rem; }
+    .image-gallery { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .image-gallery img { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; cursor: pointer; }
+    .audio-list { margin-top: 0.5rem; }
+    .audio-item { margin-bottom: 0.5rem; }
+    .detail-item { margin-bottom: 1rem; }
+    .detail-item strong { display: block; color: #555; font-size: 0.9rem; }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    let adminMap, adminMarker;
+
+    async function viewReportDetails(id) {
+        try {
+            const response = await fetch(`/admin/report-details/${id}`);
+            const data = await response.json();
+            
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+
+            const imagesHtml = data.images.map(img => `<img src="${img.url}" alt="Report Image" onclick="window.open('${img.url}', '_blank')">`).join('');
+            const voiceHtml = data.voice_notes.map(vn => `
+                <div class="audio-item">
+                    <audio controls src="${vn.url}"></audio>
+                </div>
+            `).join('');
+
+            document.getElementById('reportInfo').innerHTML = `
+                <div class="report-details-grid">
+                    <div class="info-column">
+                        <div class="detail-item"><strong>Title</strong> ${data.title}</div>
+                        <div class="detail-item"><strong>Category</strong> ${data.category}</div>
+                        <div class="detail-item"><strong>Priority</strong> <span class="badge badge-${data.priority}">${data.priority.toUpperCase()}</span></div>
+                        <div class="detail-item"><strong>Status</strong> <span class="status status-${data.status}">${data.status.replace('_', ' ').toUpperCase()}</span></div>
+                        <div class="detail-item"><strong>Submitted On</strong> ${data.created_at}</div>
+                        <div class="detail-item"><strong>Description</strong> ${data.description}</div>
+                        <div class="detail-item"><strong>Location</strong> ${data.city}, ${data.state} (${data.latitude.toFixed(6)}, ${data.longitude.toFixed(6)})</div>
+                    </div>
+                    <div class="media-column">
+                        <div class="media-section">
+                            <strong>Captured Images</strong>
+                            <div class="image-gallery">${imagesHtml || '<p class="text-muted">No images uploaded</p>'}</div>
+                        </div>
+                        <div class="media-section">
+                            <strong>Voice Notes</strong>
+                            <div class="audio-list">${voiceHtml || '<p class="text-muted">No voice notes uploaded</p>'}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('detailsModal').style.display = 'block';
+            
+            const lat = data.latitude;
+            const lng = data.longitude;
+
+            if (!adminMap) {
+                adminMap = L.map('adminMap').setView([lat, lng], 15);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(adminMap);
+                adminMarker = L.marker([lat, lng]).addTo(adminMap);
+            } else {
+                adminMap.setView([lat, lng], 15);
+                adminMarker.setLatLng([lat, lng]);
+                setTimeout(() => adminMap.invalidateSize(), 200);
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Failed to fetch report details');
+        }
+    }
+
+    function closeDetailsModal() { document.getElementById('detailsModal').style.display = 'none'; }
+    function openResolveModal(id) {
+        document.getElementById('resolveForm').action = `/admin/resolve-report/${id}`;
+        document.getElementById('resolveModal').style.display = 'block';
+    }
+    function closeResolveModal() { document.getElementById('resolveModal').style.display = 'none'; }
+
+    window.onclick = function(e) {
+        if (e.target == document.getElementById('detailsModal')) closeDetailsModal();
+        if (e.target == document.getElementById('resolveModal')) closeResolveModal();
+    }
+</script>
+{% endblock %}

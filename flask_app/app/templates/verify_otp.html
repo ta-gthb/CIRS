@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-card">
+    <h2>Verify OTP</h2>
+    <p>Sent to: {{ phone }}</p>
+    <form method="POST" id="otpForm">
+        <div class="form-group">
+            <label>Enter 4-Digit OTP</label>
+            <div class="box-input-container">
+                {% for i in range(4) %}
+                <input type="text" class="box-input otp-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                {% endfor %}
+            </div>
+            <input type="hidden" name="otp" id="fullOtp">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Verify & Login</button>
+    </form>
+</div>
+
+<style>
+    .auth-card { max-width: 400px; margin: 2rem auto; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow); text-align: center; }
+    .box-input-container { display: flex; justify-content: center; gap: 15px; margin: 1.5rem 0; }
+    .box-input { width: 50px; height: 60px; text-align: center; font-size: 1.5rem; border: 1px solid #ddd; border-radius: 8px; }
+    .box-input:focus { border-color: var(--primary-color); outline: none; box-shadow: 0 0 0 2px rgba(0,123,255,0.25); }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const boxes = document.querySelectorAll('.otp-box');
+    const fullOtp = document.getElementById('fullOtp');
+    const form = document.getElementById('otpForm');
+
+    boxes.forEach((box, idx) => {
+        box.addEventListener('input', (e) => {
+            if (e.target.value.length === 1 && idx < boxes.length - 1) {
+                boxes[idx + 1].focus();
+            }
+        });
+
+        box.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !e.target.value && idx > 0) {
+                boxes[idx - 1].focus();
+            }
+        });
+    });
+
+    form.addEventListener('submit', (e) => {
+        let otpVal = '';
+        boxes.forEach(box => otpVal += box.value);
+        if (otpVal.length !== 4) {
+            e.preventDefault();
+            alert('Please enter 4 digits');
+        } else {
+            fullOtp.value = otpVal;
+        }
+    });
+</script>
+{% endblock %}
