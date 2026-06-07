@@ -6,8 +6,9 @@ A Flask-based platform for citizens to report civic issues and for authorities t
 - **Citizen Portal:** Submit reports with images and voice notes.
 - **Admin Dashboard:** Manage and track the status of reported issues.
 - **Real-time Updates:** Powered by Flask-SocketIO.
-- **Cloud Integration:** Uses Cloudinary for image and audio storage.
-- **Maps:** Google Maps integration for location-based reporting.
+- **Database:** Supabase (PostgreSQL) for reliable cloud storage.
+- **Media Storage:** Local filesystem storage (Note: Render filesystem is ephemeral).
+- **Maps:** Leaflet & OpenStreetMap for free location-based reporting.
 
 ## Prerequisites
 - Python 3.8+
@@ -45,10 +46,6 @@ A Flask-based platform for citizens to report civic issues and for authorities t
    ```env
    SECRET_KEY=yoursecretkey
    DATABASE_URL=sqlite:///civic_issue.db
-   GOOGLE_MAPS_API_KEY=YOUR_API_KEY
-   CLOUDINARY_NAME=YOUR_CLOUDINARY_NAME
-   CLOUDINARY_API_KEY=YOUR_CLOUDINARY_API_KEY
-   CLOUDINARY_API_SECRET=YOUR_CLOUDINARY_API_SECRET
    ```
 
 ## Database Setup

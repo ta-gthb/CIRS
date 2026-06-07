@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: envision2k26
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn --worker-class eventlet -w 1 run:app"
+    rootDirectory: flask_app
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.11.6

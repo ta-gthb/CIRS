@@ -8,5 +8,5 @@ pip install -r requirements.txt
 # Compile translations
 python -m babel.messages.frontend compile -d app/translations
 
-# Initialize/Update Database (Optional: run only if needed)
-# python setup_db.py
+# Initialize/Update Database
+python setup_db.py

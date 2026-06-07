@@ -6,7 +6,7 @@ from flask_login import login_required, current_user
 from flask_babel import _
 from . import citizen_bp
 from ..models.models import Report, User, db, ReportImage, VoiceNote, Upvote, Comment
-from ..utils.cloudinary_utils import upload_to_cloudinary
+from ..utils.storage_utils import upload_file
 from ..utils.geo_utils import reverse_geocode
 from sqlalchemy import func
 
@@ -30,8 +30,7 @@ def dashboard():
     reports = Report.query.order_by(Report.upvotes_count.desc()).limit(10).all()
     
     return render_template('citizen_dashboard.html', 
-                           reports=reports, 
-                           google_maps_api_key=current_app.config.get('GOOGLE_MAPS_API_KEY'))
+                           reports=reports)
 
 @citizen_bp.route('/public-forum')
 @login_required
@@ -65,8 +64,7 @@ def status():
 def live_map():
     reports = Report.query.all()
     return render_template('live_map.html', 
-                           reports=reports, 
-                           google_maps_api_key=current_app.config.get('GOOGLE_MAPS_API_KEY'))
+                           reports=reports)
 
 @citizen_bp.route('/profile')
 @login_required
@@ -186,14 +184,14 @@ def submit_report():
 
         for img in images:
             if img.filename:
-                url, public_id = upload_to_cloudinary(img, folder="civic_issue/reports")
+                url, public_id = upload_file(img, folder="civic_issue/reports")
                 report_img = ReportImage(url=url, public_id=public_id, report_id=report.id)
                 db.session.add(report_img)
                 
         # Handle Voice Note Upload
         voice = request.files.get('voice')
         if voice and voice.filename:
-            url, unused_id = upload_to_cloudinary(voice, folder="civic_issue/voice")
+            url, unused_id = upload_file(voice, folder="civic_issue/voice")
             voice_note = VoiceNote(url=url, report_id=report.id)
             db.session.add(voice_note)
             
@@ -201,8 +199,7 @@ def submit_report():
         flash(_('Report submitted successfully!'), 'success')
         return redirect(url_for('citizen.dashboard'))
         
-    return render_template('submit_report.html', 
-                           google_maps_api_key=current_app.config.get('GOOGLE_MAPS_API_KEY'))
+    return render_template('submit_report.html')
 
 @citizen_bp.route('/upvote/<int:report_id>', methods=['POST'])
 @login_required
