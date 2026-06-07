@@ -6,7 +6,7 @@
     <p class="text-muted">{{ _('Welcome') }}, {{ current_user.name }}. {{ _('Assigned to:') }} {{ _(current_user.assigned_district) }}, {{ _(current_user.assigned_state) }}</p>
 
     <!-- Filters -->
-    <div class="filter-section">
+    <div class="filter-section section-card">
         <form method="GET" class="filter-form">
             <div class="filter-group">
                 <label>{{ _('Priority:') }}</label>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="admin-tasks">
-        <div class="task-section">
+        <div class="task-section section-card">
             <h3>{{ _('Manage Reports') }}</h3>
             {% if reports %}
                 <table class="admin-table">
@@ -97,7 +97,7 @@
         </div>
 
         {% if deletion_requests %}
-        <div class="task-section" style="margin-top: 2rem;">
+        <div class="task-section section-card" style="margin-top: 2rem;">
             <h3>{{ _('Pending Account Deletion Requests') }}</h3>
             <table class="admin-table">
                 <thead>
@@ -157,29 +157,22 @@
 </div>
 
 <style>
-    .filter-section { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; }
     .filter-form { display: flex; gap: 1.5rem; align-items: flex-end; flex-wrap: wrap; }
     .filter-group { flex: 1; min-width: 150px; }
     .filter-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
     .btn-group { display: flex; gap: 0.5rem; }
     
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
-    .stat-card { background: white; padding: 1.5rem; border-radius: 8px; text-align: center; box-shadow: var(--shadow); }
-    .task-section { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow); overflow-x: auto; }
-    .admin-table { width: 100%; border-collapse: collapse; }
-    .admin-table th, .admin-table td { text-align: left; padding: 1rem; border-bottom: 1px solid #eee; }
+    .task-section { overflow-x: auto; }
     
-    .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
-    .modal-content { background: white; margin: 10% auto; padding: 2rem; border-radius: 12px; width: 40%; }
-    .modal-content.large { width: 70%; margin: 5% auto; max-height: 85vh; overflow-y: auto; }
     .report-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
     .media-section { margin-top: 1rem; }
     .image-gallery { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    .image-gallery img { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; cursor: pointer; }
+    .image-gallery img { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-color); cursor: pointer; }
     .audio-list { margin-top: 0.5rem; }
     .audio-item { margin-bottom: 0.5rem; }
     .detail-item { margin-bottom: 1rem; }
-    .detail-item strong { display: block; color: #555; font-size: 0.9rem; }
+    .detail-item strong { display: block; color: var(--secondary-color); font-size: 0.9rem; }
 </style>
 {% endblock %}
 

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="report-form-container">
+<div class="report-form-container section-card">
     <h2>{{ _('Submit New Report') }}</h2>
     <form action="{{ url_for('citizen.submit_report') }}" method="POST" enctype="multipart/form-data" id="reportForm">
         <div class="form-group">
@@ -40,17 +40,17 @@
         <div class="form-group">
             <label>{{ _('Location') }}</label>
             <p class="text-muted">{{ _('Location will be auto-fetched, but you can adjust it on the map.') }}</p>
-            <div id="map" style="height: 350px; margin-bottom: 1rem; border-radius: 8px;"></div>
+            <div id="map" style="height: 350px; margin-bottom: 1rem; border-radius: 8px; border: 1px solid var(--border-color);"></div>
             <div class="form-row">
                 <input type="hidden" name="latitude" id="latitude">
                 <input type="hidden" name="longitude" id="longitude">
                 <div class="form-group">
                     <label for="city">{{ _('City/District') }}</label>
-                    <input type="text" name="city" id="city" class="form-control" readonly>
+                    <input type="text" name="city" id="city" class="form-control" readonly style="background-color: var(--bg-color);">
                 </div>
                 <div class="form-group">
                     <label for="state">{{ _('State') }}</label>
-                    <input type="text" name="state" id="state" class="form-control" readonly>
+                    <input type="text" name="state" id="state" class="form-control" readonly style="background-color: var(--bg-color);">
                 </div>
             </div>
         </div>
@@ -101,16 +101,16 @@
 </div>
 
 <style>
-    .report-form-container { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow); max-width: 850px; margin: 0 auto; }
+    .report-form-container { max-width: 850px; margin: 0 auto; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .preview-container { display: flex; gap: 1rem; margin-top: 0.5rem; flex-wrap: wrap; }
     .preview-item { position: relative; width: 120px; height: 120px; }
-    .preview-img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid #ddd; }
-    .remove-preview { position: absolute; top: -5px; right: -5px; background: red; color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; border: none; }
+    .preview-img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-color); }
+    .remove-preview { position: absolute; top: -5px; right: -5px; background: var(--danger-color); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; border: none; }
     .voice-controls { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
     .recording-status { color: var(--danger-color); font-weight: bold; }
-    .or-separator { text-align: center; margin: 0.5rem 0; color: #888; font-size: 0.9rem; }
-    .btn-lg { padding: 1rem; font-size: 1.2rem; margin-top: 2rem; }
+    .or-separator { text-align: center; margin: 0.5rem 0; color: var(--secondary-color); font-size: 0.9rem; }
+    .btn-lg { padding: 1rem; font-size: 1.2rem; margin-top: 2rem; width: 100%; }
     .camera-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
     .disabled { opacity: 0.6; cursor: not-allowed !important; pointer-events: none; }
 </style>

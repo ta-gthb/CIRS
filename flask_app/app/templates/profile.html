@@ -3,7 +3,7 @@
 {% block content %}
 <div class="profile-container">
     <h2>{{ _('User Profile') }}</h2>
-    <div class="profile-card">
+    <div class="profile-card section-card">
         <form action="{{ url_for('citizen.update_profile') }}" method="POST">
             <div class="form-group">
                 <label for="name">{{ _('Full Name') }}</label>
@@ -12,12 +12,12 @@
 
             <div class="form-group">
                 <label>{{ _('Citizen ID') }}</label>
-                <input type="text" class="form-control" value="{{ user.citizen_id or _('Not Assigned') }}" readonly style="background-color: #f8f9fa; font-family: monospace; font-weight: bold;">
+                <input type="text" class="form-control" value="{{ user.citizen_id or _('Not Assigned') }}" readonly style="background-color: var(--bg-color); font-family: monospace; font-weight: bold;">
             </div>
             
             <div class="form-group">
                 <label>{{ _('Phone Number') }}</label>
-                <input type="text" class="form-control" value="{{ user.phone }}" readonly style="background-color: #f8f9fa;">
+                <input type="text" class="form-control" value="{{ user.phone }}" readonly style="background-color: var(--bg-color);">
                 <small class="text-muted">{{ _('Phone number cannot be changed.') }}</small>
             </div>
 
@@ -44,7 +44,7 @@
             <button type="submit" class="btn btn-primary btn-block">{{ _('Update Profile') }}</button>
         </form>
         
-        <hr>
+        <hr class="profile-hr">
         
         <h3>{{ _('Account Management') }}</h3>
         {% if user.account_deletion_status == 'none' %}
@@ -58,17 +58,10 @@
 </div>
 
 <style>
-    .profile-card {
-        background: white;
-        padding: 2.5rem;
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        max-width: 650px;
-        margin: 0 auto;
-    }
+    .profile-card { max-width: 650px; margin: 0 auto; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .btn-block { width: 100%; margin-top: 1rem; padding: 0.8rem; }
-    hr { margin: 2rem 0; border: 0; border-top: 1px solid #eee; }
+    .profile-hr { margin: 2rem 0; border: 0; border-top: 1px solid var(--border-color); }
 </style>
 {% endblock %}
 

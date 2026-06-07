@@ -5,7 +5,7 @@
     <h2>{{ _('My Submitted Reports') }}</h2>
 
     <!-- Filters -->
-    <div class="filter-section">
+    <div class="filter-section section-card">
         <form method="GET" class="filter-form">
             <div class="filter-group">
                 <label>{{ _('From:') }}</label>
@@ -62,7 +62,7 @@
                     {% endif %}
                 </div>
 
-                <div id="map-{{ report.id }}" class="report-mini-map" style="display:none; height: 250px; margin-top: 1rem; border-radius: 8px;"></div>
+                <div id="map-{{ report.id }}" class="report-mini-map" style="display:none; height: 250px; margin-top: 1rem; border-radius: 8px; border: 1px solid var(--border-color);"></div>
 
                 <div class="report-media">
                     {% if report.images %}
@@ -94,20 +94,19 @@
 </div>
 
 <style>
-    .filter-section { background: white; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; }
-    .filter-form { display: flex; gap: 1.5rem; align-items: flex-end; }
-    .filter-group { flex: 1; }
+    .filter-form { display: flex; gap: 1.5rem; align-items: flex-end; flex-wrap: wrap; }
+    .filter-group { flex: 1; min-width: 150px; }
     .btn-group { display: flex; gap: 0.5rem; }
 
-    .report-card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow); margin-bottom: 2rem; }
-    .report-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+    .report-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; flex-wrap: wrap; }
     .header-meta { display: flex; gap: 1rem; align-items: center; }
-    .report-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1rem; background: #f9fafb; padding: 1rem; border-radius: 8px; }
+    .report-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1rem; background: var(--bg-color); padding: 1rem; border-radius: 8px; transition: background-color 0.3s; }
     .report-desc { margin-bottom: 1rem; }
     .image-grid { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    .report-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .report-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s; border: 1px solid var(--border-color); }
     .report-img:hover { transform: scale(1.05); }
     .media-group { margin-top: 1rem; }
+    .date { color: var(--secondary-color); font-size: 0.9rem; }
 </style>
 {% endblock %}
 

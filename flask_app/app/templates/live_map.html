@@ -3,7 +3,7 @@
 {% block content %}
 <div class="live-map-container">
     <h2>{{ _('Live Map - Community Issues') }}</h2>
-    <div id="live-map" style="height: 700px; border-radius: 12px; box-shadow: var(--shadow); border: 4px solid white;"></div>
+    <div id="live-map" style="height: 700px; border-radius: 12px; box-shadow: var(--shadow); border: 4px solid var(--card-bg); transition: border-color 0.3s;"></div>
     
     <div class="map-legend">
         <h4>{{ _('Legend') }}</h4>
@@ -15,17 +15,7 @@
 </div>
 
 <style>
-    .map-legend { background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; display: flex; gap: 2rem; box-shadow: var(--shadow); justify-content: center; }
-    .legend-item { display: flex; align-items: center; gap: 0.5rem; font-weight: 500; }
-    .dot { width: 12px; height: 12px; border-radius: 50%; }
-    .dot.critical { background: #dc3545; }
-    .dot.high { background: #fd7e14; }
-    .dot.medium { background: #ffc107; }
-    .dot.low { background: #6c757d; }
-    
-    .popup-note { min-width: 150px; }
-    .popup-note h4 { margin-bottom: 0.5rem; color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 0.3rem; }
-    .popup-note p { margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .live-map-container h2 { margin-bottom: 1.5rem; text-align: center; }
 </style>
 {% endblock %}
 
