@@ -13,12 +13,26 @@ def login():
         
         user = User.query.filter_by(phone=phone).first()
         
+        if user and user.account_deletion_status == 'approved':
+            # Check 30 days rule
+            wait_period = timedelta(days=30)
+            if datetime.utcnow() < user.deleted_at + wait_period:
+                next_date = (user.deleted_at + timedelta(days=31)).strftime('%d/%m/%Y')
+                flash(_('You can register to the system again on %(date)s', date=next_date), 'warning')
+                return redirect(url_for('auth.login'))
+            else:
+                # Reset deleted account for re-registration
+                user.account_deletion_status = 'none'
+                user.is_active = True
+                user.deleted_at = None
+                db.session.commit()
+
         if not user:
             if role == 'citizen':
                 # Auto-register citizen
                 serial_count = User.query.filter_by(role='citizen').count() + 1
                 year = datetime.utcnow().year
-                citizen_id = f"CTZN10CIRS{serial_count:07d}{year}"
+                citizen_id = f"CTZN10CIRS{year}{serial_count:07d}"
                 user = User(phone=phone, role='citizen', is_active=True, citizen_id=citizen_id)
                 db.session.add(user)
                 db.session.commit()

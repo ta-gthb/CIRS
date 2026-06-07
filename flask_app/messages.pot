@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 09:41+0530\n"
+"POT-Creation-Date: 2026-06-07 21:01+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75
+#: app/routes/admin.py:75 app/routes/admin.py:121
 msgid "Unauthorized"
 msgstr ""
 
@@ -29,24 +29,37 @@ msgstr ""
 msgid "Report resolved."
 msgstr ""
 
-#: app/routes/admin.py:124
+#: app/routes/admin.py:128
+msgid "Report rejected."
+msgstr ""
+
+#: app/routes/admin.py:139
 msgid "User deletion approved."
 msgstr ""
 
-#: app/routes/auth.py:26
+#: app/routes/admin.py:148
+msgid "User deletion request rejected."
+msgstr ""
+
+#: app/routes/auth.py:21
+#, python-format
+msgid "You can register to the system again on %(date)s"
+msgstr ""
+
+#: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
 msgstr ""
 
-#: app/routes/auth.py:30
+#: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
 msgstr ""
 
-#: app/routes/auth.py:34
+#: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
 msgstr ""
 
-#: app/routes/auth.py:61
+#: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
 msgstr ""
 
@@ -54,54 +67,62 @@ msgstr ""
 msgid "Profile updated successfully!"
 msgstr ""
 
-#: app/routes/citizen.py:116
+#: app/routes/citizen.py:149
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
 msgstr ""
 
-#: app/routes/citizen.py:118
+#: app/routes/citizen.py:151
 msgid "A similar report already exists and you have already upvoted it."
 msgstr ""
 
-#: app/routes/citizen.py:120
+#: app/routes/citizen.py:153
 msgid "You have already submitted a similar report in this location."
 msgstr ""
 
-#: app/routes/citizen.py:140
+#: app/routes/citizen.py:173
 msgid "You can only upload up to 3 images."
 msgstr ""
 
-#: app/routes/citizen.py:157
+#: app/routes/citizen.py:190
 msgid "Report submitted successfully!"
 msgstr ""
 
-#: app/routes/citizen.py:169
+#: app/routes/citizen.py:202
 msgid "You cannot upvote your own report."
 msgstr ""
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:206
 msgid "Already upvoted"
 msgstr ""
 
-#: app/routes/citizen.py:191
+#: app/routes/citizen.py:224
 msgid "Comment added."
 msgstr ""
 
-#: app/routes/citizen.py:199
+#: app/routes/citizen.py:232
 msgid "Unauthorized."
 msgstr ""
 
-#: app/routes/citizen.py:205
+#: app/routes/citizen.py:238
 msgid "Report reopened."
 msgstr ""
 
-#: app/routes/citizen.py:207
+#: app/routes/citizen.py:240
 msgid "Report cannot be reopened."
 msgstr ""
 
-#: app/routes/citizen.py:216
-msgid "Deletion request submitted to your assigned officer."
+#: app/routes/citizen.py:248
+msgid ""
+"Please update your State and District in your profile before requesting "
+"account deletion."
+msgstr ""
+
+#: app/routes/citizen.py:253
+msgid ""
+"Deletion request submitted to your assigned officer. Your account will be"
+" deleted after approval of Admin Officer."
 msgstr ""
 
 #: app/templates/admin_dashboard.html:5
@@ -116,7 +137,7 @@ msgstr ""
 msgid "Assigned to:"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:74
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:64
 #: app/templates/status.html:41
 msgid "Priority:"
 msgstr ""
@@ -181,20 +202,21 @@ msgstr ""
 msgid "Manage Reports"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:180
+#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:224
 msgid "Title"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:63 app/templates/profile.html:14
+#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:107
+#: app/templates/profile.html:14
 msgid "Citizen ID"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:182
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
 #: app/templates/submit_report.html:25
 msgid "Priority"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:183
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
 #: app/templates/base.html:20
 msgid "Status"
 msgstr ""
@@ -203,7 +225,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:67
+#: app/templates/admin_dashboard.html:67 app/templates/admin_dashboard.html:109
 msgid "Actions"
 msgstr ""
 
@@ -215,83 +237,118 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:81
+#: app/templates/admin_dashboard.html:81 app/templates/admin_dashboard.html:122
 msgid "Approve"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:84
+#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:126
+msgid "Reject"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:85
 msgid "Resolve"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:87 app/templates/status.html:53
+#: app/templates/admin_dashboard.html:88 app/templates/status.html:68
 msgid "Message"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:95
+#: app/templates/admin_dashboard.html:96
 msgid "No reports found matching filters."
 msgstr ""
 
-#: app/templates/admin_dashboard.html:104
-msgid "Report Details"
+#: app/templates/admin_dashboard.html:102
+msgid "Pending Account Deletion Requests"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:106
+msgid "Name"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:108
-msgid "Close"
+msgid "Phone"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:116
-msgid "Resolve Report"
-msgstr ""
-
-#: app/templates/admin_dashboard.html:118
-msgid "Enter resolution notes..."
-msgstr ""
-
-#: app/templates/admin_dashboard.html:120
-msgid "Cancel"
+#: app/templates/admin_dashboard.html:115 app/templates/public_forum.html:16
+#: app/templates/public_forum.html:33
+msgid "Anonymous"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:121
+msgid "Are you sure you want to approve this deletion? This action is permanent."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:141
+msgid "Report Details"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:145 app/templates/public_forum.html:54
+msgid "Close"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:153
+msgid "Resolve Report"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:155
+msgid "Enter resolution notes..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:157
+#: app/templates/admin_dashboard.html:171
+msgid "Cancel"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:158
 msgid "Mark as Resolved"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:170 app/templates/status.html:73
+#: app/templates/admin_dashboard.html:167
+#: app/templates/admin_dashboard.html:172
+msgid "Reject Report"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:169
+msgid "Enter rejection reason..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:214 app/templates/status.html:88
 msgid "Report Image"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:181 app/templates/submit_report.html:14
+#: app/templates/admin_dashboard.html:225 app/templates/submit_report.html:14
 msgid "Category"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:184
+#: app/templates/admin_dashboard.html:228
 msgid "Submitted On"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:185
+#: app/templates/admin_dashboard.html:229
 msgid "Description"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:186 app/templates/submit_report.html:41
+#: app/templates/admin_dashboard.html:230 app/templates/submit_report.html:41
 msgid "Location"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:190
+#: app/templates/admin_dashboard.html:234
 msgid "Captured Images"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:191
+#: app/templates/admin_dashboard.html:235
 msgid "No images uploaded"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:194
+#: app/templates/admin_dashboard.html:238
 msgid "Voice Notes"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:195
+#: app/templates/admin_dashboard.html:239
 msgid "No voice notes uploaded"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:217
+#: app/templates/admin_dashboard.html:261
 msgid "Failed to fetch report details"
 msgstr ""
 
@@ -321,6 +378,10 @@ msgstr ""
 
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
+msgstr ""
+
+#: app/templates/admin_profile.html:12
+msgid "District Coordinates:"
 msgstr ""
 
 #: app/templates/base.html:17
@@ -419,7 +480,7 @@ msgstr ""
 msgid "Manage Profile"
 msgstr ""
 
-#: app/templates/citizen_dashboard.html:98
+#: app/templates/citizen_dashboard.html:93
 msgid "Upvoted"
 msgstr ""
 
@@ -483,11 +544,11 @@ msgstr ""
 msgid "Legend"
 msgstr ""
 
-#: app/templates/live_map.html:73 app/templates/status.html:40
+#: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
 msgstr ""
 
-#: app/templates/live_map.html:75
+#: app/templates/live_map.html:65
 msgid "Status:"
 msgstr ""
 
@@ -519,7 +580,7 @@ msgstr ""
 msgid "Demo OTP: 1234"
 msgstr ""
 
-#: app/templates/login.html:66
+#: app/templates/login.html:65
 msgid "Please enter 10 digits"
 msgstr ""
 
@@ -555,7 +616,7 @@ msgstr ""
 msgid "Enter your address"
 msgstr ""
 
-#: app/templates/profile.html:31 app/templates/submit_report.html:52
+#: app/templates/profile.html:31
 msgid "State"
 msgstr ""
 
@@ -567,7 +628,7 @@ msgstr ""
 msgid "District"
 msgstr ""
 
-#: app/templates/profile.html:39 app/templates/profile.html:133
+#: app/templates/profile.html:39 app/templates/profile.html:136
 msgid "Select District"
 msgstr ""
 
@@ -579,46 +640,60 @@ msgstr ""
 msgid "Account Management"
 msgstr ""
 
-#: app/templates/profile.html:51
+#: app/templates/profile.html:52
 msgid ""
-"Are you sure you want to request account deletion? This will be reviewed "
-"by your assigned officer."
+"All your account associated data will be deleted from the system, are you"
+" sure you want to delete your account?"
 msgstr ""
 
-#: app/templates/profile.html:52
+#: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
 msgstr ""
 
-#: app/templates/profile.html:55
+#: app/templates/profile.html:58
+msgid ""
+"Please update your State and District in your profile before you can "
+"raise an account deletion request."
+msgstr ""
+
+#: app/templates/profile.html:60
+msgid "Update profile to enable"
+msgstr ""
+
+#: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr ""
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "Posted on"
 msgstr ""
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "by"
 msgstr ""
 
-#: app/templates/public_forum.html:14 app/templates/public_forum.html:28
-msgid "Anonymous"
-msgstr ""
-
-#: app/templates/public_forum.html:19
+#: app/templates/public_forum.html:21
 msgid "Upvotes"
 msgstr ""
 
-#: app/templates/public_forum.html:21 app/templates/public_forum.html:25
+#: app/templates/public_forum.html:24
+msgid "View Location"
+msgstr ""
+
+#: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
 msgstr ""
 
-#: app/templates/public_forum.html:34
+#: app/templates/public_forum.html:39
 msgid "Add a comment..."
 msgstr ""
 
-#: app/templates/public_forum.html:35
+#: app/templates/public_forum.html:40
 msgid "Post"
+msgstr ""
+
+#: app/templates/public_forum.html:51
+msgid "Report Location"
 msgstr ""
 
 #: app/templates/status.html:5
@@ -641,27 +716,39 @@ msgstr ""
 msgid "Upvotes:"
 msgstr ""
 
-#: app/templates/status.html:49
+#: app/templates/status.html:51
+msgid "Resolution Notes:"
+msgstr ""
+
+#: app/templates/status.html:53
+msgid "Rejection Reason:"
+msgstr ""
+
+#: app/templates/status.html:55
+msgid "Officer Feedback:"
+msgstr ""
+
+#: app/templates/status.html:64
 msgid "View Marked Location"
 msgstr ""
 
-#: app/templates/status.html:57
+#: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
 msgstr ""
 
-#: app/templates/status.html:59
+#: app/templates/status.html:74
 msgid "Reopen"
 msgstr ""
 
-#: app/templates/status.html:70
+#: app/templates/status.html:85
 msgid "Images:"
 msgstr ""
 
-#: app/templates/status.html:81
+#: app/templates/status.html:96
 msgid "Voice Note:"
 msgstr ""
 
-#: app/templates/status.html:85
+#: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
 msgstr ""
 
@@ -709,87 +796,83 @@ msgstr ""
 msgid "Location will be auto-fetched, but you can adjust it on the map."
 msgstr ""
 
-#: app/templates/submit_report.html:48
-msgid "City/District"
-msgstr ""
-
-#: app/templates/submit_report.html:59
+#: app/templates/submit_report.html:52
 msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr ""
 
-#: app/templates/submit_report.html:61
+#: app/templates/submit_report.html:54
 msgid "Live Geo-Camera"
 msgstr ""
 
-#: app/templates/submit_report.html:63
+#: app/templates/submit_report.html:56
 msgid "Upload Files"
 msgstr ""
 
-#: app/templates/submit_report.html:72
+#: app/templates/submit_report.html:65
 msgid "Capture Photo"
 msgstr ""
 
-#: app/templates/submit_report.html:73
+#: app/templates/submit_report.html:66
 msgid "Switch"
 msgstr ""
 
-#: app/templates/submit_report.html:74
+#: app/templates/submit_report.html:67
 msgid "Close Camera"
 msgstr ""
 
-#: app/templates/submit_report.html:85
+#: app/templates/submit_report.html:78
 msgid "Voice Note"
 msgstr ""
 
-#: app/templates/submit_report.html:87
+#: app/templates/submit_report.html:80
 msgid "Record"
 msgstr ""
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:81
 msgid "Stop"
 msgstr ""
 
-#: app/templates/submit_report.html:91
+#: app/templates/submit_report.html:84
 msgid "OR upload file"
 msgstr ""
 
-#: app/templates/submit_report.html:95
+#: app/templates/submit_report.html:88
 msgid "Remove"
 msgstr ""
 
-#: app/templates/submit_report.html:99
+#: app/templates/submit_report.html:92
 msgid "Submit Report"
 msgstr ""
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "File"
 msgstr ""
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "exceeds 5MB limit"
 msgstr ""
 
-#: app/templates/submit_report.html:241 app/templates/submit_report.html:281
+#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
 msgid "Maximum 3 images reached"
 msgstr ""
 
-#: app/templates/submit_report.html:265
+#: app/templates/submit_report.html:250
 msgid "Camera access denied or not available"
 msgstr ""
 
-#: app/templates/submit_report.html:323
-msgid "Location data pending..."
+#: app/templates/submit_report.html:306
+msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:343
+#: app/templates/submit_report.html:326
 msgid "Please upload or capture at least one image of the issue."
 msgstr ""
 
-#: app/templates/submit_report.html:382
+#: app/templates/submit_report.html:365
 msgid "Recording..."
 msgstr ""
 
-#: app/templates/submit_report.html:397
+#: app/templates/submit_report.html:380
 msgid "Microphone access denied"
 msgstr ""
 

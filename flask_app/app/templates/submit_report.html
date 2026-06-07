@@ -44,14 +44,7 @@
             <div class="form-row">
                 <input type="hidden" name="latitude" id="latitude">
                 <input type="hidden" name="longitude" id="longitude">
-                <div class="form-group">
-                    <label for="city">{{ _('City/District') }}</label>
-                    <input type="text" name="city" id="city" class="form-control" readonly style="background-color: var(--bg-color);">
-                </div>
-                <div class="form-group">
-                    <label for="state">{{ _('State') }}</label>
-                    <input type="text" name="state" id="state" class="form-control" readonly style="background-color: var(--bg-color);">
-                </div>
+                <!-- City and State are now determined automatically on the server side -->
             </div>
         </div>
 
@@ -157,14 +150,6 @@
     function updateLocationFields(lat, lng) {
         document.getElementById("latitude").value = lat;
         document.getElementById("longitude").value = lng;
-        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.address) {
-                    document.getElementById("city").value = data.address.city || data.address.town || data.address.village || data.address.district || "";
-                    document.getElementById("state").value = data.address.state || "";
-                }
-            });
     }
 
     // --- Image & Geo-Camera Logic ---
@@ -318,9 +303,7 @@
         
         const line1 = `CIRS Geo-Camera | ${dateStr} ${timeStr}`;
         const line2 = `Location: ${latStr}, ${lngStr}`;
-        const city = document.getElementById('city').value;
-        const state = document.getElementById('state').value;
-        const line3 = (city && state) ? `${city}, ${state}` : (city || state || "{{ _('Location data pending...') }}");
+        const line3 = "{{ _('District assignment pending...') }}";
 
         ctx.fillText(line1, padding, canvas.height - boxHeight + 10);
         ctx.font = `${fontSize * 0.9}px Arial`;

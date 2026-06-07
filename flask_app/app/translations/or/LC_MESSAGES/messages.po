@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 09:41+0530\n"
+"POT-Creation-Date: 2026-06-07 21:01+0530\n"
 "PO-Revision-Date: 2026-06-07 11:05+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: or\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75
+#: app/routes/admin.py:75 app/routes/admin.py:121
 msgid "Unauthorized"
 msgstr "ଅନଧିକୃତ"
 
@@ -30,24 +30,39 @@ msgstr "ରିପୋର୍ଟ ଅନୁମୋଦିତ ହୋଇଛି।"
 msgid "Report resolved."
 msgstr "ରିପୋର୍ଟ ସମାଧାନ ହୋଇଛି।"
 
-#: app/routes/admin.py:124
+#: app/routes/admin.py:128
+#, fuzzy
+msgid "Report rejected."
+msgstr "ରିପୋର୍ଟ ପୁନର୍ବାର ଖୋଲାଗଲା।"
+
+#: app/routes/admin.py:139
 msgid "User deletion approved."
 msgstr "ଉପଭୋକ୍ତା ବିଲୋପ ଅନୁମୋଦିତ।"
 
-#: app/routes/auth.py:26
+#: app/routes/admin.py:148
+#, fuzzy
+msgid "User deletion request rejected."
+msgstr "ଉପଭୋକ୍ତା ବିଲୋପ ଅନୁମୋଦିତ।"
+
+#: app/routes/auth.py:21
+#, python-format
+msgid "You can register to the system again on %(date)s"
+msgstr ""
+
+#: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
 msgstr "ଅଧିକାରୀ ପଞ୍ଜିକୃତ ନୁହଁନ୍ତି। ପ୍ରଶାସକଙ୍କ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ।"
 
-#: app/routes/auth.py:30
+#: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
 msgstr "ନମ୍ବର %(role)s ଭାବରେ ପଞ୍ଜିକୃତ ହୋଇଛି। ସଠିକ ଭୂମିକା ଚୟନ କରନ୍ତୁ।"
 
-#: app/routes/auth.py:34
+#: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
 msgstr "ଖାତା ନିଷ୍କ୍ରିୟ ଅଛି କିମ୍ବା ଡିଲିଟ୍ ହୋଇଛି।"
 
-#: app/routes/auth.py:61
+#: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
 msgstr "ଅବୈଧ କିମ୍ବା ମିଆଦ ଶେଷ ହୋଇଥିବା OTP।"
 
@@ -55,76 +70,91 @@ msgstr "ଅବୈଧ କିମ୍ବା ମିଆଦ ଶେଷ ହୋଇଥି�
 msgid "Profile updated successfully!"
 msgstr "ପ୍ରୋଫାଇଲ୍ ସଫଳତାର ସହିତ ଅଦ୍ୟତନ ହୋଇଛି!"
 
-#: app/routes/citizen.py:116
+#: app/routes/citizen.py:149
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr "ଏହି ସ୍ଥାନରେ ସମାନ ରିପୋର୍ଟ ପୂର୍ବରୁ ଅଛି। ଆପଣଙ୍କର ଅପଭୋଟ୍ (upvote) ଏଥିରେ ଯୋଡା ଯାଇଛି।"
+msgstr ""
+"ଏହି ସ୍ଥାନରେ ସମାନ ରିପୋର୍ଟ ପୂର୍ବରୁ ଅଛି। ଆପଣଙ୍କର ଅପଭୋଟ୍ (upvote) ଏଥିରେ ଯୋଡା "
+"ଯାଇଛି।"
 
-#: app/routes/citizen.py:118
+#: app/routes/citizen.py:151
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "ଏକ ସମାନ ରିପୋର୍ଟ ପୂର୍ବରୁ ଅଛି ଏବଂ ଆପଣ ପୂର୍ବରୁ ଏହାକୁ ଅପଭୋଟ୍ କରିଛନ୍ତି।"
 
-#: app/routes/citizen.py:120
+#: app/routes/citizen.py:153
 msgid "You have already submitted a similar report in this location."
 msgstr "ଆପଣ ପୂର୍ବରୁ ଏହି ସ୍ଥାନରେ ଏକ ସମାନ ରିପୋର୍ଟ ଦାଖଲ କରିଛନ୍ତି।"
 
-#: app/routes/citizen.py:140
+#: app/routes/citizen.py:173
 msgid "You can only upload up to 3 images."
 msgstr "ଆପଣ କେବଳ ୩ଟି ପର୍ଯ୍ୟନ୍ତ ଚିତ୍ର ଅପଲୋଡ୍ କରିପାରିବେ।"
 
-#: app/routes/citizen.py:157
+#: app/routes/citizen.py:190
 msgid "Report submitted successfully!"
 msgstr "ରିପୋର୍ଟ ସଫଳତାର ସହିତ ଦାଖଲ ହୋଇଛି!"
 
-#: app/routes/citizen.py:169
+#: app/routes/citizen.py:202
 msgid "You cannot upvote your own report."
 msgstr "ଆପଣ ନିଜର ରିପୋର୍ଟକୁ ଅପଭୋଟ୍ କରିପାରିବେ ନାହିଁ।"
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:206
 msgid "Already upvoted"
 msgstr "ପୂର୍ବରୁ ଅପଭୋଟ୍ କରାଯାଇଛି"
 
-#: app/routes/citizen.py:191
+#: app/routes/citizen.py:224
 msgid "Comment added."
 msgstr "ମନ୍ତବ୍ୟ ଯୋଡାଗଲା।"
 
-#: app/routes/citizen.py:199
+#: app/routes/citizen.py:232
 msgid "Unauthorized."
 msgstr "ଅନଧିକୃତ।"
 
-#: app/routes/citizen.py:205
+#: app/routes/citizen.py:238
 msgid "Report reopened."
 msgstr "ରିପୋର୍ଟ ପୁନର୍ବାର ଖୋଲାଗଲା।"
 
-#: app/routes/citizen.py:207
+#: app/routes/citizen.py:240
 msgid "Report cannot be reopened."
 msgstr "ରିପୋର୍ଟ ପୁନର୍ବାର ଖୋଲାଯାଇପାରିବ ନାହିଁ।"
 
-#: app/routes/citizen.py:216
-msgid "Deletion request submitted to your assigned officer."
-msgstr "ଆପଣଙ୍କର ନିଯୁକ୍ତ ଅଧିକାରୀଙ୍କ ନିକଟରେ ବିଲୋପ ଅନୁରୋଧ ଦାଖଲ କରାଯାଇଛି।"
+#: app/routes/citizen.py:248
+msgid ""
+"Please update your State and District in your profile before requesting "
+"account deletion."
+msgstr ""
+
+#: app/routes/citizen.py:253
+msgid ""
+"Deletion request submitted to your assigned officer. Your account will be"
+" deleted after approval of Admin Officer."
+msgstr ""
+"ଖାତା ବିଲୋପ ପାଇଁ ଅନୁରୋଧ ଆପଣଙ୍କ ନିଯۇକ୍ତ ଅଧିକାରୀଙ୍କୁ ଦିଆଯାଇଛି | ଆଡମିନ୍ "
+"ଅଧିକାରୀଙ୍କ ଅନୁମୋଦନ ପରେ ଆପଣଙ୍କର ଖାତା ବିଲୋପ ହେବ |"
 
 #: app/templates/admin_dashboard.html:5
+#, fuzzy
 msgid "Admin Officer Dashboard"
-msgstr "ପ୍ରଶାସନିକ ଅଧିକାରୀ ଡ୍ୟାସବୋର୍ଡ"
+msgstr "ପ୍ରଶାସନିକ ଡ୍ୟାସବୋର୍ଡ"
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
-msgstr "ସ୍ଵାଗତ"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:6
+#, fuzzy
 msgid "Assigned to:"
-msgstr "ନ୍ୟସ୍ତ କରାଯାଇଛି:"
+msgstr "ନ୍ୟସ୍ତ କରାଯାଇଥିବା ରାଜ୍ୟ:"
 
-#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:74
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:64
 #: app/templates/status.html:41
 msgid "Priority:"
 msgstr "ପ୍ରାଥମିକତା:"
 
 #: app/templates/admin_dashboard.html:14
+#, fuzzy
 msgid "All Priorities"
-msgstr "ସମସ୍ତ ପ୍ରାଥମିକତା"
+msgstr "ପ୍ରାଥମିକତା"
 
 #: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
 #: app/templates/submit_report.html:30
@@ -163,157 +193,195 @@ msgid "Clear"
 msgstr "ସଫା କରନ୍ତୁ"
 
 #: app/templates/admin_dashboard.html:39
+#, fuzzy
 msgid "Total Reports"
-msgstr "ସମୁଦାୟ ରିପୋର୍ଟ"
+msgstr "ରିପୋର୍ଟଗୁଡିକ"
 
-#: app/templates/status.html:36
+#: app/templates/admin_dashboard.html:43
 msgid "Pending"
-msgstr "ବାକି ଅଛି"
+msgstr ""
 
-#: app/templates/status.html:36
-msgid "Acknowledged"
-msgstr "ସ୍ୱୀକୃତ"
+#: app/templates/admin_dashboard.html:47
+#, fuzzy
+msgid "Approved"
+msgstr "ରିପୋର୍ଟ ଅନୁମୋଦିତ ହୋଇଛି।"
 
-#: app/templates/status.html:36
-msgid "In progress"
-msgstr "ପ୍ରକ୍ରିୟା ଚାଲିଛି"
-
-#: app/templates/status.html:36
+#: app/templates/admin_dashboard.html:51
+#, fuzzy
 msgid "Resolved"
-msgstr "ସମାଧାନ ହୋଇଛି"
-
-msgid "Roads"
-msgstr "ରାସ୍ତାଘାଟ"
-
-msgid "Water"
-msgstr "ଜଳ"
-
-msgid "Electricity"
-msgstr "ବିଦ୍ୟୁତ୍"
-
-msgid "Sanitation"
-msgstr "ପରିମଳ"
-
-msgid "Other"
-msgstr "ଅନ୍ୟାନ୍ୟ"
+msgstr "ହଟାନ୍ତୁ"
 
 #: app/templates/admin_dashboard.html:57
+#, fuzzy
 msgid "Manage Reports"
-msgstr "ରିପୋର୍ଟ ପରିଚାଳନା କରନ୍ତୁ"
+msgstr "ରିପୋର୍ଟଗୁଡିକ"
 
-#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:180
+#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:224
+#, fuzzy
 msgid "Title"
-msgstr "ଶୀର୍ଷକ"
+msgstr "ଫାଇଲ୍"
 
-#: app/templates/admin_dashboard.html:63 app/templates/profile.html:14
+#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:107
+#: app/templates/profile.html:14
 msgid "Citizen ID"
 msgstr "ନାଗରିକ ପରିଚୟ ପତ୍ର"
 
-#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:182
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
 #: app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "ପ୍ରାଥମିକତା"
 
-#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:183
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
 #: app/templates/base.html:20
 msgid "Status"
 msgstr "ସ୍ଥିତି"
 
 #: app/templates/admin_dashboard.html:66
+#, fuzzy
 msgid "Date"
-msgstr "ତାରିଖ"
+msgstr "ରାଜ୍ୟ"
 
-#: app/templates/admin_dashboard.html:67
+#: app/templates/admin_dashboard.html:67 app/templates/admin_dashboard.html:109
+#, fuzzy
 msgid "Actions"
-msgstr "କାର୍ଯ୍ୟାନୁଷ୍ଠାନ"
+msgstr "ସ୍ଥାନ"
 
 #: app/templates/admin_dashboard.html:74
 msgid "N/A"
-msgstr "ଉପଲବ୍ଧ ନାହିଁ"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:79
 msgid "View"
-msgstr "ଦେଖନ୍ତୁ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:81
+#: app/templates/admin_dashboard.html:81 app/templates/admin_dashboard.html:122
+#, fuzzy
 msgid "Approve"
-msgstr "ଅନୁମୋଦନ କରନ୍ତୁ"
+msgstr "ହଟାନ୍ତୁ"
 
-#: app/templates/admin_dashboard.html:84
+#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:126
+msgid "Reject"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:85
+#, fuzzy
 msgid "Resolve"
-msgstr "ସମାଧାନ କରନ୍ତୁ"
+msgstr "ହଟାନ୍ତୁ"
 
-#: app/templates/admin_dashboard.html:87 app/templates/status.html:53
+#: app/templates/admin_dashboard.html:88 app/templates/status.html:68
 msgid "Message"
 msgstr "ବାର୍ତ୍ତା"
 
-#: app/templates/admin_dashboard.html:95
+#: app/templates/admin_dashboard.html:96
+#, fuzzy
 msgid "No reports found matching filters."
-msgstr "ଫିଲ୍ଟର୍ ସହିତ ମେଳ ଖାଉଥିବା କୌଣସି ରିପୋର୍ଟ ମିଳିଲା ନାହିଁ।"
+msgstr "ମାପଦଣ୍ଡ ସହିତ ମେଳ ଖାଉଥିବା କୌଣସି ରିପୋର୍ଟ ମିଳିଲା ନାହିଁ।"
 
-#: app/templates/admin_dashboard.html:104
-msgid "Report Details"
-msgstr "ରିପୋର୍ଟ ବିବରଣୀ"
+#: app/templates/admin_dashboard.html:102
+#, fuzzy
+msgid "Pending Account Deletion Requests"
+msgstr "ଖାତା ବିଲୋପ ଅନୁରୋଧ ଅନୁମୋଦନ ପାଇଁ ବାକି ଅଛି।"
+
+#: app/templates/admin_dashboard.html:106
+#, fuzzy
+msgid "Name"
+msgstr "ନାମ:"
 
 #: app/templates/admin_dashboard.html:108
+#, fuzzy
+msgid "Phone"
+msgstr "ଫୋନ୍:"
+
+#: app/templates/admin_dashboard.html:115 app/templates/public_forum.html:16
+#: app/templates/public_forum.html:33
+msgid "Anonymous"
+msgstr "ନାମହୀନ"
+
+#: app/templates/admin_dashboard.html:121
+#, fuzzy
+msgid "Are you sure you want to approve this deletion? This action is permanent."
+msgstr "ଆପଣ କଣ ନିଶ୍ଚିତ ଯେ ଆପଣ ଏହି ରିପୋର୍ଟକୁ ପୁନର୍ବାର ଖୋଲିବାକୁ ଚାହୁଁଛନ୍ତି?"
+
+#: app/templates/admin_dashboard.html:141
+#, fuzzy
+msgid "Report Details"
+msgstr "ରିପୋର୍ଟଗୁଡିକ"
+
+#: app/templates/admin_dashboard.html:145 app/templates/public_forum.html:54
 msgid "Close"
 msgstr "ବନ୍ଦ କରନ୍ତୁ"
 
-#: app/templates/admin_dashboard.html:116
+#: app/templates/admin_dashboard.html:153
 msgid "Resolve Report"
-msgstr "ରିପୋର୍ଟ ସମାଧାନ କରନ୍ତୁ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:118
+#: app/templates/admin_dashboard.html:155
 msgid "Enter resolution notes..."
-msgstr "ସମାଧାନର ସୂଚନା ଦିଅନ୍ତୁ..."
+msgstr ""
 
-#: app/templates/admin_dashboard.html:120
+#: app/templates/admin_dashboard.html:157
+#: app/templates/admin_dashboard.html:171
 msgid "Cancel"
-msgstr "ବାତିଲ୍ କରନ୍ତୁ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:121
+#: app/templates/admin_dashboard.html:158
+#, fuzzy
 msgid "Mark as Resolved"
-msgstr "ସମାଧାନ ହୋଇଛି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ"
+msgstr "ସମସ୍ୟା ସମାଧାନ ହୋଇଛି"
 
-#: app/templates/admin_dashboard.html:170 app/templates/status.html:73
+#: app/templates/admin_dashboard.html:167
+#: app/templates/admin_dashboard.html:172
+#, fuzzy
+msgid "Reject Report"
+msgstr "ରିପୋର୍ଟ ଦାଖଲ କରନ୍ତୁ"
+
+#: app/templates/admin_dashboard.html:169
+msgid "Enter rejection reason..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:214 app/templates/status.html:88
 msgid "Report Image"
 msgstr "ରିପୋର୍ଟ ଚିତ୍ର"
 
-#: app/templates/admin_dashboard.html:181 app/templates/submit_report.html:14
+#: app/templates/admin_dashboard.html:225 app/templates/submit_report.html:14
 msgid "Category"
 msgstr "ଶ୍ରେଣୀ"
 
-#: app/templates/admin_dashboard.html:184
+#: app/templates/admin_dashboard.html:228
+#, fuzzy
 msgid "Submitted On"
-msgstr "ଦାଖଲ ତାରିଖ"
+msgstr "ମୋର ଦାଖଲ ହୋଇଥିବା ରିପୋର୍ଟଗୁଡିକ"
 
-#: app/templates/admin_dashboard.html:185
+#: app/templates/admin_dashboard.html:229
+#, fuzzy
 msgid "Description"
-msgstr "ବର୍ଣ୍ଣନା"
+msgstr "ସମସ୍ୟାର ବର୍ଣ୍ଣନା"
 
-#: app/templates/admin_dashboard.html:186 app/templates/submit_report.html:41
+#: app/templates/admin_dashboard.html:230 app/templates/submit_report.html:41
 msgid "Location"
 msgstr "ସ୍ଥାନ"
 
-#: app/templates/admin_dashboard.html:190
+#: app/templates/admin_dashboard.html:234
 msgid "Captured Images"
-msgstr "ଉଠାଯାଇଥିବା ଚିତ୍ରଗୁଡିକ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:191
+#: app/templates/admin_dashboard.html:235
 msgid "No images uploaded"
-msgstr "କୌଣସି ଚିତ୍ର ଅପଲୋଡ୍ ହୋଇନାହିଁ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:194
+#: app/templates/admin_dashboard.html:238
+#, fuzzy
 msgid "Voice Notes"
 msgstr "ଭଏସ୍ ନୋଟ୍"
 
-#: app/templates/admin_dashboard.html:195
+#: app/templates/admin_dashboard.html:239
+#, fuzzy
 msgid "No voice notes uploaded"
-msgstr "କୌଣସି ଭଏସ୍ ନୋଟ୍ ଅପଲୋଡ୍ ହୋଇନାହିଁ"
+msgstr "ଭଏସ୍ ନୋଟ୍"
 
-#: app/templates/admin_dashboard.html:217
+#: app/templates/admin_dashboard.html:261
 msgid "Failed to fetch report details"
-msgstr "ରିପୋର୍ଟ ବିବରଣୀ ପାଇବାରେ ବିଫଳ"
+msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
@@ -342,6 +410,10 @@ msgstr "ନ୍ୟସ୍ତ କରାଯାଇଥିବା ରାଜ୍ୟ:"
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
 msgstr "ନ୍ୟସ୍ତ କରାଯାଇଥିବା ଜିଲ୍ଲା:"
+
+#: app/templates/admin_profile.html:12
+msgid "District Coordinates:"
+msgstr ""
 
 #: app/templates/base.html:17
 msgid "Dashboard"
@@ -393,7 +465,9 @@ msgstr "ଆପଣଙ୍କର ଡ୍ୟାସବୋର୍ଡକୁ ସ୍ଵା�
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr "ଆପଣଙ୍କ ସମ୍ପ୍ରଦାୟର ନାଗରିକ ସମସ୍ୟାଗୁଡିକ ରିପୋର୍ଟ ଏବଂ ଟ୍ରାକିଂ ପାଇଁ ଆପଣଙ୍କର ପୋର୍ଟାଲ୍।"
+msgstr ""
+"ଆପଣଙ୍କ ସମ୍ପ୍ରଦାୟର ନାଗରିକ ସମସ୍ୟାଗୁଡିକ ରିପୋର୍ଟ ଏବଂ ଟ୍ରାକିଂ ପାଇଁ ଆପଣଙ୍କର "
+"ପୋର୍ଟାଲ୍।"
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
@@ -439,7 +513,7 @@ msgstr "ଜୀବନ୍ତ ମାନଚିତ୍ର ଦେଖନ୍ତୁ"
 msgid "Manage Profile"
 msgstr "ପ୍ରୋଫାଇଲ୍ ପରିଚାଳନା କରନ୍ତୁ"
 
-#: app/templates/citizen_dashboard.html:98
+#: app/templates/citizen_dashboard.html:93
 msgid "Upvoted"
 msgstr "ଅପଭୋଟ୍ କରାଯାଇଛି"
 
@@ -503,11 +577,11 @@ msgstr "ଜୀବନ୍ତ ମାନଚିତ୍ର - ଗୋଷ୍ଠୀ ସମ�
 msgid "Legend"
 msgstr "ସୂଚୀ"
 
-#: app/templates/live_map.html:73 app/templates/status.html:40
+#: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
 msgstr "ଶ୍ରେଣୀ:"
 
-#: app/templates/live_map.html:75
+#: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "ସ୍ଥିତି:"
 
@@ -539,7 +613,7 @@ msgstr "OTP ପଠାନ୍ତୁ"
 msgid "Demo OTP: 1234"
 msgstr "ଡେମୋ OTP: 1234"
 
-#: app/templates/login.html:66
+#: app/templates/login.html:65
 msgid "Please enter 10 digits"
 msgstr "ଦୟାକରି ୧୦ଟି ଅଙ୍କ ପ୍ରବେଶ କରନ୍ତୁ"
 
@@ -575,7 +649,7 @@ msgstr "ଠିକଣା"
 msgid "Enter your address"
 msgstr "ଆପଣଙ୍କର ଠିକଣା ଲେଖନ୍ତୁ"
 
-#: app/templates/profile.html:31 app/templates/submit_report.html:52
+#: app/templates/profile.html:31
 msgid "State"
 msgstr "ରାଜ୍ୟ"
 
@@ -587,7 +661,7 @@ msgstr "ରାଜ୍ୟ ଚୟନ କରନ୍ତୁ"
 msgid "District"
 msgstr "ଜିଲ୍ଲା"
 
-#: app/templates/profile.html:39 app/templates/profile.html:133
+#: app/templates/profile.html:39 app/templates/profile.html:136
 msgid "Select District"
 msgstr "ଜିଲ୍ଲା ଚୟନ କରନ୍ତୁ"
 
@@ -599,47 +673,64 @@ msgstr "ପ୍ରୋଫାଇଲ୍ ଅଦ୍ୟତନ କରନ୍ତୁ"
 msgid "Account Management"
 msgstr "ଖାତା ପରିଚାଳନା"
 
-#: app/templates/profile.html:51
-msgid ""
-"Are you sure you want to request account deletion? This will be reviewed "
-"by your assigned officer."
-msgstr "ଆପଣ କଣ ନିଶ୍ଚିତ ଯେ ଆପଣ ଖାତା ବିଲୋପ ପାଇଁ ଅନୁରୋଧ କରିବାକୁ ଚାହୁଁଛନ୍ତି? ଆପଣଙ୍କର ନିଯୁକ୍ତ ଅଧିକାରୀଙ୍କ ଦ୍ୱାରା ଏହାର ସମୀକ୍ଷା କରାଯିବ।"
-
 #: app/templates/profile.html:52
+msgid ""
+"All your account associated data will be deleted from the system, are you"
+" sure you want to delete your account?"
+msgstr ""
+
+#: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
 msgstr "ଖାତା ବିଲୋପ ପାଇଁ ଅନୁରୋଧ କରନ୍ତୁ"
 
-#: app/templates/profile.html:55
+#: app/templates/profile.html:58
+msgid ""
+"Please update your State and District in your profile before you can "
+"raise an account deletion request."
+msgstr ""
+
+#: app/templates/profile.html:60
+#, fuzzy
+msgid "Update profile to enable"
+msgstr "ପ୍ରୋଫାଇଲ୍ ଅଦ୍ୟତନ କରନ୍ତୁ"
+
+#: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "ଖାତା ବିଲୋପ ଅନୁରୋଧ ଅନୁମୋଦନ ପାଇଁ ବାକି ଅଛି।"
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "Posted on"
 msgstr "ରେ ପୋଷ୍ଟ କରାଯାଇଛି"
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "by"
 msgstr "ଦ୍ୱାରା"
 
-#: app/templates/public_forum.html:14 app/templates/public_forum.html:28
-msgid "Anonymous"
-msgstr "ନାମହୀନ"
-
-#: app/templates/public_forum.html:19
+#: app/templates/public_forum.html:21
 msgid "Upvotes"
 msgstr "ଅପଭୋଟ୍"
 
-#: app/templates/public_forum.html:21 app/templates/public_forum.html:25
+#: app/templates/public_forum.html:24
+#, fuzzy
+msgid "View Location"
+msgstr "ଚିହ୍ନିତ ସ୍ଥାନ ଦେଖନ୍ତୁ"
+
+#: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
 msgstr "ମନ୍ତବ୍ୟ"
 
-#: app/templates/public_forum.html:34
+#: app/templates/public_forum.html:39
 msgid "Add a comment..."
 msgstr "ଏକ ମନ୍ତବ୍ୟ ଯୋଡନ୍ତୁ..."
 
-#: app/templates/public_forum.html:35
+#: app/templates/public_forum.html:40
 msgid "Post"
 msgstr "ପୋଷ୍ଟ୍ କରନ୍ତୁ"
+
+#: app/templates/public_forum.html:51
+#, fuzzy
+msgid "Report Location"
+msgstr "ରିପୋର୍ଟ ଚାଟ୍"
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
@@ -661,27 +752,39 @@ msgstr "ଅଜ୍ଞାତ"
 msgid "Upvotes:"
 msgstr "ଅପଭୋଟ୍:"
 
-#: app/templates/status.html:49
+#: app/templates/status.html:51
+msgid "Resolution Notes:"
+msgstr ""
+
+#: app/templates/status.html:53
+msgid "Rejection Reason:"
+msgstr ""
+
+#: app/templates/status.html:55
+msgid "Officer Feedback:"
+msgstr ""
+
+#: app/templates/status.html:64
 msgid "View Marked Location"
 msgstr "ଚିହ୍ନିତ ସ୍ଥାନ ଦେଖନ୍ତୁ"
 
-#: app/templates/status.html:57
+#: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
 msgstr "ଆପଣ କଣ ନିଶ୍ଚିତ ଯେ ଆପଣ ଏହି ରିପୋର୍ଟକୁ ପୁନର୍ବାର ଖୋଲିବାକୁ ଚାହୁଁଛନ୍ତି?"
 
-#: app/templates/status.html:59
+#: app/templates/status.html:74
 msgid "Reopen"
 msgstr "ପୁନର୍ବାର ଖୋଲନ୍ତୁ"
 
-#: app/templates/status.html:70
+#: app/templates/status.html:85
 msgid "Images:"
 msgstr "ଚିତ୍ରଗୁଡିକ:"
 
-#: app/templates/status.html:81
+#: app/templates/status.html:96
 msgid "Voice Note:"
 msgstr "ଭଏସ୍ ନୋଟ୍:"
 
-#: app/templates/status.html:85
+#: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
 msgstr "ଆପଣଙ୍କର ବ୍ରାଉଜର୍ ଅଡିଓ ଏଲିମେଣ୍ଟକୁ ସମର୍ଥନ କରେ ନାହିଁ।"
 
@@ -727,89 +830,87 @@ msgstr "ସମସ୍ୟା ବିଷୟରେ ବିସ୍ତୃତ ସୂଚନ
 
 #: app/templates/submit_report.html:42
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr "ସ୍ଥାନ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ସଂଗୃହିତ ହେବ, କିନ୍ତୁ ଆପଣ ଏହାକୁ ମାନଚିତ୍ରରେ ସଂଶୋଧନ କରିପାରିବେ।"
+msgstr ""
+"ସ୍ଥାନ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ସଂଗୃହିତ ହେବ, କିନ୍ତୁ ଆପଣ ଏହାକୁ ମାନଚିତ୍ରରେ ସଂଶୋଧନ "
+"କରିପାରିବେ।"
 
-#: app/templates/submit_report.html:48
-msgid "City/District"
-msgstr "ସହର/ଜିଲ୍ଲା"
-
-#: app/templates/submit_report.html:59
+#: app/templates/submit_report.html:52
 msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "ଚିତ୍ର ଅପଲୋଡ୍ କରନ୍ତୁ (ସର୍ବାଧିକ ୩ଟି, ପ୍ରତ୍ୟେକ ସର୍ବାଧିକ ୫ MB)"
 
-#: app/templates/submit_report.html:61
+#: app/templates/submit_report.html:54
 msgid "Live Geo-Camera"
 msgstr "ଜୀବନ୍ତ ଜିଓ-କ୍ୟାମେରା"
 
-#: app/templates/submit_report.html:63
+#: app/templates/submit_report.html:56
 msgid "Upload Files"
 msgstr "ଫାଇଲ୍ ଅପଲୋଡ୍ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:72
+#: app/templates/submit_report.html:65
 msgid "Capture Photo"
 msgstr "ଫଟୋ ଉଠାନ୍ତୁ"
 
-#: app/templates/submit_report.html:73
+#: app/templates/submit_report.html:66
 msgid "Switch"
 msgstr "ବଦଳାନ୍ତୁ (Switch)"
 
-#: app/templates/submit_report.html:74
+#: app/templates/submit_report.html:67
 msgid "Close Camera"
 msgstr "କ୍ୟାମେରା ବନ୍ଦ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:85
+#: app/templates/submit_report.html:78
 msgid "Voice Note"
 msgstr "ଭଏସ୍ ନୋଟ୍"
 
-#: app/templates/submit_report.html:87
+#: app/templates/submit_report.html:80
 msgid "Record"
 msgstr "ରେକର୍ଡ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:81
 msgid "Stop"
 msgstr "ବନ୍ଦ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:91
+#: app/templates/submit_report.html:84
 msgid "OR upload file"
 msgstr "କିମ୍ବା ଫାଇଲ୍ ଅପଲୋଡ୍ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:95
+#: app/templates/submit_report.html:88
 msgid "Remove"
 msgstr "ହଟାନ୍ତୁ"
 
-#: app/templates/submit_report.html:99
+#: app/templates/submit_report.html:92
 msgid "Submit Report"
 msgstr "ରିପୋର୍ଟ ଦାଖଲ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "File"
 msgstr "ଫାଇଲ୍"
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "exceeds 5MB limit"
 msgstr "୫ MB ସୀମା ଅତିକ୍ରମ କରୁଛି"
 
-#: app/templates/submit_report.html:241 app/templates/submit_report.html:281
+#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
 msgid "Maximum 3 images reached"
 msgstr "ସର୍ବାଧିକ ୩ଟି ଚିତ୍ର ହୋଇଗଲା"
 
-#: app/templates/submit_report.html:265
+#: app/templates/submit_report.html:250
 msgid "Camera access denied or not available"
 msgstr "କ୍ୟାମେରା ଆକ୍ସେସ୍ ମନା କରାଯାଇଛି କିମ୍ବା ଉପଲବ୍ଧ ନାହିଁ"
 
-#: app/templates/submit_report.html:323
-msgid "Location data pending..."
-msgstr "ସ୍ଥାନ ତଥ୍ୟ ବାକି ଅଛି..."
+#: app/templates/submit_report.html:306
+msgid "District assignment pending..."
+msgstr ""
 
-#: app/templates/submit_report.html:343
+#: app/templates/submit_report.html:326
 msgid "Please upload or capture at least one image of the issue."
 msgstr "ଦୟାକରି ସମସ୍ୟାର ଅତିକମରେ ଗୋଟିଏ ଚିତ୍ର ଅପଲୋଡ୍ କରନ୍ତୁ କିମ୍ବା ଉଠାନ୍ତୁ।"
 
-#: app/templates/submit_report.html:382
+#: app/templates/submit_report.html:365
 msgid "Recording..."
 msgstr "ରେକର୍ଡିଂ ଚାଲିଛି..."
 
-#: app/templates/submit_report.html:397
+#: app/templates/submit_report.html:380
 msgid "Microphone access denied"
 msgstr "ମାଇକ୍ରୋଫୋନ୍ ଆକ୍ସେସ୍ ମନା କରାଯାଇଛି"
 
@@ -832,3 +933,140 @@ msgstr "ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ଲଗ୍ ଇନ୍ କର�
 #: app/templates/verify_otp.html:54
 msgid "Please enter 4 digits"
 msgstr "ଦୟାକରି ୪ଟି ଅଙ୍କ ପ୍ରବେଶ କରନ୍ତୁ"
+
+#~ msgid "Acknowledged"
+#~ msgstr "ସ୍ୱୀକୃତ"
+
+#~ msgid "In progress"
+#~ msgstr "ପ୍ରକ୍ରିୟା ଚାଲିଛି"
+
+#~ msgid "Roads"
+#~ msgstr "ରାସ୍ତାଘାଟ"
+
+#~ msgid "Water"
+#~ msgstr "ଜଳ"
+
+#~ msgid "Sanitation"
+#~ msgstr "ପରିମଳ"
+
+#~ msgid ""
+#~ "Are you sure you want to request"
+#~ " account deletion? This will be "
+#~ "reviewed by your assigned officer."
+#~ msgstr ""
+#~ "ଆପଣ କଣ ନିଶ୍ଚିତ ଯେ ଆପଣ ଖାତା ବିଲୋପ"
+#~ " ପାଇଁ ଅନୁରୋଧ କରିବାକୁ ଚାହୁଁଛନ୍ତି? ଆପଣଙ୍କର"
+#~ " ନିଯୁକ୍ତ ଅଧିକାରୀଙ୍କ ଦ୍ୱାରା ଏହାର ସମୀକ୍ଷା "
+#~ "କରାଯିବ।"
+
+#~ msgid "City/District"
+#~ msgstr "ସହର/ଜିଲ୍ଲା"
+
+#~ msgid "Location data pending..."
+#~ msgstr "ସ୍ଥାନ ତଥ୍ୟ ବାକି ଅଛି..."
+
+#~ msgid "Admin Officer Dashboard"
+#~ msgstr "ପ୍ରଶାସନିକ ଅଧିକାରୀ ଡ୍ୟାସବୋର୍ଡ"
+
+#~ msgid "Welcome"
+#~ msgstr "ସ୍ଵାଗତ"
+
+#~ msgid "Assigned to:"
+#~ msgstr "ନ୍ୟସ୍ତ କରାଯାଇଛି:"
+
+#~ msgid "All Priorities"
+#~ msgstr "ସମସ୍ତ ପ୍ରାଥମିକତା"
+
+#~ msgid "Total Reports"
+#~ msgstr "ସମୁଦାୟ ରିପୋର୍ଟ"
+
+#~ msgid "Pending"
+#~ msgstr "ବାକି ଅଛି"
+
+#~ msgid "Approved"
+#~ msgstr "ଅନୁମୋଦନ କରନ୍ତୁ"
+
+#~ msgid "Resolved"
+#~ msgstr "ସମାଧାନ ହୋଇଛି"
+
+#~ msgid "Manage Reports"
+#~ msgstr "ରିପୋର୍ଟ ପରିଚାଳନା କରନ୍ତୁ"
+
+#~ msgid "Title"
+#~ msgstr "ଶୀର୍ଷକ"
+
+#~ msgid "Date"
+#~ msgstr "ତାରିଖ"
+
+#~ msgid "Actions"
+#~ msgstr "କାର୍ଯ୍ୟାନୁଷ୍ଠାନ"
+
+#~ msgid "N/A"
+#~ msgstr "ଉପଲବ୍ଧ ନାହିଁ"
+
+#~ msgid "View"
+#~ msgstr "ଦେଖନ୍ତୁ"
+
+#~ msgid "Approve"
+#~ msgstr "ଅନୁମୋଦନ କରନ୍ତୁ"
+
+#~ msgid "Resolve"
+#~ msgstr "ସମାଧାନ କରନ୍ତୁ"
+
+#~ msgid "No reports found matching filters."
+#~ msgstr "ଫିଲ୍ଟର୍ ସହିତ ମେଳ ଖାଉଥିବା କୌଣସି ରିପୋର୍ଟ ମିଳିଲା ନାହିଁ।"
+
+#~ msgid "Pending Account Deletion Requests"
+#~ msgstr "ଖାତା ବିଲୋପ ଅନୁରୋଧ ଅନୁମୋଦନ ପାଇଁ ବାକି ଅଛି।"
+
+#~ msgid "Name"
+#~ msgstr "ନାମ:"
+
+#~ msgid "Phone"
+#~ msgstr "ଫୋନ୍:"
+
+#~ msgid ""
+#~ "Are you sure you want to approve"
+#~ " this deletion? This action is "
+#~ "permanent."
+#~ msgstr "ଆପଣ କଣ ନିଶ୍ଚିତ ଯେ ଆପଣ ଏହି ରିପୋର୍ଟକୁ ପୁନର୍ବାର ଖୋଲିବାକୁ ଚାହୁଁଛନ୍ତି?"
+
+#~ msgid "Reject"
+#~ msgstr ""
+
+#~ msgid "Report Details"
+#~ msgstr "ରିପୋର୍ଟ ବିବରଣୀ"
+
+#~ msgid "Resolve Report"
+#~ msgstr "ରିପୋର୍ଟ ସମାଧାନ କରନ୍ତୁ"
+
+#~ msgid "Enter resolution notes..."
+#~ msgstr "ସମାଧାନର ସୂଚନା ଦିଅନ୍ତୁ..."
+
+#~ msgid "Cancel"
+#~ msgstr "ବାତିଲ୍ କରନ୍ତୁ"
+
+#~ msgid "Mark as Resolved"
+#~ msgstr "ସମାଧାନ ହୋଇଛି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ"
+
+#~ msgid "Submitted On"
+#~ msgstr "ଦାଖଲ ତାରିଖ"
+
+#~ msgid "Description"
+#~ msgstr "ବର୍ଣ୍ଣନା"
+
+#~ msgid "Captured Images"
+#~ msgstr "ଉଠାଯାଇଥିବା ଚିତ୍ରଗୁଡିକ"
+
+#~ msgid "No images uploaded"
+#~ msgstr "କୌଣସି ଚିତ୍ର ଅପଲୋଡ୍ ହୋଇନାହିଁ"
+
+#~ msgid "Voice Notes"
+#~ msgstr "ଭଏସ୍ ନୋଟ୍"
+
+#~ msgid "No voice notes uploaded"
+#~ msgstr "କୌଣସି ଭଏସ୍ ନୋଟ୍ ଅପଲୋଡ୍ ହୋଇନାହିଁ"
+
+#~ msgid "Failed to fetch report details"
+#~ msgstr "ରିପୋର୍ଟ ବିବରଣୀ ପାଇବାରେ ବିଫଳ"
+

@@ -114,12 +114,36 @@ def resolve_report(report_id):
     flash(_('Report resolved.'), 'success')
     return redirect(url_for('admin.dashboard'))
 
+@admin_bp.route('/reject-report/<int:report_id>', methods=['POST'])
+@login_required
+def reject_report(report_id):
+    if current_user.role != 'authority':
+        return jsonify({'error': _('Unauthorized')}), 403
+        
+    notes = request.form.get('notes')
+    report = Report.query.get_or_404(report_id)
+    report.status = 'rejected'
+    report.resolution_notes = notes # Reuse resolution_notes for rejection reason
+    db.session.commit()
+    flash(_('Report rejected.'), 'info')
+    return redirect(url_for('admin.dashboard'))
+
 @admin_bp.route('/approve-deletion/<int:user_id>')
 @login_required
 def approve_deletion(user_id):
     user = User.query.get_or_404(user_id)
     user.account_deletion_status = 'approved'
     user.is_active = False
+    user.deleted_at = datetime.utcnow()
     db.session.commit()
     flash(_('User deletion approved.'), 'success')
+    return redirect(url_for('admin.dashboard'))
+
+@admin_bp.route('/reject-deletion/<int:user_id>')
+@login_required
+def reject_deletion(user_id):
+    user = User.query.get_or_404(user_id)
+    user.account_deletion_status = 'none'
+    db.session.commit()
+    flash(_('User deletion request rejected.'), 'info')
     return redirect(url_for('admin.dashboard'))

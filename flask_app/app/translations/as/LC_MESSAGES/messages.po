@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 09:41+0530\n"
+"POT-Creation-Date: 2026-06-07 21:01+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: Gemini CLI <email@address>\n"
 "Language: as\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75
+#: app/routes/admin.py:75 app/routes/admin.py:121
 msgid "Unauthorized"
 msgstr "অননুমোদিত"
 
@@ -30,24 +30,39 @@ msgstr "প্ৰতিবেদন অনুমোদিত হ’ল।"
 msgid "Report resolved."
 msgstr "প্ৰতিবেদন সমাধান কৰা হ’ল।"
 
-#: app/routes/admin.py:124
+#: app/routes/admin.py:128
+#, fuzzy
+msgid "Report rejected."
+msgstr "প্ৰতিবেদন পুনৰ খোলা হ’ল।"
+
+#: app/routes/admin.py:139
 msgid "User deletion approved."
 msgstr "ব্যৱহাৰকাৰী বিলোপ অনুমোদন কৰা হ’ল।"
 
-#: app/routes/auth.py:26
+#: app/routes/admin.py:148
+#, fuzzy
+msgid "User deletion request rejected."
+msgstr "ব্যৱহাৰকাৰী বিলোপ অনুমোদন কৰা হ’ল।"
+
+#: app/routes/auth.py:21
+#, python-format
+msgid "You can register to the system again on %(date)s"
+msgstr ""
+
+#: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
 msgstr "বিষয়া পঞ্জীয়নভুক্ত নহয়। প্ৰশাসকৰ সৈতে যোগাযোগ কৰক।"
 
-#: app/routes/auth.py:30
+#: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
 msgstr "নম্বৰটো %(role)s হিচাপে পঞ্জীয়ন কৰা হৈছে। সঠিক ভূমিকা বাছনি কৰক।"
 
-#: app/routes/auth.py:34
+#: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
 msgstr "একাউন্টটো নিষ্ক্ৰিয় বা বিলোপ কৰা হৈছে।"
 
-#: app/routes/auth.py:61
+#: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
 msgstr "অমান্য বা ম্যাদ উকলি যোৱা অ’টিপি।"
 
@@ -55,76 +70,91 @@ msgstr "অমান্য বা ম্যাদ উকলি যোৱা অ�
 msgid "Profile updated successfully!"
 msgstr "প্ৰফাইল সফলতাৰে উন্নীত কৰা হ’ল!"
 
-#: app/routes/citizen.py:116
+#: app/routes/citizen.py:149
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr "এই স্থানত ইতিমধ্যে এক অনুৰূপ প্ৰতিবেদন আছে। আপোনাৰ ভোটটো ইয়াত যোগ কৰা হৈছে।"
+msgstr ""
+"এই স্থানত ইতিমধ্যে এক অনুৰূপ প্ৰতিবেদন আছে। আপোনাৰ ভোটটো ইয়াত যোগ কৰা "
+"হৈছে।"
 
-#: app/routes/citizen.py:118
+#: app/routes/citizen.py:151
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "এক অনুৰূপ প্ৰতিবেদন ইতিমধ্যে আছে আৰু আপুনি ইতিমধ্যে ইয়াক ভোট দিছে।"
 
-#: app/routes/citizen.py:120
+#: app/routes/citizen.py:153
 msgid "You have already submitted a similar report in this location."
 msgstr "আপুনি ইতিমধ্যে এই স্থানত এক অনুৰূপ প্ৰতিবেদন দাখিল কৰিছে।"
 
-#: app/routes/citizen.py:140
+#: app/routes/citizen.py:173
 msgid "You can only upload up to 3 images."
 msgstr "আপুনি কেৱল ৩ খনলৈকে ছবি আপলোড কৰিব পাৰে।"
 
-#: app/routes/citizen.py:157
+#: app/routes/citizen.py:190
 msgid "Report submitted successfully!"
 msgstr "প্ৰতিবেদন সফলতাৰে দাখিল কৰা হ’ল!"
 
-#: app/routes/citizen.py:169
+#: app/routes/citizen.py:202
 msgid "You cannot upvote your own report."
 msgstr "আপুনি নিজৰ প্ৰতিবেদনত ভোট দিব নোৱাৰে।"
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:206
 msgid "Already upvoted"
 msgstr "ইতিমধ্যে ভোট দিছে"
 
-#: app/routes/citizen.py:191
+#: app/routes/citizen.py:224
 msgid "Comment added."
 msgstr "মন্তব্য যোগ কৰা হ’ল।"
 
-#: app/routes/citizen.py:199
+#: app/routes/citizen.py:232
 msgid "Unauthorized."
 msgstr "অননুমোদিত।"
 
-#: app/routes/citizen.py:205
+#: app/routes/citizen.py:238
 msgid "Report reopened."
 msgstr "প্ৰতিবেদন পুনৰ খোলা হ’ল।"
 
-#: app/routes/citizen.py:207
+#: app/routes/citizen.py:240
 msgid "Report cannot be reopened."
 msgstr "প্ৰতিবেদন পুনৰ খুলিব নোৱাৰি।"
 
-#: app/routes/citizen.py:216
-msgid "Deletion request submitted to your assigned officer."
-msgstr "বিলোপৰ অনুৰোধ আপোনাৰ নিযুক্ত বিষয়াজনৰ ওচৰত দাখিল কৰা হৈছে।"
+#: app/routes/citizen.py:248
+msgid ""
+"Please update your State and District in your profile before requesting "
+"account deletion."
+msgstr ""
+
+#: app/routes/citizen.py:253
+msgid ""
+"Deletion request submitted to your assigned officer. Your account will be"
+" deleted after approval of Admin Officer."
+msgstr ""
+"মচি পেলোৱাৰ অনুৰোধ আপোনাৰ নিযুক্ত বিষয়াক জমা দিয়া হৈছে। এডমিন বিষয়াৰ "
+"অনুমোদনৰ পাছত আপোনাৰ একাউণ্টটো মচি পেলোৱা হ’ব।"
 
 #: app/templates/admin_dashboard.html:5
+#, fuzzy
 msgid "Admin Officer Dashboard"
-msgstr "প্ৰশাসনিক বিষয়াৰ ডেচব’ৰ্ড"
+msgstr "প্ৰশাসনিক ডেচব’ৰ্ড"
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
-msgstr "স্বাগতম"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:6
+#, fuzzy
 msgid "Assigned to:"
-msgstr "নিযুক্ত:"
+msgstr "নিযুক্ত ৰাজ্য:"
 
-#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:74
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:64
 #: app/templates/status.html:41
 msgid "Priority:"
 msgstr "অগ্ৰাধিকাৰ:"
 
 #: app/templates/admin_dashboard.html:14
+#, fuzzy
 msgid "All Priorities"
-msgstr "সকলো অগ্ৰাধিকাৰ"
+msgstr "অগ্ৰাধিকাৰ"
 
 #: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
 #: app/templates/submit_report.html:30
@@ -163,138 +193,195 @@ msgid "Clear"
 msgstr "পৰিষ্কাৰ কৰক"
 
 #: app/templates/admin_dashboard.html:39
+#, fuzzy
 msgid "Total Reports"
-msgstr "মুঠ প্ৰতিবেদন"
+msgstr "প্ৰতিবেদনসমূহ"
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
-msgstr "অমীমাংসিত"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:47
+#, fuzzy
 msgid "Approved"
-msgstr "অনুমোদিত"
+msgstr "প্ৰতিবেদন অনুমোদিত হ’ল।"
 
 #: app/templates/admin_dashboard.html:51
+#, fuzzy
 msgid "Resolved"
-msgstr "সমাধান কৰা হ’ল"
+msgstr "আঁতৰাওক"
 
 #: app/templates/admin_dashboard.html:57
+#, fuzzy
 msgid "Manage Reports"
-msgstr "প্ৰতিবেদন পৰিচালনা কৰক"
+msgstr "প্ৰতিবেদনসমূহ"
 
-#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:180
+#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:224
+#, fuzzy
 msgid "Title"
-msgstr "শীৰ্ষক"
+msgstr "ফাইল"
 
-#: app/templates/admin_dashboard.html:63 app/templates/profile.html:14
+#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:107
+#: app/templates/profile.html:14
 msgid "Citizen ID"
 msgstr "নাগরিক পৰিচয় পত্ৰ"
 
-#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:182
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
 #: app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "অগ্ৰাধিকাৰ"
 
-#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:183
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
 #: app/templates/base.html:20
 msgid "Status"
 msgstr "স্থিতি"
 
 #: app/templates/admin_dashboard.html:66
+#, fuzzy
 msgid "Date"
-msgstr "তাৰিখ"
+msgstr "ৰাজ্য"
 
-#: app/templates/admin_dashboard.html:67
+#: app/templates/admin_dashboard.html:67 app/templates/admin_dashboard.html:109
+#, fuzzy
 msgid "Actions"
-msgstr "কাৰ্য্যসমূহ"
+msgstr "স্থান"
 
 #: app/templates/admin_dashboard.html:74
 msgid "N/A"
-msgstr "অপ্ৰযোজ্য"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:79
 msgid "View"
-msgstr "চাওক"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:81
+#: app/templates/admin_dashboard.html:81 app/templates/admin_dashboard.html:122
+#, fuzzy
 msgid "Approve"
-msgstr "অনুমোদন কৰক"
+msgstr "আঁতৰাওক"
 
-#: app/templates/admin_dashboard.html:84
+#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:126
+msgid "Reject"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:85
+#, fuzzy
 msgid "Resolve"
-msgstr "সমাধান কৰক"
+msgstr "আঁতৰাওক"
 
-#: app/templates/admin_dashboard.html:87 app/templates/status.html:53
+#: app/templates/admin_dashboard.html:88 app/templates/status.html:68
 msgid "Message"
 msgstr "বাৰ্তা"
 
-#: app/templates/admin_dashboard.html:95
+#: app/templates/admin_dashboard.html:96
+#, fuzzy
 msgid "No reports found matching filters."
-msgstr "ফিল্টাৰৰ সৈতে মিল থকা কোনো প্ৰতিবেদন পোৱা নগ’ল।"
+msgstr "মাপদণ্ডৰ সৈতে মিল থকা কোনো প্ৰতিবেদন পোৱা নগ’ল।"
 
-#: app/templates/admin_dashboard.html:104
-msgid "Report Details"
-msgstr "প্ৰতিবেদনৰ বিৱৰণ"
+#: app/templates/admin_dashboard.html:102
+#, fuzzy
+msgid "Pending Account Deletion Requests"
+msgstr "একাউন্ট বিলোপৰ অনুৰোধ অনুমোদনৰ বাবে অমীমাংসিত হৈ আছে।"
+
+#: app/templates/admin_dashboard.html:106
+#, fuzzy
+msgid "Name"
+msgstr "নাম:"
 
 #: app/templates/admin_dashboard.html:108
+#, fuzzy
+msgid "Phone"
+msgstr "ফোন:"
+
+#: app/templates/admin_dashboard.html:115 app/templates/public_forum.html:16
+#: app/templates/public_forum.html:33
+msgid "Anonymous"
+msgstr "বেনামী"
+
+#: app/templates/admin_dashboard.html:121
+#, fuzzy
+msgid "Are you sure you want to approve this deletion? This action is permanent."
+msgstr "আপুনি নিশ্চিতনে যে আপুনি এই প্ৰতিবেদনখন পুনৰ খুলিব বিচাৰে?"
+
+#: app/templates/admin_dashboard.html:141
+#, fuzzy
+msgid "Report Details"
+msgstr "প্ৰতিবেদনসমূহ"
+
+#: app/templates/admin_dashboard.html:145 app/templates/public_forum.html:54
 msgid "Close"
 msgstr "বন্ধ কৰক"
 
-#: app/templates/admin_dashboard.html:116
+#: app/templates/admin_dashboard.html:153
 msgid "Resolve Report"
-msgstr "প্ৰতিবেদন সমাধান কৰক"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:118
+#: app/templates/admin_dashboard.html:155
 msgid "Enter resolution notes..."
-msgstr "সমাধানৰ টোকা লিখক..."
+msgstr ""
 
-#: app/templates/admin_dashboard.html:120
+#: app/templates/admin_dashboard.html:157
+#: app/templates/admin_dashboard.html:171
 msgid "Cancel"
-msgstr "বাতিল কৰক"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:121
+#: app/templates/admin_dashboard.html:158
+#, fuzzy
 msgid "Mark as Resolved"
-msgstr "সমাধান হিচাপে চিহ্নিত কৰক"
+msgstr "সমাধান হোৱা সমস্যা"
 
-#: app/templates/admin_dashboard.html:170 app/templates/status.html:73
+#: app/templates/admin_dashboard.html:167
+#: app/templates/admin_dashboard.html:172
+#, fuzzy
+msgid "Reject Report"
+msgstr "প্ৰতিবেদন দাখিল কৰক"
+
+#: app/templates/admin_dashboard.html:169
+msgid "Enter rejection reason..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:214 app/templates/status.html:88
 msgid "Report Image"
 msgstr "প্ৰতিবেদনৰ ছবি"
 
-#: app/templates/admin_dashboard.html:181 app/templates/submit_report.html:14
+#: app/templates/admin_dashboard.html:225 app/templates/submit_report.html:14
 msgid "Category"
 msgstr "শ্ৰেণী"
 
-#: app/templates/admin_dashboard.html:184
+#: app/templates/admin_dashboard.html:228
+#, fuzzy
 msgid "Submitted On"
-msgstr "দাখিল কৰা তাৰিখ"
+msgstr "মোৰ দাখিল কৰা প্ৰতিবেদনসমূহ"
 
-#: app/templates/admin_dashboard.html:185
+#: app/templates/admin_dashboard.html:229
+#, fuzzy
 msgid "Description"
-msgstr "বিৱৰণ"
+msgstr "সমস্যাৰ বিৱৰণ"
 
-#: app/templates/admin_dashboard.html:186 app/templates/submit_report.html:41
+#: app/templates/admin_dashboard.html:230 app/templates/submit_report.html:41
 msgid "Location"
 msgstr "স্থান"
 
-#: app/templates/admin_dashboard.html:190
+#: app/templates/admin_dashboard.html:234
 msgid "Captured Images"
-msgstr "সংগৃহীত ছবি"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:191
+#: app/templates/admin_dashboard.html:235
 msgid "No images uploaded"
-msgstr "কোনো ছবি আপলোড কৰা হোৱা নাই"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:194
+#: app/templates/admin_dashboard.html:238
+#, fuzzy
 msgid "Voice Notes"
 msgstr "কণ্ঠস্বৰ টোকা"
 
-#: app/templates/admin_dashboard.html:195
+#: app/templates/admin_dashboard.html:239
+#, fuzzy
 msgid "No voice notes uploaded"
-msgstr "কোনো কণ্ঠস্বৰ টোকা আপলোড কৰা হোৱা নাই"
+msgstr "কণ্ঠস্বৰ টোকা"
 
-#: app/templates/admin_dashboard.html:217
+#: app/templates/admin_dashboard.html:261
 msgid "Failed to fetch report details"
-msgstr "প্ৰতিবেদনৰ বিৱৰণ আহৰণ কৰাত ব্যৰ্থ হ’ল"
+msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
@@ -323,6 +410,10 @@ msgstr "নিযুক্ত ৰাজ্য:"
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
 msgstr "নিযুক্ত জিলা:"
+
+#: app/templates/admin_profile.html:12
+msgid "District Coordinates:"
+msgstr ""
 
 #: app/templates/base.html:17
 msgid "Dashboard"
@@ -374,7 +465,9 @@ msgstr "আপোনাৰ ডেচব’ৰ্ডলৈ স্বাগতম"
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr "আপোনাৰ সম্প্ৰদায়ৰ নাগৰিক সমস্যাসমূহ দাখিল আৰু অনুসৰণ কৰাৰ বাবে আপোনাৰ পৰ্টেল।"
+msgstr ""
+"আপোনাৰ সম্প্ৰদায়ৰ নাগৰিক সমস্যাসমূহ দাখিল আৰু অনুসৰণ কৰাৰ বাবে আপোনাৰ "
+"পৰ্টেল।"
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
@@ -420,7 +513,7 @@ msgstr "জীৱন্ত মানচিত্ৰ চাওক"
 msgid "Manage Profile"
 msgstr "প্ৰফাইল পৰিচালনা কৰক"
 
-#: app/templates/citizen_dashboard.html:98
+#: app/templates/citizen_dashboard.html:93
 msgid "Upvoted"
 msgstr "ভোট দিয়া হ’ল"
 
@@ -484,11 +577,11 @@ msgstr "জীৱন্ত মানচিত্ৰ - সম্প্ৰদা�
 msgid "Legend"
 msgstr "সূচক"
 
-#: app/templates/live_map.html:73 app/templates/status.html:40
+#: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
 msgstr "শ্ৰেণী:"
 
-#: app/templates/live_map.html:75
+#: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "স্থিতি:"
 
@@ -520,7 +613,7 @@ msgstr "অ’টিপি পঠিয়াওক"
 msgid "Demo OTP: 1234"
 msgstr "ডেম’ অ’টিপি: ১২৩৪"
 
-#: app/templates/login.html:66
+#: app/templates/login.html:65
 msgid "Please enter 10 digits"
 msgstr "অনুগ্ৰহ কৰি ১০ টা সংখ্যা লিখক"
 
@@ -556,7 +649,7 @@ msgstr "ঠিকনা"
 msgid "Enter your address"
 msgstr "আপোনাৰ ঠিকনা লিখক"
 
-#: app/templates/profile.html:31 app/templates/submit_report.html:52
+#: app/templates/profile.html:31
 msgid "State"
 msgstr "ৰাজ্য"
 
@@ -568,7 +661,7 @@ msgstr "ৰাজ্য বাছনি কৰক"
 msgid "District"
 msgstr "জিলা"
 
-#: app/templates/profile.html:39 app/templates/profile.html:133
+#: app/templates/profile.html:39 app/templates/profile.html:136
 msgid "Select District"
 msgstr "জিলা বাছনি কৰক"
 
@@ -580,47 +673,64 @@ msgstr "প্ৰফাইল উন্নীত কৰক"
 msgid "Account Management"
 msgstr "একাউন্ট পৰিচালনা"
 
-#: app/templates/profile.html:51
-msgid ""
-"Are you sure you want to request account deletion? This will be reviewed "
-"by your assigned officer."
-msgstr "আপুনি নিশ্চিতনে যে আপুনি একাউণ্ট বিলোপৰ অনুৰোধ কৰিব বিচাৰে? এইটো আপোনাৰ নিযুক্ত বিষয়াজনৰ দ্বাৰা পৰ্যালোচনা কৰা হ’ব।"
-
 #: app/templates/profile.html:52
+msgid ""
+"All your account associated data will be deleted from the system, are you"
+" sure you want to delete your account?"
+msgstr ""
+
+#: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
 msgstr "একাউন্ট বিলোপৰ অনুৰোধ জনাওক"
 
-#: app/templates/profile.html:55
+#: app/templates/profile.html:58
+msgid ""
+"Please update your State and District in your profile before you can "
+"raise an account deletion request."
+msgstr ""
+
+#: app/templates/profile.html:60
+#, fuzzy
+msgid "Update profile to enable"
+msgstr "প্ৰফাইল উন্নীত কৰক"
+
+#: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "একাউন্ট বিলোপৰ অনুৰোধ অনুমোদনৰ বাবে অমীমাংসিত হৈ আছে।"
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "Posted on"
 msgstr "তাৰিখত দিয়া হৈছে"
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "by"
 msgstr "দ্বাৰা"
 
-#: app/templates/public_forum.html:14 app/templates/public_forum.html:28
-msgid "Anonymous"
-msgstr "বেনামী"
-
-#: app/templates/public_forum.html:19
+#: app/templates/public_forum.html:21
 msgid "Upvotes"
 msgstr "ভোটসমূহ"
 
-#: app/templates/public_forum.html:21 app/templates/public_forum.html:25
+#: app/templates/public_forum.html:24
+#, fuzzy
+msgid "View Location"
+msgstr "চিহ্নিত স্থান চাওক"
+
+#: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
 msgstr "মন্তব্যসমূহ"
 
-#: app/templates/public_forum.html:34
+#: app/templates/public_forum.html:39
 msgid "Add a comment..."
 msgstr "এটা মন্তব্য যোগ কৰক..."
 
-#: app/templates/public_forum.html:35
+#: app/templates/public_forum.html:40
 msgid "Post"
 msgstr "প্ৰকাশ কৰক"
+
+#: app/templates/public_forum.html:51
+#, fuzzy
+msgid "Report Location"
+msgstr "প্ৰতিবেদন কথোপকথন"
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
@@ -642,27 +752,39 @@ msgstr "অজ্ঞাত"
 msgid "Upvotes:"
 msgstr "ভোটসমূহ:"
 
-#: app/templates/status.html:49
+#: app/templates/status.html:51
+msgid "Resolution Notes:"
+msgstr ""
+
+#: app/templates/status.html:53
+msgid "Rejection Reason:"
+msgstr ""
+
+#: app/templates/status.html:55
+msgid "Officer Feedback:"
+msgstr ""
+
+#: app/templates/status.html:64
 msgid "View Marked Location"
 msgstr "চিহ্নিত স্থান চাওক"
 
-#: app/templates/status.html:57
+#: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
 msgstr "আপুনি নিশ্চিতনে যে আপুনি এই প্ৰতিবেদনখন পুনৰ খুলিব বিচাৰে?"
 
-#: app/templates/status.html:59
+#: app/templates/status.html:74
 msgid "Reopen"
 msgstr "পুনৰ খোলক"
 
-#: app/templates/status.html:70
+#: app/templates/status.html:85
 msgid "Images:"
 msgstr "ছবিসমূহ:"
 
-#: app/templates/status.html:81
+#: app/templates/status.html:96
 msgid "Voice Note:"
 msgstr "কণ্ঠস্বৰ টোকা:"
 
-#: app/templates/status.html:85
+#: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
 msgstr "আপোনাৰ ব্ৰাউজাৰে অডিঅ’ উপাদানটো সমৰ্থন নকৰে।"
 
@@ -708,89 +830,87 @@ msgstr "সমস্যাটোৰ বিষয়ে বিৱৰণ দিয
 
 #: app/templates/submit_report.html:42
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr "স্থানটো স্বয়ংক্ৰিয়ভাৱে সংগ্ৰহ কৰা হ’ব, কিন্তু আপুনি ইয়াক মানচিত্ৰত মিলাই ল’ব পাৰে।"
+msgstr ""
+"স্থানটো স্বয়ংক্ৰিয়ভাৱে সংগ্ৰহ কৰা হ’ব, কিন্তু আপুনি ইয়াক মানচিত্ৰত "
+"মিলাই ল’ব পাৰে।"
 
-#: app/templates/submit_report.html:48
-msgid "City/District"
-msgstr "চহৰ/জিলা"
-
-#: app/templates/submit_report.html:59
+#: app/templates/submit_report.html:52
 msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "ছবি আপলোড কৰক (সৰ্বাধিক ৩ খন, প্ৰতিখন সৰ্বাধিক ৫ মেগাবাইট)"
 
-#: app/templates/submit_report.html:61
+#: app/templates/submit_report.html:54
 msgid "Live Geo-Camera"
 msgstr "জীৱন্ত জিঅ’-কেমেৰা"
 
-#: app/templates/submit_report.html:63
+#: app/templates/submit_report.html:56
 msgid "Upload Files"
 msgstr "ফাইল আপলোড কৰক"
 
-#: app/templates/submit_report.html:72
+#: app/templates/submit_report.html:65
 msgid "Capture Photo"
 msgstr "ছবি তোলক"
 
-#: app/templates/submit_report.html:73
+#: app/templates/submit_report.html:66
 msgid "Switch"
 msgstr "সলনি কৰক"
 
-#: app/templates/submit_report.html:74
+#: app/templates/submit_report.html:67
 msgid "Close Camera"
 msgstr "কেমেৰা বন্ধ কৰক"
 
-#: app/templates/submit_report.html:85
+#: app/templates/submit_report.html:78
 msgid "Voice Note"
 msgstr "কণ্ঠস্বৰ টোকা"
 
-#: app/templates/submit_report.html:87
+#: app/templates/submit_report.html:80
 msgid "Record"
 msgstr "ৰেকৰ্ড কৰক"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:81
 msgid "Stop"
 msgstr "বন্ধ কৰক"
 
-#: app/templates/submit_report.html:91
+#: app/templates/submit_report.html:84
 msgid "OR upload file"
 msgstr "অথবা ফাইল আপলোড কৰক"
 
-#: app/templates/submit_report.html:95
+#: app/templates/submit_report.html:88
 msgid "Remove"
 msgstr "আঁতৰাওক"
 
-#: app/templates/submit_report.html:99
+#: app/templates/submit_report.html:92
 msgid "Submit Report"
 msgstr "প্ৰতিবেদন দাখিল কৰক"
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "File"
 msgstr "ফাইল"
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "exceeds 5MB limit"
 msgstr "৫ মেগাবাইটৰ সীমা অতিক্ৰম কৰিছে"
 
-#: app/templates/submit_report.html:241 app/templates/submit_report.html:281
+#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
 msgid "Maximum 3 images reached"
 msgstr "সৰ্বাধিক ৩ খন ছবি সম্পূৰ্ণ হৈছে"
 
-#: app/templates/submit_report.html:265
+#: app/templates/submit_report.html:250
 msgid "Camera access denied or not available"
 msgstr "কেমেৰাৰ প্ৰৱেশাধিকাৰ অস্বীকাৰ কৰা হৈছে বা উপলব্ধ নহয়"
 
-#: app/templates/submit_report.html:323
-msgid "Location data pending..."
-msgstr "স্থানৰ তথ্য বাকী আছে..."
+#: app/templates/submit_report.html:306
+msgid "District assignment pending..."
+msgstr ""
 
-#: app/templates/submit_report.html:343
+#: app/templates/submit_report.html:326
 msgid "Please upload or capture at least one image of the issue."
 msgstr "অনুগ্ৰহ কৰি সমস্যাটোৰ অন্তত এখন ছবি আপলোড কৰক বা তোলক।"
 
-#: app/templates/submit_report.html:382
+#: app/templates/submit_report.html:365
 msgid "Recording..."
 msgstr "ৰেকৰ্ডিং চলি আছে..."
 
-#: app/templates/submit_report.html:397
+#: app/templates/submit_report.html:380
 msgid "Microphone access denied"
 msgstr "মাইক্ৰ’ফোনৰ প্ৰৱেশাধিকাৰ অস্বীকাৰ কৰা হৈছে"
 
@@ -814,29 +934,139 @@ msgstr "সত্যাপন কৰক আৰু লগ ইন কৰক"
 msgid "Please enter 4 digits"
 msgstr "অনুগ্ৰহ কৰি ৪ টা সংখ্যা লিখক"
 
-msgid "Pending"
-msgstr "অমীমাংসিত"
+#~ msgid ""
+#~ "Are you sure you want to request"
+#~ " account deletion? This will be "
+#~ "reviewed by your assigned officer."
+#~ msgstr ""
+#~ "আপুনি নিশ্চিতনে যে আপুনি একাউণ্ট বিলোপৰ"
+#~ " অনুৰোধ কৰিব বিচাৰে? এইটো আপোনাৰ "
+#~ "নিযুক্ত বিষয়াজনৰ দ্বাৰা পৰ্যালোচনা কৰা "
+#~ "হ’ব।"
 
-msgid "Acknowledged"
-msgstr "স্বীকৃত"
+#~ msgid "City/District"
+#~ msgstr "চহৰ/জিলা"
 
-msgid "In progress"
-msgstr "চলি থকা"
+#~ msgid "Location data pending..."
+#~ msgstr "স্থানৰ তথ্য বাকী আছে..."
 
-msgid "Resolved"
-msgstr "সমাধান কৰা হ’ল"
+#~ msgid "Acknowledged"
+#~ msgstr "স্বীকৃত"
 
-msgid "Roads"
-msgstr "ৰাস্তা"
+#~ msgid "In progress"
+#~ msgstr "চলি থকা"
 
-msgid "Water"
-msgstr "পানী"
+#~ msgid "Roads"
+#~ msgstr "ৰাস্তা"
 
-msgid "Electricity"
-msgstr "বিদ্যুৎ"
+#~ msgid "Water"
+#~ msgstr "পানী"
 
-msgid "Sanitation"
-msgstr "অনাময়"
+#~ msgid "Sanitation"
+#~ msgstr "অনাময়"
 
-msgid "Other"
-msgstr "অন্যান্য"
+#~ msgid "Admin Officer Dashboard"
+#~ msgstr "প্ৰশাসনিক বিষয়াৰ ডেচব’ৰ্ড"
+
+#~ msgid "Welcome"
+#~ msgstr "স্বাগতম"
+
+#~ msgid "Assigned to:"
+#~ msgstr "নিযুক্ত:"
+
+#~ msgid "All Priorities"
+#~ msgstr "সকলো অগ্ৰাধিকাৰ"
+
+#~ msgid "Total Reports"
+#~ msgstr "মুঠ প্ৰতিবেদন"
+
+#~ msgid "Pending"
+#~ msgstr "অমীমাংসিত"
+
+#~ msgid "Approved"
+#~ msgstr "অনুমোদিত"
+
+#~ msgid "Resolved"
+#~ msgstr "সমাধান কৰা হ’ল"
+
+#~ msgid "Manage Reports"
+#~ msgstr "প্ৰতিবেদন পৰিচালনা কৰক"
+
+#~ msgid "Title"
+#~ msgstr "শীৰ্ষক"
+
+#~ msgid "Date"
+#~ msgstr "তাৰিখ"
+
+#~ msgid "Actions"
+#~ msgstr "কাৰ্য্যসমূহ"
+
+#~ msgid "N/A"
+#~ msgstr "অপ্ৰযোজ্য"
+
+#~ msgid "View"
+#~ msgstr "চাওক"
+
+#~ msgid "Approve"
+#~ msgstr "অনুমোদন কৰক"
+
+#~ msgid "Resolve"
+#~ msgstr "সমাধান কৰক"
+
+#~ msgid "No reports found matching filters."
+#~ msgstr "ফিল্টাৰৰ সৈতে মিল থকা কোনো প্ৰতিবেদন পোৱা নগ’ল।"
+
+#~ msgid "Pending Account Deletion Requests"
+#~ msgstr "একাউন্ট বিলোপৰ অনুৰোধ অনুমোদনৰ বাবে অমীমাংসিত হৈ আছে।"
+
+#~ msgid "Name"
+#~ msgstr "নাম:"
+
+#~ msgid "Phone"
+#~ msgstr "ফোন:"
+
+#~ msgid ""
+#~ "Are you sure you want to approve"
+#~ " this deletion? This action is "
+#~ "permanent."
+#~ msgstr "আপুনি নিশ্চিতনে যে আপুনি এই প্ৰতিবেদনখন পুনৰ খুলিব বিচাৰে?"
+
+#~ msgid "Reject"
+#~ msgstr ""
+
+#~ msgid "Report Details"
+#~ msgstr "প্ৰতিবেদনৰ বিৱৰণ"
+
+#~ msgid "Resolve Report"
+#~ msgstr "প্ৰতিবেদন সমাধান কৰক"
+
+#~ msgid "Enter resolution notes..."
+#~ msgstr "সমাধানৰ টোকা লিখক..."
+
+#~ msgid "Cancel"
+#~ msgstr "বাতিল কৰক"
+
+#~ msgid "Mark as Resolved"
+#~ msgstr "সমাধান হিচাপে চিহ্নিত কৰক"
+
+#~ msgid "Submitted On"
+#~ msgstr "দাখিল কৰা তাৰিখ"
+
+#~ msgid "Description"
+#~ msgstr "বিৱৰণ"
+
+#~ msgid "Captured Images"
+#~ msgstr "সংগৃহীত ছবি"
+
+#~ msgid "No images uploaded"
+#~ msgstr "কোনো ছবি আপলোড কৰা হোৱা নাই"
+
+#~ msgid "Voice Notes"
+#~ msgstr "কণ্ঠস্বৰ টোকা"
+
+#~ msgid "No voice notes uploaded"
+#~ msgstr "কোনো কণ্ঠস্বৰ টোকা আপলোড কৰা হোৱা নাই"
+
+#~ msgid "Failed to fetch report details"
+#~ msgstr "প্ৰতিবেদনৰ বিৱৰণ আহৰণ কৰাত ব্যৰ্থ হ’ল"
+

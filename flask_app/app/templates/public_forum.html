@@ -20,6 +20,9 @@
                     <button class="upvote-btn" onclick="upvoteReport({{ report.id }}, this)">
                         <i class="far fa-thumbs-up"></i> <span class="count">{{ report.upvotes_count }}</span> {{ _('Upvotes') }}
                     </button>
+                    <button class="btn btn-sm btn-outline-info" onclick="viewLocation({{ report.latitude }}, {{ report.longitude }}, '{{ report.title|replace("'", "\\'") }}')">
+                        <i class="fas fa-map-marker-alt"></i> {{ _('View Location') }}
+                    </button>
                     <span class="comment-count"><i class="far fa-comment"></i> {{ report.comments|length }} {{ _('Comments') }}</span>
                 </div>
 
@@ -42,6 +45,17 @@
     </div>
 </div>
 
+<!-- Map Modal -->
+<div id="mapModal" class="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle">{{ _('Report Location') }}</h3>
+        <div id="forumMap" style="height: 400px; width: 100%; border-radius: 8px; margin-top: 1rem;"></div>
+        <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" onclick="closeMapModal()">{{ _('Close') }}</button>
+        </div>
+    </div>
+</div>
+
 <style>
     .report-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 1rem; }
     .header-badges { display: flex; gap: 0.5rem; align-items: center; }
@@ -58,7 +72,34 @@
 {% endblock %}
 
 {% block scripts %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+    let forumMap, forumMarker;
+
+    function viewLocation(lat, lng, title) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('mapModal').style.display = 'block';
+
+        if (!forumMap) {
+            forumMap = L.map('forumMap').setView([lat, lng], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(forumMap);
+            forumMarker = L.marker([lat, lng]).addTo(forumMap);
+        } else {
+            forumMap.setView([lat, lng], 15);
+            forumMarker.setLatLng([lat, lng]);
+            setTimeout(() => forumMap.invalidateSize(), 200);
+        }
+    }
+
+    function closeMapModal() {
+        document.getElementById('mapModal').style.display = 'none';
+    }
+
+    window.onclick = function(e) {
+        if (e.target == document.getElementById('mapModal')) closeMapModal();
+    }
+
     function upvoteReport(reportId, btn) {
         fetch(`/citizen/upvote/${reportId}`, {
             method: 'POST',

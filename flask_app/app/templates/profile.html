@@ -48,9 +48,19 @@
         
         <h3>{{ _('Account Management') }}</h3>
         {% if user.account_deletion_status == 'none' %}
-            <form action="{{ url_for('citizen.request_deletion') }}" method="POST" onsubmit="return confirm('{{ _('Are you sure you want to request account deletion? This will be reviewed by your assigned officer.') }}')">
-                <button type="submit" class="btn btn-danger btn-block">{{ _('Request Account Deletion') }}</button>
-            </form>
+            {% if user.state and user.district %}
+                <form action="{{ url_for('citizen.request_deletion') }}" method="POST" onsubmit="return confirm('{{ _('All your account associated data will be deleted from the system, are you sure you want to delete your account?') }}')">
+                    <button type="submit" class="btn btn-danger btn-block">{{ _('Request Account Deletion') }}</button>
+                </form>
+            {% else %}
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle"></i> 
+                    {{ _('Please update your State and District in your profile before you can raise an account deletion request.') }}
+                </div>
+                <button class="btn btn-danger btn-block disabled" disabled title="{{ _('Update profile to enable') }}">
+                    {{ _('Request Account Deletion') }}
+                </button>
+            {% endif %}
         {% elif user.account_deletion_status == 'requested' %}
             <div class="alert alert-info">{{ _('Account deletion request is pending approval.') }}</div>
         {% endif %}

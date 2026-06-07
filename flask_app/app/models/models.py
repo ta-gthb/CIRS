@@ -18,6 +18,13 @@ class User(UserMixin, db.Model):
     assigned_district = db.Column(db.String(100))
     account_deletion_status = db.Column(db.String(20), default='none') # none, requested, approved
     is_active = db.Column(db.Boolean, default=True)
+    deleted_at = db.Column(db.DateTime)
+    latitude = db.Column(db.Float) # Centroid Lat
+    longitude = db.Column(db.Float) # Centroid Lng
+    lat_min = db.Column(db.Float)
+    lat_max = db.Column(db.Float)
+    lon_min = db.Column(db.Float)
+    lon_max = db.Column(db.Float)
     otp_code = db.Column(db.String(6))
     otp_expires_at = db.Column(db.DateTime)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)

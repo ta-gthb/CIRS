@@ -3,23 +3,17 @@
 {% block content %}
 <div class="profile-container">
     <h2>{{ _('Admin Officer Profile') }}</h2>
-    <div class="profile-card">
+    <div class="profile-card section-card">
         <p><strong>{{ _('Name:') }}</strong> {{ user.name }}</p>
         <p><strong>{{ _('Phone:') }}</strong> {{ user.phone }}</p>
         <p><strong>{{ _('Role:') }}</strong> {{ _('Authority / Admin Officer') }}</p>
         <p><strong>{{ _('Assigned State:') }}</strong> {{ _(user.assigned_state) }}</p>
         <p><strong>{{ _('Assigned District:') }}</strong> {{ _(user.assigned_district) }}</p>
+        <p><strong>{{ _('District Coordinates:') }}</strong> {{ "%.6f"|format(user.latitude) if user.latitude else 'N/A' }}, {{ "%.6f"|format(user.longitude) if user.longitude else 'N/A' }}</p>
     </div>
 </div>
 
 <style>
-    .profile-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        max-width: 600px;
-        margin: 0 auto;
-    }
+    .profile-card { max-width: 600px; margin: 0 auto; }
 </style>
 {% endblock %}

@@ -43,6 +43,21 @@
                     <p><strong>{{ _('Upvotes:') }}</strong> {{ report.upvotes_count }}</p>
                 </div>
                 <p class="report-desc">{{ report.description }}</p>
+
+                {% if report.resolution_notes %}
+                    <div class="officer-notes">
+                        <h4>
+                            {% if report.status == 'resolved' %}
+                                {{ _('Resolution Notes:') }}
+                            {% elif report.status == 'rejected' %}
+                                {{ _('Rejection Reason:') }}
+                            {% else %}
+                                {{ _('Officer Feedback:') }}
+                            {% endif %}
+                        </h4>
+                        <p>{{ report.resolution_notes }}</p>
+                    </div>
+                {% endif %}
                 
                 <div class="report-actions">
                     <button class="btn btn-sm btn-info" onclick="toggleMap({{ report.id }}, {{ report.latitude }}, {{ report.longitude }})">
@@ -107,6 +122,10 @@
     .report-img:hover { transform: scale(1.05); }
     .media-group { margin-top: 1rem; }
     .date { color: var(--secondary-color); font-size: 0.9rem; }
+    .officer-notes { background: #fdf2f2; border-left: 4px solid var(--danger-color); padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+    .officer-notes h4 { margin-bottom: 0.5rem; color: var(--danger-color); font-size: 1rem; }
+    .status-resolved + .report-details + .report-desc + .officer-notes { border-left-color: var(--success-color); background: #f0fdf4; }
+    .status-resolved + .report-details + .report-desc + .officer-notes h4 { color: var(--success-color); }
 </style>
 {% endblock %}
 

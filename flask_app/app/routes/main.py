@@ -5,19 +5,18 @@ from ..models.models import User, Report, Message, db
 
 @main_bp.route('/')
 def index():
-    # ... (rest of index)
     resolved_count = Report.query.filter_by(status='resolved').count()
     active_users = User.query.filter_by(is_active=True).count()
     cities_count = db.session.query(Report.city).filter(Report.city != None).distinct().count()
     
-    # Adding more stats if needed by template
-    pending_count = Report.query.filter_by(status='pending').count()
+    # Fetch all reports for the public map
+    all_reports = Report.query.all()
     
     return render_template('index.html', 
                            resolved=resolved_count, 
                            users=active_users, 
                            cities=cities_count,
-                           pending=pending_count)
+                           reports=all_reports)
 
 @main_bp.route('/set_language/<lang_code>')
 def set_language(lang_code):

@@ -7,6 +7,7 @@ from flask_babel import _
 from . import citizen_bp
 from ..models.models import Report, User, db, ReportImage, VoiceNote, Upvote, Comment
 from ..utils.cloudinary_utils import upload_to_cloudinary
+from ..utils.geo_utils import reverse_geocode
 from sqlalchemy import func
 
 def calculate_distance(lat1, lon1, lat2, lon2):
@@ -98,6 +99,49 @@ def submit_report():
         city = request.form.get('city')
         state = request.form.get('state')
         
+        # Try to get city and state from coordinates using reverse geocoding
+        if lat and lng and (not city or not state):
+            geo_city, geo_state = reverse_geocode(lat, lng)
+            if geo_city:
+                city = geo_city
+            if geo_state:
+                state = geo_state
+        
+        # If city/state still unknown, find nearest admin officer using border info (bounding boxes)
+        # as a fallback to ensure the report is seen by SOMEONE
+        if lat and lng and (not city or not state):
+            admins = User.query.filter_by(role='authority').filter(User.latitude.isnot(None), User.longitude.isnot(None)).all()
+            if admins:
+                # 1. Check if the point is inside any admin's district bounding box
+                matching_admins = []
+                for admin in admins:
+                    if admin.lat_min and admin.lat_max and admin.lon_min and admin.lon_max:
+                        if admin.lat_min <= lat <= admin.lat_max and admin.lon_min <= lng <= admin.lon_max:
+                            matching_admins.append(admin)
+                
+                nearest_admin = None
+                if matching_admins:
+                    # If inside multiple boxes, pick the one with nearest centroid
+                    min_dist = float('inf')
+                    for admin in matching_admins:
+                        dist = calculate_distance(lat, lng, admin.latitude, admin.longitude)
+                        if dist < min_dist:
+                            min_dist = dist
+                            nearest_admin = admin
+                else:
+                    # 2. If not inside any box, pick the one with the absolute nearest centroid
+                    min_distance = float('inf')
+                    for admin in admins:
+                        dist = calculate_distance(lat, lng, admin.latitude, admin.longitude)
+                        if dist < min_distance:
+                            min_distance = dist
+                            nearest_admin = admin
+                
+                if nearest_admin:
+                    # Only override if we don't have a specific city/state from geocoding
+                    if not city: city = nearest_admin.assigned_district
+                    if not state: state = nearest_admin.assigned_state
+        
         if lat and lng:
             # Check for duplicates within 100m and same category
             existing_reports = Report.query.filter_by(category=category, status='pending').all()
@@ -149,7 +193,7 @@ def submit_report():
         # Handle Voice Note Upload
         voice = request.files.get('voice')
         if voice and voice.filename:
-            url, _ = upload_to_cloudinary(voice, folder="civic_issue/voice")
+            url, unused_id = upload_to_cloudinary(voice, folder="civic_issue/voice")
             voice_note = VoiceNote(url=url, report_id=report.id)
             db.session.add(voice_note)
             
@@ -211,7 +255,11 @@ def reopen_report(report_id):
 @citizen_bp.route('/request-deletion', methods=['POST'])
 @login_required
 def request_deletion():
+    if not current_user.state or not current_user.district:
+        flash(_('Please update your State and District in your profile before requesting account deletion.'), 'warning')
+        return redirect(url_for('citizen.profile'))
+    
     current_user.account_deletion_status = 'requested'
     db.session.commit()
-    flash(_('Deletion request submitted to your assigned officer.'), 'info')
+    flash(_('Deletion request submitted to your assigned officer. Your account will be deleted after approval of Admin Officer.'), 'info')
     return redirect(url_for('citizen.profile'))

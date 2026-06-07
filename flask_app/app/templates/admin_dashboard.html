@@ -79,8 +79,9 @@
                                     <button class="btn btn-sm btn-info" onclick="viewReportDetails({{ report.id }})">{{ _('View') }}</button>
                                     {% if report.status == 'pending' %}
                                         <a href="{{ url_for('admin.approve_report', report_id=report.id) }}" class="btn btn-sm btn-success">{{ _('Approve') }}</a>
+                                        <button class="btn btn-sm btn-danger" onclick="openRejectModal({{ report.id }})">{{ _('Reject') }}</button>
                                     {% endif %}
-                                    {% if report.status != 'resolved' %}
+                                    {% if report.status != 'resolved' and report.status != 'rejected' %}
                                         <button class="btn btn-sm btn-primary" onclick="openResolveModal({{ report.id }})">{{ _('Resolve') }}</button>
                                     {% endif %}
                                     {% if report.status in ['acknowledged', 'in_progress'] %}
@@ -118,7 +119,11 @@
                                 <a href="{{ url_for('admin.approve_deletion', user_id=user.id) }}" 
                                    class="btn btn-sm btn-danger"
                                    onclick="return confirm('{{ _('Are you sure you want to approve this deletion? This action is permanent.') }}')">
-                                    {{ _('Approve Deletion') }}
+                                    {{ _('Approve') }}
+                                </a>
+                                <a href="{{ url_for('admin.reject_deletion', user_id=user.id) }}" 
+                                   class="btn btn-sm btn-secondary">
+                                    {{ _('Reject') }}
                                 </a>
                             </td>
                         </tr>
@@ -151,6 +156,20 @@
             <div class="modal-actions">
                 <button type="button" class="btn btn-secondary" onclick="closeResolveModal()">{{ _('Cancel') }}</button>
                 <button type="submit" class="btn btn-success">{{ _('Mark as Resolved') }}</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Reject Modal -->
+<div id="rejectModal" class="modal">
+    <div class="modal-content">
+        <h3>{{ _('Reject Report') }}</h3>
+        <form id="rejectForm" method="POST">
+            <textarea name="notes" class="form-control" placeholder="{{ _('Enter rejection reason...') }}" required style="width: 100%; min-height: 100px; margin-bottom: 1rem;"></textarea>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" onclick="closeRejectModal()">{{ _('Cancel') }}</button>
+                <button type="submit" class="btn btn-danger">{{ _('Reject Report') }}</button>
             </div>
         </form>
     </div>
@@ -250,9 +269,16 @@
     }
     function closeResolveModal() { document.getElementById('resolveModal').style.display = 'none'; }
 
+    function openRejectModal(id) {
+        document.getElementById('rejectForm').action = `/admin/reject-report/${id}`;
+        document.getElementById('rejectModal').style.display = 'block';
+    }
+    function closeRejectModal() { document.getElementById('rejectModal').style.display = 'none'; }
+
     window.onclick = function(e) {
         if (e.target == document.getElementById('detailsModal')) closeDetailsModal();
         if (e.target == document.getElementById('resolveModal')) closeResolveModal();
+        if (e.target == document.getElementById('rejectModal')) closeRejectModal();
     }
 </script>
 {% endblock %}

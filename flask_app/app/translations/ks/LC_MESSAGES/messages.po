@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 09:41+0530\n"
+"POT-Creation-Date: 2026-06-07 21:01+0530\n"
 "PO-Revision-Date: 2026-06-07 10:45+0530\n"
 "Last-Translator: Gemini CLI <email@address>\n"
 "Language: ks\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75
+#: app/routes/admin.py:75 app/routes/admin.py:121
 msgid "Unauthorized"
 msgstr "غأر مجاز"
 
@@ -30,24 +30,39 @@ msgstr "رپوٹ منظور کرنہ آم۔"
 msgid "Report resolved."
 msgstr "رپوٹ حل کرنہ آم۔"
 
-#: app/routes/admin.py:124
+#: app/routes/admin.py:128
+#, fuzzy
+msgid "Report rejected."
+msgstr "رپوٹ دوبارہ کھولنہ آم۔"
+
+#: app/routes/admin.py:139
 msgid "User deletion approved."
 msgstr "صارف ختم کرنٕچ منظوری مِلِ۔"
 
-#: app/routes/auth.py:26
+#: app/routes/admin.py:148
+#, fuzzy
+msgid "User deletion request rejected."
+msgstr "صارف ختم کرنٕچ منظوری مِلِ۔"
+
+#: app/routes/auth.py:21
+#, python-format
+msgid "You can register to the system again on %(date)s"
+msgstr ""
+
+#: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
 msgstr "افسر رجسٹرڈ چھُ نہ۔ ایڈمنسٹریٹرس سٟتؠ رابطہ کٔرِو۔"
 
-#: app/routes/auth.py:30
+#: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
 msgstr "نمبر چھُ %(role)s پٲٹھؠ رجسٹرڈ۔ صحیح رول چُنِو۔"
 
-#: app/routes/auth.py:34
+#: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
 msgstr "اکاؤنٹ چھُ غیر فعال یا ختم کرنہ آمُت۔"
 
-#: app/routes/auth.py:61
+#: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
 msgstr "غلط یا میعاد ختم گژھمت او ٹی پی۔"
 
@@ -55,76 +70,89 @@ msgstr "غلط یا میعاد ختم گژھمت او ٹی پی۔"
 msgid "Profile updated successfully!"
 msgstr "پروفائل کامیابی سان اپڈیٹ کرنہ آم!"
 
-#: app/routes/citizen.py:116
+#: app/routes/citizen.py:149
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
 msgstr "یتھ جایہِ چھُ اکھ یتھوئی رپورٹ گوڈے موجود۔ تُہند ووٹ یتھ منز شٲمل کرنہ آم۔"
 
-#: app/routes/citizen.py:118
+#: app/routes/citizen.py:151
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "اکھ یتھوئی رپورٹ چھُ گوڈے موجود تہِ تُہہ چھُوہ یتھ گوڈے ووٹ کؤرمُت۔"
 
-#: app/routes/citizen.py:120
+#: app/routes/citizen.py:153
 msgid "You have already submitted a similar report in this location."
 msgstr "تُہہ چھُوہ یتھ جایہِ گوڈے اکھ یتھوئی رپورٹ جمع کؤرمُت। "
 
-#: app/routes/citizen.py:140
+#: app/routes/citizen.py:173
 msgid "You can only upload up to 3 images."
 msgstr "تُہہ ہیکِو صرف ۳ تصویر اپلوڈ کٔرِتھ۔"
 
-#: app/routes/citizen.py:157
+#: app/routes/citizen.py:190
 msgid "Report submitted successfully!"
 msgstr "رپوٹ کامیابی سان جمع کرنہ آم!"
 
-#: app/routes/citizen.py:169
+#: app/routes/citizen.py:202
 msgid "You cannot upvote your own report."
 msgstr "تُہہ ہیکِو نہ پنیِس رپورٹَس ووٹ دِتھ۔"
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:206
 msgid "Already upvoted"
 msgstr "گوڈے ووٹ کؤرمُت"
 
-#: app/routes/citizen.py:191
+#: app/routes/citizen.py:224
 msgid "Comment added."
 msgstr "تبصرہ شٲمل کرنہ آم۔"
 
-#: app/routes/citizen.py:199
+#: app/routes/citizen.py:232
 msgid "Unauthorized."
 msgstr "غأر مجاز۔"
 
-#: app/routes/citizen.py:205
+#: app/routes/citizen.py:238
 msgid "Report reopened."
 msgstr "رپوٹ دوبارہ کھولنہ آم۔"
 
-#: app/routes/citizen.py:207
+#: app/routes/citizen.py:240
 msgid "Report cannot be reopened."
 msgstr "رپوٹ دوبارہ کھولنہ ییہِ نہ۔"
 
-#: app/routes/citizen.py:216
-msgid "Deletion request submitted to your assigned officer."
-msgstr "اکاؤنٹ ختم کرنٕچ درخواست تُہندس مقرر کردہ افسرس نش جمع کرنہ آمٕژ۔"
+#: app/routes/citizen.py:248
+msgid ""
+"Please update your State and District in your profile before requesting "
+"account deletion."
+msgstr ""
+
+#: app/routes/citizen.py:253
+msgid ""
+"Deletion request submitted to your assigned officer. Your account will be"
+" deleted after approval of Admin Officer."
+msgstr ""
+"اکاؤنٹ ختم کرنٕچ درخواست تُہندس مقرر کردہ افسرس نش جمع کرنہ آمٕژ۔ ایڈمن "
+"افسر سٕندِ منظوری پتہ ییہِ تُہند اکاؤنٹ ختم کرنہ۔"
 
 #: app/templates/admin_dashboard.html:5
+#, fuzzy
 msgid "Admin Officer Dashboard"
-msgstr "ایڈمن افسر ڈیش بورڈ"
+msgstr "ایڈمن ڈیش بورڈ"
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
-msgstr "خوش آمدید"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:6
+#, fuzzy
 msgid "Assigned to:"
-msgstr "مقرر کردہ:"
+msgstr "مقرر کردہ ریاست:"
 
-#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:74
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:64
 #: app/templates/status.html:41
 msgid "Priority:"
 msgstr "ترجیح:"
 
 #: app/templates/admin_dashboard.html:14
+#, fuzzy
 msgid "All Priorities"
-msgstr "سٲری ترجیحہِ"
+msgstr "ترجیح"
 
 #: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
 #: app/templates/submit_report.html:30
@@ -163,138 +191,195 @@ msgid "Clear"
 msgstr "صاف کٔرِو"
 
 #: app/templates/admin_dashboard.html:39
+#, fuzzy
 msgid "Total Reports"
-msgstr "کل رپورٹہِ"
+msgstr "رپورٹہِ"
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
-msgstr "زیر التواء"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:47
+#, fuzzy
 msgid "Approved"
-msgstr "منظور شدہ"
+msgstr "رپوٹ منظور کرنہ آم۔"
 
 #: app/templates/admin_dashboard.html:51
+#, fuzzy
 msgid "Resolved"
-msgstr "حل شدہ"
+msgstr "ہٹاوِو"
 
 #: app/templates/admin_dashboard.html:57
+#, fuzzy
 msgid "Manage Reports"
-msgstr "رپورٹن ہنٛد انتظام کٔرِو"
+msgstr "رپورٹہِ"
 
-#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:180
+#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:224
+#, fuzzy
 msgid "Title"
-msgstr "عنوان"
+msgstr "فائل"
 
-#: app/templates/admin_dashboard.html:63 app/templates/profile.html:14
+#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:107
+#: app/templates/profile.html:14
 msgid "Citizen ID"
 msgstr "شہری آئی ڈی"
 
-#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:182
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
 #: app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "ترجیح"
 
-#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:183
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
 #: app/templates/base.html:20
 msgid "Status"
 msgstr "حالت"
 
 #: app/templates/admin_dashboard.html:66
+#, fuzzy
 msgid "Date"
-msgstr "تٲریخ"
+msgstr "ریاست"
 
-#: app/templates/admin_dashboard.html:67
+#: app/templates/admin_dashboard.html:67 app/templates/admin_dashboard.html:109
+#, fuzzy
 msgid "Actions"
-msgstr "کاروائی"
+msgstr "جگہ"
 
 #: app/templates/admin_dashboard.html:74
 msgid "N/A"
-msgstr "دستیاب نہ"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:79
 msgid "View"
-msgstr "وُچھِو"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:81
+#: app/templates/admin_dashboard.html:81 app/templates/admin_dashboard.html:122
+#, fuzzy
 msgid "Approve"
-msgstr "منظور کٔرِو"
+msgstr "ہٹاوِو"
 
-#: app/templates/admin_dashboard.html:84
+#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:126
+msgid "Reject"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:85
+#, fuzzy
 msgid "Resolve"
-msgstr "حل کٔرِو"
+msgstr "ہٹاوِو"
 
-#: app/templates/admin_dashboard.html:87 app/templates/status.html:53
+#: app/templates/admin_dashboard.html:88 app/templates/status.html:68
 msgid "Message"
 msgstr "پیغام"
 
-#: app/templates/admin_dashboard.html:95
+#: app/templates/admin_dashboard.html:96
+#, fuzzy
 msgid "No reports found matching filters."
-msgstr "فلٹرس سٟتؠ مِلان کانہہ رپورٹ لَبنہ آم نہ।"
+msgstr "میعارس سٟتؠ مِلان کانہہ رپورٹ لَبنہ آم نہ।"
 
-#: app/templates/admin_dashboard.html:104
-msgid "Report Details"
-msgstr "رپورٹ تفصیلات"
+#: app/templates/admin_dashboard.html:102
+#, fuzzy
+msgid "Pending Account Deletion Requests"
+msgstr "اکاؤنٹ ختم کرنٕچ درخواست منظوری خٲطرہ زیر التواء چھِ۔"
+
+#: app/templates/admin_dashboard.html:106
+#, fuzzy
+msgid "Name"
+msgstr "ناو:"
 
 #: app/templates/admin_dashboard.html:108
+#, fuzzy
+msgid "Phone"
+msgstr "فون:"
+
+#: app/templates/admin_dashboard.html:115 app/templates/public_forum.html:16
+#: app/templates/public_forum.html:33
+msgid "Anonymous"
+msgstr "گمنام"
+
+#: app/templates/admin_dashboard.html:121
+#, fuzzy
+msgid "Are you sure you want to approve this deletion? This action is permanent."
+msgstr "کیا تُہہ چھُوہ پکا یہِ رپورٹ دوبارہ کھولُن یژھان؟"
+
+#: app/templates/admin_dashboard.html:141
+#, fuzzy
+msgid "Report Details"
+msgstr "رپورٹہِ"
+
+#: app/templates/admin_dashboard.html:145 app/templates/public_forum.html:54
 msgid "Close"
 msgstr "بند کٔرِو"
 
-#: app/templates/admin_dashboard.html:116
+#: app/templates/admin_dashboard.html:153
 msgid "Resolve Report"
-msgstr "رپورٹ حل کٔرِو"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:118
+#: app/templates/admin_dashboard.html:155
 msgid "Enter resolution notes..."
-msgstr "حل کرنٕچ نوٹ درج کٔرِو..."
+msgstr ""
 
-#: app/templates/admin_dashboard.html:120
+#: app/templates/admin_dashboard.html:157
+#: app/templates/admin_dashboard.html:171
 msgid "Cancel"
-msgstr "منسوخ کٔرِو"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:121
+#: app/templates/admin_dashboard.html:158
+#, fuzzy
 msgid "Mark as Resolved"
-msgstr "حل شدہ قرار دِیِو"
+msgstr "حل شدہ مسائل"
 
-#: app/templates/admin_dashboard.html:170 app/templates/status.html:73
+#: app/templates/admin_dashboard.html:167
+#: app/templates/admin_dashboard.html:172
+#, fuzzy
+msgid "Reject Report"
+msgstr "رپورٹ جمع کٔرِو"
+
+#: app/templates/admin_dashboard.html:169
+msgid "Enter rejection reason..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:214 app/templates/status.html:88
 msgid "Report Image"
 msgstr "رپورٹ تصویر"
 
-#: app/templates/admin_dashboard.html:181 app/templates/submit_report.html:14
+#: app/templates/admin_dashboard.html:225 app/templates/submit_report.html:14
 msgid "Category"
 msgstr "زمرہ"
 
-#: app/templates/admin_dashboard.html:184
+#: app/templates/admin_dashboard.html:228
+#, fuzzy
 msgid "Submitted On"
-msgstr "جمع کرنہ آمُت تٲریخ"
+msgstr "میأنؠ جمع کردہ رپورٹہِ"
 
-#: app/templates/admin_dashboard.html:185
+#: app/templates/admin_dashboard.html:229
+#, fuzzy
 msgid "Description"
-msgstr "تفصیل"
+msgstr "مسئلہ تفصیل"
 
-#: app/templates/admin_dashboard.html:186 app/templates/submit_report.html:41
+#: app/templates/admin_dashboard.html:230 app/templates/submit_report.html:41
 msgid "Location"
 msgstr "جگہ"
 
-#: app/templates/admin_dashboard.html:190
+#: app/templates/admin_dashboard.html:234
 msgid "Captured Images"
-msgstr "تھول مژہ تصویرہِ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:191
+#: app/templates/admin_dashboard.html:235
 msgid "No images uploaded"
-msgstr "کانہہ تصویر اپلوڈ کرنہ آمٕژ نہ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:194
+#: app/templates/admin_dashboard.html:238
+#, fuzzy
 msgid "Voice Notes"
 msgstr "آواز نوٹ"
 
-#: app/templates/admin_dashboard.html:195
+#: app/templates/admin_dashboard.html:239
+#, fuzzy
 msgid "No voice notes uploaded"
-msgstr "کانہہ آواز نوٹ اپلوڈ کرنہ آمُت نہ"
+msgstr "آواز نوٹ"
 
-#: app/templates/admin_dashboard.html:217
+#: app/templates/admin_dashboard.html:261
 msgid "Failed to fetch report details"
-msgstr "رپورٹ تفصیلات حٲصل کرنس منز ناکامی"
+msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
@@ -323,6 +408,10 @@ msgstr "مقرر کردہ ریاست:"
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
 msgstr "مقرر کردہ ضلع:"
+
+#: app/templates/admin_profile.html:12
+msgid "District Coordinates:"
+msgstr ""
 
 #: app/templates/base.html:17
 msgid "Dashboard"
@@ -420,7 +509,7 @@ msgstr "لائیو نقشہ وُچھِو"
 msgid "Manage Profile"
 msgstr "پروفائل اپڈیٹ کٔرِو"
 
-#: app/templates/citizen_dashboard.html:98
+#: app/templates/citizen_dashboard.html:93
 msgid "Upvoted"
 msgstr "ووٹ دِتھ"
 
@@ -484,11 +573,11 @@ msgstr "لائیو نقشہ - عوامی مسائل"
 msgid "Legend"
 msgstr "اشارات"
 
-#: app/templates/live_map.html:73 app/templates/status.html:40
+#: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
 msgstr "زمرہ:"
 
-#: app/templates/live_map.html:75
+#: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "حالت:"
 
@@ -520,7 +609,7 @@ msgstr "او ٹی پی سوزِو"
 msgid "Demo OTP: 1234"
 msgstr "ڈیمو او ٹی پی: ۱۲۳۴"
 
-#: app/templates/login.html:66
+#: app/templates/login.html:65
 msgid "Please enter 10 digits"
 msgstr "مہربانی کٔرِتھ ۱۰ ہندسہ درج کٔرِو"
 
@@ -556,7 +645,7 @@ msgstr "پتہ"
 msgid "Enter your address"
 msgstr "پَنُن پتہ درج کٔرِو"
 
-#: app/templates/profile.html:31 app/templates/submit_report.html:52
+#: app/templates/profile.html:31
 msgid "State"
 msgstr "ریاست"
 
@@ -568,7 +657,7 @@ msgstr "ریاست چُنِو"
 msgid "District"
 msgstr "ضلع"
 
-#: app/templates/profile.html:39 app/templates/profile.html:133
+#: app/templates/profile.html:39 app/templates/profile.html:136
 msgid "Select District"
 msgstr "ضلع چُنِو"
 
@@ -580,47 +669,64 @@ msgstr "پروفائل اپڈیٹ کٔرِو"
 msgid "Account Management"
 msgstr "اکاؤنٹ انتظام"
 
-#: app/templates/profile.html:51
-msgid ""
-"Are you sure you want to request account deletion? This will be reviewed "
-"by your assigned officer."
-msgstr "کیا تُہہ چھُوہ پکا اکاؤنٹ ختم کرنٕچ درخواست کَرُن یژھان؟ یتھ کَرِ تُہُند مقرر کردہ افسر غور۔"
-
 #: app/templates/profile.html:52
+msgid ""
+"All your account associated data will be deleted from the system, are you"
+" sure you want to delete your account?"
+msgstr ""
+
+#: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
 msgstr "اکاؤنٹ ختم کرنٕچ درخواست کٔرِو"
 
-#: app/templates/profile.html:55
+#: app/templates/profile.html:58
+msgid ""
+"Please update your State and District in your profile before you can "
+"raise an account deletion request."
+msgstr ""
+
+#: app/templates/profile.html:60
+#, fuzzy
+msgid "Update profile to enable"
+msgstr "پروفائل اپڈیٹ کٔرِو"
+
+#: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "اکاؤنٹ ختم کرنٕچ درخواست منظوری خٲطرہ زیر التواء چھِ۔"
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "Posted on"
 msgstr "پوسٹ کرنہ آمُت تٲریخ"
 
-#: app/templates/public_forum.html:14
+#: app/templates/public_forum.html:16
 msgid "by"
 msgstr "ذریعہ"
 
-#: app/templates/public_forum.html:14 app/templates/public_forum.html:28
-msgid "Anonymous"
-msgstr "گمنام"
-
-#: app/templates/public_forum.html:19
+#: app/templates/public_forum.html:21
 msgid "Upvotes"
 msgstr "ووٹ"
 
-#: app/templates/public_forum.html:21 app/templates/public_forum.html:25
+#: app/templates/public_forum.html:24
+#, fuzzy
+msgid "View Location"
+msgstr "نشان زدہ جگہ وُچھِو"
+
+#: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
 msgstr "تبصرہ"
 
-#: app/templates/public_forum.html:34
+#: app/templates/public_forum.html:39
 msgid "Add a comment..."
 msgstr "تبصرہ شٲمل کٔرِو..."
 
-#: app/templates/public_forum.html:35
+#: app/templates/public_forum.html:40
 msgid "Post"
 msgstr "پوسٹ کٔرِو"
+
+#: app/templates/public_forum.html:51
+#, fuzzy
+msgid "Report Location"
+msgstr "رپورٹ چیٹ"
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
@@ -642,27 +748,39 @@ msgstr "نامعلوم"
 msgid "Upvotes:"
 msgstr "ووٹ:"
 
-#: app/templates/status.html:49
+#: app/templates/status.html:51
+msgid "Resolution Notes:"
+msgstr ""
+
+#: app/templates/status.html:53
+msgid "Rejection Reason:"
+msgstr ""
+
+#: app/templates/status.html:55
+msgid "Officer Feedback:"
+msgstr ""
+
+#: app/templates/status.html:64
 msgid "View Marked Location"
 msgstr "نشان زدہ جگہ وُچھِو"
 
-#: app/templates/status.html:57
+#: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
 msgstr "کیا تُہہ چھُوہ پکا یہِ رپورٹ دوبارہ کھولُن یژھان؟"
 
-#: app/templates/status.html:59
+#: app/templates/status.html:74
 msgid "Reopen"
 msgstr "دوبارہ کھولِو"
 
-#: app/templates/status.html:70
+#: app/templates/status.html:85
 msgid "Images:"
 msgstr "تصویرہِ:"
 
-#: app/templates/status.html:81
+#: app/templates/status.html:96
 msgid "Voice Note:"
 msgstr "آواز نوٹ:"
 
-#: app/templates/status.html:85
+#: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
 msgstr "تُہُند براؤزر چھُ نہ آڈیو سپورٹ کَران۔"
 
@@ -708,89 +826,87 @@ msgstr "مسئلہ متعلق تفصیل دِیِو..."
 
 #: app/templates/submit_report.html:42
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr "جگہ ہیکہِ خود بخود حٲصل کرنہ یِتھ، مگر تُہہ ہیکِو نقشس پؠٹھ یہِ ٹھیک کٔرِتھ।"
+msgstr ""
+"جگہ ہیکہِ خود بخود حٲصل کرنہ یِتھ، مگر تُہہ ہیکِو نقشس پؠٹھ یہِ ٹھیک "
+"کٔرِتھ।"
 
-#: app/templates/submit_report.html:48
-msgid "City/District"
-msgstr "شہر/ضلع"
-
-#: app/templates/submit_report.html:59
+#: app/templates/submit_report.html:52
 msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "تصویرہِ اپلوڈ کٔرِو (زیادہ سے زیادہ ۳، ہر اکھ ۵ ایم بی)"
 
-#: app/templates/submit_report.html:61
+#: app/templates/submit_report.html:54
 msgid "Live Geo-Camera"
 msgstr "لائیو جیو کیمرہ"
 
-#: app/templates/submit_report.html:63
+#: app/templates/submit_report.html:56
 msgid "Upload Files"
 msgstr "فائل اپلوڈ کٔرِو"
 
-#: app/templates/submit_report.html:72
+#: app/templates/submit_report.html:65
 msgid "Capture Photo"
 msgstr "فوٹو کھینچِو"
 
-#: app/templates/submit_report.html:73
+#: app/templates/submit_report.html:66
 msgid "Switch"
 msgstr "تبدیل کٔرِو"
 
-#: app/templates/submit_report.html:74
+#: app/templates/submit_report.html:67
 msgid "Close Camera"
 msgstr "کیمرہ بند کٔرِو"
 
-#: app/templates/submit_report.html:85
+#: app/templates/submit_report.html:78
 msgid "Voice Note"
 msgstr "آواز نوٹ"
 
-#: app/templates/submit_report.html:87
+#: app/templates/submit_report.html:80
 msgid "Record"
 msgstr "ریکارڈ کٔرِو"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:81
 msgid "Stop"
 msgstr "روکِو"
 
-#: app/templates/submit_report.html:91
+#: app/templates/submit_report.html:84
 msgid "OR upload file"
 msgstr "یا فائل اپلوڈ کٔرِو"
 
-#: app/templates/submit_report.html:95
+#: app/templates/submit_report.html:88
 msgid "Remove"
 msgstr "ہٹاوِو"
 
-#: app/templates/submit_report.html:99
+#: app/templates/submit_report.html:92
 msgid "Submit Report"
 msgstr "رپورٹ جمع کٔرِو"
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "File"
 msgstr "فائل"
 
-#: app/templates/submit_report.html:220
+#: app/templates/submit_report.html:205
 msgid "exceeds 5MB limit"
 msgstr "۵ ایم بی حد کھوتہٕ زیادہ چھُ"
 
-#: app/templates/submit_report.html:241 app/templates/submit_report.html:281
+#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
 msgid "Maximum 3 images reached"
 msgstr "۳ تصویرہِ ہنٛز حد مکمل گٔئی"
 
-#: app/templates/submit_report.html:265
+#: app/templates/submit_report.html:250
 msgid "Camera access denied or not available"
 msgstr "کیمرہ رسائی مسترد یا دستیاب نہ"
 
-#: app/templates/submit_report.html:323
-msgid "Location data pending..."
-msgstr "جگہ ہنٛد ڈیٹا زیر التواء چھُ..."
+#: app/templates/submit_report.html:306
+msgid "District assignment pending..."
+msgstr ""
 
-#: app/templates/submit_report.html:343
+#: app/templates/submit_report.html:326
 msgid "Please upload or capture at least one image of the issue."
 msgstr "مہربانی کٔرِتھ اپلوڈ کٔرِو یا کھینچِو کم از کم اکھ تصویر।"
 
-#: app/templates/submit_report.html:382
+#: app/templates/submit_report.html:365
 msgid "Recording..."
 msgstr "ریکارڈنگ چھِ گژھان..."
 
-#: app/templates/submit_report.html:397
+#: app/templates/submit_report.html:380
 msgid "Microphone access denied"
 msgstr "مائیکروفون رسائی مسترد کرنہ آمٕژ"
 
@@ -814,29 +930,138 @@ msgstr "تصدیق تہِ لاگ ان کٔرِو"
 msgid "Please enter 4 digits"
 msgstr "مہربانی کٔرِتھ ۴ ہندسہ درج کٔرِو"
 
-msgid "Pending"
-msgstr "زیر التواء"
+#~ msgid ""
+#~ "Are you sure you want to request"
+#~ " account deletion? This will be "
+#~ "reviewed by your assigned officer."
+#~ msgstr ""
+#~ "کیا تُہہ چھُوہ پکا اکاؤنٹ ختم "
+#~ "کرنٕچ درخواست کَرُن یژھان؟ یتھ کَرِ "
+#~ "تُہُند مقرر کردہ افسر غور۔"
 
-msgid "Acknowledged"
-msgstr "تسلیم شدہ"
+#~ msgid "City/District"
+#~ msgstr "شہر/ضلع"
 
-msgid "In progress"
-msgstr "جاری"
+#~ msgid "Location data pending..."
+#~ msgstr "جگہ ہنٛد ڈیٹا زیر التواء چھُ..."
 
-msgid "Resolved"
-msgstr "حل شدہ"
+#~ msgid "Acknowledged"
+#~ msgstr "تسلیم شدہ"
 
-msgid "Roads"
-msgstr "سڑک"
+#~ msgid "In progress"
+#~ msgstr "جاری"
 
-msgid "Water"
-msgstr "آپ"
+#~ msgid "Roads"
+#~ msgstr "سڑک"
 
-msgid "Electricity"
-msgstr "بجلی"
+#~ msgid "Water"
+#~ msgstr "آپ"
 
-msgid "Sanitation"
-msgstr "صفائی"
+#~ msgid "Sanitation"
+#~ msgstr "صفائی"
 
-msgid "Other"
-msgstr "باقٕے"
+#~ msgid "Admin Officer Dashboard"
+#~ msgstr "ایڈمن افسر ڈیش بورڈ"
+
+#~ msgid "Welcome"
+#~ msgstr "خوش آمدید"
+
+#~ msgid "Assigned to:"
+#~ msgstr "مقرر کردہ:"
+
+#~ msgid "All Priorities"
+#~ msgstr "سٲری ترجیحہِ"
+
+#~ msgid "Total Reports"
+#~ msgstr "کل رپورٹہِ"
+
+#~ msgid "Pending"
+#~ msgstr "زیر التواء"
+
+#~ msgid "Approved"
+#~ msgstr "منظور شدہ"
+
+#~ msgid "Resolved"
+#~ msgstr "حل شدہ"
+
+#~ msgid "Manage Reports"
+#~ msgstr "رپورٹن ہنٛد انتظام کٔرِو"
+
+#~ msgid "Title"
+#~ msgstr "عنوان"
+
+#~ msgid "Date"
+#~ msgstr "تٲریخ"
+
+#~ msgid "Actions"
+#~ msgstr "کاروائی"
+
+#~ msgid "N/A"
+#~ msgstr "دستیاب نہ"
+
+#~ msgid "View"
+#~ msgstr "وُچھِو"
+
+#~ msgid "Approve"
+#~ msgstr "منظور کٔرِو"
+
+#~ msgid "Resolve"
+#~ msgstr "حل کٔرِو"
+
+#~ msgid "No reports found matching filters."
+#~ msgstr "فلٹرس سٟتؠ مِلان کانہہ رپورٹ لَبنہ آم نہ।"
+
+#~ msgid "Pending Account Deletion Requests"
+#~ msgstr "اکاؤنٹ ختم کرنٕچ درخواست منظوری خٲطرہ زیر التواء چھِ۔"
+
+#~ msgid "Name"
+#~ msgstr "ناو:"
+
+#~ msgid "Phone"
+#~ msgstr "فون:"
+
+#~ msgid ""
+#~ "Are you sure you want to approve"
+#~ " this deletion? This action is "
+#~ "permanent."
+#~ msgstr "کیا تُہہ چھُوہ پکا یہِ رپورٹ دوبارہ کھولُن یژھان؟"
+
+#~ msgid "Reject"
+#~ msgstr ""
+
+#~ msgid "Report Details"
+#~ msgstr "رپورٹ تفصیلات"
+
+#~ msgid "Resolve Report"
+#~ msgstr "رپورٹ حل کٔرِو"
+
+#~ msgid "Enter resolution notes..."
+#~ msgstr "حل کرنٕچ نوٹ درج کٔرِو..."
+
+#~ msgid "Cancel"
+#~ msgstr "منسوخ کٔرِو"
+
+#~ msgid "Mark as Resolved"
+#~ msgstr "حل شدہ قرار دِیِو"
+
+#~ msgid "Submitted On"
+#~ msgstr "جمع کرنہ آمُت تٲریخ"
+
+#~ msgid "Description"
+#~ msgstr "تفصیل"
+
+#~ msgid "Captured Images"
+#~ msgstr "تھول مژہ تصویرہِ"
+
+#~ msgid "No images uploaded"
+#~ msgstr "کانہہ تصویر اپلوڈ کرنہ آمٕژ نہ"
+
+#~ msgid "Voice Notes"
+#~ msgstr "آواز نوٹ"
+
+#~ msgid "No voice notes uploaded"
+#~ msgstr "کانہہ آواز نوٹ اپلوڈ کرنہ آمُت نہ"
+
+#~ msgid "Failed to fetch report details"
+#~ msgstr "رپورٹ تفصیلات حٲصل کرنس منز ناکامی"
+

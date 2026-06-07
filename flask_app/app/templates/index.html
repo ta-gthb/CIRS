@@ -19,10 +19,24 @@
             <span class="label">{{ _('Cities') }}</span>
         </div>
     </div>
-    {% if not current_user.is_authenticated %}
-    <a href="{{ url_for('auth.login') }}" class="btn-primary">{{ _('Get Started Now') }}</a>
+{% if not current_user.is_authenticated %}
+    <a href="{{ url_for('auth.login') }}" class="btn btn-get-started">{{ _('Get Started Now') }}</a>
     {% endif %}
 </div>
+
+<section class="live-map-section container">
+    <div class="section-header">
+        <h2><i class="fas fa-map-marked-alt"></i> {{ _('Public Live Map') }}</h2>
+        <p>{{ _('Visualize all reported issues across districts in real-time.') }}</p>
+    </div>
+    <div id="main-live-map" style="height: 500px; border-radius: 15px; box-shadow: var(--shadow); margin-bottom: 1rem;"></div>
+    <div class="map-legend">
+        <div class="legend-item"><span class="dot critical"></span> {{ _('Critical') }}</div>
+        <div class="legend-item"><span class="dot high"></span> {{ _('High') }}</div>
+        <div class="legend-item"><span class="dot medium"></span> {{ _('Medium') }}</div>
+        <div class="legend-item"><span class="dot low"></span> {{ _('Low') }}</div>
+    </div>
+</section>
 
 <section class="features">
     <h2>{{ _('Powerful Features') }}</h2>
@@ -44,4 +58,62 @@
         </div>
     </div>
 </section>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const map = L.map('main-live-map').setView([22.5726, 88.3639], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const colors = {
+            critical: '#ef4444',
+            high: '#f59e0b',
+            medium: '#ffc107',
+            low: '#64748b'
+        };
+
+        const reports = [
+            {% for report in reports %}
+            {
+                lat: {{ report.latitude }},
+                lng: {{ report.longitude }},
+                title: "{{ report.title|replace('"', '\"') }}",
+                category: "{{ report.category }}",
+                priority: "{{ report.priority }}",
+                status: "{{ report.status }}"
+            },
+            {% endfor %}
+        ];
+
+        reports.forEach(r => {
+            const circle = L.circleMarker([r.lat, r.lng], {
+                radius: 8,
+                fillColor: colors[r.priority] || '#3b82f6',
+                color: '#fff',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.8
+            }).addTo(map);
+
+            circle.bindPopup(`
+                <div class="popup-note">
+                    <h4>${r.title}</h4>
+                    <p><strong>Category:</strong> ${r.category}</p>
+                    <p><strong>Priority:</strong> <span class="badge badge-${r.priority}">${r.priority.toUpperCase()}</span></p>
+                    <p><strong>Status:</strong> <span class="status status-${r.status}">${r.status.replace('_', ' ').toUpperCase()}</span></p>
+                </div>
+            `);
+        });
+
+        if (reports.length > 0) {
+            const group = new L.featureGroup(reports.map(r => L.marker([r.lat, r.lng])));
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
+    });
+</script>
 {% endblock %}
