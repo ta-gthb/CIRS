@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 21:01+0530\n"
+"POT-Creation-Date: 2026-06-07 23:02+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: Gemini CLI <email@address>\n"
 "Language: as\n"
@@ -66,11 +66,11 @@ msgstr "একাউন্টটো নিষ্ক্ৰিয় বা বি
 msgid "Invalid or expired OTP."
 msgstr "অমান্য বা ম্যাদ উকলি যোৱা অ’টিপি।"
 
-#: app/routes/citizen.py:83
+#: app/routes/citizen.py:84
 msgid "Profile updated successfully!"
 msgstr "প্ৰফাইল সফলতাৰে উন্নীত কৰা হ’ল!"
 
-#: app/routes/citizen.py:149
+#: app/routes/citizen.py:160
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,53 +78,53 @@ msgstr ""
 "এই স্থানত ইতিমধ্যে এক অনুৰূপ প্ৰতিবেদন আছে। আপোনাৰ ভোটটো ইয়াত যোগ কৰা "
 "হৈছে।"
 
-#: app/routes/citizen.py:151
+#: app/routes/citizen.py:162
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "এক অনুৰূপ প্ৰতিবেদন ইতিমধ্যে আছে আৰু আপুনি ইতিমধ্যে ইয়াক ভোট দিছে।"
 
-#: app/routes/citizen.py:153
+#: app/routes/citizen.py:164
 msgid "You have already submitted a similar report in this location."
 msgstr "আপুনি ইতিমধ্যে এই স্থানত এক অনুৰূপ প্ৰতিবেদন দাখিল কৰিছে।"
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:184
 msgid "You can only upload up to 3 images."
 msgstr "আপুনি কেৱল ৩ খনলৈকে ছবি আপলোড কৰিব পাৰে।"
 
-#: app/routes/citizen.py:190
+#: app/routes/citizen.py:201
 msgid "Report submitted successfully!"
 msgstr "প্ৰতিবেদন সফলতাৰে দাখিল কৰা হ’ল!"
 
-#: app/routes/citizen.py:202
+#: app/routes/citizen.py:213
 msgid "You cannot upvote your own report."
 msgstr "আপুনি নিজৰ প্ৰতিবেদনত ভোট দিব নোৱাৰে।"
 
-#: app/routes/citizen.py:206
+#: app/routes/citizen.py:217
 msgid "Already upvoted"
 msgstr "ইতিমধ্যে ভোট দিছে"
 
-#: app/routes/citizen.py:224
+#: app/routes/citizen.py:235
 msgid "Comment added."
 msgstr "মন্তব্য যোগ কৰা হ’ল।"
 
-#: app/routes/citizen.py:232
+#: app/routes/citizen.py:243
 msgid "Unauthorized."
 msgstr "অননুমোদিত।"
 
-#: app/routes/citizen.py:238
+#: app/routes/citizen.py:249
 msgid "Report reopened."
 msgstr "প্ৰতিবেদন পুনৰ খোলা হ’ল।"
 
-#: app/routes/citizen.py:240
+#: app/routes/citizen.py:251
 msgid "Report cannot be reopened."
 msgstr "প্ৰতিবেদন পুনৰ খুলিব নোৱাৰি।"
 
-#: app/routes/citizen.py:248
+#: app/routes/citizen.py:259
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:253
+#: app/routes/citizen.py:264
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -156,23 +156,23 @@ msgstr "অগ্ৰাধিকাৰ:"
 msgid "All Priorities"
 msgstr "অগ্ৰাধিকাৰ"
 
-#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
-#: app/templates/submit_report.html:30
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/live_map.html:10 app/templates/submit_report.html:30
 msgid "Critical"
 msgstr "অতি গুৰুত্বপূৰ্ণ"
 
-#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
-#: app/templates/submit_report.html:29
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/live_map.html:11 app/templates/submit_report.html:29
 msgid "High"
 msgstr "উচ্চ"
 
-#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
-#: app/templates/submit_report.html:28
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/live_map.html:12 app/templates/submit_report.html:28
 msgid "Medium"
 msgstr "মধ্যম"
 
-#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
-#: app/templates/submit_report.html:27
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/live_map.html:13 app/templates/submit_report.html:27
 msgid "Low"
 msgstr "নিম্ন"
 
@@ -232,7 +232,6 @@ msgid "Priority"
 msgstr "অগ্ৰাধিকাৰ"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
-#: app/templates/base.html:20
 msgid "Status"
 msgstr "স্থিতি"
 
@@ -415,47 +414,55 @@ msgstr "নিযুক্ত জিলা:"
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:17
+#: app/templates/base.html:20
 msgid "Dashboard"
 msgstr "ডেচব’ৰ্ড"
 
-#: app/templates/base.html:18
-msgid "Reports"
-msgstr "প্ৰতিবেদনসমূহ"
+#: app/templates/base.html:21
+msgid "Report Issue"
+msgstr "সমস্যা ৰিপৰ্ট কৰক"
 
-#: app/templates/base.html:19 app/templates/public_forum.html:5
-msgid "Public Forum"
-msgstr "ৰাজহুৱা মঞ্চ"
+#: app/templates/base.html:22
+msgid "Forum"
+msgstr "ফোৰাম"
 
-#: app/templates/base.html:21 app/templates/index.html:37
-msgid "Live Map"
-msgstr "জীৱন্ত মানচিত্ৰ"
+#: app/templates/base.html:23
+msgid "My Status"
+msgstr "মোৰ স্থিতি"
 
-#: app/templates/base.html:23 app/templates/base.html:28
+#: app/templates/base.html:24
+msgid "Map"
+msgstr "মানচিত্ৰ"
+
+#: app/templates/base.html:26
 msgid "Profile"
 msgstr "প্ৰফাইল"
 
-#: app/templates/base.html:26
-msgid "Admin Dashboard"
-msgstr "প্ৰশাসনিক ডেচব’ৰ্ড"
+#: app/templates/base.html:29
+msgid "Admin Panel"
+msgstr "এডমিন পেনেল"
 
 #: app/templates/base.html:31
-msgid "Logout"
-msgstr "লগ আউট"
+msgid "Settings"
+msgstr "ছেটিংছ"
 
-#: app/templates/base.html:33
-msgid "Login"
-msgstr "লগ ইন"
+#: app/templates/base.html:36 app/templates/login.html:5
+msgid "Login / Register"
+msgstr "লগইন / পঞ্জীয়ন"
 
-#: app/templates/base.html:91
+#: app/templates/base.html:41
+msgid "Toggle Light/Dark Mode"
+msgstr "লাইট/ডার্ক মোড সলনি কৰক"
+
+#: app/templates/base.html:95
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
 msgstr "নাগৰিক সমস্যা প্ৰতিবেদন ব্যৱস্থা (CIRS)। সকলো স্বত্ব সংৰক্ষিত।"
 
-#: app/templates/base.html:98
+#: app/templates/base.html:102
 msgid "Report Chat"
 msgstr "প্ৰতিবেদন কথোপকথন"
 
-#: app/templates/base.html:105
+#: app/templates/base.html:109
 msgid "Type a message..."
 msgstr "বাৰ্তা এটা লিখক..."
 
@@ -545,27 +552,41 @@ msgstr "চহৰসমূহ"
 msgid "Get Started Now"
 msgstr "এতিয়াই আৰম্ভ কৰক"
 
-#: app/templates/index.html:28
-msgid "Powerful Features"
-msgstr "শক্তিশালী বৈশিষ্ট্যসমূহ"
+#: app/templates/index.html:29
+#, fuzzy
+msgid "Public Live Map"
+msgstr "জীৱন্ত মানচিত্ৰ চাওক"
 
-#: app/templates/index.html:32
-msgid "Media Reporting"
-msgstr "সংবাদ মাধ্যমৰ জৰিয়তে প্ৰতিবেদন"
-
-#: app/templates/index.html:33
-msgid "Capture issues with photos and voice notes."
-msgstr "ছবি আৰু কণ্ঠস্বৰ টোকাৰ সৈতে সমস্যাসমূহ ধৰি ৰাখক।"
-
-#: app/templates/index.html:38
-msgid "Visualize reported issues in real-time."
+#: app/templates/index.html:30
+#, fuzzy
+msgid "Visualize all reported issues across districts in real-time."
 msgstr "দাখিল কৰা সমস্যাসমূহ বাস্তৱ সময়ত দৃশ্যমান কৰক।"
 
 #: app/templates/index.html:42
+msgid "Powerful Features"
+msgstr "শক্তিশালী বৈশিষ্ট্যসমূহ"
+
+#: app/templates/index.html:46
+msgid "Media Reporting"
+msgstr "সংবাদ মাধ্যমৰ জৰিয়তে প্ৰতিবেদন"
+
+#: app/templates/index.html:47
+msgid "Capture issues with photos and voice notes."
+msgstr "ছবি আৰু কণ্ঠস্বৰ টোকাৰ সৈতে সমস্যাসমূহ ধৰি ৰাখক।"
+
+#: app/templates/index.html:51
+msgid "Live Map"
+msgstr "জীৱন্ত মানচিত্ৰ"
+
+#: app/templates/index.html:52
+msgid "Visualize reported issues in real-time."
+msgstr "দাখিল কৰা সমস্যাসমূহ বাস্তৱ সময়ত দৃশ্যমান কৰক।"
+
+#: app/templates/index.html:56
 msgid "Analytics"
 msgstr "বিশ্লেষণ"
 
-#: app/templates/index.html:43
+#: app/templates/index.html:57
 msgid "Track resolution status and response times."
 msgstr "সমাধানৰ স্থিতি আৰু সঁহাৰিৰ সময় অনুসৰণ কৰক।"
 
@@ -584,10 +605,6 @@ msgstr "শ্ৰেণী:"
 #: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "স্থিতি:"
-
-#: app/templates/login.html:5
-msgid "Login / Register"
-msgstr "লগ ইন / পঞ্জীয়ন"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
@@ -697,6 +714,10 @@ msgstr "প্ৰফাইল উন্নীত কৰক"
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "একাউন্ট বিলোপৰ অনুৰোধ অনুমোদনৰ বাবে অমীমাংসিত হৈ আছে।"
+
+#: app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr "ৰাজহুৱা মঞ্চ"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
@@ -1069,4 +1090,16 @@ msgstr "অনুগ্ৰহ কৰি ৪ টা সংখ্যা লিখ�
 
 #~ msgid "Failed to fetch report details"
 #~ msgstr "প্ৰতিবেদনৰ বিৱৰণ আহৰণ কৰাত ব্যৰ্থ হ’ল"
+
+#~ msgid "Reports"
+#~ msgstr "প্ৰতিবেদনসমূহ"
+
+#~ msgid "Admin Dashboard"
+#~ msgstr "প্ৰশাসনিক ডেচব’ৰ্ড"
+
+#~ msgid "Logout"
+#~ msgstr "লগ আউট"
+
+#~ msgid "Login"
+#~ msgstr "লগ ইন"
 

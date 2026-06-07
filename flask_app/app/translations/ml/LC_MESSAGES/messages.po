@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 21:01+0530\n"
+"POT-Creation-Date: 2026-06-07 23:02+0530\n"
 "PO-Revision-Date: 2026-06-07 10:45+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ml\n"
@@ -66,11 +66,11 @@ msgstr "അക്കൗണ്ട് നിഷ്ക്രിയമാണ് അ�
 msgid "Invalid or expired OTP."
 msgstr "അസാധുവായതോ കാലാവധി കഴിഞ്ഞതോ ആയ OTP."
 
-#: app/routes/citizen.py:83
+#: app/routes/citizen.py:84
 msgid "Profile updated successfully!"
 msgstr "പ്രൊഫൈൽ വിജയകരമായി പുതുക്കി!"
 
-#: app/routes/citizen.py:149
+#: app/routes/citizen.py:160
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,55 +78,55 @@ msgstr ""
 "ഈ സ്ഥലത്ത് സമാനമായ ഒരു റിപ്പോർട്ട് നിലവിലുണ്ട്. നിങ്ങളുടെ അപ്‌വോട്ട് അതിൽ"
 " ചേർത്തിട്ടുണ്ട്."
 
-#: app/routes/citizen.py:151
+#: app/routes/citizen.py:162
 msgid "A similar report already exists and you have already upvoted it."
 msgstr ""
 "സമാനമായ ഒരു റിപ്പോർട്ട് നിലവിലുണ്ട്, നിങ്ങൾ അത് ഇതിനകം അപ്‌വോട്ട് "
 "ചെയ്തിട്ടുണ്ട്."
 
-#: app/routes/citizen.py:153
+#: app/routes/citizen.py:164
 msgid "You have already submitted a similar report in this location."
 msgstr "ഈ സ്ഥലത്ത് നിങ്ങൾ ഇതിനകം സമാനമായ ഒരു റിപ്പോർട്ട് സമർപ്പിച്ചിട്ടുണ്ട്."
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:184
 msgid "You can only upload up to 3 images."
 msgstr "നിങ്ങൾക്ക് 3 ചിത്രങ്ങൾ വരെ മാത്രമേ അപ്‌ലോഡ് ചെയ്യാൻ കഴിയൂ."
 
-#: app/routes/citizen.py:190
+#: app/routes/citizen.py:201
 msgid "Report submitted successfully!"
 msgstr "റിപ്പോർട്ട് വിജയകരമായി സമർപ്പിച്ചു!"
 
-#: app/routes/citizen.py:202
+#: app/routes/citizen.py:213
 msgid "You cannot upvote your own report."
 msgstr "നിങ്ങളുടെ സ്വന്തം റിപ്പോർട്ടിന് നിങ്ങൾക്ക് അപ്‌വോട്ട് ചെയ്യാൻ കഴിയില്ല."
 
-#: app/routes/citizen.py:206
+#: app/routes/citizen.py:217
 msgid "Already upvoted"
 msgstr "ഇതിനകം അപ്‌വോട്ട് ചെയ്തു"
 
-#: app/routes/citizen.py:224
+#: app/routes/citizen.py:235
 msgid "Comment added."
 msgstr "അഭിപ്രായം ചേർത്തു."
 
-#: app/routes/citizen.py:232
+#: app/routes/citizen.py:243
 msgid "Unauthorized."
 msgstr "അനധികൃതം."
 
-#: app/routes/citizen.py:238
+#: app/routes/citizen.py:249
 msgid "Report reopened."
 msgstr "റിപ്പോർട്ട് വീണ്ടും തുറന്നു."
 
-#: app/routes/citizen.py:240
+#: app/routes/citizen.py:251
 msgid "Report cannot be reopened."
 msgstr "റിപ്പോർട്ട് വീണ്ടും തുറക്കാൻ കഴിയില്ല."
 
-#: app/routes/citizen.py:248
+#: app/routes/citizen.py:259
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:253
+#: app/routes/citizen.py:264
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -159,23 +159,23 @@ msgstr "മുൻഗണന:"
 msgid "All Priorities"
 msgstr "മുൻഗണന"
 
-#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
-#: app/templates/submit_report.html:30
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/live_map.html:10 app/templates/submit_report.html:30
 msgid "Critical"
 msgstr "ഗുരുതരം"
 
-#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
-#: app/templates/submit_report.html:29
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/live_map.html:11 app/templates/submit_report.html:29
 msgid "High"
 msgstr "ഉയർന്നത്"
 
-#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
-#: app/templates/submit_report.html:28
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/live_map.html:12 app/templates/submit_report.html:28
 msgid "Medium"
 msgstr "മിതമായത്"
 
-#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
-#: app/templates/submit_report.html:27
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/live_map.html:13 app/templates/submit_report.html:27
 msgid "Low"
 msgstr "കുറഞ്ഞത്"
 
@@ -235,7 +235,6 @@ msgid "Priority"
 msgstr "മുൻഗണന"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
-#: app/templates/base.html:20
 msgid "Status"
 msgstr "സ്ഥിതി"
 
@@ -418,47 +417,55 @@ msgstr "നിയുക്ത ജില്ല:"
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:17
+#: app/templates/base.html:20
 msgid "Dashboard"
 msgstr "ഡാഷ്ബോർഡ്"
 
-#: app/templates/base.html:18
-msgid "Reports"
-msgstr "റിപ്പോർട്ടുകൾ"
+#: app/templates/base.html:21
+msgid "Report Issue"
+msgstr "പ്രശ്നം റിപ്പോർട്ട് ചെയ്യുക"
 
-#: app/templates/base.html:19 app/templates/public_forum.html:5
-msgid "Public Forum"
-msgstr "പബ്ലിക് ഫോറം"
+#: app/templates/base.html:22
+msgid "Forum"
+msgstr "ഫോറം"
 
-#: app/templates/base.html:21 app/templates/index.html:37
-msgid "Live Map"
-msgstr "ലൈവ് മാപ്പ്"
+#: app/templates/base.html:23
+msgid "My Status"
+msgstr "എന്റെ സ്റ്റാറ്റസ്"
 
-#: app/templates/base.html:23 app/templates/base.html:28
+#: app/templates/base.html:24
+msgid "Map"
+msgstr "മാപ്പ്"
+
+#: app/templates/base.html:26
 msgid "Profile"
 msgstr "പ്രൊഫൈൽ"
 
-#: app/templates/base.html:26
-msgid "Admin Dashboard"
-msgstr "അഡ്മിൻ ഡാഷ്ബോർഡ്"
+#: app/templates/base.html:29
+msgid "Admin Panel"
+msgstr "അഡ്മിൻ പാനൽ"
 
 #: app/templates/base.html:31
-msgid "Logout"
-msgstr "ലോഗൗട്ട്"
+msgid "Settings"
+msgstr "ക്രമീകരണങ്ങൾ"
 
-#: app/templates/base.html:33
-msgid "Login"
-msgstr "ലോഗിൻ"
+#: app/templates/base.html:36 app/templates/login.html:5
+msgid "Login / Register"
+msgstr "লോഗിൻ / രജിസ്റ്റർ"
 
-#: app/templates/base.html:91
+#: app/templates/base.html:41
+msgid "Toggle Light/Dark Mode"
+msgstr "ലൈറ്റ്/ഡാർക്ക് മോഡ് ടോഗിൾ ചെയ്യുക"
+
+#: app/templates/base.html:95
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
 msgstr "സിവിക് ഇഷ്യൂ റിപ്പോർട്ടിംഗ് സിസ്റ്റം (CIRS). എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം."
 
-#: app/templates/base.html:98
+#: app/templates/base.html:102
 msgid "Report Chat"
 msgstr "റിപ്പോർട്ട് ചാറ്റ്"
 
-#: app/templates/base.html:105
+#: app/templates/base.html:109
 msgid "Type a message..."
 msgstr "ഒരു സന്ദേശം ടൈപ്പ് ചെയ്യുക..."
 
@@ -550,27 +557,41 @@ msgstr "നഗരങ്ങൾ"
 msgid "Get Started Now"
 msgstr "ഇപ്പോൾ ആരംഭിക്കുക"
 
-#: app/templates/index.html:28
-msgid "Powerful Features"
-msgstr "ശക്തമായ ഫീച്ചറുകൾ"
+#: app/templates/index.html:29
+#, fuzzy
+msgid "Public Live Map"
+msgstr "ലൈവ് മാപ്പ് കാണുക"
 
-#: app/templates/index.html:32
-msgid "Media Reporting"
-msgstr "മീഡിയ റിപ്പോർട്ടിംഗ്"
-
-#: app/templates/index.html:33
-msgid "Capture issues with photos and voice notes."
-msgstr "ഫോട്ടോകളും വോയ്‌സ് നോട്ടുകളും ഉപയോഗിച്ച് പ്രശ്നങ്ങൾ പകർത്തുക."
-
-#: app/templates/index.html:38
-msgid "Visualize reported issues in real-time."
+#: app/templates/index.html:30
+#, fuzzy
+msgid "Visualize all reported issues across districts in real-time."
 msgstr "റിപ്പോർട്ട് ചെയ്ത പ്രശ്നങ്ങൾ തത്സമയം കാണുക."
 
 #: app/templates/index.html:42
+msgid "Powerful Features"
+msgstr "ശക്തമായ ഫീച്ചറുകൾ"
+
+#: app/templates/index.html:46
+msgid "Media Reporting"
+msgstr "മീഡിയ റിപ്പോർട്ടിംഗ്"
+
+#: app/templates/index.html:47
+msgid "Capture issues with photos and voice notes."
+msgstr "ഫോട്ടോകളും വോയ്‌സ് നോട്ടുകളും ഉപയോഗിച്ച് പ്രശ്നങ്ങൾ പകർത്തുക."
+
+#: app/templates/index.html:51
+msgid "Live Map"
+msgstr "ലൈവ് മാപ്പ്"
+
+#: app/templates/index.html:52
+msgid "Visualize reported issues in real-time."
+msgstr "റിപ്പോർട്ട് ചെയ്ത പ്രശ്നങ്ങൾ തത്സമയം കാണുക."
+
+#: app/templates/index.html:56
 msgid "Analytics"
 msgstr "അനലിറ്റിക്സ്"
 
-#: app/templates/index.html:43
+#: app/templates/index.html:57
 msgid "Track resolution status and response times."
 msgstr "പരിഹാര നിലയും പ്രതികരണ സമയവും ട്രാക്ക് ചെയ്യുക."
 
@@ -589,10 +610,6 @@ msgstr "വിഭാഗം:"
 #: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "സ്ഥിതി:"
-
-#: app/templates/login.html:5
-msgid "Login / Register"
-msgstr "ലോഗിൻ / രജിസ്റ്റർ"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
@@ -702,6 +719,10 @@ msgstr "പ്രൊഫൈൽ പുതുക്കുക"
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യാനുള്ള അഭ്യർത്ഥന അംഗീകാരത്തിനായി കാത്തിരിക്കുന്നു."
+
+#: app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr "പബ്ലിക് ഫോറം"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
@@ -1075,4 +1096,16 @@ msgstr "ദയവായി 4 അക്കങ്ങൾ നൽകുക"
 
 #~ msgid "Failed to fetch report details"
 #~ msgstr "റിപ്പോർട്ട് വിവരങ്ങൾ ശേഖരിക്കാനായില്ല"
+
+#~ msgid "Reports"
+#~ msgstr "റിപ്പോർട്ടുകൾ"
+
+#~ msgid "Admin Dashboard"
+#~ msgstr "അഡ്മിൻ ഡാഷ്ബോർഡ്"
+
+#~ msgid "Logout"
+#~ msgstr "ലോഗൗട്ട്"
+
+#~ msgid "Login"
+#~ msgstr "ലോഗിൻ"
 

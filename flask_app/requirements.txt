@@ -8,3 +8,5 @@ python-dotenv
 cloudinary
 pyjwt
 psycopg2-binary
+gunicorn
+eventlet

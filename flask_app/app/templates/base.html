@@ -9,32 +9,36 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="container">
-            <a href="{{ url_for('main.index') }}" class="logo">Civic Issue Reporting System (CIRS)</a>
-            <ul class="nav-links">
-                {% if current_user.is_authenticated %}
-                    {% if current_user.role == 'citizen' %}
-                        <li><a href="{{ url_for('citizen.dashboard') }}">{{ _('Dashboard') }}</a></li>
-                        <li><a href="{{ url_for('citizen.submit_report') }}">{{ _('Reports') }}</a></li>
-                        <li><a href="{{ url_for('citizen.public_forum') }}">{{ _('Public Forum') }}</a></li>
-                        <li><a href="{{ url_for('citizen.status') }}">{{ _('Status') }}</a></li>
-                        <li><a href="{{ url_for('citizen.live_map') }}">{{ _('Live Map') }}</a></li>
-                        <li class="profile-link">
-                            <a href="{{ url_for('citizen.profile') }}"><i class="fas fa-user-circle"></i> {{ _('Profile') }}</a>
-                        </li>
+        <div class="container nav-wrapper">
+            <a href="{{ url_for('main.index') }}" class="logo">Civic Issue Reporting System (CIRS)
+            </a>
+            
+            <div class="nav-content">
+                <ul class="nav-links">
+                    {% if current_user.is_authenticated %}
+                        {% if current_user.role == 'citizen' %}
+                            <li class="nav-item"><a href="{{ url_for('citizen.dashboard') }}" class="nav-btn"><i class="fas fa-th-large"></i> {{ _('Dashboard') }}</a></li>
+                            <li class="nav-item"><a href="{{ url_for('citizen.submit_report') }}" class="nav-btn"><i class="fas fa-plus-circle"></i> {{ _('Report Issue') }}</a></li>
+                            <li class="nav-item"><a href="{{ url_for('citizen.public_forum') }}" class="nav-btn"><i class="fas fa-users"></i> {{ _('Forum') }}</a></li>
+                            <li class="nav-item"><a href="{{ url_for('citizen.status') }}" class="nav-btn"><i class="fas fa-clipboard-list"></i> {{ _('My Status') }}</a></li>
+                            <li class="nav-item"><a href="{{ url_for('citizen.live_map') }}" class="nav-btn"><i class="fas fa-map-marked-alt"></i> {{ _('Map') }}</a></li>
+                            <li class="nav-item profile-link">
+                                <a href="{{ url_for('citizen.profile') }}" class="nav-btn highlight"><i class="fas fa-user-circle"></i> {{ _('Profile') }}</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item"><a href="{{ url_for('admin.dashboard') }}" class="nav-btn"><i class="fas fa-user-shield"></i> {{ _('Admin Panel') }}</a></li>
+                            <li class="nav-item profile-link">
+                                <a href="{{ url_for('admin.profile') }}" class="nav-btn highlight"><i class="fas fa-cog"></i> {{ _('Settings') }}</a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item"><a href="{{ url_for('auth.logout') }}" class="nav-btn logout-btn"><i class="fas fa-sign-out-alt"></i></a></li>
                     {% else %}
-                        <li><a href="{{ url_for('admin.dashboard') }}">{{ _('Admin Dashboard') }}</a></li>
-                        <li class="profile-link">
-                            <a href="{{ url_for('admin.profile') }}"><i class="fas fa-user-shield"></i> {{ _('Profile') }}</a>
-                        </li>
+                        <li class="nav-item"><a href="{{ url_for('auth.login') }}" class="nav-btn login-btn">{{ _('Login / Register') }}</a></li>
                     {% endif %}
-                    <li><a href="{{ url_for('auth.logout') }}"><i class="fas fa-sign-out-alt"></i> {{ _('Logout') }}</a></li>
-                {% else %}
-                    <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
-                {% endif %}
-                
-                <li class="controls-area">
-                    <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+                </ul>
+
+                <div class="controls-area">
+                    <button id="theme-toggle" class="theme-toggle" title="{{ _('Toggle Light/Dark Mode') }}">
                         <i class="fas fa-moon"></i>
                     </button>
                     <select class="language-selector" onchange="location = this.value;">
@@ -45,8 +49,8 @@
                             </option>
                         {% endfor %}
                     </select>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
     </nav>
 

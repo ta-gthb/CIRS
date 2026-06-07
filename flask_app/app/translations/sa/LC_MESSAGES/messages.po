@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 21:01+0530\n"
+"POT-Creation-Date: 2026-06-07 23:02+0530\n"
 "PO-Revision-Date: 2026-06-07 11:05+0530\n"
 "Last-Translator: Gemini CLI <email@address>\n"
 "Language: sa\n"
@@ -66,11 +66,11 @@ msgstr "लेखा निष्क्रिया वा अपसारित
 msgid "Invalid or expired OTP."
 msgstr "अमान्यः वा कालावधि-समाप्तः ओटिपी (OTP)।"
 
-#: app/routes/citizen.py:83
+#: app/routes/citizen.py:84
 msgid "Profile updated successfully!"
 msgstr "पार्श्वचित्रं सफलतापूर्वकं नवीकृतम्!"
 
-#: app/routes/citizen.py:149
+#: app/routes/citizen.py:160
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,53 +78,53 @@ msgstr ""
 "अस्मिन् स्थाने पूर्वमेव तादृशं प्रतिवेदनम् अस्ति। भवतः मतम् अत्र "
 "संयोजितम्।"
 
-#: app/routes/citizen.py:151
+#: app/routes/citizen.py:162
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "पूर्वमेव तादृशं प्रतिवेदनम् अस्ति, भवता च पूर्वमेव मतं दत्तम्।"
 
-#: app/routes/citizen.py:153
+#: app/routes/citizen.py:164
 msgid "You have already submitted a similar report in this location."
 msgstr "भवता अस्मिन् स्थाने पूर्वमेव तादृशं प्रतिवेदनं प्रस्तुतम्।"
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:184
 msgid "You can only upload up to 3 images."
 msgstr "भवान् केवलं त्रीणि चित्राणि उपारोपयितुं शक्नोति।"
 
-#: app/routes/citizen.py:190
+#: app/routes/citizen.py:201
 msgid "Report submitted successfully!"
 msgstr "प्रतिवेदनं सफलतापूर्वकं प्रस्तुतम्!"
 
-#: app/routes/citizen.py:202
+#: app/routes/citizen.py:213
 msgid "You cannot upvote your own report."
 msgstr "भवान् स्वकीयप्रतिवेदने मतं दातुं न शक्नोति।"
 
-#: app/routes/citizen.py:206
+#: app/routes/citizen.py:217
 msgid "Already upvoted"
 msgstr "पूर्वमेव मतं दत्तम्"
 
-#: app/routes/citizen.py:224
+#: app/routes/citizen.py:235
 msgid "Comment added."
 msgstr "टिप्पणी योजिता।"
 
-#: app/routes/citizen.py:232
+#: app/routes/citizen.py:243
 msgid "Unauthorized."
 msgstr "अनाधिकृतम्।"
 
-#: app/routes/citizen.py:238
+#: app/routes/citizen.py:249
 msgid "Report reopened."
 msgstr "प्रतिवेदनं पुनः उद्घाटितम्।"
 
-#: app/routes/citizen.py:240
+#: app/routes/citizen.py:251
 msgid "Report cannot be reopened."
 msgstr "प्रतिवेदनं पुनः उद्घाटयितुं न शक्यते।"
 
-#: app/routes/citizen.py:248
+#: app/routes/citizen.py:259
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:253
+#: app/routes/citizen.py:264
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -156,23 +156,23 @@ msgstr "प्राथमिकता:"
 msgid "All Priorities"
 msgstr "प्राथमिकता"
 
-#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
-#: app/templates/submit_report.html:30
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/live_map.html:10 app/templates/submit_report.html:30
 msgid "Critical"
 msgstr "अत्यन्तं महत्त्वपूर्णम्"
 
-#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
-#: app/templates/submit_report.html:29
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/live_map.html:11 app/templates/submit_report.html:29
 msgid "High"
 msgstr "उच्चम्"
 
-#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
-#: app/templates/submit_report.html:28
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/live_map.html:12 app/templates/submit_report.html:28
 msgid "Medium"
 msgstr "मध्यमम्"
 
-#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
-#: app/templates/submit_report.html:27
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/live_map.html:13 app/templates/submit_report.html:27
 msgid "Low"
 msgstr "न्यूनम्"
 
@@ -232,7 +232,6 @@ msgid "Priority"
 msgstr "प्राथमिकता"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
-#: app/templates/base.html:20
 msgid "Status"
 msgstr "स्थितिः"
 
@@ -415,47 +414,55 @@ msgstr "नियुक्तः जनपदः:"
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:17
+#: app/templates/base.html:20
 msgid "Dashboard"
 msgstr "फलकम्"
 
-#: app/templates/base.html:18
-msgid "Reports"
-msgstr "प्रतिवेदनानि"
+#: app/templates/base.html:21
+msgid "Report Issue"
+msgstr "समस्यां निवेदयतु"
 
-#: app/templates/base.html:19 app/templates/public_forum.html:5
-msgid "Public Forum"
-msgstr "सार्वजनिक-मञ्चः"
+#: app/templates/base.html:22
+msgid "Forum"
+msgstr "सभा"
 
-#: app/templates/base.html:21 app/templates/index.html:37
-msgid "Live Map"
-msgstr "सजीवं मानचित्रम्"
+#: app/templates/base.html:23
+msgid "My Status"
+msgstr "मम स्थितिः"
 
-#: app/templates/base.html:23 app/templates/base.html:28
+#: app/templates/base.html:24
+msgid "Map"
+msgstr "मानचित्रम्"
+
+#: app/templates/base.html:26
 msgid "Profile"
 msgstr "पार्श्वचित्रम्"
 
-#: app/templates/base.html:26
-msgid "Admin Dashboard"
-msgstr "प्रशासक-फलकम्"
+#: app/templates/base.html:29
+msgid "Admin Panel"
+msgstr "प्रशासक फलकम्"
 
 #: app/templates/base.html:31
-msgid "Logout"
-msgstr "बहिर्गमनम्"
+msgid "Settings"
+msgstr "समायोजनानि"
 
-#: app/templates/base.html:33
-msgid "Login"
-msgstr "प्रवेशः"
+#: app/templates/base.html:36 app/templates/login.html:5
+msgid "Login / Register"
+msgstr "प्रवेशः / पञ्जीकरणम्"
 
-#: app/templates/base.html:91
+#: app/templates/base.html:41
+msgid "Toggle Light/Dark Mode"
+msgstr "प्रकाश/अन्धकार विधि परिवर्तनम्"
+
+#: app/templates/base.html:95
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
 msgstr "नागरिक-समस्या-प्रतिवेदन-तन्त्रम् (CIRS)। सर्वे अधिकाराः सुरक्षिताः।"
 
-#: app/templates/base.html:98
+#: app/templates/base.html:102
 msgid "Report Chat"
 msgstr "प्रतिवेदन-सम्भाषणम्"
 
-#: app/templates/base.html:105
+#: app/templates/base.html:109
 msgid "Type a message..."
 msgstr "सन्देशं लिखतु..."
 
@@ -543,27 +550,41 @@ msgstr "नगराणि"
 msgid "Get Started Now"
 msgstr "अधुना आरभस्व"
 
-#: app/templates/index.html:28
-msgid "Powerful Features"
-msgstr "प्रभाविनः गुणाः"
+#: app/templates/index.html:29
+#, fuzzy
+msgid "Public Live Map"
+msgstr "सजीवं मानचित्रं पश्यतु"
 
-#: app/templates/index.html:32
-msgid "Media Reporting"
-msgstr "माध्यम-प्रतिवेदनम्"
-
-#: app/templates/index.html:33
-msgid "Capture issues with photos and voice notes."
-msgstr "चित्रैः ध्वनि-टिप्पणीभिः च समस्याः गृह्णातु।"
-
-#: app/templates/index.html:38
-msgid "Visualize reported issues in real-time."
+#: app/templates/index.html:30
+#, fuzzy
+msgid "Visualize all reported issues across districts in real-time."
 msgstr "सूचिताः समस्याः सजीव-समये पश्यतु।"
 
 #: app/templates/index.html:42
+msgid "Powerful Features"
+msgstr "प्रभाविनः गुणाः"
+
+#: app/templates/index.html:46
+msgid "Media Reporting"
+msgstr "माध्यम-प्रतिवेदनम्"
+
+#: app/templates/index.html:47
+msgid "Capture issues with photos and voice notes."
+msgstr "चित्रैः ध्वनि-टिप्पणीभिः च समस्याः गृह्णातु।"
+
+#: app/templates/index.html:51
+msgid "Live Map"
+msgstr "सजीवं मानचित्रम्"
+
+#: app/templates/index.html:52
+msgid "Visualize reported issues in real-time."
+msgstr "सूचिताः समस्याः सजीव-समये पश्यतु।"
+
+#: app/templates/index.html:56
 msgid "Analytics"
 msgstr "विश्लेषणम्"
 
-#: app/templates/index.html:43
+#: app/templates/index.html:57
 msgid "Track resolution status and response times."
 msgstr "निवारण-स्थितिं प्रतिक्रिया-समयं च अन्विष्यतु।"
 
@@ -582,10 +603,6 @@ msgstr "वर्गः:"
 #: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "स्थितिः:"
-
-#: app/templates/login.html:5
-msgid "Login / Register"
-msgstr "प्रवेशः / पञ्जीकरणम्"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
@@ -695,6 +712,10 @@ msgstr "पार्श्वचित्रं नवीकुरु"
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "लेखा-निष्कासन-प्रार्थना अनुमोदनाय अनिर्णीता अस्ति।"
+
+#: app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr "सार्वजनिक-मञ्चः"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
@@ -1066,4 +1087,16 @@ msgstr "कृपया ४ अङ्कान् लिखतु"
 
 #~ msgid "Failed to fetch report details"
 #~ msgstr "प्रतिवेदन-विवरणं प्राप्तुं न शक्तम्"
+
+#~ msgid "Reports"
+#~ msgstr "प्रतिवेदनानि"
+
+#~ msgid "Admin Dashboard"
+#~ msgstr "प्रशासक-फलकम्"
+
+#~ msgid "Logout"
+#~ msgstr "बहिर्गमनम्"
+
+#~ msgid "Login"
+#~ msgstr "प्रवेशः"
 

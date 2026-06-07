@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 21:01+0530\n"
+"POT-Creation-Date: 2026-06-07 23:02+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: gu\n"
@@ -66,11 +66,11 @@ msgstr "ખાતું નિષ્ક્રિય છે અથવા કા�
 msgid "Invalid or expired OTP."
 msgstr "અમાન્ય અથવા સમાપ્ત થયેલ OTP."
 
-#: app/routes/citizen.py:83
+#: app/routes/citizen.py:84
 msgid "Profile updated successfully!"
 msgstr "પ્રોફાઇલ સફળતાપૂર્વક અપડેટ થઈ!"
 
-#: app/routes/citizen.py:149
+#: app/routes/citizen.py:160
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,55 +78,55 @@ msgstr ""
 "આ સ્થાન પર સમાન અહેવાલ પહેલેથી જ અસ્તિત્વમાં છે. તમારો અપવોટ તેમાં "
 "ઉમેરવામાં આવ્યો છે."
 
-#: app/routes/citizen.py:151
+#: app/routes/citizen.py:162
 msgid "A similar report already exists and you have already upvoted it."
 msgstr ""
 "સમાન અહેવાલ પહેલેથી જ અસ્તિત્વમાં છે અને તમે તેને પહેલેથી જ અપવોટ કરી "
 "દીધો છે."
 
-#: app/routes/citizen.py:153
+#: app/routes/citizen.py:164
 msgid "You have already submitted a similar report in this location."
 msgstr "તમે આ સ્થાન પર પહેલેથી જ સમાન અહેવાલ સબમિટ કર્યો છે."
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:184
 msgid "You can only upload up to 3 images."
 msgstr "તમે વધુમાં વધુ 3 છબીઓ અપલોડ કરી શકો છો."
 
-#: app/routes/citizen.py:190
+#: app/routes/citizen.py:201
 msgid "Report submitted successfully!"
 msgstr "અહેવાલ સફળતાપૂર્વક સબમિટ થયો!"
 
-#: app/routes/citizen.py:202
+#: app/routes/citizen.py:213
 msgid "You cannot upvote your own report."
 msgstr "તમે તમારા પોતાના અહેવાલને અપવોટ કરી શકતા નથી."
 
-#: app/routes/citizen.py:206
+#: app/routes/citizen.py:217
 msgid "Already upvoted"
 msgstr "પહેલેથી જ અપવોટ કરેલ છે"
 
-#: app/routes/citizen.py:224
+#: app/routes/citizen.py:235
 msgid "Comment added."
 msgstr "ટિપ્પણી ઉમેરવામાં આવી."
 
-#: app/routes/citizen.py:232
+#: app/routes/citizen.py:243
 msgid "Unauthorized."
 msgstr "અનધિકૃત."
 
-#: app/routes/citizen.py:238
+#: app/routes/citizen.py:249
 msgid "Report reopened."
 msgstr "અહેવાલ ફરીથી ખોલવામાં આવ્યો."
 
-#: app/routes/citizen.py:240
+#: app/routes/citizen.py:251
 msgid "Report cannot be reopened."
 msgstr "અહેવાલ ફરીથી ખોલી શકાતો નથી."
 
-#: app/routes/citizen.py:248
+#: app/routes/citizen.py:259
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:253
+#: app/routes/citizen.py:264
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -158,23 +158,23 @@ msgstr "અગ્રતા:"
 msgid "All Priorities"
 msgstr "અગ્રતા"
 
-#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
-#: app/templates/submit_report.html:30
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/live_map.html:10 app/templates/submit_report.html:30
 msgid "Critical"
 msgstr "ગંભીર"
 
-#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
-#: app/templates/submit_report.html:29
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/live_map.html:11 app/templates/submit_report.html:29
 msgid "High"
 msgstr "ઉચ્ચ"
 
-#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
-#: app/templates/submit_report.html:28
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/live_map.html:12 app/templates/submit_report.html:28
 msgid "Medium"
 msgstr "મધ્યમ"
 
-#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
-#: app/templates/submit_report.html:27
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/live_map.html:13 app/templates/submit_report.html:27
 msgid "Low"
 msgstr "ઓછી"
 
@@ -234,7 +234,6 @@ msgid "Priority"
 msgstr "અગ્રતા"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
-#: app/templates/base.html:20
 msgid "Status"
 msgstr "સ્થિતિ"
 
@@ -417,47 +416,55 @@ msgstr "સોંપેલ જિલ્લો:"
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:17
+#: app/templates/base.html:20
 msgid "Dashboard"
 msgstr "ડેશબોર્ડ"
 
-#: app/templates/base.html:18
-msgid "Reports"
-msgstr "અહેવાલો"
+#: app/templates/base.html:21
+msgid "Report Issue"
+msgstr "સમસ્યાની જાણ કરો"
 
-#: app/templates/base.html:19 app/templates/public_forum.html:5
-msgid "Public Forum"
-msgstr "જાહેર મંચ"
+#: app/templates/base.html:22
+msgid "Forum"
+msgstr "ફોરમ"
 
-#: app/templates/base.html:21 app/templates/index.html:37
-msgid "Live Map"
-msgstr "લાઈવ મેપ"
+#: app/templates/base.html:23
+msgid "My Status"
+msgstr "મારી સ્થિતિ"
 
-#: app/templates/base.html:23 app/templates/base.html:28
+#: app/templates/base.html:24
+msgid "Map"
+msgstr "નકશો"
+
+#: app/templates/base.html:26
 msgid "Profile"
 msgstr "પ્રોફાઇલ"
 
-#: app/templates/base.html:26
-msgid "Admin Dashboard"
-msgstr "એડમિન ડેશબોર્ડ"
+#: app/templates/base.html:29
+msgid "Admin Panel"
+msgstr "એડમિન પેનલ"
 
 #: app/templates/base.html:31
-msgid "Logout"
-msgstr "લોગઆઉટ"
+msgid "Settings"
+msgstr "સેટિંગ્સ"
 
-#: app/templates/base.html:33
-msgid "Login"
-msgstr "લોગિન"
+#: app/templates/base.html:36 app/templates/login.html:5
+msgid "Login / Register"
+msgstr "લોગિન / રજીસ્ટર"
 
-#: app/templates/base.html:91
+#: app/templates/base.html:41
+msgid "Toggle Light/Dark Mode"
+msgstr "લાઈટ/ડાર્ક મોડ બદલો"
+
+#: app/templates/base.html:95
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
 msgstr "સિવિક ઇશ્યૂ રિપોર્ટિંગ સિસ્ટમ (CIRS). સર્વાધિકાર સુરક્ષિત."
 
-#: app/templates/base.html:98
+#: app/templates/base.html:102
 msgid "Report Chat"
 msgstr "અહેવાલ ચેટ"
 
-#: app/templates/base.html:105
+#: app/templates/base.html:109
 msgid "Type a message..."
 msgstr "સંદેશ ટાઇપ કરો..."
 
@@ -547,27 +554,41 @@ msgstr "શહેરો"
 msgid "Get Started Now"
 msgstr "અત્યારે જ શરૂ કરો"
 
-#: app/templates/index.html:28
-msgid "Powerful Features"
-msgstr "શક્તિશાળી સુવિધાઓ"
+#: app/templates/index.html:29
+#, fuzzy
+msgid "Public Live Map"
+msgstr "લાઈવ મેપ જુઓ"
 
-#: app/templates/index.html:32
-msgid "Media Reporting"
-msgstr "મીડિયા રિપોર્ટિંગ"
-
-#: app/templates/index.html:33
-msgid "Capture issues with photos and voice notes."
-msgstr "ફોટા અને વૉઇસ નોટ્સ સાથે સમસ્યાઓ કેપ્ચર કરો."
-
-#: app/templates/index.html:38
-msgid "Visualize reported issues in real-time."
+#: app/templates/index.html:30
+#, fuzzy
+msgid "Visualize all reported issues across districts in real-time."
 msgstr "રીઅલ-ટાઇમમાં નોંધાયેલ સમસ્યાઓની કલ્પના કરો."
 
 #: app/templates/index.html:42
+msgid "Powerful Features"
+msgstr "શક્તિશાળી સુવિધાઓ"
+
+#: app/templates/index.html:46
+msgid "Media Reporting"
+msgstr "મીડિયા રિપોર્ટિંગ"
+
+#: app/templates/index.html:47
+msgid "Capture issues with photos and voice notes."
+msgstr "ફોટા અને વૉઇસ નોટ્સ સાથે સમસ્યાઓ કેપ્ચર કરો."
+
+#: app/templates/index.html:51
+msgid "Live Map"
+msgstr "લાઈવ મેપ"
+
+#: app/templates/index.html:52
+msgid "Visualize reported issues in real-time."
+msgstr "રીઅલ-ટાઇમમાં નોંધાયેલ સમસ્યાઓની કલ્પના કરો."
+
+#: app/templates/index.html:56
 msgid "Analytics"
 msgstr "એનાલિટિક્સ"
 
-#: app/templates/index.html:43
+#: app/templates/index.html:57
 msgid "Track resolution status and response times."
 msgstr "ઉકેલની સ્થિતિ અને પ્રતિભાવ સમય ટ્રૅક કરો."
 
@@ -586,10 +607,6 @@ msgstr "કેટેગરી:"
 #: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "સ્થિતિ:"
-
-#: app/templates/login.html:5
-msgid "Login / Register"
-msgstr "લોગિન / રજીસ્ટર"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
@@ -699,6 +716,10 @@ msgstr "પ્રોફાઇલ અપડેટ કરો"
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "ખાતું કાઢી નાખવાની વિનંતી મંજૂરી માટે બાકી છે."
+
+#: app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr "જાહેર મંચ"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
@@ -1069,4 +1090,16 @@ msgstr "કૃપા કરીને 4 અંકો દાખલ કરો"
 
 #~ msgid "Failed to fetch report details"
 #~ msgstr "અહેવાલ વિગતો મેળવવામાં નિષ્ફળ"
+
+#~ msgid "Reports"
+#~ msgstr "અહેવાલો"
+
+#~ msgid "Admin Dashboard"
+#~ msgstr "એડમિન ડેશબોર્ડ"
+
+#~ msgid "Logout"
+#~ msgstr "લોગઆઉટ"
+
+#~ msgid "Login"
+#~ msgstr "લોગિન"
 

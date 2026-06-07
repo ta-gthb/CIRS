@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 21:01+0530\n"
+"POT-Creation-Date: 2026-06-07 23:02+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,63 +63,63 @@ msgstr ""
 msgid "Invalid or expired OTP."
 msgstr ""
 
-#: app/routes/citizen.py:83
+#: app/routes/citizen.py:84
 msgid "Profile updated successfully!"
 msgstr ""
 
-#: app/routes/citizen.py:149
+#: app/routes/citizen.py:160
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
 msgstr ""
 
-#: app/routes/citizen.py:151
+#: app/routes/citizen.py:162
 msgid "A similar report already exists and you have already upvoted it."
 msgstr ""
 
-#: app/routes/citizen.py:153
+#: app/routes/citizen.py:164
 msgid "You have already submitted a similar report in this location."
 msgstr ""
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:184
 msgid "You can only upload up to 3 images."
 msgstr ""
 
-#: app/routes/citizen.py:190
+#: app/routes/citizen.py:201
 msgid "Report submitted successfully!"
 msgstr ""
 
-#: app/routes/citizen.py:202
+#: app/routes/citizen.py:213
 msgid "You cannot upvote your own report."
 msgstr ""
 
-#: app/routes/citizen.py:206
+#: app/routes/citizen.py:217
 msgid "Already upvoted"
 msgstr ""
 
-#: app/routes/citizen.py:224
+#: app/routes/citizen.py:235
 msgid "Comment added."
 msgstr ""
 
-#: app/routes/citizen.py:232
+#: app/routes/citizen.py:243
 msgid "Unauthorized."
 msgstr ""
 
-#: app/routes/citizen.py:238
+#: app/routes/citizen.py:249
 msgid "Report reopened."
 msgstr ""
 
-#: app/routes/citizen.py:240
+#: app/routes/citizen.py:251
 msgid "Report cannot be reopened."
 msgstr ""
 
-#: app/routes/citizen.py:248
+#: app/routes/citizen.py:259
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:253
+#: app/routes/citizen.py:264
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -146,23 +146,23 @@ msgstr ""
 msgid "All Priorities"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
-#: app/templates/submit_report.html:30
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/live_map.html:10 app/templates/submit_report.html:30
 msgid "Critical"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
-#: app/templates/submit_report.html:29
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/live_map.html:11 app/templates/submit_report.html:29
 msgid "High"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
-#: app/templates/submit_report.html:28
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/live_map.html:12 app/templates/submit_report.html:28
 msgid "Medium"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
-#: app/templates/submit_report.html:27
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/live_map.html:13 app/templates/submit_report.html:27
 msgid "Low"
 msgstr ""
 
@@ -217,7 +217,6 @@ msgid "Priority"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
-#: app/templates/base.html:20
 msgid "Status"
 msgstr ""
 
@@ -384,47 +383,55 @@ msgstr ""
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:17
+#: app/templates/base.html:20
 msgid "Dashboard"
 msgstr ""
 
-#: app/templates/base.html:18
-msgid "Reports"
+#: app/templates/base.html:21
+msgid "Report Issue"
 msgstr ""
 
-#: app/templates/base.html:19 app/templates/public_forum.html:5
-msgid "Public Forum"
+#: app/templates/base.html:22
+msgid "Forum"
 msgstr ""
 
-#: app/templates/base.html:21 app/templates/index.html:37
-msgid "Live Map"
+#: app/templates/base.html:23
+msgid "My Status"
 msgstr ""
 
-#: app/templates/base.html:23 app/templates/base.html:28
-msgid "Profile"
+#: app/templates/base.html:24
+msgid "Map"
 msgstr ""
 
 #: app/templates/base.html:26
-msgid "Admin Dashboard"
+msgid "Profile"
+msgstr ""
+
+#: app/templates/base.html:29
+msgid "Admin Panel"
 msgstr ""
 
 #: app/templates/base.html:31
-msgid "Logout"
+msgid "Settings"
 msgstr ""
 
-#: app/templates/base.html:33
-msgid "Login"
+#: app/templates/base.html:36 app/templates/login.html:5
+msgid "Login / Register"
 msgstr ""
 
-#: app/templates/base.html:91
+#: app/templates/base.html:41
+msgid "Toggle Light/Dark Mode"
+msgstr ""
+
+#: app/templates/base.html:95
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
 msgstr ""
 
-#: app/templates/base.html:98
+#: app/templates/base.html:102
 msgid "Report Chat"
 msgstr ""
 
-#: app/templates/base.html:105
+#: app/templates/base.html:109
 msgid "Type a message..."
 msgstr ""
 
@@ -512,27 +519,39 @@ msgstr ""
 msgid "Get Started Now"
 msgstr ""
 
-#: app/templates/index.html:28
-msgid "Powerful Features"
+#: app/templates/index.html:29
+msgid "Public Live Map"
 msgstr ""
 
-#: app/templates/index.html:32
-msgid "Media Reporting"
-msgstr ""
-
-#: app/templates/index.html:33
-msgid "Capture issues with photos and voice notes."
-msgstr ""
-
-#: app/templates/index.html:38
-msgid "Visualize reported issues in real-time."
+#: app/templates/index.html:30
+msgid "Visualize all reported issues across districts in real-time."
 msgstr ""
 
 #: app/templates/index.html:42
+msgid "Powerful Features"
+msgstr ""
+
+#: app/templates/index.html:46
+msgid "Media Reporting"
+msgstr ""
+
+#: app/templates/index.html:47
+msgid "Capture issues with photos and voice notes."
+msgstr ""
+
+#: app/templates/index.html:51
+msgid "Live Map"
+msgstr ""
+
+#: app/templates/index.html:52
+msgid "Visualize reported issues in real-time."
+msgstr ""
+
+#: app/templates/index.html:56
 msgid "Analytics"
 msgstr ""
 
-#: app/templates/index.html:43
+#: app/templates/index.html:57
 msgid "Track resolution status and response times."
 msgstr ""
 
@@ -550,10 +569,6 @@ msgstr ""
 
 #: app/templates/live_map.html:65
 msgid "Status:"
-msgstr ""
-
-#: app/templates/login.html:5
-msgid "Login / Register"
 msgstr ""
 
 #: app/templates/login.html:8
@@ -662,6 +677,10 @@ msgstr ""
 
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
+msgstr ""
+
+#: app/templates/public_forum.html:5
+msgid "Public Forum"
 msgstr ""
 
 #: app/templates/public_forum.html:16

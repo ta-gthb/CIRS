@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 21:01+0530\n"
+"POT-Creation-Date: 2026-06-07 23:02+0530\n"
 "PO-Revision-Date: 2026-06-07 10:15+0530\n"
 "Last-Translator: Gemini CLI\n"
 "Language: ur\n"
@@ -66,11 +66,11 @@ msgstr "اکاؤنٹ غیر فعال ہے یا حذف کر دیا گیا ہے۔"
 msgid "Invalid or expired OTP."
 msgstr "غلط یا میعاد ختم شدہ او ٹی پی (OTP)۔"
 
-#: app/routes/citizen.py:83
+#: app/routes/citizen.py:84
 msgid "Profile updated successfully!"
 msgstr "پروفائل کامیابی سے اپ ڈیٹ ہو گیا!"
 
-#: app/routes/citizen.py:149
+#: app/routes/citizen.py:160
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,53 +78,53 @@ msgstr ""
 "اس جگہ پر اسی طرح کی ایک رپورٹ پہلے سے موجود ہے۔ آپ کا ووٹ (upvote) اس "
 "میں شامل کر دیا گیا ہے۔"
 
-#: app/routes/citizen.py:151
+#: app/routes/citizen.py:162
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "اسی طرح کی ایک رپورٹ پہلے سے موجود ہے اور آپ پہلے ہی اسے ووٹ دے چکے ہیں۔"
 
-#: app/routes/citizen.py:153
+#: app/routes/citizen.py:164
 msgid "You have already submitted a similar report in this location."
 msgstr "آپ اس جگہ پر پہلے ہی اسی طرح کی ایک رپورٹ جمع کروا چکے ہیں۔"
 
-#: app/routes/citizen.py:173
+#: app/routes/citizen.py:184
 msgid "You can only upload up to 3 images."
 msgstr "آپ صرف 3 تصاویر تک اپ لوڈ کر سکتے ہیں۔"
 
-#: app/routes/citizen.py:190
+#: app/routes/citizen.py:201
 msgid "Report submitted successfully!"
 msgstr "رپورٹ کامیابی سے جمع کروا دی گئی!"
 
-#: app/routes/citizen.py:202
+#: app/routes/citizen.py:213
 msgid "You cannot upvote your own report."
 msgstr "آپ اپنی رپورٹ کو ووٹ نہیں دے سکتے۔"
 
-#: app/routes/citizen.py:206
+#: app/routes/citizen.py:217
 msgid "Already upvoted"
 msgstr "پہلے ہی ووٹ دیا جا چکا ہے"
 
-#: app/routes/citizen.py:224
+#: app/routes/citizen.py:235
 msgid "Comment added."
 msgstr "تبصرہ شامل کر دیا گیا۔"
 
-#: app/routes/citizen.py:232
+#: app/routes/citizen.py:243
 msgid "Unauthorized."
 msgstr "غیر مجاز۔"
 
-#: app/routes/citizen.py:238
+#: app/routes/citizen.py:249
 msgid "Report reopened."
 msgstr "رپورٹ دوبارہ کھول دی گئی۔"
 
-#: app/routes/citizen.py:240
+#: app/routes/citizen.py:251
 msgid "Report cannot be reopened."
 msgstr "رپورٹ دوبارہ نہیں کھولی جا سکتی۔"
 
-#: app/routes/citizen.py:248
+#: app/routes/citizen.py:259
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:253
+#: app/routes/citizen.py:264
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -156,23 +156,23 @@ msgstr "ترجیح:"
 msgid "All Priorities"
 msgstr "ترجیح"
 
-#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
-#: app/templates/submit_report.html:30
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/live_map.html:10 app/templates/submit_report.html:30
 msgid "Critical"
 msgstr "شدید"
 
-#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
-#: app/templates/submit_report.html:29
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/live_map.html:11 app/templates/submit_report.html:29
 msgid "High"
 msgstr "زیادہ"
 
-#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
-#: app/templates/submit_report.html:28
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/live_map.html:12 app/templates/submit_report.html:28
 msgid "Medium"
 msgstr "درمیانی"
 
-#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
-#: app/templates/submit_report.html:27
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/live_map.html:13 app/templates/submit_report.html:27
 msgid "Low"
 msgstr "کم"
 
@@ -232,7 +232,6 @@ msgid "Priority"
 msgstr "ترجیح"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
-#: app/templates/base.html:20
 msgid "Status"
 msgstr "حیثیت"
 
@@ -415,47 +414,55 @@ msgstr "تفویض کردہ ضلع:"
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:17
+#: app/templates/base.html:20
 msgid "Dashboard"
 msgstr "ڈیش بورڈ"
 
-#: app/templates/base.html:18
-msgid "Reports"
-msgstr "رپورٹس"
+#: app/templates/base.html:21
+msgid "Report Issue"
+msgstr "مسئلہ رپورٹ کریں"
 
-#: app/templates/base.html:19 app/templates/public_forum.html:5
-msgid "Public Forum"
-msgstr "عوامی فورم"
+#: app/templates/base.html:22
+msgid "Forum"
+msgstr "فورم"
 
-#: app/templates/base.html:21 app/templates/index.html:37
-msgid "Live Map"
-msgstr "براہ راست نقشہ"
+#: app/templates/base.html:23
+msgid "My Status"
+msgstr "میری حیثیت"
 
-#: app/templates/base.html:23 app/templates/base.html:28
+#: app/templates/base.html:24
+msgid "Map"
+msgstr "نقشہ"
+
+#: app/templates/base.html:26
 msgid "Profile"
 msgstr "پروفائل"
 
-#: app/templates/base.html:26
-msgid "Admin Dashboard"
-msgstr "ایڈمن ڈیش بورڈ"
+#: app/templates/base.html:29
+msgid "Admin Panel"
+msgstr "ایڈمن پینل"
 
 #: app/templates/base.html:31
-msgid "Logout"
-msgstr "لاگ آؤٹ"
+msgid "Settings"
+msgstr "سیٹنگز"
 
-#: app/templates/base.html:33
-msgid "Login"
-msgstr "لاگ ان"
+#: app/templates/base.html:36 app/templates/login.html:5
+msgid "Login / Register"
+msgstr "لاگ ان / رجسٹر"
 
-#: app/templates/base.html:91
+#: app/templates/base.html:41
+msgid "Toggle Light/Dark Mode"
+msgstr "لائٹ / ڈارک موڈ تبدیل کریں"
+
+#: app/templates/base.html:95
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
 msgstr "شہری مسائل کی رپورٹنگ کا نظام (CIRS)۔ جملہ حقوق محفوظ ہیں۔"
 
-#: app/templates/base.html:98
+#: app/templates/base.html:102
 msgid "Report Chat"
 msgstr "رپورٹ چیٹ"
 
-#: app/templates/base.html:105
+#: app/templates/base.html:109
 msgid "Type a message..."
 msgstr "پیغام لکھیں..."
 
@@ -545,27 +552,41 @@ msgstr "شہر"
 msgid "Get Started Now"
 msgstr "ابھی شروع کریں"
 
-#: app/templates/index.html:28
-msgid "Powerful Features"
-msgstr "طاقتور خصوصیات"
+#: app/templates/index.html:29
+#, fuzzy
+msgid "Public Live Map"
+msgstr "براہ راست نقشہ دیکھیں"
 
-#: app/templates/index.html:32
-msgid "Media Reporting"
-msgstr "میڈیا رپورٹنگ"
-
-#: app/templates/index.html:33
-msgid "Capture issues with photos and voice notes."
-msgstr "تصاویر اور صوتی نوٹ کے ساتھ مسائل کی نشاندہی کریں۔"
-
-#: app/templates/index.html:38
-msgid "Visualize reported issues in real-time."
+#: app/templates/index.html:30
+#, fuzzy
+msgid "Visualize all reported issues across districts in real-time."
 msgstr "رپورٹ شدہ مسائل کو حقیقی وقت میں دیکھیں۔"
 
 #: app/templates/index.html:42
+msgid "Powerful Features"
+msgstr "طاقتور خصوصیات"
+
+#: app/templates/index.html:46
+msgid "Media Reporting"
+msgstr "میڈیا رپورٹنگ"
+
+#: app/templates/index.html:47
+msgid "Capture issues with photos and voice notes."
+msgstr "تصاویر اور صوتی نوٹ کے ساتھ مسائل کی نشاندہی کریں۔"
+
+#: app/templates/index.html:51
+msgid "Live Map"
+msgstr "براہ راست نقشہ"
+
+#: app/templates/index.html:52
+msgid "Visualize reported issues in real-time."
+msgstr "رپورٹ شدہ مسائل کو حقیقی وقت میں دیکھیں۔"
+
+#: app/templates/index.html:56
 msgid "Analytics"
 msgstr "تجزیات"
 
-#: app/templates/index.html:43
+#: app/templates/index.html:57
 msgid "Track resolution status and response times."
 msgstr "حل کی صورتحال اور ردعمل کے وقت کو ٹریک کریں۔"
 
@@ -584,10 +605,6 @@ msgstr "زمرہ:"
 #: app/templates/live_map.html:65
 msgid "Status:"
 msgstr "حیثیت:"
-
-#: app/templates/login.html:5
-msgid "Login / Register"
-msgstr "لاگ ان / رجسٹر کریں"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
@@ -697,6 +714,10 @@ msgstr "پروفائل اپ ڈیٹ کریں"
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "اکاؤنٹ حذف کرنے کی درخواست منظوری کے لیے زیر التوا ہے۔"
+
+#: app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr "عوامی فورم"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
@@ -1067,4 +1088,16 @@ msgstr "براہ کرم 4 ہندسے درج کریں"
 
 #~ msgid "Failed to fetch report details"
 #~ msgstr "رپورٹ کی تفصیلات حاصل کرنے میں ناکامی"
+
+#~ msgid "Reports"
+#~ msgstr "رپورٹس"
+
+#~ msgid "Admin Dashboard"
+#~ msgstr "ایڈمن ڈیش بورڈ"
+
+#~ msgid "Logout"
+#~ msgstr "لاگ آؤٹ"
+
+#~ msgid "Login"
+#~ msgstr "لاگ ان"
 
