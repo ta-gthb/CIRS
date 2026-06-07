@@ -2,33 +2,33 @@
 
 {% block content %}
 <div class="admin-dashboard">
-    <h2>Admin Officer Dashboard</h2>
-    <p class="text-muted">Welcome, {{ current_user.name }}. Assigned to: {{ current_user.assigned_district }}, {{ current_user.assigned_state }}</p>
+    <h2>{{ _('Admin Officer Dashboard') }}</h2>
+    <p class="text-muted">{{ _('Welcome') }}, {{ current_user.name }}. {{ _('Assigned to:') }} {{ _(current_user.assigned_district) }}, {{ _(current_user.assigned_state) }}</p>
 
     <!-- Filters -->
     <div class="filter-section">
         <form method="GET" class="filter-form">
             <div class="filter-group">
-                <label>Priority:</label>
+                <label>{{ _('Priority:') }}</label>
                 <select name="priority" class="form-control">
-                    <option value="">All Priorities</option>
-                    <option value="critical" {% if priority_filter == 'critical' %}selected{% endif %}>Critical</option>
-                    <option value="high" {% if priority_filter == 'high' %}selected{% endif %}>High</option>
-                    <option value="medium" {% if priority_filter == 'medium' %}selected{% endif %}>Medium</option>
-                    <option value="low" {% if priority_filter == 'low' %}selected{% endif %}>Low</option>
+                    <option value="">{{ _('All Priorities') }}</option>
+                    <option value="critical" {% if priority_filter == 'critical' %}selected{% endif %}>{{ _('Critical') }}</option>
+                    <option value="high" {% if priority_filter == 'high' %}selected{% endif %}>{{ _('High') }}</option>
+                    <option value="medium" {% if priority_filter == 'medium' %}selected{% endif %}>{{ _('Medium') }}</option>
+                    <option value="low" {% if priority_filter == 'low' %}selected{% endif %}>{{ _('Low') }}</option>
                 </select>
             </div>
             <div class="filter-group">
-                <label>From:</label>
+                <label>{{ _('From:') }}</label>
                 <input type="date" name="start_date" class="form-control" value="{{ start_date }}">
             </div>
             <div class="filter-group">
-                <label>To:</label>
+                <label>{{ _('To:') }}</label>
                 <input type="date" name="end_date" class="form-control" value="{{ end_date }}">
             </div>
             <div class="filter-group btn-group">
-                <button type="submit" class="btn btn-primary">Filter</button>
-                <a href="{{ url_for('admin.dashboard') }}" class="btn btn-secondary">Clear</a>
+                <button type="submit" class="btn btn-primary">{{ _('Filter') }}</button>
+                <a href="{{ url_for('admin.dashboard') }}" class="btn btn-secondary">{{ _('Clear') }}</a>
             </div>
         </form>
     </div>
@@ -36,55 +36,55 @@
     <div class="stats-grid">
         <div class="stat-card">
             <h3>{{ total_assigned }}</h3>
-            <p>Total Reports</p>
+            <p>{{ _('Total Reports') }}</p>
         </div>
         <div class="stat-card">
             <h3>{{ pending }}</h3>
-            <p>Pending</p>
+            <p>{{ _('Pending') }}</p>
         </div>
         <div class="stat-card">
             <h3>{{ acknowledged }}</h3>
-            <p>Approved</p>
+            <p>{{ _('Approved') }}</p>
         </div>
         <div class="stat-card">
             <h3>{{ resolved }}</h3>
-            <p>Resolved</p>
+            <p>{{ _('Resolved') }}</p>
         </div>
     </div>
 
     <div class="admin-tasks">
         <div class="task-section">
-            <h3>Manage Reports</h3>
+            <h3>{{ _('Manage Reports') }}</h3>
             {% if reports %}
                 <table class="admin-table">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Citizen ID</th>
-                            <th>Priority</th>
-                            <th>Status</th>
-                            <th>Date</th>
-                            <th>Actions</th>
+                            <th>{{ _('Title') }}</th>
+                            <th>{{ _('Citizen ID') }}</th>
+                            <th>{{ _('Priority') }}</th>
+                            <th>{{ _('Status') }}</th>
+                            <th>{{ _('Date') }}</th>
+                            <th>{{ _('Actions') }}</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for report in reports %}
                             <tr>
                                 <td>{{ report.title }}</td>
-                                <td><code>{{ report.author.citizen_id or 'N/A' }}</code></td>
-                                <td><span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span></td>
-                                <td><span class="status status-{{ report.status }}">{{ report.status|replace('_', ' ')|capitalize }}</span></td>
+                                <td><code>{{ report.author.citizen_id or _('N/A') }}</code></td>
+                                <td><span class="badge badge-{{ report.priority }}">{{ _(report.priority|capitalize) }}</span></td>
+                                <td><span class="status status-{{ report.status }}">{{ _(report.status|replace('_', ' ')|capitalize) }}</span></td>
                                 <td>{{ report.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
                                 <td>
-                                    <button class="btn btn-sm btn-info" onclick="viewReportDetails({{ report.id }})">View</button>
+                                    <button class="btn btn-sm btn-info" onclick="viewReportDetails({{ report.id }})">{{ _('View') }}</button>
                                     {% if report.status == 'pending' %}
-                                        <a href="{{ url_for('admin.approve_report', report_id=report.id) }}" class="btn btn-sm btn-success">Approve</a>
+                                        <a href="{{ url_for('admin.approve_report', report_id=report.id) }}" class="btn btn-sm btn-success">{{ _('Approve') }}</a>
                                     {% endif %}
                                     {% if report.status != 'resolved' %}
-                                        <button class="btn btn-sm btn-primary" onclick="openResolveModal({{ report.id }})">Resolve</button>
+                                        <button class="btn btn-sm btn-primary" onclick="openResolveModal({{ report.id }})">{{ _('Resolve') }}</button>
                                     {% endif %}
                                     {% if report.status in ['acknowledged', 'in_progress'] %}
-                                        <button class="btn btn-sm btn-warning" onclick="openChat({{ report.id }})">Message</button>
+                                        <button class="btn btn-sm btn-warning" onclick="openChat({{ report.id }})">{{ _('Message') }}</button>
                                     {% endif %}
                                 </td>
                             </tr>
@@ -92,20 +92,52 @@
                     </tbody>
                 </table>
             {% else %}
-                <p>No reports found matching filters.</p>
+                <p>{{ _('No reports found matching filters.') }}</p>
             {% endif %}
         </div>
+
+        {% if deletion_requests %}
+        <div class="task-section" style="margin-top: 2rem;">
+            <h3>{{ _('Pending Account Deletion Requests') }}</h3>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>{{ _('Name') }}</th>
+                        <th>{{ _('Citizen ID') }}</th>
+                        <th>{{ _('Phone') }}</th>
+                        <th>{{ _('Actions') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in deletion_requests %}
+                        <tr>
+                            <td>{{ user.name or _('Anonymous') }}</td>
+                            <td><code>{{ user.citizen_id }}</code></td>
+                            <td>{{ user.phone }}</td>
+                            <td>
+                                <a href="{{ url_for('admin.approve_deletion', user_id=user.id) }}" 
+                                   class="btn btn-sm btn-danger"
+                                   onclick="return confirm('{{ _('Are you sure you want to approve this deletion? This action is permanent.') }}')">
+                                    {{ _('Approve Deletion') }}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
     </div>
 </div>
 
 <!-- Details Modal -->
 <div id="detailsModal" class="modal">
     <div class="modal-content large">
-        <h3>Report Details</h3>
+        <h3>{{ _('Report Details') }}</h3>
         <div id="reportInfo"></div>
         <div id="adminMap" style="height: 300px; margin-top: 1rem; border-radius: 8px;"></div>
         <div class="modal-actions">
-            <button type="button" class="btn btn-secondary" onclick="closeDetailsModal()">Close</button>
+            <button type="button" class="btn btn-secondary" onclick="closeDetailsModal()">{{ _('Close') }}</button>
         </div>
     </div>
 </div>
@@ -113,12 +145,12 @@
 <!-- Resolve Modal -->
 <div id="resolveModal" class="modal">
     <div class="modal-content">
-        <h3>Resolve Report</h3>
+        <h3>{{ _('Resolve Report') }}</h3>
         <form id="resolveForm" method="POST">
-            <textarea name="notes" class="form-control" placeholder="Enter resolution notes..." required style="width: 100%; min-height: 100px; margin-bottom: 1rem;"></textarea>
+            <textarea name="notes" class="form-control" placeholder="{{ _('Enter resolution notes...') }}" required style="width: 100%; min-height: 100px; margin-bottom: 1rem;"></textarea>
             <div class="modal-actions">
-                <button type="button" class="btn btn-secondary" onclick="closeResolveModal()">Cancel</button>
-                <button type="submit" class="btn btn-success">Mark as Resolved</button>
+                <button type="button" class="btn btn-secondary" onclick="closeResolveModal()">{{ _('Cancel') }}</button>
+                <button type="submit" class="btn btn-success">{{ _('Mark as Resolved') }}</button>
             </div>
         </form>
     </div>
@@ -167,7 +199,7 @@
                 return;
             }
 
-            const imagesHtml = data.images.map(img => `<img src="${img.url}" alt="Report Image" onclick="window.open('${img.url}', '_blank')">`).join('');
+            const imagesHtml = data.images.map(img => `<img src="${img.url}" alt="{{ _('Report Image') }}" onclick="window.open('${img.url}', '_blank')">`).join('');
             const voiceHtml = data.voice_notes.map(vn => `
                 <div class="audio-item">
                     <audio controls src="${vn.url}"></audio>
@@ -177,22 +209,22 @@
             document.getElementById('reportInfo').innerHTML = `
                 <div class="report-details-grid">
                     <div class="info-column">
-                        <div class="detail-item"><strong>Title</strong> ${data.title}</div>
-                        <div class="detail-item"><strong>Category</strong> ${data.category}</div>
-                        <div class="detail-item"><strong>Priority</strong> <span class="badge badge-${data.priority}">${data.priority.toUpperCase()}</span></div>
-                        <div class="detail-item"><strong>Status</strong> <span class="status status-${data.status}">${data.status.replace('_', ' ').toUpperCase()}</span></div>
-                        <div class="detail-item"><strong>Submitted On</strong> ${data.created_at}</div>
-                        <div class="detail-item"><strong>Description</strong> ${data.description}</div>
-                        <div class="detail-item"><strong>Location</strong> ${data.city}, ${data.state} (${data.latitude.toFixed(6)}, ${data.longitude.toFixed(6)})</div>
+                        <div class="detail-item"><strong>{{ _('Title') }}</strong> ${data.title}</div>
+                        <div class="detail-item"><strong>{{ _('Category') }}</strong> ${data.category}</div>
+                        <div class="detail-item"><strong>{{ _('Priority') }}</strong> <span class="badge badge-${data.priority}">${data.priority.toUpperCase()}</span></div>
+                        <div class="detail-item"><strong>{{ _('Status') }}</strong> <span class="status status-${data.status}">${data.status.replace('_', ' ').toUpperCase()}</span></div>
+                        <div class="detail-item"><strong>{{ _('Submitted On') }}</strong> ${data.created_at}</div>
+                        <div class="detail-item"><strong>{{ _('Description') }}</strong> ${data.description}</div>
+                        <div class="detail-item"><strong>{{ _('Location') }}</strong> ${data.city}, ${data.state} (${data.latitude.toFixed(6)}, ${data.longitude.toFixed(6)})</div>
                     </div>
                     <div class="media-column">
                         <div class="media-section">
-                            <strong>Captured Images</strong>
-                            <div class="image-gallery">${imagesHtml || '<p class="text-muted">No images uploaded</p>'}</div>
+                            <strong>{{ _('Captured Images') }}</strong>
+                            <div class="image-gallery">${imagesHtml || '<p class="text-muted">{{ _('No images uploaded') }}</p>'}</div>
                         </div>
                         <div class="media-section">
-                            <strong>Voice Notes</strong>
-                            <div class="audio-list">${voiceHtml || '<p class="text-muted">No voice notes uploaded</p>'}</div>
+                            <strong>{{ _('Voice Notes') }}</strong>
+                            <div class="audio-list">${voiceHtml || '<p class="text-muted">{{ _('No voice notes uploaded') }}</p>'}</div>
                         </div>
                     </div>
                 </div>
@@ -214,7 +246,7 @@
             }
         } catch (err) {
             console.error(err);
-            alert('Failed to fetch report details');
+            alert("{{ _('Failed to fetch report details') }}");
         }
     }
 

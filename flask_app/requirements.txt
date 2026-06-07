@@ -3,6 +3,7 @@ flask-sqlalchemy
 flask-login
 flask-socketio
 flask-wtf
+flask-babel
 python-dotenv
 cloudinary
 pyjwt

@@ -2,37 +2,37 @@
 
 {% block content %}
 <div class="forum-container">
-    <h2>Public Forum</h2>
+    <h2>{{ _('Public Forum') }}</h2>
     <div class="reports-list">
         {% for report in reports %}
             <div class="report-card">
                 <div class="report-header">
                     <h3>{{ report.title }}</h3>
-                    <span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span>
-                    <span class="status status-{{ report.status }}">{{ report.status|replace('_', ' ')|capitalize }}</span>
+                    <span class="badge badge-{{ report.priority }}">{{ _(report.priority|capitalize) }}</span>
+                    <span class="status status-{{ report.status }}">{{ _(report.status|replace('_', ' ')|capitalize) }}</span>
                 </div>
-                <p class="report-meta">Posted on {{ report.created_at.strftime('%Y-%m-%d') }} by {{ report.author.name or 'Anonymous' }}</p>
+                <p class="report-meta">{{ _('Posted on') }} {{ report.created_at.strftime('%Y-%m-%d') }} {{ _('by') }} {{ report.author.name or _('Anonymous') }}</p>
                 <p class="report-desc">{{ report.description }}</p>
                 
                 <div class="report-actions">
                     <button class="upvote-btn" onclick="upvoteReport({{ report.id }}, this)">
-                        <i class="far fa-thumbs-up"></i> <span class="count">{{ report.upvotes_count }}</span> Upvotes
+                        <i class="far fa-thumbs-up"></i> <span class="count">{{ report.upvotes_count }}</span> {{ _('Upvotes') }}
                     </button>
-                    <span class="comment-count"><i class="far fa-comment"></i> {{ report.comments|length }} Comments</span>
+                    <span class="comment-count"><i class="far fa-comment"></i> {{ report.comments|length }} {{ _('Comments') }}</span>
                 </div>
 
                 <div class="comments-section">
-                    <h4>Comments</h4>
+                    <h4>{{ _('Comments') }}</h4>
                     {% for comment in report.comments %}
                         <div class="comment">
-                            <p><strong>{{ comment.user.name or 'Anonymous' }}:</strong> {{ comment.content }}</p>
+                            <p><strong>{{ comment.user.name or _('Anonymous') }}:</strong> {{ comment.content }}</p>
                             <small class="text-muted">{{ comment.created_at.strftime('%Y-%m-%d %H:%M') }}</small>
                         </div>
                     {% endfor %}
                     
                     <form action="{{ url_for('citizen.add_comment', report_id=report.id) }}" method="POST" class="comment-form">
-                        <input type="text" name="content" placeholder="Add a comment..." required class="form-control">
-                        <button type="submit" class="btn btn-sm btn-primary">Post</button>
+                        <input type="text" name="content" placeholder="{{ _('Add a comment...') }}" required class="form-control">
+                        <button type="submit" class="btn btn-sm btn-primary">{{ _('Post') }}</button>
                     </form>
                 </div>
             </div>

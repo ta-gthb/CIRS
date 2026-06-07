@@ -1,5 +1,6 @@
 from flask import render_template, request, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required, current_user
+from flask_babel import _
 from datetime import datetime, timedelta
 from . import auth_bp
 from ..models.models import User, db
@@ -22,15 +23,15 @@ def login():
                 db.session.add(user)
                 db.session.commit()
             else:
-                flash('Officer not registered. Contact administrator.', 'danger')
+                flash(_('Officer not registered. Contact administrator.'), 'danger')
                 return redirect(url_for('auth.login'))
         
         if user.role != role:
-            flash(f'Number registered as {user.role}. Choose correct role.', 'warning')
+            flash(_('Number registered as %(role)s. Choose correct role.', role=user.role), 'warning')
             return redirect(url_for('auth.login'))
             
         if user.account_deletion_status == 'approved' or not user.is_active:
-            flash('Account is inactive or deleted.', 'danger')
+            flash(_('Account is inactive or deleted.'), 'danger')
             return redirect(url_for('auth.login'))
 
         # Simulation: demo OTP 1234
@@ -57,7 +58,7 @@ def verify_otp():
                 return redirect(url_for('admin.dashboard'))
             return redirect(url_for('citizen.dashboard'))
         else:
-            flash('Invalid or expired OTP.', 'danger')
+            flash(_('Invalid or expired OTP.'), 'danger')
             
     return render_template('verify_otp.html', phone=phone)
 

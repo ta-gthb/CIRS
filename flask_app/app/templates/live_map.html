@@ -2,15 +2,15 @@
 
 {% block content %}
 <div class="live-map-container">
-    <h2>Live Map - Community Issues</h2>
+    <h2>{{ _('Live Map - Community Issues') }}</h2>
     <div id="live-map" style="height: 700px; border-radius: 12px; box-shadow: var(--shadow); border: 4px solid white;"></div>
     
     <div class="map-legend">
-        <h4>Legend</h4>
-        <div class="legend-item"><span class="dot critical"></span> Critical</div>
-        <div class="legend-item"><span class="dot high"></span> High</div>
-        <div class="legend-item"><span class="dot medium"></span> Medium</div>
-        <div class="legend-item"><span class="dot low"></span> Low</div>
+        <h4>{{ _('Legend') }}</h4>
+        <div class="legend-item"><span class="dot critical"></span> {{ _('Critical') }}</div>
+        <div class="legend-item"><span class="dot high"></span> {{ _('High') }}</div>
+        <div class="legend-item"><span class="dot medium"></span> {{ _('Medium') }}</div>
+        <div class="legend-item"><span class="dot low"></span> {{ _('Low') }}</div>
     </div>
 </div>
 
@@ -48,9 +48,9 @@
                     lat: {{ report.latitude }},
                     lng: {{ report.longitude }},
                     title: "{{ report.title|replace('"', '\\"') }}",
-                    category: "{{ report.category }}",
-                    priority: "{{ report.priority }}",
-                    status: "{{ report.status }}"
+                    category: "{{ _(report.category) }}",
+                    priority: "{{ _(report.priority) }}",
+                    status: "{{ _(report.status|replace('_', ' ')) }}"
                 },
                 {% endif %}
             {% endfor %}
@@ -70,9 +70,9 @@
             const popupContent = `
                 <div class="popup-note">
                     <h4>${report.title}</h4>
-                    <p><strong>Category:</strong> ${report.category}</p>
-                    <p><strong>Priority:</strong> <span style="color:${markerColor}; font-weight:bold;">${report.priority.toUpperCase()}</span></p>
-                    <p><strong>Status:</strong> ${report.status.replace('_', ' ')}</p>
+                    <p><strong>{{ _('Category:') }}</strong> ${report.category}</p>
+                    <p><strong>{{ _('Priority:') }}</strong> <span style="color:${markerColor}; font-weight:bold;">${report.priority.toUpperCase()}</span></p>
+                    <p><strong>{{ _('Status:') }}</strong> ${report.status}</p>
                 </div>
             `;
             marker.bindPopup(popupContent);
@@ -85,13 +85,14 @@
     }
 
     function getMarkerColor(priority) {
-        switch(priority.toLowerCase()) {
-            case 'critical': return '#dc3545';
-            case 'high': return '#fd7e14';
-            case 'medium': return '#ffc107';
-            case 'low': return '#6c757d';
-            default: return '#007bff';
-        }
+        // We use the English key for color logic, but we might have translated it in the template
+        // So we should be careful. Actually, it's better to pass the raw priority for color logic.
+        const p = priority.toLowerCase();
+        if (p.includes('critical')) return '#dc3545';
+        if (p.includes('high')) return '#fd7e14';
+        if (p.includes('medium')) return '#ffc107';
+        if (p.includes('low')) return '#6c757d';
+        return '#007bff';
     }
 
     window.onload = initMap;

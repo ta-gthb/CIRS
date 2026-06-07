@@ -1,5 +1,6 @@
 from flask import render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
+from flask_babel import _
 from datetime import datetime, timedelta
 from . import admin_bp
 from ..models.models import Report, User, db
@@ -71,7 +72,7 @@ def profile():
 @login_required
 def report_details(report_id):
     if current_user.role != 'authority':
-        return jsonify({'error': 'Unauthorized'}), 403
+        return jsonify({'error': _('Unauthorized')}), 403
     
     report = Report.query.get_or_404(report_id)
     images = [{'url': img.url} for img in report.images]
@@ -99,7 +100,7 @@ def approve_report(report_id):
     report = Report.query.get_or_404(report_id)
     report.status = 'acknowledged'
     db.session.commit()
-    flash('Report approved.', 'success')
+    flash(_('Report approved.'), 'success')
     return redirect(url_for('admin.dashboard'))
 
 @admin_bp.route('/resolve-report/<int:report_id>', methods=['POST'])
@@ -110,7 +111,7 @@ def resolve_report(report_id):
     report.status = 'resolved'
     report.resolution_notes = notes
     db.session.commit()
-    flash('Report resolved.', 'success')
+    flash(_('Report resolved.'), 'success')
     return redirect(url_for('admin.dashboard'))
 
 @admin_bp.route('/approve-deletion/<int:user_id>')
@@ -120,5 +121,5 @@ def approve_deletion(user_id):
     user.account_deletion_status = 'approved'
     user.is_active = False
     db.session.commit()
-    flash('User deletion approved.', 'success')
+    flash(_('User deletion approved.'), 'success')
     return redirect(url_for('admin.dashboard'))

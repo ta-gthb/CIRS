@@ -2,65 +2,65 @@
 
 {% block content %}
 <div class="report-form-container">
-    <h2>Submit New Report</h2>
+    <h2>{{ _('Submit New Report') }}</h2>
     <form action="{{ url_for('citizen.submit_report') }}" method="POST" enctype="multipart/form-data" id="reportForm">
         <div class="form-group">
-            <label for="title">Issue Title</label>
-            <input type="text" name="title" id="title" class="form-control" required placeholder="Brief title of the issue">
+            <label for="title">{{ _('Issue Title') }}</label>
+            <input type="text" name="title" id="title" class="form-control" required placeholder="{{ _('Brief title of the issue') }}">
         </div>
 
         <div class="form-row">
             <div class="form-group">
-                <label for="category">Category</label>
+                <label for="category">{{ _('Category') }}</label>
                 <select name="category" id="category" class="form-control" required>
-                    <option value="">Select Category</option>
-                    <option value="Roads">Roads & Potholes</option>
-                    <option value="Water">Water Supply</option>
-                    <option value="Electricity">Electricity</option>
-                    <option value="Sanitation">Sanitation & Garbage</option>
-                    <option value="Other">Other</option>
+                    <option value="">{{ _('Select Category') }}</option>
+                    <option value="Roads">{{ _('Roads & Potholes') }}</option>
+                    <option value="Water">{{ _('Water Supply') }}</option>
+                    <option value="Electricity">{{ _('Electricity') }}</option>
+                    <option value="Sanitation">{{ _('Sanitation & Garbage') }}</option>
+                    <option value="Other">{{ _('Other') }}</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="priority">Priority</label>
+                <label for="priority">{{ _('Priority') }}</label>
                 <select name="priority" id="priority" class="form-control" required>
-                    <option value="low">Low</option>
-                    <option value="medium" selected>Medium</option>
-                    <option value="high">High</option>
-                    <option value="critical">Critical</option>
+                    <option value="low">{{ _('Low') }}</option>
+                    <option value="medium" selected>{{ _('Medium') }}</option>
+                    <option value="high">{{ _('High') }}</option>
+                    <option value="critical">{{ _('Critical') }}</option>
                 </select>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="description">Issue Description</label>
-            <textarea name="description" id="description" class="form-control" rows="4" required placeholder="Provide details about the issue..."></textarea>
+            <label for="description">{{ _('Issue Description') }}</label>
+            <textarea name="description" id="description" class="form-control" rows="4" required placeholder="{{ _('Provide details about the issue...') }}"></textarea>
         </div>
 
         <div class="form-group">
-            <label>Location</label>
-            <p class="text-muted">Location will be auto-fetched, but you can adjust it on the map.</p>
+            <label>{{ _('Location') }}</label>
+            <p class="text-muted">{{ _('Location will be auto-fetched, but you can adjust it on the map.') }}</p>
             <div id="map" style="height: 350px; margin-bottom: 1rem; border-radius: 8px;"></div>
             <div class="form-row">
                 <input type="hidden" name="latitude" id="latitude">
                 <input type="hidden" name="longitude" id="longitude">
                 <div class="form-group">
-                    <label for="city">City/District</label>
+                    <label for="city">{{ _('City/District') }}</label>
                     <input type="text" name="city" id="city" class="form-control" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="state">State</label>
+                    <label for="state">{{ _('State') }}</label>
                     <input type="text" name="state" id="state" class="form-control" readonly>
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <label>Upload Images (Max 3, Max 5MB each)</label>
+            <label>{{ _('Upload Images (Max 3, Max 5MB each)') }}</label>
             <div class="image-actions" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                <button type="button" id="openCamera" class="btn btn-secondary"><i class="fas fa-camera"></i> Live Geo-Camera</button>
+                <button type="button" id="openCamera" class="btn btn-secondary"><i class="fas fa-camera"></i> {{ _('Live Geo-Camera') }}</button>
                 <label class="btn btn-info" style="margin: 0; cursor: pointer;">
-                    <i class="fas fa-upload"></i> Upload Files
+                    <i class="fas fa-upload"></i> {{ _('Upload Files') }}
                     <input type="file" id="imageInput" multiple accept="image/*" style="display: none;">
                 </label>
             </div>
@@ -69,9 +69,9 @@
             <div id="cameraContainer" style="display: none; flex-direction: column; align-items: center; gap: 1rem; margin-bottom: 1rem; background: #000; padding: 1rem; border-radius: 8px;">
                 <video id="video" width="100%" height="auto" autoplay playsinline style="border-radius: 4px;"></video>
                 <div class="camera-btns">
-                    <button type="button" id="captureBtn" class="btn btn-success">Capture Photo</button>
-                    <button type="button" id="switchCamera" class="btn btn-info"><i class="fas fa-sync"></i> Switch</button>
-                    <button type="button" id="closeCamera" class="btn btn-danger">Close Camera</button>
+                    <button type="button" id="captureBtn" class="btn btn-success">{{ _('Capture Photo') }}</button>
+                    <button type="button" id="switchCamera" class="btn btn-info"><i class="fas fa-sync"></i> {{ _('Switch') }}</button>
+                    <button type="button" id="closeCamera" class="btn btn-danger">{{ _('Close Camera') }}</button>
                 </div>
                 <canvas id="canvas" style="display: none;"></canvas>
             </div>
@@ -82,21 +82,21 @@
         </div>
 
         <div class="form-group">
-            <label>Voice Note</label>
+            <label>{{ _('Voice Note') }}</label>
             <div class="voice-controls">
-                <button type="button" id="startRecord" class="btn btn-secondary"><i class="fas fa-microphone"></i> Record</button>
-                <button type="button" id="stopRecord" class="btn btn-danger" disabled><i class="fas fa-stop"></i> Stop</button>
+                <button type="button" id="startRecord" class="btn btn-secondary"><i class="fas fa-microphone"></i> {{ _('Record') }}</button>
+                <button type="button" id="stopRecord" class="btn btn-danger" disabled><i class="fas fa-stop"></i> {{ _('Stop') }}</button>
                 <div id="recordingStatus" class="recording-status"></div>
             </div>
-            <div class="or-separator">OR upload file</div>
+            <div class="or-separator">{{ _('OR upload file') }}</div>
             <input type="file" name="voice" id="voiceFile" class="form-control" accept="audio/*">
             <div id="audio-preview-container" class="preview-container" style="display:none; margin-top: 1rem;">
                 <audio id="audioPlayback" controls></audio>
-                <button type="button" id="removeAudio" class="btn btn-sm btn-danger">Remove</button>
+                <button type="button" id="removeAudio" class="btn btn-sm btn-danger">{{ _('Remove') }}</button>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Report</button>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">{{ _('Submit Report') }}</button>
     </form>
 </div>
 
@@ -217,7 +217,7 @@
                 if (file.size <= 5 * 1024 * 1024) {
                     capturedFiles.push(file);
                 } else {
-                    alert(`File ${file.name} exceeds 5MB limit`);
+                    alert("{{ _('File') }} " + file.name + " {{ _('exceeds 5MB limit') }}");
                 }
             }
         });
@@ -238,7 +238,7 @@
 
     openCameraBtn.onclick = async () => {
         if (capturedFiles.length >= 3) {
-            alert('Maximum 3 images reached');
+            alert("{{ _('Maximum 3 images reached') }}");
             return;
         }
         startCamera();
@@ -262,7 +262,7 @@
             cameraContainer.style.display = 'flex';
             openCameraBtn.disabled = true;
         } catch (err) {
-            alert('Camera access denied or not available');
+            alert("{{ _('Camera access denied or not available') }}");
             console.error(err);
         }
     }
@@ -278,7 +278,7 @@
 
     captureBtn.onclick = () => {
         if (capturedFiles.length >= 3) {
-            alert('Maximum 3 images reached');
+            alert("{{ _('Maximum 3 images reached') }}");
             closeCameraBtn.click();
             return;
         }
@@ -320,7 +320,7 @@
         const line2 = `Location: ${latStr}, ${lngStr}`;
         const city = document.getElementById('city').value;
         const state = document.getElementById('state').value;
-        const line3 = (city && state) ? `${city}, ${state}` : (city || state || "Location data pending...");
+        const line3 = (city && state) ? `${city}, ${state}` : (city || state || "{{ _('Location data pending...') }}");
 
         ctx.fillText(line1, padding, canvas.height - boxHeight + 10);
         ctx.font = `${fontSize * 0.9}px Arial`;
@@ -340,7 +340,7 @@
     // Final Submission Logic
     form.onsubmit = (e) => {
         if (capturedFiles.length === 0) {
-            alert('Please upload or capture at least one image of the issue.');
+            alert("{{ _('Please upload or capture at least one image of the issue.') }}");
             e.preventDefault();
             return;
         }
@@ -379,7 +379,7 @@
             audioChunks = [];
             startBtn.disabled = true;
             stopBtn.disabled = false;
-            document.getElementById('recordingStatus').innerText = 'Recording...';
+            document.getElementById('recordingStatus').innerText = "{{ _('Recording...') }}";
             
             mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data);
             mediaRecorder.onstop = () => {
@@ -394,7 +394,7 @@
                 voiceFile.files = dataTransfer.files;
             };
         } catch (err) {
-            alert('Microphone access denied');
+            alert("{{ _('Microphone access denied') }}");
         }
     };
 

@@ -1,0 +1,842 @@
+# Kashmiri translations for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-06-07 09:41+0530\n"
+"PO-Revision-Date: 2026-06-07 10:45+0530\n"
+"Last-Translator: Gemini CLI <email@address>\n"
+"Language: ks\n"
+"Language-Team: ks <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/routes/admin.py:75
+msgid "Unauthorized"
+msgstr "غأر مجاز"
+
+#: app/routes/admin.py:103
+msgid "Report approved."
+msgstr "رپوٹ منظور کرنہ آم۔"
+
+#: app/routes/admin.py:114
+msgid "Report resolved."
+msgstr "رپوٹ حل کرنہ آم۔"
+
+#: app/routes/admin.py:124
+msgid "User deletion approved."
+msgstr "صارف ختم کرنٕچ منظوری مِلِ۔"
+
+#: app/routes/auth.py:26
+msgid "Officer not registered. Contact administrator."
+msgstr "افسر رجسٹرڈ چھُ نہ۔ ایڈمنسٹریٹرس سٟتؠ رابطہ کٔرِو۔"
+
+#: app/routes/auth.py:30
+#, python-format
+msgid "Number registered as %(role)s. Choose correct role."
+msgstr "نمبر چھُ %(role)s پٲٹھؠ رجسٹرڈ۔ صحیح رول چُنِو۔"
+
+#: app/routes/auth.py:34
+msgid "Account is inactive or deleted."
+msgstr "اکاؤنٹ چھُ غیر فعال یا ختم کرنہ آمُت۔"
+
+#: app/routes/auth.py:61
+msgid "Invalid or expired OTP."
+msgstr "غلط یا میعاد ختم گژھمت او ٹی پی۔"
+
+#: app/routes/citizen.py:83
+msgid "Profile updated successfully!"
+msgstr "پروفائل کامیابی سان اپڈیٹ کرنہ آم!"
+
+#: app/routes/citizen.py:116
+msgid ""
+"A similar report already exists in this location. Your upvote has been "
+"added to it."
+msgstr "یتھ جایہِ چھُ اکھ یتھوئی رپورٹ گوڈے موجود۔ تُہند ووٹ یتھ منز شٲمل کرنہ آم۔"
+
+#: app/routes/citizen.py:118
+msgid "A similar report already exists and you have already upvoted it."
+msgstr "اکھ یتھوئی رپورٹ چھُ گوڈے موجود تہِ تُہہ چھُوہ یتھ گوڈے ووٹ کؤرمُت۔"
+
+#: app/routes/citizen.py:120
+msgid "You have already submitted a similar report in this location."
+msgstr "تُہہ چھُوہ یتھ جایہِ گوڈے اکھ یتھوئی رپورٹ جمع کؤرمُت। "
+
+#: app/routes/citizen.py:140
+msgid "You can only upload up to 3 images."
+msgstr "تُہہ ہیکِو صرف ۳ تصویر اپلوڈ کٔرِتھ۔"
+
+#: app/routes/citizen.py:157
+msgid "Report submitted successfully!"
+msgstr "رپوٹ کامیابی سان جمع کرنہ آم!"
+
+#: app/routes/citizen.py:169
+msgid "You cannot upvote your own report."
+msgstr "تُہہ ہیکِو نہ پنیِس رپورٹَس ووٹ دِتھ۔"
+
+#: app/routes/citizen.py:173
+msgid "Already upvoted"
+msgstr "گوڈے ووٹ کؤرمُت"
+
+#: app/routes/citizen.py:191
+msgid "Comment added."
+msgstr "تبصرہ شٲمل کرنہ آم۔"
+
+#: app/routes/citizen.py:199
+msgid "Unauthorized."
+msgstr "غأر مجاز۔"
+
+#: app/routes/citizen.py:205
+msgid "Report reopened."
+msgstr "رپوٹ دوبارہ کھولنہ آم۔"
+
+#: app/routes/citizen.py:207
+msgid "Report cannot be reopened."
+msgstr "رپوٹ دوبارہ کھولنہ ییہِ نہ۔"
+
+#: app/routes/citizen.py:216
+msgid "Deletion request submitted to your assigned officer."
+msgstr "اکاؤنٹ ختم کرنٕچ درخواست تُہندس مقرر کردہ افسرس نش جمع کرنہ آمٕژ۔"
+
+#: app/templates/admin_dashboard.html:5
+msgid "Admin Officer Dashboard"
+msgstr "ایڈمن افسر ڈیش بورڈ"
+
+#: app/templates/admin_dashboard.html:6
+msgid "Welcome"
+msgstr "خوش آمدید"
+
+#: app/templates/admin_dashboard.html:6
+msgid "Assigned to:"
+msgstr "مقرر کردہ:"
+
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:74
+#: app/templates/status.html:41
+msgid "Priority:"
+msgstr "ترجیح:"
+
+#: app/templates/admin_dashboard.html:14
+msgid "All Priorities"
+msgstr "سٲری ترجیحہِ"
+
+#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
+#: app/templates/submit_report.html:30
+msgid "Critical"
+msgstr "انتہٲئی اہم"
+
+#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
+#: app/templates/submit_report.html:29
+msgid "High"
+msgstr "زیادہ"
+
+#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
+#: app/templates/submit_report.html:28
+msgid "Medium"
+msgstr "درمیانہ"
+
+#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
+#: app/templates/submit_report.html:27
+msgid "Low"
+msgstr "کم"
+
+#: app/templates/admin_dashboard.html:22 app/templates/status.html:11
+msgid "From:"
+msgstr "منز:"
+
+#: app/templates/admin_dashboard.html:26 app/templates/status.html:15
+msgid "To:"
+msgstr "تام:"
+
+#: app/templates/admin_dashboard.html:30 app/templates/status.html:19
+msgid "Filter"
+msgstr "فلٹر"
+
+#: app/templates/admin_dashboard.html:31 app/templates/status.html:20
+msgid "Clear"
+msgstr "صاف کٔرِو"
+
+#: app/templates/admin_dashboard.html:39
+msgid "Total Reports"
+msgstr "کل رپورٹہِ"
+
+#: app/templates/admin_dashboard.html:43
+msgid "Pending"
+msgstr "زیر التواء"
+
+#: app/templates/admin_dashboard.html:47
+msgid "Approved"
+msgstr "منظور شدہ"
+
+#: app/templates/admin_dashboard.html:51
+msgid "Resolved"
+msgstr "حل شدہ"
+
+#: app/templates/admin_dashboard.html:57
+msgid "Manage Reports"
+msgstr "رپورٹن ہنٛد انتظام کٔرِو"
+
+#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:180
+msgid "Title"
+msgstr "عنوان"
+
+#: app/templates/admin_dashboard.html:63 app/templates/profile.html:14
+msgid "Citizen ID"
+msgstr "شہری آئی ڈی"
+
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:182
+#: app/templates/submit_report.html:25
+msgid "Priority"
+msgstr "ترجیح"
+
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:183
+#: app/templates/base.html:20
+msgid "Status"
+msgstr "حالت"
+
+#: app/templates/admin_dashboard.html:66
+msgid "Date"
+msgstr "تٲریخ"
+
+#: app/templates/admin_dashboard.html:67
+msgid "Actions"
+msgstr "کاروائی"
+
+#: app/templates/admin_dashboard.html:74
+msgid "N/A"
+msgstr "دستیاب نہ"
+
+#: app/templates/admin_dashboard.html:79
+msgid "View"
+msgstr "وُچھِو"
+
+#: app/templates/admin_dashboard.html:81
+msgid "Approve"
+msgstr "منظور کٔرِو"
+
+#: app/templates/admin_dashboard.html:84
+msgid "Resolve"
+msgstr "حل کٔرِو"
+
+#: app/templates/admin_dashboard.html:87 app/templates/status.html:53
+msgid "Message"
+msgstr "پیغام"
+
+#: app/templates/admin_dashboard.html:95
+msgid "No reports found matching filters."
+msgstr "فلٹرس سٟتؠ مِلان کانہہ رپورٹ لَبنہ آم نہ।"
+
+#: app/templates/admin_dashboard.html:104
+msgid "Report Details"
+msgstr "رپورٹ تفصیلات"
+
+#: app/templates/admin_dashboard.html:108
+msgid "Close"
+msgstr "بند کٔرِو"
+
+#: app/templates/admin_dashboard.html:116
+msgid "Resolve Report"
+msgstr "رپورٹ حل کٔرِو"
+
+#: app/templates/admin_dashboard.html:118
+msgid "Enter resolution notes..."
+msgstr "حل کرنٕچ نوٹ درج کٔرِو..."
+
+#: app/templates/admin_dashboard.html:120
+msgid "Cancel"
+msgstr "منسوخ کٔرِو"
+
+#: app/templates/admin_dashboard.html:121
+msgid "Mark as Resolved"
+msgstr "حل شدہ قرار دِیِو"
+
+#: app/templates/admin_dashboard.html:170 app/templates/status.html:73
+msgid "Report Image"
+msgstr "رپورٹ تصویر"
+
+#: app/templates/admin_dashboard.html:181 app/templates/submit_report.html:14
+msgid "Category"
+msgstr "زمرہ"
+
+#: app/templates/admin_dashboard.html:184
+msgid "Submitted On"
+msgstr "جمع کرنہ آمُت تٲریخ"
+
+#: app/templates/admin_dashboard.html:185
+msgid "Description"
+msgstr "تفصیل"
+
+#: app/templates/admin_dashboard.html:186 app/templates/submit_report.html:41
+msgid "Location"
+msgstr "جگہ"
+
+#: app/templates/admin_dashboard.html:190
+msgid "Captured Images"
+msgstr "تھول مژہ تصویرہِ"
+
+#: app/templates/admin_dashboard.html:191
+msgid "No images uploaded"
+msgstr "کانہہ تصویر اپلوڈ کرنہ آمٕژ نہ"
+
+#: app/templates/admin_dashboard.html:194
+msgid "Voice Notes"
+msgstr "آواز نوٹ"
+
+#: app/templates/admin_dashboard.html:195
+msgid "No voice notes uploaded"
+msgstr "کانہہ آواز نوٹ اپلوڈ کرنہ آمُت نہ"
+
+#: app/templates/admin_dashboard.html:217
+msgid "Failed to fetch report details"
+msgstr "رپورٹ تفصیلات حٲصل کرنس منز ناکامی"
+
+#: app/templates/admin_profile.html:5
+msgid "Admin Officer Profile"
+msgstr "ایڈمن افسر پروفائل"
+
+#: app/templates/admin_profile.html:7
+msgid "Name:"
+msgstr "ناو:"
+
+#: app/templates/admin_profile.html:8
+msgid "Phone:"
+msgstr "فون:"
+
+#: app/templates/admin_profile.html:9
+msgid "Role:"
+msgstr "کردار:"
+
+#: app/templates/admin_profile.html:9
+msgid "Authority / Admin Officer"
+msgstr "اتھارٹی / ایڈمن افسر"
+
+#: app/templates/admin_profile.html:10
+msgid "Assigned State:"
+msgstr "مقرر کردہ ریاست:"
+
+#: app/templates/admin_profile.html:11
+msgid "Assigned District:"
+msgstr "مقرر کردہ ضلع:"
+
+#: app/templates/base.html:17
+msgid "Dashboard"
+msgstr "ڈیش بورڈ"
+
+#: app/templates/base.html:18
+msgid "Reports"
+msgstr "رپورٹہِ"
+
+#: app/templates/base.html:19 app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr "عوامی فورم"
+
+#: app/templates/base.html:21 app/templates/index.html:37
+msgid "Live Map"
+msgstr "لائیو نقشہ"
+
+#: app/templates/base.html:23 app/templates/base.html:28
+msgid "Profile"
+msgstr "پروفائل"
+
+#: app/templates/base.html:26
+msgid "Admin Dashboard"
+msgstr "ایڈمن ڈیش بورڈ"
+
+#: app/templates/base.html:31
+msgid "Logout"
+msgstr "لاگ آؤٹ"
+
+#: app/templates/base.html:33
+msgid "Login"
+msgstr "لاگ ان"
+
+#: app/templates/base.html:91
+msgid "Civic Issue Reporting System (CIRS). All rights reserved."
+msgstr "سوک ایشو رپورٹنگ سسٹم (CIRS)۔ جملہ حقوق محفوظ ہن।"
+
+#: app/templates/base.html:98
+msgid "Report Chat"
+msgstr "رپورٹ چیٹ"
+
+#: app/templates/base.html:105
+msgid "Type a message..."
+msgstr "پیغام ٹائپ کٔرِو..."
+
+#: app/templates/citizen_dashboard.html:6
+msgid "Welcome to Your Dashboard"
+msgstr "تُہندس ڈیش بورڈس منز خوش آمدید"
+
+#: app/templates/citizen_dashboard.html:7
+msgid "Your portal for reporting and tracking civic issues in your community."
+msgstr "تُہنٛزِ برادری منز شہری مسائل رپورٹ تہِ ٹریک کرنُک پورٹل।"
+
+#: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
+msgid "Submit New Report"
+msgstr "نو رپورٹ جمع کٔرِو"
+
+#: app/templates/citizen_dashboard.html:17
+msgid "Trending/Nearby Issues"
+msgstr "چلان ولِہ / نزدیگی مسائل"
+
+#: app/templates/citizen_dashboard.html:18
+msgid "High-priority and trending reports in the portal."
+msgstr "پورٹل منز اہم تہِ چلان ولِہ رپورٹہِ।"
+
+#: app/templates/citizen_dashboard.html:30
+msgid "General"
+msgstr "عام"
+
+#: app/templates/citizen_dashboard.html:31
+msgid "Upvote"
+msgstr "ووٹ دِیِو"
+
+#: app/templates/citizen_dashboard.html:36
+msgid "No issues reported yet."
+msgstr "وونؠ تام چھُ نہ کانہہ مسئلہ رپورٹ کرنہ آمُت।"
+
+#: app/templates/citizen_dashboard.html:40
+msgid "View All in Public Forum"
+msgstr "عوامی فورمس منز سٲری وُچھِو"
+
+#: app/templates/citizen_dashboard.html:45
+msgid "Quick Links"
+msgstr "جلدی لنک"
+
+#: app/templates/citizen_dashboard.html:49
+msgid "Track My Reports"
+msgstr "میأنؠ رپورٹہِ ٹریک کٔرِو"
+
+#: app/templates/citizen_dashboard.html:53
+msgid "View Live Map"
+msgstr "لائیو نقشہ وُچھِو"
+
+#: app/templates/citizen_dashboard.html:57
+msgid "Manage Profile"
+msgstr "پروفائل اپڈیٹ کٔرِو"
+
+#: app/templates/citizen_dashboard.html:98
+msgid "Upvoted"
+msgstr "ووٹ دِتھ"
+
+#: app/templates/index.html:5
+msgid "Welcome to CIRS !"
+msgstr "CIRS منز خوش آمدید!"
+
+#: app/templates/index.html:6
+msgid "--Report today for a better tomorrow"
+msgstr "--بہتر کل خٲطرہ آج رپورٹ کٔرِو"
+
+#: app/templates/index.html:7
+msgid "Report, Track, and Resolve Local Issues Together"
+msgstr "مقامی مسائل ملِتھ رپورٹ کٔرِو، ٹریک کٔرِو تہِ حل کٔرِو"
+
+#: app/templates/index.html:11
+msgid "Issues Resolved"
+msgstr "حل شدہ مسائل"
+
+#: app/templates/index.html:15
+msgid "Active Users"
+msgstr "فعال صارفین"
+
+#: app/templates/index.html:19
+msgid "Cities"
+msgstr "شہر"
+
+#: app/templates/index.html:23
+msgid "Get Started Now"
+msgstr "وونؠ شروعات کٔرِو"
+
+#: app/templates/index.html:28
+msgid "Powerful Features"
+msgstr "طاقتور خصوصیات"
+
+#: app/templates/index.html:32
+msgid "Media Reporting"
+msgstr "میڈیا رپورٹنگ"
+
+#: app/templates/index.html:33
+msgid "Capture issues with photos and voice notes."
+msgstr "تصویرن تہِ آواز نوٹس سٟتؠ مسائل ریکارڈ کٔرِو।"
+
+#: app/templates/index.html:38
+msgid "Visualize reported issues in real-time."
+msgstr "رپورٹ کردہ مسائل لائیو وُچھِو।"
+
+#: app/templates/index.html:42
+msgid "Analytics"
+msgstr "تجزیات"
+
+#: app/templates/index.html:43
+msgid "Track resolution status and response times."
+msgstr "حل کرنٕچ حالت تہِ جواب دِیَنُک وقت ٹریک کٔرِو।"
+
+#: app/templates/live_map.html:5
+msgid "Live Map - Community Issues"
+msgstr "لائیو نقشہ - عوامی مسائل"
+
+#: app/templates/live_map.html:9
+msgid "Legend"
+msgstr "اشارات"
+
+#: app/templates/live_map.html:73 app/templates/status.html:40
+msgid "Category:"
+msgstr "زمرہ:"
+
+#: app/templates/live_map.html:75
+msgid "Status:"
+msgstr "حالت:"
+
+#: app/templates/login.html:5
+msgid "Login / Register"
+msgstr "لاگ ان / رجسٹریشن"
+
+#: app/templates/login.html:8
+msgid "Mobile Number"
+msgstr "موبائل نمبر"
+
+#: app/templates/login.html:17
+msgid "I am a:"
+msgstr "بہٕ چھُس اکھ:"
+
+#: app/templates/login.html:20
+msgid "Citizen"
+msgstr "شہری"
+
+#: app/templates/login.html:22
+msgid "Officer"
+msgstr "افسر"
+
+#: app/templates/login.html:25
+msgid "Send OTP"
+msgstr "او ٹی پی سوزِو"
+
+#: app/templates/login.html:27
+msgid "Demo OTP: 1234"
+msgstr "ڈیمو او ٹی پی: ۱۲۳۴"
+
+#: app/templates/login.html:66
+msgid "Please enter 10 digits"
+msgstr "مہربانی کٔرِتھ ۱۰ ہندسہ درج کٔرِو"
+
+#: app/templates/profile.html:5
+msgid "User Profile"
+msgstr "صارف پروفائل"
+
+#: app/templates/profile.html:9
+msgid "Full Name"
+msgstr "پورا ناو"
+
+#: app/templates/profile.html:10
+msgid "Enter your full name"
+msgstr "پَنُن پورا ناو درج کٔرِو"
+
+#: app/templates/profile.html:15
+msgid "Not Assigned"
+msgstr "مقرر نہ"
+
+#: app/templates/profile.html:19
+msgid "Phone Number"
+msgstr "فون نمبر"
+
+#: app/templates/profile.html:21
+msgid "Phone number cannot be changed."
+msgstr "فون نمبر بدلنہ ییہِ نہ।"
+
+#: app/templates/profile.html:25
+msgid "Address"
+msgstr "پتہ"
+
+#: app/templates/profile.html:26
+msgid "Enter your address"
+msgstr "پَنُن پتہ درج کٔرِو"
+
+#: app/templates/profile.html:31 app/templates/submit_report.html:52
+msgid "State"
+msgstr "ریاست"
+
+#: app/templates/profile.html:33
+msgid "Select State"
+msgstr "ریاست چُنِو"
+
+#: app/templates/profile.html:37
+msgid "District"
+msgstr "ضلع"
+
+#: app/templates/profile.html:39 app/templates/profile.html:133
+msgid "Select District"
+msgstr "ضلع چُنِو"
+
+#: app/templates/profile.html:44
+msgid "Update Profile"
+msgstr "پروفائل اپڈیٹ کٔرِو"
+
+#: app/templates/profile.html:49
+msgid "Account Management"
+msgstr "اکاؤنٹ انتظام"
+
+#: app/templates/profile.html:51
+msgid ""
+"Are you sure you want to request account deletion? This will be reviewed "
+"by your assigned officer."
+msgstr "کیا تُہہ چھُوہ پکا اکاؤنٹ ختم کرنٕچ درخواست کَرُن یژھان؟ یتھ کَرِ تُہُند مقرر کردہ افسر غور۔"
+
+#: app/templates/profile.html:52
+msgid "Request Account Deletion"
+msgstr "اکاؤنٹ ختم کرنٕچ درخواست کٔرِو"
+
+#: app/templates/profile.html:55
+msgid "Account deletion request is pending approval."
+msgstr "اکاؤنٹ ختم کرنٕچ درخواست منظوری خٲطرہ زیر التواء چھِ۔"
+
+#: app/templates/public_forum.html:14
+msgid "Posted on"
+msgstr "پوسٹ کرنہ آمُت تٲریخ"
+
+#: app/templates/public_forum.html:14
+msgid "by"
+msgstr "ذریعہ"
+
+#: app/templates/public_forum.html:14 app/templates/public_forum.html:28
+msgid "Anonymous"
+msgstr "گمنام"
+
+#: app/templates/public_forum.html:19
+msgid "Upvotes"
+msgstr "ووٹ"
+
+#: app/templates/public_forum.html:21 app/templates/public_forum.html:25
+msgid "Comments"
+msgstr "تبصرہ"
+
+#: app/templates/public_forum.html:34
+msgid "Add a comment..."
+msgstr "تبصرہ شٲمل کٔرِو..."
+
+#: app/templates/public_forum.html:35
+msgid "Post"
+msgstr "پوسٹ کٔرِو"
+
+#: app/templates/status.html:5
+msgid "My Submitted Reports"
+msgstr "میأنؠ جمع کردہ رپورٹہِ"
+
+#: app/templates/status.html:27
+msgid "No reports found matching the criteria."
+msgstr "میعارس سٟتؠ مِلان کانہہ رپورٹ لَبنہ آم نہ।"
+
+#: app/templates/status.html:42
+msgid "Location:"
+msgstr "جگہ:"
+
+#: app/templates/status.html:42
+msgid "Unknown"
+msgstr "نامعلوم"
+
+#: app/templates/status.html:43
+msgid "Upvotes:"
+msgstr "ووٹ:"
+
+#: app/templates/status.html:49
+msgid "View Marked Location"
+msgstr "نشان زدہ جگہ وُچھِو"
+
+#: app/templates/status.html:57
+msgid "Are you sure you want to reopen this report?"
+msgstr "کیا تُہہ چھُوہ پکا یہِ رپورٹ دوبارہ کھولُن یژھان؟"
+
+#: app/templates/status.html:59
+msgid "Reopen"
+msgstr "دوبارہ کھولِو"
+
+#: app/templates/status.html:70
+msgid "Images:"
+msgstr "تصویرہِ:"
+
+#: app/templates/status.html:81
+msgid "Voice Note:"
+msgstr "آواز نوٹ:"
+
+#: app/templates/status.html:85
+msgid "Your browser does not support the audio element."
+msgstr "تُہُند براؤزر چھُ نہ آڈیو سپورٹ کَران۔"
+
+#: app/templates/submit_report.html:8
+msgid "Issue Title"
+msgstr "مسئلہ عنوان"
+
+#: app/templates/submit_report.html:9
+msgid "Brief title of the issue"
+msgstr "مسئلہ کُس مختصر عنوان"
+
+#: app/templates/submit_report.html:16
+msgid "Select Category"
+msgstr "زمرہ چُنِو"
+
+#: app/templates/submit_report.html:17
+msgid "Roads & Potholes"
+msgstr "سڑک تہِ کھاڈِ"
+
+#: app/templates/submit_report.html:18
+msgid "Water Supply"
+msgstr "آب رسانی"
+
+#: app/templates/submit_report.html:19
+msgid "Electricity"
+msgstr "بجلی"
+
+#: app/templates/submit_report.html:20
+msgid "Sanitation & Garbage"
+msgstr "صفائی تہِ کچرہ"
+
+#: app/templates/submit_report.html:21
+msgid "Other"
+msgstr "باقٕے"
+
+#: app/templates/submit_report.html:36
+msgid "Issue Description"
+msgstr "مسئلہ تفصیل"
+
+#: app/templates/submit_report.html:37
+msgid "Provide details about the issue..."
+msgstr "مسئلہ متعلق تفصیل دِیِو..."
+
+#: app/templates/submit_report.html:42
+msgid "Location will be auto-fetched, but you can adjust it on the map."
+msgstr "جگہ ہیکہِ خود بخود حٲصل کرنہ یِتھ، مگر تُہہ ہیکِو نقشس پؠٹھ یہِ ٹھیک کٔرِتھ।"
+
+#: app/templates/submit_report.html:48
+msgid "City/District"
+msgstr "شہر/ضلع"
+
+#: app/templates/submit_report.html:59
+msgid "Upload Images (Max 3, Max 5MB each)"
+msgstr "تصویرہِ اپلوڈ کٔرِو (زیادہ سے زیادہ ۳، ہر اکھ ۵ ایم بی)"
+
+#: app/templates/submit_report.html:61
+msgid "Live Geo-Camera"
+msgstr "لائیو جیو کیمرہ"
+
+#: app/templates/submit_report.html:63
+msgid "Upload Files"
+msgstr "فائل اپلوڈ کٔرِو"
+
+#: app/templates/submit_report.html:72
+msgid "Capture Photo"
+msgstr "فوٹو کھینچِو"
+
+#: app/templates/submit_report.html:73
+msgid "Switch"
+msgstr "تبدیل کٔرِو"
+
+#: app/templates/submit_report.html:74
+msgid "Close Camera"
+msgstr "کیمرہ بند کٔرِو"
+
+#: app/templates/submit_report.html:85
+msgid "Voice Note"
+msgstr "آواز نوٹ"
+
+#: app/templates/submit_report.html:87
+msgid "Record"
+msgstr "ریکارڈ کٔرِو"
+
+#: app/templates/submit_report.html:88
+msgid "Stop"
+msgstr "روکِو"
+
+#: app/templates/submit_report.html:91
+msgid "OR upload file"
+msgstr "یا فائل اپلوڈ کٔرِو"
+
+#: app/templates/submit_report.html:95
+msgid "Remove"
+msgstr "ہٹاوِو"
+
+#: app/templates/submit_report.html:99
+msgid "Submit Report"
+msgstr "رپورٹ جمع کٔرِو"
+
+#: app/templates/submit_report.html:220
+msgid "File"
+msgstr "فائل"
+
+#: app/templates/submit_report.html:220
+msgid "exceeds 5MB limit"
+msgstr "۵ ایم بی حد کھوتہٕ زیادہ چھُ"
+
+#: app/templates/submit_report.html:241 app/templates/submit_report.html:281
+msgid "Maximum 3 images reached"
+msgstr "۳ تصویرہِ ہنٛز حد مکمل گٔئی"
+
+#: app/templates/submit_report.html:265
+msgid "Camera access denied or not available"
+msgstr "کیمرہ رسائی مسترد یا دستیاب نہ"
+
+#: app/templates/submit_report.html:323
+msgid "Location data pending..."
+msgstr "جگہ ہنٛد ڈیٹا زیر التواء چھُ..."
+
+#: app/templates/submit_report.html:343
+msgid "Please upload or capture at least one image of the issue."
+msgstr "مہربانی کٔرِتھ اپلوڈ کٔرِو یا کھینچِو کم از کم اکھ تصویر।"
+
+#: app/templates/submit_report.html:382
+msgid "Recording..."
+msgstr "ریکارڈنگ چھِ گژھان..."
+
+#: app/templates/submit_report.html:397
+msgid "Microphone access denied"
+msgstr "مائیکروفون رسائی مسترد کرنہ آمٕژ"
+
+#: app/templates/verify_otp.html:5
+msgid "Verify OTP"
+msgstr "او ٹی پی تصدیق کٔرِو"
+
+#: app/templates/verify_otp.html:6
+msgid "Sent to:"
+msgstr "سوزنہ آمُت:"
+
+#: app/templates/verify_otp.html:9
+msgid "Enter 4-Digit OTP"
+msgstr "۴ ہندسہ او ٹی پی درج کٔرِو"
+
+#: app/templates/verify_otp.html:17
+msgid "Verify & Login"
+msgstr "تصدیق تہِ لاگ ان کٔرِو"
+
+#: app/templates/verify_otp.html:54
+msgid "Please enter 4 digits"
+msgstr "مہربانی کٔرِتھ ۴ ہندسہ درج کٔرِو"
+
+msgid "Pending"
+msgstr "زیر التواء"
+
+msgid "Acknowledged"
+msgstr "تسلیم شدہ"
+
+msgid "In progress"
+msgstr "جاری"
+
+msgid "Resolved"
+msgstr "حل شدہ"
+
+msgid "Roads"
+msgstr "سڑک"
+
+msgid "Water"
+msgstr "آپ"
+
+msgid "Electricity"
+msgstr "بجلی"
+
+msgid "Sanitation"
+msgstr "صفائی"
+
+msgid "Other"
+msgstr "باقٕے"

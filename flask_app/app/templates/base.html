@@ -14,27 +14,66 @@
             <ul class="nav-links">
                 {% if current_user.is_authenticated %}
                     {% if current_user.role == 'citizen' %}
-                        <li><a href="{{ url_for('citizen.dashboard') }}">Dashboard</a></li>
-                        <li><a href="{{ url_for('citizen.submit_report') }}">Reports</a></li>
-                        <li><a href="{{ url_for('citizen.public_forum') }}">Public Forum</a></li>
-                        <li><a href="{{ url_for('citizen.status') }}">Status</a></li>
-                        <li><a href="{{ url_for('citizen.live_map') }}">Live Map</a></li>
+                        <li><a href="{{ url_for('citizen.dashboard') }}">{{ _('Dashboard') }}</a></li>
+                        <li><a href="{{ url_for('citizen.submit_report') }}">{{ _('Reports') }}</a></li>
+                        <li><a href="{{ url_for('citizen.public_forum') }}">{{ _('Public Forum') }}</a></li>
+                        <li><a href="{{ url_for('citizen.status') }}">{{ _('Status') }}</a></li>
+                        <li><a href="{{ url_for('citizen.live_map') }}">{{ _('Live Map') }}</a></li>
                         <li class="profile-link">
-                            <a href="{{ url_for('citizen.profile') }}"><i class="fas fa-user-circle"></i> Profile</a>
+                            <a href="{{ url_for('citizen.profile') }}"><i class="fas fa-user-circle"></i> {{ _('Profile') }}</a>
                         </li>
                     {% else %}
-                        <li><a href="{{ url_for('admin.dashboard') }}">Admin Dashboard</a></li>
+                        <li><a href="{{ url_for('admin.dashboard') }}">{{ _('Admin Dashboard') }}</a></li>
                         <li class="profile-link">
-                            <a href="{{ url_for('admin.profile') }}"><i class="fas fa-user-shield"></i> Profile</a>
+                            <a href="{{ url_for('admin.profile') }}"><i class="fas fa-user-shield"></i> {{ _('Profile') }}</a>
                         </li>
                     {% endif %}
-                    <li><a href="{{ url_for('auth.logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    <li><a href="{{ url_for('auth.logout') }}"><i class="fas fa-sign-out-alt"></i> {{ _('Logout') }}</a></li>
                 {% else %}
-                    <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                    <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
                 {% endif %}
+                
+                <li class="controls-area">
+                    <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <select class="language-selector" onchange="location = this.value;">
+                        {% for code, name in config.LANGUAGES.items() %}
+                            <option value="{{ url_for('main.set_language', lang_code=code) }}" 
+                                    {% if session.get('language') == code %}selected{% endif %}>
+                                {{ name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </li>
             </ul>
         </div>
     </nav>
+
+    <script>
+        // Theme Management
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+    </script>
 
     <div class="container content">
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -49,21 +88,21 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2026 Civic Issue Reporting System (CIRS). All rights reserved.</p>
+        <p>&copy; 2026 {{ _('Civic Issue Reporting System (CIRS). All rights reserved.') }}</p>
     </footer>
 
     <!-- Chat Modal -->
     <div id="chatModal" class="chat-modal">
         <div class="chat-content">
             <div class="chat-header">
-                <h3 id="chatTitle">Report Chat</h3>
+                <h3 id="chatTitle">{{ _('Report Chat') }}</h3>
                 <span class="close-chat" onclick="closeChat()">&times;</span>
             </div>
             <div id="chatMessages" class="chat-messages">
                 <!-- Messages will be loaded here -->
             </div>
             <div class="chat-input-area">
-                <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="handleChatKey(event)">
+                <input type="text" id="chatInput" placeholder="{{ _('Type a message...') }}" onkeypress="handleChatKey(event)">
                 <button onclick="sendMessage()" class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>

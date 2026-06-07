@@ -2,13 +2,13 @@
 
 {% block content %}
 <div class="profile-container">
-    <h2>Admin Officer Profile</h2>
+    <h2>{{ _('Admin Officer Profile') }}</h2>
     <div class="profile-card">
-        <p><strong>Name:</strong> {{ user.name }}</p>
-        <p><strong>Phone:</strong> {{ user.phone }}</p>
-        <p><strong>Role:</strong> Authority / Admin Officer</p>
-        <p><strong>Assigned State:</strong> {{ user.assigned_state }}</p>
-        <p><strong>Assigned District:</strong> {{ user.assigned_district }}</p>
+        <p><strong>{{ _('Name:') }}</strong> {{ user.name }}</p>
+        <p><strong>{{ _('Phone:') }}</strong> {{ user.phone }}</p>
+        <p><strong>{{ _('Role:') }}</strong> {{ _('Authority / Admin Officer') }}</p>
+        <p><strong>{{ _('Assigned State:') }}</strong> {{ _(user.assigned_state) }}</p>
+        <p><strong>{{ _('Assigned District:') }}</strong> {{ _(user.assigned_district) }}</p>
     </div>
 </div>
 

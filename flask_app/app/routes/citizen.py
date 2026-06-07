@@ -3,6 +3,7 @@ import math
 from datetime import datetime, timedelta
 from flask import render_template, request, redirect, url_for, flash, jsonify, current_app
 from flask_login import login_required, current_user
+from flask_babel import _
 from . import citizen_bp
 from ..models.models import Report, User, db, ReportImage, VoiceNote, Upvote, Comment
 from ..utils.cloudinary_utils import upload_to_cloudinary
@@ -79,7 +80,7 @@ def update_profile():
     current_user.state = request.form.get('state')
     current_user.district = request.form.get('district')
     db.session.commit()
-    flash('Profile updated successfully!', 'success')
+    flash(_('Profile updated successfully!'), 'success')
     return redirect(url_for('citizen.profile'))
 
 @citizen_bp.route('/report', methods=['GET', 'POST'])
@@ -112,11 +113,11 @@ def submit_report():
                                 existing.upvotes_count += 1
                                 db.session.add(upvote)
                                 db.session.commit()
-                                flash('A similar report already exists in this location. Your upvote has been added to it.', 'info')
+                                flash(_('A similar report already exists in this location. Your upvote has been added to it.'), 'info')
                             else:
-                                flash('A similar report already exists and you have already upvoted it.', 'warning')
+                                flash(_('A similar report already exists and you have already upvoted it.'), 'warning')
                         else:
-                            flash('You have already submitted a similar report in this location.', 'warning')
+                            flash(_('You have already submitted a similar report in this location.'), 'warning')
                         return redirect(url_for('citizen.dashboard'))
 
         report = Report(
@@ -136,7 +137,7 @@ def submit_report():
         # Handle Image Uploads
         images = request.files.getlist('images')
         if len(images) > 3:
-            flash('You can only upload up to 3 images.', 'danger')
+            flash(_('You can only upload up to 3 images.'), 'danger')
             return redirect(url_for('citizen.submit_report'))
 
         for img in images:
@@ -153,7 +154,7 @@ def submit_report():
             db.session.add(voice_note)
             
         db.session.commit()
-        flash('Report submitted successfully!', 'success')
+        flash(_('Report submitted successfully!'), 'success')
         return redirect(url_for('citizen.dashboard'))
         
     return render_template('submit_report.html', 
@@ -165,11 +166,11 @@ def upvote(report_id):
     report = Report.query.get_or_404(report_id)
     
     if report.user_id == current_user.id:
-        return jsonify({'success': False, 'message': 'You cannot upvote your own report.'}), 400
+        return jsonify({'success': False, 'message': _('You cannot upvote your own report.')}), 400
         
     existing_upvote = Upvote.query.filter_by(user_id=current_user.id, report_id=report_id).first()
     if existing_upvote:
-        return jsonify({'success': False, 'message': 'Already upvoted'}), 400
+        return jsonify({'success': False, 'message': _('Already upvoted')}), 400
         
     upvote = Upvote(user_id=current_user.id, report_id=report_id)
     report.upvotes_count += 1
@@ -187,7 +188,7 @@ def add_comment(report_id):
     comment = Comment(content=content, user_id=current_user.id, report_id=report_id)
     db.session.add(comment)
     db.session.commit()
-    flash('Comment added.', 'success')
+    flash(_('Comment added.'), 'success')
     return redirect(request.referrer)
 
 @citizen_bp.route('/reopen-report/<int:report_id>', methods=['POST'])
@@ -195,15 +196,15 @@ def add_comment(report_id):
 def reopen_report(report_id):
     report = Report.query.get_or_404(report_id)
     if report.user_id != current_user.id:
-        flash('Unauthorized.', 'danger')
+        flash(_('Unauthorized.'), 'danger')
         return redirect(url_for('citizen.status'))
         
     if report.status == 'resolved':
         report.status = 'acknowledged'
         db.session.commit()
-        flash('Report reopened.', 'info')
+        flash(_('Report reopened.'), 'info')
     else:
-        flash('Report cannot be reopened.', 'warning')
+        flash(_('Report cannot be reopened.'), 'warning')
         
     return redirect(url_for('citizen.status'))
 
@@ -212,5 +213,5 @@ def reopen_report(report_id):
 def request_deletion():
     current_user.account_deletion_status = 'requested'
     db.session.commit()
-    flash('Deletion request submitted to your assigned officer.', 'info')
+    flash(_('Deletion request submitted to your assigned officer.'), 'info')
     return redirect(url_for('citizen.profile'))

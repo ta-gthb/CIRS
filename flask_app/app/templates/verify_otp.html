@@ -2,11 +2,11 @@
 
 {% block content %}
 <div class="auth-card">
-    <h2>Verify OTP</h2>
-    <p>Sent to: {{ phone }}</p>
+    <h2>{{ _('Verify OTP') }}</h2>
+    <p>{{ _('Sent to:') }} {{ phone }}</p>
     <form method="POST" id="otpForm">
         <div class="form-group">
-            <label>Enter 4-Digit OTP</label>
+            <label>{{ _('Enter 4-Digit OTP') }}</label>
             <div class="box-input-container">
                 {% for i in range(4) %}
                 <input type="text" class="box-input otp-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
@@ -14,7 +14,7 @@
             </div>
             <input type="hidden" name="otp" id="fullOtp">
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Verify & Login</button>
+        <button type="submit" class="btn btn-primary btn-block">{{ _('Verify & Login') }}</button>
     </form>
 </div>
 
@@ -51,7 +51,7 @@
         boxes.forEach(box => otpVal += box.value);
         if (otpVal.length !== 4) {
             e.preventDefault();
-            alert('Please enter 4 digits');
+            alert("{{ _('Please enter 4 digits') }}");
         } else {
             fullOtp.value = otpVal;
         }

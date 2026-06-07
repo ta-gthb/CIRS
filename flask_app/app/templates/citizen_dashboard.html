@@ -3,58 +3,58 @@
 {% block content %}
 <div class="citizen-dashboard">
     <div class="welcome-section">
-        <h2>Welcome to Your Dashboard</h2>
-        <p>Your portal for reporting and tracking civic issues in your community.</p>
+        <h2>{{ _('Welcome to Your Dashboard') }}</h2>
+        <p>{{ _('Your portal for reporting and tracking civic issues in your community.') }}</p>
         <div class="dashboard-actions">
             <a href="{{ url_for('citizen.submit_report') }}" class="btn btn-primary btn-lg">
-                <i class="fas fa-plus-circle"></i> Submit New Report
+                <i class="fas fa-plus-circle"></i> {{ _('Submit New Report') }}
             </a>
         </div>
     </div>
 
     <div class="dashboard-grid">
         <section class="nearby-issues">
-            <h3>Trending/Nearby Issues</h3>
-            <p class="text-muted">High-priority and trending reports in the portal.</p>
+            <h3>{{ _('Trending/Nearby Issues') }}</h3>
+            <p class="text-muted">{{ _('High-priority and trending reports in the portal.') }}</p>
             <div class="reports-feed">
                 {% if reports %}
                     {% for report in reports %}
                         <div class="report-feed-item">
                             <div class="feed-header">
                                 <h4>{{ report.title }}</h4>
-                                <span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span>
+                                <span class="badge badge-{{ report.priority }}">{{ _(report.priority|capitalize) }}</span>
                             </div>
                             <p>{{ report.description[:100] }}...</p>
                             <div class="feed-footer">
                                 <span class="upvote-count"><i class="fas fa-arrow-up"></i> {{ report.upvotes_count }}</span>
-                                <span class="report-location"><i class="fas fa-map-marker-alt"></i> {{ report.city or 'General' }}</span>
-                                <button class="btn btn-sm btn-outline-primary" onclick="upvoteReport({{ report.id }}, this)">Upvote</button>
+                                <span class="report-location"><i class="fas fa-map-marker-alt"></i> {{ _(report.city) if report.city else _('General') }}</span>
+                                <button class="btn btn-sm btn-outline-primary" onclick="upvoteReport({{ report.id }}, this)">{{ _('Upvote') }}</button>
                             </div>
                         </div>
                     {% endfor %}
                 {% else %}
-                    <p>No issues reported yet.</p>
+                    <p>{{ _('No issues reported yet.') }}</p>
                 {% endif %}
             </div>
             <div class="view-all">
-                <a href="{{ url_for('citizen.public_forum') }}" class="btn btn-link">View All in Public Forum</a>
+                <a href="{{ url_for('citizen.public_forum') }}" class="btn btn-link">{{ _('View All in Public Forum') }}</a>
             </div>
         </section>
 
         <section class="quick-links">
-            <h3>Quick Links</h3>
+            <h3>{{ _('Quick Links') }}</h3>
             <div class="links-grid">
                 <a href="{{ url_for('citizen.status') }}" class="link-card">
                     <i class="fas fa-tasks"></i>
-                    <span>Track My Reports</span>
+                    <span>{{ _('Track My Reports') }}</span>
                 </a>
                 <a href="{{ url_for('citizen.live_map') }}" class="link-card">
                     <i class="fas fa-map-marked-alt"></i>
-                    <span>View Live Map</span>
+                    <span>{{ _('View Live Map') }}</span>
                 </a>
                 <a href="{{ url_for('citizen.profile') }}" class="link-card">
                     <i class="fas fa-user-cog"></i>
-                    <span>Manage Profile</span>
+                    <span>{{ _('Manage Profile') }}</span>
                 </a>
             </div>
         </section>
@@ -95,7 +95,7 @@
                 const countSpan = btn.parentElement.querySelector('.upvote-count');
                 countSpan.innerHTML = `<i class="fas fa-arrow-up"></i> ${data.upvotes}`;
                 btn.disabled = true;
-                btn.innerText = 'Upvoted';
+                btn.innerText = "{{ _('Upvoted') }}";
             } else {
                 alert(data.message);
             }

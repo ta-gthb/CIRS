@@ -2,10 +2,10 @@
 
 {% block content %}
 <div class="auth-card">
-    <h2>Login / Register</h2>
+    <h2>{{ _('Login / Register') }}</h2>
     <form method="POST" id="loginForm">
         <div class="form-group">
-            <label>Mobile Number</label>
+            <label>{{ _('Mobile Number') }}</label>
             <div class="box-input-container phone-container">
                 {% for i in range(10) %}
                 <input type="text" class="box-input phone-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
@@ -14,17 +14,17 @@
             <input type="hidden" name="phone" id="fullPhone">
         </div>
         <div class="form-group">
-            <label>I am a:</label>
+            <label>{{ _('I am a:') }}</label>
             <div class="role-selector">
                 <input type="radio" name="role" value="citizen" id="citizen" checked>
-                <label for="citizen">Citizen</label>
+                <label for="citizen">{{ _('Citizen') }}</label>
                 <input type="radio" name="role" value="authority" id="authority">
-                <label for="authority">Officer</label>
+                <label for="authority">{{ _('Officer') }}</label>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Send OTP</button>
+        <button type="submit" class="btn btn-primary btn-block">{{ _('Send OTP') }}</button>
     </form>
-    <p class="hint">Demo OTP: 1234</p>
+    <p class="hint">{{ _('Demo OTP: 1234') }}</p>
 </div>
 
 <style>
@@ -63,7 +63,7 @@
         boxes.forEach(box => phoneVal += box.value);
         if (phoneVal.length !== 10) {
             e.preventDefault();
-            alert('Please enter 10 digits');
+            alert("{{ _('Please enter 10 digits') }}");
         } else {
             fullPhone.value = phoneVal;
         }

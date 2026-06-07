@@ -1,0 +1,842 @@
+# Assamese translations for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-06-07 09:41+0530\n"
+"PO-Revision-Date: 2026-06-07 10:13+0530\n"
+"Last-Translator: Gemini CLI <email@address>\n"
+"Language: as\n"
+"Language-Team: as <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/routes/admin.py:75
+msgid "Unauthorized"
+msgstr "অননুমোদিত"
+
+#: app/routes/admin.py:103
+msgid "Report approved."
+msgstr "প্ৰতিবেদন অনুমোদিত হ’ল।"
+
+#: app/routes/admin.py:114
+msgid "Report resolved."
+msgstr "প্ৰতিবেদন সমাধান কৰা হ’ল।"
+
+#: app/routes/admin.py:124
+msgid "User deletion approved."
+msgstr "ব্যৱহাৰকাৰী বিলোপ অনুমোদন কৰা হ’ল।"
+
+#: app/routes/auth.py:26
+msgid "Officer not registered. Contact administrator."
+msgstr "বিষয়া পঞ্জীয়নভুক্ত নহয়। প্ৰশাসকৰ সৈতে যোগাযোগ কৰক।"
+
+#: app/routes/auth.py:30
+#, python-format
+msgid "Number registered as %(role)s. Choose correct role."
+msgstr "নম্বৰটো %(role)s হিচাপে পঞ্জীয়ন কৰা হৈছে। সঠিক ভূমিকা বাছনি কৰক।"
+
+#: app/routes/auth.py:34
+msgid "Account is inactive or deleted."
+msgstr "একাউন্টটো নিষ্ক্ৰিয় বা বিলোপ কৰা হৈছে।"
+
+#: app/routes/auth.py:61
+msgid "Invalid or expired OTP."
+msgstr "অমান্য বা ম্যাদ উকলি যোৱা অ’টিপি।"
+
+#: app/routes/citizen.py:83
+msgid "Profile updated successfully!"
+msgstr "প্ৰফাইল সফলতাৰে উন্নীত কৰা হ’ল!"
+
+#: app/routes/citizen.py:116
+msgid ""
+"A similar report already exists in this location. Your upvote has been "
+"added to it."
+msgstr "এই স্থানত ইতিমধ্যে এক অনুৰূপ প্ৰতিবেদন আছে। আপোনাৰ ভোটটো ইয়াত যোগ কৰা হৈছে।"
+
+#: app/routes/citizen.py:118
+msgid "A similar report already exists and you have already upvoted it."
+msgstr "এক অনুৰূপ প্ৰতিবেদন ইতিমধ্যে আছে আৰু আপুনি ইতিমধ্যে ইয়াক ভোট দিছে।"
+
+#: app/routes/citizen.py:120
+msgid "You have already submitted a similar report in this location."
+msgstr "আপুনি ইতিমধ্যে এই স্থানত এক অনুৰূপ প্ৰতিবেদন দাখিল কৰিছে।"
+
+#: app/routes/citizen.py:140
+msgid "You can only upload up to 3 images."
+msgstr "আপুনি কেৱল ৩ খনলৈকে ছবি আপলোড কৰিব পাৰে।"
+
+#: app/routes/citizen.py:157
+msgid "Report submitted successfully!"
+msgstr "প্ৰতিবেদন সফলতাৰে দাখিল কৰা হ’ল!"
+
+#: app/routes/citizen.py:169
+msgid "You cannot upvote your own report."
+msgstr "আপুনি নিজৰ প্ৰতিবেদনত ভোট দিব নোৱাৰে।"
+
+#: app/routes/citizen.py:173
+msgid "Already upvoted"
+msgstr "ইতিমধ্যে ভোট দিছে"
+
+#: app/routes/citizen.py:191
+msgid "Comment added."
+msgstr "মন্তব্য যোগ কৰা হ’ল।"
+
+#: app/routes/citizen.py:199
+msgid "Unauthorized."
+msgstr "অননুমোদিত।"
+
+#: app/routes/citizen.py:205
+msgid "Report reopened."
+msgstr "প্ৰতিবেদন পুনৰ খোলা হ’ল।"
+
+#: app/routes/citizen.py:207
+msgid "Report cannot be reopened."
+msgstr "প্ৰতিবেদন পুনৰ খুলিব নোৱাৰি।"
+
+#: app/routes/citizen.py:216
+msgid "Deletion request submitted to your assigned officer."
+msgstr "বিলোপৰ অনুৰোধ আপোনাৰ নিযুক্ত বিষয়াজনৰ ওচৰত দাখিল কৰা হৈছে।"
+
+#: app/templates/admin_dashboard.html:5
+msgid "Admin Officer Dashboard"
+msgstr "প্ৰশাসনিক বিষয়াৰ ডেচব’ৰ্ড"
+
+#: app/templates/admin_dashboard.html:6
+msgid "Welcome"
+msgstr "স্বাগতম"
+
+#: app/templates/admin_dashboard.html:6
+msgid "Assigned to:"
+msgstr "নিযুক্ত:"
+
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:74
+#: app/templates/status.html:41
+msgid "Priority:"
+msgstr "অগ্ৰাধিকাৰ:"
+
+#: app/templates/admin_dashboard.html:14
+msgid "All Priorities"
+msgstr "সকলো অগ্ৰাধিকাৰ"
+
+#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
+#: app/templates/submit_report.html:30
+msgid "Critical"
+msgstr "অতি গুৰুত্বপূৰ্ণ"
+
+#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
+#: app/templates/submit_report.html:29
+msgid "High"
+msgstr "উচ্চ"
+
+#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
+#: app/templates/submit_report.html:28
+msgid "Medium"
+msgstr "মধ্যম"
+
+#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
+#: app/templates/submit_report.html:27
+msgid "Low"
+msgstr "নিম্ন"
+
+#: app/templates/admin_dashboard.html:22 app/templates/status.html:11
+msgid "From:"
+msgstr "পৰা:"
+
+#: app/templates/admin_dashboard.html:26 app/templates/status.html:15
+msgid "To:"
+msgstr "লৈ:"
+
+#: app/templates/admin_dashboard.html:30 app/templates/status.html:19
+msgid "Filter"
+msgstr "ফিল্টাৰ"
+
+#: app/templates/admin_dashboard.html:31 app/templates/status.html:20
+msgid "Clear"
+msgstr "পৰিষ্কাৰ কৰক"
+
+#: app/templates/admin_dashboard.html:39
+msgid "Total Reports"
+msgstr "মুঠ প্ৰতিবেদন"
+
+#: app/templates/admin_dashboard.html:43
+msgid "Pending"
+msgstr "অমীমাংসিত"
+
+#: app/templates/admin_dashboard.html:47
+msgid "Approved"
+msgstr "অনুমোদিত"
+
+#: app/templates/admin_dashboard.html:51
+msgid "Resolved"
+msgstr "সমাধান কৰা হ’ল"
+
+#: app/templates/admin_dashboard.html:57
+msgid "Manage Reports"
+msgstr "প্ৰতিবেদন পৰিচালনা কৰক"
+
+#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:180
+msgid "Title"
+msgstr "শীৰ্ষক"
+
+#: app/templates/admin_dashboard.html:63 app/templates/profile.html:14
+msgid "Citizen ID"
+msgstr "নাগরিক পৰিচয় পত্ৰ"
+
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:182
+#: app/templates/submit_report.html:25
+msgid "Priority"
+msgstr "অগ্ৰাধিকাৰ"
+
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:183
+#: app/templates/base.html:20
+msgid "Status"
+msgstr "স্থিতি"
+
+#: app/templates/admin_dashboard.html:66
+msgid "Date"
+msgstr "তাৰিখ"
+
+#: app/templates/admin_dashboard.html:67
+msgid "Actions"
+msgstr "কাৰ্য্যসমূহ"
+
+#: app/templates/admin_dashboard.html:74
+msgid "N/A"
+msgstr "অপ্ৰযোজ্য"
+
+#: app/templates/admin_dashboard.html:79
+msgid "View"
+msgstr "চাওক"
+
+#: app/templates/admin_dashboard.html:81
+msgid "Approve"
+msgstr "অনুমোদন কৰক"
+
+#: app/templates/admin_dashboard.html:84
+msgid "Resolve"
+msgstr "সমাধান কৰক"
+
+#: app/templates/admin_dashboard.html:87 app/templates/status.html:53
+msgid "Message"
+msgstr "বাৰ্তা"
+
+#: app/templates/admin_dashboard.html:95
+msgid "No reports found matching filters."
+msgstr "ফিল্টাৰৰ সৈতে মিল থকা কোনো প্ৰতিবেদন পোৱা নগ’ল।"
+
+#: app/templates/admin_dashboard.html:104
+msgid "Report Details"
+msgstr "প্ৰতিবেদনৰ বিৱৰণ"
+
+#: app/templates/admin_dashboard.html:108
+msgid "Close"
+msgstr "বন্ধ কৰক"
+
+#: app/templates/admin_dashboard.html:116
+msgid "Resolve Report"
+msgstr "প্ৰতিবেদন সমাধান কৰক"
+
+#: app/templates/admin_dashboard.html:118
+msgid "Enter resolution notes..."
+msgstr "সমাধানৰ টোকা লিখক..."
+
+#: app/templates/admin_dashboard.html:120
+msgid "Cancel"
+msgstr "বাতিল কৰক"
+
+#: app/templates/admin_dashboard.html:121
+msgid "Mark as Resolved"
+msgstr "সমাধান হিচাপে চিহ্নিত কৰক"
+
+#: app/templates/admin_dashboard.html:170 app/templates/status.html:73
+msgid "Report Image"
+msgstr "প্ৰতিবেদনৰ ছবি"
+
+#: app/templates/admin_dashboard.html:181 app/templates/submit_report.html:14
+msgid "Category"
+msgstr "শ্ৰেণী"
+
+#: app/templates/admin_dashboard.html:184
+msgid "Submitted On"
+msgstr "দাখিল কৰা তাৰিখ"
+
+#: app/templates/admin_dashboard.html:185
+msgid "Description"
+msgstr "বিৱৰণ"
+
+#: app/templates/admin_dashboard.html:186 app/templates/submit_report.html:41
+msgid "Location"
+msgstr "স্থান"
+
+#: app/templates/admin_dashboard.html:190
+msgid "Captured Images"
+msgstr "সংগৃহীত ছবি"
+
+#: app/templates/admin_dashboard.html:191
+msgid "No images uploaded"
+msgstr "কোনো ছবি আপলোড কৰা হোৱা নাই"
+
+#: app/templates/admin_dashboard.html:194
+msgid "Voice Notes"
+msgstr "কণ্ঠস্বৰ টোকা"
+
+#: app/templates/admin_dashboard.html:195
+msgid "No voice notes uploaded"
+msgstr "কোনো কণ্ঠস্বৰ টোকা আপলোড কৰা হোৱা নাই"
+
+#: app/templates/admin_dashboard.html:217
+msgid "Failed to fetch report details"
+msgstr "প্ৰতিবেদনৰ বিৱৰণ আহৰণ কৰাত ব্যৰ্থ হ’ল"
+
+#: app/templates/admin_profile.html:5
+msgid "Admin Officer Profile"
+msgstr "প্ৰশাসনিক বিষয়াৰ প্ৰফাইল"
+
+#: app/templates/admin_profile.html:7
+msgid "Name:"
+msgstr "নাম:"
+
+#: app/templates/admin_profile.html:8
+msgid "Phone:"
+msgstr "ফোন:"
+
+#: app/templates/admin_profile.html:9
+msgid "Role:"
+msgstr "ভুমিকা:"
+
+#: app/templates/admin_profile.html:9
+msgid "Authority / Admin Officer"
+msgstr "কৰ্তৃপক্ষ / প্ৰশাসনিক বিষয়া"
+
+#: app/templates/admin_profile.html:10
+msgid "Assigned State:"
+msgstr "নিযুক্ত ৰাজ্য:"
+
+#: app/templates/admin_profile.html:11
+msgid "Assigned District:"
+msgstr "নিযুক্ত জিলা:"
+
+#: app/templates/base.html:17
+msgid "Dashboard"
+msgstr "ডেচব’ৰ্ড"
+
+#: app/templates/base.html:18
+msgid "Reports"
+msgstr "প্ৰতিবেদনসমূহ"
+
+#: app/templates/base.html:19 app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr "ৰাজহুৱা মঞ্চ"
+
+#: app/templates/base.html:21 app/templates/index.html:37
+msgid "Live Map"
+msgstr "জীৱন্ত মানচিত্ৰ"
+
+#: app/templates/base.html:23 app/templates/base.html:28
+msgid "Profile"
+msgstr "প্ৰফাইল"
+
+#: app/templates/base.html:26
+msgid "Admin Dashboard"
+msgstr "প্ৰশাসনিক ডেচব’ৰ্ড"
+
+#: app/templates/base.html:31
+msgid "Logout"
+msgstr "লগ আউট"
+
+#: app/templates/base.html:33
+msgid "Login"
+msgstr "লগ ইন"
+
+#: app/templates/base.html:91
+msgid "Civic Issue Reporting System (CIRS). All rights reserved."
+msgstr "নাগৰিক সমস্যা প্ৰতিবেদন ব্যৱস্থা (CIRS)। সকলো স্বত্ব সংৰক্ষিত।"
+
+#: app/templates/base.html:98
+msgid "Report Chat"
+msgstr "প্ৰতিবেদন কথোপকথন"
+
+#: app/templates/base.html:105
+msgid "Type a message..."
+msgstr "বাৰ্তা এটা লিখক..."
+
+#: app/templates/citizen_dashboard.html:6
+msgid "Welcome to Your Dashboard"
+msgstr "আপোনাৰ ডেচব’ৰ্ডলৈ স্বাগতম"
+
+#: app/templates/citizen_dashboard.html:7
+msgid "Your portal for reporting and tracking civic issues in your community."
+msgstr "আপোনাৰ সম্প্ৰদায়ৰ নাগৰিক সমস্যাসমূহ দাখিল আৰু অনুসৰণ কৰাৰ বাবে আপোনাৰ পৰ্টেল।"
+
+#: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
+msgid "Submit New Report"
+msgstr "নতুন প্ৰতিবেদন দাখিল কৰক"
+
+#: app/templates/citizen_dashboard.html:17
+msgid "Trending/Nearby Issues"
+msgstr "প্ৰচলিত/চৰ্চিত সমস্যাসমূহ"
+
+#: app/templates/citizen_dashboard.html:18
+msgid "High-priority and trending reports in the portal."
+msgstr "পৰ্টেলত থকা উচ্চ অগ্ৰাধিকাৰ আৰু প্ৰচলিত প্ৰতিবেদনসমূহ।"
+
+#: app/templates/citizen_dashboard.html:30
+msgid "General"
+msgstr "সাধাৰণ"
+
+#: app/templates/citizen_dashboard.html:31
+msgid "Upvote"
+msgstr "ভোট দিয়ক"
+
+#: app/templates/citizen_dashboard.html:36
+msgid "No issues reported yet."
+msgstr "এতিয়ালৈকে কোনো সমস্যা দাখিল কৰা হোৱা নাই।"
+
+#: app/templates/citizen_dashboard.html:40
+msgid "View All in Public Forum"
+msgstr "ৰাজহুৱা মঞ্চত সকলো চাওক"
+
+#: app/templates/citizen_dashboard.html:45
+msgid "Quick Links"
+msgstr "দ্ৰুত সংযোগ"
+
+#: app/templates/citizen_dashboard.html:49
+msgid "Track My Reports"
+msgstr "মোৰ প্ৰতিবেদনসমূহ অনুসৰণ কৰক"
+
+#: app/templates/citizen_dashboard.html:53
+msgid "View Live Map"
+msgstr "জীৱন্ত মানচিত্ৰ চাওক"
+
+#: app/templates/citizen_dashboard.html:57
+msgid "Manage Profile"
+msgstr "প্ৰফাইল পৰিচালনা কৰক"
+
+#: app/templates/citizen_dashboard.html:98
+msgid "Upvoted"
+msgstr "ভোট দিয়া হ’ল"
+
+#: app/templates/index.html:5
+msgid "Welcome to CIRS !"
+msgstr "CIRS লৈ স্বাগতম!"
+
+#: app/templates/index.html:6
+msgid "--Report today for a better tomorrow"
+msgstr "--উন্নত কাইলৈৰ বাবে আজি প্ৰতিবেদন দিয়ক"
+
+#: app/templates/index.html:7
+msgid "Report, Track, and Resolve Local Issues Together"
+msgstr "স্থানীয় সমস্যাসমূহ একেলগে প্ৰতিবেদন দিয়ক, অনুসৰণ কৰক আৰু সমাধান কৰক"
+
+#: app/templates/index.html:11
+msgid "Issues Resolved"
+msgstr "সমাধান হোৱা সমস্যা"
+
+#: app/templates/index.html:15
+msgid "Active Users"
+msgstr "সক্ৰিয় ব্যৱহাৰকাৰী"
+
+#: app/templates/index.html:19
+msgid "Cities"
+msgstr "চহৰসমূহ"
+
+#: app/templates/index.html:23
+msgid "Get Started Now"
+msgstr "এতিয়াই আৰম্ভ কৰক"
+
+#: app/templates/index.html:28
+msgid "Powerful Features"
+msgstr "শক্তিশালী বৈশিষ্ট্যসমূহ"
+
+#: app/templates/index.html:32
+msgid "Media Reporting"
+msgstr "সংবাদ মাধ্যমৰ জৰিয়তে প্ৰতিবেদন"
+
+#: app/templates/index.html:33
+msgid "Capture issues with photos and voice notes."
+msgstr "ছবি আৰু কণ্ঠস্বৰ টোকাৰ সৈতে সমস্যাসমূহ ধৰি ৰাখক।"
+
+#: app/templates/index.html:38
+msgid "Visualize reported issues in real-time."
+msgstr "দাখিল কৰা সমস্যাসমূহ বাস্তৱ সময়ত দৃশ্যমান কৰক।"
+
+#: app/templates/index.html:42
+msgid "Analytics"
+msgstr "বিশ্লেষণ"
+
+#: app/templates/index.html:43
+msgid "Track resolution status and response times."
+msgstr "সমাধানৰ স্থিতি আৰু সঁহাৰিৰ সময় অনুসৰণ কৰক।"
+
+#: app/templates/live_map.html:5
+msgid "Live Map - Community Issues"
+msgstr "জীৱন্ত মানচিত্ৰ - সম্প্ৰদায়ৰ সমস্যাসমূহ"
+
+#: app/templates/live_map.html:9
+msgid "Legend"
+msgstr "সূচক"
+
+#: app/templates/live_map.html:73 app/templates/status.html:40
+msgid "Category:"
+msgstr "শ্ৰেণী:"
+
+#: app/templates/live_map.html:75
+msgid "Status:"
+msgstr "স্থিতি:"
+
+#: app/templates/login.html:5
+msgid "Login / Register"
+msgstr "লগ ইন / পঞ্জীয়ন"
+
+#: app/templates/login.html:8
+msgid "Mobile Number"
+msgstr "ম’বাইল নম্বৰ"
+
+#: app/templates/login.html:17
+msgid "I am a:"
+msgstr "মই এজন:"
+
+#: app/templates/login.html:20
+msgid "Citizen"
+msgstr "নাগৰিক"
+
+#: app/templates/login.html:22
+msgid "Officer"
+msgstr "বিষয়া"
+
+#: app/templates/login.html:25
+msgid "Send OTP"
+msgstr "অ’টিপি পঠিয়াওক"
+
+#: app/templates/login.html:27
+msgid "Demo OTP: 1234"
+msgstr "ডেম’ অ’টিপি: ১২৩৪"
+
+#: app/templates/login.html:66
+msgid "Please enter 10 digits"
+msgstr "অনুগ্ৰহ কৰি ১০ টা সংখ্যা লিখক"
+
+#: app/templates/profile.html:5
+msgid "User Profile"
+msgstr "ব্যৱহাৰকাৰীৰ প্ৰফাইল"
+
+#: app/templates/profile.html:9
+msgid "Full Name"
+msgstr "সম্পূৰ্ণ নাম"
+
+#: app/templates/profile.html:10
+msgid "Enter your full name"
+msgstr "আপোনাৰ সম্পূৰ্ণ নাম লিখক"
+
+#: app/templates/profile.html:15
+msgid "Not Assigned"
+msgstr "নিযুক্ত নহয়"
+
+#: app/templates/profile.html:19
+msgid "Phone Number"
+msgstr "ফোন নম্বৰ"
+
+#: app/templates/profile.html:21
+msgid "Phone number cannot be changed."
+msgstr "ফোন নম্বৰ সলনি কৰিব নোৱাৰি।"
+
+#: app/templates/profile.html:25
+msgid "Address"
+msgstr "ঠিকনা"
+
+#: app/templates/profile.html:26
+msgid "Enter your address"
+msgstr "আপোনাৰ ঠিকনা লিখক"
+
+#: app/templates/profile.html:31 app/templates/submit_report.html:52
+msgid "State"
+msgstr "ৰাজ্য"
+
+#: app/templates/profile.html:33
+msgid "Select State"
+msgstr "ৰাজ্য বাছনি কৰক"
+
+#: app/templates/profile.html:37
+msgid "District"
+msgstr "জিলা"
+
+#: app/templates/profile.html:39 app/templates/profile.html:133
+msgid "Select District"
+msgstr "জিলা বাছনি কৰক"
+
+#: app/templates/profile.html:44
+msgid "Update Profile"
+msgstr "প্ৰফাইল উন্নীত কৰক"
+
+#: app/templates/profile.html:49
+msgid "Account Management"
+msgstr "একাউন্ট পৰিচালনা"
+
+#: app/templates/profile.html:51
+msgid ""
+"Are you sure you want to request account deletion? This will be reviewed "
+"by your assigned officer."
+msgstr "আপুনি নিশ্চিতনে যে আপুনি একাউণ্ট বিলোপৰ অনুৰোধ কৰিব বিচাৰে? এইটো আপোনাৰ নিযুক্ত বিষয়াজনৰ দ্বাৰা পৰ্যালোচনা কৰা হ’ব।"
+
+#: app/templates/profile.html:52
+msgid "Request Account Deletion"
+msgstr "একাউন্ট বিলোপৰ অনুৰোধ জনাওক"
+
+#: app/templates/profile.html:55
+msgid "Account deletion request is pending approval."
+msgstr "একাউন্ট বিলোপৰ অনুৰোধ অনুমোদনৰ বাবে অমীমাংসিত হৈ আছে।"
+
+#: app/templates/public_forum.html:14
+msgid "Posted on"
+msgstr "তাৰিখত দিয়া হৈছে"
+
+#: app/templates/public_forum.html:14
+msgid "by"
+msgstr "দ্বাৰা"
+
+#: app/templates/public_forum.html:14 app/templates/public_forum.html:28
+msgid "Anonymous"
+msgstr "বেনামী"
+
+#: app/templates/public_forum.html:19
+msgid "Upvotes"
+msgstr "ভোটসমূহ"
+
+#: app/templates/public_forum.html:21 app/templates/public_forum.html:25
+msgid "Comments"
+msgstr "মন্তব্যসমূহ"
+
+#: app/templates/public_forum.html:34
+msgid "Add a comment..."
+msgstr "এটা মন্তব্য যোগ কৰক..."
+
+#: app/templates/public_forum.html:35
+msgid "Post"
+msgstr "প্ৰকাশ কৰক"
+
+#: app/templates/status.html:5
+msgid "My Submitted Reports"
+msgstr "মোৰ দাখিল কৰা প্ৰতিবেদনসমূহ"
+
+#: app/templates/status.html:27
+msgid "No reports found matching the criteria."
+msgstr "মাপদণ্ডৰ সৈতে মিল থকা কোনো প্ৰতিবেদন পোৱা নগ’ল।"
+
+#: app/templates/status.html:42
+msgid "Location:"
+msgstr "স্থান:"
+
+#: app/templates/status.html:42
+msgid "Unknown"
+msgstr "অজ্ঞাত"
+
+#: app/templates/status.html:43
+msgid "Upvotes:"
+msgstr "ভোটসমূহ:"
+
+#: app/templates/status.html:49
+msgid "View Marked Location"
+msgstr "চিহ্নিত স্থান চাওক"
+
+#: app/templates/status.html:57
+msgid "Are you sure you want to reopen this report?"
+msgstr "আপুনি নিশ্চিতনে যে আপুনি এই প্ৰতিবেদনখন পুনৰ খুলিব বিচাৰে?"
+
+#: app/templates/status.html:59
+msgid "Reopen"
+msgstr "পুনৰ খোলক"
+
+#: app/templates/status.html:70
+msgid "Images:"
+msgstr "ছবিসমূহ:"
+
+#: app/templates/status.html:81
+msgid "Voice Note:"
+msgstr "কণ্ঠস্বৰ টোকা:"
+
+#: app/templates/status.html:85
+msgid "Your browser does not support the audio element."
+msgstr "আপোনাৰ ব্ৰাউজাৰে অডিঅ’ উপাদানটো সমৰ্থন নকৰে।"
+
+#: app/templates/submit_report.html:8
+msgid "Issue Title"
+msgstr "সমস্যাৰ শীৰ্ষক"
+
+#: app/templates/submit_report.html:9
+msgid "Brief title of the issue"
+msgstr "সমস্যাটোৰ চমু শীৰ্ষক"
+
+#: app/templates/submit_report.html:16
+msgid "Select Category"
+msgstr "শ্ৰেণী বাছনি কৰক"
+
+#: app/templates/submit_report.html:17
+msgid "Roads & Potholes"
+msgstr "ৰাস্তা আৰু গাঁত"
+
+#: app/templates/submit_report.html:18
+msgid "Water Supply"
+msgstr "পানী যোগান"
+
+#: app/templates/submit_report.html:19
+msgid "Electricity"
+msgstr "বিদ্যুৎ"
+
+#: app/templates/submit_report.html:20
+msgid "Sanitation & Garbage"
+msgstr "অনাময় আৰু আৱৰ্জনা"
+
+#: app/templates/submit_report.html:21
+msgid "Other"
+msgstr "অন্যান্য"
+
+#: app/templates/submit_report.html:36
+msgid "Issue Description"
+msgstr "সমস্যাৰ বিৱৰণ"
+
+#: app/templates/submit_report.html:37
+msgid "Provide details about the issue..."
+msgstr "সমস্যাটোৰ বিষয়ে বিৱৰণ দিয়ক..."
+
+#: app/templates/submit_report.html:42
+msgid "Location will be auto-fetched, but you can adjust it on the map."
+msgstr "স্থানটো স্বয়ংক্ৰিয়ভাৱে সংগ্ৰহ কৰা হ’ব, কিন্তু আপুনি ইয়াক মানচিত্ৰত মিলাই ল’ব পাৰে।"
+
+#: app/templates/submit_report.html:48
+msgid "City/District"
+msgstr "চহৰ/জিলা"
+
+#: app/templates/submit_report.html:59
+msgid "Upload Images (Max 3, Max 5MB each)"
+msgstr "ছবি আপলোড কৰক (সৰ্বাধিক ৩ খন, প্ৰতিখন সৰ্বাধিক ৫ মেগাবাইট)"
+
+#: app/templates/submit_report.html:61
+msgid "Live Geo-Camera"
+msgstr "জীৱন্ত জিঅ’-কেমেৰা"
+
+#: app/templates/submit_report.html:63
+msgid "Upload Files"
+msgstr "ফাইল আপলোড কৰক"
+
+#: app/templates/submit_report.html:72
+msgid "Capture Photo"
+msgstr "ছবি তোলক"
+
+#: app/templates/submit_report.html:73
+msgid "Switch"
+msgstr "সলনি কৰক"
+
+#: app/templates/submit_report.html:74
+msgid "Close Camera"
+msgstr "কেমেৰা বন্ধ কৰক"
+
+#: app/templates/submit_report.html:85
+msgid "Voice Note"
+msgstr "কণ্ঠস্বৰ টোকা"
+
+#: app/templates/submit_report.html:87
+msgid "Record"
+msgstr "ৰেকৰ্ড কৰক"
+
+#: app/templates/submit_report.html:88
+msgid "Stop"
+msgstr "বন্ধ কৰক"
+
+#: app/templates/submit_report.html:91
+msgid "OR upload file"
+msgstr "অথবা ফাইল আপলোড কৰক"
+
+#: app/templates/submit_report.html:95
+msgid "Remove"
+msgstr "আঁতৰাওক"
+
+#: app/templates/submit_report.html:99
+msgid "Submit Report"
+msgstr "প্ৰতিবেদন দাখিল কৰক"
+
+#: app/templates/submit_report.html:220
+msgid "File"
+msgstr "ফাইল"
+
+#: app/templates/submit_report.html:220
+msgid "exceeds 5MB limit"
+msgstr "৫ মেগাবাইটৰ সীমা অতিক্ৰম কৰিছে"
+
+#: app/templates/submit_report.html:241 app/templates/submit_report.html:281
+msgid "Maximum 3 images reached"
+msgstr "সৰ্বাধিক ৩ খন ছবি সম্পূৰ্ণ হৈছে"
+
+#: app/templates/submit_report.html:265
+msgid "Camera access denied or not available"
+msgstr "কেমেৰাৰ প্ৰৱেশাধিকাৰ অস্বীকাৰ কৰা হৈছে বা উপলব্ধ নহয়"
+
+#: app/templates/submit_report.html:323
+msgid "Location data pending..."
+msgstr "স্থানৰ তথ্য বাকী আছে..."
+
+#: app/templates/submit_report.html:343
+msgid "Please upload or capture at least one image of the issue."
+msgstr "অনুগ্ৰহ কৰি সমস্যাটোৰ অন্তত এখন ছবি আপলোড কৰক বা তোলক।"
+
+#: app/templates/submit_report.html:382
+msgid "Recording..."
+msgstr "ৰেকৰ্ডিং চলি আছে..."
+
+#: app/templates/submit_report.html:397
+msgid "Microphone access denied"
+msgstr "মাইক্ৰ’ফোনৰ প্ৰৱেশাধিকাৰ অস্বীকাৰ কৰা হৈছে"
+
+#: app/templates/verify_otp.html:5
+msgid "Verify OTP"
+msgstr "অ’টিপি সত্যাপন কৰক"
+
+#: app/templates/verify_otp.html:6
+msgid "Sent to:"
+msgstr "লৈ পঠোৱা হৈছে:"
+
+#: app/templates/verify_otp.html:9
+msgid "Enter 4-Digit OTP"
+msgstr "৪ টা অংকৰ অ’টিপি লিখক"
+
+#: app/templates/verify_otp.html:17
+msgid "Verify & Login"
+msgstr "সত্যাপন কৰক আৰু লগ ইন কৰক"
+
+#: app/templates/verify_otp.html:54
+msgid "Please enter 4 digits"
+msgstr "অনুগ্ৰহ কৰি ৪ টা সংখ্যা লিখক"
+
+msgid "Pending"
+msgstr "অমীমাংসিত"
+
+msgid "Acknowledged"
+msgstr "স্বীকৃত"
+
+msgid "In progress"
+msgstr "চলি থকা"
+
+msgid "Resolved"
+msgstr "সমাধান কৰা হ’ল"
+
+msgid "Roads"
+msgstr "ৰাস্তা"
+
+msgid "Water"
+msgstr "পানী"
+
+msgid "Electricity"
+msgstr "বিদ্যুৎ"
+
+msgid "Sanitation"
+msgstr "অনাময়"
+
+msgid "Other"
+msgstr "অন্যান্য"

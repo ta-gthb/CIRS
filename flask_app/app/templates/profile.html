@@ -2,57 +2,57 @@
 
 {% block content %}
 <div class="profile-container">
-    <h2>User Profile</h2>
+    <h2>{{ _('User Profile') }}</h2>
     <div class="profile-card">
         <form action="{{ url_for('citizen.update_profile') }}" method="POST">
             <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" class="form-control" value="{{ user.name or '' }}" placeholder="Enter your full name">
+                <label for="name">{{ _('Full Name') }}</label>
+                <input type="text" name="name" id="name" class="form-control" value="{{ user.name or '' }}" placeholder="{{ _('Enter your full name') }}">
             </div>
 
             <div class="form-group">
-                <label>Citizen ID</label>
-                <input type="text" class="form-control" value="{{ user.citizen_id or 'Not Assigned' }}" readonly style="background-color: #f8f9fa; font-family: monospace; font-weight: bold;">
+                <label>{{ _('Citizen ID') }}</label>
+                <input type="text" class="form-control" value="{{ user.citizen_id or _('Not Assigned') }}" readonly style="background-color: #f8f9fa; font-family: monospace; font-weight: bold;">
             </div>
             
             <div class="form-group">
-                <label>Phone Number</label>
+                <label>{{ _('Phone Number') }}</label>
                 <input type="text" class="form-control" value="{{ user.phone }}" readonly style="background-color: #f8f9fa;">
-                <small class="text-muted">Phone number cannot be changed.</small>
+                <small class="text-muted">{{ _('Phone number cannot be changed.') }}</small>
             </div>
 
             <div class="form-group">
-                <label for="address">Address</label>
-                <textarea name="address" id="address" class="form-control" rows="3" placeholder="Enter your address">{{ user.address or '' }}</textarea>
+                <label for="address">{{ _('Address') }}</label>
+                <textarea name="address" id="address" class="form-control" rows="3" placeholder="{{ _('Enter your address') }}">{{ user.address or '' }}</textarea>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="state">State</label>
+                    <label for="state">{{ _('State') }}</label>
                     <select name="state" id="stateSelect" class="form-control">
-                        <option value="">Select State</option>
+                        <option value="">{{ _('Select State') }}</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="district">District</label>
+                    <label for="district">{{ _('District') }}</label>
                     <select name="district" id="districtSelect" class="form-control">
-                        <option value="">Select District</option>
+                        <option value="">{{ _('Select District') }}</option>
                     </select>
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block">Update Profile</button>
+            <button type="submit" class="btn btn-primary btn-block">{{ _('Update Profile') }}</button>
         </form>
         
         <hr>
         
-        <h3>Account Management</h3>
+        <h3>{{ _('Account Management') }}</h3>
         {% if user.account_deletion_status == 'none' %}
-            <form action="{{ url_for('citizen.request_deletion') }}" method="POST" onsubmit="return confirm('Are you sure you want to request account deletion? This will be reviewed by your assigned officer.')">
-                <button type="submit" class="btn btn-danger btn-block">Request Account Deletion</button>
+            <form action="{{ url_for('citizen.request_deletion') }}" method="POST" onsubmit="return confirm('{{ _('Are you sure you want to request account deletion? This will be reviewed by your assigned officer.') }}')">
+                <button type="submit" class="btn btn-danger btn-block">{{ _('Request Account Deletion') }}</button>
             </form>
         {% elif user.account_deletion_status == 'requested' %}
-            <div class="alert alert-info">Account deletion request is pending approval.</div>
+            <div class="alert alert-info">{{ _('Account deletion request is pending approval.') }}</div>
         {% endif %}
     </div>
 </div>
@@ -130,7 +130,7 @@
 
     // Function to populate Districts
     function populateDistricts(state, selectedDistrict = "") {
-        districtSelect.innerHTML = '<option value="">Select District</option>';
+        districtSelect.innerHTML = '<option value="">{{ _('Select District') }}</option>';
         if (state && stateDistrictData[state]) {
             stateDistrictData[state].forEach(district => {
                 let option = document.createElement('option');

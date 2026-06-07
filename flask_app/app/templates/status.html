@@ -2,29 +2,29 @@
 
 {% block content %}
 <div class="status-container">
-    <h2>My Submitted Reports</h2>
+    <h2>{{ _('My Submitted Reports') }}</h2>
 
     <!-- Filters -->
     <div class="filter-section">
         <form method="GET" class="filter-form">
             <div class="filter-group">
-                <label>From:</label>
+                <label>{{ _('From:') }}</label>
                 <input type="date" name="start_date" class="form-control" value="{{ start_date }}">
             </div>
             <div class="filter-group">
-                <label>To:</label>
+                <label>{{ _('To:') }}</label>
                 <input type="date" name="end_date" class="form-control" value="{{ end_date }}">
             </div>
             <div class="filter-group btn-group">
-                <button type="submit" class="btn btn-primary">Filter</button>
-                <a href="{{ url_for('citizen.status') }}" class="btn btn-secondary">Clear</a>
+                <button type="submit" class="btn btn-primary">{{ _('Filter') }}</button>
+                <a href="{{ url_for('citizen.status') }}" class="btn btn-secondary">{{ _('Clear') }}</a>
             </div>
         </form>
     </div>
 
     <div class="reports-list">
         {% if not reports %}
-            <p class="text-center">No reports found matching the criteria.</p>
+            <p class="text-center">{{ _('No reports found matching the criteria.') }}</p>
         {% endif %}
         
         {% for report in reports %}
@@ -32,31 +32,31 @@
                 <div class="report-header">
                     <h3>{{ report.title }}</h3>
                     <div class="header-meta">
-                        <span class="status status-{{ report.status }}">{{ report.status|replace('_', ' ')|capitalize }}</span>
+                        <span class="status status-{{ report.status }}">{{ _(report.status|replace('_', ' ')|capitalize) }}</span>
                         <span class="date">{{ report.created_at.strftime('%Y-%m-%d') }}</span>
                     </div>
                 </div>
                 <div class="report-details">
-                    <p><strong>Category:</strong> {{ report.category }}</p>
-                    <p><strong>Priority:</strong> <span class="badge badge-{{ report.priority }}">{{ report.priority|capitalize }}</span></p>
-                    <p><strong>Location:</strong> {{ report.city or 'Unknown' }}, {{ report.state or 'Unknown' }}</p>
-                    <p><strong>Upvotes:</strong> {{ report.upvotes_count }}</p>
+                    <p><strong>{{ _('Category:') }}</strong> {{ _(report.category) }}</p>
+                    <p><strong>{{ _('Priority:') }}</strong> <span class="badge badge-{{ report.priority }}">{{ _(report.priority|capitalize) }}</span></p>
+                    <p><strong>{{ _('Location:') }}</strong> {{ _(report.city) if report.city else _('Unknown') }}, {{ _(report.state) if report.state else _('Unknown') }}</p>
+                    <p><strong>{{ _('Upvotes:') }}</strong> {{ report.upvotes_count }}</p>
                 </div>
                 <p class="report-desc">{{ report.description }}</p>
                 
                 <div class="report-actions">
                     <button class="btn btn-sm btn-info" onclick="toggleMap({{ report.id }}, {{ report.latitude }}, {{ report.longitude }})">
-                        <i class="fas fa-map-marker-alt"></i> View Marked Location
+                        <i class="fas fa-map-marker-alt"></i> {{ _('View Marked Location') }}
                     </button>
                     {% if report.status in ['acknowledged', 'in_progress', 'resolved'] %}
                         <button class="btn btn-sm btn-warning" onclick="openChat({{ report.id }})">
-                            <i class="fas fa-comments"></i> Message
+                            <i class="fas fa-comments"></i> {{ _('Message') }}
                         </button>
                     {% endif %}
                     {% if report.status == 'resolved' %}
-                        <form action="{{ url_for('citizen.reopen_report', report_id=report.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to reopen this report?')">
+                        <form action="{{ url_for('citizen.reopen_report', report_id=report.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('{{ _('Are you sure you want to reopen this report?') }}')">
                             <button type="submit" class="btn btn-sm btn-danger">
-                                <i class="fas fa-undo"></i> Reopen
+                                <i class="fas fa-undo"></i> {{ _('Reopen') }}
                             </button>
                         </form>
                     {% endif %}
@@ -67,10 +67,10 @@
                 <div class="report-media">
                     {% if report.images %}
                         <div class="media-group">
-                            <h4>Images:</h4>
+                            <h4>{{ _('Images:') }}</h4>
                             <div class="image-grid">
                                 {% for img in report.images %}
-                                    <img src="{{ img.url }}" alt="Report Image" class="report-img" onclick="window.open(this.src)">
+                                    <img src="{{ img.url }}" alt="{{ _('Report Image') }}" class="report-img" onclick="window.open(this.src)">
                                 {% endfor %}
                             </div>
                         </div>
@@ -78,11 +78,11 @@
                     
                     {% if report.voice_notes %}
                         <div class="media-group">
-                            <h4>Voice Note:</h4>
+                            <h4>{{ _('Voice Note:') }}</h4>
                             {% for voice in report.voice_notes %}
                                 <audio controls>
                                     <source src="{{ voice.url }}" type="audio/mpeg">
-                                    Your browser does not support the audio element.
+                                    {{ _('Your browser does not support the audio element.') }}
                                 </audio>
                             {% endfor %}
                         </div>

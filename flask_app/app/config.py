@@ -11,3 +11,22 @@ class Config:
     CLOUDINARY_NAME = os.environ.get('CLOUDINARY_NAME')
     CLOUDINARY_API_KEY = os.environ.get('CLOUDINARY_API_KEY')
     CLOUDINARY_API_SECRET = os.environ.get('CLOUDINARY_API_SECRET')
+    
+    LANGUAGES = {
+        'en': 'English',
+        'hi': 'हिन्दी (Hindi)',
+        'bn': 'বাংলা (Bengali)',
+        'te': 'తెలుగు (Telugu)',
+        'mr': 'मराठी (Marathi)',
+        'ta': 'தமிழ் (Tamil)',
+        'gu': 'ગુજરાતી (Gujarati)',
+        'kn': 'ಕನ್ನಡ (Kannada)',
+        'ml': 'മലയാളം (Malayalam)',
+        'pa': 'ਪੰਜਾਬੀ (Punjabi)',
+        'or': 'ଓଡ଼ିଆ (Odia)',
+        'as': 'অসমীয়া (Assamese)',
+        'ks': 'کأشُر (Kashmiri)',
+        'sd': 'سنڌي (Sindhi)',
+        'sa': 'संस्कृतम् (Sanskrit)',
+        'ur': 'اردو (Urdu)'
+    }

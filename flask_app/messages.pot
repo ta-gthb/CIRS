@@ -1,0 +1,815 @@
+# Translations template for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-06-07 09:41+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/routes/admin.py:75
+msgid "Unauthorized"
+msgstr ""
+
+#: app/routes/admin.py:103
+msgid "Report approved."
+msgstr ""
+
+#: app/routes/admin.py:114
+msgid "Report resolved."
+msgstr ""
+
+#: app/routes/admin.py:124
+msgid "User deletion approved."
+msgstr ""
+
+#: app/routes/auth.py:26
+msgid "Officer not registered. Contact administrator."
+msgstr ""
+
+#: app/routes/auth.py:30
+#, python-format
+msgid "Number registered as %(role)s. Choose correct role."
+msgstr ""
+
+#: app/routes/auth.py:34
+msgid "Account is inactive or deleted."
+msgstr ""
+
+#: app/routes/auth.py:61
+msgid "Invalid or expired OTP."
+msgstr ""
+
+#: app/routes/citizen.py:83
+msgid "Profile updated successfully!"
+msgstr ""
+
+#: app/routes/citizen.py:116
+msgid ""
+"A similar report already exists in this location. Your upvote has been "
+"added to it."
+msgstr ""
+
+#: app/routes/citizen.py:118
+msgid "A similar report already exists and you have already upvoted it."
+msgstr ""
+
+#: app/routes/citizen.py:120
+msgid "You have already submitted a similar report in this location."
+msgstr ""
+
+#: app/routes/citizen.py:140
+msgid "You can only upload up to 3 images."
+msgstr ""
+
+#: app/routes/citizen.py:157
+msgid "Report submitted successfully!"
+msgstr ""
+
+#: app/routes/citizen.py:169
+msgid "You cannot upvote your own report."
+msgstr ""
+
+#: app/routes/citizen.py:173
+msgid "Already upvoted"
+msgstr ""
+
+#: app/routes/citizen.py:191
+msgid "Comment added."
+msgstr ""
+
+#: app/routes/citizen.py:199
+msgid "Unauthorized."
+msgstr ""
+
+#: app/routes/citizen.py:205
+msgid "Report reopened."
+msgstr ""
+
+#: app/routes/citizen.py:207
+msgid "Report cannot be reopened."
+msgstr ""
+
+#: app/routes/citizen.py:216
+msgid "Deletion request submitted to your assigned officer."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:5
+msgid "Admin Officer Dashboard"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:6
+msgid "Welcome"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:6
+msgid "Assigned to:"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:74
+#: app/templates/status.html:41
+msgid "Priority:"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:14
+msgid "All Priorities"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:15 app/templates/live_map.html:10
+#: app/templates/submit_report.html:30
+msgid "Critical"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:16 app/templates/live_map.html:11
+#: app/templates/submit_report.html:29
+msgid "High"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:17 app/templates/live_map.html:12
+#: app/templates/submit_report.html:28
+msgid "Medium"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:18 app/templates/live_map.html:13
+#: app/templates/submit_report.html:27
+msgid "Low"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:22 app/templates/status.html:11
+msgid "From:"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:26 app/templates/status.html:15
+msgid "To:"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:30 app/templates/status.html:19
+msgid "Filter"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:31 app/templates/status.html:20
+msgid "Clear"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:39
+msgid "Total Reports"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:43
+msgid "Pending"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:47
+msgid "Approved"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:51
+msgid "Resolved"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:57
+msgid "Manage Reports"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:180
+msgid "Title"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:63 app/templates/profile.html:14
+msgid "Citizen ID"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:182
+#: app/templates/submit_report.html:25
+msgid "Priority"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:183
+#: app/templates/base.html:20
+msgid "Status"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:66
+msgid "Date"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:67
+msgid "Actions"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:74
+msgid "N/A"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:79
+msgid "View"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:81
+msgid "Approve"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:84
+msgid "Resolve"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:87 app/templates/status.html:53
+msgid "Message"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:95
+msgid "No reports found matching filters."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:104
+msgid "Report Details"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:108
+msgid "Close"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:116
+msgid "Resolve Report"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:118
+msgid "Enter resolution notes..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:120
+msgid "Cancel"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:121
+msgid "Mark as Resolved"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:170 app/templates/status.html:73
+msgid "Report Image"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:181 app/templates/submit_report.html:14
+msgid "Category"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:184
+msgid "Submitted On"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:185
+msgid "Description"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:186 app/templates/submit_report.html:41
+msgid "Location"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:190
+msgid "Captured Images"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:191
+msgid "No images uploaded"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:194
+msgid "Voice Notes"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:195
+msgid "No voice notes uploaded"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:217
+msgid "Failed to fetch report details"
+msgstr ""
+
+#: app/templates/admin_profile.html:5
+msgid "Admin Officer Profile"
+msgstr ""
+
+#: app/templates/admin_profile.html:7
+msgid "Name:"
+msgstr ""
+
+#: app/templates/admin_profile.html:8
+msgid "Phone:"
+msgstr ""
+
+#: app/templates/admin_profile.html:9
+msgid "Role:"
+msgstr ""
+
+#: app/templates/admin_profile.html:9
+msgid "Authority / Admin Officer"
+msgstr ""
+
+#: app/templates/admin_profile.html:10
+msgid "Assigned State:"
+msgstr ""
+
+#: app/templates/admin_profile.html:11
+msgid "Assigned District:"
+msgstr ""
+
+#: app/templates/base.html:17
+msgid "Dashboard"
+msgstr ""
+
+#: app/templates/base.html:18
+msgid "Reports"
+msgstr ""
+
+#: app/templates/base.html:19 app/templates/public_forum.html:5
+msgid "Public Forum"
+msgstr ""
+
+#: app/templates/base.html:21 app/templates/index.html:37
+msgid "Live Map"
+msgstr ""
+
+#: app/templates/base.html:23 app/templates/base.html:28
+msgid "Profile"
+msgstr ""
+
+#: app/templates/base.html:26
+msgid "Admin Dashboard"
+msgstr ""
+
+#: app/templates/base.html:31
+msgid "Logout"
+msgstr ""
+
+#: app/templates/base.html:33
+msgid "Login"
+msgstr ""
+
+#: app/templates/base.html:91
+msgid "Civic Issue Reporting System (CIRS). All rights reserved."
+msgstr ""
+
+#: app/templates/base.html:98
+msgid "Report Chat"
+msgstr ""
+
+#: app/templates/base.html:105
+msgid "Type a message..."
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:6
+msgid "Welcome to Your Dashboard"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:7
+msgid "Your portal for reporting and tracking civic issues in your community."
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
+msgid "Submit New Report"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:17
+msgid "Trending/Nearby Issues"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:18
+msgid "High-priority and trending reports in the portal."
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:30
+msgid "General"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:31
+msgid "Upvote"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:36
+msgid "No issues reported yet."
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:40
+msgid "View All in Public Forum"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:45
+msgid "Quick Links"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:49
+msgid "Track My Reports"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:53
+msgid "View Live Map"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:57
+msgid "Manage Profile"
+msgstr ""
+
+#: app/templates/citizen_dashboard.html:98
+msgid "Upvoted"
+msgstr ""
+
+#: app/templates/index.html:5
+msgid "Welcome to CIRS !"
+msgstr ""
+
+#: app/templates/index.html:6
+msgid "--Report today for a better tomorrow"
+msgstr ""
+
+#: app/templates/index.html:7
+msgid "Report, Track, and Resolve Local Issues Together"
+msgstr ""
+
+#: app/templates/index.html:11
+msgid "Issues Resolved"
+msgstr ""
+
+#: app/templates/index.html:15
+msgid "Active Users"
+msgstr ""
+
+#: app/templates/index.html:19
+msgid "Cities"
+msgstr ""
+
+#: app/templates/index.html:23
+msgid "Get Started Now"
+msgstr ""
+
+#: app/templates/index.html:28
+msgid "Powerful Features"
+msgstr ""
+
+#: app/templates/index.html:32
+msgid "Media Reporting"
+msgstr ""
+
+#: app/templates/index.html:33
+msgid "Capture issues with photos and voice notes."
+msgstr ""
+
+#: app/templates/index.html:38
+msgid "Visualize reported issues in real-time."
+msgstr ""
+
+#: app/templates/index.html:42
+msgid "Analytics"
+msgstr ""
+
+#: app/templates/index.html:43
+msgid "Track resolution status and response times."
+msgstr ""
+
+#: app/templates/live_map.html:5
+msgid "Live Map - Community Issues"
+msgstr ""
+
+#: app/templates/live_map.html:9
+msgid "Legend"
+msgstr ""
+
+#: app/templates/live_map.html:73 app/templates/status.html:40
+msgid "Category:"
+msgstr ""
+
+#: app/templates/live_map.html:75
+msgid "Status:"
+msgstr ""
+
+#: app/templates/login.html:5
+msgid "Login / Register"
+msgstr ""
+
+#: app/templates/login.html:8
+msgid "Mobile Number"
+msgstr ""
+
+#: app/templates/login.html:17
+msgid "I am a:"
+msgstr ""
+
+#: app/templates/login.html:20
+msgid "Citizen"
+msgstr ""
+
+#: app/templates/login.html:22
+msgid "Officer"
+msgstr ""
+
+#: app/templates/login.html:25
+msgid "Send OTP"
+msgstr ""
+
+#: app/templates/login.html:27
+msgid "Demo OTP: 1234"
+msgstr ""
+
+#: app/templates/login.html:66
+msgid "Please enter 10 digits"
+msgstr ""
+
+#: app/templates/profile.html:5
+msgid "User Profile"
+msgstr ""
+
+#: app/templates/profile.html:9
+msgid "Full Name"
+msgstr ""
+
+#: app/templates/profile.html:10
+msgid "Enter your full name"
+msgstr ""
+
+#: app/templates/profile.html:15
+msgid "Not Assigned"
+msgstr ""
+
+#: app/templates/profile.html:19
+msgid "Phone Number"
+msgstr ""
+
+#: app/templates/profile.html:21
+msgid "Phone number cannot be changed."
+msgstr ""
+
+#: app/templates/profile.html:25
+msgid "Address"
+msgstr ""
+
+#: app/templates/profile.html:26
+msgid "Enter your address"
+msgstr ""
+
+#: app/templates/profile.html:31 app/templates/submit_report.html:52
+msgid "State"
+msgstr ""
+
+#: app/templates/profile.html:33
+msgid "Select State"
+msgstr ""
+
+#: app/templates/profile.html:37
+msgid "District"
+msgstr ""
+
+#: app/templates/profile.html:39 app/templates/profile.html:133
+msgid "Select District"
+msgstr ""
+
+#: app/templates/profile.html:44
+msgid "Update Profile"
+msgstr ""
+
+#: app/templates/profile.html:49
+msgid "Account Management"
+msgstr ""
+
+#: app/templates/profile.html:51
+msgid ""
+"Are you sure you want to request account deletion? This will be reviewed "
+"by your assigned officer."
+msgstr ""
+
+#: app/templates/profile.html:52
+msgid "Request Account Deletion"
+msgstr ""
+
+#: app/templates/profile.html:55
+msgid "Account deletion request is pending approval."
+msgstr ""
+
+#: app/templates/public_forum.html:14
+msgid "Posted on"
+msgstr ""
+
+#: app/templates/public_forum.html:14
+msgid "by"
+msgstr ""
+
+#: app/templates/public_forum.html:14 app/templates/public_forum.html:28
+msgid "Anonymous"
+msgstr ""
+
+#: app/templates/public_forum.html:19
+msgid "Upvotes"
+msgstr ""
+
+#: app/templates/public_forum.html:21 app/templates/public_forum.html:25
+msgid "Comments"
+msgstr ""
+
+#: app/templates/public_forum.html:34
+msgid "Add a comment..."
+msgstr ""
+
+#: app/templates/public_forum.html:35
+msgid "Post"
+msgstr ""
+
+#: app/templates/status.html:5
+msgid "My Submitted Reports"
+msgstr ""
+
+#: app/templates/status.html:27
+msgid "No reports found matching the criteria."
+msgstr ""
+
+#: app/templates/status.html:42
+msgid "Location:"
+msgstr ""
+
+#: app/templates/status.html:42
+msgid "Unknown"
+msgstr ""
+
+#: app/templates/status.html:43
+msgid "Upvotes:"
+msgstr ""
+
+#: app/templates/status.html:49
+msgid "View Marked Location"
+msgstr ""
+
+#: app/templates/status.html:57
+msgid "Are you sure you want to reopen this report?"
+msgstr ""
+
+#: app/templates/status.html:59
+msgid "Reopen"
+msgstr ""
+
+#: app/templates/status.html:70
+msgid "Images:"
+msgstr ""
+
+#: app/templates/status.html:81
+msgid "Voice Note:"
+msgstr ""
+
+#: app/templates/status.html:85
+msgid "Your browser does not support the audio element."
+msgstr ""
+
+#: app/templates/submit_report.html:8
+msgid "Issue Title"
+msgstr ""
+
+#: app/templates/submit_report.html:9
+msgid "Brief title of the issue"
+msgstr ""
+
+#: app/templates/submit_report.html:16
+msgid "Select Category"
+msgstr ""
+
+#: app/templates/submit_report.html:17
+msgid "Roads & Potholes"
+msgstr ""
+
+#: app/templates/submit_report.html:18
+msgid "Water Supply"
+msgstr ""
+
+#: app/templates/submit_report.html:19
+msgid "Electricity"
+msgstr ""
+
+#: app/templates/submit_report.html:20
+msgid "Sanitation & Garbage"
+msgstr ""
+
+#: app/templates/submit_report.html:21
+msgid "Other"
+msgstr ""
+
+#: app/templates/submit_report.html:36
+msgid "Issue Description"
+msgstr ""
+
+#: app/templates/submit_report.html:37
+msgid "Provide details about the issue..."
+msgstr ""
+
+#: app/templates/submit_report.html:42
+msgid "Location will be auto-fetched, but you can adjust it on the map."
+msgstr ""
+
+#: app/templates/submit_report.html:48
+msgid "City/District"
+msgstr ""
+
+#: app/templates/submit_report.html:59
+msgid "Upload Images (Max 3, Max 5MB each)"
+msgstr ""
+
+#: app/templates/submit_report.html:61
+msgid "Live Geo-Camera"
+msgstr ""
+
+#: app/templates/submit_report.html:63
+msgid "Upload Files"
+msgstr ""
+
+#: app/templates/submit_report.html:72
+msgid "Capture Photo"
+msgstr ""
+
+#: app/templates/submit_report.html:73
+msgid "Switch"
+msgstr ""
+
+#: app/templates/submit_report.html:74
+msgid "Close Camera"
+msgstr ""
+
+#: app/templates/submit_report.html:85
+msgid "Voice Note"
+msgstr ""
+
+#: app/templates/submit_report.html:87
+msgid "Record"
+msgstr ""
+
+#: app/templates/submit_report.html:88
+msgid "Stop"
+msgstr ""
+
+#: app/templates/submit_report.html:91
+msgid "OR upload file"
+msgstr ""
+
+#: app/templates/submit_report.html:95
+msgid "Remove"
+msgstr ""
+
+#: app/templates/submit_report.html:99
+msgid "Submit Report"
+msgstr ""
+
+#: app/templates/submit_report.html:220
+msgid "File"
+msgstr ""
+
+#: app/templates/submit_report.html:220
+msgid "exceeds 5MB limit"
+msgstr ""
+
+#: app/templates/submit_report.html:241 app/templates/submit_report.html:281
+msgid "Maximum 3 images reached"
+msgstr ""
+
+#: app/templates/submit_report.html:265
+msgid "Camera access denied or not available"
+msgstr ""
+
+#: app/templates/submit_report.html:323
+msgid "Location data pending..."
+msgstr ""
+
+#: app/templates/submit_report.html:343
+msgid "Please upload or capture at least one image of the issue."
+msgstr ""
+
+#: app/templates/submit_report.html:382
+msgid "Recording..."
+msgstr ""
+
+#: app/templates/submit_report.html:397
+msgid "Microphone access denied"
+msgstr ""
+
+#: app/templates/verify_otp.html:5
+msgid "Verify OTP"
+msgstr ""
+
+#: app/templates/verify_otp.html:6
+msgid "Sent to:"
+msgstr ""
+
+#: app/templates/verify_otp.html:9
+msgid "Enter 4-Digit OTP"
+msgstr ""
+
+#: app/templates/verify_otp.html:17
+msgid "Verify & Login"
+msgstr ""
+
+#: app/templates/verify_otp.html:54
+msgid "Please enter 4 digits"
+msgstr ""
+

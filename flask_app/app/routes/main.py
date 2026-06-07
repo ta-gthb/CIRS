@@ -1,10 +1,11 @@
-from flask import render_template, jsonify, request
+from flask import render_template, jsonify, request, session, redirect, url_for, current_app
 from flask_login import login_required, current_user
 from . import main_bp
 from ..models.models import User, Report, Message, db
 
 @main_bp.route('/')
 def index():
+    # ... (rest of index)
     resolved_count = Report.query.filter_by(status='resolved').count()
     active_users = User.query.filter_by(is_active=True).count()
     cities_count = db.session.query(Report.city).filter(Report.city != None).distinct().count()
@@ -17,6 +18,12 @@ def index():
                            users=active_users, 
                            cities=cities_count,
                            pending=pending_count)
+
+@main_bp.route('/set_language/<lang_code>')
+def set_language(lang_code):
+    if lang_code in current_app.config['LANGUAGES']:
+        session['language'] = lang_code
+    return redirect(request.referrer or url_for('main.index'))
 
 @main_bp.route('/api/messages/<int:report_id>', methods=['GET'])
 @login_required
