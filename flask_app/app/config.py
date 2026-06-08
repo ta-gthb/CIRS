@@ -6,6 +6,11 @@ load_dotenv()
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
     
+    # Supabase Configuration
+    SUPABASE_URL = os.environ.get('SUPABASE_URL')
+    SUPABASE_KEY = os.environ.get('SUPABASE_KEY') # Use Service Role Key for uploads
+    SUPABASE_BUCKET = os.environ.get('SUPABASE_BUCKET', 'cirs-uploads')
+
     # Firebase Configuration
     FIREBASE_SERVICE_ACCOUNT_PATH = os.environ.get('FIREBASE_SERVICE_ACCOUNT_PATH')
     # These are needed for the frontend (passing to template)
