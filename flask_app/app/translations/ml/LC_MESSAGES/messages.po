@@ -559,7 +559,7 @@ msgstr "ഇപ്പോൾ ആരംഭിക്കുക"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "ലൈവ് മാപ്പ് കാണുക"
 
 #: app/templates/index.html:30

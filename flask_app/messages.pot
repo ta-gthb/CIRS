@@ -520,7 +520,7 @@ msgid "Get Started Now"
 msgstr ""
 
 #: app/templates/index.html:29
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr ""
 
 #: app/templates/index.html:30

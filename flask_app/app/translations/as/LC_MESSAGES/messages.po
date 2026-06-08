@@ -554,7 +554,7 @@ msgstr "এতিয়াই আৰম্ভ কৰক"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "জীৱন্ত মানচিত্ৰ চাওক"
 
 #: app/templates/index.html:30

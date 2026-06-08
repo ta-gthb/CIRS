@@ -563,7 +563,7 @@ msgstr "இப்போது தொடங்குங்கள்"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "நேரடி வரைபடத்தைக் காண்க"
 
 #: app/templates/index.html:30

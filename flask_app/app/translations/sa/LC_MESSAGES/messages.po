@@ -552,7 +552,7 @@ msgstr "अधुना आरभस्व"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "सजीवं मानचित्रं पश्यतु"
 
 #: app/templates/index.html:30

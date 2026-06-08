@@ -554,7 +554,7 @@ msgstr "आता सुरू करा"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "थेट नकाशा पहा"
 
 #: app/templates/index.html:30

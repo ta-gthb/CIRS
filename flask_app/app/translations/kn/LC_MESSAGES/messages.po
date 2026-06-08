@@ -556,7 +556,7 @@ msgstr "ಈಗಲೇ ಪ್ರಾರಂಭಿಸಿ"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "ಲೈವ್ ಮ್ಯಾಪ್ ನೋಡಿ"
 
 #: app/templates/index.html:30

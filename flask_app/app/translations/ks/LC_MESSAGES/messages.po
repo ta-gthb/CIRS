@@ -550,7 +550,7 @@ msgstr "وونؠ شروعات کٔرِو"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "لائیو نقشہ وُچھِو"
 
 #: app/templates/index.html:30

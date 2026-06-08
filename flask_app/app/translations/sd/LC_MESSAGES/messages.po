@@ -553,7 +553,7 @@ msgstr "هاڻي شروع ڪريو"
 
 #: app/templates/index.html:29
 #, fuzzy
-msgid "Public Live Map"
+msgid "Live Map"
 msgstr "لائيو نقشو ڏسو"
 
 #: app/templates/index.html:30
