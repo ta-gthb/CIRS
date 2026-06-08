@@ -9,4 +9,6 @@ pyjwt
 psycopg2-binary
 gunicorn
 eventlet
+gevent
+gevent-websocket
 firebase-admin

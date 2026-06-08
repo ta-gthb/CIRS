@@ -3,7 +3,7 @@ services:
     name: envision2k26
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn --worker-class eventlet -w 1 run:app"
+    startCommand: "gunicorn --worker-class gevent -w 1 run:app"
     rootDirectory: flask_app
     envVars:
       - key: DATABASE_URL
