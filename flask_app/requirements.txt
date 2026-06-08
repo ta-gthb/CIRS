@@ -9,3 +9,4 @@ pyjwt
 psycopg2-binary
 gunicorn
 eventlet
+firebase-admin

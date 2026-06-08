@@ -28,27 +28,46 @@
 
 {% block scripts %}
 <script>
-    const boxes = document.querySelectorAll('.otp-box');
+    const otpBoxes = document.querySelectorAll('.otp-box');
     const fullOtp = document.getElementById('fullOtp');
     const form = document.getElementById('otpForm');
 
-    boxes.forEach((box, idx) => {
-        box.addEventListener('input', (e) => {
-            if (e.target.value.length === 1 && idx < boxes.length - 1) {
-                boxes[idx + 1].focus();
-            }
-        });
+    function setupBoxNavigation(boxes) {
+        boxes.forEach((box, idx) => {
+            box.addEventListener('focus', () => box.select());
+            
+            box.addEventListener('input', (e) => {
+                const val = e.target.value;
+                if (val.length === 1 && idx < boxes.length - 1) {
+                    boxes[idx + 1].focus();
+                }
+            });
 
-        box.addEventListener('keydown', (e) => {
-            if (e.key === 'Backspace' && !e.target.value && idx > 0) {
-                boxes[idx - 1].focus();
-            }
+            box.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !box.value && idx > 0) {
+                    boxes[idx - 1].focus();
+                }
+            });
+
+            box.addEventListener('paste', (e) => {
+                e.preventDefault();
+                const data = (e.clipboardData || window.clipboardData).getData('text');
+                const digits = data.replace(/\D/g, '').split('');
+                digits.forEach((digit, i) => {
+                    if (idx + i < boxes.length) {
+                        boxes[idx + i].value = digit;
+                        if (idx + i < boxes.length - 1) boxes[idx + i + 1].focus();
+                    }
+                });
+            });
         });
-    });
+    }
+
+    setupBoxNavigation(otpBoxes);
 
     form.addEventListener('submit', (e) => {
         let otpVal = '';
-        boxes.forEach(box => otpVal += box.value);
+        otpBoxes.forEach(box => otpVal += box.value);
         if (otpVal.length !== 4) {
             e.preventDefault();
             alert("{{ _('Please enter 4 digits') }}");

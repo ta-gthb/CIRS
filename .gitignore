@@ -23,3 +23,7 @@ package-lock.json
 # IDEs
 .vscode/
 .idea/
+
+# Firebase service account
+flask_app/firebase-service-account.json
+
