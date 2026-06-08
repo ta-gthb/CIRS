@@ -26,7 +26,8 @@ def create_app(config_class=Config):
     db.init_app(app)
     
     # Register models
-    from .models import models
+    with app.app_context():
+        from .models.models import User, Report, Upvote, Comment, ReportImage, VoiceNote, Message
 
     login_manager.init_app(app)
     socketio.init_app(app, cors_allowed_origins="*")
