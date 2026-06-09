@@ -3,7 +3,7 @@ from flask_login import login_required, current_user
 from flask_babel import _
 from datetime import datetime, timedelta
 from . import admin_bp
-from ..models.models import Report, User, db
+from ..models.models import Report, User, db, get_ist_time
 
 @admin_bp.route('/dashboard')
 @login_required
@@ -110,6 +110,7 @@ def resolve_report(report_id):
     report = Report.query.get_or_404(report_id)
     report.status = 'resolved'
     report.resolution_notes = notes
+    report.resolved_at = get_ist_time()
     db.session.commit()
     flash(_('Report resolved.'), 'success')
     return redirect(url_for('admin.dashboard'))
@@ -134,9 +135,15 @@ def approve_deletion(user_id):
     user = User.query.get_or_404(user_id)
     user.account_deletion_status = 'approved'
     user.is_active = False
-    user.deleted_at = datetime.utcnow()
+    user.deleted_at = get_ist_time()
+    
+    # Delete pending reports of this user
+    pending_reports = Report.query.filter_by(user_id=user.id, status='pending').all()
+    for report in pending_reports:
+        db.session.delete(report)
+        
     db.session.commit()
-    flash(_('User deletion approved.'), 'success')
+    flash(_('User deletion approved. Pending reports removed.'), 'success')
     return redirect(url_for('admin.dashboard'))
 
 @admin_bp.route('/reject-deletion/<int:user_id>')

@@ -314,10 +314,45 @@ body { font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; l
 [data-theme='dark'] .leaflet-container { background: #303030; }
 [data-theme='dark'] .leaflet-popup-content-wrapper, [data-theme='dark'] .leaflet-popup-tip { background-color: var(--card-bg); color: var(--text-color); }
 
-/* Responsive */
+/* Responsive and Mobile Optimizations */
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .stats-row { gap: 1.5rem; }
     .dashboard-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .container { width: 92%; }
+    .hero { padding: 2.5rem 1rem; }
+    .hero h1 { font-size: 1.8rem; }
+    .hero h2 { font-size: 1rem; }
+    .stats-row { gap: 1rem; flex-direction: column; align-items: center; }
+    .stat-item .num { font-size: 1.5rem; }
+    
+    .logo span { display: none; } /* Hide text logo on very small screens, keep icon */
+    .nav-wrapper { padding: 0 0.5rem; }
+    
+    .section-card { padding: 1rem; }
+    .modal-content { width: 90%; margin: 20% auto; padding: 1.5rem; }
+    .modal-content.large { width: 95%; margin: 5% auto; }
+    
+    .btn-get-started { padding: 0.8rem 1.5rem; font-size: 1rem; }
+    
+    /* Grid adjustments for small screens */
+    .features-grid { grid-template-columns: 1fr; }
+    
+    /* Table responsiveness */
+    .admin-table-container { overflow-x: auto; }
+    .admin-table th, .admin-table td { padding: 0.6rem; font-size: 0.85rem; }
+    
+    /* Chat adjustments */
+    .chat-modal { width: 90%; right: 5%; left: 5%; bottom: 10px; }
+}
+
+/* Specific fix for 375 * 680 and similar devices */
+@media (max-width: 380px) {
+    .nav-btn { padding: 0.4rem 0.6rem; font-size: 0.75rem; }
+    .controls-area { gap: 0.4rem; padding-left: 0.4rem; }
+    .language-selector { font-size: 0.75rem; padding: 0.15rem 0.3rem; }
 }

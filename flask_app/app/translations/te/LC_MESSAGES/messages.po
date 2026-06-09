@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 23:02+0530\n"
+"POT-Creation-Date: 2026-06-09 21:38+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: te\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75 app/routes/admin.py:121
+#: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
 msgstr "అనధికారిక"
 
@@ -26,27 +26,30 @@ msgstr "అనధికారిక"
 msgid "Report approved."
 msgstr "నివేదిక ఆమోదించబడింది."
 
-#: app/routes/admin.py:114
+#: app/routes/admin.py:115
 msgid "Report resolved."
 msgstr "నివేదిక పరిష్కరించబడింది."
 
-#: app/routes/admin.py:128
+#: app/routes/admin.py:129
 #, fuzzy
 msgid "Report rejected."
 msgstr "నివేదిక మళ్లీ తెరవబడింది."
 
-#: app/routes/admin.py:139
-msgid "User deletion approved."
+#: app/routes/admin.py:146
+#, fuzzy
+msgid "User deletion approved. Pending reports removed."
 msgstr "వినియోగదారు తొలగింపు ఆమోదించబడింది."
 
-#: app/routes/admin.py:148
+#: app/routes/admin.py:155
 #, fuzzy
 msgid "User deletion request rejected."
 msgstr "వినియోగదారు తొలగింపు ఆమోదించబడింది."
 
 #: app/routes/auth.py:21
 #, python-format
-msgid "You can register to the system again on %(date)s"
+msgid ""
+"You can register to the system again on %(date)s as your account is "
+"deleted recently"
 msgstr ""
 
 #: app/routes/auth.py:40
@@ -66,63 +69,68 @@ msgstr "ఖాతా నిష్క్రియంగా ఉంది లేద
 msgid "Invalid or expired OTP."
 msgstr "చెల్లని లేదా గడువు ముగిసిన OTP."
 
-#: app/routes/citizen.py:84
+#: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
 msgstr "ప్రొఫైల్ విజయవంతంగా నవీకరించబడింది!"
 
-#: app/routes/citizen.py:160
+#: app/routes/citizen.py:161
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
 msgstr "ఈ ప్రదేశంలో ఇప్పటికే ఇటువంటి నివేదిక ఉంది. మీ ఓటు దానికి జోడించబడింది."
 
-#: app/routes/citizen.py:162
+#: app/routes/citizen.py:163
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "ఇటువంటి నివేదిక ఇప్పటికే ఉంది మరియు మీరు ఇప్పటికే దానికి ఓటు వేశారు."
 
-#: app/routes/citizen.py:164
+#: app/routes/citizen.py:165
 msgid "You have already submitted a similar report in this location."
 msgstr "మీరు ఇప్పటికే ఈ ప్రదేశంలో ఇటువంటి నివేదికను సమర్పించారు."
 
-#: app/routes/citizen.py:184
+#: app/routes/citizen.py:186
 msgid "You can only upload up to 3 images."
 msgstr "మీరు 3 చిత్రాల వరకు మాత్రమే అప్‌లోడ్ చేయగలరు."
 
-#: app/routes/citizen.py:201
+#: app/routes/citizen.py:203
 msgid "Report submitted successfully!"
 msgstr "నివేదిక విజయవంతంగా సమర్పించబడింది!"
 
-#: app/routes/citizen.py:213
+#: app/routes/citizen.py:214
 msgid "You cannot upvote your own report."
 msgstr "మీరు మీ స్వంత నివేదికకు ఓటు వేయలేరు."
 
-#: app/routes/citizen.py:217
+#: app/routes/citizen.py:218
 msgid "Already upvoted"
 msgstr "ఇప్పటికే ఓటు వేశారు"
 
-#: app/routes/citizen.py:235
+#: app/routes/citizen.py:236
 msgid "Comment added."
 msgstr "వ్యాఖ్య జోడించబడింది."
 
-#: app/routes/citizen.py:243
+#: app/routes/citizen.py:244
 msgid "Unauthorized."
 msgstr "అనధికారిక."
 
-#: app/routes/citizen.py:249
+#: app/routes/citizen.py:251
+#, fuzzy
+msgid "Report cannot be reopened after 7 days of resolution."
+msgstr "నివేదికను మళ్లీ తెరవడం సాధ్యం కాదు."
+
+#: app/routes/citizen.py:256
 msgid "Report reopened."
 msgstr "నివేదిక మళ్లీ తెరవబడింది."
 
-#: app/routes/citizen.py:251
+#: app/routes/citizen.py:258
 msgid "Report cannot be reopened."
 msgstr "నివేదికను మళ్లీ తెరవడం సాధ్యం కాదు."
 
-#: app/routes/citizen.py:259
+#: app/routes/citizen.py:266
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:271
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -225,7 +233,7 @@ msgid "Citizen ID"
 msgstr "సిటిజన్ ఐడి"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/submit_report.html:25
+#: app/templates/live_map.html:9 app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "ప్రాధాన్యత"
 
@@ -550,7 +558,7 @@ msgstr "నగరాలు"
 msgid "Get Started Now"
 msgstr "ఇప్పుడే ప్రారంభించండి"
 
-#: app/templates/index.html:29
+#: app/templates/index.html:29 app/templates/index.html:51
 #, fuzzy
 msgid "Live Map"
 msgstr "లైవ్ మ్యాప్ చూడండి"
@@ -572,10 +580,6 @@ msgstr "మీడియా రిపోర్టింగ్"
 msgid "Capture issues with photos and voice notes."
 msgstr "ఫోటోలు మరియు వాయిస్ నోట్స్‌తో సమస్యలను క్యాప్చర్ చేయండి."
 
-#: app/templates/index.html:51
-msgid "Live Map"
-msgstr "లైవ్ మ్యాప్"
-
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
 msgstr "నివేదించబడిన సమస్యలను నిజ సమయంలో దృశ్యమానం చేయండి."
@@ -591,10 +595,6 @@ msgstr "పరిష్కార స్థితి మరియు ప్రత
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
 msgstr "లైవ్ మ్యాప్ - కమ్యూనిటీ సమస్యలు"
-
-#: app/templates/live_map.html:9
-msgid "Legend"
-msgstr "సూచిక"
 
 #: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
@@ -628,7 +628,7 @@ msgstr "OTP పంపండి"
 msgid "Demo OTP: 1234"
 msgstr "డెమో OTP: 1234"
 
-#: app/templates/login.html:65
+#: app/templates/login.html:84
 msgid "Please enter 10 digits"
 msgstr "దయచేసి 10 అంకెలను నమోదు చేయండి"
 
@@ -858,78 +858,84 @@ msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "చిత్రాలను అప్‌లోడ్ చేయండి (గరిష్టంగా 3, ఒక్కొక్కటి గరిష్టంగా 5MB)"
 
 #: app/templates/submit_report.html:54
+msgid ""
+"Only the images captured by any geo-location based camera are acceptable "
+"for uploading !"
+msgstr ""
+
+#: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"
 msgstr "లైవ్ జియో-కెమెరా"
 
-#: app/templates/submit_report.html:56
+#: app/templates/submit_report.html:59
 msgid "Upload Files"
 msgstr "ఫైళ్ళను అప్‌లోడ్ చేయండి"
 
-#: app/templates/submit_report.html:65
+#: app/templates/submit_report.html:68
 msgid "Capture Photo"
 msgstr "ఫోటో తీయండి"
 
-#: app/templates/submit_report.html:66
+#: app/templates/submit_report.html:69
 msgid "Switch"
 msgstr "మార్చు"
 
-#: app/templates/submit_report.html:67
+#: app/templates/submit_report.html:70
 msgid "Close Camera"
 msgstr "కెమెరాను మూసివేయి"
 
-#: app/templates/submit_report.html:78
+#: app/templates/submit_report.html:81
 msgid "Voice Note"
 msgstr "వాయిస్ నోట్"
 
-#: app/templates/submit_report.html:80
+#: app/templates/submit_report.html:83
 msgid "Record"
 msgstr "రికార్డ్ చేయండి"
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:84
 msgid "Stop"
 msgstr "ఆపివేయి"
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:87
 msgid "OR upload file"
 msgstr "లేదా ఫైల్‌ను అప్‌లోడ్ చేయండి"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:91
 msgid "Remove"
 msgstr "తొలగించు"
 
-#: app/templates/submit_report.html:92
+#: app/templates/submit_report.html:95
 msgid "Submit Report"
 msgstr "నివేదికను సమర్పించండి"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "File"
 msgstr "ఫైల్"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "exceeds 5MB limit"
 msgstr "5MB పరిమితిని మించిపోయింది"
 
-#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
+#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
 msgid "Maximum 3 images reached"
 msgstr "గరిష్టంగా 3 చిత్రాలకు చేరుకున్నారు"
 
-#: app/templates/submit_report.html:250
+#: app/templates/submit_report.html:253
 msgid "Camera access denied or not available"
 msgstr "కెమెరా యాక్సెస్ నిరాకరించబడింది లేదా అందుబాటులో లేదు"
 
-#: app/templates/submit_report.html:306
+#: app/templates/submit_report.html:309
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:326
+#: app/templates/submit_report.html:329
 msgid "Please upload or capture at least one image of the issue."
 msgstr "దయచేసి సమస్యకు సంబంధించి కనీసం ఒక చిత్రాన్ని అప్‌లోడ్ చేయండి లేదా తీయండి."
 
-#: app/templates/submit_report.html:365
+#: app/templates/submit_report.html:368
 msgid "Recording..."
 msgstr "రికార్డింగ్..."
 
-#: app/templates/submit_report.html:380
+#: app/templates/submit_report.html:383
 msgid "Microphone access denied"
 msgstr "మైక్రోఫోన్ యాక్సెస్ నిరాకరించబడింది"
 
@@ -949,7 +955,7 @@ msgstr "4-అంకెల OTP ని నమోదు చేయండి"
 msgid "Verify & Login"
 msgstr "ధృవీకరించండి & లాగిన్ అవ్వండి"
 
-#: app/templates/verify_otp.html:54
+#: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
 msgstr "దయచేసి 4 అంకెలను నమోదు చేయండి"
 
@@ -1099,4 +1105,10 @@ msgstr "దయచేసి 4 అంకెలను నమోదు చేయం�
 
 #~ msgid "Login"
 #~ msgstr "లాగిన్"
+
+#~ msgid "You can register to the system again on %(date)s"
+#~ msgstr ""
+
+#~ msgid "Legend"
+#~ msgstr "సూచిక"
 

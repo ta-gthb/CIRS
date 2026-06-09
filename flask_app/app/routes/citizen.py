@@ -5,7 +5,7 @@ from flask import render_template, request, redirect, url_for, flash, jsonify, c
 from flask_login import login_required, current_user
 from flask_babel import _
 from . import citizen_bp
-from ..models.models import Report, User, db, ReportImage, VoiceNote, Upvote, Comment
+from ..models.models import Report, User, db, ReportImage, VoiceNote, Upvote, Comment, get_ist_time
 from ..utils.storage_utils import upload_file
 from ..utils.geo_utils import reverse_geocode
 from sqlalchemy import func
@@ -96,15 +96,18 @@ def submit_report():
         lng = float(lng_val) if lng_val else None
         city = request.form.get('city')
         state = request.form.get('state')
-        
-        # Try to get city and state from coordinates using reverse geocoding
-        if lat and lng and (not city or not state):
-            geo_city, geo_state = reverse_geocode(lat, lng)
-            if geo_city:
+        address = ""
+
+        # Try to get city (district), state and full address from coordinates
+        if lat and lng:
+            geo_city, geo_state, geo_addr = reverse_geocode(lat, lng)
+            if geo_city and not city:
                 city = geo_city
-            if geo_state:
+            if geo_state and not state:
                 state = geo_state
-        
+            if geo_addr:
+                address = geo_addr
+
         # If city/state still unknown, find nearest admin officer using border info (bounding boxes)
         # as a fallback to ensure the report is seen by SOMEONE
         if lat and lng and (not city or not state):
@@ -171,6 +174,7 @@ def submit_report():
             longitude=lng,
             city=city,
             state=state,
+            address=address,
             user_id=current_user.id
         )
         db.session.add(report)
@@ -241,6 +245,12 @@ def reopen_report(report_id):
         return redirect(url_for('citizen.status'))
         
     if report.status == 'resolved':
+        # Check if resolved within 7 days
+        if report.resolved_at:
+            if get_ist_time() > report.resolved_at + timedelta(days=7):
+                flash(_('Report cannot be reopened after 7 days of resolution.'), 'warning')
+                return redirect(url_for('citizen.status'))
+        
         report.status = 'acknowledged'
         db.session.commit()
         flash(_('Report reopened.'), 'info')

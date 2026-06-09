@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 23:02+0530\n"
+"POT-Creation-Date: 2026-06-09 21:38+0530\n"
 "PO-Revision-Date: 2026-06-07 11:05+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: or\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75 app/routes/admin.py:121
+#: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
 msgstr "ଅନଧିକୃତ"
 
@@ -26,27 +26,30 @@ msgstr "ଅନଧିକୃତ"
 msgid "Report approved."
 msgstr "ରିପୋର୍ଟ ଅନୁମୋଦିତ ହୋଇଛି।"
 
-#: app/routes/admin.py:114
+#: app/routes/admin.py:115
 msgid "Report resolved."
 msgstr "ରିପୋର୍ଟ ସମାଧାନ ହୋଇଛି।"
 
-#: app/routes/admin.py:128
+#: app/routes/admin.py:129
 #, fuzzy
 msgid "Report rejected."
 msgstr "ରିପୋର୍ଟ ପୁନର୍ବାର ଖୋଲାଗଲା।"
 
-#: app/routes/admin.py:139
-msgid "User deletion approved."
+#: app/routes/admin.py:146
+#, fuzzy
+msgid "User deletion approved. Pending reports removed."
 msgstr "ଉପଭୋକ୍ତା ବିଲୋପ ଅନୁମୋଦିତ।"
 
-#: app/routes/admin.py:148
+#: app/routes/admin.py:155
 #, fuzzy
 msgid "User deletion request rejected."
 msgstr "ଉପଭୋକ୍ତା ବିଲୋପ ଅନୁମୋଦିତ।"
 
 #: app/routes/auth.py:21
 #, python-format
-msgid "You can register to the system again on %(date)s"
+msgid ""
+"You can register to the system again on %(date)s as your account is "
+"deleted recently"
 msgstr ""
 
 #: app/routes/auth.py:40
@@ -66,11 +69,11 @@ msgstr "ଖାତା ନିଷ୍କ୍ରିୟ ଅଛି କିମ୍ବା �
 msgid "Invalid or expired OTP."
 msgstr "ଅବୈଧ କିମ୍ବା ମିଆଦ ଶେଷ ହୋଇଥିବା OTP।"
 
-#: app/routes/citizen.py:84
+#: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
 msgstr "ପ୍ରୋଫାଇଲ୍ ସଫଳତାର ସହିତ ଅଦ୍ୟତନ ହୋଇଛି!"
 
-#: app/routes/citizen.py:160
+#: app/routes/citizen.py:161
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,53 +81,58 @@ msgstr ""
 "ଏହି ସ୍ଥାନରେ ସମାନ ରିପୋର୍ଟ ପୂର୍ବରୁ ଅଛି। ଆପଣଙ୍କର ଅପଭୋଟ୍ (upvote) ଏଥିରେ ଯୋଡା "
 "ଯାଇଛି।"
 
-#: app/routes/citizen.py:162
+#: app/routes/citizen.py:163
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "ଏକ ସମାନ ରିପୋର୍ଟ ପୂର୍ବରୁ ଅଛି ଏବଂ ଆପଣ ପୂର୍ବରୁ ଏହାକୁ ଅପଭୋଟ୍ କରିଛନ୍ତି।"
 
-#: app/routes/citizen.py:164
+#: app/routes/citizen.py:165
 msgid "You have already submitted a similar report in this location."
 msgstr "ଆପଣ ପୂର୍ବରୁ ଏହି ସ୍ଥାନରେ ଏକ ସମାନ ରିପୋର୍ଟ ଦାଖଲ କରିଛନ୍ତି।"
 
-#: app/routes/citizen.py:184
+#: app/routes/citizen.py:186
 msgid "You can only upload up to 3 images."
 msgstr "ଆପଣ କେବଳ ୩ଟି ପର୍ଯ୍ୟନ୍ତ ଚିତ୍ର ଅପଲୋଡ୍ କରିପାରିବେ।"
 
-#: app/routes/citizen.py:201
+#: app/routes/citizen.py:203
 msgid "Report submitted successfully!"
 msgstr "ରିପୋର୍ଟ ସଫଳତାର ସହିତ ଦାଖଲ ହୋଇଛି!"
 
-#: app/routes/citizen.py:213
+#: app/routes/citizen.py:214
 msgid "You cannot upvote your own report."
 msgstr "ଆପଣ ନିଜର ରିପୋର୍ଟକୁ ଅପଭୋଟ୍ କରିପାରିବେ ନାହିଁ।"
 
-#: app/routes/citizen.py:217
+#: app/routes/citizen.py:218
 msgid "Already upvoted"
 msgstr "ପୂର୍ବରୁ ଅପଭୋଟ୍ କରାଯାଇଛି"
 
-#: app/routes/citizen.py:235
+#: app/routes/citizen.py:236
 msgid "Comment added."
 msgstr "ମନ୍ତବ୍ୟ ଯୋଡାଗଲା।"
 
-#: app/routes/citizen.py:243
+#: app/routes/citizen.py:244
 msgid "Unauthorized."
 msgstr "ଅନଧିକୃତ।"
 
-#: app/routes/citizen.py:249
+#: app/routes/citizen.py:251
+#, fuzzy
+msgid "Report cannot be reopened after 7 days of resolution."
+msgstr "ରିପୋର୍ଟ ପୁନର୍ବାର ଖୋଲାଯାଇପାରିବ ନାହିଁ।"
+
+#: app/routes/citizen.py:256
 msgid "Report reopened."
 msgstr "ରିପୋର୍ଟ ପୁନର୍ବାର ଖୋଲାଗଲା।"
 
-#: app/routes/citizen.py:251
+#: app/routes/citizen.py:258
 msgid "Report cannot be reopened."
 msgstr "ରିପୋର୍ଟ ପୁନର୍ବାର ଖୋଲାଯାଇପାରିବ ନାହିଁ।"
 
-#: app/routes/citizen.py:259
+#: app/routes/citizen.py:266
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:271
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -227,7 +235,7 @@ msgid "Citizen ID"
 msgstr "ନାଗରିକ ପରିଚୟ ପତ୍ର"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/submit_report.html:25
+#: app/templates/live_map.html:9 app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "ପ୍ରାଥମିକତା"
 
@@ -552,7 +560,7 @@ msgstr "ସହରଗୁଡିକ"
 msgid "Get Started Now"
 msgstr "ଏବେ ଆରମ୍ଭ କରନ୍ତୁ"
 
-#: app/templates/index.html:29
+#: app/templates/index.html:29 app/templates/index.html:51
 #, fuzzy
 msgid "Live Map"
 msgstr "ଜୀବନ୍ତ ମାନଚିତ୍ର ଦେଖନ୍ତୁ"
@@ -574,10 +582,6 @@ msgstr "ମିଡିଆ ରିପୋର୍ଟିଂ"
 msgid "Capture issues with photos and voice notes."
 msgstr "ଫଟୋ ଏବଂ ଭଏସ୍ ନୋଟ୍ ସହିତ ସମସ୍ୟାଗୁଡିକ ରେକର୍ଡ କରନ୍ତୁ।"
 
-#: app/templates/index.html:51
-msgid "Live Map"
-msgstr "ଜୀବନ୍ତ ମାନଚିତ୍ର"
-
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
 msgstr "ରିପୋର୍ଟ କରାଯାଇଥିବା ସମସ୍ୟାଗୁଡିକ ବାସ୍ତବ ସମୟରେ ଦେଖନ୍ତୁ।"
@@ -593,10 +597,6 @@ msgstr "ସମାଧାନ ସ୍ଥିତି ଏବଂ ପ୍ରତିକ୍ର
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
 msgstr "ଜୀବନ୍ତ ମାନଚିତ୍ର - ଗୋଷ୍ଠୀ ସମସ୍ୟା"
-
-#: app/templates/live_map.html:9
-msgid "Legend"
-msgstr "ସୂଚୀ"
 
 #: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
@@ -630,7 +630,7 @@ msgstr "OTP ପଠାନ୍ତୁ"
 msgid "Demo OTP: 1234"
 msgstr "ଡେମୋ OTP: 1234"
 
-#: app/templates/login.html:65
+#: app/templates/login.html:84
 msgid "Please enter 10 digits"
 msgstr "ଦୟାକରି ୧୦ଟି ଅଙ୍କ ପ୍ରବେଶ କରନ୍ତୁ"
 
@@ -860,78 +860,84 @@ msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "ଚିତ୍ର ଅପଲୋଡ୍ କରନ୍ତୁ (ସର୍ବାଧିକ ୩ଟି, ପ୍ରତ୍ୟେକ ସର୍ବାଧିକ ୫ MB)"
 
 #: app/templates/submit_report.html:54
+msgid ""
+"Only the images captured by any geo-location based camera are acceptable "
+"for uploading !"
+msgstr ""
+
+#: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"
 msgstr "ଜୀବନ୍ତ ଜିଓ-କ୍ୟାମେରା"
 
-#: app/templates/submit_report.html:56
+#: app/templates/submit_report.html:59
 msgid "Upload Files"
 msgstr "ଫାଇଲ୍ ଅପଲୋଡ୍ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:65
+#: app/templates/submit_report.html:68
 msgid "Capture Photo"
 msgstr "ଫଟୋ ଉଠାନ୍ତୁ"
 
-#: app/templates/submit_report.html:66
+#: app/templates/submit_report.html:69
 msgid "Switch"
 msgstr "ବଦଳାନ୍ତୁ (Switch)"
 
-#: app/templates/submit_report.html:67
+#: app/templates/submit_report.html:70
 msgid "Close Camera"
 msgstr "କ୍ୟାମେରା ବନ୍ଦ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:78
+#: app/templates/submit_report.html:81
 msgid "Voice Note"
 msgstr "ଭଏସ୍ ନୋଟ୍"
 
-#: app/templates/submit_report.html:80
+#: app/templates/submit_report.html:83
 msgid "Record"
 msgstr "ରେକର୍ଡ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:84
 msgid "Stop"
 msgstr "ବନ୍ଦ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:87
 msgid "OR upload file"
 msgstr "କିମ୍ବା ଫାଇଲ୍ ଅପଲୋଡ୍ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:91
 msgid "Remove"
 msgstr "ହଟାନ୍ତୁ"
 
-#: app/templates/submit_report.html:92
+#: app/templates/submit_report.html:95
 msgid "Submit Report"
 msgstr "ରିପୋର୍ଟ ଦାଖଲ କରନ୍ତୁ"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "File"
 msgstr "ଫାଇଲ୍"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "exceeds 5MB limit"
 msgstr "୫ MB ସୀମା ଅତିକ୍ରମ କରୁଛି"
 
-#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
+#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
 msgid "Maximum 3 images reached"
 msgstr "ସର୍ବାଧିକ ୩ଟି ଚିତ୍ର ହୋଇଗଲା"
 
-#: app/templates/submit_report.html:250
+#: app/templates/submit_report.html:253
 msgid "Camera access denied or not available"
 msgstr "କ୍ୟାମେରା ଆକ୍ସେସ୍ ମନା କରାଯାଇଛି କିମ୍ବା ଉପଲବ୍ଧ ନାହିଁ"
 
-#: app/templates/submit_report.html:306
+#: app/templates/submit_report.html:309
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:326
+#: app/templates/submit_report.html:329
 msgid "Please upload or capture at least one image of the issue."
 msgstr "ଦୟାକରି ସମସ୍ୟାର ଅତିକମରେ ଗୋଟିଏ ଚିତ୍ର ଅପଲୋଡ୍ କରନ୍ତୁ କିମ୍ବା ଉଠାନ୍ତୁ।"
 
-#: app/templates/submit_report.html:365
+#: app/templates/submit_report.html:368
 msgid "Recording..."
 msgstr "ରେକର୍ଡିଂ ଚାଲିଛି..."
 
-#: app/templates/submit_report.html:380
+#: app/templates/submit_report.html:383
 msgid "Microphone access denied"
 msgstr "ମାଇକ୍ରୋଫୋନ୍ ଆକ୍ସେସ୍ ମନା କରାଯାଇଛି"
 
@@ -951,7 +957,7 @@ msgstr "୪-ଅଙ୍କ ବିଶିଷ୍ଟ OTP ପ୍ରବେଶ କରନ�
 msgid "Verify & Login"
 msgstr "ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ଲଗ୍ ଇନ୍ କରନ୍ତୁ"
 
-#: app/templates/verify_otp.html:54
+#: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
 msgstr "ଦୟାକରି ୪ଟି ଅଙ୍କ ପ୍ରବେଶ କରନ୍ତୁ"
 
@@ -1102,4 +1108,10 @@ msgstr "ଦୟାକରି ୪ଟି ଅଙ୍କ ପ୍ରବେଶ କରନ�
 
 #~ msgid "Login"
 #~ msgstr "ଲଗ୍ ଇନ୍"
+
+#~ msgid "You can register to the system again on %(date)s"
+#~ msgstr ""
+
+#~ msgid "Legend"
+#~ msgstr "ସୂଚୀ"
 

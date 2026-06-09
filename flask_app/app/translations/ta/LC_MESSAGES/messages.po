@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 23:02+0530\n"
+"POT-Creation-Date: 2026-06-09 21:38+0530\n"
 "PO-Revision-Date: 2026-06-07 09:41+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75 app/routes/admin.py:121
+#: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
 msgstr "அங்கீகரிக்கப்படாதது"
 
@@ -26,27 +26,30 @@ msgstr "அங்கீகரிக்கப்படாதது"
 msgid "Report approved."
 msgstr "புகார் அங்கீகரிக்கப்பட்டது."
 
-#: app/routes/admin.py:114
+#: app/routes/admin.py:115
 msgid "Report resolved."
 msgstr "புகார் தீர்க்கப்பட்டது."
 
-#: app/routes/admin.py:128
+#: app/routes/admin.py:129
 #, fuzzy
 msgid "Report rejected."
 msgstr "புகார் மீண்டும் திறக்கப்பட்டது."
 
-#: app/routes/admin.py:139
-msgid "User deletion approved."
+#: app/routes/admin.py:146
+#, fuzzy
+msgid "User deletion approved. Pending reports removed."
 msgstr "பயனர் நீக்கம் அங்கீகரிக்கப்பட்டது."
 
-#: app/routes/admin.py:148
+#: app/routes/admin.py:155
 #, fuzzy
 msgid "User deletion request rejected."
 msgstr "பயனர் நீக்கம் அங்கீகரிக்கப்பட்டது."
 
 #: app/routes/auth.py:21
 #, python-format
-msgid "You can register to the system again on %(date)s"
+msgid ""
+"You can register to the system again on %(date)s as your account is "
+"deleted recently"
 msgstr ""
 
 #: app/routes/auth.py:40
@@ -68,11 +71,11 @@ msgstr "கணக்கு செயலற்றது அல்லது நீ
 msgid "Invalid or expired OTP."
 msgstr "தவறான அல்லது காலாவதியான OTP."
 
-#: app/routes/citizen.py:84
+#: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
 msgstr "சுயவிவரம் வெற்றிகரமாக புதுப்பிக்கப்பட்டது!"
 
-#: app/routes/citizen.py:160
+#: app/routes/citizen.py:161
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -80,55 +83,60 @@ msgstr ""
 "இதேபோன்ற புகார் ஏற்கனவே இந்த இடத்தில் உள்ளது. உங்கள் ஆதரவு (upvote) "
 "சேர்க்கப்பட்டுள்ளது."
 
-#: app/routes/citizen.py:162
+#: app/routes/citizen.py:163
 msgid "A similar report already exists and you have already upvoted it."
 msgstr ""
 "இதேபோன்ற புகார் ஏற்கனவே உள்ளது, நீங்கள் ஏற்கனவே அதற்கு ஆதரவு "
 "தெரிவித்துள்ளீர்கள்."
 
-#: app/routes/citizen.py:164
+#: app/routes/citizen.py:165
 msgid "You have already submitted a similar report in this location."
 msgstr "நீங்கள் ஏற்கனவே இந்த இடத்தில் இதே போன்ற புகாரைச் சமர்ப்பித்துள்ளீர்கள்."
 
-#: app/routes/citizen.py:184
+#: app/routes/citizen.py:186
 msgid "You can only upload up to 3 images."
 msgstr "நீங்கள் 3 படங்கள் வரை மட்டுமே பதிவேற்ற முடியும்."
 
-#: app/routes/citizen.py:201
+#: app/routes/citizen.py:203
 msgid "Report submitted successfully!"
 msgstr "புகார் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!"
 
-#: app/routes/citizen.py:213
+#: app/routes/citizen.py:214
 msgid "You cannot upvote your own report."
 msgstr "உங்கள் சொந்தப் புகாருக்கு நீங்களே ஆதரவு தெரிவிக்க முடியாது."
 
-#: app/routes/citizen.py:217
+#: app/routes/citizen.py:218
 msgid "Already upvoted"
 msgstr "ஏற்கனவே ஆதரவு தெரிவிக்கப்பட்டது"
 
-#: app/routes/citizen.py:235
+#: app/routes/citizen.py:236
 msgid "Comment added."
 msgstr "கருத்து சேர்க்கப்பட்டது."
 
-#: app/routes/citizen.py:243
+#: app/routes/citizen.py:244
 msgid "Unauthorized."
 msgstr "அங்கீகரிக்கப்படாதது."
 
-#: app/routes/citizen.py:249
+#: app/routes/citizen.py:251
+#, fuzzy
+msgid "Report cannot be reopened after 7 days of resolution."
+msgstr "புகாரை மீண்டும் திறக்க முடியாது."
+
+#: app/routes/citizen.py:256
 msgid "Report reopened."
 msgstr "புகார் மீண்டும் திறக்கப்பட்டது."
 
-#: app/routes/citizen.py:251
+#: app/routes/citizen.py:258
 msgid "Report cannot be reopened."
 msgstr "புகாரை மீண்டும் திறக்க முடியாது."
 
-#: app/routes/citizen.py:259
+#: app/routes/citizen.py:266
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:271
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -232,7 +240,7 @@ msgid "Citizen ID"
 msgstr "குடிமகன் அடையாளம் (ID)"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/submit_report.html:25
+#: app/templates/live_map.html:9 app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "முன்னுரிமை"
 
@@ -561,7 +569,7 @@ msgstr "நகரங்கள்"
 msgid "Get Started Now"
 msgstr "இப்போது தொடங்குங்கள்"
 
-#: app/templates/index.html:29
+#: app/templates/index.html:29 app/templates/index.html:51
 #, fuzzy
 msgid "Live Map"
 msgstr "நேரடி வரைபடத்தைக் காண்க"
@@ -583,10 +591,6 @@ msgstr "ஊடக அறிக்கையிடல்"
 msgid "Capture issues with photos and voice notes."
 msgstr "புகைப்படங்கள் மற்றும் குரல் குறிப்புகளுடன் சிக்கல்களைப் பதிவு செய்யுங்கள்."
 
-#: app/templates/index.html:51
-msgid "Live Map"
-msgstr "நேரடி வரைபடம்"
-
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
 msgstr "புகாரளிக்கப்பட்ட சிக்கல்களை நிகழ்நேரத்தில் காட்சிப்படுத்துங்கள்."
@@ -602,10 +606,6 @@ msgstr "தீர்வு நிலை மற்றும் பதிலளி
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
 msgstr "நேரடி வரைபடம் - சமூக சிக்கல்கள்"
-
-#: app/templates/live_map.html:9
-msgid "Legend"
-msgstr "விளக்கக் குறிப்பு"
 
 #: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
@@ -639,7 +639,7 @@ msgstr "OTP அனுப்பு"
 msgid "Demo OTP: 1234"
 msgstr "டெமோ OTP: 1234"
 
-#: app/templates/login.html:65
+#: app/templates/login.html:84
 msgid "Please enter 10 digits"
 msgstr "தயவுசெய்து 10 இலக்கங்களை உள்ளிடவும்"
 
@@ -867,78 +867,84 @@ msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "படங்களை பதிவேற்றவும் (அதிகபட்சம் 3, ஒவ்வொன்றும் 5MB)"
 
 #: app/templates/submit_report.html:54
+msgid ""
+"Only the images captured by any geo-location based camera are acceptable "
+"for uploading !"
+msgstr ""
+
+#: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"
 msgstr "நேரடி புவி-கேமரா"
 
-#: app/templates/submit_report.html:56
+#: app/templates/submit_report.html:59
 msgid "Upload Files"
 msgstr "கோப்புகளைப் பதிவேற்றவும்"
 
-#: app/templates/submit_report.html:65
+#: app/templates/submit_report.html:68
 msgid "Capture Photo"
 msgstr "புகைப்படம் எடு"
 
-#: app/templates/submit_report.html:66
+#: app/templates/submit_report.html:69
 msgid "Switch"
 msgstr "மாற்று"
 
-#: app/templates/submit_report.html:67
+#: app/templates/submit_report.html:70
 msgid "Close Camera"
 msgstr "கேமராவை மூடு"
 
-#: app/templates/submit_report.html:78
+#: app/templates/submit_report.html:81
 msgid "Voice Note"
 msgstr "குரல் குறிப்பு"
 
-#: app/templates/submit_report.html:80
+#: app/templates/submit_report.html:83
 msgid "Record"
 msgstr "பதிவு செய்"
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:84
 msgid "Stop"
 msgstr "நிறுத்து"
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:87
 msgid "OR upload file"
 msgstr "அல்லது கோப்பைப் பதிவேற்றவும்"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:91
 msgid "Remove"
 msgstr "நீக்கு"
 
-#: app/templates/submit_report.html:92
+#: app/templates/submit_report.html:95
 msgid "Submit Report"
 msgstr "புகாரைச் சமர்ப்பி"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "File"
 msgstr "கோப்பு"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "exceeds 5MB limit"
 msgstr "5MB வரம்பை மீறுகிறது"
 
-#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
+#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
 msgid "Maximum 3 images reached"
 msgstr "அதிகபட்சமாக 3 படங்கள் எட்டப்பட்டன"
 
-#: app/templates/submit_report.html:250
+#: app/templates/submit_report.html:253
 msgid "Camera access denied or not available"
 msgstr "கேமரா அணுகல் மறுக்கப்பட்டது அல்லது கிடைக்கவில்லை"
 
-#: app/templates/submit_report.html:306
+#: app/templates/submit_report.html:309
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:326
+#: app/templates/submit_report.html:329
 msgid "Please upload or capture at least one image of the issue."
 msgstr "தயவுசெய்து சிக்கலின் ஒரு படத்தையாவது பதிவேற்றவும் அல்லது எடுக்கவும்."
 
-#: app/templates/submit_report.html:365
+#: app/templates/submit_report.html:368
 msgid "Recording..."
 msgstr "பதிவாகிறது..."
 
-#: app/templates/submit_report.html:380
+#: app/templates/submit_report.html:383
 msgid "Microphone access denied"
 msgstr "மைக்ரோஃபோன் அணுகல் மறுக்கப்பட்டது"
 
@@ -958,7 +964,7 @@ msgstr "4-இலக்க OTP-ஐ உள்ளிடவும்"
 msgid "Verify & Login"
 msgstr "சரிபார்த்து உள்நுழையவும்"
 
-#: app/templates/verify_otp.html:54
+#: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
 msgstr "தயவுசெய்து 4 இலக்கங்களை உள்ளிடவும்"
 
@@ -1108,4 +1114,10 @@ msgstr "தயவுசெய்து 4 இலக்கங்களை உள�
 
 #~ msgid "Login"
 #~ msgstr "உள்நுழை"
+
+#~ msgid "You can register to the system again on %(date)s"
+#~ msgstr ""
+
+#~ msgid "Legend"
+#~ msgstr "விளக்கக் குறிப்பு"
 

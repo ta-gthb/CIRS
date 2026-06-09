@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 23:02+0530\n"
+"POT-Creation-Date: 2026-06-09 21:38+0530\n"
 "PO-Revision-Date: 2026-06-07 10:05+0530\n"
 "Last-Translator: Gemini CLI <email@address>\n"
 "Language: bn\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75 app/routes/admin.py:121
+#: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
 msgstr "অননুমোদিত"
 
@@ -26,27 +26,30 @@ msgstr "অননুমোদিত"
 msgid "Report approved."
 msgstr "রিপোর্ট অনুমোদিত হয়েছে।"
 
-#: app/routes/admin.py:114
+#: app/routes/admin.py:115
 msgid "Report resolved."
 msgstr "রিপোর্টের সমাধান করা হয়েছে।"
 
-#: app/routes/admin.py:128
+#: app/routes/admin.py:129
 #, fuzzy
 msgid "Report rejected."
 msgstr "রিপোর্ট পুনরায় খোলা হয়েছে।"
 
-#: app/routes/admin.py:139
-msgid "User deletion approved."
+#: app/routes/admin.py:146
+#, fuzzy
+msgid "User deletion approved. Pending reports removed."
 msgstr "ব্যবহারকারী মুছে ফেলার অনুরোধ অনুমোদিত হয়েছে।"
 
-#: app/routes/admin.py:148
+#: app/routes/admin.py:155
 #, fuzzy
 msgid "User deletion request rejected."
 msgstr "ব্যবহারকারী মুছে ফেলার অনুরোধ অনুমোদিত হয়েছে।"
 
 #: app/routes/auth.py:21
 #, python-format
-msgid "You can register to the system again on %(date)s"
+msgid ""
+"You can register to the system again on %(date)s as your account is "
+"deleted recently"
 msgstr ""
 
 #: app/routes/auth.py:40
@@ -66,11 +69,11 @@ msgstr "অ্যাকাউন্টটি নিষ্ক্রিয় ব�
 msgid "Invalid or expired OTP."
 msgstr "অবৈধ বা মেয়াদোত্তীর্ণ ওটিপি (OTP)।"
 
-#: app/routes/citizen.py:84
+#: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
 msgstr "প্রোফাইল সফলভাবে আপডেট করা হয়েছে!"
 
-#: app/routes/citizen.py:160
+#: app/routes/citizen.py:161
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,55 +81,60 @@ msgstr ""
 "এই অবস্থানে ইতিমধ্যে একটি অনুরূপ রিপোর্ট বিদ্যমান। আপনার ভোট এতে যোগ করা "
 "হয়েছে।"
 
-#: app/routes/citizen.py:162
+#: app/routes/citizen.py:163
 msgid "A similar report already exists and you have already upvoted it."
 msgstr ""
 "একটি অনুরূপ রিপোর্ট ইতিমধ্যে বিদ্যমান এবং আপনি ইতিমধ্যে এটিতে ভোট "
 "দিয়েছেন।"
 
-#: app/routes/citizen.py:164
+#: app/routes/citizen.py:165
 msgid "You have already submitted a similar report in this location."
 msgstr "আপনি ইতিমধ্যে এই অবস্থানে একটি অনুরূপ রিপোর্ট জমা দিয়েছেন।"
 
-#: app/routes/citizen.py:184
+#: app/routes/citizen.py:186
 msgid "You can only upload up to 3 images."
 msgstr "আপনি সর্বোচ্চ ৩টি ছবি আপলোড করতে পারবেন।"
 
-#: app/routes/citizen.py:201
+#: app/routes/citizen.py:203
 msgid "Report submitted successfully!"
 msgstr "রিপোর্ট সফলভাবে জমা দেওয়া হয়েছে!"
 
-#: app/routes/citizen.py:213
+#: app/routes/citizen.py:214
 msgid "You cannot upvote your own report."
 msgstr "আপনি আপনার নিজের রিপোর্টে ভোট দিতে পারবেন না।"
 
-#: app/routes/citizen.py:217
+#: app/routes/citizen.py:218
 msgid "Already upvoted"
 msgstr "ইতিমধ্যে ভোট দেওয়া হয়েছে"
 
-#: app/routes/citizen.py:235
+#: app/routes/citizen.py:236
 msgid "Comment added."
 msgstr "মন্তব্য যোগ করা হয়েছে।"
 
-#: app/routes/citizen.py:243
+#: app/routes/citizen.py:244
 msgid "Unauthorized."
 msgstr "অননুমোদিত।"
 
-#: app/routes/citizen.py:249
+#: app/routes/citizen.py:251
+#, fuzzy
+msgid "Report cannot be reopened after 7 days of resolution."
+msgstr "রিপোর্ট পুনরায় খোলা যাবে না।"
+
+#: app/routes/citizen.py:256
 msgid "Report reopened."
 msgstr "রিপোর্ট পুনরায় খোলা হয়েছে।"
 
-#: app/routes/citizen.py:251
+#: app/routes/citizen.py:258
 msgid "Report cannot be reopened."
 msgstr "রিপোর্ট পুনরায় খোলা যাবে না।"
 
-#: app/routes/citizen.py:259
+#: app/routes/citizen.py:266
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:271
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -229,7 +237,7 @@ msgid "Citizen ID"
 msgstr "নাগরিক আইডি"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/submit_report.html:25
+#: app/templates/live_map.html:9 app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "অগ্রাধিকার"
 
@@ -554,7 +562,7 @@ msgstr "শহর"
 msgid "Get Started Now"
 msgstr "এখনই শুরু করুন"
 
-#: app/templates/index.html:29
+#: app/templates/index.html:29 app/templates/index.html:51
 #, fuzzy
 msgid "Live Map"
 msgstr "লাইভ ম্যাপ দেখুন"
@@ -576,10 +584,6 @@ msgstr "মিডিয়া রিপোর্টিং"
 msgid "Capture issues with photos and voice notes."
 msgstr "ছবি এবং ভয়েস নোটের মাধ্যমে সমস্যাগুলি রেকর্ড করুন।"
 
-#: app/templates/index.html:51
-msgid "Live Map"
-msgstr "লাইভ ম্যাপ"
-
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
 msgstr "রিয়েল-টাইমে রিপোর্ট করা সমস্যাগুলি দেখুন।"
@@ -595,10 +599,6 @@ msgstr "সমাধানের অবস্থা এবং প্রতিক
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
 msgstr "লাইভ ম্যাপ - সম্প্রদায়ের সমস্যাসমূহ"
-
-#: app/templates/live_map.html:9
-msgid "Legend"
-msgstr "লিজেন্ড"
 
 #: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
@@ -632,7 +632,7 @@ msgstr "ওটিপি (OTP) পাঠান"
 msgid "Demo OTP: 1234"
 msgstr "ডেমো ওটিপি: ১২৩৪"
 
-#: app/templates/login.html:65
+#: app/templates/login.html:84
 msgid "Please enter 10 digits"
 msgstr "অনুগ্রহ করে ১০টি সংখ্যা লিখুন"
 
@@ -862,78 +862,84 @@ msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "ছবি আপলোড করুন (সর্বোচ্চ ৩টি, প্রতিটি সর্বোচ্চ ৫ এমবি)"
 
 #: app/templates/submit_report.html:54
+msgid ""
+"Only the images captured by any geo-location based camera are acceptable "
+"for uploading !"
+msgstr ""
+
+#: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"
 msgstr "লাইভ জিও-ক্যামেরা"
 
-#: app/templates/submit_report.html:56
+#: app/templates/submit_report.html:59
 msgid "Upload Files"
 msgstr "ফাইল আপলোড করুন"
 
-#: app/templates/submit_report.html:65
+#: app/templates/submit_report.html:68
 msgid "Capture Photo"
 msgstr "ছবি তুলুন"
 
-#: app/templates/submit_report.html:66
+#: app/templates/submit_report.html:69
 msgid "Switch"
 msgstr "সুইচ"
 
-#: app/templates/submit_report.html:67
+#: app/templates/submit_report.html:70
 msgid "Close Camera"
 msgstr "ক্যামেরা বন্ধ করুন"
 
-#: app/templates/submit_report.html:78
+#: app/templates/submit_report.html:81
 msgid "Voice Note"
 msgstr "ভয়েস নোট"
 
-#: app/templates/submit_report.html:80
+#: app/templates/submit_report.html:83
 msgid "Record"
 msgstr "রেকর্ড করুন"
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:84
 msgid "Stop"
 msgstr "বন্ধ করুন"
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:87
 msgid "OR upload file"
 msgstr "অথবা ফাইল আপলোড করুন"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:91
 msgid "Remove"
 msgstr "সরিয়ে ফেলুন"
 
-#: app/templates/submit_report.html:92
+#: app/templates/submit_report.html:95
 msgid "Submit Report"
 msgstr "রিপোর্ট জমা দিন"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "File"
 msgstr "ফাইল"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "exceeds 5MB limit"
 msgstr "৫ এমবি সীমা অতিক্রম করেছে"
 
-#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
+#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
 msgid "Maximum 3 images reached"
 msgstr "সর্বোচ্চ ৩টি ছবি আপলোড করা হয়ে গেছে"
 
-#: app/templates/submit_report.html:250
+#: app/templates/submit_report.html:253
 msgid "Camera access denied or not available"
 msgstr "ক্যামেরা ব্যবহারের অনুমতি নেই বা উপলব্ধ নেই"
 
-#: app/templates/submit_report.html:306
+#: app/templates/submit_report.html:309
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:326
+#: app/templates/submit_report.html:329
 msgid "Please upload or capture at least one image of the issue."
 msgstr "অনুগ্রহ করে সমস্যার অন্তত একটি ছবি আপলোড করুন বা তুলুন।"
 
-#: app/templates/submit_report.html:365
+#: app/templates/submit_report.html:368
 msgid "Recording..."
 msgstr "রেকর্ড হচ্ছে..."
 
-#: app/templates/submit_report.html:380
+#: app/templates/submit_report.html:383
 msgid "Microphone access denied"
 msgstr "মাইক্রোফোন ব্যবহারের অনুমতি নেই"
 
@@ -953,7 +959,7 @@ msgstr "৪-সংখ্যার ওটিপি (OTP) লিখুন"
 msgid "Verify & Login"
 msgstr "যাচাই করুন এবং লগইন করুন"
 
-#: app/templates/verify_otp.html:54
+#: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
 msgstr "অনুগ্রহ করে ৪টি সংখ্যা লিখুন"
 
@@ -1104,4 +1110,10 @@ msgstr "অনুগ্রহ করে ৪টি সংখ্যা লিখ�
 
 #~ msgid "Login"
 #~ msgstr "লগইন"
+
+#~ msgid "You can register to the system again on %(date)s"
+#~ msgstr ""
+
+#~ msgid "Legend"
+#~ msgstr "লিজেন্ড"
 

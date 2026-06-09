@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 23:02+0530\n"
+"POT-Creation-Date: 2026-06-09 21:38+0530\n"
 "PO-Revision-Date: 2026-06-07 09:23+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: hi\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75 app/routes/admin.py:121
+#: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
 msgstr "अनधिकृत"
 
@@ -26,27 +26,30 @@ msgstr "अनधिकृत"
 msgid "Report approved."
 msgstr "रिपोर्ट स्वीकृत।"
 
-#: app/routes/admin.py:114
+#: app/routes/admin.py:115
 msgid "Report resolved."
 msgstr "रिपोर्ट का समाधान हो गया।"
 
-#: app/routes/admin.py:128
+#: app/routes/admin.py:129
 #, fuzzy
 msgid "Report rejected."
 msgstr "रिपोर्ट फिर से खोली गई।"
 
-#: app/routes/admin.py:139
-msgid "User deletion approved."
+#: app/routes/admin.py:146
+#, fuzzy
+msgid "User deletion approved. Pending reports removed."
 msgstr "उपयोगकर्ता को हटाना स्वीकृत।"
 
-#: app/routes/admin.py:148
+#: app/routes/admin.py:155
 #, fuzzy
 msgid "User deletion request rejected."
 msgstr "उपयोगकर्ता को हटाना स्वीकृत।"
 
 #: app/routes/auth.py:21
 #, python-format
-msgid "You can register to the system again on %(date)s"
+msgid ""
+"You can register to the system again on %(date)s as your account is "
+"deleted recently"
 msgstr ""
 
 #: app/routes/auth.py:40
@@ -66,11 +69,11 @@ msgstr "खाता निष्क्रिय है या हटा दि�
 msgid "Invalid or expired OTP."
 msgstr "अमान्य या समाप्त ओटीपी।"
 
-#: app/routes/citizen.py:84
+#: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
 msgstr "प्रोफ़ाइल सफलतापूर्वक अपडेट की गई!"
 
-#: app/routes/citizen.py:160
+#: app/routes/citizen.py:161
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,53 +81,58 @@ msgstr ""
 "इस स्थान पर एक समान रिपोर्ट पहले से मौजूद है। आपका अपवोट इसमें जोड़ दिया "
 "गया है।"
 
-#: app/routes/citizen.py:162
+#: app/routes/citizen.py:163
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "एक समान रिपोर्ट पहले से मौजूद है और आपने इसे पहले ही अपवोट कर दिया है।"
 
-#: app/routes/citizen.py:164
+#: app/routes/citizen.py:165
 msgid "You have already submitted a similar report in this location."
 msgstr "आपने पहले ही इस स्थान पर एक समान रिपोर्ट सबमिट कर दी है।"
 
-#: app/routes/citizen.py:184
+#: app/routes/citizen.py:186
 msgid "You can only upload up to 3 images."
 msgstr "आप केवल 3 इमेज ही अपलोड कर सकते हैं।"
 
-#: app/routes/citizen.py:201
+#: app/routes/citizen.py:203
 msgid "Report submitted successfully!"
 msgstr "रिपोर्ट सफलतापूर्वक सबमिट की गई!"
 
-#: app/routes/citizen.py:213
+#: app/routes/citizen.py:214
 msgid "You cannot upvote your own report."
 msgstr "आप अपनी खुद की रिपोर्ट को अपवोट नहीं कर सकते।"
 
-#: app/routes/citizen.py:217
+#: app/routes/citizen.py:218
 msgid "Already upvoted"
 msgstr "पहले ही अपवोट किया जा चुका है"
 
-#: app/routes/citizen.py:235
+#: app/routes/citizen.py:236
 msgid "Comment added."
 msgstr "टिप्पणी जोड़ी गई।"
 
-#: app/routes/citizen.py:243
+#: app/routes/citizen.py:244
 msgid "Unauthorized."
 msgstr "अनधिकृत।"
 
-#: app/routes/citizen.py:249
+#: app/routes/citizen.py:251
+#, fuzzy
+msgid "Report cannot be reopened after 7 days of resolution."
+msgstr "रिपोर्ट फिर से नहीं खोली जा सकती।"
+
+#: app/routes/citizen.py:256
 msgid "Report reopened."
 msgstr "रिपोर्ट फिर से खोली गई।"
 
-#: app/routes/citizen.py:251
+#: app/routes/citizen.py:258
 msgid "Report cannot be reopened."
 msgstr "रिपोर्ट फिर से नहीं खोली जा सकती।"
 
-#: app/routes/citizen.py:259
+#: app/routes/citizen.py:266
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:271
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -227,7 +235,7 @@ msgid "Citizen ID"
 msgstr "नागरिक आईडी"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/submit_report.html:25
+#: app/templates/live_map.html:9 app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "प्राथमिकता"
 
@@ -552,7 +560,7 @@ msgstr "शहर"
 msgid "Get Started Now"
 msgstr "अभी शुरू करें"
 
-#: app/templates/index.html:29
+#: app/templates/index.html:29 app/templates/index.html:51
 #, fuzzy
 msgid "Live Map"
 msgstr "लाइव मानचित्र देखें"
@@ -574,10 +582,6 @@ msgstr "मीडिया रिपोर्टिंग"
 msgid "Capture issues with photos and voice notes."
 msgstr "फोटो और वॉयस नोट्स के साथ समस्याओं को कैप्चर करें।"
 
-#: app/templates/index.html:51
-msgid "Live Map"
-msgstr "लाइव मानचित्र"
-
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
 msgstr "रिपोर्ट की गई समस्याओं को वास्तविक समय में देखें।"
@@ -593,10 +597,6 @@ msgstr "समाधान की स्थिति और प्रतिक�
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
 msgstr "लाइव मानचित्र - सामुदायिक समस्याएं"
-
-#: app/templates/live_map.html:9
-msgid "Legend"
-msgstr "नक्शे का संकेत"
 
 #: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
@@ -630,7 +630,7 @@ msgstr "ओटीपी भेजें"
 msgid "Demo OTP: 1234"
 msgstr "डेमो ओटीपी: 1234"
 
-#: app/templates/login.html:65
+#: app/templates/login.html:84
 msgid "Please enter 10 digits"
 msgstr "कृपया 10 अंक दर्ज करें"
 
@@ -860,78 +860,84 @@ msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "इमेज अपलोड करें (अधिकतम 3, प्रत्येक अधिकतम 5MB)"
 
 #: app/templates/submit_report.html:54
+msgid ""
+"Only the images captured by any geo-location based camera are acceptable "
+"for uploading !"
+msgstr ""
+
+#: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"
 msgstr "लाइव जियो-कैमरा"
 
-#: app/templates/submit_report.html:56
+#: app/templates/submit_report.html:59
 msgid "Upload Files"
 msgstr "फाइलें अपलोड करें"
 
-#: app/templates/submit_report.html:65
+#: app/templates/submit_report.html:68
 msgid "Capture Photo"
 msgstr "फोटो कैप्चर करें"
 
-#: app/templates/submit_report.html:66
+#: app/templates/submit_report.html:69
 msgid "Switch"
 msgstr "बदलें"
 
-#: app/templates/submit_report.html:67
+#: app/templates/submit_report.html:70
 msgid "Close Camera"
 msgstr "कैमरा बंद करें"
 
-#: app/templates/submit_report.html:78
+#: app/templates/submit_report.html:81
 msgid "Voice Note"
 msgstr "वॉयस नोट"
 
-#: app/templates/submit_report.html:80
+#: app/templates/submit_report.html:83
 msgid "Record"
 msgstr "रिकॉर्ड करें"
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:84
 msgid "Stop"
 msgstr "रोकें"
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:87
 msgid "OR upload file"
 msgstr "या फ़ाइल अपलोड करें"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:91
 msgid "Remove"
 msgstr "हटाएं"
 
-#: app/templates/submit_report.html:92
+#: app/templates/submit_report.html:95
 msgid "Submit Report"
 msgstr "रिपोर्ट सबमिट करें"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "File"
 msgstr "फ़ाइल"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "exceeds 5MB limit"
 msgstr "5MB की सीमा से अधिक है"
 
-#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
+#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
 msgid "Maximum 3 images reached"
 msgstr "अधिकतम 3 इमेज पूरी हो गईं"
 
-#: app/templates/submit_report.html:250
+#: app/templates/submit_report.html:253
 msgid "Camera access denied or not available"
 msgstr "कैमरा एक्सेस अस्वीकार कर दिया गया या उपलब्ध नहीं है"
 
-#: app/templates/submit_report.html:306
+#: app/templates/submit_report.html:309
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:326
+#: app/templates/submit_report.html:329
 msgid "Please upload or capture at least one image of the issue."
 msgstr "कृपया समस्या की कम से कम एक इमेज अपलोड करें या कैप्चर करें।"
 
-#: app/templates/submit_report.html:365
+#: app/templates/submit_report.html:368
 msgid "Recording..."
 msgstr "रिकॉर्डिंग हो रही है..."
 
-#: app/templates/submit_report.html:380
+#: app/templates/submit_report.html:383
 msgid "Microphone access denied"
 msgstr "माइक्रोफोन एक्सेस अस्वीकार कर दिया गया"
 
@@ -951,7 +957,7 @@ msgstr "4-अंकीय ओटीपी दर्ज करें"
 msgid "Verify & Login"
 msgstr "सत्यापित करें और लॉगिन करें"
 
-#: app/templates/verify_otp.html:54
+#: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
 msgstr "कृपया 4 अंक दर्ज करें"
 
@@ -1101,4 +1107,10 @@ msgstr "कृपया 4 अंक दर्ज करें"
 
 #~ msgid "Login"
 #~ msgstr "लॉगिन"
+
+#~ msgid "You can register to the system again on %(date)s"
+#~ msgstr ""
+
+#~ msgid "Legend"
+#~ msgstr "नक्शे का संकेत"
 

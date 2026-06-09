@@ -1,6 +1,10 @@
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from flask_login import UserMixin
 from .. import db, login_manager
+
+def get_ist_time():
+    # IST is UTC+5:30
+    return datetime.now(timezone(timedelta(hours=5, minutes=30))).replace(tzinfo=None)
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -27,7 +31,7 @@ class User(UserMixin, db.Model):
     lon_max = db.Column(db.Float)
     otp_code = db.Column(db.String(6))
     otp_expires_at = db.Column(db.DateTime)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=get_ist_time)
     citizen_id = db.Column(db.String(25), unique=True, index=True)
     
     reports = db.relationship('Report', backref='author', lazy=True, foreign_keys='Report.user_id')
@@ -48,22 +52,23 @@ class Report(db.Model):
     longitude = db.Column(db.Float)
     upvotes_count = db.Column(db.Integer, default=0)
     resolution_notes = db.Column(db.Text)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=get_ist_time)
+    updated_at = db.Column(db.DateTime, default=get_ist_time, onupdate=get_ist_time)
+    resolved_at = db.Column(db.DateTime)
     
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     assigned_to_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     
-    images = db.relationship('ReportImage', backref='report', lazy=True)
-    voice_notes = db.relationship('VoiceNote', backref='report', lazy=True)
-    upvotes = db.relationship('Upvote', backref='report', lazy=True)
-    comments = db.relationship('Comment', backref='report', lazy=True)
+    images = db.relationship('ReportImage', backref='report', lazy=True, cascade="all, delete-orphan")
+    voice_notes = db.relationship('VoiceNote', backref='report', lazy=True, cascade="all, delete-orphan")
+    upvotes = db.relationship('Upvote', backref='report', lazy=True, cascade="all, delete-orphan")
+    comments = db.relationship('Comment', backref='report', lazy=True, cascade="all, delete-orphan")
 
 class Upvote(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     report_id = db.Column(db.Integer, db.ForeignKey('report.id'), nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=get_ist_time)
     __table_args__ = (db.UniqueConstraint('user_id', 'report_id', name='unique_user_report_upvote'),)
 
 class Comment(db.Model):
@@ -71,7 +76,7 @@ class Comment(db.Model):
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     report_id = db.Column(db.Integer, db.ForeignKey('report.id'), nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, default=get_ist_time)
 
 class ReportImage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -90,7 +95,7 @@ class Message(db.Model):
     report_id = db.Column(db.Integer, db.ForeignKey('report.id'), nullable=False)
     sender_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     content = db.Column(db.Text, nullable=False)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, default=get_ist_time)
     
     sender = db.relationship('User', backref='sent_messages')
     report = db.relationship('Report', backref='messages')

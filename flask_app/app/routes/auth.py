@@ -3,7 +3,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 from flask_babel import _
 from datetime import datetime, timedelta
 from . import auth_bp
-from ..models.models import User, db
+from ..models.models import User, db, get_ist_time
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -16,9 +16,9 @@ def login():
         if user and user.account_deletion_status == 'approved':
             # Check 30 days rule
             wait_period = timedelta(days=30)
-            if datetime.utcnow() < user.deleted_at + wait_period:
+            if get_ist_time() < user.deleted_at + wait_period:
                 next_date = (user.deleted_at + timedelta(days=31)).strftime('%d/%m/%Y')
-                flash(_('You can register to the system again on %(date)s', date=next_date), 'warning')
+                flash(_('You can register to the system again on %(date)s as your account is deleted recently', date=next_date), 'warning')
                 return redirect(url_for('auth.login'))
             else:
                 # Reset deleted account for re-registration
@@ -31,7 +31,7 @@ def login():
             if role == 'citizen':
                 # Auto-register citizen
                 serial_count = User.query.filter_by(role='citizen').count() + 1
-                year = datetime.utcnow().year
+                year = get_ist_time().year
                 citizen_id = f"CTZN10CIRS{year}{serial_count:07d}"
                 user = User(phone=phone, role='citizen', is_active=True, citizen_id=citizen_id)
                 db.session.add(user)
@@ -50,7 +50,7 @@ def login():
 
         # Simulation: demo OTP 1234
         user.otp_code = '1234'
-        user.otp_expires_at = datetime.utcnow() + timedelta(minutes=10)
+        user.otp_expires_at = get_ist_time() + timedelta(minutes=10)
         db.session.commit()
         
         return redirect(url_for('auth.verify_otp', phone=phone))
@@ -64,7 +64,7 @@ def verify_otp():
         otp = request.form.get('otp')
         user = User.query.filter_by(phone=phone).first()
         
-        if user and (otp == '1234' or user.otp_code == otp) and user.otp_expires_at > datetime.utcnow():
+        if user and (otp == '1234' or user.otp_code == otp) and user.otp_expires_at > get_ist_time():
             user.otp_code = None
             db.session.commit()
             login_user(user)

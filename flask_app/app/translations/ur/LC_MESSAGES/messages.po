@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-07 23:02+0530\n"
+"POT-Creation-Date: 2026-06-09 21:38+0530\n"
 "PO-Revision-Date: 2026-06-07 10:15+0530\n"
 "Last-Translator: Gemini CLI\n"
 "Language: ur\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75 app/routes/admin.py:121
+#: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
 msgstr "غیر مجاز"
 
@@ -26,27 +26,30 @@ msgstr "غیر مجاز"
 msgid "Report approved."
 msgstr "رپورٹ منظور کر لی گئی۔"
 
-#: app/routes/admin.py:114
+#: app/routes/admin.py:115
 msgid "Report resolved."
 msgstr "رپورٹ حل ہو گئی۔"
 
-#: app/routes/admin.py:128
+#: app/routes/admin.py:129
 #, fuzzy
 msgid "Report rejected."
 msgstr "رپورٹ دوبارہ کھول دی گئی۔"
 
-#: app/routes/admin.py:139
-msgid "User deletion approved."
+#: app/routes/admin.py:146
+#, fuzzy
+msgid "User deletion approved. Pending reports removed."
 msgstr "صارف کی حذف کرنے کی درخواست منظور ہو گئی۔"
 
-#: app/routes/admin.py:148
+#: app/routes/admin.py:155
 #, fuzzy
 msgid "User deletion request rejected."
 msgstr "صارف کی حذف کرنے کی درخواست منظور ہو گئی۔"
 
 #: app/routes/auth.py:21
 #, python-format
-msgid "You can register to the system again on %(date)s"
+msgid ""
+"You can register to the system again on %(date)s as your account is "
+"deleted recently"
 msgstr ""
 
 #: app/routes/auth.py:40
@@ -66,11 +69,11 @@ msgstr "اکاؤنٹ غیر فعال ہے یا حذف کر دیا گیا ہے۔"
 msgid "Invalid or expired OTP."
 msgstr "غلط یا میعاد ختم شدہ او ٹی پی (OTP)۔"
 
-#: app/routes/citizen.py:84
+#: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
 msgstr "پروفائل کامیابی سے اپ ڈیٹ ہو گیا!"
 
-#: app/routes/citizen.py:160
+#: app/routes/citizen.py:161
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -78,53 +81,58 @@ msgstr ""
 "اس جگہ پر اسی طرح کی ایک رپورٹ پہلے سے موجود ہے۔ آپ کا ووٹ (upvote) اس "
 "میں شامل کر دیا گیا ہے۔"
 
-#: app/routes/citizen.py:162
+#: app/routes/citizen.py:163
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "اسی طرح کی ایک رپورٹ پہلے سے موجود ہے اور آپ پہلے ہی اسے ووٹ دے چکے ہیں۔"
 
-#: app/routes/citizen.py:164
+#: app/routes/citizen.py:165
 msgid "You have already submitted a similar report in this location."
 msgstr "آپ اس جگہ پر پہلے ہی اسی طرح کی ایک رپورٹ جمع کروا چکے ہیں۔"
 
-#: app/routes/citizen.py:184
+#: app/routes/citizen.py:186
 msgid "You can only upload up to 3 images."
 msgstr "آپ صرف 3 تصاویر تک اپ لوڈ کر سکتے ہیں۔"
 
-#: app/routes/citizen.py:201
+#: app/routes/citizen.py:203
 msgid "Report submitted successfully!"
 msgstr "رپورٹ کامیابی سے جمع کروا دی گئی!"
 
-#: app/routes/citizen.py:213
+#: app/routes/citizen.py:214
 msgid "You cannot upvote your own report."
 msgstr "آپ اپنی رپورٹ کو ووٹ نہیں دے سکتے۔"
 
-#: app/routes/citizen.py:217
+#: app/routes/citizen.py:218
 msgid "Already upvoted"
 msgstr "پہلے ہی ووٹ دیا جا چکا ہے"
 
-#: app/routes/citizen.py:235
+#: app/routes/citizen.py:236
 msgid "Comment added."
 msgstr "تبصرہ شامل کر دیا گیا۔"
 
-#: app/routes/citizen.py:243
+#: app/routes/citizen.py:244
 msgid "Unauthorized."
 msgstr "غیر مجاز۔"
 
-#: app/routes/citizen.py:249
+#: app/routes/citizen.py:251
+#, fuzzy
+msgid "Report cannot be reopened after 7 days of resolution."
+msgstr "رپورٹ دوبارہ نہیں کھولی جا سکتی۔"
+
+#: app/routes/citizen.py:256
 msgid "Report reopened."
 msgstr "رپورٹ دوبارہ کھول دی گئی۔"
 
-#: app/routes/citizen.py:251
+#: app/routes/citizen.py:258
 msgid "Report cannot be reopened."
 msgstr "رپورٹ دوبارہ نہیں کھولی جا سکتی۔"
 
-#: app/routes/citizen.py:259
+#: app/routes/citizen.py:266
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:271
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -227,7 +235,7 @@ msgid "Citizen ID"
 msgstr "شہری آئی ڈی"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/submit_report.html:25
+#: app/templates/live_map.html:9 app/templates/submit_report.html:25
 msgid "Priority"
 msgstr "ترجیح"
 
@@ -552,7 +560,7 @@ msgstr "شہر"
 msgid "Get Started Now"
 msgstr "ابھی شروع کریں"
 
-#: app/templates/index.html:29
+#: app/templates/index.html:29 app/templates/index.html:51
 #, fuzzy
 msgid "Live Map"
 msgstr "براہ راست نقشہ دیکھیں"
@@ -574,10 +582,6 @@ msgstr "میڈیا رپورٹنگ"
 msgid "Capture issues with photos and voice notes."
 msgstr "تصاویر اور صوتی نوٹ کے ساتھ مسائل کی نشاندہی کریں۔"
 
-#: app/templates/index.html:51
-msgid "Live Map"
-msgstr "براہ راست نقشہ"
-
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
 msgstr "رپورٹ شدہ مسائل کو حقیقی وقت میں دیکھیں۔"
@@ -593,10 +597,6 @@ msgstr "حل کی صورتحال اور ردعمل کے وقت کو ٹریک ک�
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
 msgstr "براہ راست نقشہ - کمیونٹی کے مسائل"
-
-#: app/templates/live_map.html:9
-msgid "Legend"
-msgstr "اشارے (Legend)"
 
 #: app/templates/live_map.html:63 app/templates/status.html:40
 msgid "Category:"
@@ -630,7 +630,7 @@ msgstr "او ٹی پی بھیجیں"
 msgid "Demo OTP: 1234"
 msgstr "ڈیمو او ٹی پی: 1234"
 
-#: app/templates/login.html:65
+#: app/templates/login.html:84
 msgid "Please enter 10 digits"
 msgstr "براہ کرم 10 ہندسے درج کریں"
 
@@ -858,78 +858,84 @@ msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "تصاویر اپ لوڈ کریں (زیادہ سے زیادہ 3، ہر ایک زیادہ سے زیادہ 5MB)"
 
 #: app/templates/submit_report.html:54
+msgid ""
+"Only the images captured by any geo-location based camera are acceptable "
+"for uploading !"
+msgstr ""
+
+#: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"
 msgstr "لائیو جیو کیمرہ"
 
-#: app/templates/submit_report.html:56
+#: app/templates/submit_report.html:59
 msgid "Upload Files"
 msgstr "فائلیں اپ لوڈ کریں"
 
-#: app/templates/submit_report.html:65
+#: app/templates/submit_report.html:68
 msgid "Capture Photo"
 msgstr "تصویر لیں"
 
-#: app/templates/submit_report.html:66
+#: app/templates/submit_report.html:69
 msgid "Switch"
 msgstr "تبدیل کریں"
 
-#: app/templates/submit_report.html:67
+#: app/templates/submit_report.html:70
 msgid "Close Camera"
 msgstr "کیمرہ بند کریں"
 
-#: app/templates/submit_report.html:78
+#: app/templates/submit_report.html:81
 msgid "Voice Note"
 msgstr "صوتی نوٹ"
 
-#: app/templates/submit_report.html:80
+#: app/templates/submit_report.html:83
 msgid "Record"
 msgstr "ریکارڈ کریں"
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:84
 msgid "Stop"
 msgstr "روکیں"
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:87
 msgid "OR upload file"
 msgstr "یا فائل اپ لوڈ کریں"
 
-#: app/templates/submit_report.html:88
+#: app/templates/submit_report.html:91
 msgid "Remove"
 msgstr "ہٹائیں"
 
-#: app/templates/submit_report.html:92
+#: app/templates/submit_report.html:95
 msgid "Submit Report"
 msgstr "رپورٹ جمع کروائیں"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "File"
 msgstr "فائل"
 
-#: app/templates/submit_report.html:205
+#: app/templates/submit_report.html:208
 msgid "exceeds 5MB limit"
 msgstr "5MB کی حد سے زیادہ ہے"
 
-#: app/templates/submit_report.html:226 app/templates/submit_report.html:266
+#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
 msgid "Maximum 3 images reached"
 msgstr "زیادہ سے زیادہ 3 تصاویر کی حد مکمل ہو گئی"
 
-#: app/templates/submit_report.html:250
+#: app/templates/submit_report.html:253
 msgid "Camera access denied or not available"
 msgstr "کیمرے تک رسائی مسترد کر دی گئی ہے یا دستیاب نہیں ہے"
 
-#: app/templates/submit_report.html:306
+#: app/templates/submit_report.html:309
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:326
+#: app/templates/submit_report.html:329
 msgid "Please upload or capture at least one image of the issue."
 msgstr "براہ کرم مسئلہ کی کم از کم ایک تصویر اپ لوڈ کریں یا لیں۔"
 
-#: app/templates/submit_report.html:365
+#: app/templates/submit_report.html:368
 msgid "Recording..."
 msgstr "ریکارڈنگ ہو رہی ہے..."
 
-#: app/templates/submit_report.html:380
+#: app/templates/submit_report.html:383
 msgid "Microphone access denied"
 msgstr "مائیکروفون تک رسائی مسترد کر دی گئی"
 
@@ -949,7 +955,7 @@ msgstr "4 ہندسوں والا او ٹی پی درج کریں"
 msgid "Verify & Login"
 msgstr "تصدیق کریں اور لاگ ان کریں"
 
-#: app/templates/verify_otp.html:54
+#: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
 msgstr "براہ کرم 4 ہندسے درج کریں"
 
@@ -1100,4 +1106,10 @@ msgstr "براہ کرم 4 ہندسے درج کریں"
 
 #~ msgid "Login"
 #~ msgstr "لاگ ان"
+
+#~ msgid "You can register to the system again on %(date)s"
+#~ msgstr ""
+
+#~ msgid "Legend"
+#~ msgstr "اشارے (Legend)"
 
