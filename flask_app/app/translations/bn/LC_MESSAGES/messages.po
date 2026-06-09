@@ -50,7 +50,7 @@ msgstr "ব্যবহারকারী মুছে ফেলার অনু
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr ""
+msgstr "আপনি %(date)s তারিখে আবার সিস্টেমে নিবন্ধন করতে পারেন কারণ আপনার অ্যাকাউন্টটি সম্প্রতি মুছে ফেলা হয়েছে"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
@@ -865,7 +865,7 @@ msgstr "ছবি আপলোড করুন (সর্বোচ্চ ৩ট�
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr ""
+msgstr "শুধুমাত্র যে কোনো জিও-লোকেশন ভিত্তিক ক্যামেরা দ্বারা তোলা ছবি আপলোড করার জন্য গ্রহণযোগ্য!"
 
 #: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"

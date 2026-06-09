@@ -50,7 +50,7 @@ msgstr "వినియోగదారు తొలగింపు ఆమోద�
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr ""
+msgstr "మీ ఖాతా ఇటీవల తొలగించబడినందున మీరు %(date)s న మళ్లీ సిస్టమ్‌లో నమోదు చేసుకోవచ్చు"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
@@ -861,7 +861,7 @@ msgstr "చిత్రాలను అప్‌లోడ్ చేయండి 
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr ""
+msgstr "ఏదైనా జియో-లొకేషన్ ఆధారిత కెమెరా ద్వారా తీసిన చిత్రాలు మాత్రమే అప్‌లోడ్ చేయడానికి ఆమోదయోగ్యమైనవి!"
 
 #: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"

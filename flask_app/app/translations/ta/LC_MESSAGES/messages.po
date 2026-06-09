@@ -50,7 +50,7 @@ msgstr "பயனர் நீக்கம் அங்கீகரிக்க�
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr ""
+msgstr "உங்கள் கணக்கு சமீபத்தில் நீக்கப்பட்டதால், %(date)s அன்று மீண்டும் கணினியில் பதிவு செய்யலாம்"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
@@ -870,7 +870,7 @@ msgstr "படங்களை பதிவேற்றவும் (அதிக
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr ""
+msgstr "புவி இருப்பிட அடிப்படையிலான கேமராவால் எடுக்கப்பட்ட படங்கள் மட்டுமே பதிவேற்ற ஏற்றுக்கொள்ளப்படும்!"
 
 #: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"

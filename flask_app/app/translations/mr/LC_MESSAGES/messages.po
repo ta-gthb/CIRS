@@ -50,7 +50,7 @@ msgstr "वापरकर्ता हटवण्यास मंजुरी 
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr ""
+msgstr "तुमचे खाते अलीकडेच हटवले गेल्यामुळे तुम्ही %(date)s रोजी पुन्हा सिस्टममध्ये नोंदणी करू शकता"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
@@ -861,7 +861,7 @@ msgstr "फोटो अपलोड करा (कमाल ३, प्रत�
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr ""
+msgstr "केवळ कोणत्याही जिओ-लोकेशन आधारित कॅमेराद्वारे कॅप्चर केलेली चित्रे अपलोड करण्यासाठी स्वीकार्य आहेत!"
 
 #: app/templates/submit_report.html:57
 msgid "Live Geo-Camera"
