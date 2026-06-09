@@ -10,7 +10,9 @@
 <body>
     <nav class="navbar">
         <div class="container nav-wrapper">
-            <a href="{{ url_for('main.index') }}" class="logo">Civic Issue Reporting System (CIRS)
+            <a href="{{ url_for('main.index') }}" class="logo">
+                <i class="fas fa-building-shield"></i>
+                <span>Civic Issue Reporting System (CIRS)</span>
             </a>
             
             <div class="nav-content">
@@ -32,12 +34,13 @@
                             </li>
                         {% endif %}
                         <li class="nav-item"><a href="{{ url_for('auth.logout') }}" class="nav-btn logout-btn"><i class="fas fa-sign-out-alt"></i></a></li>
-                    {% else %}
-                        <li class="nav-item"><a href="{{ url_for('auth.login') }}" class="nav-btn login-btn">{{ _('Login / Register') }}</a></li>
                     {% endif %}
                 </ul>
 
                 <div class="controls-area">
+                    {% if not current_user.is_authenticated %}
+                        <a href="{{ url_for('auth.login') }}" class="nav-btn login-btn">{{ _('Login') }}</a>
+                    {% endif %}
                     <button id="theme-toggle" class="theme-toggle" title="{{ _('Toggle Light/Dark Mode') }}">
                         <i class="fas fa-moon"></i>
                     </button>
