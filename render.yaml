@@ -14,3 +14,9 @@ services:
         value: 3.11.6
       - key: FLASK_ENV
         value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_BUCKET
+        value: cirs-uploads

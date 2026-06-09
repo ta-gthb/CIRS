@@ -7,8 +7,13 @@ def get_supabase_client():
     url = current_app.config.get('SUPABASE_URL')
     key = current_app.config.get('SUPABASE_KEY')
     if not url or not key:
+        print("CRITICAL: SUPABASE_URL or SUPABASE_KEY not configured.")
         return None
-    return create_client(url, key)
+    try:
+        return create_client(url, key)
+    except Exception as e:
+        print(f"CRITICAL: Failed to create Supabase client: {e}")
+        return None
 
 def upload_file(file, folder="civic_issue"):
     """
@@ -22,8 +27,7 @@ def upload_file(file, folder="civic_issue"):
     file_path = f"{folder}/{filename}"
 
     if not supabase:
-        # Fallback to local if not configured (useful for local dev)
-        print("Warning: Supabase not configured, falling back to local storage.")
+        print(f"Warning: Supabase client not initialized, falling back to local storage for {filename}.")
         return upload_file_local(file, folder)
 
     bucket_name = current_app.config.get('SUPABASE_BUCKET', 'cirs-uploads')
@@ -37,8 +41,10 @@ def upload_file(file, folder="civic_issue"):
         # Determine content type
         content_type = getattr(file, 'content_type', 'application/octet-stream')
         
+        print(f"Attempting Supabase upload to bucket '{bucket_name}', path '{file_path}'...")
+        
         # Upload to Supabase
-        # The supabase-py library might return different response types depending on version
+        # In supabase-py v2, this returns a response object or raises an exception
         res = supabase.storage.from_(bucket_name).upload(
             path=file_path,
             file=file_content,
@@ -46,25 +52,27 @@ def upload_file(file, folder="civic_issue"):
         )
         
         # Get public URL
+        # In modern supabase-py (v2.x), get_public_url usually returns a string directly
+        # but in some sub-versions it might return an object with a public_url attribute.
         public_url = supabase.storage.from_(bucket_name).get_public_url(file_path)
         
-        # Some versions return an object with a 'publicURL' or similar, 
-        # but modern ones return the string directly.
-        if isinstance(public_url, dict):
-            public_url = public_url.get('publicURL') or public_url.get('url')
+        if not isinstance(public_url, str):
+            if hasattr(public_url, 'public_url'):
+                public_url = public_url.public_url
+            elif isinstance(public_url, dict):
+                public_url = public_url.get('publicURL') or public_url.get('url')
+        
+        print(f"Supabase upload successful. Public URL: {public_url}")
             
         return public_url, filename
         
     except Exception as e:
-        print(f"Supabase Upload Error: {e}")
-        # Only fallback to local if we are NOT in production-like environment
-        # or if specifically allowed. 
-        # On Render, local files are lost, so it's better to know it failed.
-        if current_app.config.get('FLASK_ENV') == 'production':
-             # In production, we might want to still try local as a last resort 
-             # but it's risky. Let's keep it for now but log it heavily.
-             print("CRITICAL: Supabase upload failed in production! Falling back to ephemeral local storage.")
-        
+        print(f"Supabase Upload Error for {filename}: {e}")
+        # Log more details if available
+        if hasattr(e, 'message'):
+            print(f"Error Message: {e.message}")
+            
+        print("Falling back to local storage due to upload error.")
         return upload_file_local(file, folder)
 
 def upload_file_local(file, folder="civic_issue"):
