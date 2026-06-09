@@ -9,14 +9,16 @@
 </head>
 <body>
     <nav class="navbar">
+        <!-- Top bar: logo + controls -->
         <div class="container nav-wrapper">
             <a href="{{ url_for('main.index') }}" class="logo">
                 <i class="fas fa-building-shield"></i>
                 <span><span class="logo-full">Civic Issue Reporting System (CIRS)</span><span class="logo-short">CIRS</span></span>
             </a>
-            
+
             <div class="nav-content">
-                <ul class="nav-links">
+                <!-- Desktop nav links (visible only on wider screens) -->
+                <ul class="nav-links nav-links-desktop">
                     {% if current_user.is_authenticated %}
                         {% if current_user.role == 'citizen' %}
                             <li class="nav-item"><a href="{{ url_for('citizen.dashboard') }}" class="nav-btn"><i class="fas fa-th-large"></i> {{ _('Dashboard') }}</a></li>
@@ -46,7 +48,7 @@
                     </button>
                     <select class="language-selector" onchange="location = this.value;">
                         {% for code, name in config.LANGUAGES.items() %}
-                            <option value="{{ url_for('main.set_language', lang_code=code) }}" 
+                            <option value="{{ url_for('main.set_language', lang_code=code) }}"
                                     {% if session.get('language') == code %}selected{% endif %}>
                                 {{ name }}
                             </option>
@@ -55,6 +57,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- Mobile nav strip: second row, horizontally scrollable, shown only on small screens -->
+        {% if current_user.is_authenticated %}
+        <div class="nav-mobile-strip">
+            <ul class="nav-links-mobile">
+                {% if current_user.role == 'citizen' %}
+                    <li><a href="{{ url_for('citizen.dashboard') }}" class="nav-mobile-btn"><i class="fas fa-th-large"></i><span>{{ _('Dashboard') }}</span></a></li>
+                    <li><a href="{{ url_for('citizen.submit_report') }}" class="nav-mobile-btn"><i class="fas fa-plus-circle"></i><span>{{ _('Report') }}</span></a></li>
+                    <li><a href="{{ url_for('citizen.public_forum') }}" class="nav-mobile-btn"><i class="fas fa-users"></i><span>{{ _('Forum') }}</span></a></li>
+                    <li><a href="{{ url_for('citizen.status') }}" class="nav-mobile-btn"><i class="fas fa-clipboard-list"></i><span>{{ _('Status') }}</span></a></li>
+                    <li><a href="{{ url_for('citizen.live_map') }}" class="nav-mobile-btn"><i class="fas fa-map-marked-alt"></i><span>{{ _('Map') }}</span></a></li>
+                    <li><a href="{{ url_for('citizen.profile') }}" class="nav-mobile-btn"><i class="fas fa-user-circle"></i><span>{{ _('Profile') }}</span></a></li>
+                {% else %}
+                    <li><a href="{{ url_for('admin.dashboard') }}" class="nav-mobile-btn"><i class="fas fa-user-shield"></i><span>{{ _('Admin') }}</span></a></li>
+                    <li><a href="{{ url_for('admin.profile') }}" class="nav-mobile-btn"><i class="fas fa-cog"></i><span>{{ _('Settings') }}</span></a></li>
+                {% endif %}
+                <li><a href="{{ url_for('auth.logout') }}" class="nav-mobile-btn nav-mobile-logout"><i class="fas fa-sign-out-alt"></i><span>{{ _('Logout') }}</span></a></li>
+            </ul>
+        </div>
+        {% endif %}
     </nav>
 
     <script>

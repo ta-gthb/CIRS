@@ -79,12 +79,55 @@ img { max-width: 100%; height: auto; }
     flex: 1;
     justify-content: flex-end;
 }
-.nav-links {
+/* Desktop nav links — hidden on mobile (replaced by strip) */
+.nav-links-desktop {
     display: flex;
     list-style: none;
     gap: 0.25rem;
     align-items: center;
 }
+
+/* Mobile nav strip — hidden on desktop */
+.nav-mobile-strip {
+    display: none;
+}
+.nav-links-mobile {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+.nav-links-mobile::-webkit-scrollbar { display: none; }
+.nav-links-mobile li { flex-shrink: 0; }
+.nav-mobile-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 0.4rem 0.75rem;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+    border-right: 1px solid var(--border-color);
+}
+.nav-mobile-btn i {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+.nav-mobile-btn:hover, .nav-mobile-btn:active {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary-color);
+}
+.nav-mobile-logout i { color: var(--danger-color); }
+.nav-mobile-logout:hover { background: rgba(239, 68, 68, 0.08); color: var(--danger-color); }
+[data-theme='dark'] .nav-mobile-btn:hover { background: rgba(59, 130, 246, 0.15); }
 .nav-btn {
     display: flex;
     align-items: center;
@@ -367,7 +410,15 @@ img { max-width: 100%; height: auto; }
     .nav-content { flex: 1; justify-content: flex-end; }
     .controls-area { border-left: none; padding-left: 0; gap: 0.5rem; }
     .language-selector { font-size: 0.75rem; max-width: 100px; padding: 0.15rem 0.3rem; }
-    .nav-links { display: none; }
+
+    /* Hide desktop nav, show mobile strip */
+    .nav-links-desktop { display: none; }
+    .nav-mobile-strip {
+        display: block;
+        border-top: 1px solid var(--border-color);
+        background: var(--nav-bg);
+    }
+
     .stats-row { gap: 1.5rem; }
     .dashboard-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
