@@ -28,10 +28,10 @@
 </div>
 
 <style>
-    .box-input-container { display: flex; justify-content: center; gap: 8px; margin-top: 1rem; }
-    .box-input { width: 35px; height: 45px; text-align: center; font-size: 1.2rem; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-color); color: var(--text-color); }
+    .box-input-container { display: flex; justify-content: center; gap: clamp(4px, 2vw, 8px); margin-top: 1rem; }
+    .box-input { width: clamp(26px, 7.5vw, 35px); height: clamp(38px, 10vw, 45px); text-align: center; font-size: clamp(0.9rem, 3vw, 1.2rem); border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-color); color: var(--text-color); flex-shrink: 0; }
     .box-input:focus { border-color: var(--primary-color); outline: none; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25); }
-    .phone-container .box-input { width: 30px; }
+    .phone-container .box-input { width: clamp(24px, 7vw, 30px); }
     .role-selector { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; }
     .hint { margin-top: 1rem; color: var(--secondary-color); font-size: 0.9rem; }
 </style>
