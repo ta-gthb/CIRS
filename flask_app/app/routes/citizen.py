@@ -89,7 +89,6 @@ def submit_report():
         title = request.form.get('title')
         description = request.form.get('description')
         category = request.form.get('category')
-        priority = request.form.get('priority')
         lat_val = request.form.get('latitude')
         lng_val = request.form.get('longitude')
         lat = float(lat_val) if lat_val else None
@@ -156,6 +155,7 @@ def submit_report():
                             if not existing_upvote:
                                 upvote = Upvote(user_id=current_user.id, report_id=existing.id)
                                 existing.upvotes_count += 1
+                                existing.update_priority()
                                 db.session.add(upvote)
                                 db.session.commit()
                                 flash(_('A similar report already exists in this location. Your upvote has been added to it.'), 'info')
@@ -169,7 +169,7 @@ def submit_report():
             title=title,
             description=description,
             category=category,
-            priority=priority,
+            priority='low',
             latitude=lat,
             longitude=lng,
             city=city,
@@ -219,6 +219,7 @@ def upvote(report_id):
         
     upvote = Upvote(user_id=current_user.id, report_id=report_id)
     report.upvotes_count += 1
+    report.update_priority()
     db.session.add(upvote)
     db.session.commit()
     return jsonify({'success': True, 'upvotes': report.upvotes_count})

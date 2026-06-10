@@ -59,6 +59,17 @@ class Report(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     assigned_to_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     
+    def update_priority(self):
+        """Auto-assign priority based on upvote count"""
+        if self.upvotes_count >= 21:
+            self.priority = 'critical'
+        elif self.upvotes_count >= 11:
+            self.priority = 'high'
+        elif self.upvotes_count >= 3:
+            self.priority = 'medium'
+        else:
+            self.priority = 'low'
+
     images = db.relationship('ReportImage', backref='report', lazy=True, cascade="all, delete-orphan")
     voice_notes = db.relationship('VoiceNote', backref='report', lazy=True, cascade="all, delete-orphan")
     upvotes = db.relationship('Upvote', backref='report', lazy=True, cascade="all, delete-orphan")

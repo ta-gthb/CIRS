@@ -32,6 +32,14 @@ try:
                 'lat': 22.5958, 'lng': 88.2636,
                 'lat_min': 22.5000, 'lat_max': 22.7000,
                 'lon_min': 88.1500, 'lon_max': 88.3500
+            },
+            {
+                'phone': '9876543212',
+                'name': 'South 24 Parganas Admin',
+                'assigned_district': 'South 24 Parganas',
+                'lat': 22.1367, 'lng': 88.5565,
+                'lat_min': 21.4833, 'lat_max': 22.5625,
+                'lon_min': 88.0625, 'lon_max': 89.0806
             }
         ]
 
