@@ -531,7 +531,6 @@ msgid "Upvoted"
 msgstr "ووٽ ڏنو ويو"
 
 #: app/templates/index.html:5
-#, fuzzy
 msgid "Welcome to CIRS !"
 msgstr "CIRS ۾ ڀلي ڪري آيا!"
 
@@ -560,12 +559,10 @@ msgid "Get Started Now"
 msgstr "هاڻي شروع ڪريو"
 
 #: app/templates/index.html:29 app/templates/index.html:51
-#, fuzzy
 msgid "Live Map"
 msgstr "لائيو نقشو ڏسو"
 
 #: app/templates/index.html:30
-#, fuzzy
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "رپورٽ ڪيل مسئلن کي لائيو ڏسو."
 

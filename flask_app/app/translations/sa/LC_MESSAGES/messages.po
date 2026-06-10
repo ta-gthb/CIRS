@@ -559,12 +559,10 @@ msgid "Get Started Now"
 msgstr "अधुना आरभस्व"
 
 #: app/templates/index.html:29 app/templates/index.html:51
-#, fuzzy
 msgid "Live Map"
 msgstr "सजीवं मानचित्रं पश्यतु"
 
 #: app/templates/index.html:30
-#, fuzzy
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "सूचिताः समस्याः सजीव-समये पश्यतु।"
 

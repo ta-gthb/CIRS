@@ -566,12 +566,10 @@ msgid "Get Started Now"
 msgstr "ഇപ്പോൾ ആരംഭിക്കുക"
 
 #: app/templates/index.html:29 app/templates/index.html:51
-#, fuzzy
 msgid "Live Map"
 msgstr "ലൈവ് മാപ്പ് കാണുക"
 
 #: app/templates/index.html:30
-#, fuzzy
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "റിപ്പോർട്ട് ചെയ്ത പ്രശ്നങ്ങൾ തത്സമയം കാണുക."
 

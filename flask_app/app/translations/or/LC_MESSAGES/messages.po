@@ -561,12 +561,10 @@ msgid "Get Started Now"
 msgstr "ଏବେ ଆରମ୍ଭ କରନ୍ତୁ"
 
 #: app/templates/index.html:29 app/templates/index.html:51
-#, fuzzy
 msgid "Live Map"
 msgstr "ଜୀବନ୍ତ ମାନଚିତ୍ର ଦେଖନ୍ତୁ"
 
 #: app/templates/index.html:30
-#, fuzzy
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "ରିପୋର୍ଟ କରାଯାଇଥିବା ସମସ୍ୟାଗୁଡିକ ବାସ୍ତବ ସମୟରେ ଦେଖନ୍ତୁ।"
 

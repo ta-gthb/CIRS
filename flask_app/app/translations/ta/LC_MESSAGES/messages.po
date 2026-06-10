@@ -570,12 +570,10 @@ msgid "Get Started Now"
 msgstr "இப்போது தொடங்குங்கள்"
 
 #: app/templates/index.html:29 app/templates/index.html:51
-#, fuzzy
 msgid "Live Map"
 msgstr "நேரடி வரைபடத்தைக் காண்க"
 
 #: app/templates/index.html:30
-#, fuzzy
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "புகாரளிக்கப்பட்ட சிக்கல்களை நிகழ்நேரத்தில் காட்சிப்படுத்துங்கள்."
 
