@@ -106,6 +106,7 @@
 
     <div id="locationWarning" class="location-warning-banner">
         <i class="fas fa-map-marker-alt"></i> {{ _('Location services are disabled. Please enable GPS to perform actions.') }}
+        <a href="javascript:void(0)" onclick="checkLocationStatusManually()" style="color: white; text-decoration: underline; margin-left: 10px; font-size: 0.8rem;">{{ _('Retry Now') }}</a>
     </div>
     <div id="networkWarning" class="network-warning-banner">
         <i class="fas fa-wifi-slash"></i> {{ _('You are currently offline. Please check your internet connection.') }}
@@ -238,6 +239,7 @@
 
         // Geolocation Continuous Monitoring
         let locationWatchId = null;
+        let recoveryInterval = null;
 
         function startLocationMonitoring() {
             {% if current_user.is_authenticated %}
@@ -246,20 +248,61 @@
                 return;
             }
 
-            // Use watchPosition for continuous monitoring
+            if (locationWatchId !== null) {
+                navigator.geolocation.clearWatch(locationWatchId);
+            }
+
             locationWatchId = navigator.geolocation.watchPosition(
-                () => updateLocationUI(true),
+                () => {
+                    updateLocationUI(true);
+                    stopRecoveryPolling();
+                },
                 (error) => {
                     console.warn("Location error:", error.message);
                     updateLocationUI(false);
+                    startRecoveryPolling();
                 },
-                { 
-                    enableHighAccuracy: false, 
-                    timeout: 5000, 
-                    maximumAge: 0 
-                }
+                { enableHighAccuracy: false, timeout: 5000, maximumAge: 0 }
             );
             {% endif %}
+        }
+
+        function startRecoveryPolling() {
+            if (recoveryInterval === null) {
+                // Poll every 2 seconds when location is off to auto-detect re-entry
+                recoveryInterval = setInterval(() => {
+                    navigator.geolocation.getCurrentPosition(
+                        () => {
+                            updateLocationUI(true);
+                            stopRecoveryPolling();
+                            startLocationMonitoring(); // Restart watch
+                        },
+                        null,
+                        { timeout: 2000 }
+                    );
+                }, 2000);
+            }
+        }
+
+        function stopRecoveryPolling() {
+            if (recoveryInterval !== null) {
+                clearInterval(recoveryInterval);
+                recoveryInterval = null;
+            }
+        }
+
+        function checkLocationStatusManually() {
+            navigator.geolocation.getCurrentPosition(
+                () => {
+                    updateLocationUI(true);
+                    stopRecoveryPolling();
+                    startLocationMonitoring();
+                },
+                (err) => {
+                    alert("{{ _('Location still disabled. Please enable GPS in system settings.') }}");
+                },
+                { timeout: 5000 }
+            );
         }
 
         function updateLocationUI(isOn) {
@@ -267,21 +310,17 @@
             const restrictedButtons = document.querySelectorAll('.requires-location');
             
             if (isOn) {
-                if (banner.style.display !== 'none') {
-                    banner.style.display = 'none';
-                    restrictedButtons.forEach(btn => {
-                        btn.classList.remove('disabled-by-location');
-                        if (btn.tagName === 'BUTTON') btn.disabled = false;
-                    });
-                }
+                banner.style.display = 'none';
+                restrictedButtons.forEach(btn => {
+                    btn.classList.remove('disabled-by-location');
+                    if (btn.tagName === 'BUTTON') btn.disabled = false;
+                });
             } else {
-                if (banner.style.display !== 'block') {
-                    banner.style.display = 'block';
-                    restrictedButtons.forEach(btn => {
-                        btn.classList.add('disabled-by-location');
-                        if (btn.tagName === 'BUTTON') btn.disabled = true;
-                    });
-                }
+                banner.style.display = 'block';
+                restrictedButtons.forEach(btn => {
+                    btn.classList.add('disabled-by-location');
+                    if (btn.tagName === 'BUTTON') btn.disabled = true;
+                });
             }
         }
 
@@ -291,9 +330,6 @@
         // Handle visibility change (re-check when tab becomes active)
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'visible') {
-                if (locationWatchId !== null) {
-                    navigator.geolocation.clearWatch(locationWatchId);
-                }
                 startLocationMonitoring();
             }
         });
