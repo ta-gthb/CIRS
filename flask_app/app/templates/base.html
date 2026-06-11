@@ -321,6 +321,12 @@
                     btn.classList.add('disabled-by-location');
                     if (btn.tagName === 'BUTTON') btn.disabled = true;
                 });
+                
+                // Clear coordinates to prevent stale submissions if GPS is turned off
+                const latInput = document.getElementById('latitude');
+                const lngInput = document.getElementById('longitude');
+                if (latInput) latInput.value = '';
+                if (lngInput) lngInput.value = '';
             }
         }
 
