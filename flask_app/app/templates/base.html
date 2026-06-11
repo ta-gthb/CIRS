@@ -104,6 +104,13 @@
         });
     </script>
 
+    <div id="locationWarning" class="location-warning-banner">
+        <i class="fas fa-map-marker-alt"></i> {{ _('Location services are disabled. Please enable GPS to perform actions.') }}
+    </div>
+    <div id="networkWarning" class="network-warning-banner">
+        <i class="fas fa-wifi-slash"></i> {{ _('You are currently offline. Please check your internet connection.') }}
+    </div>
+
     <div class="container content">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
@@ -212,6 +219,84 @@
                 loadMessages();
             }
         }, 5000);
+    </script>
+
+    <script>
+        // Network Status Monitoring
+        function updateNetworkUI() {
+            const banner = document.getElementById('networkWarning');
+            if (navigator.onLine) {
+                banner.style.display = 'none';
+            } else {
+                banner.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('online', updateNetworkUI);
+        window.addEventListener('offline', updateNetworkUI);
+        window.addEventListener('DOMContentLoaded', updateNetworkUI);
+
+        // Geolocation Continuous Monitoring
+        let locationWatchId = null;
+
+        function startLocationMonitoring() {
+            {% if current_user.is_authenticated %}
+            if (!navigator.geolocation) {
+                updateLocationUI(false);
+                return;
+            }
+
+            // Use watchPosition for continuous monitoring
+            locationWatchId = navigator.geolocation.watchPosition(
+                () => updateLocationUI(true),
+                (error) => {
+                    console.warn("Location error:", error.message);
+                    updateLocationUI(false);
+                },
+                { 
+                    enableHighAccuracy: false, 
+                    timeout: 5000, 
+                    maximumAge: 0 
+                }
+            );
+            {% endif %}
+        }
+
+        function updateLocationUI(isOn) {
+            const banner = document.getElementById('locationWarning');
+            const restrictedButtons = document.querySelectorAll('.requires-location');
+            
+            if (isOn) {
+                if (banner.style.display !== 'none') {
+                    banner.style.display = 'none';
+                    restrictedButtons.forEach(btn => {
+                        btn.classList.remove('disabled-by-location');
+                        if (btn.tagName === 'BUTTON') btn.disabled = false;
+                    });
+                }
+            } else {
+                if (banner.style.display !== 'block') {
+                    banner.style.display = 'block';
+                    restrictedButtons.forEach(btn => {
+                        btn.classList.add('disabled-by-location');
+                        if (btn.tagName === 'BUTTON') btn.disabled = true;
+                    });
+                }
+            }
+        }
+
+        // Initialize monitoring on load
+        window.addEventListener('DOMContentLoaded', startLocationMonitoring);
+        
+        // Handle visibility change (re-check when tab becomes active)
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                if (locationWatchId !== null) {
+                    navigator.geolocation.clearWatch(locationWatchId);
+                }
+                startLocationMonitoring();
+            }
+        });
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>

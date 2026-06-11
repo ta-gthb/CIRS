@@ -79,14 +79,14 @@
                                     <td>
                                         <button class="btn btn-sm btn-info" onclick="viewReportDetails({{ report.id }})">{{ _('View') }}</button>
                                         {% if report.status == 'pending' %}
-                                            <a href="{{ url_for('admin.approve_report', report_id=report.id) }}" class="btn btn-sm btn-success">{{ _('Approve') }}</a>
-                                            <button class="btn btn-sm btn-danger" onclick="openRejectModal({{ report.id }})">{{ _('Reject') }}</button>
+                                            <a href="{{ url_for('admin.approve_report', report_id=report.id) }}" class="btn btn-sm btn-success requires-location">{{ _('Approve') }}</a>
+                                            <button class="btn btn-sm btn-danger requires-location" onclick="openRejectModal({{ report.id }})">{{ _('Reject') }}</button>
                                         {% endif %}
                                         {% if report.status != 'resolved' and report.status != 'rejected' %}
-                                            <button class="btn btn-sm btn-primary" onclick="openResolveModal({{ report.id }})">{{ _('Resolve') }}</button>
+                                            <button class="btn btn-sm btn-primary requires-location" onclick="openResolveModal({{ report.id }})">{{ _('Resolve') }}</button>
                                         {% endif %}
                                         {% if report.status in ['acknowledged', 'in_progress'] %}
-                                            <button class="btn btn-sm btn-warning" onclick="openChat({{ report.id }})">{{ _('Message') }}</button>
+                                            <button class="btn btn-sm btn-warning requires-location" onclick="openChat({{ report.id }})">{{ _('Message') }}</button>
                                         {% endif %}
                                     </td>
                                 </tr>
@@ -120,12 +120,12 @@
                                 <td>{{ user.phone }}</td>
                                 <td>
                                     <a href="{{ url_for('admin.approve_deletion', user_id=user.id) }}" 
-                                       class="btn btn-sm btn-danger"
+                                       class="btn btn-sm btn-danger requires-location"
                                        onclick="return confirm('{{ _('Are you sure you want to approve this deletion? This action is permanent.') }}')">
                                         {{ _('Approve') }}
                                     </a>
                                     <a href="{{ url_for('admin.reject_deletion', user_id=user.id) }}" 
-                                       class="btn btn-sm btn-secondary">
+                                       class="btn btn-sm btn-secondary requires-location">
                                         {{ _('Reject') }}
                                     </a>
                                 </td>

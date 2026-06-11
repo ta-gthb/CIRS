@@ -549,6 +549,50 @@ img { max-width: 100%; height: auto; }
     .alert { padding: 0.75rem; font-size: 0.875rem; }
 }
 
+/* Location Restrictions */
+.requires-location.disabled-by-location {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+    filter: grayscale(1);
+}
+
+.location-warning-banner, .network-warning-banner {
+    display: none;
+    background: var(--danger-color);
+    color: white;
+    text-align: center;
+    padding: 0.75rem;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+.network-warning-banner {
+    background: #444; /* Different color to distinguish from location */
+    top: 120px; /* Offset from location banner if both are shown */
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .location-warning-banner, .network-warning-banner {
+        top: 60px;
+        font-size: 0.85rem;
+    }
+    .network-warning-banner {
+        top: 100px;
+    }
+}
+
 /* Specific fixes for 375px and narrower (iPhone SE, older Androids) */
 @media (max-width: 390px) {
     .container { padding: 0 0.6rem; }
