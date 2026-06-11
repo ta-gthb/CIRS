@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-09 21:38+0530\n"
+"POT-Creation-Date: 2026-06-12 00:11+0530\n"
 "PO-Revision-Date: 2026-06-07 10:55+0530\n"
 "Last-Translator: Gemini CLI <email@address>\n"
 "Language: sd\n"
@@ -20,30 +20,27 @@ msgstr ""
 
 #: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
-msgstr "غير مجاز"
+msgstr ""
 
 #: app/routes/admin.py:103
 msgid "Report approved."
-msgstr "رپورٽ منظور ڪئي وئي."
+msgstr ""
 
 #: app/routes/admin.py:115
 msgid "Report resolved."
-msgstr "رپورٽ حل ڪئي وئي."
+msgstr ""
 
 #: app/routes/admin.py:129
-#, fuzzy
 msgid "Report rejected."
-msgstr "رپورٽ ٻيهر کولي وئي."
+msgstr ""
 
 #: app/routes/admin.py:146
-#, fuzzy
 msgid "User deletion approved. Pending reports removed."
-msgstr "واپرائيندڙ جي خاتمي جي منظوري ملي وئي."
+msgstr ""
 
 #: app/routes/admin.py:155
-#, fuzzy
 msgid "User deletion request rejected."
-msgstr "واپرائيندڙ جي خاتمي جي منظوري ملي وئي."
+msgstr ""
 
 #: app/routes/auth.py:21
 #, python-format
@@ -54,637 +51,653 @@ msgstr ""
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
-msgstr "آفيسر رجسٽرڊ ناهي. ايڊمنسٽريٽر سان رابطو ڪريو."
+msgstr ""
 
 #: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
-msgstr "نمبر %(role)s طور رجسٽرڊ آهي. صحيح ڪردار چونڊيو."
+msgstr ""
 
 #: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
-msgstr "اڪائونٽ غير فعال يا ختم ٿيل آهي."
+msgstr ""
 
 #: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
-msgstr "غلط يا مدو ختم ٿيل او ٽي پي."
+msgstr ""
 
 #: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
-msgstr "پروفائل ڪاميابي سان اپڊيٽ ڪيو ويو!"
+msgstr ""
 
-#: app/routes/citizen.py:161
+#: app/routes/citizen.py:96
+msgid "Location is required. Please enable GPS and allow location access."
+msgstr ""
+
+#: app/routes/citizen.py:166
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
 msgstr ""
-"هن جاءِ تي ساڳي رپورٽ اڳ ۾ ئي موجود آهي. توهان جو ووٽ ان ۾ شامل ڪيو ويو "
-"آهي."
 
-#: app/routes/citizen.py:163
+#: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr "ساڳي رپورٽ اڳ ۾ ئي موجود آهي ۽ توهان اڳ ۾ ئي ان کي ووٽ ڏئي چڪا آهيو."
+msgstr ""
 
-#: app/routes/citizen.py:165
+#: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
-msgstr "توهان اڳ ۾ ئي هن جاءِ تي ساڳي رپورٽ جمع ڪرائي چڪا آهيو."
+msgstr ""
 
-#: app/routes/citizen.py:186
+#: app/routes/citizen.py:191
 msgid "You can only upload up to 3 images."
-msgstr "توهان صرف 3 تصويرون اپلوڊ ڪري سگهو ٿ."
+msgstr ""
 
-#: app/routes/citizen.py:203
+#: app/routes/citizen.py:208
 msgid "Report submitted successfully!"
-msgstr "رپورٽ ڪاميابي سان جمع ڪئي وئي!"
+msgstr ""
 
-#: app/routes/citizen.py:214
+#: app/routes/citizen.py:219
 msgid "You cannot upvote your own report."
-msgstr "توهان پنهنجي رپورٽ کي ووٽ نه ٿا ڏئي سگهو."
+msgstr ""
 
-#: app/routes/citizen.py:218
+#: app/routes/citizen.py:223
 msgid "Already upvoted"
-msgstr "اڳ ۾ ئي ووٽ ڏنل"
+msgstr ""
 
-#: app/routes/citizen.py:236
+#: app/routes/citizen.py:242
 msgid "Comment added."
-msgstr "تبصرو شامل ڪيو ويو."
+msgstr ""
 
-#: app/routes/citizen.py:244
+#: app/routes/citizen.py:250
 msgid "Unauthorized."
-msgstr "غير مجاز."
+msgstr ""
 
-#: app/routes/citizen.py:251
-#, fuzzy
+#: app/routes/citizen.py:257
 msgid "Report cannot be reopened after 7 days of resolution."
-msgstr "رپورٽ ٻيهر کولي نٿي سگهجي."
+msgstr ""
 
-#: app/routes/citizen.py:256
+#: app/routes/citizen.py:262
 msgid "Report reopened."
-msgstr "رپورٽ ٻيهر کولي وئي."
+msgstr ""
 
-#: app/routes/citizen.py:258
+#: app/routes/citizen.py:264
 msgid "Report cannot be reopened."
-msgstr "رپورٽ ٻيهر کولي نٿي سگهجي."
+msgstr ""
 
-#: app/routes/citizen.py:266
+#: app/routes/citizen.py:272
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:271
+#: app/routes/citizen.py:277
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
 msgstr ""
-"اڪائونٽ ختم ڪرڻ جي درخواست توهان جي مقرر ڪيل آفيسر کي موڪلي وئي آهي. "
-"ايڊمن آفيسر جي منظوري کانپوءِ توهان جو اڪائونٽ ختم ڪيو ويندو."
 
 #: app/templates/admin_dashboard.html:5
-#, fuzzy
 msgid "Admin Officer Dashboard"
-msgstr "ايڊمن ڊيش بورڊ"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:6
-#, fuzzy
 msgid "Assigned to:"
-msgstr "مقرر ڪيل رياست:"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:64
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:70
 #: app/templates/status.html:41
 msgid "Priority:"
-msgstr "ترجيح:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:14
-#, fuzzy
 msgid "All Priorities"
-msgstr "ترجيح"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:15 app/templates/index.html:34
-#: app/templates/live_map.html:10 app/templates/submit_report.html:30
+#: app/templates/live_map.html:14
 msgid "Critical"
-msgstr "انتهائي اهم"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:16 app/templates/index.html:35
-#: app/templates/live_map.html:11 app/templates/submit_report.html:29
+#: app/templates/live_map.html:15
 msgid "High"
-msgstr "تمام گهڻو"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:17 app/templates/index.html:36
-#: app/templates/live_map.html:12 app/templates/submit_report.html:28
+#: app/templates/live_map.html:16
 msgid "Medium"
-msgstr "وچولي"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:18 app/templates/index.html:37
-#: app/templates/live_map.html:13 app/templates/submit_report.html:27
+#: app/templates/live_map.html:17
 msgid "Low"
-msgstr "گهٽ"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:22 app/templates/status.html:11
 msgid "From:"
-msgstr "کان:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:26 app/templates/status.html:15
 msgid "To:"
-msgstr "تائين:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:30 app/templates/status.html:19
 msgid "Filter"
-msgstr "فلٽر"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:31 app/templates/status.html:20
 msgid "Clear"
-msgstr "صاف ڪريو"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:39
-#, fuzzy
 msgid "Total Reports"
-msgstr "رپورٽون"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:47
-#, fuzzy
 msgid "Approved"
-msgstr "رپورٽ منظور ڪئي وئي."
+msgstr ""
 
 #: app/templates/admin_dashboard.html:51
-#, fuzzy
 msgid "Resolved"
-msgstr "هٽايو"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:57
-#, fuzzy
 msgid "Manage Reports"
-msgstr "رپورٽون"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:224
-#, fuzzy
+#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:226
 msgid "Title"
-msgstr "فائل"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:107
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:110
 #: app/templates/profile.html:14
 msgid "Citizen ID"
-msgstr "شهري آءِ ڊي"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/live_map.html:9 app/templates/submit_report.html:25
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:228
+#: app/templates/live_map.html:13
 msgid "Priority"
-msgstr "ترجيح"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
+#: app/templates/admin_dashboard.html:66 app/templates/admin_dashboard.html:229
+#: app/templates/base.html:69
 msgid "Status"
-msgstr "حالت"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:66
-#, fuzzy
+#: app/templates/admin_dashboard.html:67
 msgid "Date"
-msgstr "رياست"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:67 app/templates/admin_dashboard.html:109
-#, fuzzy
+#: app/templates/admin_dashboard.html:68 app/templates/admin_dashboard.html:112
 msgid "Actions"
-msgstr "جاءِ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:74
+#: app/templates/admin_dashboard.html:75
 msgid "N/A"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:79
+#: app/templates/admin_dashboard.html:80
 msgid "View"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:81 app/templates/admin_dashboard.html:122
-#, fuzzy
+#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:125
 msgid "Approve"
-msgstr "هٽايو"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:126
+#: app/templates/admin_dashboard.html:83 app/templates/admin_dashboard.html:129
 msgid "Reject"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:85
-#, fuzzy
+#: app/templates/admin_dashboard.html:86
 msgid "Resolve"
-msgstr "هٽايو"
-
-#: app/templates/admin_dashboard.html:88 app/templates/status.html:68
-msgid "Message"
-msgstr "پيغام"
-
-#: app/templates/admin_dashboard.html:96
-#, fuzzy
-msgid "No reports found matching filters."
-msgstr "معيار سان مطابقت رکندڙ ڪا به رپورٽ نه ملي."
-
-#: app/templates/admin_dashboard.html:102
-#, fuzzy
-msgid "Pending Account Deletion Requests"
-msgstr "اڪائونٽ ختم ڪرڻ جي درخواست منظوري لاءِ پينڊنگ آهي."
-
-#: app/templates/admin_dashboard.html:106
-#, fuzzy
-msgid "Name"
-msgstr "نالو:"
-
-#: app/templates/admin_dashboard.html:108
-#, fuzzy
-msgid "Phone"
-msgstr "فون:"
-
-#: app/templates/admin_dashboard.html:115 app/templates/public_forum.html:16
-#: app/templates/public_forum.html:33
-msgid "Anonymous"
-msgstr "گمنام"
-
-#: app/templates/admin_dashboard.html:121
-#, fuzzy
-msgid "Are you sure you want to approve this deletion? This action is permanent."
-msgstr "ڇا توهان پڪ سان هي رپورٽ ٻيهر کولڻ چاهيو ٿا؟"
-
-#: app/templates/admin_dashboard.html:141
-#, fuzzy
-msgid "Report Details"
-msgstr "رپورٽون"
-
-#: app/templates/admin_dashboard.html:145 app/templates/public_forum.html:54
-msgid "Close"
-msgstr "بند ڪريو"
-
-#: app/templates/admin_dashboard.html:153
-msgid "Resolve Report"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:155
-msgid "Enter resolution notes..."
+#: app/templates/admin_dashboard.html:89 app/templates/status.html:68
+msgid "Message"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:98
+msgid "No reports found matching filters."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:104
+msgid "Pending Account Deletion Requests"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:109
+msgid "Name"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:111
+msgid "Phone"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:118 app/templates/public_forum.html:16
+#: app/templates/public_forum.html:33
+msgid "Anonymous"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:124
+msgid "Are you sure you want to approve this deletion? This action is permanent."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:145
+msgid "Report Details"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:149 app/templates/public_forum.html:54
+msgid "Close"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:157
-#: app/templates/admin_dashboard.html:171
+msgid "Resolve Report"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:159
+msgid "Enter resolution notes..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:161
+#: app/templates/admin_dashboard.html:175
 msgid "Cancel"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:158
-#, fuzzy
+#: app/templates/admin_dashboard.html:162
 msgid "Mark as Resolved"
-msgstr "حل ٿيل مسئلا"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:167
-#: app/templates/admin_dashboard.html:172
-#, fuzzy
+#: app/templates/admin_dashboard.html:171
+#: app/templates/admin_dashboard.html:176
 msgid "Reject Report"
-msgstr "رپورٽ جمع ڪريو"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:169
+#: app/templates/admin_dashboard.html:173
 msgid "Enter rejection reason..."
 msgstr ""
 
-#: app/templates/admin_dashboard.html:214 app/templates/status.html:88
+#: app/templates/admin_dashboard.html:216 app/templates/status.html:88
 msgid "Report Image"
-msgstr "رپورٽ جي تصوير"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:225 app/templates/submit_report.html:14
+#: app/templates/admin_dashboard.html:227 app/templates/submit_report.html:14
 msgid "Category"
-msgstr "زمرو"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:228
-#, fuzzy
+#: app/templates/admin_dashboard.html:230
 msgid "Submitted On"
-msgstr "منهنجيون جمع ڪيل رپورٽون"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:229
-#, fuzzy
+#: app/templates/admin_dashboard.html:231
 msgid "Description"
-msgstr "مسئلي جي تفصيل"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:230 app/templates/submit_report.html:41
+#: app/templates/admin_dashboard.html:232 app/templates/submit_report.html:32
 msgid "Location"
-msgstr "جاءِ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:234
+#: app/templates/admin_dashboard.html:236
 msgid "Captured Images"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:235
+#: app/templates/admin_dashboard.html:237
 msgid "No images uploaded"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:238
-#, fuzzy
+#: app/templates/admin_dashboard.html:240
 msgid "Voice Notes"
-msgstr "آواز جو نوٽ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:239
-#, fuzzy
+#: app/templates/admin_dashboard.html:241
 msgid "No voice notes uploaded"
-msgstr "آواز جو نوٽ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:261
+#: app/templates/admin_dashboard.html:263
 msgid "Failed to fetch report details"
 msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
-msgstr "ايڊمن آفيسر پروفائل"
+msgstr ""
 
 #: app/templates/admin_profile.html:7
 msgid "Name:"
-msgstr "نالو:"
+msgstr ""
 
 #: app/templates/admin_profile.html:8
 msgid "Phone:"
-msgstr "فون:"
+msgstr ""
 
 #: app/templates/admin_profile.html:9
 msgid "Role:"
-msgstr "ڪردار:"
+msgstr ""
 
 #: app/templates/admin_profile.html:9
 msgid "Authority / Admin Officer"
-msgstr "اٿارٽي / ايڊمن آفيسر"
+msgstr ""
 
 #: app/templates/admin_profile.html:10
 msgid "Assigned State:"
-msgstr "مقرر ڪيل رياست:"
+msgstr ""
 
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
-msgstr "مقرر ڪيل ضلعو:"
+msgstr ""
 
 #: app/templates/admin_profile.html:12
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:20
+#: app/templates/base.html:24 app/templates/base.html:66
 msgid "Dashboard"
-msgstr "ڊيش بورڊ"
+msgstr ""
 
-#: app/templates/base.html:21
+#: app/templates/base.html:25
 msgid "Report Issue"
-msgstr "مسئلو رپورٽ ڪريو"
+msgstr ""
 
-#: app/templates/base.html:22
+#: app/templates/base.html:26 app/templates/base.html:68
 msgid "Forum"
-msgstr "فورم"
+msgstr ""
 
-#: app/templates/base.html:23
+#: app/templates/base.html:27
 msgid "My Status"
-msgstr "منهنجي صورتحال"
+msgstr ""
 
-#: app/templates/base.html:24
+#: app/templates/base.html:28 app/templates/base.html:70
 msgid "Map"
-msgstr "نقشو"
+msgstr ""
 
-#: app/templates/base.html:26
+#: app/templates/base.html:30 app/templates/base.html:71
 msgid "Profile"
-msgstr "پروفائل"
+msgstr ""
 
-#: app/templates/base.html:29
+#: app/templates/base.html:33
 msgid "Admin Panel"
-msgstr "ايڊمن پينل"
+msgstr ""
 
-#: app/templates/base.html:31
+#: app/templates/base.html:35 app/templates/base.html:74
 msgid "Settings"
-msgstr "سيٽنگون"
+msgstr ""
 
-#: app/templates/base.html:36 app/templates/login.html:5
-msgid "Login / Register"
-msgstr "لاگ ইন / رجسٽر"
+#: app/templates/base.html:44
+msgid "Login"
+msgstr ""
 
-#: app/templates/base.html:41
+#: app/templates/base.html:46
 msgid "Toggle Light/Dark Mode"
-msgstr "لائيٽ/ڊارڪ موڊ تبديل ڪريو"
+msgstr ""
 
-#: app/templates/base.html:95
-msgid "Civic Issue Reporting System (CIRS). All rights reserved."
-msgstr "سوڪ ايشو رپورٽنگ سسٽم (CIRS). تمام حق محفوظ آهن."
+#: app/templates/base.html:67
+msgid "Report"
+msgstr ""
 
-#: app/templates/base.html:102
-msgid "Report Chat"
-msgstr "رپورٽ چيٽ"
+#: app/templates/base.html:73
+msgid "Admin"
+msgstr ""
+
+#: app/templates/base.html:76
+msgid "Logout"
+msgstr ""
+
+#: app/templates/base.html:108
+msgid "Location services are disabled. Please enable GPS to perform actions."
+msgstr ""
 
 #: app/templates/base.html:109
+msgid "Retry Now"
+msgstr ""
+
+#: app/templates/base.html:112
+msgid "You are currently offline. Please check your internet connection."
+msgstr ""
+
+#: app/templates/base.html:128
+msgid "Civic Issue Reporting System (CIRS). All rights reserved."
+msgstr ""
+
+#: app/templates/base.html:135
+msgid "Report Chat"
+msgstr ""
+
+#: app/templates/base.html:142
 msgid "Type a message..."
-msgstr "پيغام ٽائپ ڪريو..."
+msgstr ""
+
+#: app/templates/base.html:302
+msgid "Location still disabled. Please enable GPS in system settings."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
-msgstr "توهان جي ڊيش بورڊ تي ڀلي ڪري آيا"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr "توهان جي ڪميونٽي ۾ شهري مسئلن جي رپورٽنگ ۽ ٽريڪنگ لاءِ توهان جو پورٽل."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
-msgstr "نئين رپورٽ جمع ڪريو"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:17
 msgid "Trending/Nearby Issues"
-msgstr "رجحان ساز / ويجهي مسئلا"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:18
 msgid "High-priority and trending reports in the portal."
-msgstr "پورٽل ۾ اعليٰ ترجيحي ۽ رجحان ساز رپورٽون."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:30
 msgid "General"
-msgstr "عام"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:31
 msgid "Upvote"
-msgstr "ووٽ ڏيو"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:36
 msgid "No issues reported yet."
-msgstr "اڃا تائين ڪو به مسئلو رپورٽ نه ڪيو ويو آهي."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:40
 msgid "View All in Public Forum"
-msgstr "عوامي فورم ۾ سڀ ڏسو"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:45
 msgid "Quick Links"
-msgstr "جلدي لنڪس"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:49
 msgid "Track My Reports"
-msgstr "منهنجيون رپورٽون ٽريڪ ڪريو"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:53
 msgid "View Live Map"
-msgstr "لائيو نقشو ڏسو"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:57
 msgid "Manage Profile"
-msgstr "پروفائل اپڊيٽ ڪريو"
+msgstr ""
 
-#: app/templates/citizen_dashboard.html:93
+#: app/templates/citizen_dashboard.html:91
 msgid "Upvoted"
-msgstr "ووٽ ڏنو ويو"
+msgstr ""
 
 #: app/templates/index.html:5
 msgid "Welcome to CIRS !"
-msgstr "CIRS ۾ ڀلي ڪري آيا!"
+msgstr ""
 
 #: app/templates/index.html:6
 msgid "--Report today for a better tomorrow"
-msgstr "--بهتر سڀاڻي لاءِ اڄ رپورٽ ڪريو"
+msgstr ""
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr "مقامي مسئلن کي گڏجي رپورٽ ڪريو، ٽريڪ ڪريو ۽ حل ڪريو"
+msgstr ""
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
-msgstr "حل ٿيل مسئلا"
+msgstr ""
 
 #: app/templates/index.html:15
 msgid "Active Users"
-msgstr "فعال واپرائيندڙ"
+msgstr ""
 
 #: app/templates/index.html:19
 msgid "Cities"
-msgstr "شهر"
+msgstr ""
 
 #: app/templates/index.html:23
 msgid "Get Started Now"
-msgstr "هاڻي شروع ڪريو"
+msgstr ""
 
 #: app/templates/index.html:29 app/templates/index.html:51
 msgid "Live Map"
-msgstr "لائيو نقشو ڏسو"
+msgstr ""
 
 #: app/templates/index.html:30
 msgid "Visualize all reported issues across districts in real-time."
-msgstr "رپورٽ ڪيل مسئلن کي لائيو ڏسو."
+msgstr ""
 
 #: app/templates/index.html:42
 msgid "Powerful Features"
-msgstr "طاقتور خاصيتون"
+msgstr ""
 
 #: app/templates/index.html:46
 msgid "Media Reporting"
-msgstr "ميڊيا رپورٽنگ"
+msgstr ""
 
 #: app/templates/index.html:47
 msgid "Capture issues with photos and voice notes."
-msgstr "تصويرن ۽ آواز جي نوٽس سان مسئلا رڪارڊ ڪريو."
+msgstr ""
 
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
-msgstr "رپورٽ ڪيل مسئلن کي لائيو ڏسو."
+msgstr ""
 
 #: app/templates/index.html:56
 msgid "Analytics"
-msgstr "تجزيو"
+msgstr ""
 
 #: app/templates/index.html:57
 msgid "Track resolution status and response times."
-msgstr "حل جي حالت ۽ جوابي وقت کي ٽريڪ ڪريو."
+msgstr ""
 
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
-msgstr "لائيو نقشو - عوامي مسئلا"
+msgstr ""
 
-#: app/templates/live_map.html:63 app/templates/status.html:40
+#: app/templates/live_map.html:8
+msgid "Locate Me"
+msgstr ""
+
+#: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
-msgstr "زمرو:"
+msgstr ""
 
-#: app/templates/live_map.html:65
+#: app/templates/live_map.html:71
 msgid "Status:"
-msgstr "حالت:"
+msgstr ""
+
+#: app/templates/live_map.html:97
+msgid "You are here"
+msgstr ""
+
+#: app/templates/login.html:5
+msgid "Login / Register"
+msgstr ""
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
-msgstr "موبائيل نمبر"
+msgstr ""
 
 #: app/templates/login.html:17
 msgid "I am a:"
-msgstr "مان هڪ آهيان:"
+msgstr ""
 
 #: app/templates/login.html:20
 msgid "Citizen"
-msgstr "شهري"
+msgstr ""
 
 #: app/templates/login.html:22
 msgid "Officer"
-msgstr "آفيسر"
+msgstr ""
 
 #: app/templates/login.html:25
 msgid "Send OTP"
-msgstr "او ٽي پي موڪليو"
+msgstr ""
 
 #: app/templates/login.html:27
 msgid "Demo OTP: 1234"
-msgstr "ڊيمو او ٽي پي: 1234"
+msgstr ""
 
 #: app/templates/login.html:84
 msgid "Please enter 10 digits"
-msgstr "مهرباني ڪري 10 انگ داخل ڪريو"
+msgstr ""
 
 #: app/templates/profile.html:5
 msgid "User Profile"
-msgstr "واپرائيندڙ پروفائل"
+msgstr ""
 
 #: app/templates/profile.html:9
 msgid "Full Name"
-msgstr "پورو نالو"
+msgstr ""
 
 #: app/templates/profile.html:10
 msgid "Enter your full name"
-msgstr "پنهنجو پورو نالو داخل ڪريو"
+msgstr ""
 
 #: app/templates/profile.html:15
 msgid "Not Assigned"
-msgstr "مقرر ناهي"
+msgstr ""
 
 #: app/templates/profile.html:19
 msgid "Phone Number"
-msgstr "فون نمبر"
+msgstr ""
 
 #: app/templates/profile.html:21
 msgid "Phone number cannot be changed."
-msgstr "فون نمبر تبديل نٿو ڪري سگهجي."
+msgstr ""
 
 #: app/templates/profile.html:25
 msgid "Address"
-msgstr "پتو"
+msgstr ""
 
 #: app/templates/profile.html:26
 msgid "Enter your address"
-msgstr "پنهنجو پتو داخل ڪريو"
+msgstr ""
 
 #: app/templates/profile.html:31
 msgid "State"
-msgstr "رياست"
+msgstr ""
 
 #: app/templates/profile.html:33
 msgid "Select State"
-msgstr "رياست چونڊيو"
+msgstr ""
 
 #: app/templates/profile.html:37
 msgid "District"
-msgstr "ضلعو"
+msgstr ""
 
-#: app/templates/profile.html:39 app/templates/profile.html:136
+#: app/templates/profile.html:39 app/templates/profile.html:134
 msgid "Select District"
-msgstr "ضلعو چونڊيو"
+msgstr ""
 
 #: app/templates/profile.html:44
 msgid "Update Profile"
-msgstr "پروفائل اپڊيٽ ڪريو"
+msgstr ""
 
 #: app/templates/profile.html:49
 msgid "Account Management"
-msgstr "اڪائونٽ جو انتظام"
+msgstr ""
 
 #: app/templates/profile.html:52
 msgid ""
@@ -694,7 +707,7 @@ msgstr ""
 
 #: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
-msgstr "اڪائونٽ ختم ڪرڻ جي درخواست ڪريو"
+msgstr ""
 
 #: app/templates/profile.html:58
 msgid ""
@@ -703,71 +716,68 @@ msgid ""
 msgstr ""
 
 #: app/templates/profile.html:60
-#, fuzzy
 msgid "Update profile to enable"
-msgstr "پروفائل اپڊيٽ ڪريو"
+msgstr ""
 
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
-msgstr "اڪائونٽ ختم ڪرڻ جي درخواست منظوري لاءِ پينڊنگ آهي."
+msgstr ""
 
 #: app/templates/public_forum.html:5
 msgid "Public Forum"
-msgstr "عوامي فورم"
+msgstr ""
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
-msgstr "پوسٽ ڪيو ويو تاريخ تي"
+msgstr ""
 
 #: app/templates/public_forum.html:16
 msgid "by"
-msgstr "پاران"
+msgstr ""
 
 #: app/templates/public_forum.html:21
 msgid "Upvotes"
-msgstr "ووٽ"
+msgstr ""
 
 #: app/templates/public_forum.html:24
-#, fuzzy
 msgid "View Location"
-msgstr "نشان لڳل جاءِ ڏسو"
+msgstr ""
 
 #: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
-msgstr "تبصرا"
+msgstr ""
 
 #: app/templates/public_forum.html:39
 msgid "Add a comment..."
-msgstr "تبصرو شامل ڪريو..."
+msgstr ""
 
 #: app/templates/public_forum.html:40
 msgid "Post"
-msgstr "پوسٽ ڪريو"
+msgstr ""
 
 #: app/templates/public_forum.html:51
-#, fuzzy
 msgid "Report Location"
-msgstr "رپورٽ چيٽ"
+msgstr ""
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
-msgstr "منهنجيون جمع ڪيل رپورٽون"
+msgstr ""
 
 #: app/templates/status.html:27
 msgid "No reports found matching the criteria."
-msgstr "معيار سان مطابقت رکندڙ ڪا به رپورٽ نه ملي."
+msgstr ""
 
 #: app/templates/status.html:42
 msgid "Location:"
-msgstr "جاءِ:"
+msgstr ""
 
 #: app/templates/status.html:42
 msgid "Unknown"
-msgstr "نامعلوم"
+msgstr ""
 
 #: app/templates/status.html:43
 msgid "Upvotes:"
-msgstr "ووٽ:"
+msgstr ""
 
 #: app/templates/status.html:51
 msgid "Resolution Notes:"
@@ -783,177 +793,181 @@ msgstr ""
 
 #: app/templates/status.html:64
 msgid "View Marked Location"
-msgstr "نشان لڳل جاءِ ڏسو"
+msgstr ""
 
 #: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
-msgstr "ڇا توهان پڪ سان هي رپورٽ ٻيهر کولڻ چاهيو ٿا؟"
+msgstr ""
 
 #: app/templates/status.html:74
 msgid "Reopen"
-msgstr "ٻيهر کوليو"
+msgstr ""
 
 #: app/templates/status.html:85
 msgid "Images:"
-msgstr "تصويرون:"
+msgstr ""
 
 #: app/templates/status.html:96
 msgid "Voice Note:"
-msgstr "آواز جو نوٽ:"
+msgstr ""
 
 #: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
-msgstr "توهان جو برائوزر آڊيو کي سپورٽ نٿو ڪري."
+msgstr ""
 
 #: app/templates/submit_report.html:8
 msgid "Issue Title"
-msgstr "مسئلي جو عنوان"
+msgstr ""
 
 #: app/templates/submit_report.html:9
 msgid "Brief title of the issue"
-msgstr "مسئلي جو مختصر عنوان"
+msgstr ""
 
 #: app/templates/submit_report.html:16
 msgid "Select Category"
-msgstr "زمرو چونڊيو"
+msgstr ""
 
 #: app/templates/submit_report.html:17
 msgid "Roads & Potholes"
-msgstr "رستا ۽ کڏا"
+msgstr ""
 
 #: app/templates/submit_report.html:18
 msgid "Water Supply"
-msgstr "پاڻي جي فراهمي"
+msgstr ""
 
 #: app/templates/submit_report.html:19
 msgid "Electricity"
-msgstr "بجلي"
+msgstr ""
 
 #: app/templates/submit_report.html:20
 msgid "Sanitation & Garbage"
-msgstr "صفائي ۽ ڪچرو"
+msgstr ""
 
 #: app/templates/submit_report.html:21
 msgid "Other"
-msgstr "ٻيا"
+msgstr ""
 
-#: app/templates/submit_report.html:36
+#: app/templates/submit_report.html:27
 msgid "Issue Description"
-msgstr "مسئلي جي تفصيل"
+msgstr ""
 
-#: app/templates/submit_report.html:37
+#: app/templates/submit_report.html:28
 msgid "Provide details about the issue..."
-msgstr "مسئلي بابت تفصيل ڏيو..."
+msgstr ""
 
-#: app/templates/submit_report.html:42
+#: app/templates/submit_report.html:33
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr "جاءِ پاڻمرادو حاصل ڪئي ويندي، پر توهان ان کي نقشي تي ترتيب ڏئي سگهو ٿ।"
+msgstr ""
 
-#: app/templates/submit_report.html:52
+#: app/templates/submit_report.html:43
 msgid "Upload Images (Max 3, Max 5MB each)"
-msgstr "تصويرون اپلوڊ ڪريو (وڌ ۾ وڌ 3، هر هڪ 5 ايم بي)"
+msgstr ""
 
-#: app/templates/submit_report.html:54
+#: app/templates/submit_report.html:45
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
 msgstr ""
 
-#: app/templates/submit_report.html:57
+#: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
-msgstr "لائيو جيو ڪيمرا"
+msgstr ""
+
+#: app/templates/submit_report.html:50
+msgid "Upload Files"
+msgstr ""
 
 #: app/templates/submit_report.html:59
-msgid "Upload Files"
-msgstr "فائلون اپلوڊ ڪريو"
-
-#: app/templates/submit_report.html:68
 msgid "Capture Photo"
-msgstr "فوٽو ڪڍو"
+msgstr ""
 
-#: app/templates/submit_report.html:69
+#: app/templates/submit_report.html:60
 msgid "Switch"
-msgstr "تبديل ڪريو"
+msgstr ""
 
-#: app/templates/submit_report.html:70
+#: app/templates/submit_report.html:61
 msgid "Close Camera"
-msgstr "ڪيمرا بند ڪريو"
+msgstr ""
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:72
 msgid "Voice Note"
-msgstr "آواز جو نوٽ"
+msgstr ""
 
-#: app/templates/submit_report.html:83
+#: app/templates/submit_report.html:74
 msgid "Record"
-msgstr "رڪارڊ ڪريو"
+msgstr ""
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:75
 msgid "Stop"
-msgstr "روڪيو"
+msgstr ""
 
-#: app/templates/submit_report.html:87
+#: app/templates/submit_report.html:78
 msgid "OR upload file"
-msgstr "يا فائل اپلوڊ ڪريو"
+msgstr ""
 
-#: app/templates/submit_report.html:91
+#: app/templates/submit_report.html:82
 msgid "Remove"
-msgstr "هٽايو"
+msgstr ""
 
-#: app/templates/submit_report.html:95
+#: app/templates/submit_report.html:86
 msgid "Submit Report"
-msgstr "رپورٽ جمع ڪريو"
+msgstr ""
 
-#: app/templates/submit_report.html:208
+#: app/templates/submit_report.html:196
 msgid "File"
-msgstr "فائل"
+msgstr ""
 
-#: app/templates/submit_report.html:208
+#: app/templates/submit_report.html:196
 msgid "exceeds 5MB limit"
-msgstr "5 ايم بي جي حد کان وڌيڪ آهي"
+msgstr ""
 
-#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
+#: app/templates/submit_report.html:217 app/templates/submit_report.html:257
 msgid "Maximum 3 images reached"
-msgstr "وڌ ۾ وڌ 3 تصويرن جي حد پوري ٿي وئي"
+msgstr ""
 
-#: app/templates/submit_report.html:253
+#: app/templates/submit_report.html:241
 msgid "Camera access denied or not available"
-msgstr "ڪيمرا تائين رسائي نه ڏني وئي يا موجود ناهي"
+msgstr ""
 
-#: app/templates/submit_report.html:309
+#: app/templates/submit_report.html:297
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:329
+#: app/templates/submit_report.html:319
+msgid "Submission blocked: Please enable GPS/Location services first."
+msgstr ""
+
+#: app/templates/submit_report.html:325
 msgid "Please upload or capture at least one image of the issue."
-msgstr "مهرباني ڪري مسئلي جي گهٽ ۾ گهٽ هڪ تصوير اپلوڊ ڪريو يا ڪڍو."
+msgstr ""
 
-#: app/templates/submit_report.html:368
+#: app/templates/submit_report.html:364
 msgid "Recording..."
-msgstr "رڪارڊنگ ٿي رهي آهي..."
+msgstr ""
 
-#: app/templates/submit_report.html:383
+#: app/templates/submit_report.html:379
 msgid "Microphone access denied"
-msgstr "مائڪروفون تائين رسائي نه ڏني وئي"
+msgstr ""
 
 #: app/templates/verify_otp.html:5
 msgid "Verify OTP"
-msgstr "او ٽي پي جي تصديق ڪريو"
+msgstr ""
 
 #: app/templates/verify_otp.html:6
 msgid "Sent to:"
-msgstr "موڪليو ويو:"
+msgstr ""
 
 #: app/templates/verify_otp.html:9
 msgid "Enter 4-Digit OTP"
-msgstr "4 انگن وارو او ٽي پي داخل ڪريو"
+msgstr ""
 
 #: app/templates/verify_otp.html:17
 msgid "Verify & Login"
-msgstr "تصديق ڪريو ۽ لاگ ان ٿيو"
+msgstr ""
 
 #: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
-msgstr "مهرباني ڪري 4 انگ داخل ڪريو"
+msgstr ""
 
 #~ msgid ""
 #~ "Are you sure you want to request"
@@ -987,55 +1001,55 @@ msgstr "مهرباني ڪري 4 انگ داخل ڪريو"
 #~ msgstr "صفائي"
 
 #~ msgid "Admin Officer Dashboard"
-#~ msgstr "ايڊمن آفيسر ڊيش بورڊ"
+#~ msgstr "ايڊمن ڊيش بورڊ"
 
 #~ msgid "Welcome"
-#~ msgstr "ڀلي ڪري آيا"
+#~ msgstr ""
 
 #~ msgid "Assigned to:"
-#~ msgstr "مقرر ڪيل:"
+#~ msgstr "مقرر ڪيل رياست:"
 
 #~ msgid "All Priorities"
-#~ msgstr "تمام ترجيحون"
+#~ msgstr "ترجيح"
 
 #~ msgid "Total Reports"
-#~ msgstr "ڪل رپورٽون"
+#~ msgstr "رپورٽون"
 
 #~ msgid "Pending"
-#~ msgstr "پينڊنگ"
+#~ msgstr ""
 
 #~ msgid "Approved"
-#~ msgstr "منظور ٿيل"
+#~ msgstr "رپورٽ منظور ڪئي وئي."
 
 #~ msgid "Resolved"
-#~ msgstr "حل ٿيل"
+#~ msgstr "هٽايو"
 
 #~ msgid "Manage Reports"
-#~ msgstr "رپورٽن جو انتظام ڪريو"
+#~ msgstr "رپورٽون"
 
 #~ msgid "Title"
-#~ msgstr "عنوان"
+#~ msgstr "فائل"
 
 #~ msgid "Date"
-#~ msgstr "تاريخ"
+#~ msgstr "رياست"
 
 #~ msgid "Actions"
-#~ msgstr "عمل"
+#~ msgstr "جاءِ"
 
 #~ msgid "N/A"
-#~ msgstr "موجود ناهي"
+#~ msgstr ""
 
 #~ msgid "View"
-#~ msgstr "ڏسو"
+#~ msgstr ""
 
 #~ msgid "Approve"
-#~ msgstr "منظور ڪريو"
+#~ msgstr "هٽايو"
 
 #~ msgid "Resolve"
-#~ msgstr "حل ڪريو"
+#~ msgstr "هٽايو"
 
 #~ msgid "No reports found matching filters."
-#~ msgstr "فلٽرن سان مطابقت رکندڙ ڪا به رپورٽ نه ملي."
+#~ msgstr "معيار سان مطابقت رکندڙ ڪا به رپورٽ نه ملي."
 
 #~ msgid "Pending Account Deletion Requests"
 #~ msgstr "اڪائونٽ ختم ڪرڻ جي درخواست منظوري لاءِ پينڊنگ آهي."
@@ -1056,40 +1070,40 @@ msgstr "مهرباني ڪري 4 انگ داخل ڪريو"
 #~ msgstr ""
 
 #~ msgid "Report Details"
-#~ msgstr "رپورٽ جا تفصيل"
+#~ msgstr "رپورٽون"
 
 #~ msgid "Resolve Report"
-#~ msgstr "رپورٽ حل ڪريو"
+#~ msgstr ""
 
 #~ msgid "Enter resolution notes..."
-#~ msgstr "حل جا نوٽس داخل ڪريو..."
+#~ msgstr ""
 
 #~ msgid "Cancel"
-#~ msgstr "منسوخ ڪريو"
+#~ msgstr ""
 
 #~ msgid "Mark as Resolved"
-#~ msgstr "حل ٿيل طور نشان لڳايو"
+#~ msgstr "حل ٿيل مسئلا"
 
 #~ msgid "Submitted On"
-#~ msgstr "جمع ڪرائڻ جي تاريخ"
+#~ msgstr "منهنجيون جمع ڪيل رپورٽون"
 
 #~ msgid "Description"
-#~ msgstr "تفصيل"
+#~ msgstr "مسئلي جي تفصيل"
 
 #~ msgid "Captured Images"
-#~ msgstr "ورتل تصويرون"
+#~ msgstr ""
 
 #~ msgid "No images uploaded"
-#~ msgstr "ڪا به تصوير اپلوڊ نه ڪئي وئي"
+#~ msgstr ""
 
 #~ msgid "Voice Notes"
-#~ msgstr "آواز جا نوٽس"
+#~ msgstr "آواز جو نوٽ"
 
 #~ msgid "No voice notes uploaded"
-#~ msgstr "ڪو به آواز جو نوٽ اپلوڊ نه ڪيو ويو"
+#~ msgstr "آواز جو نوٽ"
 
 #~ msgid "Failed to fetch report details"
-#~ msgstr "رپورٽ جا تفصيل حاصل ڪرڻ ۾ ناڪامي"
+#~ msgstr ""
 
 #~ msgid "Reports"
 #~ msgstr "رپورٽون"
@@ -1108,4 +1122,589 @@ msgstr "مهرباني ڪري 4 انگ داخل ڪريو"
 
 #~ msgid "Legend"
 #~ msgstr "اشارا"
+
+#~ msgid "Unauthorized"
+#~ msgstr "غير مجاز"
+
+#~ msgid "Report approved."
+#~ msgstr "رپورٽ منظور ڪئي وئي."
+
+#~ msgid "Report resolved."
+#~ msgstr "رپورٽ حل ڪئي وئي."
+
+#~ msgid "Report rejected."
+#~ msgstr "رپورٽ ٻيهر کولي وئي."
+
+#~ msgid "User deletion approved. Pending reports removed."
+#~ msgstr "واپرائيندڙ جي خاتمي جي منظوري ملي وئي."
+
+#~ msgid "User deletion request rejected."
+#~ msgstr "واپرائيندڙ جي خاتمي جي منظوري ملي وئي."
+
+#~ msgid ""
+#~ "You can register to the system "
+#~ "again on %(date)s as your account "
+#~ "is deleted recently"
+#~ msgstr ""
+
+#~ msgid "Officer not registered. Contact administrator."
+#~ msgstr "آفيسر رجسٽرڊ ناهي. ايڊمنسٽريٽر سان رابطو ڪريو."
+
+#~ msgid "Number registered as %(role)s. Choose correct role."
+#~ msgstr "نمبر %(role)s طور رجسٽرڊ آهي. صحيح ڪردار چونڊيو."
+
+#~ msgid "Account is inactive or deleted."
+#~ msgstr "اڪائونٽ غير فعال يا ختم ٿيل آهي."
+
+#~ msgid "Invalid or expired OTP."
+#~ msgstr "غلط يا مدو ختم ٿيل او ٽي پي."
+
+#~ msgid "Profile updated successfully!"
+#~ msgstr "پروفائل ڪاميابي سان اپڊيٽ ڪيو ويو!"
+
+#~ msgid ""
+#~ "A similar report already exists in "
+#~ "this location. Your upvote has been "
+#~ "added to it."
+#~ msgstr ""
+#~ "هن جاءِ تي ساڳي رپورٽ اڳ ۾ "
+#~ "ئي موجود آهي. توهان جو ووٽ ان "
+#~ "۾ شامل ڪيو ويو آهي."
+
+#~ msgid "A similar report already exists and you have already upvoted it."
+#~ msgstr "ساڳي رپورٽ اڳ ۾ ئي موجود آهي ۽ توهان اڳ ۾ ئي ان کي ووٽ ڏئي چڪا آهيو."
+
+#~ msgid "You have already submitted a similar report in this location."
+#~ msgstr "توهان اڳ ۾ ئي هن جاءِ تي ساڳي رپورٽ جمع ڪرائي چڪا آهيو."
+
+#~ msgid "You can only upload up to 3 images."
+#~ msgstr "توهان صرف 3 تصويرون اپلوڊ ڪري سگهو ٿ."
+
+#~ msgid "Report submitted successfully!"
+#~ msgstr "رپورٽ ڪاميابي سان جمع ڪئي وئي!"
+
+#~ msgid "You cannot upvote your own report."
+#~ msgstr "توهان پنهنجي رپورٽ کي ووٽ نه ٿا ڏئي سگهو."
+
+#~ msgid "Already upvoted"
+#~ msgstr "اڳ ۾ ئي ووٽ ڏنل"
+
+#~ msgid "Comment added."
+#~ msgstr "تبصرو شامل ڪيو ويو."
+
+#~ msgid "Unauthorized."
+#~ msgstr "غير مجاز."
+
+#~ msgid "Report cannot be reopened after 7 days of resolution."
+#~ msgstr "رپورٽ ٻيهر کولي نٿي سگهجي."
+
+#~ msgid "Report reopened."
+#~ msgstr "رپورٽ ٻيهر کولي وئي."
+
+#~ msgid "Report cannot be reopened."
+#~ msgstr "رپورٽ ٻيهر کولي نٿي سگهجي."
+
+#~ msgid ""
+#~ "Please update your State and District"
+#~ " in your profile before requesting "
+#~ "account deletion."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Deletion request submitted to your "
+#~ "assigned officer. Your account will be"
+#~ " deleted after approval of Admin "
+#~ "Officer."
+#~ msgstr ""
+#~ "اڪائونٽ ختم ڪرڻ جي درخواست توهان "
+#~ "جي مقرر ڪيل آفيسر کي موڪلي وئي "
+#~ "آهي. ايڊمن آفيسر جي منظوري کانپوءِ "
+#~ "توهان جو اڪائونٽ ختم ڪيو ويندو."
+
+#~ msgid "Priority:"
+#~ msgstr "ترجيح:"
+
+#~ msgid "Critical"
+#~ msgstr "انتهائي اهم"
+
+#~ msgid "High"
+#~ msgstr "تمام گهڻو"
+
+#~ msgid "Medium"
+#~ msgstr "وچولي"
+
+#~ msgid "Low"
+#~ msgstr "گهٽ"
+
+#~ msgid "From:"
+#~ msgstr "کان:"
+
+#~ msgid "To:"
+#~ msgstr "تائين:"
+
+#~ msgid "Filter"
+#~ msgstr "فلٽر"
+
+#~ msgid "Clear"
+#~ msgstr "صاف ڪريو"
+
+#~ msgid "Citizen ID"
+#~ msgstr "شهري آءِ ڊي"
+
+#~ msgid "Priority"
+#~ msgstr "ترجيح"
+
+#~ msgid "Status"
+#~ msgstr "حالت"
+
+#~ msgid "Message"
+#~ msgstr "پيغام"
+
+#~ msgid "Anonymous"
+#~ msgstr "گمنام"
+
+#~ msgid "Close"
+#~ msgstr "بند ڪريو"
+
+#~ msgid "Reject Report"
+#~ msgstr "رپورٽ جمع ڪريو"
+
+#~ msgid "Enter rejection reason..."
+#~ msgstr ""
+
+#~ msgid "Report Image"
+#~ msgstr "رپورٽ جي تصوير"
+
+#~ msgid "Category"
+#~ msgstr "زمرو"
+
+#~ msgid "Location"
+#~ msgstr "جاءِ"
+
+#~ msgid "Admin Officer Profile"
+#~ msgstr "ايڊمن آفيسر پروفائل"
+
+#~ msgid "Name:"
+#~ msgstr "نالو:"
+
+#~ msgid "Phone:"
+#~ msgstr "فون:"
+
+#~ msgid "Role:"
+#~ msgstr "ڪردار:"
+
+#~ msgid "Authority / Admin Officer"
+#~ msgstr "اٿارٽي / ايڊمن آفيسر"
+
+#~ msgid "Assigned State:"
+#~ msgstr "مقرر ڪيل رياست:"
+
+#~ msgid "Assigned District:"
+#~ msgstr "مقرر ڪيل ضلعو:"
+
+#~ msgid "District Coordinates:"
+#~ msgstr ""
+
+#~ msgid "Dashboard"
+#~ msgstr "ڊيش بورڊ"
+
+#~ msgid "Report Issue"
+#~ msgstr "مسئلو رپورٽ ڪريو"
+
+#~ msgid "Forum"
+#~ msgstr "فورم"
+
+#~ msgid "My Status"
+#~ msgstr "منهنجي صورتحال"
+
+#~ msgid "Map"
+#~ msgstr "نقشو"
+
+#~ msgid "Profile"
+#~ msgstr "پروفائل"
+
+#~ msgid "Admin Panel"
+#~ msgstr "ايڊمن پينل"
+
+#~ msgid "Settings"
+#~ msgstr "سيٽنگون"
+
+#~ msgid "Login / Register"
+#~ msgstr "لاگ ইন / رجسٽر"
+
+#~ msgid "Toggle Light/Dark Mode"
+#~ msgstr "لائيٽ/ڊارڪ موڊ تبديل ڪريو"
+
+#~ msgid "Civic Issue Reporting System (CIRS). All rights reserved."
+#~ msgstr "سوڪ ايشو رپورٽنگ سسٽم (CIRS). تمام حق محفوظ آهن."
+
+#~ msgid "Report Chat"
+#~ msgstr "رپورٽ چيٽ"
+
+#~ msgid "Type a message..."
+#~ msgstr "پيغام ٽائپ ڪريو..."
+
+#~ msgid "Welcome to Your Dashboard"
+#~ msgstr "توهان جي ڊيش بورڊ تي ڀلي ڪري آيا"
+
+#~ msgid "Your portal for reporting and tracking civic issues in your community."
+#~ msgstr "توهان جي ڪميونٽي ۾ شهري مسئلن جي رپورٽنگ ۽ ٽريڪنگ لاءِ توهان جو پورٽل."
+
+#~ msgid "Submit New Report"
+#~ msgstr "نئين رپورٽ جمع ڪريو"
+
+#~ msgid "Trending/Nearby Issues"
+#~ msgstr "رجحان ساز / ويجهي مسئلا"
+
+#~ msgid "High-priority and trending reports in the portal."
+#~ msgstr "پورٽل ۾ اعليٰ ترجيحي ۽ رجحان ساز رپورٽون."
+
+#~ msgid "General"
+#~ msgstr "عام"
+
+#~ msgid "Upvote"
+#~ msgstr "ووٽ ڏيو"
+
+#~ msgid "No issues reported yet."
+#~ msgstr "اڃا تائين ڪو به مسئلو رپورٽ نه ڪيو ويو آهي."
+
+#~ msgid "View All in Public Forum"
+#~ msgstr "عوامي فورم ۾ سڀ ڏسو"
+
+#~ msgid "Quick Links"
+#~ msgstr "جلدي لنڪس"
+
+#~ msgid "Track My Reports"
+#~ msgstr "منهنجيون رپورٽون ٽريڪ ڪريو"
+
+#~ msgid "View Live Map"
+#~ msgstr "لائيو نقشو ڏسو"
+
+#~ msgid "Manage Profile"
+#~ msgstr "پروفائل اپڊيٽ ڪريو"
+
+#~ msgid "Upvoted"
+#~ msgstr "ووٽ ڏنو ويو"
+
+#~ msgid "Welcome to CIRS !"
+#~ msgstr "CIRS ۾ ڀلي ڪري آيا!"
+
+#~ msgid "--Report today for a better tomorrow"
+#~ msgstr "--بهتر سڀاڻي لاءِ اڄ رپورٽ ڪريو"
+
+#~ msgid "Report, Track, and Resolve Local Issues Together"
+#~ msgstr "مقامي مسئلن کي گڏجي رپورٽ ڪريو، ٽريڪ ڪريو ۽ حل ڪريو"
+
+#~ msgid "Issues Resolved"
+#~ msgstr "حل ٿيل مسئلا"
+
+#~ msgid "Active Users"
+#~ msgstr "فعال واپرائيندڙ"
+
+#~ msgid "Cities"
+#~ msgstr "شهر"
+
+#~ msgid "Get Started Now"
+#~ msgstr "هاڻي شروع ڪريو"
+
+#~ msgid "Live Map"
+#~ msgstr "لائيو نقشو ڏسو"
+
+#~ msgid "Visualize all reported issues across districts in real-time."
+#~ msgstr "رپورٽ ڪيل مسئلن کي لائيو ڏسو."
+
+#~ msgid "Powerful Features"
+#~ msgstr "طاقتور خاصيتون"
+
+#~ msgid "Media Reporting"
+#~ msgstr "ميڊيا رپورٽنگ"
+
+#~ msgid "Capture issues with photos and voice notes."
+#~ msgstr "تصويرن ۽ آواز جي نوٽس سان مسئلا رڪارڊ ڪريو."
+
+#~ msgid "Visualize reported issues in real-time."
+#~ msgstr "رپورٽ ڪيل مسئلن کي لائيو ڏسو."
+
+#~ msgid "Analytics"
+#~ msgstr "تجزيو"
+
+#~ msgid "Track resolution status and response times."
+#~ msgstr "حل جي حالت ۽ جوابي وقت کي ٽريڪ ڪريو."
+
+#~ msgid "Live Map - Community Issues"
+#~ msgstr "لائيو نقشو - عوامي مسئلا"
+
+#~ msgid "Category:"
+#~ msgstr "زمرو:"
+
+#~ msgid "Status:"
+#~ msgstr "حالت:"
+
+#~ msgid "Mobile Number"
+#~ msgstr "موبائيل نمبر"
+
+#~ msgid "I am a:"
+#~ msgstr "مان هڪ آهيان:"
+
+#~ msgid "Citizen"
+#~ msgstr "شهري"
+
+#~ msgid "Officer"
+#~ msgstr "آفيسر"
+
+#~ msgid "Send OTP"
+#~ msgstr "او ٽي پي موڪليو"
+
+#~ msgid "Demo OTP: 1234"
+#~ msgstr "ڊيمو او ٽي پي: 1234"
+
+#~ msgid "Please enter 10 digits"
+#~ msgstr "مهرباني ڪري 10 انگ داخل ڪريو"
+
+#~ msgid "User Profile"
+#~ msgstr "واپرائيندڙ پروفائل"
+
+#~ msgid "Full Name"
+#~ msgstr "پورو نالو"
+
+#~ msgid "Enter your full name"
+#~ msgstr "پنهنجو پورو نالو داخل ڪريو"
+
+#~ msgid "Not Assigned"
+#~ msgstr "مقرر ناهي"
+
+#~ msgid "Phone Number"
+#~ msgstr "فون نمبر"
+
+#~ msgid "Phone number cannot be changed."
+#~ msgstr "فون نمبر تبديل نٿو ڪري سگهجي."
+
+#~ msgid "Address"
+#~ msgstr "پتو"
+
+#~ msgid "Enter your address"
+#~ msgstr "پنهنجو پتو داخل ڪريو"
+
+#~ msgid "State"
+#~ msgstr "رياست"
+
+#~ msgid "Select State"
+#~ msgstr "رياست چونڊيو"
+
+#~ msgid "District"
+#~ msgstr "ضلعو"
+
+#~ msgid "Select District"
+#~ msgstr "ضلعو چونڊيو"
+
+#~ msgid "Update Profile"
+#~ msgstr "پروفائل اپڊيٽ ڪريو"
+
+#~ msgid "Account Management"
+#~ msgstr "اڪائونٽ جو انتظام"
+
+#~ msgid ""
+#~ "All your account associated data will"
+#~ " be deleted from the system, are "
+#~ "you sure you want to delete your"
+#~ " account?"
+#~ msgstr ""
+
+#~ msgid "Request Account Deletion"
+#~ msgstr "اڪائونٽ ختم ڪرڻ جي درخواست ڪريو"
+
+#~ msgid ""
+#~ "Please update your State and District"
+#~ " in your profile before you can "
+#~ "raise an account deletion request."
+#~ msgstr ""
+
+#~ msgid "Update profile to enable"
+#~ msgstr "پروفائل اپڊيٽ ڪريو"
+
+#~ msgid "Account deletion request is pending approval."
+#~ msgstr "اڪائونٽ ختم ڪرڻ جي درخواست منظوري لاءِ پينڊنگ آهي."
+
+#~ msgid "Public Forum"
+#~ msgstr "عوامي فورم"
+
+#~ msgid "Posted on"
+#~ msgstr "پوسٽ ڪيو ويو تاريخ تي"
+
+#~ msgid "by"
+#~ msgstr "پاران"
+
+#~ msgid "Upvotes"
+#~ msgstr "ووٽ"
+
+#~ msgid "View Location"
+#~ msgstr "نشان لڳل جاءِ ڏسو"
+
+#~ msgid "Comments"
+#~ msgstr "تبصرا"
+
+#~ msgid "Add a comment..."
+#~ msgstr "تبصرو شامل ڪريو..."
+
+#~ msgid "Post"
+#~ msgstr "پوسٽ ڪريو"
+
+#~ msgid "Report Location"
+#~ msgstr "رپورٽ چيٽ"
+
+#~ msgid "My Submitted Reports"
+#~ msgstr "منهنجيون جمع ڪيل رپورٽون"
+
+#~ msgid "No reports found matching the criteria."
+#~ msgstr "معيار سان مطابقت رکندڙ ڪا به رپورٽ نه ملي."
+
+#~ msgid "Location:"
+#~ msgstr "جاءِ:"
+
+#~ msgid "Unknown"
+#~ msgstr "نامعلوم"
+
+#~ msgid "Upvotes:"
+#~ msgstr "ووٽ:"
+
+#~ msgid "Resolution Notes:"
+#~ msgstr ""
+
+#~ msgid "Rejection Reason:"
+#~ msgstr ""
+
+#~ msgid "Officer Feedback:"
+#~ msgstr ""
+
+#~ msgid "View Marked Location"
+#~ msgstr "نشان لڳل جاءِ ڏسو"
+
+#~ msgid "Are you sure you want to reopen this report?"
+#~ msgstr "ڇا توهان پڪ سان هي رپورٽ ٻيهر کولڻ چاهيو ٿا؟"
+
+#~ msgid "Reopen"
+#~ msgstr "ٻيهر کوليو"
+
+#~ msgid "Images:"
+#~ msgstr "تصويرون:"
+
+#~ msgid "Voice Note:"
+#~ msgstr "آواز جو نوٽ:"
+
+#~ msgid "Your browser does not support the audio element."
+#~ msgstr "توهان جو برائوزر آڊيو کي سپورٽ نٿو ڪري."
+
+#~ msgid "Issue Title"
+#~ msgstr "مسئلي جو عنوان"
+
+#~ msgid "Brief title of the issue"
+#~ msgstr "مسئلي جو مختصر عنوان"
+
+#~ msgid "Select Category"
+#~ msgstr "زمرو چونڊيو"
+
+#~ msgid "Roads & Potholes"
+#~ msgstr "رستا ۽ کڏا"
+
+#~ msgid "Water Supply"
+#~ msgstr "پاڻي جي فراهمي"
+
+#~ msgid "Electricity"
+#~ msgstr "بجلي"
+
+#~ msgid "Sanitation & Garbage"
+#~ msgstr "صفائي ۽ ڪچرو"
+
+#~ msgid "Other"
+#~ msgstr "ٻيا"
+
+#~ msgid "Issue Description"
+#~ msgstr "مسئلي جي تفصيل"
+
+#~ msgid "Provide details about the issue..."
+#~ msgstr "مسئلي بابت تفصيل ڏيو..."
+
+#~ msgid "Location will be auto-fetched, but you can adjust it on the map."
+#~ msgstr "جاءِ پاڻمرادو حاصل ڪئي ويندي، پر توهان ان کي نقشي تي ترتيب ڏئي سگهو ٿ।"
+
+#~ msgid "Upload Images (Max 3, Max 5MB each)"
+#~ msgstr "تصويرون اپلوڊ ڪريو (وڌ ۾ وڌ 3، هر هڪ 5 ايم بي)"
+
+#~ msgid ""
+#~ "Only the images captured by any "
+#~ "geo-location based camera are acceptable"
+#~ " for uploading !"
+#~ msgstr ""
+
+#~ msgid "Live Geo-Camera"
+#~ msgstr "لائيو جيو ڪيمرا"
+
+#~ msgid "Upload Files"
+#~ msgstr "فائلون اپلوڊ ڪريو"
+
+#~ msgid "Capture Photo"
+#~ msgstr "فوٽو ڪڍو"
+
+#~ msgid "Switch"
+#~ msgstr "تبديل ڪريو"
+
+#~ msgid "Close Camera"
+#~ msgstr "ڪيمرا بند ڪريو"
+
+#~ msgid "Voice Note"
+#~ msgstr "آواز جو نوٽ"
+
+#~ msgid "Record"
+#~ msgstr "رڪارڊ ڪريو"
+
+#~ msgid "Stop"
+#~ msgstr "روڪيو"
+
+#~ msgid "OR upload file"
+#~ msgstr "يا فائل اپلوڊ ڪريو"
+
+#~ msgid "Remove"
+#~ msgstr "هٽايو"
+
+#~ msgid "Submit Report"
+#~ msgstr "رپورٽ جمع ڪريو"
+
+#~ msgid "File"
+#~ msgstr "فائل"
+
+#~ msgid "exceeds 5MB limit"
+#~ msgstr "5 ايم بي جي حد کان وڌيڪ آهي"
+
+#~ msgid "Maximum 3 images reached"
+#~ msgstr "وڌ ۾ وڌ 3 تصويرن جي حد پوري ٿي وئي"
+
+#~ msgid "Camera access denied or not available"
+#~ msgstr "ڪيمرا تائين رسائي نه ڏني وئي يا موجود ناهي"
+
+#~ msgid "District assignment pending..."
+#~ msgstr ""
+
+#~ msgid "Please upload or capture at least one image of the issue."
+#~ msgstr "مهرباني ڪري مسئلي جي گهٽ ۾ گهٽ هڪ تصوير اپلوڊ ڪريو يا ڪڍو."
+
+#~ msgid "Recording..."
+#~ msgstr "رڪارڊنگ ٿي رهي آهي..."
+
+#~ msgid "Microphone access denied"
+#~ msgstr "مائڪروفون تائين رسائي نه ڏني وئي"
+
+#~ msgid "Verify OTP"
+#~ msgstr "او ٽي پي جي تصديق ڪريو"
+
+#~ msgid "Sent to:"
+#~ msgstr "موڪليو ويو:"
+
+#~ msgid "Enter 4-Digit OTP"
+#~ msgstr "4 انگن وارو او ٽي پي داخل ڪريو"
+
+#~ msgid "Verify & Login"
+#~ msgstr "تصديق ڪريو ۽ لاگ ان ٿيو"
+
+#~ msgid "Please enter 4 digits"
+#~ msgstr "مهرباني ڪري 4 انگ داخل ڪريو"
 

@@ -159,7 +159,7 @@
             <textarea name="notes" class="form-control" placeholder="{{ _('Enter resolution notes...') }}" required style="width: 100%; min-height: 100px; margin-bottom: 1rem;"></textarea>
             <div class="modal-actions">
                 <button type="button" class="btn btn-secondary" onclick="closeResolveModal()">{{ _('Cancel') }}</button>
-                <button type="submit" class="btn btn-success">{{ _('Mark as Resolved') }}</button>
+                <button type="submit" class="btn btn-success requires-location">{{ _('Mark as Resolved') }}</button>
             </div>
         </form>
     </div>
@@ -173,7 +173,7 @@
             <textarea name="notes" class="form-control" placeholder="{{ _('Enter rejection reason...') }}" required style="width: 100%; min-height: 100px; margin-bottom: 1rem;"></textarea>
             <div class="modal-actions">
                 <button type="button" class="btn btn-secondary" onclick="closeRejectModal()">{{ _('Cancel') }}</button>
-                <button type="submit" class="btn btn-danger">{{ _('Reject Report') }}</button>
+                <button type="submit" class="btn btn-danger requires-location">{{ _('Reject Report') }}</button>
             </div>
         </form>
     </div>

@@ -63,7 +63,7 @@
                     <button class="btn btn-sm btn-info" onclick="toggleMap({{ report.id }}, {{ report.latitude }}, {{ report.longitude }})">
                         <i class="fas fa-map-marker-alt"></i> {{ _('View Marked Location') }}
                     </button>
-                    {% if report.status in ['acknowledged', 'in_progress', 'resolved'] %}
+                    {% if report.status in ['acknowledged', 'in_progress'] %}
                         <button class="btn btn-sm btn-warning" onclick="openChat({{ report.id }})">
                             <i class="fas fa-comments"></i> {{ _('Message') }}
                         </button>

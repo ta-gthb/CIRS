@@ -6,7 +6,7 @@
         <h2>{{ _('Welcome to Your Dashboard') }}</h2>
         <p>{{ _('Your portal for reporting and tracking civic issues in your community.') }}</p>
         <div class="dashboard-actions">
-            <a href="{{ url_for('citizen.submit_report') }}" class="btn btn-primary btn-lg">
+            <a href="{{ url_for('citizen.submit_report') }}" class="btn btn-primary btn-lg requires-location">
                 <i class="fas fa-plus-circle"></i> {{ _('Submit New Report') }}
             </a>
         </div>

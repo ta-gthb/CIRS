@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-09 21:38+0530\n"
+"POT-Creation-Date: 2026-06-12 00:11+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mr\n"
@@ -20,673 +20,684 @@ msgstr ""
 
 #: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
-msgstr "अनधिकृत"
+msgstr ""
 
 #: app/routes/admin.py:103
 msgid "Report approved."
-msgstr "अहवाल मंजूर केला."
+msgstr ""
 
 #: app/routes/admin.py:115
 msgid "Report resolved."
-msgstr "समस्या सोडवली गेली."
+msgstr ""
 
 #: app/routes/admin.py:129
-#, fuzzy
 msgid "Report rejected."
-msgstr "अहवाल पुन्हा उघडला."
+msgstr ""
 
 #: app/routes/admin.py:146
-#, fuzzy
 msgid "User deletion approved. Pending reports removed."
-msgstr "वापरकर्ता हटवण्यास मंजुरी दिली."
+msgstr ""
 
 #: app/routes/admin.py:155
-#, fuzzy
 msgid "User deletion request rejected."
-msgstr "वापरकर्ता हटवण्यास मंजुरी दिली."
+msgstr ""
 
 #: app/routes/auth.py:21
 #, python-format
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr "तुमचे खाते अलीकडेच हटवले गेल्यामुळे तुम्ही %(date)s रोजी पुन्हा सिस्टममध्ये नोंदणी करू शकता"
+msgstr ""
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
-msgstr "अधिकारी नोंदणीकृत नाही. प्रशासकाशी संपर्क साधा."
+msgstr ""
 
 #: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
-msgstr "क्रमांक %(role)s म्हणून नोंदणीकृत आहे. योग्य भूमिका निवडा."
+msgstr ""
 
 #: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
-msgstr "खाते निष्क्रिय किंवा हटवले आहे."
+msgstr ""
 
 #: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
-msgstr "अवैध किंवा कालबाह्य OTP."
+msgstr ""
 
 #: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
-msgstr "प्रोफाइल यशस्वीरित्या अद्यतनित केले!"
+msgstr ""
 
-#: app/routes/citizen.py:161
+#: app/routes/citizen.py:96
+msgid "Location is required. Please enable GPS and allow location access."
+msgstr ""
+
+#: app/routes/citizen.py:166
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
 msgstr ""
-"या ठिकाणी असाच एक अहवाल आधीच अस्तित्वात आहे. तुमचे मत (upvote) त्यात "
-"जोडले गेले आहे."
 
-#: app/routes/citizen.py:163
+#: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr "असाच एक अहवाल आधीच अस्तित्वात आहे आणि तुम्ही त्याला आधीच मत दिले आहे."
+msgstr ""
 
-#: app/routes/citizen.py:165
+#: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
-msgstr "तुम्ही या ठिकाणी आधीच असाच अहवाल सादर केला आहे."
+msgstr ""
 
-#: app/routes/citizen.py:186
+#: app/routes/citizen.py:191
 msgid "You can only upload up to 3 images."
-msgstr "तुम्ही फक्त ३ फोटो अपलोड करू शकता."
+msgstr ""
 
-#: app/routes/citizen.py:203
+#: app/routes/citizen.py:208
 msgid "Report submitted successfully!"
-msgstr "अहवाल यशस्वीरित्या सादर केला!"
+msgstr ""
 
-#: app/routes/citizen.py:214
+#: app/routes/citizen.py:219
 msgid "You cannot upvote your own report."
-msgstr "तुम्ही तुमच्या स्वतःच्या अहवालाला मत देऊ शकत नाही."
+msgstr ""
 
-#: app/routes/citizen.py:218
+#: app/routes/citizen.py:223
 msgid "Already upvoted"
-msgstr "आधीच मत दिले आहे"
+msgstr ""
 
-#: app/routes/citizen.py:236
+#: app/routes/citizen.py:242
 msgid "Comment added."
-msgstr "टिप्पणी जोडली."
+msgstr ""
 
-#: app/routes/citizen.py:244
+#: app/routes/citizen.py:250
 msgid "Unauthorized."
-msgstr "अनधिकृत."
+msgstr ""
 
-#: app/routes/citizen.py:251
-#, fuzzy
+#: app/routes/citizen.py:257
 msgid "Report cannot be reopened after 7 days of resolution."
-msgstr "अहवाल पुन्हा उघडता येणार नाही."
+msgstr ""
 
-#: app/routes/citizen.py:256
+#: app/routes/citizen.py:262
 msgid "Report reopened."
-msgstr "अहवाल पुन्हा उघडला."
+msgstr ""
 
-#: app/routes/citizen.py:258
+#: app/routes/citizen.py:264
 msgid "Report cannot be reopened."
-msgstr "अहवाल पुन्हा उघडता येणार नाही."
+msgstr ""
 
-#: app/routes/citizen.py:266
+#: app/routes/citizen.py:272
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:271
+#: app/routes/citizen.py:277
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
 msgstr ""
-"खाते हटवण्याची विनंती तुमच्या नियुक्त अधिकाऱ्याकडे सबमिट केली आहे। ॲडमिन "
-"ऑफिसरच्या मान्यतेनंतर तुमचे खाते हटवले जाईल।"
 
 #: app/templates/admin_dashboard.html:5
-#, fuzzy
 msgid "Admin Officer Dashboard"
-msgstr "प्रशासक डॅशबोर्ड"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:6
-#, fuzzy
 msgid "Assigned to:"
-msgstr "नियुक्त राज्य:"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:64
+#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:70
 #: app/templates/status.html:41
 msgid "Priority:"
-msgstr "प्राधान्य:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:14
-#, fuzzy
 msgid "All Priorities"
-msgstr "प्राधान्य"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:15 app/templates/index.html:34
-#: app/templates/live_map.html:10 app/templates/submit_report.html:30
+#: app/templates/live_map.html:14
 msgid "Critical"
-msgstr "अत्यंत महत्त्वाचे"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:16 app/templates/index.html:35
-#: app/templates/live_map.html:11 app/templates/submit_report.html:29
+#: app/templates/live_map.html:15
 msgid "High"
-msgstr "उच्च"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:17 app/templates/index.html:36
-#: app/templates/live_map.html:12 app/templates/submit_report.html:28
+#: app/templates/live_map.html:16
 msgid "Medium"
-msgstr "मध्यम"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:18 app/templates/index.html:37
-#: app/templates/live_map.html:13 app/templates/submit_report.html:27
+#: app/templates/live_map.html:17
 msgid "Low"
-msgstr "कमी"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:22 app/templates/status.html:11
 msgid "From:"
-msgstr "पासून:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:26 app/templates/status.html:15
 msgid "To:"
-msgstr "पर्यंत:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:30 app/templates/status.html:19
 msgid "Filter"
-msgstr "फिल्टर"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:31 app/templates/status.html:20
 msgid "Clear"
-msgstr "साफ करा"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:39
-#, fuzzy
 msgid "Total Reports"
-msgstr "अहवाल"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:47
-#, fuzzy
 msgid "Approved"
-msgstr "अहवाल मंजूर केला."
+msgstr ""
 
 #: app/templates/admin_dashboard.html:51
-#, fuzzy
 msgid "Resolved"
-msgstr "काढून टाका"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:57
-#, fuzzy
 msgid "Manage Reports"
-msgstr "अहवाल"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:62 app/templates/admin_dashboard.html:224
-#, fuzzy
+#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:226
 msgid "Title"
-msgstr "फाइल"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:107
+#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:110
 #: app/templates/profile.html:14
 msgid "Citizen ID"
-msgstr "नागरीक आयडी"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:226
-#: app/templates/live_map.html:9 app/templates/submit_report.html:25
+#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:228
+#: app/templates/live_map.html:13
 msgid "Priority"
-msgstr "प्राधान्य"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:227
+#: app/templates/admin_dashboard.html:66 app/templates/admin_dashboard.html:229
+#: app/templates/base.html:69
 msgid "Status"
-msgstr "स्थिती"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:66
-#, fuzzy
+#: app/templates/admin_dashboard.html:67
 msgid "Date"
-msgstr "राज्य"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:67 app/templates/admin_dashboard.html:109
-#, fuzzy
+#: app/templates/admin_dashboard.html:68 app/templates/admin_dashboard.html:112
 msgid "Actions"
-msgstr "स्थान"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:74
+#: app/templates/admin_dashboard.html:75
 msgid "N/A"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:79
+#: app/templates/admin_dashboard.html:80
 msgid "View"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:81 app/templates/admin_dashboard.html:122
-#, fuzzy
+#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:125
 msgid "Approve"
-msgstr "काढून टाका"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:126
+#: app/templates/admin_dashboard.html:83 app/templates/admin_dashboard.html:129
 msgid "Reject"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:85
-#, fuzzy
+#: app/templates/admin_dashboard.html:86
 msgid "Resolve"
-msgstr "काढून टाका"
-
-#: app/templates/admin_dashboard.html:88 app/templates/status.html:68
-msgid "Message"
-msgstr "संदेश"
-
-#: app/templates/admin_dashboard.html:96
-#, fuzzy
-msgid "No reports found matching filters."
-msgstr "निकषांशी जुळणारे कोणतेही अहवाल आढळले नाहीत."
-
-#: app/templates/admin_dashboard.html:102
-#, fuzzy
-msgid "Pending Account Deletion Requests"
-msgstr "खाते हटवण्याची विनंती मंजुरीसाठी प्रलंबित आहे."
-
-#: app/templates/admin_dashboard.html:106
-#, fuzzy
-msgid "Name"
-msgstr "नाव:"
-
-#: app/templates/admin_dashboard.html:108
-#, fuzzy
-msgid "Phone"
-msgstr "फोन:"
-
-#: app/templates/admin_dashboard.html:115 app/templates/public_forum.html:16
-#: app/templates/public_forum.html:33
-msgid "Anonymous"
-msgstr "अनामित"
-
-#: app/templates/admin_dashboard.html:121
-#, fuzzy
-msgid "Are you sure you want to approve this deletion? This action is permanent."
-msgstr "तुम्हाला खात्री आहे की तुम्ही हा अहवाल पुन्हा उघडू इच्छिता?"
-
-#: app/templates/admin_dashboard.html:141
-#, fuzzy
-msgid "Report Details"
-msgstr "अहवाल"
-
-#: app/templates/admin_dashboard.html:145 app/templates/public_forum.html:54
-msgid "Close"
-msgstr "बंद करा"
-
-#: app/templates/admin_dashboard.html:153
-msgid "Resolve Report"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:155
-msgid "Enter resolution notes..."
+#: app/templates/admin_dashboard.html:89 app/templates/status.html:68
+msgid "Message"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:98
+msgid "No reports found matching filters."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:104
+msgid "Pending Account Deletion Requests"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:109
+msgid "Name"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:111
+msgid "Phone"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:118 app/templates/public_forum.html:16
+#: app/templates/public_forum.html:33
+msgid "Anonymous"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:124
+msgid "Are you sure you want to approve this deletion? This action is permanent."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:145
+msgid "Report Details"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:149 app/templates/public_forum.html:54
+msgid "Close"
 msgstr ""
 
 #: app/templates/admin_dashboard.html:157
-#: app/templates/admin_dashboard.html:171
+msgid "Resolve Report"
+msgstr ""
+
+#: app/templates/admin_dashboard.html:159
+msgid "Enter resolution notes..."
+msgstr ""
+
+#: app/templates/admin_dashboard.html:161
+#: app/templates/admin_dashboard.html:175
 msgid "Cancel"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:158
-#, fuzzy
+#: app/templates/admin_dashboard.html:162
 msgid "Mark as Resolved"
-msgstr "समस्या सुटल्या"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:167
-#: app/templates/admin_dashboard.html:172
-#, fuzzy
+#: app/templates/admin_dashboard.html:171
+#: app/templates/admin_dashboard.html:176
 msgid "Reject Report"
-msgstr "अहवाल सादर करा"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:169
+#: app/templates/admin_dashboard.html:173
 msgid "Enter rejection reason..."
 msgstr ""
 
-#: app/templates/admin_dashboard.html:214 app/templates/status.html:88
+#: app/templates/admin_dashboard.html:216 app/templates/status.html:88
 msgid "Report Image"
-msgstr "अहवाल फोटो"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:225 app/templates/submit_report.html:14
+#: app/templates/admin_dashboard.html:227 app/templates/submit_report.html:14
 msgid "Category"
-msgstr "वर्ग"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:228
-#, fuzzy
+#: app/templates/admin_dashboard.html:230
 msgid "Submitted On"
-msgstr "माझे सादर केलेले अहवाल"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:229
-#, fuzzy
+#: app/templates/admin_dashboard.html:231
 msgid "Description"
-msgstr "समस्येचे वर्णन"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:230 app/templates/submit_report.html:41
+#: app/templates/admin_dashboard.html:232 app/templates/submit_report.html:32
 msgid "Location"
-msgstr "स्थान"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:234
+#: app/templates/admin_dashboard.html:236
 msgid "Captured Images"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:235
+#: app/templates/admin_dashboard.html:237
 msgid "No images uploaded"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:238
-#, fuzzy
+#: app/templates/admin_dashboard.html:240
 msgid "Voice Notes"
-msgstr "व्हॉइस नोट"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:239
-#, fuzzy
+#: app/templates/admin_dashboard.html:241
 msgid "No voice notes uploaded"
-msgstr "व्हॉइस नोट"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:261
+#: app/templates/admin_dashboard.html:263
 msgid "Failed to fetch report details"
 msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
-msgstr "प्रशासकीय अधिकारी प्रोफाइल"
+msgstr ""
 
 #: app/templates/admin_profile.html:7
 msgid "Name:"
-msgstr "नाव:"
+msgstr ""
 
 #: app/templates/admin_profile.html:8
 msgid "Phone:"
-msgstr "फोन:"
+msgstr ""
 
 #: app/templates/admin_profile.html:9
 msgid "Role:"
-msgstr "भूमिका:"
+msgstr ""
 
 #: app/templates/admin_profile.html:9
 msgid "Authority / Admin Officer"
-msgstr "प्राधिकरण / प्रशासकीय अधिकारी"
+msgstr ""
 
 #: app/templates/admin_profile.html:10
 msgid "Assigned State:"
-msgstr "नियुक्त राज्य:"
+msgstr ""
 
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
-msgstr "नियुक्त जिल्हा:"
+msgstr ""
 
 #: app/templates/admin_profile.html:12
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:20
+#: app/templates/base.html:24 app/templates/base.html:66
 msgid "Dashboard"
-msgstr "डॅशबोर्ड"
+msgstr ""
 
-#: app/templates/base.html:21
+#: app/templates/base.html:25
 msgid "Report Issue"
-msgstr "समस्या नोंदवा"
+msgstr ""
 
-#: app/templates/base.html:22
+#: app/templates/base.html:26 app/templates/base.html:68
 msgid "Forum"
-msgstr "फोरम"
+msgstr ""
 
-#: app/templates/base.html:23
+#: app/templates/base.html:27
 msgid "My Status"
-msgstr "माझी स्थिती"
+msgstr ""
 
-#: app/templates/base.html:24
+#: app/templates/base.html:28 app/templates/base.html:70
 msgid "Map"
-msgstr "नकाशा"
+msgstr ""
 
-#: app/templates/base.html:26
+#: app/templates/base.html:30 app/templates/base.html:71
 msgid "Profile"
-msgstr "प्रोफाइल"
+msgstr ""
 
-#: app/templates/base.html:29
+#: app/templates/base.html:33
 msgid "Admin Panel"
-msgstr "ॲडमिन पॅनेल"
+msgstr ""
 
-#: app/templates/base.html:31
+#: app/templates/base.html:35 app/templates/base.html:74
 msgid "Settings"
-msgstr "सेटिंग्ज"
+msgstr ""
 
-#: app/templates/base.html:36 app/templates/login.html:5
-msgid "Login / Register"
-msgstr "लॉगिन / नोंदणी"
+#: app/templates/base.html:44
+msgid "Login"
+msgstr ""
 
-#: app/templates/base.html:41
+#: app/templates/base.html:46
 msgid "Toggle Light/Dark Mode"
-msgstr "लाईट/डार्क मोड बदला"
+msgstr ""
 
-#: app/templates/base.html:95
-msgid "Civic Issue Reporting System (CIRS). All rights reserved."
-msgstr "नागरी समस्या अहवाल प्रणाली (CIRS). सर्व हक्क राखीव."
+#: app/templates/base.html:67
+msgid "Report"
+msgstr ""
 
-#: app/templates/base.html:102
-msgid "Report Chat"
-msgstr "अहवाल चॅट"
+#: app/templates/base.html:73
+msgid "Admin"
+msgstr ""
+
+#: app/templates/base.html:76
+msgid "Logout"
+msgstr ""
+
+#: app/templates/base.html:108
+msgid "Location services are disabled. Please enable GPS to perform actions."
+msgstr ""
 
 #: app/templates/base.html:109
+msgid "Retry Now"
+msgstr ""
+
+#: app/templates/base.html:112
+msgid "You are currently offline. Please check your internet connection."
+msgstr ""
+
+#: app/templates/base.html:128
+msgid "Civic Issue Reporting System (CIRS). All rights reserved."
+msgstr ""
+
+#: app/templates/base.html:135
+msgid "Report Chat"
+msgstr ""
+
+#: app/templates/base.html:142
 msgid "Type a message..."
-msgstr "संदेश टाइप करा..."
+msgstr ""
+
+#: app/templates/base.html:302
+msgid "Location still disabled. Please enable GPS in system settings."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
-msgstr "तुमच्या डॅशबोर्डवर स्वागत आहे"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
 msgstr ""
-"तुमच्या समुदायातील नागरी समस्यांची तक्रार करण्यासाठी आणि त्यांचा मागोवा "
-"घेण्यासाठी तुमचे पोर्टल."
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
-msgstr "नवीन अहवाल सादर करा"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:17
 msgid "Trending/Nearby Issues"
-msgstr "ट्रेंडिंग/जवळपासच्या समस्या"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:18
 msgid "High-priority and trending reports in the portal."
-msgstr "पोर्टलमधील उच्च-प्राधान्य आणि ट्रेंडिंग अहवाल."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:30
 msgid "General"
-msgstr "सामान्य"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:31
 msgid "Upvote"
-msgstr "मत द्या"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:36
 msgid "No issues reported yet."
-msgstr "अद्याप कोणत्याही समस्या नोंदवल्या गेल्या नाहीत."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:40
 msgid "View All in Public Forum"
-msgstr "सार्वजनिक मंचामध्ये सर्व पहा"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:45
 msgid "Quick Links"
-msgstr "द्रुत दुवे"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:49
 msgid "Track My Reports"
-msgstr "माझ्या अहवालांचा मागोवा घ्या"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:53
 msgid "View Live Map"
-msgstr "थेट नकाशा पहा"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:57
 msgid "Manage Profile"
-msgstr "प्रोफाइल व्यवस्थापित करा"
+msgstr ""
 
-#: app/templates/citizen_dashboard.html:93
+#: app/templates/citizen_dashboard.html:91
 msgid "Upvoted"
-msgstr "मत दिले"
+msgstr ""
 
 #: app/templates/index.html:5
 msgid "Welcome to CIRS !"
-msgstr "CIRS मध्ये स्वागत आहे !"
+msgstr ""
 
 #: app/templates/index.html:6
 msgid "--Report today for a better tomorrow"
-msgstr "--आजच अहवाल द्या, उद्याच्या चांगल्या भविष्यासाठी"
+msgstr ""
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr "स्थानिक समस्या एकत्र नोंदवा, मागोवा घ्या आणि सोडवा"
+msgstr ""
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
-msgstr "समस्या सुटल्या"
+msgstr ""
 
 #: app/templates/index.html:15
 msgid "Active Users"
-msgstr "सक्रिय वापरकर्ते"
+msgstr ""
 
 #: app/templates/index.html:19
 msgid "Cities"
-msgstr "शहरे"
+msgstr ""
 
 #: app/templates/index.html:23
 msgid "Get Started Now"
-msgstr "आता सुरू करा"
+msgstr ""
 
 #: app/templates/index.html:29 app/templates/index.html:51
 msgid "Live Map"
-msgstr "थेट नकाशा पहा"
+msgstr ""
 
 #: app/templates/index.html:30
 msgid "Visualize all reported issues across districts in real-time."
-msgstr "रिअल-टाइममध्ये नोंदवलेल्या समस्या पहा."
+msgstr ""
 
 #: app/templates/index.html:42
 msgid "Powerful Features"
-msgstr "शक्तिशाली वैशिष्ट्ये"
+msgstr ""
 
 #: app/templates/index.html:46
 msgid "Media Reporting"
-msgstr "मीडिया रिपोर्टिंग"
+msgstr ""
 
 #: app/templates/index.html:47
 msgid "Capture issues with photos and voice notes."
-msgstr "फोटो आणि व्हॉइस नोट्ससह समस्या टिपून घ्या."
+msgstr ""
 
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
-msgstr "रिअल-टाइममध्ये नोंदवलेल्या समस्या पहा."
+msgstr ""
 
 #: app/templates/index.html:56
 msgid "Analytics"
-msgstr "विश्लेषण"
+msgstr ""
 
 #: app/templates/index.html:57
 msgid "Track resolution status and response times."
-msgstr "निवारण स्थिती आणि प्रतिसाद वेळेचा मागोवा घ्या."
+msgstr ""
 
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
-msgstr "थेट नकाशा - समुदाय समस्या"
+msgstr ""
 
-#: app/templates/live_map.html:63 app/templates/status.html:40
+#: app/templates/live_map.html:8
+msgid "Locate Me"
+msgstr ""
+
+#: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
-msgstr "वर्ग:"
+msgstr ""
 
-#: app/templates/live_map.html:65
+#: app/templates/live_map.html:71
 msgid "Status:"
-msgstr "स्थिती:"
+msgstr ""
+
+#: app/templates/live_map.html:97
+msgid "You are here"
+msgstr ""
+
+#: app/templates/login.html:5
+msgid "Login / Register"
+msgstr ""
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
-msgstr "मोबाईल नंबर"
+msgstr ""
 
 #: app/templates/login.html:17
 msgid "I am a:"
-msgstr "मी एक आहे:"
+msgstr ""
 
 #: app/templates/login.html:20
 msgid "Citizen"
-msgstr "नागरीक"
+msgstr ""
 
 #: app/templates/login.html:22
 msgid "Officer"
-msgstr "अधिकारी"
+msgstr ""
 
 #: app/templates/login.html:25
 msgid "Send OTP"
-msgstr "OTP पाठवा"
+msgstr ""
 
 #: app/templates/login.html:27
 msgid "Demo OTP: 1234"
-msgstr "डेमो OTP: १२३४"
+msgstr ""
 
 #: app/templates/login.html:84
 msgid "Please enter 10 digits"
-msgstr "कृपया १० अंक प्रविष्ट करा"
+msgstr ""
 
 #: app/templates/profile.html:5
 msgid "User Profile"
-msgstr "वापरकर्ता प्रोफाइल"
+msgstr ""
 
 #: app/templates/profile.html:9
 msgid "Full Name"
-msgstr "पूर्ण नाव"
+msgstr ""
 
 #: app/templates/profile.html:10
 msgid "Enter your full name"
-msgstr "तुमचे पूर्ण नाव प्रविष्ट करा"
+msgstr ""
 
 #: app/templates/profile.html:15
 msgid "Not Assigned"
-msgstr "नियुक्त केलेले नाही"
+msgstr ""
 
 #: app/templates/profile.html:19
 msgid "Phone Number"
-msgstr "फोन नंबर"
+msgstr ""
 
 #: app/templates/profile.html:21
 msgid "Phone number cannot be changed."
-msgstr "फोन नंबर बदलता येत नाही."
+msgstr ""
 
 #: app/templates/profile.html:25
 msgid "Address"
-msgstr "पत्ता"
+msgstr ""
 
 #: app/templates/profile.html:26
 msgid "Enter your address"
-msgstr "तुमचा पत्ता प्रविष्ट करा"
+msgstr ""
 
 #: app/templates/profile.html:31
 msgid "State"
-msgstr "राज्य"
+msgstr ""
 
 #: app/templates/profile.html:33
 msgid "Select State"
-msgstr "राज्य निवडा"
+msgstr ""
 
 #: app/templates/profile.html:37
 msgid "District"
-msgstr "जिल्हा"
+msgstr ""
 
-#: app/templates/profile.html:39 app/templates/profile.html:136
+#: app/templates/profile.html:39 app/templates/profile.html:134
 msgid "Select District"
-msgstr "जिल्हा निवडा"
+msgstr ""
 
 #: app/templates/profile.html:44
 msgid "Update Profile"
-msgstr "प्रोफाइल अद्यतनित करा"
+msgstr ""
 
 #: app/templates/profile.html:49
 msgid "Account Management"
-msgstr "खाते व्यवस्थापन"
+msgstr ""
 
 #: app/templates/profile.html:52
 msgid ""
@@ -696,7 +707,7 @@ msgstr ""
 
 #: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
-msgstr "खाते हटवण्याची विनंती करा"
+msgstr ""
 
 #: app/templates/profile.html:58
 msgid ""
@@ -705,71 +716,68 @@ msgid ""
 msgstr ""
 
 #: app/templates/profile.html:60
-#, fuzzy
 msgid "Update profile to enable"
-msgstr "प्रोफाइल अद्यतनित करा"
+msgstr ""
 
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
-msgstr "खाते हटवण्याची विनंती मंजुरीसाठी प्रलंबित आहे."
+msgstr ""
 
 #: app/templates/public_forum.html:5
 msgid "Public Forum"
-msgstr "सार्वजनिक मंच"
+msgstr ""
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
-msgstr "वर पोस्ट केले"
+msgstr ""
 
 #: app/templates/public_forum.html:16
 msgid "by"
-msgstr "द्वारे"
+msgstr ""
 
 #: app/templates/public_forum.html:21
 msgid "Upvotes"
-msgstr "मते"
+msgstr ""
 
 #: app/templates/public_forum.html:24
-#, fuzzy
 msgid "View Location"
-msgstr "चिन्हांकित स्थान पहा"
+msgstr ""
 
 #: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
-msgstr "टिप्पण्या"
+msgstr ""
 
 #: app/templates/public_forum.html:39
 msgid "Add a comment..."
-msgstr "टिप्पणी जोडा..."
+msgstr ""
 
 #: app/templates/public_forum.html:40
 msgid "Post"
-msgstr "पोस्ट करा"
+msgstr ""
 
 #: app/templates/public_forum.html:51
-#, fuzzy
 msgid "Report Location"
-msgstr "अहवाल चॅट"
+msgstr ""
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
-msgstr "माझे सादर केलेले अहवाल"
+msgstr ""
 
 #: app/templates/status.html:27
 msgid "No reports found matching the criteria."
-msgstr "निकषांशी जुळणारे कोणतेही अहवाल आढळले नाहीत."
+msgstr ""
 
 #: app/templates/status.html:42
 msgid "Location:"
-msgstr "स्थान:"
+msgstr ""
 
 #: app/templates/status.html:42
 msgid "Unknown"
-msgstr "अज्ञात"
+msgstr ""
 
 #: app/templates/status.html:43
 msgid "Upvotes:"
-msgstr "मते:"
+msgstr ""
 
 #: app/templates/status.html:51
 msgid "Resolution Notes:"
@@ -785,177 +793,181 @@ msgstr ""
 
 #: app/templates/status.html:64
 msgid "View Marked Location"
-msgstr "चिन्हांकित स्थान पहा"
+msgstr ""
 
 #: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
-msgstr "तुम्हाला खात्री आहे की तुम्ही हा अहवाल पुन्हा उघडू इच्छिता?"
+msgstr ""
 
 #: app/templates/status.html:74
 msgid "Reopen"
-msgstr "पुन्हा उघडा"
+msgstr ""
 
 #: app/templates/status.html:85
 msgid "Images:"
-msgstr "फोटो:"
+msgstr ""
 
 #: app/templates/status.html:96
 msgid "Voice Note:"
-msgstr "व्हॉइस नोट:"
+msgstr ""
 
 #: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
-msgstr "तुमचा ब्राउझर ऑडिओ घटकास समर्थन देत नाही."
+msgstr ""
 
 #: app/templates/submit_report.html:8
 msgid "Issue Title"
-msgstr "समस्येचे शीर्षक"
+msgstr ""
 
 #: app/templates/submit_report.html:9
 msgid "Brief title of the issue"
-msgstr "समस्येचे संक्षिप्त शीर्षक"
+msgstr ""
 
 #: app/templates/submit_report.html:16
 msgid "Select Category"
-msgstr "वर्ग निवडा"
+msgstr ""
 
 #: app/templates/submit_report.html:17
 msgid "Roads & Potholes"
-msgstr "रस्ते आणि खड्डे"
+msgstr ""
 
 #: app/templates/submit_report.html:18
 msgid "Water Supply"
-msgstr "पाणी पुरवठा"
+msgstr ""
 
 #: app/templates/submit_report.html:19
 msgid "Electricity"
-msgstr "वीज"
+msgstr ""
 
 #: app/templates/submit_report.html:20
 msgid "Sanitation & Garbage"
-msgstr "स्वच्छता आणि कचरा"
+msgstr ""
 
 #: app/templates/submit_report.html:21
 msgid "Other"
-msgstr "इतर"
+msgstr ""
 
-#: app/templates/submit_report.html:36
+#: app/templates/submit_report.html:27
 msgid "Issue Description"
-msgstr "समस्येचे वर्णन"
+msgstr ""
 
-#: app/templates/submit_report.html:37
+#: app/templates/submit_report.html:28
 msgid "Provide details about the issue..."
-msgstr "समस्येबद्दल तपशील प्रदान करा..."
+msgstr ""
 
-#: app/templates/submit_report.html:42
+#: app/templates/submit_report.html:33
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr "स्थान आपोआप घेतले जाईल, परंतु आपण ते नकाशावर समायोजित करू शकता."
+msgstr ""
 
-#: app/templates/submit_report.html:52
+#: app/templates/submit_report.html:43
 msgid "Upload Images (Max 3, Max 5MB each)"
-msgstr "फोटो अपलोड करा (कमाल ३, प्रत्येकी कमाल ५MB)"
+msgstr ""
 
-#: app/templates/submit_report.html:54
+#: app/templates/submit_report.html:45
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr "केवळ कोणत्याही जिओ-लोकेशन आधारित कॅमेराद्वारे कॅप्चर केलेली चित्रे अपलोड करण्यासाठी स्वीकार्य आहेत!"
+msgstr ""
 
-#: app/templates/submit_report.html:57
+#: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
-msgstr "थेट जिओ-कॅमेरा"
+msgstr ""
+
+#: app/templates/submit_report.html:50
+msgid "Upload Files"
+msgstr ""
 
 #: app/templates/submit_report.html:59
-msgid "Upload Files"
-msgstr "फाइल्स अपलोड करा"
-
-#: app/templates/submit_report.html:68
 msgid "Capture Photo"
-msgstr "फोटो काढा"
+msgstr ""
 
-#: app/templates/submit_report.html:69
+#: app/templates/submit_report.html:60
 msgid "Switch"
-msgstr "कॅमेरा बदला"
+msgstr ""
 
-#: app/templates/submit_report.html:70
+#: app/templates/submit_report.html:61
 msgid "Close Camera"
-msgstr "कॅमेरा बंद करा"
+msgstr ""
 
-#: app/templates/submit_report.html:81
+#: app/templates/submit_report.html:72
 msgid "Voice Note"
-msgstr "व्हॉइस नोट"
+msgstr ""
 
-#: app/templates/submit_report.html:83
+#: app/templates/submit_report.html:74
 msgid "Record"
-msgstr "रेकॉर्ड करा"
+msgstr ""
 
-#: app/templates/submit_report.html:84
+#: app/templates/submit_report.html:75
 msgid "Stop"
-msgstr "थांबा"
+msgstr ""
 
-#: app/templates/submit_report.html:87
+#: app/templates/submit_report.html:78
 msgid "OR upload file"
-msgstr "किंवा फाइल अपलोड करा"
+msgstr ""
 
-#: app/templates/submit_report.html:91
+#: app/templates/submit_report.html:82
 msgid "Remove"
-msgstr "काढून टाका"
+msgstr ""
 
-#: app/templates/submit_report.html:95
+#: app/templates/submit_report.html:86
 msgid "Submit Report"
-msgstr "अहवाल सादर करा"
+msgstr ""
 
-#: app/templates/submit_report.html:208
+#: app/templates/submit_report.html:196
 msgid "File"
-msgstr "फाइल"
+msgstr ""
 
-#: app/templates/submit_report.html:208
+#: app/templates/submit_report.html:196
 msgid "exceeds 5MB limit"
-msgstr "५MB मर्यादेपेक्षा जास्त आहे"
+msgstr ""
 
-#: app/templates/submit_report.html:229 app/templates/submit_report.html:269
+#: app/templates/submit_report.html:217 app/templates/submit_report.html:257
 msgid "Maximum 3 images reached"
-msgstr "कमाल ३ फोटो पूर्ण झाले आहेत"
+msgstr ""
 
-#: app/templates/submit_report.html:253
+#: app/templates/submit_report.html:241
 msgid "Camera access denied or not available"
-msgstr "कॅमेरा प्रवेश नाकारला किंवा उपलब्ध नाही"
+msgstr ""
 
-#: app/templates/submit_report.html:309
+#: app/templates/submit_report.html:297
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:329
+#: app/templates/submit_report.html:319
+msgid "Submission blocked: Please enable GPS/Location services first."
+msgstr ""
+
+#: app/templates/submit_report.html:325
 msgid "Please upload or capture at least one image of the issue."
-msgstr "कृपया समस्येचा किमान एक फोटो अपलोड करा किंवा काढा."
+msgstr ""
 
-#: app/templates/submit_report.html:368
+#: app/templates/submit_report.html:364
 msgid "Recording..."
-msgstr "रेकॉर्डिंग सुरू आहे..."
+msgstr ""
 
-#: app/templates/submit_report.html:383
+#: app/templates/submit_report.html:379
 msgid "Microphone access denied"
-msgstr "मायक्रोफोन प्रवेश नाकारला"
+msgstr ""
 
 #: app/templates/verify_otp.html:5
 msgid "Verify OTP"
-msgstr "OTP सत्यापित करा"
+msgstr ""
 
 #: app/templates/verify_otp.html:6
 msgid "Sent to:"
-msgstr "यावर पाठवले:"
+msgstr ""
 
 #: app/templates/verify_otp.html:9
 msgid "Enter 4-Digit OTP"
-msgstr "४-अंकी OTP प्रविष्ट करा"
+msgstr ""
 
 #: app/templates/verify_otp.html:17
 msgid "Verify & Login"
-msgstr "सत्यापित करा आणि लॉगिन करा"
+msgstr ""
 
 #: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
-msgstr "कृपया ४ अंक प्रविष्ट करा"
+msgstr ""
 
 #~ msgid ""
 #~ "Are you sure you want to request"
@@ -989,55 +1001,55 @@ msgstr "कृपया ४ अंक प्रविष्ट करा"
 #~ msgstr "स्वच्छता"
 
 #~ msgid "Admin Officer Dashboard"
-#~ msgstr "प्रशासकीय अधिकारी डॅशबोर्ड"
+#~ msgstr "प्रशासक डॅशबोर्ड"
 
 #~ msgid "Welcome"
-#~ msgstr "स्वागत"
+#~ msgstr ""
 
 #~ msgid "Assigned to:"
-#~ msgstr "नियुक्त केलेले:"
+#~ msgstr "नियुक्त राज्य:"
 
 #~ msgid "All Priorities"
-#~ msgstr "सर्व प्राधान्ये"
+#~ msgstr "प्राधान्य"
 
 #~ msgid "Total Reports"
-#~ msgstr "एकूण अहवाल"
+#~ msgstr "अहवाल"
 
 #~ msgid "Pending"
-#~ msgstr "प्रलंबित"
+#~ msgstr ""
 
 #~ msgid "Approved"
-#~ msgstr "मंजूर"
+#~ msgstr "अहवाल मंजूर केला."
 
 #~ msgid "Resolved"
-#~ msgstr "निकाली काढले"
+#~ msgstr "काढून टाका"
 
 #~ msgid "Manage Reports"
-#~ msgstr "अहवाल व्यवस्थापित करा"
+#~ msgstr "अहवाल"
 
 #~ msgid "Title"
-#~ msgstr "शीर्षक"
+#~ msgstr "फाइल"
 
 #~ msgid "Date"
-#~ msgstr "दिनांक"
+#~ msgstr "राज्य"
 
 #~ msgid "Actions"
-#~ msgstr "कृती"
+#~ msgstr "स्थान"
 
 #~ msgid "N/A"
-#~ msgstr "उपलब्ध नाही"
+#~ msgstr ""
 
 #~ msgid "View"
-#~ msgstr "पहा"
+#~ msgstr ""
 
 #~ msgid "Approve"
-#~ msgstr "मंजूर करा"
+#~ msgstr "काढून टाका"
 
 #~ msgid "Resolve"
-#~ msgstr "सोडवा"
+#~ msgstr "काढून टाका"
 
 #~ msgid "No reports found matching filters."
-#~ msgstr "फिल्टरशी जुळणारे कोणतेही अहवाल आढळले नाहीत."
+#~ msgstr "निकषांशी जुळणारे कोणतेही अहवाल आढळले नाहीत."
 
 #~ msgid "Pending Account Deletion Requests"
 #~ msgstr "खाते हटवण्याची विनंती मंजुरीसाठी प्रलंबित आहे."
@@ -1058,40 +1070,40 @@ msgstr "कृपया ४ अंक प्रविष्ट करा"
 #~ msgstr ""
 
 #~ msgid "Report Details"
-#~ msgstr "अहवाल तपशील"
+#~ msgstr "अहवाल"
 
 #~ msgid "Resolve Report"
-#~ msgstr "अहवाल निकाली काढा"
+#~ msgstr ""
 
 #~ msgid "Enter resolution notes..."
-#~ msgstr "निवारण टिपण प्रविष्ट करा..."
+#~ msgstr ""
 
 #~ msgid "Cancel"
-#~ msgstr "रद्द करा"
+#~ msgstr ""
 
 #~ msgid "Mark as Resolved"
-#~ msgstr "निकाली काढले म्हणून चिन्हांकित करा"
+#~ msgstr "समस्या सुटल्या"
 
 #~ msgid "Submitted On"
-#~ msgstr "सादर करण्याची तारीख"
+#~ msgstr "माझे सादर केलेले अहवाल"
 
 #~ msgid "Description"
-#~ msgstr "वर्णन"
+#~ msgstr "समस्येचे वर्णन"
 
 #~ msgid "Captured Images"
-#~ msgstr "घेतलेले फोटो"
+#~ msgstr ""
 
 #~ msgid "No images uploaded"
-#~ msgstr "कोणतेही फोटो अपलोड केलेले नाहीत"
+#~ msgstr ""
 
 #~ msgid "Voice Notes"
-#~ msgstr "व्हॉइस नोट्स"
+#~ msgstr "व्हॉइस नोट"
 
 #~ msgid "No voice notes uploaded"
-#~ msgstr "कोणत्याही व्हॉइस नोट्स अपलोड केलेल्या नाहीत"
+#~ msgstr "व्हॉइस नोट"
 
 #~ msgid "Failed to fetch report details"
-#~ msgstr "अहवाल तपशील मिळवण्यात अयशस्वी"
+#~ msgstr ""
 
 #~ msgid "Reports"
 #~ msgstr "अहवाल"
@@ -1110,4 +1122,598 @@ msgstr "कृपया ४ अंक प्रविष्ट करा"
 
 #~ msgid "Legend"
 #~ msgstr "सूची"
+
+#~ msgid "Unauthorized"
+#~ msgstr "अनधिकृत"
+
+#~ msgid "Report approved."
+#~ msgstr "अहवाल मंजूर केला."
+
+#~ msgid "Report resolved."
+#~ msgstr "समस्या सोडवली गेली."
+
+#~ msgid "Report rejected."
+#~ msgstr "अहवाल पुन्हा उघडला."
+
+#~ msgid "User deletion approved. Pending reports removed."
+#~ msgstr "वापरकर्ता हटवण्यास मंजुरी दिली."
+
+#~ msgid "User deletion request rejected."
+#~ msgstr "वापरकर्ता हटवण्यास मंजुरी दिली."
+
+#~ msgid ""
+#~ "You can register to the system "
+#~ "again on %(date)s as your account "
+#~ "is deleted recently"
+#~ msgstr ""
+#~ "तुमचे खाते अलीकडेच हटवले गेल्यामुळे "
+#~ "तुम्ही %(date)s रोजी पुन्हा सिस्टममध्ये "
+#~ "नोंदणी करू शकता"
+
+#~ msgid "Officer not registered. Contact administrator."
+#~ msgstr "अधिकारी नोंदणीकृत नाही. प्रशासकाशी संपर्क साधा."
+
+#~ msgid "Number registered as %(role)s. Choose correct role."
+#~ msgstr "क्रमांक %(role)s म्हणून नोंदणीकृत आहे. योग्य भूमिका निवडा."
+
+#~ msgid "Account is inactive or deleted."
+#~ msgstr "खाते निष्क्रिय किंवा हटवले आहे."
+
+#~ msgid "Invalid or expired OTP."
+#~ msgstr "अवैध किंवा कालबाह्य OTP."
+
+#~ msgid "Profile updated successfully!"
+#~ msgstr "प्रोफाइल यशस्वीरित्या अद्यतनित केले!"
+
+#~ msgid ""
+#~ "A similar report already exists in "
+#~ "this location. Your upvote has been "
+#~ "added to it."
+#~ msgstr ""
+#~ "या ठिकाणी असाच एक अहवाल आधीच "
+#~ "अस्तित्वात आहे. तुमचे मत (upvote) त्यात"
+#~ " जोडले गेले आहे."
+
+#~ msgid "A similar report already exists and you have already upvoted it."
+#~ msgstr "असाच एक अहवाल आधीच अस्तित्वात आहे आणि तुम्ही त्याला आधीच मत दिले आहे."
+
+#~ msgid "You have already submitted a similar report in this location."
+#~ msgstr "तुम्ही या ठिकाणी आधीच असाच अहवाल सादर केला आहे."
+
+#~ msgid "You can only upload up to 3 images."
+#~ msgstr "तुम्ही फक्त ३ फोटो अपलोड करू शकता."
+
+#~ msgid "Report submitted successfully!"
+#~ msgstr "अहवाल यशस्वीरित्या सादर केला!"
+
+#~ msgid "You cannot upvote your own report."
+#~ msgstr "तुम्ही तुमच्या स्वतःच्या अहवालाला मत देऊ शकत नाही."
+
+#~ msgid "Already upvoted"
+#~ msgstr "आधीच मत दिले आहे"
+
+#~ msgid "Comment added."
+#~ msgstr "टिप्पणी जोडली."
+
+#~ msgid "Unauthorized."
+#~ msgstr "अनधिकृत."
+
+#~ msgid "Report cannot be reopened after 7 days of resolution."
+#~ msgstr "अहवाल पुन्हा उघडता येणार नाही."
+
+#~ msgid "Report reopened."
+#~ msgstr "अहवाल पुन्हा उघडला."
+
+#~ msgid "Report cannot be reopened."
+#~ msgstr "अहवाल पुन्हा उघडता येणार नाही."
+
+#~ msgid ""
+#~ "Please update your State and District"
+#~ " in your profile before requesting "
+#~ "account deletion."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Deletion request submitted to your "
+#~ "assigned officer. Your account will be"
+#~ " deleted after approval of Admin "
+#~ "Officer."
+#~ msgstr ""
+#~ "खाते हटवण्याची विनंती तुमच्या नियुक्त "
+#~ "अधिकाऱ्याकडे सबमिट केली आहे। ॲडमिन "
+#~ "ऑफिसरच्या मान्यतेनंतर तुमचे खाते हटवले "
+#~ "जाईल।"
+
+#~ msgid "Priority:"
+#~ msgstr "प्राधान्य:"
+
+#~ msgid "Critical"
+#~ msgstr "अत्यंत महत्त्वाचे"
+
+#~ msgid "High"
+#~ msgstr "उच्च"
+
+#~ msgid "Medium"
+#~ msgstr "मध्यम"
+
+#~ msgid "Low"
+#~ msgstr "कमी"
+
+#~ msgid "From:"
+#~ msgstr "पासून:"
+
+#~ msgid "To:"
+#~ msgstr "पर्यंत:"
+
+#~ msgid "Filter"
+#~ msgstr "फिल्टर"
+
+#~ msgid "Clear"
+#~ msgstr "साफ करा"
+
+#~ msgid "Citizen ID"
+#~ msgstr "नागरीक आयडी"
+
+#~ msgid "Priority"
+#~ msgstr "प्राधान्य"
+
+#~ msgid "Status"
+#~ msgstr "स्थिती"
+
+#~ msgid "Message"
+#~ msgstr "संदेश"
+
+#~ msgid "Anonymous"
+#~ msgstr "अनामित"
+
+#~ msgid "Close"
+#~ msgstr "बंद करा"
+
+#~ msgid "Reject Report"
+#~ msgstr "अहवाल सादर करा"
+
+#~ msgid "Enter rejection reason..."
+#~ msgstr ""
+
+#~ msgid "Report Image"
+#~ msgstr "अहवाल फोटो"
+
+#~ msgid "Category"
+#~ msgstr "वर्ग"
+
+#~ msgid "Location"
+#~ msgstr "स्थान"
+
+#~ msgid "Admin Officer Profile"
+#~ msgstr "प्रशासकीय अधिकारी प्रोफाइल"
+
+#~ msgid "Name:"
+#~ msgstr "नाव:"
+
+#~ msgid "Phone:"
+#~ msgstr "फोन:"
+
+#~ msgid "Role:"
+#~ msgstr "भूमिका:"
+
+#~ msgid "Authority / Admin Officer"
+#~ msgstr "प्राधिकरण / प्रशासकीय अधिकारी"
+
+#~ msgid "Assigned State:"
+#~ msgstr "नियुक्त राज्य:"
+
+#~ msgid "Assigned District:"
+#~ msgstr "नियुक्त जिल्हा:"
+
+#~ msgid "District Coordinates:"
+#~ msgstr ""
+
+#~ msgid "Dashboard"
+#~ msgstr "डॅशबोर्ड"
+
+#~ msgid "Report Issue"
+#~ msgstr "समस्या नोंदवा"
+
+#~ msgid "Forum"
+#~ msgstr "फोरम"
+
+#~ msgid "My Status"
+#~ msgstr "माझी स्थिती"
+
+#~ msgid "Map"
+#~ msgstr "नकाशा"
+
+#~ msgid "Profile"
+#~ msgstr "प्रोफाइल"
+
+#~ msgid "Admin Panel"
+#~ msgstr "ॲडमिन पॅनेल"
+
+#~ msgid "Settings"
+#~ msgstr "सेटिंग्ज"
+
+#~ msgid "Login / Register"
+#~ msgstr "लॉगिन / नोंदणी"
+
+#~ msgid "Toggle Light/Dark Mode"
+#~ msgstr "लाईट/डार्क मोड बदला"
+
+#~ msgid "Civic Issue Reporting System (CIRS). All rights reserved."
+#~ msgstr "नागरी समस्या अहवाल प्रणाली (CIRS). सर्व हक्क राखीव."
+
+#~ msgid "Report Chat"
+#~ msgstr "अहवाल चॅट"
+
+#~ msgid "Type a message..."
+#~ msgstr "संदेश टाइप करा..."
+
+#~ msgid "Welcome to Your Dashboard"
+#~ msgstr "तुमच्या डॅशबोर्डवर स्वागत आहे"
+
+#~ msgid "Your portal for reporting and tracking civic issues in your community."
+#~ msgstr ""
+#~ "तुमच्या समुदायातील नागरी समस्यांची तक्रार "
+#~ "करण्यासाठी आणि त्यांचा मागोवा घेण्यासाठी "
+#~ "तुमचे पोर्टल."
+
+#~ msgid "Submit New Report"
+#~ msgstr "नवीन अहवाल सादर करा"
+
+#~ msgid "Trending/Nearby Issues"
+#~ msgstr "ट्रेंडिंग/जवळपासच्या समस्या"
+
+#~ msgid "High-priority and trending reports in the portal."
+#~ msgstr "पोर्टलमधील उच्च-प्राधान्य आणि ट्रेंडिंग अहवाल."
+
+#~ msgid "General"
+#~ msgstr "सामान्य"
+
+#~ msgid "Upvote"
+#~ msgstr "मत द्या"
+
+#~ msgid "No issues reported yet."
+#~ msgstr "अद्याप कोणत्याही समस्या नोंदवल्या गेल्या नाहीत."
+
+#~ msgid "View All in Public Forum"
+#~ msgstr "सार्वजनिक मंचामध्ये सर्व पहा"
+
+#~ msgid "Quick Links"
+#~ msgstr "द्रुत दुवे"
+
+#~ msgid "Track My Reports"
+#~ msgstr "माझ्या अहवालांचा मागोवा घ्या"
+
+#~ msgid "View Live Map"
+#~ msgstr "थेट नकाशा पहा"
+
+#~ msgid "Manage Profile"
+#~ msgstr "प्रोफाइल व्यवस्थापित करा"
+
+#~ msgid "Upvoted"
+#~ msgstr "मत दिले"
+
+#~ msgid "Welcome to CIRS !"
+#~ msgstr "CIRS मध्ये स्वागत आहे !"
+
+#~ msgid "--Report today for a better tomorrow"
+#~ msgstr "--आजच अहवाल द्या, उद्याच्या चांगल्या भविष्यासाठी"
+
+#~ msgid "Report, Track, and Resolve Local Issues Together"
+#~ msgstr "स्थानिक समस्या एकत्र नोंदवा, मागोवा घ्या आणि सोडवा"
+
+#~ msgid "Issues Resolved"
+#~ msgstr "समस्या सुटल्या"
+
+#~ msgid "Active Users"
+#~ msgstr "सक्रिय वापरकर्ते"
+
+#~ msgid "Cities"
+#~ msgstr "शहरे"
+
+#~ msgid "Get Started Now"
+#~ msgstr "आता सुरू करा"
+
+#~ msgid "Live Map"
+#~ msgstr "थेट नकाशा पहा"
+
+#~ msgid "Visualize all reported issues across districts in real-time."
+#~ msgstr "रिअल-टाइममध्ये नोंदवलेल्या समस्या पहा."
+
+#~ msgid "Powerful Features"
+#~ msgstr "शक्तिशाली वैशिष्ट्ये"
+
+#~ msgid "Media Reporting"
+#~ msgstr "मीडिया रिपोर्टिंग"
+
+#~ msgid "Capture issues with photos and voice notes."
+#~ msgstr "फोटो आणि व्हॉइस नोट्ससह समस्या टिपून घ्या."
+
+#~ msgid "Visualize reported issues in real-time."
+#~ msgstr "रिअल-टाइममध्ये नोंदवलेल्या समस्या पहा."
+
+#~ msgid "Analytics"
+#~ msgstr "विश्लेषण"
+
+#~ msgid "Track resolution status and response times."
+#~ msgstr "निवारण स्थिती आणि प्रतिसाद वेळेचा मागोवा घ्या."
+
+#~ msgid "Live Map - Community Issues"
+#~ msgstr "थेट नकाशा - समुदाय समस्या"
+
+#~ msgid "Category:"
+#~ msgstr "वर्ग:"
+
+#~ msgid "Status:"
+#~ msgstr "स्थिती:"
+
+#~ msgid "Mobile Number"
+#~ msgstr "मोबाईल नंबर"
+
+#~ msgid "I am a:"
+#~ msgstr "मी एक आहे:"
+
+#~ msgid "Citizen"
+#~ msgstr "नागरीक"
+
+#~ msgid "Officer"
+#~ msgstr "अधिकारी"
+
+#~ msgid "Send OTP"
+#~ msgstr "OTP पाठवा"
+
+#~ msgid "Demo OTP: 1234"
+#~ msgstr "डेमो OTP: १२३४"
+
+#~ msgid "Please enter 10 digits"
+#~ msgstr "कृपया १० अंक प्रविष्ट करा"
+
+#~ msgid "User Profile"
+#~ msgstr "वापरकर्ता प्रोफाइल"
+
+#~ msgid "Full Name"
+#~ msgstr "पूर्ण नाव"
+
+#~ msgid "Enter your full name"
+#~ msgstr "तुमचे पूर्ण नाव प्रविष्ट करा"
+
+#~ msgid "Not Assigned"
+#~ msgstr "नियुक्त केलेले नाही"
+
+#~ msgid "Phone Number"
+#~ msgstr "फोन नंबर"
+
+#~ msgid "Phone number cannot be changed."
+#~ msgstr "फोन नंबर बदलता येत नाही."
+
+#~ msgid "Address"
+#~ msgstr "पत्ता"
+
+#~ msgid "Enter your address"
+#~ msgstr "तुमचा पत्ता प्रविष्ट करा"
+
+#~ msgid "State"
+#~ msgstr "राज्य"
+
+#~ msgid "Select State"
+#~ msgstr "राज्य निवडा"
+
+#~ msgid "District"
+#~ msgstr "जिल्हा"
+
+#~ msgid "Select District"
+#~ msgstr "जिल्हा निवडा"
+
+#~ msgid "Update Profile"
+#~ msgstr "प्रोफाइल अद्यतनित करा"
+
+#~ msgid "Account Management"
+#~ msgstr "खाते व्यवस्थापन"
+
+#~ msgid ""
+#~ "All your account associated data will"
+#~ " be deleted from the system, are "
+#~ "you sure you want to delete your"
+#~ " account?"
+#~ msgstr ""
+
+#~ msgid "Request Account Deletion"
+#~ msgstr "खाते हटवण्याची विनंती करा"
+
+#~ msgid ""
+#~ "Please update your State and District"
+#~ " in your profile before you can "
+#~ "raise an account deletion request."
+#~ msgstr ""
+
+#~ msgid "Update profile to enable"
+#~ msgstr "प्रोफाइल अद्यतनित करा"
+
+#~ msgid "Account deletion request is pending approval."
+#~ msgstr "खाते हटवण्याची विनंती मंजुरीसाठी प्रलंबित आहे."
+
+#~ msgid "Public Forum"
+#~ msgstr "सार्वजनिक मंच"
+
+#~ msgid "Posted on"
+#~ msgstr "वर पोस्ट केले"
+
+#~ msgid "by"
+#~ msgstr "द्वारे"
+
+#~ msgid "Upvotes"
+#~ msgstr "मते"
+
+#~ msgid "View Location"
+#~ msgstr "चिन्हांकित स्थान पहा"
+
+#~ msgid "Comments"
+#~ msgstr "टिप्पण्या"
+
+#~ msgid "Add a comment..."
+#~ msgstr "टिप्पणी जोडा..."
+
+#~ msgid "Post"
+#~ msgstr "पोस्ट करा"
+
+#~ msgid "Report Location"
+#~ msgstr "अहवाल चॅट"
+
+#~ msgid "My Submitted Reports"
+#~ msgstr "माझे सादर केलेले अहवाल"
+
+#~ msgid "No reports found matching the criteria."
+#~ msgstr "निकषांशी जुळणारे कोणतेही अहवाल आढळले नाहीत."
+
+#~ msgid "Location:"
+#~ msgstr "स्थान:"
+
+#~ msgid "Unknown"
+#~ msgstr "अज्ञात"
+
+#~ msgid "Upvotes:"
+#~ msgstr "मते:"
+
+#~ msgid "Resolution Notes:"
+#~ msgstr ""
+
+#~ msgid "Rejection Reason:"
+#~ msgstr ""
+
+#~ msgid "Officer Feedback:"
+#~ msgstr ""
+
+#~ msgid "View Marked Location"
+#~ msgstr "चिन्हांकित स्थान पहा"
+
+#~ msgid "Are you sure you want to reopen this report?"
+#~ msgstr "तुम्हाला खात्री आहे की तुम्ही हा अहवाल पुन्हा उघडू इच्छिता?"
+
+#~ msgid "Reopen"
+#~ msgstr "पुन्हा उघडा"
+
+#~ msgid "Images:"
+#~ msgstr "फोटो:"
+
+#~ msgid "Voice Note:"
+#~ msgstr "व्हॉइस नोट:"
+
+#~ msgid "Your browser does not support the audio element."
+#~ msgstr "तुमचा ब्राउझर ऑडिओ घटकास समर्थन देत नाही."
+
+#~ msgid "Issue Title"
+#~ msgstr "समस्येचे शीर्षक"
+
+#~ msgid "Brief title of the issue"
+#~ msgstr "समस्येचे संक्षिप्त शीर्षक"
+
+#~ msgid "Select Category"
+#~ msgstr "वर्ग निवडा"
+
+#~ msgid "Roads & Potholes"
+#~ msgstr "रस्ते आणि खड्डे"
+
+#~ msgid "Water Supply"
+#~ msgstr "पाणी पुरवठा"
+
+#~ msgid "Electricity"
+#~ msgstr "वीज"
+
+#~ msgid "Sanitation & Garbage"
+#~ msgstr "स्वच्छता आणि कचरा"
+
+#~ msgid "Other"
+#~ msgstr "इतर"
+
+#~ msgid "Issue Description"
+#~ msgstr "समस्येचे वर्णन"
+
+#~ msgid "Provide details about the issue..."
+#~ msgstr "समस्येबद्दल तपशील प्रदान करा..."
+
+#~ msgid "Location will be auto-fetched, but you can adjust it on the map."
+#~ msgstr "स्थान आपोआप घेतले जाईल, परंतु आपण ते नकाशावर समायोजित करू शकता."
+
+#~ msgid "Upload Images (Max 3, Max 5MB each)"
+#~ msgstr "फोटो अपलोड करा (कमाल ३, प्रत्येकी कमाल ५MB)"
+
+#~ msgid ""
+#~ "Only the images captured by any "
+#~ "geo-location based camera are acceptable"
+#~ " for uploading !"
+#~ msgstr ""
+#~ "केवळ कोणत्याही जिओ-लोकेशन आधारित कॅमेराद्वारे"
+#~ " कॅप्चर केलेली चित्रे अपलोड करण्यासाठी "
+#~ "स्वीकार्य आहेत!"
+
+#~ msgid "Live Geo-Camera"
+#~ msgstr "थेट जिओ-कॅमेरा"
+
+#~ msgid "Upload Files"
+#~ msgstr "फाइल्स अपलोड करा"
+
+#~ msgid "Capture Photo"
+#~ msgstr "फोटो काढा"
+
+#~ msgid "Switch"
+#~ msgstr "कॅमेरा बदला"
+
+#~ msgid "Close Camera"
+#~ msgstr "कॅमेरा बंद करा"
+
+#~ msgid "Voice Note"
+#~ msgstr "व्हॉइस नोट"
+
+#~ msgid "Record"
+#~ msgstr "रेकॉर्ड करा"
+
+#~ msgid "Stop"
+#~ msgstr "थांबा"
+
+#~ msgid "OR upload file"
+#~ msgstr "किंवा फाइल अपलोड करा"
+
+#~ msgid "Remove"
+#~ msgstr "काढून टाका"
+
+#~ msgid "Submit Report"
+#~ msgstr "अहवाल सादर करा"
+
+#~ msgid "File"
+#~ msgstr "फाइल"
+
+#~ msgid "exceeds 5MB limit"
+#~ msgstr "५MB मर्यादेपेक्षा जास्त आहे"
+
+#~ msgid "Maximum 3 images reached"
+#~ msgstr "कमाल ३ फोटो पूर्ण झाले आहेत"
+
+#~ msgid "Camera access denied or not available"
+#~ msgstr "कॅमेरा प्रवेश नाकारला किंवा उपलब्ध नाही"
+
+#~ msgid "District assignment pending..."
+#~ msgstr ""
+
+#~ msgid "Please upload or capture at least one image of the issue."
+#~ msgstr "कृपया समस्येचा किमान एक फोटो अपलोड करा किंवा काढा."
+
+#~ msgid "Recording..."
+#~ msgstr "रेकॉर्डिंग सुरू आहे..."
+
+#~ msgid "Microphone access denied"
+#~ msgstr "मायक्रोफोन प्रवेश नाकारला"
+
+#~ msgid "Verify OTP"
+#~ msgstr "OTP सत्यापित करा"
+
+#~ msgid "Sent to:"
+#~ msgstr "यावर पाठवले:"
+
+#~ msgid "Enter 4-Digit OTP"
+#~ msgstr "४-अंकी OTP प्रविष्ट करा"
+
+#~ msgid "Verify & Login"
+#~ msgstr "सत्यापित करा आणि लॉगिन करा"
+
+#~ msgid "Please enter 4 digits"
+#~ msgstr "कृपया ४ अंक प्रविष्ट करा"
 

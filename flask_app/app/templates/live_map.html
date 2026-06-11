@@ -3,7 +3,11 @@
 {% block content %}
 <div class="live-map-container">
     <h2>{{ _('Live Map - Community Issues') }}</h2>
-    <div id="live-map" style="height: 700px; border-radius: 12px; box-shadow: var(--shadow); border: 4px solid var(--card-bg); transition: border-color 0.3s;"></div>
+    <div id="live-map" style="height: 700px; border-radius: 12px; box-shadow: var(--shadow); border: 4px solid var(--card-bg); transition: border-color 0.3s; position: relative;">
+        <button id="locateMeBtn" class="btn btn-primary" style="position: absolute; top: 10px; right: 10px; z-index: 1000; display: none;">
+            <i class="fas fa-location-crosshairs"></i> {{ _('Locate Me') }}
+        </button>
+    </div>
     
     <div class="map-legend">
         <h4>{{ _('Priority') }}</h4>
@@ -23,9 +27,11 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+    let map, citizenMarker, citizenCircle;
+
     function initMap() {
         const defaultCenter = [22.5726, 88.3639];
-        const map = L.map('live-map').setView(defaultCenter, 6);
+        map = L.map('live-map').setView(defaultCenter, 6);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
@@ -67,6 +73,46 @@
             `;
             marker.bindPopup(popupContent);
         });
+
+        // Live Citizen Location Logic
+        if (navigator.geolocation) {
+            document.getElementById('locateMeBtn').style.display = 'block';
+            
+            navigator.geolocation.watchPosition((position) => {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+                const accuracy = position.coords.accuracy;
+
+                if (citizenMarker) {
+                    citizenMarker.setLatLng([lat, lng]);
+                    citizenCircle.setLatLng([lat, lng]);
+                    citizenCircle.setRadius(accuracy);
+                } else {
+                    citizenMarker = L.marker([lat, lng], {
+                        icon: L.divIcon({
+                            className: 'citizen-location-icon',
+                            html: '<div class="pulse-ring"></div><div class="user-dot"></div>',
+                            iconSize: [20, 20]
+                        })
+                    }).addTo(map).bindPopup("{{ _('You are here') }}");
+
+                    citizenCircle = L.circle([lat, lng], {
+                        radius: accuracy,
+                        fillColor: '#2563eb',
+                        fillOpacity: 0.1,
+                        color: '#2563eb',
+                        weight: 1,
+                        opacity: 0.3
+                    }).addTo(map);
+                }
+            }, null, { enableHighAccuracy: true });
+        }
+
+        document.getElementById('locateMeBtn').onclick = () => {
+            if (citizenMarker) {
+                map.setView(citizenMarker.getLatLng(), 15);
+            }
+        };
 
         if (reports.length > 0) {
             const group = new L.featureGroup(reports.map(r => L.marker([r.lat, r.lng])));

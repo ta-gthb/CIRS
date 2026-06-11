@@ -593,6 +593,37 @@ img { max-width: 100%; height: auto; }
     }
 }
 
+/* Live Map Pulse Effect */
+.citizen-location-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    border: 2px solid white;
+    z-index: 2;
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(37, 99, 235, 0.4);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    z-index: 1;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
 /* Specific fixes for 375px and narrower (iPhone SE, older Androids) */
 @media (max-width: 390px) {
     .container { padding: 0 0.6rem; }

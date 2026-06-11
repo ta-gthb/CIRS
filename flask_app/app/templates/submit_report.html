@@ -313,6 +313,14 @@
 
     // Final Submission Logic
     form.onsubmit = (e) => {
+        // Double check location status
+        const submitBtn = document.querySelector('.requires-location');
+        if (submitBtn.classList.contains('disabled-by-location')) {
+            alert("{{ _('Submission blocked: Please enable GPS/Location services first.') }}");
+            e.preventDefault();
+            return false;
+        }
+
         if (capturedFiles.length === 0) {
             alert("{{ _('Please upload or capture at least one image of the issue.') }}");
             e.preventDefault();

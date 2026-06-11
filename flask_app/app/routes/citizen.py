@@ -91,6 +91,11 @@ def submit_report():
         category = request.form.get('category')
         lat_val = request.form.get('latitude')
         lng_val = request.form.get('longitude')
+        
+        if not lat_val or not lng_val:
+            flash(_('Location is required. Please enable GPS and allow location access.'), 'danger')
+            return redirect(url_for('citizen.submit_report'))
+
         lat = float(lat_val) if lat_val else None
         lng = float(lng_val) if lng_val else None
         city = request.form.get('city')
