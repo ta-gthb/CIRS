@@ -72,7 +72,7 @@ msgstr "ପ୍ରୋଫାଇଲ୍ ସଫଳତାର ସହିତ ଅଦ୍ୟ
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr ""
+msgstr "ସ୍ଥାନ ଆବଶ୍ୟକ। ଦୟାକରି GPS ସକ୍ଷମ କରନ୍ତୁ ଏବଂ ସ୍ଥାନ ଅନୁମତି ଦିଅନ୍ତୁ।"
 
 #: app/routes/citizen.py:166
 msgid ""
@@ -449,11 +449,11 @@ msgstr "ଲଗ୍ ଆଉଟ୍"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr ""
+msgstr "ଲୋକେସନ୍ ସେବା ଅକ୍ଷମ ଅଛି | କାର୍ଯ୍ୟ କରିବାକୁ ଦୟାକରି GPS ସକ୍ଷମ କରନ୍ତୁ |"
 
 #: app/templates/base.html:109
 msgid "Retry Now"
-msgstr ""
+msgstr "ବର୍ତ୍ତମାନ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ"
 
 #: app/templates/base.html:112
 msgid "You are currently offline. Please check your internet connection."

@@ -316,7 +316,7 @@
         // Double check location status
         const submitBtn = document.querySelector('.requires-location');
         if (submitBtn.classList.contains('disabled-by-location')) {
-            alert("{{ _('Submission blocked: Please enable GPS/Location services first.') }}");
+            alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
             e.preventDefault();
             return false;
         }

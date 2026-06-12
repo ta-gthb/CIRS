@@ -72,7 +72,7 @@ msgstr "പ്രൊഫൈൽ വിജയകരമായി പുതുക്�
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr ""
+msgstr "ലൊക്കേഷൻ ആവശ്യമാണ്. ദയവായി GPS പ്രവർത്തനക്ഷമമാക്കുകയും ലൊക്കേഷൻ ആക്സസ് അനുവദിക്കുകയും ചെയ്യുക।"
 
 #: app/routes/citizen.py:166
 msgid ""
@@ -449,11 +449,11 @@ msgstr "ലോഗൗട്ട്"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr ""
+msgstr "ലൊക്കേഷൻ സേവനങ്ങൾ പ്രവർത്തനരহিতമാണ്. നടപടികൾ സ്വീകരിക്കാൻ ദയവായി GPS പ്രവർത്തനക്ഷമമാക്കുക।"
 
 #: app/templates/base.html:109
 msgid "Retry Now"
-msgstr ""
+msgstr "ഇപ്പോൾ വീണ്ടും ശ്രമിക്കുക"
 
 #: app/templates/base.html:112
 msgid "You are currently offline. Please check your internet connection."

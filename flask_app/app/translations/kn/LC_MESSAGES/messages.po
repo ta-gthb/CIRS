@@ -72,7 +72,7 @@ msgstr "ಪ್ರೊಫೈಲ್ ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರ�
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr ""
+msgstr "ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು GPS ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು ಅನುಮತಿಸಿ।"
 
 #: app/routes/citizen.py:166
 msgid ""
@@ -449,11 +449,11 @@ msgstr "ಲೋಗೌಟ್"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr ""
+msgstr "ಸ್ಥಳ ಸೇವೆಗಳನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ. ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಲು ದಯವಿಟ್ಟು GPS ಸಕ್ರಿಯಗೊಳಿಸಿ।"
 
 #: app/templates/base.html:109
 msgid "Retry Now"
-msgstr ""
+msgstr "ಈಗಲೇ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ"
 
 #: app/templates/base.html:112
 msgid "You are currently offline. Please check your internet connection."

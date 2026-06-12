@@ -72,7 +72,7 @@ msgstr "पार्श्वचित्रं सफलतापूर्व�
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr ""
+msgstr "स्थानम् आवश्यकम् अस्ति। कृपया GPS सक्रियं कुर्वन्तु स्थानप्रवेशं च अनुमन्यन्ताम्।"
 
 #: app/routes/citizen.py:166
 msgid ""
@@ -449,11 +449,11 @@ msgstr "बहिर्गमनम्"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr ""
+msgstr "स्थानसेवाः निष्क्रियाः सन्ति। कृपया कार्याणि कर्तुं GPS सक्रियं कुर्वन्तु।"
 
 #: app/templates/base.html:109
 msgid "Retry Now"
-msgstr ""
+msgstr "अधुनैव पुनः प्रयतस्व"
 
 #: app/templates/base.html:112
 msgid "You are currently offline. Please check your internet connection."

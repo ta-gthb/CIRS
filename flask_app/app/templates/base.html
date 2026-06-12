@@ -105,7 +105,7 @@
     </script>
 
     <div id="locationWarning" class="location-warning-banner">
-        <i class="fas fa-map-marker-alt"></i> {{ _('Location services are disabled. Please enable GPS to perform actions.') }}
+        <i class="fas fa-map-marker-alt"></i> {{ _('Location is required. Please enable GPS and allow location access.') }}
         <a href="javascript:void(0)" onclick="checkLocationStatusManually()" style="color: white; text-decoration: underline; margin-left: 10px; font-size: 0.8rem;">{{ _('Retry Now') }}</a>
     </div>
     <div id="networkWarning" class="network-warning-banner">
@@ -299,7 +299,7 @@
                     startLocationMonitoring();
                 },
                 (err) => {
-                    alert("{{ _('Location still disabled. Please enable GPS in system settings.') }}");
+                    alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
                 },
                 { timeout: 5000 }
             );

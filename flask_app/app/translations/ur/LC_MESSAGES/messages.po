@@ -72,7 +72,7 @@ msgstr "پروفائل کامیابی سے اپ ڈیٹ ہو گیا!"
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr ""
+msgstr "مقام درکار ہے۔ براہ کرم GPS فعال کریں اور مقام تک رسائی کی اجازت دیں۔"
 
 #: app/routes/citizen.py:166
 msgid ""
@@ -449,11 +449,11 @@ msgstr "لاگ آؤٹ"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr ""
+msgstr "لوکیشن سروسز غیر فعال ہیں۔ براہ کرم اقدامات کرنے کے لیے GPS فعال کریں۔"
 
 #: app/templates/base.html:109
 msgid "Retry Now"
-msgstr ""
+msgstr "ابھی دوبارہ کوشش کریں"
 
 #: app/templates/base.html:112
 msgid "You are currently offline. Please check your internet connection."

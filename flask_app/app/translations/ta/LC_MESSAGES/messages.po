@@ -72,7 +72,7 @@ msgstr "சுயவிவரம் வெற்றிகரமாக புத�
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr ""
+msgstr "இருப்பிடம் தேவை. தயவுசெய்து GPS-ஐ இயக்கி, இருப்பிட அணுகலை அனுமதிக்கவும்।"
 
 #: app/routes/citizen.py:166
 msgid ""
@@ -449,11 +449,11 @@ msgstr "வெளியேறு"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr ""
+msgstr "இருப்பிடச் சேவைகள் முடக்கப்பட்டுள்ளன. செயல்களைச் செய்ய தயவுசெய்து GPS-ஐ இயக்கவும்।"
 
 #: app/templates/base.html:109
 msgid "Retry Now"
-msgstr ""
+msgstr "இப்பொழுதே மீண்டும் முயற்சிக்கவும்"
 
 #: app/templates/base.html:112
 msgid "You are currently offline. Please check your internet connection."
