@@ -9,6 +9,17 @@ def get_supabase_client():
     if not url or not key:
         print("CRITICAL: SUPABASE_URL or SUPABASE_KEY not configured.")
         return None
+    
+    key = key.strip()
+    
+    # Sanitize URL: Remove trailing slashes and ensure https://
+    url = url.strip().rstrip('/')
+    if not url.startswith('https://'):
+        if url.startswith('http://'):
+            url = url.replace('http://', 'https://', 1)
+        else:
+            url = 'https://' + url
+    
     try:
         return create_client(url, key)
     except Exception as e:
