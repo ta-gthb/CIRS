@@ -1715,3 +1715,7 @@ msgstr "ଦୟାକରି ୪ଟି ଅଙ୍କ ପ୍ରବେଶ କରନ�
 #~ msgid "Please enter 4 digits"
 #~ msgstr "ଦୟାକରି ୪ଟି ଅଙ୍କ ପ୍ରବେଶ କରନ୍ତୁ"
 
+
+
+msgid "Where am I?"
+msgstr "ମୁଁ କେଉଁଠି ଅଛି?"

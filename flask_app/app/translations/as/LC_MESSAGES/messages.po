@@ -1713,3 +1713,7 @@ msgstr "অনুগ্ৰহ কৰি ৪ টা সংখ্যা লিখ�
 #~ msgid "Please enter 4 digits"
 #~ msgstr "অনুগ্ৰহ কৰি ৪ টা সংখ্যা লিখক"
 
+
+
+msgid "Where am I?"
+msgstr "মই ক’ত আছোঁ?"

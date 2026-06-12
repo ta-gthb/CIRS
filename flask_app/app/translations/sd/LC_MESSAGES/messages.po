@@ -1708,3 +1708,7 @@ msgstr "مهرباني ڪري 4 انگ داخل ڪريو"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "مهرباني ڪري 4 انگ داخل ڪريو"
 
+
+
+msgid "Where am I?"
+msgstr "مان ڪٿي آهيان؟"

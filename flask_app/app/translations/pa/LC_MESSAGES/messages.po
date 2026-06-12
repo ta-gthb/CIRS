@@ -1717,3 +1717,7 @@ msgstr "ਕਿਰਪਾ ਕਰਕੇ 4 ਅੰਕ ਦਰਜ ਕਰੋ"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "ਕਿਰਪਾ ਕਰਕੇ 4 ਅੰਕ ਦਰਜ ਕਰੋ"
 
+
+
+msgid "Where am I?"
+msgstr "ਮੈਂ ਕਿੱਥੇ ਹਾਂ?"

@@ -1707,3 +1707,7 @@ msgstr "कृपया ४ अङ्कान् लिखतु"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "कृपया ४ अङ्कान् लिखतु"
 
+
+
+msgid "Where am I?"
+msgstr "अहं कुत्र अस्मि?"

@@ -1717,3 +1717,7 @@ msgstr "कृपया ४ अंक प्रविष्ट करा"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "कृपया ४ अंक प्रविष्ट करा"
 
+
+
+msgid "Where am I?"
+msgstr "मी कुठे आहे?"

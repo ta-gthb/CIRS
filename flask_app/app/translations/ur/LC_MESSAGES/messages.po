@@ -1719,3 +1719,7 @@ msgstr "براہ کرم 4 ہندسے درج کریں"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "براہ کرم 4 ہندسے درج کریں"
 
+
+
+msgid "Where am I?"
+msgstr "میں کہاں ہوں؟"

@@ -1721,3 +1721,7 @@ msgstr "অনুগ্রহ করে ৪টি সংখ্যা লিখ�
 #~ msgid "Please enter 4 digits"
 #~ msgstr "অনুগ্রহ করে ৪টি সংখ্যা লিখুন"
 
+
+
+msgid "Where am I?"
+msgstr "আমি কোথায়?"

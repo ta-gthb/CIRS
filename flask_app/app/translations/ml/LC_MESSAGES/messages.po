@@ -1722,3 +1722,7 @@ msgstr "ദയവായി 4 അക്കങ്ങൾ നൽകുക"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "ദയവായി 4 അക്കങ്ങൾ നൽകുക"
 
+
+
+msgid "Where am I?"
+msgstr "ഞാൻ എവിടെയാണ്?"

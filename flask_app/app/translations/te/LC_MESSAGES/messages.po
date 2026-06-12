@@ -1718,3 +1718,7 @@ msgstr "దయచేసి 4 అంకెలను నమోదు చేయం�
 #~ msgid "Please enter 4 digits"
 #~ msgstr "దయచేసి 4 అంకెలను నమోదు చేయండి"
 
+
+
+msgid "Where am I?"
+msgstr "నేను ఎక్కడ ఉన్నాను?"

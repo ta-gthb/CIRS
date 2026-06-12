@@ -1710,3 +1710,7 @@ msgstr "مہربانی کٔرِتھ ۴ ہندسہ درج کٔرِو"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "مہربانی کٔرِتھ ۴ ہندسہ درج کٔرِو"
 
+
+
+msgid "Where am I?"
+msgstr "بہ کتی چھس؟"

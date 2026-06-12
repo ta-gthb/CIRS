@@ -968,3 +968,8 @@ msgstr ""
 msgid "Please enter 4 digits"
 msgstr ""
 
+#: app/templates/live_map.html:8
+msgid "Where am I?"
+msgstr ""
+
+

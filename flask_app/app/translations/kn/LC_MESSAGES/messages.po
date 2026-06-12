@@ -1715,3 +1715,7 @@ msgstr "ದಯವಿಟ್ಟು 4 ಅಂಕಿಗಳನ್ನು ನಮೂದ�
 #~ msgid "Please enter 4 digits"
 #~ msgstr "ದಯವಿಟ್ಟು 4 ಅಂಕಿಗಳನ್ನು ನಮೂದಿಸಿ"
 
+
+
+msgid "Where am I?"
+msgstr "ನಾನು ಎಲ್ಲಿದ್ದೇನೆ?"

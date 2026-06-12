@@ -1714,3 +1714,7 @@ msgstr "કૃપા કરીને 4 અંકો દાખલ કરો"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "કૃપા કરીને 4 અંકો દાખલ કરો"
 
+
+
+msgid "Where am I?"
+msgstr "હું ક્યાં છું?"
