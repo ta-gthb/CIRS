@@ -595,7 +595,7 @@ msgid "Live Map - Community Issues"
 msgstr ""
 
 #: app/templates/live_map.html:8
-msgid "Locate Me"
+msgid "Where am I?"
 msgstr ""
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
@@ -966,10 +966,6 @@ msgstr ""
 
 #: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
-msgstr ""
-
-#: app/templates/live_map.html:8
-msgid "Where am I?"
 msgstr ""
 
 

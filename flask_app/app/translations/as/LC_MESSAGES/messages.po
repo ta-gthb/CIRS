@@ -596,8 +596,8 @@ msgid "Live Map - Community Issues"
 msgstr "জীৱন্ত মানচিত্ৰ - সম্প্ৰদায়ৰ সমস্যাসমূহ"
 
 #: app/templates/live_map.html:8
-msgid "Locate Me"
-msgstr ""
+msgid "Where am I?"
+msgstr "মই ক’ত আছোঁ?"
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
@@ -1715,5 +1715,3 @@ msgstr "অনুগ্ৰহ কৰি ৪ টা সংখ্যা লিখ�
 
 
 
-msgid "Where am I?"
-msgstr "মই ক’ত আছোঁ?"

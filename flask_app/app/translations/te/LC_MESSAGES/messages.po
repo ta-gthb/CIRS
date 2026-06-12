@@ -596,8 +596,8 @@ msgid "Live Map - Community Issues"
 msgstr "లైవ్ మ్యాప్ - కమ్యూనిటీ సమస్యలు"
 
 #: app/templates/live_map.html:8
-msgid "Locate Me"
-msgstr ""
+msgid "Where am I?"
+msgstr "నేను ఎక్కడ ఉన్నాను?"
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
@@ -1720,5 +1720,3 @@ msgstr "దయచేసి 4 అంకెలను నమోదు చేయం�
 
 
 
-msgid "Where am I?"
-msgstr "నేను ఎక్కడ ఉన్నాను?"

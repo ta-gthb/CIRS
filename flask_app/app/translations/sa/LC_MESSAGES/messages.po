@@ -596,8 +596,8 @@ msgid "Live Map - Community Issues"
 msgstr "सजीवं मानचित्रम् - सामुदायिक-समस्याः"
 
 #: app/templates/live_map.html:8
-msgid "Locate Me"
-msgstr ""
+msgid "Where am I?"
+msgstr "अहं कुत्र अस्मि?"
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
@@ -1709,5 +1709,3 @@ msgstr "कृपया ४ अङ्कान् लिखतु"
 
 
 
-msgid "Where am I?"
-msgstr "अहं कुत्र अस्मि?"

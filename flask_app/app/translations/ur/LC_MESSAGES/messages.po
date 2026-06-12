@@ -596,8 +596,8 @@ msgid "Live Map - Community Issues"
 msgstr "براہ راست نقشہ - کمیونٹی کے مسائل"
 
 #: app/templates/live_map.html:8
-msgid "Locate Me"
-msgstr ""
+msgid "Where am I?"
+msgstr "میں کہاں ہوں؟"
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
@@ -1721,5 +1721,3 @@ msgstr "براہ کرم 4 ہندسے درج کریں"
 
 
 
-msgid "Where am I?"
-msgstr "میں کہاں ہوں؟"

@@ -596,8 +596,8 @@ msgid "Live Map - Community Issues"
 msgstr "நேரடி வரைபடம் - சமூக சிக்கல்கள்"
 
 #: app/templates/live_map.html:8
-msgid "Locate Me"
-msgstr ""
+msgid "Where am I?"
+msgstr "நான் எங்கே இருக்கிறேன்?"
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
@@ -1730,5 +1730,3 @@ msgstr "தயவுசெய்து 4 இலக்கங்களை உள�
 
 
 
-msgid "Where am I?"
-msgstr "நான் எங்கே இருக்கிறேன்?"
