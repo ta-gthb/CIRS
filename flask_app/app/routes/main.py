@@ -1,15 +1,14 @@
 from flask import render_template, jsonify, request, session, redirect, url_for, current_app
 from flask_login import login_required, current_user
 from . import main_bp
-from ..models.models import User, Report, Message, db
+from ..models.models import User, Report, Message, db, get_ist_time
+from datetime import timedelta
 
 @main_bp.route('/')
 def index():
     resolved_count = Report.query.filter_by(status='resolved').count()
     
     # Online users (active in last 5 minutes)
-    from datetime import timedelta
-    from ..models.models import get_ist_time
     now = get_ist_time()
     online_threshold = now - timedelta(minutes=5)
     online_users = User.query.filter(User.last_seen >= online_threshold).count()
