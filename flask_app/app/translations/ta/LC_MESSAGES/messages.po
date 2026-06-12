@@ -20,55 +20,55 @@ msgstr ""
 
 #: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
-msgstr ""
+msgstr "அங்கீகரிக்கப்படாதது"
 
 #: app/routes/admin.py:103
 msgid "Report approved."
-msgstr ""
+msgstr "புகார் அங்கீகரிக்கப்பட்டது."
 
 #: app/routes/admin.py:115
 msgid "Report resolved."
-msgstr ""
+msgstr "புகார் தீர்க்கப்பட்டது."
 
 #: app/routes/admin.py:129
 msgid "Report rejected."
-msgstr ""
+msgstr "புகார் மீண்டும் திறக்கப்பட்டது."
 
 #: app/routes/admin.py:146
 msgid "User deletion approved. Pending reports removed."
-msgstr ""
+msgstr "பயனர் நீக்கம் அங்கீகரிக்கப்பட்டது."
 
 #: app/routes/admin.py:155
 msgid "User deletion request rejected."
-msgstr ""
+msgstr "பயனர் நீக்கம் அங்கீகரிக்கப்பட்டது."
 
 #: app/routes/auth.py:21
 #, python-format
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr ""
+msgstr "உங்கள் கணக்கு சமீபத்தில் நீக்கப்பட்டதால், %(date)s அன்று மீண்டும் கணினியில் பதிவு செய்யலாம்"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
-msgstr ""
+msgstr "அதிகாரி பதிவு செய்யப்படவில்லை. நிர்வாகியைத் தொடர்பு கொள்ளவும்."
 
 #: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
-msgstr ""
+msgstr "எண் %(role)s ஆக பதிவு செய்யப்பட்டுள்ளது. சரியான பாத்திரத்தைத் தேர்ந்தெடுக்கவும்."
 
 #: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
-msgstr ""
+msgstr "கணக்கு செயலற்றது அல்லது நீக்கப்பட்டது."
 
 #: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
-msgstr ""
+msgstr "தவறான அல்லது காலாவதியான OTP."
 
 #: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
-msgstr ""
+msgstr "சுயவிவரம் வெற்றிகரமாக புதுப்பிக்கப்பட்டது!"
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
@@ -78,51 +78,51 @@ msgstr ""
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr ""
+msgstr "இதேபோன்ற புகார் ஏற்கனவே இந்த இடத்தில் உள்ளது. உங்கள் ஆதரவு (upvote) சேர்க்கப்பட்டுள்ளது."
 
 #: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr ""
+msgstr "இதேபோன்ற புகார் ஏற்கனவே உள்ளது, நீங்கள் ஏற்கனவே அதற்கு ஆதரவு தெரிவித்துள்ளீர்கள்."
 
 #: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
-msgstr ""
+msgstr "நீங்கள் ஏற்கனவே இந்த இடத்தில் இதே போன்ற புகாரைச் சமர்ப்பித்துள்ளீர்கள்."
 
 #: app/routes/citizen.py:191
 msgid "You can only upload up to 3 images."
-msgstr ""
+msgstr "நீங்கள் 3 படங்கள் வரை மட்டுமே பதிவேற்ற முடியும்."
 
 #: app/routes/citizen.py:208
 msgid "Report submitted successfully!"
-msgstr ""
+msgstr "புகார் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!"
 
 #: app/routes/citizen.py:219
 msgid "You cannot upvote your own report."
-msgstr ""
+msgstr "உங்கள் சொந்தப் புகாருக்கு நீங்களே ஆதரவு தெரிவிக்க முடியாது."
 
 #: app/routes/citizen.py:223
 msgid "Already upvoted"
-msgstr ""
+msgstr "ஏற்கனவே ஆதரவு தெரிவிக்கப்பட்டது"
 
 #: app/routes/citizen.py:242
 msgid "Comment added."
-msgstr ""
+msgstr "கருத்து சேர்க்கப்பட்டது."
 
 #: app/routes/citizen.py:250
 msgid "Unauthorized."
-msgstr ""
+msgstr "அங்கீகரிக்கப்படாதது."
 
 #: app/routes/citizen.py:257
 msgid "Report cannot be reopened after 7 days of resolution."
-msgstr ""
+msgstr "புகாரை மீண்டும் திறக்க முடியாது."
 
 #: app/routes/citizen.py:262
 msgid "Report reopened."
-msgstr ""
+msgstr "புகார் மீண்டும் திறக்கப்பட்டது."
 
 #: app/routes/citizen.py:264
 msgid "Report cannot be reopened."
-msgstr ""
+msgstr "புகாரை மீண்டும் திறக்க முடியாது."
 
 #: app/routes/citizen.py:272
 msgid ""
@@ -134,11 +134,11 @@ msgstr ""
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
-msgstr ""
+msgstr "கணக்கு நீக்கல் கோரிக்கை உங்கள் நியமிக்கப்பட்ட அதிகாரியிடம் சமர்ப்பிக்கப்பட்டுள்ளது. நிர்வாக அதிகாரியின் ஒப்புதலுக்குப் பிறகு உங்கள் கணக்கு நீக்கப்படும்."
 
 #: app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
-msgstr ""
+msgstr "நிர்வாக டாஷ்போர்டு"
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
@@ -146,56 +146,56 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:6
 msgid "Assigned to:"
-msgstr ""
+msgstr "ஒதுக்கப்பட்ட மாநிலம்:"
 
 #: app/templates/admin_dashboard.html:12 app/templates/live_map.html:70
 #: app/templates/status.html:41
 msgid "Priority:"
-msgstr ""
+msgstr "முன்னுரிமை:"
 
 #: app/templates/admin_dashboard.html:14
 msgid "All Priorities"
-msgstr ""
+msgstr "முன்னுரிமை"
 
 #: app/templates/admin_dashboard.html:15 app/templates/index.html:34
 #: app/templates/live_map.html:14
 msgid "Critical"
-msgstr ""
+msgstr "மிக முக்கியமானது"
 
 #: app/templates/admin_dashboard.html:16 app/templates/index.html:35
 #: app/templates/live_map.html:15
 msgid "High"
-msgstr ""
+msgstr "அதிகம்"
 
 #: app/templates/admin_dashboard.html:17 app/templates/index.html:36
 #: app/templates/live_map.html:16
 msgid "Medium"
-msgstr ""
+msgstr "நடுத்தரம்"
 
 #: app/templates/admin_dashboard.html:18 app/templates/index.html:37
 #: app/templates/live_map.html:17
 msgid "Low"
-msgstr ""
+msgstr "குறைவு"
 
 #: app/templates/admin_dashboard.html:22 app/templates/status.html:11
 msgid "From:"
-msgstr ""
+msgstr "இருந்து:"
 
 #: app/templates/admin_dashboard.html:26 app/templates/status.html:15
 msgid "To:"
-msgstr ""
+msgstr "பெறுநர்:"
 
 #: app/templates/admin_dashboard.html:30 app/templates/status.html:19
 msgid "Filter"
-msgstr ""
+msgstr "வடிகட்டி"
 
 #: app/templates/admin_dashboard.html:31 app/templates/status.html:20
 msgid "Clear"
-msgstr ""
+msgstr "நீக்குக"
 
 #: app/templates/admin_dashboard.html:39
 msgid "Total Reports"
-msgstr ""
+msgstr "புகார்கள்"
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
@@ -203,42 +203,42 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:47
 msgid "Approved"
-msgstr ""
+msgstr "புகார் அங்கீகரிக்கப்பட்டது."
 
 #: app/templates/admin_dashboard.html:51
 msgid "Resolved"
-msgstr ""
+msgstr "நீக்கு"
 
 #: app/templates/admin_dashboard.html:57
 msgid "Manage Reports"
-msgstr ""
+msgstr "புகார்கள்"
 
 #: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:226
 msgid "Title"
-msgstr ""
+msgstr "கோப்பு"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:110
 #: app/templates/profile.html:14
 msgid "Citizen ID"
-msgstr ""
+msgstr "குடிமகன் அடையாளம் (ID)"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:228
 #: app/templates/live_map.html:13
 msgid "Priority"
-msgstr ""
+msgstr "முன்னுரிமை"
 
 #: app/templates/admin_dashboard.html:66 app/templates/admin_dashboard.html:229
 #: app/templates/base.html:69
 msgid "Status"
-msgstr ""
+msgstr "நிலை"
 
 #: app/templates/admin_dashboard.html:67
 msgid "Date"
-msgstr ""
+msgstr "மாநிலம்"
 
 #: app/templates/admin_dashboard.html:68 app/templates/admin_dashboard.html:112
 msgid "Actions"
-msgstr ""
+msgstr "இடம்"
 
 #: app/templates/admin_dashboard.html:75
 msgid "N/A"
@@ -250,7 +250,7 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:125
 msgid "Approve"
-msgstr ""
+msgstr "நீக்கு"
 
 #: app/templates/admin_dashboard.html:83 app/templates/admin_dashboard.html:129
 msgid "Reject"
@@ -258,44 +258,44 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:86
 msgid "Resolve"
-msgstr ""
+msgstr "நீக்கு"
 
 #: app/templates/admin_dashboard.html:89 app/templates/status.html:68
 msgid "Message"
-msgstr ""
+msgstr "செய்தி"
 
 #: app/templates/admin_dashboard.html:98
 msgid "No reports found matching filters."
-msgstr ""
+msgstr "நிபந்தனைகளுக்குப் பொருந்தும் புகார்கள் எதுவும் இல்லை."
 
 #: app/templates/admin_dashboard.html:104
 msgid "Pending Account Deletion Requests"
-msgstr ""
+msgstr "கணக்கு நீக்கக் கோரிக்கை ஒப்புதலுக்காக நிலுவையில் உள்ளது."
 
 #: app/templates/admin_dashboard.html:109
 msgid "Name"
-msgstr ""
+msgstr "பெயர்:"
 
 #: app/templates/admin_dashboard.html:111
 msgid "Phone"
-msgstr ""
+msgstr "தொலைபேசி:"
 
 #: app/templates/admin_dashboard.html:118 app/templates/public_forum.html:16
 #: app/templates/public_forum.html:33
 msgid "Anonymous"
-msgstr ""
+msgstr "பெயர் குறிப்பிடாதவர்"
 
 #: app/templates/admin_dashboard.html:124
 msgid "Are you sure you want to approve this deletion? This action is permanent."
-msgstr ""
+msgstr "நிச்சயமாக இந்தப் புகாரை மீண்டும் திறக்க விரும்புகிறீர்களா?"
 
 #: app/templates/admin_dashboard.html:145
 msgid "Report Details"
-msgstr ""
+msgstr "புகார்கள்"
 
 #: app/templates/admin_dashboard.html:149 app/templates/public_forum.html:54
 msgid "Close"
-msgstr ""
+msgstr "மூடுக"
 
 #: app/templates/admin_dashboard.html:157
 msgid "Resolve Report"
@@ -312,12 +312,12 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:162
 msgid "Mark as Resolved"
-msgstr ""
+msgstr "தீர்க்கப்பட்ட சிக்கல்கள்"
 
 #: app/templates/admin_dashboard.html:171
 #: app/templates/admin_dashboard.html:176
 msgid "Reject Report"
-msgstr ""
+msgstr "புகாரைச் சமர்ப்பி"
 
 #: app/templates/admin_dashboard.html:173
 msgid "Enter rejection reason..."
@@ -325,23 +325,23 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:216 app/templates/status.html:88
 msgid "Report Image"
-msgstr ""
+msgstr "புகார் படம்"
 
 #: app/templates/admin_dashboard.html:227 app/templates/submit_report.html:14
 msgid "Category"
-msgstr ""
+msgstr "வகை"
 
 #: app/templates/admin_dashboard.html:230
 msgid "Submitted On"
-msgstr ""
+msgstr "நான் சமர்ப்பித்த புகார்கள்"
 
 #: app/templates/admin_dashboard.html:231
 msgid "Description"
-msgstr ""
+msgstr "சிக்கலின் விளக்கம்"
 
 #: app/templates/admin_dashboard.html:232 app/templates/submit_report.html:32
 msgid "Location"
-msgstr ""
+msgstr "இடம்"
 
 #: app/templates/admin_dashboard.html:236
 msgid "Captured Images"
@@ -353,11 +353,11 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:240
 msgid "Voice Notes"
-msgstr ""
+msgstr "குரல் குறிப்பு"
 
 #: app/templates/admin_dashboard.html:241
 msgid "No voice notes uploaded"
-msgstr ""
+msgstr "குரல் குறிப்பு"
 
 #: app/templates/admin_dashboard.html:263
 msgid "Failed to fetch report details"
@@ -365,31 +365,31 @@ msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
-msgstr ""
+msgstr "நிர்வாக அதிகாரி சுயவிவரம்"
 
 #: app/templates/admin_profile.html:7
 msgid "Name:"
-msgstr ""
+msgstr "பெயர்:"
 
 #: app/templates/admin_profile.html:8
 msgid "Phone:"
-msgstr ""
+msgstr "தொலைபேசி:"
 
 #: app/templates/admin_profile.html:9
 msgid "Role:"
-msgstr ""
+msgstr "பணி/பாத்திரம்:"
 
 #: app/templates/admin_profile.html:9
 msgid "Authority / Admin Officer"
-msgstr ""
+msgstr "அதிகாரம் / நிர்வாக அதிகாரி"
 
 #: app/templates/admin_profile.html:10
 msgid "Assigned State:"
-msgstr ""
+msgstr "ஒதுக்கப்பட்ட மாநிலம்:"
 
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
-msgstr ""
+msgstr "ஒதுக்கப்பட்ட மாவட்டம்:"
 
 #: app/templates/admin_profile.html:12
 msgid "District Coordinates:"
@@ -397,43 +397,43 @@ msgstr ""
 
 #: app/templates/base.html:24 app/templates/base.html:66
 msgid "Dashboard"
-msgstr ""
+msgstr "டாஷ்போர்டு"
 
 #: app/templates/base.html:25
 msgid "Report Issue"
-msgstr ""
+msgstr "புகார் அளிக்கவும்"
 
 #: app/templates/base.html:26 app/templates/base.html:68
 msgid "Forum"
-msgstr ""
+msgstr "மன்றம்"
 
 #: app/templates/base.html:27
 msgid "My Status"
-msgstr ""
+msgstr "எனது நிலை"
 
 #: app/templates/base.html:28 app/templates/base.html:70
 msgid "Map"
-msgstr ""
+msgstr "வரைபடம்"
 
 #: app/templates/base.html:30 app/templates/base.html:71
 msgid "Profile"
-msgstr ""
+msgstr "சுயவிவரம்"
 
 #: app/templates/base.html:33
 msgid "Admin Panel"
-msgstr ""
+msgstr "நிர்வாக குழு"
 
 #: app/templates/base.html:35 app/templates/base.html:74
 msgid "Settings"
-msgstr ""
+msgstr "அமைப்புகள்"
 
 #: app/templates/base.html:44
 msgid "Login"
-msgstr ""
+msgstr "உள்நுழை"
 
 #: app/templates/base.html:46
 msgid "Toggle Light/Dark Mode"
-msgstr ""
+msgstr "ஒளி/இருள் பயன்முறையை மாற்றவும்"
 
 #: app/templates/base.html:67
 msgid "Report"
@@ -445,7 +445,7 @@ msgstr ""
 
 #: app/templates/base.html:76
 msgid "Logout"
-msgstr ""
+msgstr "வெளியேறு"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
@@ -461,15 +461,15 @@ msgstr ""
 
 #: app/templates/base.html:128
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
-msgstr ""
+msgstr "குடிமைப் புகார் அறிக்கையிடல் அமைப்பு (CIRS). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
 
 #: app/templates/base.html:135
 msgid "Report Chat"
-msgstr ""
+msgstr "புகார் அரட்டை"
 
 #: app/templates/base.html:142
 msgid "Type a message..."
-msgstr ""
+msgstr "செய்தியைத் தட்டச்சு செய்க..."
 
 #: app/templates/base.html:302
 msgid "Location still disabled. Please enable GPS in system settings."
@@ -477,123 +477,123 @@ msgstr ""
 
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
-msgstr ""
+msgstr "உங்கள் டாஷ்போர்டிற்கு வரவேற்கிறோம்"
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr ""
+msgstr "உங்கள் சமூகத்தில் உள்ள குடிமைப் புகார்களைப் புகாரளிப்பதற்கும் கண்காணிப்பதற்கும் ஆன உங்கள் தளம்."
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
-msgstr ""
+msgstr "புதிய புகாரைச் சமர்ப்பிக்கவும்"
 
 #: app/templates/citizen_dashboard.html:17
 msgid "Trending/Nearby Issues"
-msgstr ""
+msgstr "பிரபலமான/அருகிலுள்ள சிக்கல்கள்"
 
 #: app/templates/citizen_dashboard.html:18
 msgid "High-priority and trending reports in the portal."
-msgstr ""
+msgstr "தளத்தில் அதிக முன்னுரிமை மற்றும் பிரபலமான புகார்கள்."
 
 #: app/templates/citizen_dashboard.html:30
 msgid "General"
-msgstr ""
+msgstr "பொதுவான"
 
 #: app/templates/citizen_dashboard.html:31
 msgid "Upvote"
-msgstr ""
+msgstr "ஆதரவு (Upvote)"
 
 #: app/templates/citizen_dashboard.html:36
 msgid "No issues reported yet."
-msgstr ""
+msgstr "இதுவரை புகார்கள் எதுவும் இல்லை."
 
 #: app/templates/citizen_dashboard.html:40
 msgid "View All in Public Forum"
-msgstr ""
+msgstr "பொது மன்றத்தில் அனைத்தையும் காண்க"
 
 #: app/templates/citizen_dashboard.html:45
 msgid "Quick Links"
-msgstr ""
+msgstr "விரைவான இணைப்புகள்"
 
 #: app/templates/citizen_dashboard.html:49
 msgid "Track My Reports"
-msgstr ""
+msgstr "எனது புகார்களைக் கண்காணியுங்கள்"
 
 #: app/templates/citizen_dashboard.html:53
 msgid "View Live Map"
-msgstr ""
+msgstr "நேரடி வரைபடத்தைக் காண்க"
 
 #: app/templates/citizen_dashboard.html:57
 msgid "Manage Profile"
-msgstr ""
+msgstr "சுயவிவரத்தை நிர்வகிக்கவும்"
 
 #: app/templates/citizen_dashboard.html:91
 msgid "Upvoted"
-msgstr ""
+msgstr "ஆதரவு தெரிவிக்கப்பட்டது"
 
 #: app/templates/index.html:5
 msgid "Welcome to CIRS !"
-msgstr ""
+msgstr "CIRS-க்கு வரவேற்கிறோம்!"
 
 #: app/templates/index.html:6
 msgid "--Report today for a better tomorrow"
-msgstr ""
+msgstr "--சிறந்த நாளைக்காக இன்று புகாரளிக்கவும்"
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr ""
+msgstr "உள்ளூர் பிரச்சனைகளை இணைந்து புகாரளிக்கவும், கண்காணிக்கவும் மற்றும் தீர்க்கவும்"
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
-msgstr ""
+msgstr "தீர்க்கப்பட்ட சிக்கல்கள்"
 
 #: app/templates/index.html:15
 msgid "Active Users"
-msgstr ""
+msgstr "செயலில் உள்ள பயனர்கள்"
 
 #: app/templates/index.html:19
 msgid "Cities"
-msgstr ""
+msgstr "நகரங்கள்"
 
 #: app/templates/index.html:23
 msgid "Get Started Now"
-msgstr ""
+msgstr "இப்போது தொடங்குங்கள்"
 
 #: app/templates/index.html:29 app/templates/index.html:51
 msgid "Live Map"
-msgstr ""
+msgstr "நேரடி வரைபடத்தைக் காண்க"
 
 #: app/templates/index.html:30
 msgid "Visualize all reported issues across districts in real-time."
-msgstr ""
+msgstr "புகாரளிக்கப்பட்ட சிக்கல்களை நிகழ்நேரத்தில் காட்சிப்படுத்துங்கள்."
 
 #: app/templates/index.html:42
 msgid "Powerful Features"
-msgstr ""
+msgstr "சக்திவாய்ந்த அம்சங்கள்"
 
 #: app/templates/index.html:46
 msgid "Media Reporting"
-msgstr ""
+msgstr "ஊடக அறிக்கையிடல்"
 
 #: app/templates/index.html:47
 msgid "Capture issues with photos and voice notes."
-msgstr ""
+msgstr "புகைப்படங்கள் மற்றும் குரல் குறிப்புகளுடன் சிக்கல்களைப் பதிவு செய்யுங்கள்."
 
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
-msgstr ""
+msgstr "புகாரளிக்கப்பட்ட சிக்கல்களை நிகழ்நேரத்தில் காட்சிப்படுத்துங்கள்."
 
 #: app/templates/index.html:56
 msgid "Analytics"
-msgstr ""
+msgstr "பகுப்பாய்வு"
 
 #: app/templates/index.html:57
 msgid "Track resolution status and response times."
-msgstr ""
+msgstr "தீர்வு நிலை மற்றும் பதிலளிப்பு நேரங்களைக் கண்காணியுங்கள்."
 
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
-msgstr ""
+msgstr "நேரடி வரைபடம் - சமூக சிக்கல்கள்"
 
 #: app/templates/live_map.html:8
 msgid "Locate Me"
@@ -601,11 +601,11 @@ msgstr ""
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
-msgstr ""
+msgstr "வகை:"
 
 #: app/templates/live_map.html:71
 msgid "Status:"
-msgstr ""
+msgstr "நிலை:"
 
 #: app/templates/live_map.html:97
 msgid "You are here"
@@ -613,91 +613,91 @@ msgstr ""
 
 #: app/templates/login.html:5
 msgid "Login / Register"
-msgstr ""
+msgstr "உள்நுழைவு / பதிவு"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
-msgstr ""
+msgstr "மொபைல் எண்"
 
 #: app/templates/login.html:17
 msgid "I am a:"
-msgstr ""
+msgstr "நான் ஒரு:"
 
 #: app/templates/login.html:20
 msgid "Citizen"
-msgstr ""
+msgstr "குடிமகன்"
 
 #: app/templates/login.html:22
 msgid "Officer"
-msgstr ""
+msgstr "அதிகாரி"
 
 #: app/templates/login.html:25
 msgid "Send OTP"
-msgstr ""
+msgstr "OTP அனுப்பு"
 
 #: app/templates/login.html:27
 msgid "Demo OTP: 1234"
-msgstr ""
+msgstr "டெமோ OTP: 1234"
 
 #: app/templates/login.html:84
 msgid "Please enter 10 digits"
-msgstr ""
+msgstr "தயவுசெய்து 10 இலக்கங்களை உள்ளிடவும்"
 
 #: app/templates/profile.html:5
 msgid "User Profile"
-msgstr ""
+msgstr "பயனர் சுயவிவரம்"
 
 #: app/templates/profile.html:9
 msgid "Full Name"
-msgstr ""
+msgstr "முழுப் பெயர்"
 
 #: app/templates/profile.html:10
 msgid "Enter your full name"
-msgstr ""
+msgstr "உங்கள் முழுப் பெயரை உள்ளிடவும்"
 
 #: app/templates/profile.html:15
 msgid "Not Assigned"
-msgstr ""
+msgstr "ஒதுக்கப்படவில்லை"
 
 #: app/templates/profile.html:19
 msgid "Phone Number"
-msgstr ""
+msgstr "தொலைபேசி எண்"
 
 #: app/templates/profile.html:21
 msgid "Phone number cannot be changed."
-msgstr ""
+msgstr "தொலைபேசி எண்ணை மாற்ற முடியாது."
 
 #: app/templates/profile.html:25
 msgid "Address"
-msgstr ""
+msgstr "முகவரி"
 
 #: app/templates/profile.html:26
 msgid "Enter your address"
-msgstr ""
+msgstr "உங்கள் முகவரியை உள்ளிடவும்"
 
 #: app/templates/profile.html:31
 msgid "State"
-msgstr ""
+msgstr "மாநிலம்"
 
 #: app/templates/profile.html:33
 msgid "Select State"
-msgstr ""
+msgstr "மாநிலத்தைத் தேர்ந்தெடுக்கவும்"
 
 #: app/templates/profile.html:37
 msgid "District"
-msgstr ""
+msgstr "மாவட்டம்"
 
 #: app/templates/profile.html:39 app/templates/profile.html:134
 msgid "Select District"
-msgstr ""
+msgstr "மாவட்டத்தைத் தேர்ந்தெடுக்கவும்"
 
 #: app/templates/profile.html:44
 msgid "Update Profile"
-msgstr ""
+msgstr "சுயவிவரத்தைப் புதுப்பிக்கவும்"
 
 #: app/templates/profile.html:49
 msgid "Account Management"
-msgstr ""
+msgstr "கணக்கு மேலாண்மை"
 
 #: app/templates/profile.html:52
 msgid ""
@@ -707,7 +707,7 @@ msgstr ""
 
 #: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
-msgstr ""
+msgstr "கணக்கு நீக்கத்தைக் கோரவும்"
 
 #: app/templates/profile.html:58
 msgid ""
@@ -717,67 +717,67 @@ msgstr ""
 
 #: app/templates/profile.html:60
 msgid "Update profile to enable"
-msgstr ""
+msgstr "சுயவிவரத்தைப் புதுப்பிக்கவும்"
 
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
-msgstr ""
+msgstr "கணக்கு நீக்கக் கோரிக்கை ஒப்புதலுக்காக நிலுவையில் உள்ளது."
 
 #: app/templates/public_forum.html:5
 msgid "Public Forum"
-msgstr ""
+msgstr "பொது மன்றம்"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
-msgstr ""
+msgstr "பதிவிடப்பட்டது"
 
 #: app/templates/public_forum.html:16
 msgid "by"
-msgstr ""
+msgstr "மூலம்"
 
 #: app/templates/public_forum.html:21
 msgid "Upvotes"
-msgstr ""
+msgstr "ஆதரவுகள்"
 
 #: app/templates/public_forum.html:24
 msgid "View Location"
-msgstr ""
+msgstr "குறிக்கப்பட்ட இடத்தைக் காண்க"
 
 #: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
-msgstr ""
+msgstr "கருத்துகள்"
 
 #: app/templates/public_forum.html:39
 msgid "Add a comment..."
-msgstr ""
+msgstr "ஒரு கருத்தைச் சேர்க்கவும்..."
 
 #: app/templates/public_forum.html:40
 msgid "Post"
-msgstr ""
+msgstr "பதிவிடு"
 
 #: app/templates/public_forum.html:51
 msgid "Report Location"
-msgstr ""
+msgstr "புகார் அரட்டை"
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
-msgstr ""
+msgstr "நான் சமர்ப்பித்த புகார்கள்"
 
 #: app/templates/status.html:27
 msgid "No reports found matching the criteria."
-msgstr ""
+msgstr "நிபந்தனைகளுக்குப் பொருந்தும் புகார்கள் எதுவும் இல்லை."
 
 #: app/templates/status.html:42
 msgid "Location:"
-msgstr ""
+msgstr "இடம்:"
 
 #: app/templates/status.html:42
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாதது"
 
 #: app/templates/status.html:43
 msgid "Upvotes:"
-msgstr ""
+msgstr "ஆதரவுகள்:"
 
 #: app/templates/status.html:51
 msgid "Resolution Notes:"
@@ -793,141 +793,141 @@ msgstr ""
 
 #: app/templates/status.html:64
 msgid "View Marked Location"
-msgstr ""
+msgstr "குறிக்கப்பட்ட இடத்தைக் காண்க"
 
 #: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
-msgstr ""
+msgstr "நிச்சயமாக இந்தப் புகாரை மீண்டும் திறக்க விரும்புகிறீர்களா?"
 
 #: app/templates/status.html:74
 msgid "Reopen"
-msgstr ""
+msgstr "மீண்டும் திறக்கவும்"
 
 #: app/templates/status.html:85
 msgid "Images:"
-msgstr ""
+msgstr "படங்கள்:"
 
 #: app/templates/status.html:96
 msgid "Voice Note:"
-msgstr ""
+msgstr "குரல் குறிப்பு:"
 
 #: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
-msgstr ""
+msgstr "உங்கள் உலாவி ஆடியோ உறுப்பை ஆதரிக்கவில்லை."
 
 #: app/templates/submit_report.html:8
 msgid "Issue Title"
-msgstr ""
+msgstr "சிக்கலின் தலைப்பு"
 
 #: app/templates/submit_report.html:9
 msgid "Brief title of the issue"
-msgstr ""
+msgstr "சிக்கலின் சுருக்கமான தலைப்பு"
 
 #: app/templates/submit_report.html:16
 msgid "Select Category"
-msgstr ""
+msgstr "வகையைத் தேர்ந்தெடுக்கவும்"
 
 #: app/templates/submit_report.html:17
 msgid "Roads & Potholes"
-msgstr ""
+msgstr "சாலைகள் மற்றும் பள்ளங்கள்"
 
 #: app/templates/submit_report.html:18
 msgid "Water Supply"
-msgstr ""
+msgstr "தண்ணீர் விநியோகம்"
 
 #: app/templates/submit_report.html:19
 msgid "Electricity"
-msgstr ""
+msgstr "மின்சாரம்"
 
 #: app/templates/submit_report.html:20
 msgid "Sanitation & Garbage"
-msgstr ""
+msgstr "சுகாதாரம் மற்றும் குப்பை"
 
 #: app/templates/submit_report.html:21
 msgid "Other"
-msgstr ""
+msgstr "மற்றவை"
 
 #: app/templates/submit_report.html:27
 msgid "Issue Description"
-msgstr ""
+msgstr "சிக்கலின் விளக்கம்"
 
 #: app/templates/submit_report.html:28
 msgid "Provide details about the issue..."
-msgstr ""
+msgstr "சிக்கல் பற்றிய விவரங்களை வழங்கவும்..."
 
 #: app/templates/submit_report.html:33
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr ""
+msgstr "இடம் தானாகவே பெறப்படும், ஆனால் நீங்கள் அதை வரைபடத்தில் மாற்றியமைக்கலாம்."
 
 #: app/templates/submit_report.html:43
 msgid "Upload Images (Max 3, Max 5MB each)"
-msgstr ""
+msgstr "படங்களை பதிவேற்றவும் (அதிகபட்சம் 3, ஒவ்வொன்றும் 5MB)"
 
 #: app/templates/submit_report.html:45
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr ""
+msgstr "புவி இருப்பிட அடிப்படையிலான கேமராவால் எடுக்கப்பட்ட படங்கள் மட்டுமே பதிவேற்ற ஏற்றுக்கொள்ளப்படும்!"
 
 #: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
-msgstr ""
+msgstr "நேரடி புவி-கேமரா"
 
 #: app/templates/submit_report.html:50
 msgid "Upload Files"
-msgstr ""
+msgstr "கோப்புகளைப் பதிவேற்றவும்"
 
 #: app/templates/submit_report.html:59
 msgid "Capture Photo"
-msgstr ""
+msgstr "புகைப்படம் எடு"
 
 #: app/templates/submit_report.html:60
 msgid "Switch"
-msgstr ""
+msgstr "மாற்று"
 
 #: app/templates/submit_report.html:61
 msgid "Close Camera"
-msgstr ""
+msgstr "கேமராவை மூடு"
 
 #: app/templates/submit_report.html:72
 msgid "Voice Note"
-msgstr ""
+msgstr "குரல் குறிப்பு"
 
 #: app/templates/submit_report.html:74
 msgid "Record"
-msgstr ""
+msgstr "பதிவு செய்"
 
 #: app/templates/submit_report.html:75
 msgid "Stop"
-msgstr ""
+msgstr "நிறுத்து"
 
 #: app/templates/submit_report.html:78
 msgid "OR upload file"
-msgstr ""
+msgstr "அல்லது கோப்பைப் பதிவேற்றவும்"
 
 #: app/templates/submit_report.html:82
 msgid "Remove"
-msgstr ""
+msgstr "நீக்கு"
 
 #: app/templates/submit_report.html:86
 msgid "Submit Report"
-msgstr ""
+msgstr "புகாரைச் சமர்ப்பி"
 
 #: app/templates/submit_report.html:196
 msgid "File"
-msgstr ""
+msgstr "கோப்பு"
 
 #: app/templates/submit_report.html:196
 msgid "exceeds 5MB limit"
-msgstr ""
+msgstr "5MB வரம்பை மீறுகிறது"
 
 #: app/templates/submit_report.html:217 app/templates/submit_report.html:257
 msgid "Maximum 3 images reached"
-msgstr ""
+msgstr "அதிகபட்சமாக 3 படங்கள் எட்டப்பட்டன"
 
 #: app/templates/submit_report.html:241
 msgid "Camera access denied or not available"
-msgstr ""
+msgstr "கேமரா அணுகல் மறுக்கப்பட்டது அல்லது கிடைக்கவில்லை"
 
 #: app/templates/submit_report.html:297
 msgid "District assignment pending..."
@@ -939,35 +939,35 @@ msgstr ""
 
 #: app/templates/submit_report.html:325
 msgid "Please upload or capture at least one image of the issue."
-msgstr ""
+msgstr "தயவுசெய்து சிக்கலின் ஒரு படத்தையாவது பதிவேற்றவும் அல்லது எடுக்கவும்."
 
 #: app/templates/submit_report.html:364
 msgid "Recording..."
-msgstr ""
+msgstr "பதிவாகிறது..."
 
 #: app/templates/submit_report.html:379
 msgid "Microphone access denied"
-msgstr ""
+msgstr "மைக்ரோஃபோன் அணுகல் மறுக்கப்பட்டது"
 
 #: app/templates/verify_otp.html:5
 msgid "Verify OTP"
-msgstr ""
+msgstr "OTP சரிபார்க்கவும்"
 
 #: app/templates/verify_otp.html:6
 msgid "Sent to:"
-msgstr ""
+msgstr "அனுப்பப்பட்டது:"
 
 #: app/templates/verify_otp.html:9
 msgid "Enter 4-Digit OTP"
-msgstr ""
+msgstr "4-இலக்க OTP-ஐ உள்ளிடவும்"
 
 #: app/templates/verify_otp.html:17
 msgid "Verify & Login"
-msgstr ""
+msgstr "சரிபார்த்து உள்நுழையவும்"
 
 #: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
-msgstr ""
+msgstr "தயவுசெய்து 4 இலக்கங்களை உள்ளிடவும்"
 
 #~ msgid ""
 #~ "Are you sure you want to request"

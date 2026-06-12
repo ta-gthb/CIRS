@@ -33,7 +33,7 @@ def create_app(config_class=Config):
     socketio.init_app(app, cors_allowed_origins="*")
     
     # Explicitly set translation directory to avoid any path issues
-    app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'translations'
+    app.config['BABEL_TRANSLATION_DIRECTORIES'] = os.path.join(app.root_path, 'translations')
     babel.init_app(app, locale_selector=get_locale)
 
     from .routes import auth_bp, citizen_bp, admin_bp, main_bp

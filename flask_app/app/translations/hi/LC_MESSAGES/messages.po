@@ -20,55 +20,55 @@ msgstr ""
 
 #: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
-msgstr ""
+msgstr "अनधिकृत"
 
 #: app/routes/admin.py:103
 msgid "Report approved."
-msgstr ""
+msgstr "रिपोर्ट स्वीकृत।"
 
 #: app/routes/admin.py:115
 msgid "Report resolved."
-msgstr ""
+msgstr "रिपोर्ट का समाधान हो गया।"
 
 #: app/routes/admin.py:129
 msgid "Report rejected."
-msgstr ""
+msgstr "रिपोर्ट फिर से खोली गई।"
 
 #: app/routes/admin.py:146
 msgid "User deletion approved. Pending reports removed."
-msgstr ""
+msgstr "उपयोगकर्ता को हटाना स्वीकृत।"
 
 #: app/routes/admin.py:155
 msgid "User deletion request rejected."
-msgstr ""
+msgstr "उपयोगकर्ता को हटाना स्वीकृत।"
 
 #: app/routes/auth.py:21
 #, python-format
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr ""
+msgstr "आप %(date)s को फिर से सिस्टम में पंजीकरण कर सकते हैं क्योंकि आपका खाता हाल ही में हटा दिया गया है"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
-msgstr ""
+msgstr "अधिकारी पंजीकृत नहीं है। प्रशासक से संपर्क करें।"
 
 #: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
-msgstr ""
+msgstr "नंबर %(role)s के रूप में पंजीकृत है। सही भूमिका चुनें।"
 
 #: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
-msgstr ""
+msgstr "खाता निष्क्रिय है या हटा दिया गया है।"
 
 #: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
-msgstr ""
+msgstr "अमान्य या समाप्त ओटीपी।"
 
 #: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
-msgstr ""
+msgstr "प्रोफ़ाइल सफलतापूर्वक अपडेट की गई!"
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
@@ -78,51 +78,51 @@ msgstr ""
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr ""
+msgstr "इस स्थान पर एक समान रिपोर्ट पहले से मौजूद है। आपका अपवोट इसमें जोड़ दिया गया है।"
 
 #: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr ""
+msgstr "एक समान रिपोर्ट पहले से मौजूद है और आपने इसे पहले ही अपवोट कर दिया है।"
 
 #: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
-msgstr ""
+msgstr "आपने पहले ही इस स्थान पर एक समान रिपोर्ट सबमिट कर दी है।"
 
 #: app/routes/citizen.py:191
 msgid "You can only upload up to 3 images."
-msgstr ""
+msgstr "आप केवल 3 इमेज ही अपलोड कर सकते हैं।"
 
 #: app/routes/citizen.py:208
 msgid "Report submitted successfully!"
-msgstr ""
+msgstr "रिपोर्ट सफलतापूर्वक सबमिट की गई!"
 
 #: app/routes/citizen.py:219
 msgid "You cannot upvote your own report."
-msgstr ""
+msgstr "आप अपनी खुद की रिपोर्ट को अपवोट नहीं कर सकते।"
 
 #: app/routes/citizen.py:223
 msgid "Already upvoted"
-msgstr ""
+msgstr "पहले ही अपवोट किया जा चुका है"
 
 #: app/routes/citizen.py:242
 msgid "Comment added."
-msgstr ""
+msgstr "टिप्पणी जोड़ी गई।"
 
 #: app/routes/citizen.py:250
 msgid "Unauthorized."
-msgstr ""
+msgstr "अनधिकृत।"
 
 #: app/routes/citizen.py:257
 msgid "Report cannot be reopened after 7 days of resolution."
-msgstr ""
+msgstr "रिपोर्ट फिर से नहीं खोली जा सकती।"
 
 #: app/routes/citizen.py:262
 msgid "Report reopened."
-msgstr ""
+msgstr "रिपोर्ट फिर से खोली गई।"
 
 #: app/routes/citizen.py:264
 msgid "Report cannot be reopened."
-msgstr ""
+msgstr "रिपोर्ट फिर से नहीं खोली जा सकती।"
 
 #: app/routes/citizen.py:272
 msgid ""
@@ -134,11 +134,11 @@ msgstr ""
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
-msgstr ""
+msgstr "हटाने का अनुरोध आपके संबंधित अधिकारी को सबमिट कर दिया गया है। आपका खाता एडमिन ऑफिसर की मंजूरी के बाद हटा दिया जाएगा।"
 
 #: app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
-msgstr ""
+msgstr "एडमिन डैशबोर्ड"
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
@@ -146,56 +146,56 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:6
 msgid "Assigned to:"
-msgstr ""
+msgstr "नियत राज्य:"
 
 #: app/templates/admin_dashboard.html:12 app/templates/live_map.html:70
 #: app/templates/status.html:41
 msgid "Priority:"
-msgstr ""
+msgstr "प्राथमिकता:"
 
 #: app/templates/admin_dashboard.html:14
 msgid "All Priorities"
-msgstr ""
+msgstr "प्राथमिकता"
 
 #: app/templates/admin_dashboard.html:15 app/templates/index.html:34
 #: app/templates/live_map.html:14
 msgid "Critical"
-msgstr ""
+msgstr "गंभीर"
 
 #: app/templates/admin_dashboard.html:16 app/templates/index.html:35
 #: app/templates/live_map.html:15
 msgid "High"
-msgstr ""
+msgstr "उच्च"
 
 #: app/templates/admin_dashboard.html:17 app/templates/index.html:36
 #: app/templates/live_map.html:16
 msgid "Medium"
-msgstr ""
+msgstr "मध्यम"
 
 #: app/templates/admin_dashboard.html:18 app/templates/index.html:37
 #: app/templates/live_map.html:17
 msgid "Low"
-msgstr ""
+msgstr "निम्न"
 
 #: app/templates/admin_dashboard.html:22 app/templates/status.html:11
 msgid "From:"
-msgstr ""
+msgstr "से:"
 
 #: app/templates/admin_dashboard.html:26 app/templates/status.html:15
 msgid "To:"
-msgstr ""
+msgstr "तक:"
 
 #: app/templates/admin_dashboard.html:30 app/templates/status.html:19
 msgid "Filter"
-msgstr ""
+msgstr "फ़िल्टर"
 
 #: app/templates/admin_dashboard.html:31 app/templates/status.html:20
 msgid "Clear"
-msgstr ""
+msgstr "साफ़ करें"
 
 #: app/templates/admin_dashboard.html:39
 msgid "Total Reports"
-msgstr ""
+msgstr "रिपोर्ट्स"
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
@@ -203,42 +203,42 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:47
 msgid "Approved"
-msgstr ""
+msgstr "रिपोर्ट स्वीकृत।"
 
 #: app/templates/admin_dashboard.html:51
 msgid "Resolved"
-msgstr ""
+msgstr "हटाएं"
 
 #: app/templates/admin_dashboard.html:57
 msgid "Manage Reports"
-msgstr ""
+msgstr "रिपोर्ट्स"
 
 #: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:226
 msgid "Title"
-msgstr ""
+msgstr "फ़ाइल"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:110
 #: app/templates/profile.html:14
 msgid "Citizen ID"
-msgstr ""
+msgstr "नागरिक आईडी"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:228
 #: app/templates/live_map.html:13
 msgid "Priority"
-msgstr ""
+msgstr "प्राथमिकता"
 
 #: app/templates/admin_dashboard.html:66 app/templates/admin_dashboard.html:229
 #: app/templates/base.html:69
 msgid "Status"
-msgstr ""
+msgstr "स्थिति"
 
 #: app/templates/admin_dashboard.html:67
 msgid "Date"
-msgstr ""
+msgstr "राज्य"
 
 #: app/templates/admin_dashboard.html:68 app/templates/admin_dashboard.html:112
 msgid "Actions"
-msgstr ""
+msgstr "स्थान"
 
 #: app/templates/admin_dashboard.html:75
 msgid "N/A"
@@ -250,7 +250,7 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:125
 msgid "Approve"
-msgstr ""
+msgstr "हटाएं"
 
 #: app/templates/admin_dashboard.html:83 app/templates/admin_dashboard.html:129
 msgid "Reject"
@@ -258,44 +258,44 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:86
 msgid "Resolve"
-msgstr ""
+msgstr "हटाएं"
 
 #: app/templates/admin_dashboard.html:89 app/templates/status.html:68
 msgid "Message"
-msgstr ""
+msgstr "संदेश"
 
 #: app/templates/admin_dashboard.html:98
 msgid "No reports found matching filters."
-msgstr ""
+msgstr "मानदंडों से मेल खाने वाली कोई रिपोर्ट नहीं मिली।"
 
 #: app/templates/admin_dashboard.html:104
 msgid "Pending Account Deletion Requests"
-msgstr ""
+msgstr "खाता हटाने का अनुरोध अनुमोदन के लिए लंबित है।"
 
 #: app/templates/admin_dashboard.html:109
 msgid "Name"
-msgstr ""
+msgstr "नाम:"
 
 #: app/templates/admin_dashboard.html:111
 msgid "Phone"
-msgstr ""
+msgstr "फ़ोन:"
 
 #: app/templates/admin_dashboard.html:118 app/templates/public_forum.html:16
 #: app/templates/public_forum.html:33
 msgid "Anonymous"
-msgstr ""
+msgstr "अनाम"
 
 #: app/templates/admin_dashboard.html:124
 msgid "Are you sure you want to approve this deletion? This action is permanent."
-msgstr ""
+msgstr "क्या आप वाकई इस रिपोर्ट को फिर से खोलना चाहते हैं?"
 
 #: app/templates/admin_dashboard.html:145
 msgid "Report Details"
-msgstr ""
+msgstr "रिपोर्ट्स"
 
 #: app/templates/admin_dashboard.html:149 app/templates/public_forum.html:54
 msgid "Close"
-msgstr ""
+msgstr "बंद करें"
 
 #: app/templates/admin_dashboard.html:157
 msgid "Resolve Report"
@@ -312,12 +312,12 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:162
 msgid "Mark as Resolved"
-msgstr ""
+msgstr "सुलझाई गई समस्याएं"
 
 #: app/templates/admin_dashboard.html:171
 #: app/templates/admin_dashboard.html:176
 msgid "Reject Report"
-msgstr ""
+msgstr "रिपोर्ट सबमिट करें"
 
 #: app/templates/admin_dashboard.html:173
 msgid "Enter rejection reason..."
@@ -325,23 +325,23 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:216 app/templates/status.html:88
 msgid "Report Image"
-msgstr ""
+msgstr "रिपोर्ट इमेज"
 
 #: app/templates/admin_dashboard.html:227 app/templates/submit_report.html:14
 msgid "Category"
-msgstr ""
+msgstr "श्रेणी"
 
 #: app/templates/admin_dashboard.html:230
 msgid "Submitted On"
-msgstr ""
+msgstr "मेरी सबमिट की गई रिपोर्ट"
 
 #: app/templates/admin_dashboard.html:231
 msgid "Description"
-msgstr ""
+msgstr "समस्या का विवरण"
 
 #: app/templates/admin_dashboard.html:232 app/templates/submit_report.html:32
 msgid "Location"
-msgstr ""
+msgstr "स्थान"
 
 #: app/templates/admin_dashboard.html:236
 msgid "Captured Images"
@@ -353,11 +353,11 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:240
 msgid "Voice Notes"
-msgstr ""
+msgstr "वॉयस नोट"
 
 #: app/templates/admin_dashboard.html:241
 msgid "No voice notes uploaded"
-msgstr ""
+msgstr "वॉयस नोट"
 
 #: app/templates/admin_dashboard.html:263
 msgid "Failed to fetch report details"
@@ -365,31 +365,31 @@ msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
-msgstr ""
+msgstr "एडमिन अधिकारी प्रोफ़ाइल"
 
 #: app/templates/admin_profile.html:7
 msgid "Name:"
-msgstr ""
+msgstr "नाम:"
 
 #: app/templates/admin_profile.html:8
 msgid "Phone:"
-msgstr ""
+msgstr "फ़ोन:"
 
 #: app/templates/admin_profile.html:9
 msgid "Role:"
-msgstr ""
+msgstr "भूमिका:"
 
 #: app/templates/admin_profile.html:9
 msgid "Authority / Admin Officer"
-msgstr ""
+msgstr "प्राधिकरण / एडमिन अधिकारी"
 
 #: app/templates/admin_profile.html:10
 msgid "Assigned State:"
-msgstr ""
+msgstr "नियत राज्य:"
 
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
-msgstr ""
+msgstr "नियत जिला:"
 
 #: app/templates/admin_profile.html:12
 msgid "District Coordinates:"
@@ -397,43 +397,43 @@ msgstr ""
 
 #: app/templates/base.html:24 app/templates/base.html:66
 msgid "Dashboard"
-msgstr ""
+msgstr "डैशबोर्ड"
 
 #: app/templates/base.html:25
 msgid "Report Issue"
-msgstr ""
+msgstr "समस्या रिपोर्ट करें"
 
 #: app/templates/base.html:26 app/templates/base.html:68
 msgid "Forum"
-msgstr ""
+msgstr "फोरम"
 
 #: app/templates/base.html:27
 msgid "My Status"
-msgstr ""
+msgstr "मेरी स्थिति"
 
 #: app/templates/base.html:28 app/templates/base.html:70
 msgid "Map"
-msgstr ""
+msgstr "नक्शा"
 
 #: app/templates/base.html:30 app/templates/base.html:71
 msgid "Profile"
-msgstr ""
+msgstr "प्रोफ़ाइल"
 
 #: app/templates/base.html:33
 msgid "Admin Panel"
-msgstr ""
+msgstr "एडमिन पैनल"
 
 #: app/templates/base.html:35 app/templates/base.html:74
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्स"
 
 #: app/templates/base.html:44
 msgid "Login"
-msgstr ""
+msgstr "लॉगिन"
 
 #: app/templates/base.html:46
 msgid "Toggle Light/Dark Mode"
-msgstr ""
+msgstr "लाइट/डार्क मोड बदलें"
 
 #: app/templates/base.html:67
 msgid "Report"
@@ -445,7 +445,7 @@ msgstr ""
 
 #: app/templates/base.html:76
 msgid "Logout"
-msgstr ""
+msgstr "लॉगआउट"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
@@ -461,15 +461,15 @@ msgstr ""
 
 #: app/templates/base.html:128
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
-msgstr ""
+msgstr "नागरिक समस्या रिपोर्टिंग प्रणाली (CIRS)। सर्वाधिकार सुरक्षित।"
 
 #: app/templates/base.html:135
 msgid "Report Chat"
-msgstr ""
+msgstr "रिपोर्ट चैट"
 
 #: app/templates/base.html:142
 msgid "Type a message..."
-msgstr ""
+msgstr "एक संदेश टाइप करें..."
 
 #: app/templates/base.html:302
 msgid "Location still disabled. Please enable GPS in system settings."
@@ -477,123 +477,123 @@ msgstr ""
 
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
-msgstr ""
+msgstr "आपके डैशबोर्ड में आपका स्वागत है"
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr ""
+msgstr "आपके समुदाय में नागरिक समस्याओं की रिपोर्ट करने और उन्हें ट्रैक करने के लिए आपका पोर्टल।"
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
-msgstr ""
+msgstr "नई रिपोर्ट सबमिट करें"
 
 #: app/templates/citizen_dashboard.html:17
 msgid "Trending/Nearby Issues"
-msgstr ""
+msgstr "ट्रेंडिंग/नजदीकी समस्याएं"
 
 #: app/templates/citizen_dashboard.html:18
 msgid "High-priority and trending reports in the portal."
-msgstr ""
+msgstr "पोर्टल में उच्च-प्राथमिकता और ट्रेंडिंग रिपोर्ट।"
 
 #: app/templates/citizen_dashboard.html:30
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: app/templates/citizen_dashboard.html:31
 msgid "Upvote"
-msgstr ""
+msgstr "अपवोट"
 
 #: app/templates/citizen_dashboard.html:36
 msgid "No issues reported yet."
-msgstr ""
+msgstr "अभी तक कोई समस्या रिपोर्ट नहीं की गई है।"
 
 #: app/templates/citizen_dashboard.html:40
 msgid "View All in Public Forum"
-msgstr ""
+msgstr "सार्वजनिक मंच में सभी देखें"
 
 #: app/templates/citizen_dashboard.html:45
 msgid "Quick Links"
-msgstr ""
+msgstr "त्वरित लिंक"
 
 #: app/templates/citizen_dashboard.html:49
 msgid "Track My Reports"
-msgstr ""
+msgstr "मेरी रिपोर्ट ट्रैक करें"
 
 #: app/templates/citizen_dashboard.html:53
 msgid "View Live Map"
-msgstr ""
+msgstr "लाइव मानचित्र देखें"
 
 #: app/templates/citizen_dashboard.html:57
 msgid "Manage Profile"
-msgstr ""
+msgstr "प्रोफ़ाइल प्रबंधित करें"
 
 #: app/templates/citizen_dashboard.html:91
 msgid "Upvoted"
-msgstr ""
+msgstr "अपवोट किया गया"
 
 #: app/templates/index.html:5
 msgid "Welcome to CIRS !"
-msgstr ""
+msgstr "CIRS में आपका स्वागत है!"
 
 #: app/templates/index.html:6
 msgid "--Report today for a better tomorrow"
-msgstr ""
+msgstr "--कल के बेहतर भविष्य के लिए आज रिपोर्ट करें"
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr ""
+msgstr "स्थानीय समस्याओं को मिलकर रिपोर्ट करें, ट्रैक करें और हल करें"
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
-msgstr ""
+msgstr "सुलझाई गई समस्याएं"
 
 #: app/templates/index.html:15
 msgid "Active Users"
-msgstr ""
+msgstr "सक्रिय उपयोगकर्ता"
 
 #: app/templates/index.html:19
 msgid "Cities"
-msgstr ""
+msgstr "शहर"
 
 #: app/templates/index.html:23
 msgid "Get Started Now"
-msgstr ""
+msgstr "अभी शुरू करें"
 
 #: app/templates/index.html:29 app/templates/index.html:51
 msgid "Live Map"
-msgstr ""
+msgstr "लाइव मानचित्र"
 
 #: app/templates/index.html:30
 msgid "Visualize all reported issues across districts in real-time."
-msgstr ""
+msgstr "वास्तविक समय में सभी जिलों में रिपोर्ट की गई समस्याओं को देखें।"
 
 #: app/templates/index.html:42
 msgid "Powerful Features"
-msgstr ""
+msgstr "शक्तिशाली विशेषताएं"
 
 #: app/templates/index.html:46
 msgid "Media Reporting"
-msgstr ""
+msgstr "मीडिया रिपोर्टिंग"
 
 #: app/templates/index.html:47
 msgid "Capture issues with photos and voice notes."
-msgstr ""
+msgstr "फोटो और वॉयस नोट्स के साथ समस्याओं को कैप्चर करें।"
 
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
-msgstr ""
+msgstr "रिपोर्ट की गई समस्याओं को वास्तविक समय में देखें।"
 
 #: app/templates/index.html:56
 msgid "Analytics"
-msgstr ""
+msgstr "विश्लेषण"
 
 #: app/templates/index.html:57
 msgid "Track resolution status and response times."
-msgstr ""
+msgstr "समाधान की स्थिति और प्रतिक्रिया समय को ट्रैक करें।"
 
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
-msgstr ""
+msgstr "लाइव मानचित्र - सामुदायिक समस्याएं"
 
 #: app/templates/live_map.html:8
 msgid "Locate Me"
@@ -601,11 +601,11 @@ msgstr ""
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
-msgstr ""
+msgstr "श्रेणी:"
 
 #: app/templates/live_map.html:71
 msgid "Status:"
-msgstr ""
+msgstr "स्थिति:"
 
 #: app/templates/live_map.html:97
 msgid "You are here"
@@ -613,91 +613,91 @@ msgstr ""
 
 #: app/templates/login.html:5
 msgid "Login / Register"
-msgstr ""
+msgstr "लॉगिन / पंजीकरण"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
-msgstr ""
+msgstr "मोबाइल नंबर"
 
 #: app/templates/login.html:17
 msgid "I am a:"
-msgstr ""
+msgstr "मैं हूँ:"
 
 #: app/templates/login.html:20
 msgid "Citizen"
-msgstr ""
+msgstr "नागरिक"
 
 #: app/templates/login.html:22
 msgid "Officer"
-msgstr ""
+msgstr "अधिकारी"
 
 #: app/templates/login.html:25
 msgid "Send OTP"
-msgstr ""
+msgstr "ओटीपी भेजें"
 
 #: app/templates/login.html:27
 msgid "Demo OTP: 1234"
-msgstr ""
+msgstr "डेमो ओटीपी: 1234"
 
 #: app/templates/login.html:84
 msgid "Please enter 10 digits"
-msgstr ""
+msgstr "कृपया 10 अंक दर्ज करें"
 
 #: app/templates/profile.html:5
 msgid "User Profile"
-msgstr ""
+msgstr "उपयोगकर्ता प्रोफ़ाइल"
 
 #: app/templates/profile.html:9
 msgid "Full Name"
-msgstr ""
+msgstr "पूरा नाम"
 
 #: app/templates/profile.html:10
 msgid "Enter your full name"
-msgstr ""
+msgstr "अपना पूरा नाम दर्ज करें"
 
 #: app/templates/profile.html:15
 msgid "Not Assigned"
-msgstr ""
+msgstr "नियत नहीं"
 
 #: app/templates/profile.html:19
 msgid "Phone Number"
-msgstr ""
+msgstr "फ़ोन नंबर"
 
 #: app/templates/profile.html:21
 msgid "Phone number cannot be changed."
-msgstr ""
+msgstr "फ़ोन नंबर बदला नहीं जा सकता।"
 
 #: app/templates/profile.html:25
 msgid "Address"
-msgstr ""
+msgstr "पता"
 
 #: app/templates/profile.html:26
 msgid "Enter your address"
-msgstr ""
+msgstr "अपना पता दर्ज करें"
 
 #: app/templates/profile.html:31
 msgid "State"
-msgstr ""
+msgstr "राज्य"
 
 #: app/templates/profile.html:33
 msgid "Select State"
-msgstr ""
+msgstr "राज्य चुनें"
 
 #: app/templates/profile.html:37
 msgid "District"
-msgstr ""
+msgstr "जिला"
 
 #: app/templates/profile.html:39 app/templates/profile.html:134
 msgid "Select District"
-msgstr ""
+msgstr "जिला चुनें"
 
 #: app/templates/profile.html:44
 msgid "Update Profile"
-msgstr ""
+msgstr "प्रोफ़ाइल अपडेट करें"
 
 #: app/templates/profile.html:49
 msgid "Account Management"
-msgstr ""
+msgstr "खाता प्रबंधन"
 
 #: app/templates/profile.html:52
 msgid ""
@@ -707,7 +707,7 @@ msgstr ""
 
 #: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
-msgstr ""
+msgstr "खाता हटाने का अनुरोध करें"
 
 #: app/templates/profile.html:58
 msgid ""
@@ -717,67 +717,67 @@ msgstr ""
 
 #: app/templates/profile.html:60
 msgid "Update profile to enable"
-msgstr ""
+msgstr "प्रोफ़ाइल अपडेट करें"
 
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
-msgstr ""
+msgstr "खाता हटाने का अनुरोध अनुमोदन के लिए लंबित है।"
 
 #: app/templates/public_forum.html:5
 msgid "Public Forum"
-msgstr ""
+msgstr "सार्वजनिक मंच"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
-msgstr ""
+msgstr "को पोस्ट किया गया"
 
 #: app/templates/public_forum.html:16
 msgid "by"
-msgstr ""
+msgstr "द्वारा"
 
 #: app/templates/public_forum.html:21
 msgid "Upvotes"
-msgstr ""
+msgstr "अपवोट"
 
 #: app/templates/public_forum.html:24
 msgid "View Location"
-msgstr ""
+msgstr "चिह्नित स्थान देखें"
 
 #: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
-msgstr ""
+msgstr "टिप्पणियाँ"
 
 #: app/templates/public_forum.html:39
 msgid "Add a comment..."
-msgstr ""
+msgstr "एक टिप्पणी जोड़ें..."
 
 #: app/templates/public_forum.html:40
 msgid "Post"
-msgstr ""
+msgstr "पोस्ट करें"
 
 #: app/templates/public_forum.html:51
 msgid "Report Location"
-msgstr ""
+msgstr "रिपोर्ट चैट"
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
-msgstr ""
+msgstr "मेरी सबमिट की गई रिपोर्ट"
 
 #: app/templates/status.html:27
 msgid "No reports found matching the criteria."
-msgstr ""
+msgstr "मानदंडों से मेल खाने वाली कोई रिपोर्ट नहीं मिली।"
 
 #: app/templates/status.html:42
 msgid "Location:"
-msgstr ""
+msgstr "स्थान:"
 
 #: app/templates/status.html:42
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: app/templates/status.html:43
 msgid "Upvotes:"
-msgstr ""
+msgstr "अपवोट:"
 
 #: app/templates/status.html:51
 msgid "Resolution Notes:"
@@ -793,141 +793,141 @@ msgstr ""
 
 #: app/templates/status.html:64
 msgid "View Marked Location"
-msgstr ""
+msgstr "चिह्नित स्थान देखें"
 
 #: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
-msgstr ""
+msgstr "क्या आप वाकई इस रिपोर्ट को फिर से खोलना चाहते हैं?"
 
 #: app/templates/status.html:74
 msgid "Reopen"
-msgstr ""
+msgstr "फिर से खोलें"
 
 #: app/templates/status.html:85
 msgid "Images:"
-msgstr ""
+msgstr "इमेज:"
 
 #: app/templates/status.html:96
 msgid "Voice Note:"
-msgstr ""
+msgstr "वॉयस नोट:"
 
 #: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
-msgstr ""
+msgstr "आपका ब्राउज़र ऑडियो तत्व का समर्थन नहीं करता है।"
 
 #: app/templates/submit_report.html:8
 msgid "Issue Title"
-msgstr ""
+msgstr "समस्या का शीर्षक"
 
 #: app/templates/submit_report.html:9
 msgid "Brief title of the issue"
-msgstr ""
+msgstr "समस्या का संक्षिप्त शीर्षक"
 
 #: app/templates/submit_report.html:16
 msgid "Select Category"
-msgstr ""
+msgstr "श्रेणी चुनें"
 
 #: app/templates/submit_report.html:17
 msgid "Roads & Potholes"
-msgstr ""
+msgstr "सड़कें और गड्ढे"
 
 #: app/templates/submit_report.html:18
 msgid "Water Supply"
-msgstr ""
+msgstr "पानी की आपूर्ति"
 
 #: app/templates/submit_report.html:19
 msgid "Electricity"
-msgstr ""
+msgstr "बिजली"
 
 #: app/templates/submit_report.html:20
 msgid "Sanitation & Garbage"
-msgstr ""
+msgstr "स्वच्छता और कचरा"
 
 #: app/templates/submit_report.html:21
 msgid "Other"
-msgstr ""
+msgstr "अन्य"
 
 #: app/templates/submit_report.html:27
 msgid "Issue Description"
-msgstr ""
+msgstr "समस्या का विवरण"
 
 #: app/templates/submit_report.html:28
 msgid "Provide details about the issue..."
-msgstr ""
+msgstr "समस्या के बारे में विवरण प्रदान करें..."
 
 #: app/templates/submit_report.html:33
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr ""
+msgstr "स्थान स्वचालित रूप से प्राप्त किया जाएगा, लेकिन आप इसे मानचित्र पर समायोजित कर सकते हैं।"
 
 #: app/templates/submit_report.html:43
 msgid "Upload Images (Max 3, Max 5MB each)"
-msgstr ""
+msgstr "इमेज अपलोड करें (अधिकतम 3, प्रत्येक अधिकतम 5MB)"
 
 #: app/templates/submit_report.html:45
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr ""
+msgstr "केवल किसी भी जियो-लोकेशन आधारित कैमरे द्वारा कैप्चर की गई इमेज ही अपलोड करने के लिए स्वीकार्य हैं!"
 
 #: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
-msgstr ""
+msgstr "लाइव जियो-कैमरा"
 
 #: app/templates/submit_report.html:50
 msgid "Upload Files"
-msgstr ""
+msgstr "फाइलें अपलोड करें"
 
 #: app/templates/submit_report.html:59
 msgid "Capture Photo"
-msgstr ""
+msgstr "फोटो कैप्चर करें"
 
 #: app/templates/submit_report.html:60
 msgid "Switch"
-msgstr ""
+msgstr "बदलें"
 
 #: app/templates/submit_report.html:61
 msgid "Close Camera"
-msgstr ""
+msgstr "कैमरा बंद करें"
 
 #: app/templates/submit_report.html:72
 msgid "Voice Note"
-msgstr ""
+msgstr "वॉयस नोट"
 
 #: app/templates/submit_report.html:74
 msgid "Record"
-msgstr ""
+msgstr "रिकॉर्ड करें"
 
 #: app/templates/submit_report.html:75
 msgid "Stop"
-msgstr ""
+msgstr "रोकें"
 
 #: app/templates/submit_report.html:78
 msgid "OR upload file"
-msgstr ""
+msgstr "या फ़ाइल अपलोड करें"
 
 #: app/templates/submit_report.html:82
 msgid "Remove"
-msgstr ""
+msgstr "हटाएं"
 
 #: app/templates/submit_report.html:86
 msgid "Submit Report"
-msgstr ""
+msgstr "रिपोर्ट सबमिट करें"
 
 #: app/templates/submit_report.html:196
 msgid "File"
-msgstr ""
+msgstr "फ़ाइल"
 
 #: app/templates/submit_report.html:196
 msgid "exceeds 5MB limit"
-msgstr ""
+msgstr "5MB की सीमा से अधिक है"
 
 #: app/templates/submit_report.html:217 app/templates/submit_report.html:257
 msgid "Maximum 3 images reached"
-msgstr ""
+msgstr "अधिकतम 3 इमेज पूरी हो गईं"
 
 #: app/templates/submit_report.html:241
 msgid "Camera access denied or not available"
-msgstr ""
+msgstr "कैमरा एक्सेस अस्वीकार कर दिया गया या उपलब्ध नहीं है"
 
 #: app/templates/submit_report.html:297
 msgid "District assignment pending..."
@@ -939,35 +939,35 @@ msgstr ""
 
 #: app/templates/submit_report.html:325
 msgid "Please upload or capture at least one image of the issue."
-msgstr ""
+msgstr "कृपया समस्या की कम से कम एक इमेज अपलोड करें या कैप्चर करें।"
 
 #: app/templates/submit_report.html:364
 msgid "Recording..."
-msgstr ""
+msgstr "रिकॉर्डिंग हो रही है..."
 
 #: app/templates/submit_report.html:379
 msgid "Microphone access denied"
-msgstr ""
+msgstr "माइक्रोफोन एक्सेस अस्वीकार कर दिया गया"
 
 #: app/templates/verify_otp.html:5
 msgid "Verify OTP"
-msgstr ""
+msgstr "ओटीपी सत्यापित करें"
 
 #: app/templates/verify_otp.html:6
 msgid "Sent to:"
-msgstr ""
+msgstr "को भेजा गया:"
 
 #: app/templates/verify_otp.html:9
 msgid "Enter 4-Digit OTP"
-msgstr ""
+msgstr "4-अंकीय ओटीपी दर्ज करें"
 
 #: app/templates/verify_otp.html:17
 msgid "Verify & Login"
-msgstr ""
+msgstr "सत्यापित करें और लॉगिन करें"
 
 #: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
-msgstr ""
+msgstr "कृपया 4 अंक दर्ज करें"
 
 #~ msgid "Acknowledged"
 #~ msgstr "स्वीकृत"

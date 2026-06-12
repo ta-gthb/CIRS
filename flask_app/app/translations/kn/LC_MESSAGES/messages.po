@@ -20,27 +20,27 @@ msgstr ""
 
 #: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
-msgstr ""
+msgstr "ಅನಧಿಕೃತ"
 
 #: app/routes/admin.py:103
 msgid "Report approved."
-msgstr ""
+msgstr "ವರದಿ ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
 #: app/routes/admin.py:115
 msgid "Report resolved."
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಪರಿಹರಿಸಲಾಗಿದೆ."
 
 #: app/routes/admin.py:129
 msgid "Report rejected."
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲಾಗಿದೆ."
 
 #: app/routes/admin.py:146
 msgid "User deletion approved. Pending reports removed."
-msgstr ""
+msgstr "ಬಳಕೆದಾರರ ಅಳಿಸುವಿಕೆಯನ್ನು ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
 #: app/routes/admin.py:155
 msgid "User deletion request rejected."
-msgstr ""
+msgstr "ಬಳಕೆದಾರರ ಅಳಿಸುವಿಕೆಯನ್ನು ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
 #: app/routes/auth.py:21
 #, python-format
@@ -51,24 +51,24 @@ msgstr ""
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
-msgstr ""
+msgstr "ಅಧಿಕಾರಿಯನ್ನು ನೋಂದಾಯಿಸಲಾಗಿಲ್ಲ. ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ."
 
 #: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
-msgstr ""
+msgstr "ಸಂಖ್ಯೆಯು %(role)s ಆಗಿ ನೋಂದಾಯಿಸಲ್ಪಟ್ಟಿದೆ. ಸರಿಯಾದ ಪಾತ್ರವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
 
 #: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
-msgstr ""
+msgstr "ಖಾತೆಯು ನಿಷ್ಕ್ರಿಯವಾಗಿದೆ ಅಥವಾ ಅಳಿಸಲ್ಪಟ್ಟಿದೆ."
 
 #: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
-msgstr ""
+msgstr "ಅಮಾನ್ಯ ಅಥವಾ ಅವಧಿ ಮೀರಿದ OTP."
 
 #: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
-msgstr ""
+msgstr "ಪ್ರೊಫೈಲ್ ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರಿಸಲ್ಪಟ್ಟಿದೆ!"
 
 #: app/routes/citizen.py:96
 msgid "Location is required. Please enable GPS and allow location access."
@@ -78,51 +78,51 @@ msgstr ""
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr ""
+msgstr "ಈ ಸ್ಥಳದಲ್ಲಿ ಈಗಾಗಲೇ ಇದೇ ರೀತಿಯ ವರದಿ ಇದೆ. ನಿಮ್ಮ ಅಪ್‌ವೋಟ್ ಅನ್ನು ಅದಕ್ಕೆ ಸೇರಿಸಲಾಗಿದೆ."
 
 #: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr ""
+msgstr "ಈಗಾಗಲೇ ಇದೇ ರೀತಿಯ ವರದಿ ಇದೆ ಮತ್ತು ನೀವು ಅದಕ್ಕೆ ಈಗಾಗಲೇ ಅಪ್‌ವೋಟ್ ಮಾಡಿದ್ದೀರಿ."
 
 #: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
-msgstr ""
+msgstr "ಈ ಸ್ಥಳದಲ್ಲಿ ನೀವು ಈಗಾಗಲೇ ಇದೇ ರೀತಿಯ ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿದ್ದೀರಿ."
 
 #: app/routes/citizen.py:191
 msgid "You can only upload up to 3 images."
-msgstr ""
+msgstr "ನೀವು ಕೇವಲ 3 ಚಿತ್ರಗಳನ್ನು ಮಾತ್ರ ಅಪ್‌ಲೋಡ್ ಮಾಡಬಹುದು."
 
 #: app/routes/citizen.py:208
 msgid "Report submitted successfully!"
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ!"
 
 #: app/routes/citizen.py:219
 msgid "You cannot upvote your own report."
-msgstr ""
+msgstr "ನಿಮ್ಮ ಸ್ವಂತ ವರದಿಗೆ ನೀವು ಅಪ್‌ವೋಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
 #: app/routes/citizen.py:223
 msgid "Already upvoted"
-msgstr ""
+msgstr "ಈಗಾಗಲೇ ಅಪ್‌ವೋಟ್ ಮಾಡಲಾಗಿದೆ"
 
 #: app/routes/citizen.py:242
 msgid "Comment added."
-msgstr ""
+msgstr "ಕಾಮೆಂಟ್ ಸೇರಿಸಲಾಗಿದೆ."
 
 #: app/routes/citizen.py:250
 msgid "Unauthorized."
-msgstr ""
+msgstr "ಅನಧಿಕೃತ."
 
 #: app/routes/citizen.py:257
 msgid "Report cannot be reopened after 7 days of resolution."
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
 #: app/routes/citizen.py:262
 msgid "Report reopened."
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲಾಗಿದೆ."
 
 #: app/routes/citizen.py:264
 msgid "Report cannot be reopened."
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
 #: app/routes/citizen.py:272
 msgid ""
@@ -134,11 +134,11 @@ msgstr ""
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
-msgstr ""
+msgstr "ಅಳಿಸುವಿಕೆ ವಿನಂತಿಯನ್ನು ನಿಮ್ಮ ನಿಯೋಜಿತ ಅಧಿಕಾರಿಗೆ ಸಲ್ಲಿಸಲಾಗಿದೆ. ಅಡ್ಮಿನ್ ಅಧಿಕಾರಿಯ ಅನುಮೋದನೆಯ ನಂತರ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ।"
 
 #: app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
-msgstr ""
+msgstr "ನಿರ್ವಾಹಕ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
@@ -146,56 +146,56 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:6
 msgid "Assigned to:"
-msgstr ""
+msgstr "ನಿಯೋಜಿತ ರಾಜ್ಯ:"
 
 #: app/templates/admin_dashboard.html:12 app/templates/live_map.html:70
 #: app/templates/status.html:41
 msgid "Priority:"
-msgstr ""
+msgstr "ಆದ್ಯತೆ:"
 
 #: app/templates/admin_dashboard.html:14
 msgid "All Priorities"
-msgstr ""
+msgstr "ಆದ್ಯತೆ"
 
 #: app/templates/admin_dashboard.html:15 app/templates/index.html:34
 #: app/templates/live_map.html:14
 msgid "Critical"
-msgstr ""
+msgstr "ನಿರ್ಣಾಯಕ"
 
 #: app/templates/admin_dashboard.html:16 app/templates/index.html:35
 #: app/templates/live_map.html:15
 msgid "High"
-msgstr ""
+msgstr "ಹೆಚ್ಚು"
 
 #: app/templates/admin_dashboard.html:17 app/templates/index.html:36
 #: app/templates/live_map.html:16
 msgid "Medium"
-msgstr ""
+msgstr "ಮಧ್ಯಮ"
 
 #: app/templates/admin_dashboard.html:18 app/templates/index.html:37
 #: app/templates/live_map.html:17
 msgid "Low"
-msgstr ""
+msgstr "ಕಡಿಮೆ"
 
 #: app/templates/admin_dashboard.html:22 app/templates/status.html:11
 msgid "From:"
-msgstr ""
+msgstr "ಇಂದ:"
 
 #: app/templates/admin_dashboard.html:26 app/templates/status.html:15
 msgid "To:"
-msgstr ""
+msgstr "ವರೆಗೆ:"
 
 #: app/templates/admin_dashboard.html:30 app/templates/status.html:19
 msgid "Filter"
-msgstr ""
+msgstr "ಫಿಲ್ಟರ್"
 
 #: app/templates/admin_dashboard.html:31 app/templates/status.html:20
 msgid "Clear"
-msgstr ""
+msgstr "ತೆರವುಗೊಳಿಸಿ"
 
 #: app/templates/admin_dashboard.html:39
 msgid "Total Reports"
-msgstr ""
+msgstr "ವರದಿಗಳು"
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
@@ -203,42 +203,42 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:47
 msgid "Approved"
-msgstr ""
+msgstr "ವರದಿ ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
 #: app/templates/admin_dashboard.html:51
 msgid "Resolved"
-msgstr ""
+msgstr "ತೆಗೆದುಹಾಕಿ"
 
 #: app/templates/admin_dashboard.html:57
 msgid "Manage Reports"
-msgstr ""
+msgstr "ವರದಿಗಳು"
 
 #: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:226
 msgid "Title"
-msgstr ""
+msgstr "ಫೈಲ್"
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:110
 #: app/templates/profile.html:14
 msgid "Citizen ID"
-msgstr ""
+msgstr "ನಾಗರಿಕ ಐಡಿ"
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:228
 #: app/templates/live_map.html:13
 msgid "Priority"
-msgstr ""
+msgstr "ಆದ್ಯತೆ"
 
 #: app/templates/admin_dashboard.html:66 app/templates/admin_dashboard.html:229
 #: app/templates/base.html:69
 msgid "Status"
-msgstr ""
+msgstr "ಸ್ಥಿತಿ"
 
 #: app/templates/admin_dashboard.html:67
 msgid "Date"
-msgstr ""
+msgstr "ರಾಜ್ಯ"
 
 #: app/templates/admin_dashboard.html:68 app/templates/admin_dashboard.html:112
 msgid "Actions"
-msgstr ""
+msgstr "ಸ್ಥಳ"
 
 #: app/templates/admin_dashboard.html:75
 msgid "N/A"
@@ -250,7 +250,7 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:125
 msgid "Approve"
-msgstr ""
+msgstr "ತೆಗೆದುಹಾಕಿ"
 
 #: app/templates/admin_dashboard.html:83 app/templates/admin_dashboard.html:129
 msgid "Reject"
@@ -258,44 +258,44 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:86
 msgid "Resolve"
-msgstr ""
+msgstr "ತೆಗೆದುಹಾಕಿ"
 
 #: app/templates/admin_dashboard.html:89 app/templates/status.html:68
 msgid "Message"
-msgstr ""
+msgstr "ಸಂದೇಶ"
 
 #: app/templates/admin_dashboard.html:98
 msgid "No reports found matching filters."
-msgstr ""
+msgstr "ಮಾನದಂಡಗಳಿಗೆ ಹೊಂದಿಕೆಯಾಗುವ ಯಾವುದೇ ವರದಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
 
 #: app/templates/admin_dashboard.html:104
 msgid "Pending Account Deletion Requests"
-msgstr ""
+msgstr "ಖಾತೆ ಅಳಿಸುವಿಕೆಯ ವಿನಂತಿಯು ಅನುಮೋದನೆಗಾಗಿ ಬಾಕಿ ಉಳಿದಿದೆ."
 
 #: app/templates/admin_dashboard.html:109
 msgid "Name"
-msgstr ""
+msgstr "ಹೆಸರು:"
 
 #: app/templates/admin_dashboard.html:111
 msgid "Phone"
-msgstr ""
+msgstr "ಫೋನ್:"
 
 #: app/templates/admin_dashboard.html:118 app/templates/public_forum.html:16
 #: app/templates/public_forum.html:33
 msgid "Anonymous"
-msgstr ""
+msgstr "ಅನಾಮಧೇಯ"
 
 #: app/templates/admin_dashboard.html:124
 msgid "Are you sure you want to approve this deletion? This action is permanent."
-msgstr ""
+msgstr "ನೀವು ಖಂಡಿತವಾಗಿಯೂ ಈ ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಬಯಸುವಿರಾ?"
 
 #: app/templates/admin_dashboard.html:145
 msgid "Report Details"
-msgstr ""
+msgstr "ವರದಿಗಳು"
 
 #: app/templates/admin_dashboard.html:149 app/templates/public_forum.html:54
 msgid "Close"
-msgstr ""
+msgstr "ಮುಚ್ಚು"
 
 #: app/templates/admin_dashboard.html:157
 msgid "Resolve Report"
@@ -312,12 +312,12 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:162
 msgid "Mark as Resolved"
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸಲಾಗಿದೆ"
 
 #: app/templates/admin_dashboard.html:171
 #: app/templates/admin_dashboard.html:176
 msgid "Reject Report"
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ"
 
 #: app/templates/admin_dashboard.html:173
 msgid "Enter rejection reason..."
@@ -325,23 +325,23 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:216 app/templates/status.html:88
 msgid "Report Image"
-msgstr ""
+msgstr "ವರದಿ ಚಿತ್ರ"
 
 #: app/templates/admin_dashboard.html:227 app/templates/submit_report.html:14
 msgid "Category"
-msgstr ""
+msgstr "ವರ್ಗ"
 
 #: app/templates/admin_dashboard.html:230
 msgid "Submitted On"
-msgstr ""
+msgstr "ನಾನು ಸಲ್ಲಿಸಿದ ವರದಿಗಳು"
 
 #: app/templates/admin_dashboard.html:231
 msgid "Description"
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಯ ವಿವರಣೆ"
 
 #: app/templates/admin_dashboard.html:232 app/templates/submit_report.html:32
 msgid "Location"
-msgstr ""
+msgstr "ಸ್ಥಳ"
 
 #: app/templates/admin_dashboard.html:236
 msgid "Captured Images"
@@ -353,11 +353,11 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:240
 msgid "Voice Notes"
-msgstr ""
+msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ"
 
 #: app/templates/admin_dashboard.html:241
 msgid "No voice notes uploaded"
-msgstr ""
+msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ"
 
 #: app/templates/admin_dashboard.html:263
 msgid "Failed to fetch report details"
@@ -365,31 +365,31 @@ msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
-msgstr ""
+msgstr "ನಿರ್ವಾಹಕ ಅಧಿಕಾರಿ ಪ್ರೊಫೈಲ್"
 
 #: app/templates/admin_profile.html:7
 msgid "Name:"
-msgstr ""
+msgstr "ಹೆಸರು:"
 
 #: app/templates/admin_profile.html:8
 msgid "Phone:"
-msgstr ""
+msgstr "ಫೋನ್:"
 
 #: app/templates/admin_profile.html:9
 msgid "Role:"
-msgstr ""
+msgstr "ಪಾತ್ರ:"
 
 #: app/templates/admin_profile.html:9
 msgid "Authority / Admin Officer"
-msgstr ""
+msgstr "ಪ್ರಾಧಿಕಾರ / ನಿರ್ವಾಹಕ ಅಧಿಕಾರಿ"
 
 #: app/templates/admin_profile.html:10
 msgid "Assigned State:"
-msgstr ""
+msgstr "ನಿಯೋಜಿತ ರಾಜ್ಯ:"
 
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
-msgstr ""
+msgstr "ನಿಯೋಜಿತ ಜಿಲ್ಲೆ:"
 
 #: app/templates/admin_profile.html:12
 msgid "District Coordinates:"
@@ -397,43 +397,43 @@ msgstr ""
 
 #: app/templates/base.html:24 app/templates/base.html:66
 msgid "Dashboard"
-msgstr ""
+msgstr "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
 
 #: app/templates/base.html:25
 msgid "Report Issue"
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಯನ್ನು ವರದಿ ಮಾಡಿ"
 
 #: app/templates/base.html:26 app/templates/base.html:68
 msgid "Forum"
-msgstr ""
+msgstr "ಫೋರಂ"
 
 #: app/templates/base.html:27
 msgid "My Status"
-msgstr ""
+msgstr "ನನ್ನ ಸ್ಥಿತಿ"
 
 #: app/templates/base.html:28 app/templates/base.html:70
 msgid "Map"
-msgstr ""
+msgstr "ನಕ್ಷೆ"
 
 #: app/templates/base.html:30 app/templates/base.html:71
 msgid "Profile"
-msgstr ""
+msgstr "ಪ್ರೊಫೈಲ್"
 
 #: app/templates/base.html:33
 msgid "Admin Panel"
-msgstr ""
+msgstr "ಅಡ್ಮಿನ್ ಪ್ಯಾನಲ್"
 
 #: app/templates/base.html:35 app/templates/base.html:74
 msgid "Settings"
-msgstr ""
+msgstr "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
 
 #: app/templates/base.html:44
 msgid "Login"
-msgstr ""
+msgstr "ಲಾಗಿನ್"
 
 #: app/templates/base.html:46
 msgid "Toggle Light/Dark Mode"
-msgstr ""
+msgstr "ಲೈಟ್/ಡಾರ್ಕ್ ಮೋಡ್ ಬದಲಿಸಿ"
 
 #: app/templates/base.html:67
 msgid "Report"
@@ -445,7 +445,7 @@ msgstr ""
 
 #: app/templates/base.html:76
 msgid "Logout"
-msgstr ""
+msgstr "ಲೋಗೌಟ್"
 
 #: app/templates/base.html:108
 msgid "Location services are disabled. Please enable GPS to perform actions."
@@ -461,15 +461,15 @@ msgstr ""
 
 #: app/templates/base.html:128
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
-msgstr ""
+msgstr "ನಾಗರಿಕ ಸಮಸ್ಯೆ ವರದಿ ಮಾಡುವ ವ್ಯವಸ್ಥೆ (CIRS). ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
 
 #: app/templates/base.html:135
 msgid "Report Chat"
-msgstr ""
+msgstr "ವರದಿ ಚಾಟ್"
 
 #: app/templates/base.html:142
 msgid "Type a message..."
-msgstr ""
+msgstr "ಸಂದೇಶವನ್ನು ಟೈಪ್ ಮಾಡಿ..."
 
 #: app/templates/base.html:302
 msgid "Location still disabled. Please enable GPS in system settings."
@@ -477,123 +477,123 @@ msgstr ""
 
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
-msgstr ""
+msgstr "ನಿಮ್ಮ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗೆ ಸ್ವಾಗತ"
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr ""
+msgstr "ನಿಮ್ಮ ಸಮುದಾಯದಲ್ಲಿನ ನಾಗರಿಕ ಸಮಸ್ಯೆಗಳನ್ನು ವರದಿ ಮಾಡಲು ಮತ್ತು ಟ್ರ್ಯಾಕ್ ಮಾಡಲು ನಿಮ್ಮ ಪೋರ್ಟಲ್."
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
-msgstr ""
+msgstr "ಹೊಸ ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ"
 
 #: app/templates/citizen_dashboard.html:17
 msgid "Trending/Nearby Issues"
-msgstr ""
+msgstr "ಟ್ರೆಂಡಿಂಗ್/ಹತ್ತಿರದ ಸಮಸ್ಯೆಗಳು"
 
 #: app/templates/citizen_dashboard.html:18
 msgid "High-priority and trending reports in the portal."
-msgstr ""
+msgstr "ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಹೆಚ್ಚಿನ ಆದ್ಯತೆಯ ಮತ್ತು ಟ್ರೆಂಡಿಂಗ್ ವರದಿಗಳು."
 
 #: app/templates/citizen_dashboard.html:30
 msgid "General"
-msgstr ""
+msgstr "ಸಾಮಾನ್ಯ"
 
 #: app/templates/citizen_dashboard.html:31
 msgid "Upvote"
-msgstr ""
+msgstr "ಅಪ್‌ವೋಟ್"
 
 #: app/templates/citizen_dashboard.html:36
 msgid "No issues reported yet."
-msgstr ""
+msgstr "ಇನ್ನೂ ಯಾವುದೇ ಸಮಸ್ಯೆಗಳು ವರದಿಯಾಗಿಲ್ಲ."
 
 #: app/templates/citizen_dashboard.html:40
 msgid "View All in Public Forum"
-msgstr ""
+msgstr "ಸಾರ್ವಜನಿಕ ವೇದಿಕೆಯಲ್ಲಿ ಎಲ್ಲವನ್ನೂ ನೋಡಿ"
 
 #: app/templates/citizen_dashboard.html:45
 msgid "Quick Links"
-msgstr ""
+msgstr "ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು"
 
 #: app/templates/citizen_dashboard.html:49
 msgid "Track My Reports"
-msgstr ""
+msgstr "ನನ್ನ ವರದಿಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ"
 
 #: app/templates/citizen_dashboard.html:53
 msgid "View Live Map"
-msgstr ""
+msgstr "ಲೈವ್ ಮ್ಯಾಪ್ ನೋಡಿ"
 
 #: app/templates/citizen_dashboard.html:57
 msgid "Manage Profile"
-msgstr ""
+msgstr "ಪ್ರೊಫೈಲ್ ನಿರ್ವಹಿಸಿ"
 
 #: app/templates/citizen_dashboard.html:91
 msgid "Upvoted"
-msgstr ""
+msgstr "ಅಪ್‌ವೋಟ್ ಮಾಡಲಾಗಿದೆ"
 
 #: app/templates/index.html:5
 msgid "Welcome to CIRS !"
-msgstr ""
+msgstr "CIRS ಗೆ ಸ್ವಾಗತ!"
 
 #: app/templates/index.html:6
 msgid "--Report today for a better tomorrow"
-msgstr ""
+msgstr "--ಉತ್ತಮ ನಾಳೆಗಾಗಿ ಇಂದು ವರದಿ ಮಾಡಿ"
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr ""
+msgstr "ಸ್ಥಳೀಯ ಸಮಸ್ಯೆಗಳನ್ನು ಒಟ್ಟಾಗಿ ವರದಿ ಮಾಡಿ, ಟ್ರ್ಯಾಕ್ ಮಾಡಿ ಮತ್ತು ಪರಿಹರಿಸಿ"
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸಲಾಗಿದೆ"
 
 #: app/templates/index.html:15
 msgid "Active Users"
-msgstr ""
+msgstr "ಸಕ್ರಿಯ ಬಳಕೆದಾರರು"
 
 #: app/templates/index.html:19
 msgid "Cities"
-msgstr ""
+msgstr "ನಗರಗಳು"
 
 #: app/templates/index.html:23
 msgid "Get Started Now"
-msgstr ""
+msgstr "ಈಗಲೇ ಪ್ರಾರಂಭಿಸಿ"
 
 #: app/templates/index.html:29 app/templates/index.html:51
 msgid "Live Map"
-msgstr ""
+msgstr "ಲೈವ್ ಮ್ಯಾಪ್ ನೋಡಿ"
 
 #: app/templates/index.html:30
 msgid "Visualize all reported issues across districts in real-time."
-msgstr ""
+msgstr "ವರದಿಯಾದ ಸಮಸ್ಯೆಗಳನ್ನು ನೈಜ ಸಮಯದಲ್ಲಿ ವೀಕ್ಷಿಸಿ."
 
 #: app/templates/index.html:42
 msgid "Powerful Features"
-msgstr ""
+msgstr "ಶಕ್ತಿಯುತ ವೈಶಿಷ್ಟ್ಯಗಳು"
 
 #: app/templates/index.html:46
 msgid "Media Reporting"
-msgstr ""
+msgstr "ಮಾಧ್ಯಮ ವರದಿ"
 
 #: app/templates/index.html:47
 msgid "Capture issues with photos and voice notes."
-msgstr ""
+msgstr "ಫೋಟೋಗಳು ಮತ್ತು ಧ್ವನಿ ಟಿಪ್ಪಣಿಗಳೊಂದಿಗೆ ಸಮಸ್ಯೆಗಳನ್ನು ಸೆರೆಹಿಡಿಯಿರಿ."
 
 #: app/templates/index.html:52
 msgid "Visualize reported issues in real-time."
-msgstr ""
+msgstr "ವರದಿಯಾದ ಸಮಸ್ಯೆಗಳನ್ನು ನೈಜ ಸಮಯದಲ್ಲಿ ವೀಕ್ಷಿಸಿ."
 
 #: app/templates/index.html:56
 msgid "Analytics"
-msgstr ""
+msgstr "ಅನಾಲಿಟಿಕ್ಸ್"
 
 #: app/templates/index.html:57
 msgid "Track resolution status and response times."
-msgstr ""
+msgstr "ಪರಿಹಾರದ ಸ್ಥಿತಿ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ."
 
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
-msgstr ""
+msgstr "ಲೈವ್ ಮ್ಯಾಪ್ - ಸಮುದಾಯ ಸಮಸ್ಯೆಗಳು"
 
 #: app/templates/live_map.html:8
 msgid "Locate Me"
@@ -601,11 +601,11 @@ msgstr ""
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
-msgstr ""
+msgstr "ವರ್ಗ:"
 
 #: app/templates/live_map.html:71
 msgid "Status:"
-msgstr ""
+msgstr "ಸ್ಥಿತಿ:"
 
 #: app/templates/live_map.html:97
 msgid "You are here"
@@ -613,91 +613,91 @@ msgstr ""
 
 #: app/templates/login.html:5
 msgid "Login / Register"
-msgstr ""
+msgstr "ಲಾಗಿನ್ / ನೋಂದಣಿ"
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
-msgstr ""
+msgstr "ಮೊಬೈಲ್ ಸಂಖ್ಯೆ"
 
 #: app/templates/login.html:17
 msgid "I am a:"
-msgstr ""
+msgstr "ನಾನೊಬ್ಬ:"
 
 #: app/templates/login.html:20
 msgid "Citizen"
-msgstr ""
+msgstr "ನಾಗರಿಕ"
 
 #: app/templates/login.html:22
 msgid "Officer"
-msgstr ""
+msgstr "ಅಧಿಕಾರಿ"
 
 #: app/templates/login.html:25
 msgid "Send OTP"
-msgstr ""
+msgstr "OTP ಕಳುಹಿಸಿ"
 
 #: app/templates/login.html:27
 msgid "Demo OTP: 1234"
-msgstr ""
+msgstr "ಡೆಮೊ OTP: 1234"
 
 #: app/templates/login.html:84
 msgid "Please enter 10 digits"
-msgstr ""
+msgstr "ದಯವಿಟ್ಟು 10 ಅಂಕಿಗಳನ್ನು ನಮೂದಿಸಿ"
 
 #: app/templates/profile.html:5
 msgid "User Profile"
-msgstr ""
+msgstr "ಬಳಕೆದಾರ ಪ್ರೊಫೈಲ್"
 
 #: app/templates/profile.html:9
 msgid "Full Name"
-msgstr ""
+msgstr "ಪೂರ್ಣ ಹೆಸರು"
 
 #: app/templates/profile.html:10
 msgid "Enter your full name"
-msgstr ""
+msgstr "ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
 
 #: app/templates/profile.html:15
 msgid "Not Assigned"
-msgstr ""
+msgstr "ನಿಯೋಜಿಸಲಾಗಿಲ್ಲ"
 
 #: app/templates/profile.html:19
 msgid "Phone Number"
-msgstr ""
+msgstr "ಫೋನ್ ಸಂಖ್ಯೆ"
 
 #: app/templates/profile.html:21
 msgid "Phone number cannot be changed."
-msgstr ""
+msgstr "ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
 #: app/templates/profile.html:25
 msgid "Address"
-msgstr ""
+msgstr "ವಿಳಾಸ"
 
 #: app/templates/profile.html:26
 msgid "Enter your address"
-msgstr ""
+msgstr "ನಿಮ್ಮ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ"
 
 #: app/templates/profile.html:31
 msgid "State"
-msgstr ""
+msgstr "ರಾಜ್ಯ"
 
 #: app/templates/profile.html:33
 msgid "Select State"
-msgstr ""
+msgstr "ರಾಜ್ಯವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
 #: app/templates/profile.html:37
 msgid "District"
-msgstr ""
+msgstr "ಜಿಲ್ಲೆ"
 
 #: app/templates/profile.html:39 app/templates/profile.html:134
 msgid "Select District"
-msgstr ""
+msgstr "ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
 #: app/templates/profile.html:44
 msgid "Update Profile"
-msgstr ""
+msgstr "ಪ್ರೊಫೈಲ್ ನವೀಕರಿಸಿ"
 
 #: app/templates/profile.html:49
 msgid "Account Management"
-msgstr ""
+msgstr "ಖಾತೆ ನಿರ್ವಹಣೆ"
 
 #: app/templates/profile.html:52
 msgid ""
@@ -707,7 +707,7 @@ msgstr ""
 
 #: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
-msgstr ""
+msgstr "ಖಾತೆ ಅಳಿಸುವಿಕೆಗೆ ವಿನಂತಿಸಿ"
 
 #: app/templates/profile.html:58
 msgid ""
@@ -717,67 +717,67 @@ msgstr ""
 
 #: app/templates/profile.html:60
 msgid "Update profile to enable"
-msgstr ""
+msgstr "ಪ್ರೊಫೈಲ್ ನವೀಕರಿಸಿ"
 
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
-msgstr ""
+msgstr "ಖಾತೆ ಅಳಿಸುವಿಕೆಯ ವಿನಂತಿಯು ಅನುಮೋದನೆಗಾಗಿ ಬಾಕಿ ಉಳಿದಿದೆ."
 
 #: app/templates/public_forum.html:5
 msgid "Public Forum"
-msgstr ""
+msgstr "ಸಾರ್ವಜನಿಕ ವೇದಿಕೆ"
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
-msgstr ""
+msgstr "ರಂದು ಪೋಸ್ಟ್ ಮಾಡಲಾಗಿದೆ"
 
 #: app/templates/public_forum.html:16
 msgid "by"
-msgstr ""
+msgstr "ಇವರಿಂದ"
 
 #: app/templates/public_forum.html:21
 msgid "Upvotes"
-msgstr ""
+msgstr "ಅಪ್‌ವೋಟ್‌ಗಳು"
 
 #: app/templates/public_forum.html:24
 msgid "View Location"
-msgstr ""
+msgstr "ಗುರುತಿಸಲಾದ ಸ್ಥಳವನ್ನು ನೋಡಿ"
 
 #: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
-msgstr ""
+msgstr "ಕಾಮೆಂಟ್‌ಗಳು"
 
 #: app/templates/public_forum.html:39
 msgid "Add a comment..."
-msgstr ""
+msgstr "ಒಂದು ಕಾಮೆಂಟ್ ಸೇರಿಸಿ..."
 
 #: app/templates/public_forum.html:40
 msgid "Post"
-msgstr ""
+msgstr "ಪೋಸ್ಟ್"
 
 #: app/templates/public_forum.html:51
 msgid "Report Location"
-msgstr ""
+msgstr "ವರದಿ ಚಾಟ್"
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
-msgstr ""
+msgstr "ನಾನು ಸಲ್ಲಿಸಿದ ವರದಿಗಳು"
 
 #: app/templates/status.html:27
 msgid "No reports found matching the criteria."
-msgstr ""
+msgstr "ಮಾನದಂಡಗಳಿಗೆ ಹೊಂದಿಕೆಯಾಗುವ ಯಾವುದೇ ವರದಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
 
 #: app/templates/status.html:42
 msgid "Location:"
-msgstr ""
+msgstr "ಸ್ಥಳ:"
 
 #: app/templates/status.html:42
 msgid "Unknown"
-msgstr ""
+msgstr "ಅಜ್ಞಾತ"
 
 #: app/templates/status.html:43
 msgid "Upvotes:"
-msgstr ""
+msgstr "ಅಪ್‌ವೋಟ್‌ಗಳು:"
 
 #: app/templates/status.html:51
 msgid "Resolution Notes:"
@@ -793,75 +793,75 @@ msgstr ""
 
 #: app/templates/status.html:64
 msgid "View Marked Location"
-msgstr ""
+msgstr "ಗುರುತಿಸಲಾದ ಸ್ಥಳವನ್ನು ನೋಡಿ"
 
 #: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
-msgstr ""
+msgstr "ನೀವು ಖಂಡಿತವಾಗಿಯೂ ಈ ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಬಯಸುವಿರಾ?"
 
 #: app/templates/status.html:74
 msgid "Reopen"
-msgstr ""
+msgstr "ಮತ್ತೆ ತೆರೆಯಿರಿ"
 
 #: app/templates/status.html:85
 msgid "Images:"
-msgstr ""
+msgstr "ಚಿತ್ರಗಳು:"
 
 #: app/templates/status.html:96
 msgid "Voice Note:"
-msgstr ""
+msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ:"
 
 #: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
-msgstr ""
+msgstr "ನಿಮ್ಮ ಬ್ರೌಸರ್ ಆಡಿಯೊ ಎಲಿಮೆಂಟ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ."
 
 #: app/templates/submit_report.html:8
 msgid "Issue Title"
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಯ ಶೀರ್ಷಿಕೆ"
 
 #: app/templates/submit_report.html:9
 msgid "Brief title of the issue"
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಯ ಸಂಕ್ಷಿಪ್ತ ಶೀರ್ಷಿಕೆ"
 
 #: app/templates/submit_report.html:16
 msgid "Select Category"
-msgstr ""
+msgstr "ವರ್ಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
 #: app/templates/submit_report.html:17
 msgid "Roads & Potholes"
-msgstr ""
+msgstr "ರಸ್ತೆಗಳು ಮತ್ತು ಗುಂಡಿಗಳು"
 
 #: app/templates/submit_report.html:18
 msgid "Water Supply"
-msgstr ""
+msgstr "ನೀರು ಸರಬರಾಜು"
 
 #: app/templates/submit_report.html:19
 msgid "Electricity"
-msgstr ""
+msgstr "ವಿದ್ಯುತ್"
 
 #: app/templates/submit_report.html:20
 msgid "Sanitation & Garbage"
-msgstr ""
+msgstr "ನೈರ್ಮಲ್ಯ ಮತ್ತು ಕಸ"
 
 #: app/templates/submit_report.html:21
 msgid "Other"
-msgstr ""
+msgstr "ಇತರ"
 
 #: app/templates/submit_report.html:27
 msgid "Issue Description"
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಯ ವಿವರಣೆ"
 
 #: app/templates/submit_report.html:28
 msgid "Provide details about the issue..."
-msgstr ""
+msgstr "ಸಮಸ್ಯೆಯ ಬಗ್ಗೆ ವಿವರಗಳನ್ನು ಒದಗಿಸಿ..."
 
 #: app/templates/submit_report.html:33
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr ""
+msgstr "ಸ್ಥಳವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪಡೆಯಲಾಗುತ್ತದೆ, ಆದರೆ ನೀವು ಅದನ್ನು ನಕ್ಷೆಯಲ್ಲಿ ಹೊಂದಿಸಬಹುದು."
 
 #: app/templates/submit_report.html:43
 msgid "Upload Images (Max 3, Max 5MB each)"
-msgstr ""
+msgstr "ಚಿತ್ರಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ (ಗರಿಷ್ಠ 3, ಪ್ರತಿಯೊಂದೂ ಗರಿಷ್ಠ 5MB)"
 
 #: app/templates/submit_report.html:45
 msgid ""
@@ -871,63 +871,63 @@ msgstr ""
 
 #: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
-msgstr ""
+msgstr "ಲೈವ್ ಜಿಯೋ-ಕ್ಯಾಮೆರಾ"
 
 #: app/templates/submit_report.html:50
 msgid "Upload Files"
-msgstr ""
+msgstr "ಫೈಲ್‌ಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
 
 #: app/templates/submit_report.html:59
 msgid "Capture Photo"
-msgstr ""
+msgstr "ಫೋಟೋ ಸೆರೆಹಿಡಿಯಿರಿ"
 
 #: app/templates/submit_report.html:60
 msgid "Switch"
-msgstr ""
+msgstr "ಬದಲಿಸಿ"
 
 #: app/templates/submit_report.html:61
 msgid "Close Camera"
-msgstr ""
+msgstr "ಕ್ಯಾಮೆರಾ ಮುಚ್ಚಿ"
 
 #: app/templates/submit_report.html:72
 msgid "Voice Note"
-msgstr ""
+msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ"
 
 #: app/templates/submit_report.html:74
 msgid "Record"
-msgstr ""
+msgstr "ರೆಕಾರ್ಡ್ ಮಾಡಿ"
 
 #: app/templates/submit_report.html:75
 msgid "Stop"
-msgstr ""
+msgstr "ನಿಲ್ಲಿಸಿ"
 
 #: app/templates/submit_report.html:78
 msgid "OR upload file"
-msgstr ""
+msgstr "ಅಥವಾ ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
 
 #: app/templates/submit_report.html:82
 msgid "Remove"
-msgstr ""
+msgstr "ತೆಗೆದುಹಾಕಿ"
 
 #: app/templates/submit_report.html:86
 msgid "Submit Report"
-msgstr ""
+msgstr "ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ"
 
 #: app/templates/submit_report.html:196
 msgid "File"
-msgstr ""
+msgstr "ಫೈಲ್"
 
 #: app/templates/submit_report.html:196
 msgid "exceeds 5MB limit"
-msgstr ""
+msgstr "5MB ಮಿತಿಯನ್ನು ಮೀರಿದೆ"
 
 #: app/templates/submit_report.html:217 app/templates/submit_report.html:257
 msgid "Maximum 3 images reached"
-msgstr ""
+msgstr "ಗರಿಷ್ಠ 3 ಚಿತ್ರಗಳನ್ನು ತಲುಪಲಾಗಿದೆ"
 
 #: app/templates/submit_report.html:241
 msgid "Camera access denied or not available"
-msgstr ""
+msgstr "ಕ್ಯಾಮೆರಾ ಪ್ರವೇಶವನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ ಅಥವಾ ಲಭ್ಯವಿಲ್ಲ"
 
 #: app/templates/submit_report.html:297
 msgid "District assignment pending..."
@@ -939,35 +939,35 @@ msgstr ""
 
 #: app/templates/submit_report.html:325
 msgid "Please upload or capture at least one image of the issue."
-msgstr ""
+msgstr "ದಯವಿಟ್ಟು ಸಮಸ್ಯೆಯ ಕನಿಷ್ಠ ಒಂದು ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ಅಥವಾ ಸೆರೆಹಿಡಿಯಿರಿ."
 
 #: app/templates/submit_report.html:364
 msgid "Recording..."
-msgstr ""
+msgstr "ರೆಕಾರ್ಡಿಂಗ್ ಆಗುತ್ತಿದೆ..."
 
 #: app/templates/submit_report.html:379
 msgid "Microphone access denied"
-msgstr ""
+msgstr "ಮೈಕ್ರೊಫೋನ್ ಪ್ರವೇಶವನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ"
 
 #: app/templates/verify_otp.html:5
 msgid "Verify OTP"
-msgstr ""
+msgstr "OTP ಪರಿಶೀಲಿಸಿ"
 
 #: app/templates/verify_otp.html:6
 msgid "Sent to:"
-msgstr ""
+msgstr "ಇವರಿಗೆ ಕಳುಹಿಸಲಾಗಿದೆ:"
 
 #: app/templates/verify_otp.html:9
 msgid "Enter 4-Digit OTP"
-msgstr ""
+msgstr "4-ಅಂಕಿಯ OTP ನಮೂದಿಸಿ"
 
 #: app/templates/verify_otp.html:17
 msgid "Verify & Login"
-msgstr ""
+msgstr "ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಲಾಗಿನ್ ಮಾಡಿ"
 
 #: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
-msgstr ""
+msgstr "ದಯವಿಟ್ಟು 4 ಅಂಕಿಗಳನ್ನು ನಮೂದಿಸಿ"
 
 #~ msgid "Acknowledged"
 #~ msgstr "ಗುರುತಿಸಲಾಗಿದೆ"
