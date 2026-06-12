@@ -368,7 +368,7 @@ img { max-width: 100%; height: auto; }
 .text-center { text-align: center; }
 
 /* Footer */
-.footer { background: var(--dark-color); color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; transition: background-color 0.3s, color 0.3s; }
+.footer { background: var(--card-bg); color: var(--text-color); text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid var(--border-color); transition: background-color 0.3s, color 0.3s; }
 
 /* Map and Legend */
 .map-legend { background: var(--card-bg); padding: 1rem; border-radius: 8px; margin-top: 1rem; display: flex; gap: 2rem; box-shadow: var(--shadow); justify-content: center; transition: background-color 0.3s; }
