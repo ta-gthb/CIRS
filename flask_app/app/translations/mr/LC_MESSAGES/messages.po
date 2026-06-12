@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-12 00:11+0530\n"
+"POT-Creation-Date: 2026-06-12 22:27+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mr\n"
@@ -47,7 +47,9 @@ msgstr "वापरकर्ता हटवण्यास मंजुरी 
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr "तुमचे खाते अलीकडेच हटवले गेल्यामुळे तुम्ही %(date)s रोजी पुन्हा सिस्टममध्ये नोंदणी करू शकता"
+msgstr ""
+"तुमचे खाते अलीकडेच हटवले गेल्यामुळे तुम्ही %(date)s रोजी पुन्हा "
+"सिस्टममध्ये नोंदणी करू शकता"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
@@ -70,7 +72,8 @@ msgstr "अवैध किंवा कालबाह्य OTP."
 msgid "Profile updated successfully!"
 msgstr "प्रोफाइल यशस्वीरित्या अद्यतनित केले!"
 
-#: app/routes/citizen.py:96
+#: app/routes/citizen.py:96 app/templates/base.html:108
+#: app/templates/base.html:302 app/templates/submit_report.html:319
 msgid "Location is required. Please enable GPS and allow location access."
 msgstr "स्थान आवश्यक आहे. कृपया GPS सक्षम करा आणि स्थान प्रवेशास अनुमती द्या।"
 
@@ -78,7 +81,9 @@ msgstr "स्थान आवश्यक आहे. कृपया GPS सक
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr "या ठिकाणी असाच एक अहवाल आधीच अस्तित्वात आहे. तुमचे मत (upvote) त्यात जोडले गेले आहे."
+msgstr ""
+"या ठिकाणी असाच एक अहवाल आधीच अस्तित्वात आहे. तुमचे मत (upvote) त्यात "
+"जोडले गेले आहे."
 
 #: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
@@ -92,49 +97,55 @@ msgstr "तुम्ही या ठिकाणी आधीच असाच �
 msgid "You can only upload up to 3 images."
 msgstr "तुम्ही फक्त ३ फोटो अपलोड करू शकता."
 
-#: app/routes/citizen.py:208
+#: app/routes/citizen.py:210
+msgid "Failed to upload files. Please try again later."
+msgstr ""
+
+#: app/routes/citizen.py:214
 msgid "Report submitted successfully!"
 msgstr "अहवाल यशस्वीरित्या सादर केला!"
 
-#: app/routes/citizen.py:219
+#: app/routes/citizen.py:225
 msgid "You cannot upvote your own report."
 msgstr "तुम्ही तुमच्या स्वतःच्या अहवालाला मत देऊ शकत नाही."
 
-#: app/routes/citizen.py:223
+#: app/routes/citizen.py:229
 msgid "Already upvoted"
 msgstr "आधीच मत दिले आहे"
 
-#: app/routes/citizen.py:242
+#: app/routes/citizen.py:248
 msgid "Comment added."
 msgstr "टिप्पणी जोडली."
 
-#: app/routes/citizen.py:250
+#: app/routes/citizen.py:256
 msgid "Unauthorized."
 msgstr "अनधिकृत."
 
-#: app/routes/citizen.py:257
+#: app/routes/citizen.py:263
 msgid "Report cannot be reopened after 7 days of resolution."
 msgstr "अहवाल पुन्हा उघडता येणार नाही."
 
-#: app/routes/citizen.py:262
+#: app/routes/citizen.py:268
 msgid "Report reopened."
 msgstr "अहवाल पुन्हा उघडला."
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:270
 msgid "Report cannot be reopened."
 msgstr "अहवाल पुन्हा उघडता येणार नाही."
 
-#: app/routes/citizen.py:272
+#: app/routes/citizen.py:278
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:277
+#: app/routes/citizen.py:283
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
-msgstr "खाते हटवण्याची विनंती तुमच्या नियुक्त अधिकाऱ्याकडे सबमिट केली आहे। ॲडमिन ऑफिसरच्या मान्यतेनंतर तुमचे खाते हटवले जाईल।"
+msgstr ""
+"खाते हटवण्याची विनंती तुमच्या नियुक्त अधिकाऱ्याकडे सबमिट केली आहे। ॲडमिन "
+"ऑफिसरच्या मान्यतेनंतर तुमचे खाते हटवले जाईल।"
 
 #: app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
@@ -157,22 +168,22 @@ msgstr "प्राधान्य:"
 msgid "All Priorities"
 msgstr "प्राधान्य"
 
-#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:38
 #: app/templates/live_map.html:14
 msgid "Critical"
 msgstr "अत्यंत महत्त्वाचे"
 
-#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:39
 #: app/templates/live_map.html:15
 msgid "High"
 msgstr "उच्च"
 
-#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:40
 #: app/templates/live_map.html:16
 msgid "Medium"
 msgstr "मध्यम"
 
-#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:41
 #: app/templates/live_map.html:17
 msgid "Low"
 msgstr "कमी"
@@ -447,10 +458,6 @@ msgstr ""
 msgid "Logout"
 msgstr "बाहेर पडा"
 
-#: app/templates/base.html:108
-msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr "स्थान सेवा अक्षम आहेत. कृपया कृती करण्यासाठी GPS सक्षम करा।"
-
 #: app/templates/base.html:109
 msgid "Retry Now"
 msgstr "आत्ता पुन्हा प्रयत्न करा"
@@ -471,17 +478,15 @@ msgstr "अहवाल चॅट"
 msgid "Type a message..."
 msgstr "संदेश टाइप करा..."
 
-#: app/templates/base.html:302
-msgid "Location still disabled. Please enable GPS in system settings."
-msgstr ""
-
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
 msgstr "तुमच्या डॅशबोर्डवर स्वागत आहे"
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr "तुमच्या समुदायातील नागरी समस्यांची तक्रार करण्यासाठी आणि त्यांचा मागोवा घेण्यासाठी तुमचे पोर्टल."
+msgstr ""
+"तुमच्या समुदायातील नागरी समस्यांची तक्रार करण्यासाठी आणि त्यांचा मागोवा "
+"घेण्यासाठी तुमचे पोर्टल."
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
@@ -548,46 +553,50 @@ msgid "Issues Resolved"
 msgstr "समस्या सुटल्या"
 
 #: app/templates/index.html:15
-msgid "Active Users"
+msgid "Online Users"
 msgstr "सक्रिय वापरकर्ते"
 
 #: app/templates/index.html:19
+msgid "Registered Users"
+msgstr "नोंદણીકૃત वापरकर्તે"
+
+#: app/templates/index.html:23
 msgid "Cities"
 msgstr "शहरे"
 
-#: app/templates/index.html:23
+#: app/templates/index.html:27
 msgid "Get Started Now"
 msgstr "आता सुरू करा"
 
-#: app/templates/index.html:29 app/templates/index.html:51
+#: app/templates/index.html:33 app/templates/index.html:55
 msgid "Live Map"
 msgstr "थेट नकाशा पहा"
 
-#: app/templates/index.html:30
+#: app/templates/index.html:34
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "रिअल-टाइममध्ये नोंदवलेल्या समस्या पहा."
 
-#: app/templates/index.html:42
+#: app/templates/index.html:46
 msgid "Powerful Features"
 msgstr "शक्तिशाली वैशिष्ट्ये"
 
-#: app/templates/index.html:46
+#: app/templates/index.html:50
 msgid "Media Reporting"
 msgstr "मीडिया रिपोर्टिंग"
 
-#: app/templates/index.html:47
+#: app/templates/index.html:51
 msgid "Capture issues with photos and voice notes."
 msgstr "फोटो आणि व्हॉइस नोट्ससह समस्या टिपून घ्या."
 
-#: app/templates/index.html:52
+#: app/templates/index.html:56
 msgid "Visualize reported issues in real-time."
 msgstr "रिअल-टाइममध्ये नोंदवलेल्या समस्या पहा."
 
-#: app/templates/index.html:56
+#: app/templates/index.html:60
 msgid "Analytics"
 msgstr "विश्लेषण"
 
-#: app/templates/index.html:57
+#: app/templates/index.html:61
 msgid "Track resolution status and response times."
 msgstr "निवारण स्थिती आणि प्रतिसाद वेळेचा मागोवा घ्या."
 
@@ -867,7 +876,9 @@ msgstr "फोटो अपलोड करा (कमाल ३, प्रत�
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr "केवळ कोणत्याही जिओ-लोकेशन आधारित कॅमेराद्वारे कॅप्चर केलेली चित्रे अपलोड करण्यासाठी स्वीकार्य आहेत!"
+msgstr ""
+"केवळ कोणत्याही जिओ-लोकेशन आधारित कॅमेराद्वारे कॅप्चर केलेली चित्रे अपलोड "
+"करण्यासाठी स्वीकार्य आहेत!"
 
 #: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
@@ -931,10 +942,6 @@ msgstr "कॅमेरा प्रवेश नाकारला किंव
 
 #: app/templates/submit_report.html:297
 msgid "District assignment pending..."
-msgstr ""
-
-#: app/templates/submit_report.html:319
-msgid "Submission blocked: Please enable GPS/Location services first."
 msgstr ""
 
 #: app/templates/submit_report.html:325
@@ -1717,5 +1724,12 @@ msgstr "कृपया ४ अंक प्रविष्ट करा"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "कृपया ४ अंक प्रविष्ट करा"
 
+#~ msgid "Location services are disabled. Please enable GPS to perform actions."
+#~ msgstr "स्थान सेवा अक्षम आहेत. कृपया कृती करण्यासाठी GPS सक्षम करा।"
 
+#~ msgid "Location still disabled. Please enable GPS in system settings."
+#~ msgstr ""
+
+#~ msgid "Submission blocked: Please enable GPS/Location services first."
+#~ msgstr ""
 

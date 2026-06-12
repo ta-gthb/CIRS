@@ -42,4 +42,12 @@ def create_app(config_class=Config):
     app.register_blueprint(admin_bp, url_prefix='/admin')
     app.register_blueprint(main_bp)
 
+    @app.before_request
+    def before_request():
+        from flask_login import current_user
+        from .models.models import get_ist_time
+        if current_user.is_authenticated:
+            current_user.last_seen = get_ist_time()
+            db.session.commit()
+
     return app

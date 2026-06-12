@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-12 00:11+0530\n"
+"POT-Creation-Date: 2026-06-12 22:27+0530\n"
 "PO-Revision-Date: 2026-06-07 09:41+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ta\n"
@@ -47,7 +47,9 @@ msgstr "பயனர் நீக்கம் அங்கீகரிக்க�
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr "உங்கள் கணக்கு சமீபத்தில் நீக்கப்பட்டதால், %(date)s அன்று மீண்டும் கணினியில் பதிவு செய்யலாம்"
+msgstr ""
+"உங்கள் கணக்கு சமீபத்தில் நீக்கப்பட்டதால், %(date)s அன்று மீண்டும் "
+"கணினியில் பதிவு செய்யலாம்"
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
@@ -56,7 +58,9 @@ msgstr "அதிகாரி பதிவு செய்யப்படவி�
 #: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
-msgstr "எண் %(role)s ஆக பதிவு செய்யப்பட்டுள்ளது. சரியான பாத்திரத்தைத் தேர்ந்தெடுக்கவும்."
+msgstr ""
+"எண் %(role)s ஆக பதிவு செய்யப்பட்டுள்ளது. சரியான பாத்திரத்தைத் "
+"தேர்ந்தெடுக்கவும்."
 
 #: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
@@ -70,7 +74,8 @@ msgstr "தவறான அல்லது காலாவதியான OTP."
 msgid "Profile updated successfully!"
 msgstr "சுயவிவரம் வெற்றிகரமாக புதுப்பிக்கப்பட்டது!"
 
-#: app/routes/citizen.py:96
+#: app/routes/citizen.py:96 app/templates/base.html:108
+#: app/templates/base.html:302 app/templates/submit_report.html:319
 msgid "Location is required. Please enable GPS and allow location access."
 msgstr "இருப்பிடம் தேவை. தயவுசெய்து GPS-ஐ இயக்கி, இருப்பிட அணுகலை அனுமதிக்கவும்।"
 
@@ -78,11 +83,15 @@ msgstr "இருப்பிடம் தேவை. தயவுசெய்த
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr "இதேபோன்ற புகார் ஏற்கனவே இந்த இடத்தில் உள்ளது. உங்கள் ஆதரவு (upvote) சேர்க்கப்பட்டுள்ளது."
+msgstr ""
+"இதேபோன்ற புகார் ஏற்கனவே இந்த இடத்தில் உள்ளது. உங்கள் ஆதரவு (upvote) "
+"சேர்க்கப்பட்டுள்ளது."
 
 #: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr "இதேபோன்ற புகார் ஏற்கனவே உள்ளது, நீங்கள் ஏற்கனவே அதற்கு ஆதரவு தெரிவித்துள்ளீர்கள்."
+msgstr ""
+"இதேபோன்ற புகார் ஏற்கனவே உள்ளது, நீங்கள் ஏற்கனவே அதற்கு ஆதரவு "
+"தெரிவித்துள்ளீர்கள்."
 
 #: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
@@ -92,49 +101,56 @@ msgstr "நீங்கள் ஏற்கனவே இந்த இடத்த
 msgid "You can only upload up to 3 images."
 msgstr "நீங்கள் 3 படங்கள் வரை மட்டுமே பதிவேற்ற முடியும்."
 
-#: app/routes/citizen.py:208
+#: app/routes/citizen.py:210
+msgid "Failed to upload files. Please try again later."
+msgstr ""
+
+#: app/routes/citizen.py:214
 msgid "Report submitted successfully!"
 msgstr "புகார் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது!"
 
-#: app/routes/citizen.py:219
+#: app/routes/citizen.py:225
 msgid "You cannot upvote your own report."
 msgstr "உங்கள் சொந்தப் புகாருக்கு நீங்களே ஆதரவு தெரிவிக்க முடியாது."
 
-#: app/routes/citizen.py:223
+#: app/routes/citizen.py:229
 msgid "Already upvoted"
 msgstr "ஏற்கனவே ஆதரவு தெரிவிக்கப்பட்டது"
 
-#: app/routes/citizen.py:242
+#: app/routes/citizen.py:248
 msgid "Comment added."
 msgstr "கருத்து சேர்க்கப்பட்டது."
 
-#: app/routes/citizen.py:250
+#: app/routes/citizen.py:256
 msgid "Unauthorized."
 msgstr "அங்கீகரிக்கப்படாதது."
 
-#: app/routes/citizen.py:257
+#: app/routes/citizen.py:263
 msgid "Report cannot be reopened after 7 days of resolution."
 msgstr "புகாரை மீண்டும் திறக்க முடியாது."
 
-#: app/routes/citizen.py:262
+#: app/routes/citizen.py:268
 msgid "Report reopened."
 msgstr "புகார் மீண்டும் திறக்கப்பட்டது."
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:270
 msgid "Report cannot be reopened."
 msgstr "புகாரை மீண்டும் திறக்க முடியாது."
 
-#: app/routes/citizen.py:272
+#: app/routes/citizen.py:278
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:277
+#: app/routes/citizen.py:283
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
-msgstr "கணக்கு நீக்கல் கோரிக்கை உங்கள் நியமிக்கப்பட்ட அதிகாரியிடம் சமர்ப்பிக்கப்பட்டுள்ளது. நிர்வாக அதிகாரியின் ஒப்புதலுக்குப் பிறகு உங்கள் கணக்கு நீக்கப்படும்."
+msgstr ""
+"கணக்கு நீக்கல் கோரிக்கை உங்கள் நியமிக்கப்பட்ட அதிகாரியிடம் "
+"சமர்ப்பிக்கப்பட்டுள்ளது. நிர்வாக அதிகாரியின் ஒப்புதலுக்குப் பிறகு உங்கள் "
+"கணக்கு நீக்கப்படும்."
 
 #: app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
@@ -157,22 +173,22 @@ msgstr "முன்னுரிமை:"
 msgid "All Priorities"
 msgstr "முன்னுரிமை"
 
-#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:38
 #: app/templates/live_map.html:14
 msgid "Critical"
 msgstr "மிக முக்கியமானது"
 
-#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:39
 #: app/templates/live_map.html:15
 msgid "High"
 msgstr "அதிகம்"
 
-#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:40
 #: app/templates/live_map.html:16
 msgid "Medium"
 msgstr "நடுத்தரம்"
 
-#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:41
 #: app/templates/live_map.html:17
 msgid "Low"
 msgstr "குறைவு"
@@ -447,10 +463,6 @@ msgstr ""
 msgid "Logout"
 msgstr "வெளியேறு"
 
-#: app/templates/base.html:108
-msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr "இருப்பிடச் சேவைகள் முடக்கப்பட்டுள்ளன. செயல்களைச் செய்ய தயவுசெய்து GPS-ஐ இயக்கவும்।"
-
 #: app/templates/base.html:109
 msgid "Retry Now"
 msgstr "இப்பொழுதே மீண்டும் முயற்சிக்கவும்"
@@ -461,7 +473,9 @@ msgstr ""
 
 #: app/templates/base.html:128
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
-msgstr "குடிமைப் புகார் அறிக்கையிடல் அமைப்பு (CIRS). அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+msgstr ""
+"குடிமைப் புகார் அறிக்கையிடல் அமைப்பு (CIRS). அனைத்து உரிமைகளும் "
+"பாதுகாக்கப்பட்டவை."
 
 #: app/templates/base.html:135
 msgid "Report Chat"
@@ -471,17 +485,15 @@ msgstr "புகார் அரட்டை"
 msgid "Type a message..."
 msgstr "செய்தியைத் தட்டச்சு செய்க..."
 
-#: app/templates/base.html:302
-msgid "Location still disabled. Please enable GPS in system settings."
-msgstr ""
-
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
 msgstr "உங்கள் டாஷ்போர்டிற்கு வரவேற்கிறோம்"
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr "உங்கள் சமூகத்தில் உள்ள குடிமைப் புகார்களைப் புகாரளிப்பதற்கும் கண்காணிப்பதற்கும் ஆன உங்கள் தளம்."
+msgstr ""
+"உங்கள் சமூகத்தில் உள்ள குடிமைப் புகார்களைப் புகாரளிப்பதற்கும் "
+"கண்காணிப்பதற்கும் ஆன உங்கள் தளம்."
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
@@ -541,53 +553,59 @@ msgstr "--சிறந்த நாளைக்காக இன்று பு�
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr "உள்ளூர் பிரச்சனைகளை இணைந்து புகாரளிக்கவும், கண்காணிக்கவும் மற்றும் தீர்க்கவும்"
+msgstr ""
+"உள்ளூர் பிரச்சனைகளை இணைந்து புகாரளிக்கவும், கண்காணிக்கவும் மற்றும் "
+"தீர்க்கவும்"
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
 msgstr "தீர்க்கப்பட்ட சிக்கல்கள்"
 
 #: app/templates/index.html:15
-msgid "Active Users"
+msgid "Online Users"
 msgstr "செயலில் உள்ள பயனர்கள்"
 
 #: app/templates/index.html:19
+msgid "Registered Users"
+msgstr "பதிவு செய்யப்பட்ட பயனர்கள்"
+
+#: app/templates/index.html:23
 msgid "Cities"
 msgstr "நகரங்கள்"
 
-#: app/templates/index.html:23
+#: app/templates/index.html:27
 msgid "Get Started Now"
 msgstr "இப்போது தொடங்குங்கள்"
 
-#: app/templates/index.html:29 app/templates/index.html:51
+#: app/templates/index.html:33 app/templates/index.html:55
 msgid "Live Map"
 msgstr "நேரடி வரைபடத்தைக் காண்க"
 
-#: app/templates/index.html:30
+#: app/templates/index.html:34
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "புகாரளிக்கப்பட்ட சிக்கல்களை நிகழ்நேரத்தில் காட்சிப்படுத்துங்கள்."
 
-#: app/templates/index.html:42
+#: app/templates/index.html:46
 msgid "Powerful Features"
 msgstr "சக்திவாய்ந்த அம்சங்கள்"
 
-#: app/templates/index.html:46
+#: app/templates/index.html:50
 msgid "Media Reporting"
 msgstr "ஊடக அறிக்கையிடல்"
 
-#: app/templates/index.html:47
+#: app/templates/index.html:51
 msgid "Capture issues with photos and voice notes."
 msgstr "புகைப்படங்கள் மற்றும் குரல் குறிப்புகளுடன் சிக்கல்களைப் பதிவு செய்யுங்கள்."
 
-#: app/templates/index.html:52
+#: app/templates/index.html:56
 msgid "Visualize reported issues in real-time."
 msgstr "புகாரளிக்கப்பட்ட சிக்கல்களை நிகழ்நேரத்தில் காட்சிப்படுத்துங்கள்."
 
-#: app/templates/index.html:56
+#: app/templates/index.html:60
 msgid "Analytics"
 msgstr "பகுப்பாய்வு"
 
-#: app/templates/index.html:57
+#: app/templates/index.html:61
 msgid "Track resolution status and response times."
 msgstr "தீர்வு நிலை மற்றும் பதிலளிப்பு நேரங்களைக் கண்காணியுங்கள்."
 
@@ -867,7 +885,9 @@ msgstr "படங்களை பதிவேற்றவும் (அதிக
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr "புவி இருப்பிட அடிப்படையிலான கேமராவால் எடுக்கப்பட்ட படங்கள் மட்டுமே பதிவேற்ற ஏற்றுக்கொள்ளப்படும்!"
+msgstr ""
+"புவி இருப்பிட அடிப்படையிலான கேமராவால் எடுக்கப்பட்ட படங்கள் மட்டுமே "
+"பதிவேற்ற ஏற்றுக்கொள்ளப்படும்!"
 
 #: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
@@ -931,10 +951,6 @@ msgstr "கேமரா அணுகல் மறுக்கப்பட்ட�
 
 #: app/templates/submit_report.html:297
 msgid "District assignment pending..."
-msgstr ""
-
-#: app/templates/submit_report.html:319
-msgid "Submission blocked: Please enable GPS/Location services first."
 msgstr ""
 
 #: app/templates/submit_report.html:325
@@ -1728,5 +1744,14 @@ msgstr "தயவுசெய்து 4 இலக்கங்களை உள�
 #~ msgid "Please enter 4 digits"
 #~ msgstr "தயவுசெய்து 4 இலக்கங்களை உள்ளிடவும்"
 
+#~ msgid "Location services are disabled. Please enable GPS to perform actions."
+#~ msgstr ""
+#~ "இருப்பிடச் சேவைகள் முடக்கப்பட்டுள்ளன. செயல்களைச் "
+#~ "செய்ய தயவுசெய்து GPS-ஐ இயக்கவும்।"
 
+#~ msgid "Location still disabled. Please enable GPS in system settings."
+#~ msgstr ""
+
+#~ msgid "Submission blocked: Please enable GPS/Location services first."
+#~ msgstr ""
 

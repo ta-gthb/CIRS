@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-12 00:11+0530\n"
+"POT-Creation-Date: 2026-06-12 22:27+0530\n"
 "PO-Revision-Date: 2026-06-07 10:45+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ml\n"
@@ -70,19 +70,26 @@ msgstr "അസാധുവായതോ കാലാവധി കഴിഞ്ഞ�
 msgid "Profile updated successfully!"
 msgstr "പ്രൊഫൈൽ വിജയകരമായി പുതുക്കി!"
 
-#: app/routes/citizen.py:96
+#: app/routes/citizen.py:96 app/templates/base.html:108
+#: app/templates/base.html:302 app/templates/submit_report.html:319
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr "ലൊക്കേഷൻ ആവശ്യമാണ്. ദയവായി GPS പ്രവർത്തനക്ഷമമാക്കുകയും ലൊക്കേഷൻ ആക്സസ് അനുവദിക്കുകയും ചെയ്യുക।"
+msgstr ""
+"ലൊക്കേഷൻ ആവശ്യമാണ്. ദയവായി GPS പ്രവർത്തനക്ഷമമാക്കുകയും ലൊക്കേഷൻ ആക്സസ് "
+"അനുവദിക്കുകയും ചെയ്യുക।"
 
 #: app/routes/citizen.py:166
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr "ഈ സ്ഥലത്ത് സമാനമായ ഒരു റിപ്പോർട്ട് നിലവിലുണ്ട്. നിങ്ങളുടെ അപ്‌വോട്ട് അതിൽ ചേർത്തിട്ടുണ്ട്."
+msgstr ""
+"ഈ സ്ഥലത്ത് സമാനമായ ഒരു റിപ്പോർട്ട് നിലവിലുണ്ട്. നിങ്ങളുടെ അപ്‌വോട്ട് അതിൽ"
+" ചേർത്തിട്ടുണ്ട്."
 
 #: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr "സമാനമായ ഒരു റിപ്പോർട്ട് നിലവിലുണ്ട്, നിങ്ങൾ അത് ഇതിനകം അപ്‌വോട്ട് ചെയ്തിട്ടുണ്ട്."
+msgstr ""
+"സമാനമായ ഒരു റിപ്പോർട്ട് നിലവിലുണ്ട്, നിങ്ങൾ അത് ഇതിനകം അപ്‌വോട്ട് "
+"ചെയ്തിട്ടുണ്ട്."
 
 #: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
@@ -92,49 +99,56 @@ msgstr "ഈ സ്ഥലത്ത് നിങ്ങൾ ഇതിനകം സ�
 msgid "You can only upload up to 3 images."
 msgstr "നിങ്ങൾക്ക് 3 ചിത്രങ്ങൾ വരെ മാത്രമേ അപ്‌ലോഡ് ചെയ്യാൻ കഴിയൂ."
 
-#: app/routes/citizen.py:208
+#: app/routes/citizen.py:210
+msgid "Failed to upload files. Please try again later."
+msgstr ""
+
+#: app/routes/citizen.py:214
 msgid "Report submitted successfully!"
 msgstr "റിപ്പോർട്ട് വിജയകരമായി സമർപ്പിച്ചു!"
 
-#: app/routes/citizen.py:219
+#: app/routes/citizen.py:225
 msgid "You cannot upvote your own report."
 msgstr "നിങ്ങളുടെ സ്വന്തം റിപ്പോർട്ടിന് നിങ്ങൾക്ക് അപ്‌വോട്ട് ചെയ്യാൻ കഴിയില്ല."
 
-#: app/routes/citizen.py:223
+#: app/routes/citizen.py:229
 msgid "Already upvoted"
 msgstr "ഇതിനകം അപ്‌വോട്ട് ചെയ്തു"
 
-#: app/routes/citizen.py:242
+#: app/routes/citizen.py:248
 msgid "Comment added."
 msgstr "അഭിപ്രായം ചേർത്തു."
 
-#: app/routes/citizen.py:250
+#: app/routes/citizen.py:256
 msgid "Unauthorized."
 msgstr "അനധികൃതം."
 
-#: app/routes/citizen.py:257
+#: app/routes/citizen.py:263
 msgid "Report cannot be reopened after 7 days of resolution."
 msgstr "റിപ്പോർട്ട് വീണ്ടും തുറക്കാൻ കഴിയില്ല."
 
-#: app/routes/citizen.py:262
+#: app/routes/citizen.py:268
 msgid "Report reopened."
 msgstr "റിപ്പോർട്ട് വീണ്ടും തുറന്നു."
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:270
 msgid "Report cannot be reopened."
 msgstr "റിപ്പോർട്ട് വീണ്ടും തുറക്കാൻ കഴിയില്ല."
 
-#: app/routes/citizen.py:272
+#: app/routes/citizen.py:278
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:277
+#: app/routes/citizen.py:283
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
-msgstr "അക്കൗണ്ട് നീക്കം ചെയ്യാനുള്ള അഭ്യർത്ഥന നിങ്ങളുടെ നിയുക്ത ഉദ്യോഗസ്ഥന് സമർപ്പിച്ചു. അഡ്മിൻ ഓഫീസറുടെ അംഗീകാരത്തിന് ശേഷം നിങ്ങളുടെ അക്കൗണ്ട് നീക്കം ചെയ്യപ്പെടും।"
+msgstr ""
+"അക്കൗണ്ട് നീക്കം ചെയ്യാനുള്ള അഭ്യർത്ഥന നിങ്ങളുടെ നിയുക്ത ഉദ്യോഗസ്ഥന് "
+"സമർപ്പിച്ചു. അഡ്മിൻ ഓഫീസറുടെ അംഗീകാരത്തിന് ശേഷം നിങ്ങളുടെ അക്കൗണ്ട് "
+"നീക്കം ചെയ്യപ്പെടും।"
 
 #: app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
@@ -157,22 +171,22 @@ msgstr "മുൻഗണന:"
 msgid "All Priorities"
 msgstr "മുൻഗണന"
 
-#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:38
 #: app/templates/live_map.html:14
 msgid "Critical"
 msgstr "ഗുരുതരം"
 
-#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:39
 #: app/templates/live_map.html:15
 msgid "High"
 msgstr "ഉയർന്നത്"
 
-#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:40
 #: app/templates/live_map.html:16
 msgid "Medium"
 msgstr "മിതമായത്"
 
-#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:41
 #: app/templates/live_map.html:17
 msgid "Low"
 msgstr "കുറഞ്ഞത്"
@@ -447,10 +461,6 @@ msgstr ""
 msgid "Logout"
 msgstr "ലോഗൗട്ട്"
 
-#: app/templates/base.html:108
-msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr "ലൊക്കേഷൻ സേവനങ്ങൾ പ്രവർത്തനരহিতമാണ്. നടപടികൾ സ്വീകരിക്കാൻ ദയവായി GPS പ്രവർത്തനക്ഷമമാക്കുക।"
-
 #: app/templates/base.html:109
 msgid "Retry Now"
 msgstr "ഇപ്പോൾ വീണ്ടും ശ്രമിക്കുക"
@@ -471,17 +481,15 @@ msgstr "റിപ്പോർട്ട് ചാറ്റ്"
 msgid "Type a message..."
 msgstr "ഒരു സന്ദേശം ടൈപ്പ് ചെയ്യുക..."
 
-#: app/templates/base.html:302
-msgid "Location still disabled. Please enable GPS in system settings."
-msgstr ""
-
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
 msgstr "നിങ്ങളുടെ ഡാഷ്ബോർഡിലേക്ക് സ്വാഗതം"
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr "നിങ്ങളുടെ കമ്മ്യൂണിറ്റിയിലെ സിവിക് പ്രശ്നങ്ങൾ റിപ്പോർട്ട് ചെയ്യുന്നതിനും ട്രാക്ക് ചെയ്യുന്നതിനുമുള്ള നിങ്ങളുടെ പോർട്ടൽ."
+msgstr ""
+"നിങ്ങളുടെ കമ്മ്യൂണിറ്റിയിലെ സിവിക് പ്രശ്നങ്ങൾ റിപ്പോർട്ട് ചെയ്യുന്നതിനും "
+"ട്രാക്ക് ചെയ്യുന്നതിനുമുള്ള നിങ്ങളുടെ പോർട്ടൽ."
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
@@ -541,53 +549,59 @@ msgstr "--മെച്ചപ്പെട്ട നാളെയ്ക്കായ
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr "പ്രാദേശിക പ്രശ്നങ്ങൾ ഒന്നിച്ച് റിപ്പോർട്ട് ചെയ്യുക, ട്രാക്ക് ചെയ്യുക, പരിഹരിക്കുക"
+msgstr ""
+"പ്രാദേശിക പ്രശ്നങ്ങൾ ഒന്നിച്ച് റിപ്പോർട്ട് ചെയ്യുക, ട്രാക്ക് ചെയ്യുക, "
+"പരിഹരിക്കുക"
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
 msgstr "പരിഹരിച്ച പ്രശ്നങ്ങൾ"
 
 #: app/templates/index.html:15
-msgid "Active Users"
+msgid "Online Users"
 msgstr "സജീവ ഉപയോക്താക്കൾ"
 
 #: app/templates/index.html:19
+msgid "Registered Users"
+msgstr "രജിസ്റ്റർ ചെയ്ത ഉപയോക്താക്കൾ"
+
+#: app/templates/index.html:23
 msgid "Cities"
 msgstr "നഗരങ്ങൾ"
 
-#: app/templates/index.html:23
+#: app/templates/index.html:27
 msgid "Get Started Now"
 msgstr "ഇപ്പോൾ ആരംഭിക്കുക"
 
-#: app/templates/index.html:29 app/templates/index.html:51
+#: app/templates/index.html:33 app/templates/index.html:55
 msgid "Live Map"
 msgstr "ലൈവ് മാപ്പ് കാണുക"
 
-#: app/templates/index.html:30
+#: app/templates/index.html:34
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "റിപ്പോർട്ട് ചെയ്ത പ്രശ്നങ്ങൾ തത്സമയം കാണുക."
 
-#: app/templates/index.html:42
+#: app/templates/index.html:46
 msgid "Powerful Features"
 msgstr "ശക്തമായ ഫീച്ചറുകൾ"
 
-#: app/templates/index.html:46
+#: app/templates/index.html:50
 msgid "Media Reporting"
 msgstr "മീഡിയ റിപ്പോർട്ടിംഗ്"
 
-#: app/templates/index.html:47
+#: app/templates/index.html:51
 msgid "Capture issues with photos and voice notes."
 msgstr "ഫോട്ടോകളും വോയ്‌സ് നോട്ടുകളും ഉപയോഗിച്ച് പ്രശ്നങ്ങൾ പകർത്തുക."
 
-#: app/templates/index.html:52
+#: app/templates/index.html:56
 msgid "Visualize reported issues in real-time."
 msgstr "റിപ്പോർട്ട് ചെയ്ത പ്രശ്നങ്ങൾ തത്സമയം കാണുക."
 
-#: app/templates/index.html:56
+#: app/templates/index.html:60
 msgid "Analytics"
 msgstr "അനലിറ്റിക്സ്"
 
-#: app/templates/index.html:57
+#: app/templates/index.html:61
 msgid "Track resolution status and response times."
 msgstr "പരിഹാര നിലയും പ്രതികരണ സമയവും ട്രാക്ക് ചെയ്യുക."
 
@@ -933,13 +947,11 @@ msgstr "ക്യാമറ ആക്സസ് നിരസിച്ചു അല
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:319
-msgid "Submission blocked: Please enable GPS/Location services first."
-msgstr ""
-
 #: app/templates/submit_report.html:325
 msgid "Please upload or capture at least one image of the issue."
-msgstr "പ്രശ്നത്തിന്റെ കുറഞ്ഞത് ഒരു ചിത്രമെങ്കിലും അപ്‌ലോഡ് ചെയ്യുകയോ എടുക്കുകയോ ചെയ്യുക."
+msgstr ""
+"പ്രശ്നത്തിന്റെ കുറഞ്ഞത് ഒരു ചിത്രമെങ്കിലും അപ്‌ലോഡ് ചെയ്യുകയോ എടുക്കുകയോ "
+"ചെയ്യുക."
 
 #: app/templates/submit_report.html:364
 msgid "Recording..."
@@ -1722,5 +1734,14 @@ msgstr "ദയവായി 4 അക്കങ്ങൾ നൽകുക"
 #~ msgid "Please enter 4 digits"
 #~ msgstr "ദയവായി 4 അക്കങ്ങൾ നൽകുക"
 
+#~ msgid "Location services are disabled. Please enable GPS to perform actions."
+#~ msgstr ""
+#~ "ലൊക്കേഷൻ സേവനങ്ങൾ പ്രവർത്തനരহিতമാണ്. നടപടികൾ "
+#~ "സ്വീകരിക്കാൻ ദയവായി GPS പ്രവർത്തനക്ഷമമാക്കുക।"
 
+#~ msgid "Location still disabled. Please enable GPS in system settings."
+#~ msgstr ""
+
+#~ msgid "Submission blocked: Please enable GPS/Location services first."
+#~ msgstr ""
 
