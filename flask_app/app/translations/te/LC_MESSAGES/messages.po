@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-12 00:11+0530\n"
+"POT-Creation-Date: 2026-06-12 21:34+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: te\n"
@@ -20,125 +20,130 @@ msgstr ""
 
 #: app/routes/admin.py:75 app/routes/admin.py:122
 msgid "Unauthorized"
-msgstr "అనధికారిక"
+msgstr ""
 
 #: app/routes/admin.py:103
 msgid "Report approved."
-msgstr "నివేదిక ఆమోదించబడింది."
+msgstr ""
 
 #: app/routes/admin.py:115
 msgid "Report resolved."
-msgstr "నివేదిక పరిష్కరించబడింది."
+msgstr ""
 
 #: app/routes/admin.py:129
 msgid "Report rejected."
-msgstr "నివేదిక మళ్లీ తెరవబడింది."
+msgstr ""
 
 #: app/routes/admin.py:146
 msgid "User deletion approved. Pending reports removed."
-msgstr "వినియోగదారు తొలగింపు ఆమోదించబడింది."
+msgstr ""
 
 #: app/routes/admin.py:155
 msgid "User deletion request rejected."
-msgstr "వినియోగదారు తొలగింపు ఆమోదించబడింది."
+msgstr ""
 
 #: app/routes/auth.py:21
 #, python-format
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
-msgstr "మీ ఖాతా ఇటీవల తొలగించబడినందున మీరు %(date)s న మళ్లీ సిస్టమ్‌లో నమోదు చేసుకోవచ్చు"
+msgstr ""
 
 #: app/routes/auth.py:40
 msgid "Officer not registered. Contact administrator."
-msgstr "అధికారి నమోదు చేయబడలేదు. నిర్వాహకుడిని సంప్రదించండి."
+msgstr ""
 
 #: app/routes/auth.py:44
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
-msgstr "సంఖ్య %(role)s గా నమోదు చేయబడింది. సరైన పాత్రను ఎంచుకోండి."
+msgstr ""
 
 #: app/routes/auth.py:48
 msgid "Account is inactive or deleted."
-msgstr "ఖాతా నిష్క్రియంగా ఉంది లేదా తొలగించబడింది."
+msgstr ""
 
 #: app/routes/auth.py:75
 msgid "Invalid or expired OTP."
-msgstr "చెల్లని లేదా గడువు ముగిసిన OTP."
+msgstr ""
 
 #: app/routes/citizen.py:82
 msgid "Profile updated successfully!"
-msgstr "ప్రొఫైల్ విజయవంతంగా నవీకరించబడింది!"
+msgstr ""
 
-#: app/routes/citizen.py:96
+#: app/routes/citizen.py:96 app/templates/base.html:108
+#: app/templates/base.html:302 app/templates/submit_report.html:319
 msgid "Location is required. Please enable GPS and allow location access."
-msgstr "స్థానం అవసరం. దయచేసి GPSని ప్రారంభించండి మరియు స్థాన ప్రాప్యతను అనుమతించండి।"
+msgstr ""
 
 #: app/routes/citizen.py:166
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
-msgstr "ఈ ప్రదేశంలో ఇప్పటికే ఇటువంటి నివేదిక ఉంది. మీ ఓటు దానికి జోడించబడింది."
+msgstr ""
 
 #: app/routes/citizen.py:168
 msgid "A similar report already exists and you have already upvoted it."
-msgstr "ఇటువంటి నివేదిక ఇప్పటికే ఉంది మరియు మీరు ఇప్పటికే దానికి ఓటు వేశారు."
+msgstr ""
 
 #: app/routes/citizen.py:170
 msgid "You have already submitted a similar report in this location."
-msgstr "మీరు ఇప్పటికే ఈ ప్రదేశంలో ఇటువంటి నివేదికను సమర్పించారు."
+msgstr ""
 
 #: app/routes/citizen.py:191
 msgid "You can only upload up to 3 images."
-msgstr "మీరు 3 చిత్రాల వరకు మాత్రమే అప్‌లోడ్ చేయగలరు."
+msgstr ""
 
-#: app/routes/citizen.py:208
+#: app/routes/citizen.py:210
+msgid "Failed to upload files. Please try again later."
+msgstr ""
+
+#: app/routes/citizen.py:214
 msgid "Report submitted successfully!"
-msgstr "నివేదిక విజయవంతంగా సమర్పించబడింది!"
+msgstr ""
 
-#: app/routes/citizen.py:219
+#: app/routes/citizen.py:225
 msgid "You cannot upvote your own report."
-msgstr "మీరు మీ స్వంత నివేదికకు ఓటు వేయలేరు."
+msgstr ""
 
-#: app/routes/citizen.py:223
+#: app/routes/citizen.py:229
 msgid "Already upvoted"
-msgstr "ఇప్పటికే ఓటు వేశారు"
+msgstr ""
 
-#: app/routes/citizen.py:242
+#: app/routes/citizen.py:248
 msgid "Comment added."
-msgstr "వ్యాఖ్య జోడించబడింది."
+msgstr ""
 
-#: app/routes/citizen.py:250
+#: app/routes/citizen.py:256
 msgid "Unauthorized."
-msgstr "అనధికారిక."
+msgstr ""
 
-#: app/routes/citizen.py:257
+#: app/routes/citizen.py:263
 msgid "Report cannot be reopened after 7 days of resolution."
-msgstr "నివేదికను మళ్లీ తెరవడం సాధ్యం కాదు."
+msgstr ""
 
-#: app/routes/citizen.py:262
+#: app/routes/citizen.py:268
 msgid "Report reopened."
-msgstr "నివేదిక మళ్లీ తెరవబడింది."
+msgstr ""
 
-#: app/routes/citizen.py:264
+#: app/routes/citizen.py:270
 msgid "Report cannot be reopened."
-msgstr "నివేదికను మళ్లీ తెరవడం సాధ్యం కాదు."
+msgstr ""
 
-#: app/routes/citizen.py:272
+#: app/routes/citizen.py:278
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:277
+#: app/routes/citizen.py:283
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
-msgstr "ఖాతా తొలగింపు అభ్యర్థన మీ నియమిత అధికారికి సమర్పించబడింది. అడ్మిన్ అధికారి ఆమోదం పొందిన తర్వాత మీ ఖాతా తొలగించబడుతుంది."
+msgstr ""
 
 #: app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
-msgstr "అడ్మిన్ డాష్‌బోర్డ్"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:6
 msgid "Welcome"
@@ -146,56 +151,56 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:6
 msgid "Assigned to:"
-msgstr "కేటాయించిన రాష్ట్రం:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:12 app/templates/live_map.html:70
 #: app/templates/status.html:41
 msgid "Priority:"
-msgstr "ప్రాధాన్యత:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:14
 msgid "All Priorities"
-msgstr "ప్రాధాన్యత"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:15 app/templates/index.html:34
+#: app/templates/admin_dashboard.html:15 app/templates/index.html:38
 #: app/templates/live_map.html:14
 msgid "Critical"
-msgstr "క్లిష్టమైన"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:16 app/templates/index.html:35
+#: app/templates/admin_dashboard.html:16 app/templates/index.html:39
 #: app/templates/live_map.html:15
 msgid "High"
-msgstr "ఎక్కువ"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:17 app/templates/index.html:36
+#: app/templates/admin_dashboard.html:17 app/templates/index.html:40
 #: app/templates/live_map.html:16
 msgid "Medium"
-msgstr "మధ్యస్థం"
+msgstr ""
 
-#: app/templates/admin_dashboard.html:18 app/templates/index.html:37
+#: app/templates/admin_dashboard.html:18 app/templates/index.html:41
 #: app/templates/live_map.html:17
 msgid "Low"
-msgstr "తక్కువ"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:22 app/templates/status.html:11
 msgid "From:"
-msgstr "నుండి:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:26 app/templates/status.html:15
 msgid "To:"
-msgstr "కు:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:30 app/templates/status.html:19
 msgid "Filter"
-msgstr "వడపోత"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:31 app/templates/status.html:20
 msgid "Clear"
-msgstr "క్లియర్"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:39
 msgid "Total Reports"
-msgstr "నివేదికలు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:43
 msgid "Pending"
@@ -203,42 +208,42 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:47
 msgid "Approved"
-msgstr "నివేదిక ఆమోదించబడింది."
+msgstr ""
 
 #: app/templates/admin_dashboard.html:51
 msgid "Resolved"
-msgstr "తొలగించు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:57
 msgid "Manage Reports"
-msgstr "నివేదికలు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:226
 msgid "Title"
-msgstr "ఫైల్"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:110
 #: app/templates/profile.html:14
 msgid "Citizen ID"
-msgstr "సిటిజన్ ఐడి"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:228
 #: app/templates/live_map.html:13
 msgid "Priority"
-msgstr "ప్రాధాన్యత"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:66 app/templates/admin_dashboard.html:229
 #: app/templates/base.html:69
 msgid "Status"
-msgstr "స్థితి"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:67
 msgid "Date"
-msgstr "రాష్ట్రం"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:68 app/templates/admin_dashboard.html:112
 msgid "Actions"
-msgstr "ప్రదేశం"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:75
 msgid "N/A"
@@ -250,7 +255,7 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:125
 msgid "Approve"
-msgstr "తొలగించు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:83 app/templates/admin_dashboard.html:129
 msgid "Reject"
@@ -258,44 +263,44 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:86
 msgid "Resolve"
-msgstr "తొలగించు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:89 app/templates/status.html:68
 msgid "Message"
-msgstr "సందేశం"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:98
 msgid "No reports found matching filters."
-msgstr "నిబంధనలకు సరిపోయే నివేదికలేవీ కనుగొనబడలేదు."
+msgstr ""
 
 #: app/templates/admin_dashboard.html:104
 msgid "Pending Account Deletion Requests"
-msgstr "ఖాతా తొలగింపు అభ్యర్థన ఆమోదం కోసం వేచి ఉంది."
+msgstr ""
 
 #: app/templates/admin_dashboard.html:109
 msgid "Name"
-msgstr "పేరు:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:111
 msgid "Phone"
-msgstr "ఫోన్:"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:118 app/templates/public_forum.html:16
 #: app/templates/public_forum.html:33
 msgid "Anonymous"
-msgstr "అనామక"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:124
 msgid "Are you sure you want to approve this deletion? This action is permanent."
-msgstr "మీరు ఖచ్చితంగా ఈ నివేదికను మళ్లీ తెరవాలనుకుంటున్నారా?"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:145
 msgid "Report Details"
-msgstr "నివేదికలు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:149 app/templates/public_forum.html:54
 msgid "Close"
-msgstr "ముగించు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:157
 msgid "Resolve Report"
@@ -312,12 +317,12 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:162
 msgid "Mark as Resolved"
-msgstr "పరిష్కరించబడిన సమస్యలు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:171
 #: app/templates/admin_dashboard.html:176
 msgid "Reject Report"
-msgstr "నివేదికను సమర్పించండి"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:173
 msgid "Enter rejection reason..."
@@ -325,23 +330,23 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:216 app/templates/status.html:88
 msgid "Report Image"
-msgstr "నివేదిక చిత్రం"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:227 app/templates/submit_report.html:14
 msgid "Category"
-msgstr "వర్గం"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:230
 msgid "Submitted On"
-msgstr "నేను సమర్పించిన నివేదికలు"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:231
 msgid "Description"
-msgstr "సమస్య వివరణ"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:232 app/templates/submit_report.html:32
 msgid "Location"
-msgstr "ప్రదేశం"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:236
 msgid "Captured Images"
@@ -353,11 +358,11 @@ msgstr ""
 
 #: app/templates/admin_dashboard.html:240
 msgid "Voice Notes"
-msgstr "వాయిస్ నోట్"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:241
 msgid "No voice notes uploaded"
-msgstr "వాయిస్ నోట్"
+msgstr ""
 
 #: app/templates/admin_dashboard.html:263
 msgid "Failed to fetch report details"
@@ -365,31 +370,31 @@ msgstr ""
 
 #: app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
-msgstr "అడ్మిన్ ఆఫీసర్ ప్రొఫైల్"
+msgstr ""
 
 #: app/templates/admin_profile.html:7
 msgid "Name:"
-msgstr "పేరు:"
+msgstr ""
 
 #: app/templates/admin_profile.html:8
 msgid "Phone:"
-msgstr "ఫోన్:"
+msgstr ""
 
 #: app/templates/admin_profile.html:9
 msgid "Role:"
-msgstr "పాత్ర:"
+msgstr ""
 
 #: app/templates/admin_profile.html:9
 msgid "Authority / Admin Officer"
-msgstr "అధికార యంత్రాంగం / అడ్మిన్ ఆఫీసర్"
+msgstr ""
 
 #: app/templates/admin_profile.html:10
 msgid "Assigned State:"
-msgstr "కేటాయించిన రాష్ట్రం:"
+msgstr ""
 
 #: app/templates/admin_profile.html:11
 msgid "Assigned District:"
-msgstr "కేటాయించిన జిల్లా:"
+msgstr ""
 
 #: app/templates/admin_profile.html:12
 msgid "District Coordinates:"
@@ -397,43 +402,43 @@ msgstr ""
 
 #: app/templates/base.html:24 app/templates/base.html:66
 msgid "Dashboard"
-msgstr "డాష్‌బోర్డ్"
+msgstr ""
 
 #: app/templates/base.html:25
 msgid "Report Issue"
-msgstr "సమస్యను నివేదించండి"
+msgstr ""
 
 #: app/templates/base.html:26 app/templates/base.html:68
 msgid "Forum"
-msgstr "ఫోరం"
+msgstr ""
 
 #: app/templates/base.html:27
 msgid "My Status"
-msgstr "నా స్థితి"
+msgstr ""
 
 #: app/templates/base.html:28 app/templates/base.html:70
 msgid "Map"
-msgstr "మ్యాప్"
+msgstr ""
 
 #: app/templates/base.html:30 app/templates/base.html:71
 msgid "Profile"
-msgstr "ప్రొఫైల్"
+msgstr ""
 
 #: app/templates/base.html:33
 msgid "Admin Panel"
-msgstr "అడ్మిన్ ప్యానెల్"
+msgstr ""
 
 #: app/templates/base.html:35 app/templates/base.html:74
 msgid "Settings"
-msgstr "సెట్టింగ్‌లు"
+msgstr ""
 
 #: app/templates/base.html:44
 msgid "Login"
-msgstr "లాగిన్"
+msgstr ""
 
 #: app/templates/base.html:46
 msgid "Toggle Light/Dark Mode"
-msgstr "లైట్/డార్క్ మోడ్‌ను మార్చండి"
+msgstr ""
 
 #: app/templates/base.html:67
 msgid "Report"
@@ -445,11 +450,7 @@ msgstr ""
 
 #: app/templates/base.html:76
 msgid "Logout"
-msgstr "లాగ్ అవుట్"
-
-#: app/templates/base.html:108
-msgid "Location services are disabled. Please enable GPS to perform actions."
-msgstr "స్థాన సేవలు నిలిపివేయబడ్డాయి. చర్యలను నిర్వహించడానికి దయచేసి GPSని ప్రారంభించండి।"
+msgstr ""
 
 #: app/templates/base.html:109
 msgid "Retry Now"
@@ -461,151 +462,151 @@ msgstr ""
 
 #: app/templates/base.html:128
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
-msgstr "సివిక్ ఇష్యూ రిపోర్టింగ్ సిస్టమ్ (CIRS). అన్ని హక్కులు ప్రత్యేకించబడ్డాయి."
+msgstr ""
 
 #: app/templates/base.html:135
 msgid "Report Chat"
-msgstr "రిపోర్ట్ చాట్"
+msgstr ""
 
 #: app/templates/base.html:142
 msgid "Type a message..."
-msgstr "సందేశాన్ని టైప్ చేయండి..."
-
-#: app/templates/base.html:302
-msgid "Location still disabled. Please enable GPS in system settings."
 msgstr ""
 
 #: app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
-msgstr "మీ డాష్‌బోర్డ్‌కు స్వాగతం"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
-msgstr "మీ కమ్యూనిటీలో పౌర సమస్యలను నివేదించడానికి మరియు ట్రాక్ చేయడానికి మీ పోర్టల్."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
 msgid "Submit New Report"
-msgstr "కొత్త నివేదికను సమర్పించండి"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:17
 msgid "Trending/Nearby Issues"
-msgstr "ట్రెండింగ్/సమీప సమస్యలు"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:18
 msgid "High-priority and trending reports in the portal."
-msgstr "పోర్టల్‌లో అధిక-ప్రాధాన్యత మరియు ట్రెండింగ్ నివేదికలు."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:30
 msgid "General"
-msgstr "సాధారణ"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:31
 msgid "Upvote"
-msgstr "ఓటు వేయండి"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:36
 msgid "No issues reported yet."
-msgstr "ఇంకా ఎటువంటి సమస్యలు నివేదించబడలేదు."
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:40
 msgid "View All in Public Forum"
-msgstr "ప్రజా వేదికలో అన్నింటినీ చూడండి"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:45
 msgid "Quick Links"
-msgstr "త్వరిత లింకులు"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:49
 msgid "Track My Reports"
-msgstr "నా నివేదికలను ట్రాక్ చేయండి"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:53
 msgid "View Live Map"
-msgstr "లైవ్ మ్యాప్ చూడండి"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:57
 msgid "Manage Profile"
-msgstr "ప్రొఫైల్‌ను నిర్వహించండి"
+msgstr ""
 
 #: app/templates/citizen_dashboard.html:91
 msgid "Upvoted"
-msgstr "ఓటు వేశారు"
+msgstr ""
 
 #: app/templates/index.html:5
 msgid "Welcome to CIRS !"
-msgstr "CIRS కు స్వాగతం !"
+msgstr ""
 
 #: app/templates/index.html:6
 msgid "--Report today for a better tomorrow"
-msgstr "--మెరుగైన రేపటి కోసం నేడే నివేదించండి"
+msgstr ""
 
 #: app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
-msgstr "స్థానిక సమస్యలను కలిసి నివేదించండి, ట్రాక్ చేయండి మరియు పరిష్కరించండి"
+msgstr ""
 
 #: app/templates/index.html:11
 msgid "Issues Resolved"
 msgstr "పరిష్కరించబడిన సమస్యలు"
 
 #: app/templates/index.html:15
-msgid "Active Users"
-msgstr "క్రియాశీల వినియోగదారులు"
+msgid "Online Users"
+msgstr "ఆన్‌లైన్ వినియోగదారులు"
 
 #: app/templates/index.html:19
+msgid "Registered Users"
+msgstr "నమోదిత వినియోగదారులు"
+
+#: app/templates/index.html:23
 msgid "Cities"
 msgstr "నగరాలు"
 
-#: app/templates/index.html:23
+#: app/templates/index.html:27
 msgid "Get Started Now"
-msgstr "ఇప్పుడే ప్రారంభించండి"
+msgstr ""
 
-#: app/templates/index.html:29 app/templates/index.html:51
+#: app/templates/index.html:33 app/templates/index.html:55
 msgid "Live Map"
-msgstr "లైవ్ మ్యాప్ చూడండి"
+msgstr ""
 
-#: app/templates/index.html:30
+#: app/templates/index.html:34
 msgid "Visualize all reported issues across districts in real-time."
-msgstr "నివేదించబడిన సమస్యలను నిజ సమయంలో దృశ్యమానం చేయండి."
-
-#: app/templates/index.html:42
-msgid "Powerful Features"
-msgstr "శక్తివంతమైన ఫీచర్లు"
+msgstr ""
 
 #: app/templates/index.html:46
+msgid "Powerful Features"
+msgstr ""
+
+#: app/templates/index.html:50
 msgid "Media Reporting"
-msgstr "మీడియా రిపోర్టింగ్"
+msgstr ""
 
-#: app/templates/index.html:47
+#: app/templates/index.html:51
 msgid "Capture issues with photos and voice notes."
-msgstr "ఫోటోలు మరియు వాయిస్ నోట్స్‌తో సమస్యలను క్యాప్చర్ చేయండి."
-
-#: app/templates/index.html:52
-msgid "Visualize reported issues in real-time."
-msgstr "నివేదించబడిన సమస్యలను నిజ సమయంలో దృశ్యమానం చేయండి."
+msgstr ""
 
 #: app/templates/index.html:56
-msgid "Analytics"
-msgstr "విశ్లేషణలు"
+msgid "Visualize reported issues in real-time."
+msgstr ""
 
-#: app/templates/index.html:57
+#: app/templates/index.html:60
+msgid "Analytics"
+msgstr ""
+
+#: app/templates/index.html:61
 msgid "Track resolution status and response times."
-msgstr "పరిష్కార స్థితి మరియు ప్రతిస్పందన సమయాలను ట్రాక్ చేయండి."
+msgstr ""
 
 #: app/templates/live_map.html:5
 msgid "Live Map - Community Issues"
-msgstr "లైవ్ మ్యాప్ - కమ్యూనిటీ సమస్యలు"
+msgstr ""
 
 #: app/templates/live_map.html:8
 msgid "Where am I?"
-msgstr "నేను ఎక్కడ ఉన్నాను?"
+msgstr ""
 
 #: app/templates/live_map.html:69 app/templates/status.html:40
 msgid "Category:"
-msgstr "వర్గం:"
+msgstr ""
 
 #: app/templates/live_map.html:71
 msgid "Status:"
-msgstr "స్థితి:"
+msgstr ""
 
 #: app/templates/live_map.html:97
 msgid "You are here"
@@ -613,91 +614,91 @@ msgstr ""
 
 #: app/templates/login.html:5
 msgid "Login / Register"
-msgstr "లాగిన్ / రిజిస్టర్"
+msgstr ""
 
 #: app/templates/login.html:8
 msgid "Mobile Number"
-msgstr "మొబైల్ సంఖ్య"
+msgstr ""
 
 #: app/templates/login.html:17
 msgid "I am a:"
-msgstr "నేను ఒక:"
+msgstr ""
 
 #: app/templates/login.html:20
 msgid "Citizen"
-msgstr "పౌరుడు"
+msgstr ""
 
 #: app/templates/login.html:22
 msgid "Officer"
-msgstr "అధికారి"
+msgstr ""
 
 #: app/templates/login.html:25
 msgid "Send OTP"
-msgstr "OTP పంపండి"
+msgstr ""
 
 #: app/templates/login.html:27
 msgid "Demo OTP: 1234"
-msgstr "డెమో OTP: 1234"
+msgstr ""
 
 #: app/templates/login.html:84
 msgid "Please enter 10 digits"
-msgstr "దయచేసి 10 అంకెలను నమోదు చేయండి"
+msgstr ""
 
 #: app/templates/profile.html:5
 msgid "User Profile"
-msgstr "వినియోగదారు ప్రొఫైల్"
+msgstr ""
 
 #: app/templates/profile.html:9
 msgid "Full Name"
-msgstr "పూర్తి పేరు"
+msgstr ""
 
 #: app/templates/profile.html:10
 msgid "Enter your full name"
-msgstr "మీ పూర్తి పేరును నమోదు చేయండి"
+msgstr ""
 
 #: app/templates/profile.html:15
 msgid "Not Assigned"
-msgstr "కేటాయించబడలేదు"
+msgstr ""
 
 #: app/templates/profile.html:19
 msgid "Phone Number"
-msgstr "ఫోన్ సంఖ్య"
+msgstr ""
 
 #: app/templates/profile.html:21
 msgid "Phone number cannot be changed."
-msgstr "ఫోన్ సంఖ్యను మార్చడం సాధ్యం కాదు."
+msgstr ""
 
 #: app/templates/profile.html:25
 msgid "Address"
-msgstr "చిరునామా"
+msgstr ""
 
 #: app/templates/profile.html:26
 msgid "Enter your address"
-msgstr "మీ చిరునామాను నమోదు చేయండి"
+msgstr ""
 
 #: app/templates/profile.html:31
 msgid "State"
-msgstr "రాష్ట్రం"
+msgstr ""
 
 #: app/templates/profile.html:33
 msgid "Select State"
-msgstr "రాష్ట్రాన్ని ఎంచుకోండి"
+msgstr ""
 
 #: app/templates/profile.html:37
 msgid "District"
-msgstr "జిల్లా"
+msgstr ""
 
 #: app/templates/profile.html:39 app/templates/profile.html:134
 msgid "Select District"
-msgstr "జిల్లాను ఎంచుకోండి"
+msgstr ""
 
 #: app/templates/profile.html:44
 msgid "Update Profile"
-msgstr "ప్రొఫైల్‌ను నవీకరించండి"
+msgstr ""
 
 #: app/templates/profile.html:49
 msgid "Account Management"
-msgstr "ఖాతా నిర్వహణ"
+msgstr ""
 
 #: app/templates/profile.html:52
 msgid ""
@@ -707,7 +708,7 @@ msgstr ""
 
 #: app/templates/profile.html:53 app/templates/profile.html:61
 msgid "Request Account Deletion"
-msgstr "ఖాతా తొలగింపును అభ్యర్థించండి"
+msgstr ""
 
 #: app/templates/profile.html:58
 msgid ""
@@ -717,67 +718,67 @@ msgstr ""
 
 #: app/templates/profile.html:60
 msgid "Update profile to enable"
-msgstr "ప్రొఫైల్‌ను నవీకరించండి"
+msgstr ""
 
 #: app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
-msgstr "ఖాతా తొలగింపు అభ్యర్థన ఆమోదం కోసం వేచి ఉంది."
+msgstr ""
 
 #: app/templates/public_forum.html:5
 msgid "Public Forum"
-msgstr "ప్రజా వేదిక"
+msgstr ""
 
 #: app/templates/public_forum.html:16
 msgid "Posted on"
-msgstr "నాడు పోస్ట్ చేయబడింది"
+msgstr ""
 
 #: app/templates/public_forum.html:16
 msgid "by"
-msgstr "ద్వారా"
+msgstr ""
 
 #: app/templates/public_forum.html:21
 msgid "Upvotes"
-msgstr "ఓట్లు"
+msgstr ""
 
 #: app/templates/public_forum.html:24
 msgid "View Location"
-msgstr "గుర్తించబడిన ప్రదేశాన్ని చూడండి"
+msgstr ""
 
 #: app/templates/public_forum.html:26 app/templates/public_forum.html:30
 msgid "Comments"
-msgstr "వ్యాఖ్యలు"
+msgstr ""
 
 #: app/templates/public_forum.html:39
 msgid "Add a comment..."
-msgstr "వ్యాఖ్యను జోడించండి..."
+msgstr ""
 
 #: app/templates/public_forum.html:40
 msgid "Post"
-msgstr "పోస్ట్ చేయండి"
+msgstr ""
 
 #: app/templates/public_forum.html:51
 msgid "Report Location"
-msgstr "రిపోర్ట్ చాట్"
+msgstr ""
 
 #: app/templates/status.html:5
 msgid "My Submitted Reports"
-msgstr "నేను సమర్పించిన నివేదికలు"
+msgstr ""
 
 #: app/templates/status.html:27
 msgid "No reports found matching the criteria."
-msgstr "నిబంధనలకు సరిపోయే నివేదికలేవీ కనుగొనబడలేదు."
+msgstr ""
 
 #: app/templates/status.html:42
 msgid "Location:"
-msgstr "ప్రదేశం:"
+msgstr ""
 
 #: app/templates/status.html:42
 msgid "Unknown"
-msgstr "తెలియదు"
+msgstr ""
 
 #: app/templates/status.html:43
 msgid "Upvotes:"
-msgstr "ఓట్లు:"
+msgstr ""
 
 #: app/templates/status.html:51
 msgid "Resolution Notes:"
@@ -793,181 +794,177 @@ msgstr ""
 
 #: app/templates/status.html:64
 msgid "View Marked Location"
-msgstr "గుర్తించబడిన ప్రదేశాన్ని చూడండి"
+msgstr ""
 
 #: app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
-msgstr "మీరు ఖచ్చితంగా ఈ నివేదికను మళ్లీ తెరవాలనుకుంటున్నారా?"
+msgstr ""
 
 #: app/templates/status.html:74
 msgid "Reopen"
-msgstr "మళ్లీ తెరువు"
+msgstr ""
 
 #: app/templates/status.html:85
 msgid "Images:"
-msgstr "చిత్రాలు:"
+msgstr ""
 
 #: app/templates/status.html:96
 msgid "Voice Note:"
-msgstr "వాయిస్ నోట్:"
+msgstr ""
 
 #: app/templates/status.html:100
 msgid "Your browser does not support the audio element."
-msgstr "మీ బ్రౌజర్ ఆడియో ఎలిమెంట్‌ను సపోర్ట్ చేయదు."
+msgstr ""
 
 #: app/templates/submit_report.html:8
 msgid "Issue Title"
-msgstr "సమస్య శీర్షిక"
+msgstr ""
 
 #: app/templates/submit_report.html:9
 msgid "Brief title of the issue"
-msgstr "సమస్య యొక్క సంక్షిప్త శీర్షిక"
+msgstr ""
 
 #: app/templates/submit_report.html:16
 msgid "Select Category"
-msgstr "వర్గాన్ని ఎంచుకోండి"
+msgstr ""
 
 #: app/templates/submit_report.html:17
 msgid "Roads & Potholes"
-msgstr "రోడ్లు మరియు గుంతలు"
+msgstr ""
 
 #: app/templates/submit_report.html:18
 msgid "Water Supply"
-msgstr "నీటి సరఫరా"
+msgstr ""
 
 #: app/templates/submit_report.html:19
 msgid "Electricity"
-msgstr "విద్యుత్"
+msgstr ""
 
 #: app/templates/submit_report.html:20
 msgid "Sanitation & Garbage"
-msgstr "పరిశుభ్రత మరియు చెత్త"
+msgstr ""
 
 #: app/templates/submit_report.html:21
 msgid "Other"
-msgstr "ఇతర"
+msgstr ""
 
 #: app/templates/submit_report.html:27
 msgid "Issue Description"
-msgstr "సమస్య వివరణ"
+msgstr ""
 
 #: app/templates/submit_report.html:28
 msgid "Provide details about the issue..."
-msgstr "సమస్య గురించి వివరాలను అందించండి..."
+msgstr ""
 
 #: app/templates/submit_report.html:33
 msgid "Location will be auto-fetched, but you can adjust it on the map."
-msgstr "ప్రదేశం స్వయంచాలకంగా పొందబడుతుంది, కానీ మీరు దానిని మ్యాప్‌లో సర్దుబాటు చేయవచ్చు."
+msgstr ""
 
 #: app/templates/submit_report.html:43
 msgid "Upload Images (Max 3, Max 5MB each)"
-msgstr "చిత్రాలను అప్‌లోడ్ చేయండి (గరిష్టంగా 3, ఒక్కొక్కటి గరిష్టంగా 5MB)"
+msgstr ""
 
 #: app/templates/submit_report.html:45
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
-msgstr "ఏదైనా జియో-లొకేషన్ ఆధారిత కెమెరా ద్వారా తీసిన చిత్రాలు మాత్రమే అప్‌లోడ్ చేయడానికి ఆమోదయోగ్యమైనవి!"
+msgstr ""
 
 #: app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
-msgstr "లైవ్ జియో-కెమెరా"
+msgstr ""
 
 #: app/templates/submit_report.html:50
 msgid "Upload Files"
-msgstr "ఫైళ్ళను అప్‌లోడ్ చేయండి"
+msgstr ""
 
 #: app/templates/submit_report.html:59
 msgid "Capture Photo"
-msgstr "ఫోటో తీయండి"
+msgstr ""
 
 #: app/templates/submit_report.html:60
 msgid "Switch"
-msgstr "మార్చు"
+msgstr ""
 
 #: app/templates/submit_report.html:61
 msgid "Close Camera"
-msgstr "కెమెరాను మూసివేయి"
+msgstr ""
 
 #: app/templates/submit_report.html:72
 msgid "Voice Note"
-msgstr "వాయిస్ నోట్"
+msgstr ""
 
 #: app/templates/submit_report.html:74
 msgid "Record"
-msgstr "రికార్డ్ చేయండి"
+msgstr ""
 
 #: app/templates/submit_report.html:75
 msgid "Stop"
-msgstr "ఆపివేయి"
+msgstr ""
 
 #: app/templates/submit_report.html:78
 msgid "OR upload file"
-msgstr "లేదా ఫైల్‌ను అప్‌లోడ్ చేయండి"
+msgstr ""
 
 #: app/templates/submit_report.html:82
 msgid "Remove"
-msgstr "తొలగించు"
+msgstr ""
 
 #: app/templates/submit_report.html:86
 msgid "Submit Report"
-msgstr "నివేదికను సమర్పించండి"
+msgstr ""
 
 #: app/templates/submit_report.html:196
 msgid "File"
-msgstr "ఫైల్"
+msgstr ""
 
 #: app/templates/submit_report.html:196
 msgid "exceeds 5MB limit"
-msgstr "5MB పరిమితిని మించిపోయింది"
+msgstr ""
 
 #: app/templates/submit_report.html:217 app/templates/submit_report.html:257
 msgid "Maximum 3 images reached"
-msgstr "గరిష్టంగా 3 చిత్రాలకు చేరుకున్నారు"
+msgstr ""
 
 #: app/templates/submit_report.html:241
 msgid "Camera access denied or not available"
-msgstr "కెమెరా యాక్సెస్ నిరాకరించబడింది లేదా అందుబాటులో లేదు"
+msgstr ""
 
 #: app/templates/submit_report.html:297
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:319
-msgid "Submission blocked: Please enable GPS/Location services first."
-msgstr ""
-
 #: app/templates/submit_report.html:325
 msgid "Please upload or capture at least one image of the issue."
-msgstr "దయచేసి సమస్యకు సంబంధించి కనీసం ఒక చిత్రాన్ని అప్‌లోడ్ చేయండి లేదా తీయండి."
+msgstr ""
 
 #: app/templates/submit_report.html:364
 msgid "Recording..."
-msgstr "రికార్డింగ్..."
+msgstr ""
 
 #: app/templates/submit_report.html:379
 msgid "Microphone access denied"
-msgstr "మైక్రోఫోన్ యాక్సెస్ నిరాకరించబడింది"
+msgstr ""
 
 #: app/templates/verify_otp.html:5
 msgid "Verify OTP"
-msgstr "OTP ని ధృవీకరించండి"
+msgstr ""
 
 #: app/templates/verify_otp.html:6
 msgid "Sent to:"
-msgstr "దీనికి పంపబడింది:"
+msgstr ""
 
 #: app/templates/verify_otp.html:9
 msgid "Enter 4-Digit OTP"
-msgstr "4-అంకెల OTP ని నమోదు చేయండి"
+msgstr ""
 
 #: app/templates/verify_otp.html:17
 msgid "Verify & Login"
-msgstr "ధృవీకరించండి & లాగిన్ అవ్వండి"
+msgstr ""
 
 #: app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
-msgstr "దయచేసి 4 అంకెలను నమోదు చేయండి"
+msgstr ""
 
 #~ msgid ""
 #~ "Are you sure you want to request"
@@ -1718,5 +1715,37 @@ msgstr "దయచేసి 4 అంకెలను నమోదు చేయం�
 #~ msgid "Please enter 4 digits"
 #~ msgstr "దయచేసి 4 అంకెలను నమోదు చేయండి"
 
+#~ msgid "Location is required. Please enable GPS and allow location access."
+#~ msgstr ""
+#~ "స్థానం అవసరం. దయచేసి GPSని ప్రారంభించండి "
+#~ "మరియు స్థాన ప్రాప్యతను అనుమతించండి।"
 
+#~ msgid "Report"
+#~ msgstr ""
+
+#~ msgid "Admin"
+#~ msgstr ""
+
+#~ msgid "Location services are disabled. Please enable GPS to perform actions."
+#~ msgstr ""
+#~ "స్థాన సేవలు నిలిపివేయబడ్డాయి. చర్యలను "
+#~ "నిర్వహించడానికి దయచేసి GPSని ప్రారంభించండి।"
+
+#~ msgid "Retry Now"
+#~ msgstr "ఇప్పుడే మళ్ళీ ప్రయత్నించండి"
+
+#~ msgid "You are currently offline. Please check your internet connection."
+#~ msgstr ""
+
+#~ msgid "Location still disabled. Please enable GPS in system settings."
+#~ msgstr ""
+
+#~ msgid "Where am I?"
+#~ msgstr "నేను ఎక్కడ ఉన్నాను?"
+
+#~ msgid "You are here"
+#~ msgstr ""
+
+#~ msgid "Submission blocked: Please enable GPS/Location services first."
+#~ msgstr ""
 
