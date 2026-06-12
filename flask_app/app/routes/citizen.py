@@ -191,18 +191,24 @@ def submit_report():
             flash(_('You can only upload up to 3 images.'), 'danger')
             return redirect(url_for('citizen.submit_report'))
 
-        for img in images:
-            if img.filename:
-                url, public_id = upload_file(img, folder="civic_issue/reports")
-                report_img = ReportImage(url=url, public_id=public_id, report_id=report.id)
-                db.session.add(report_img)
-                
-        # Handle Voice Note Upload
-        voice = request.files.get('voice')
-        if voice and voice.filename:
-            url, unused_id = upload_file(voice, folder="civic_issue/voice")
-            voice_note = VoiceNote(url=url, report_id=report.id)
-            db.session.add(voice_note)
+        try:
+            for img in images:
+                if img.filename:
+                    url, public_id = upload_file(img, folder="civic_issue/reports")
+                    report_img = ReportImage(url=url, public_id=public_id, report_id=report.id)
+                    db.session.add(report_img)
+                    
+            # Handle Voice Note Upload
+            voice = request.files.get('voice')
+            if voice and voice.filename:
+                url, unused_id = upload_file(voice, folder="civic_issue/voice")
+                voice_note = VoiceNote(url=url, report_id=report.id)
+                db.session.add(voice_note)
+        except Exception as e:
+            db.session.rollback()
+            print(f"File upload error: {e}")
+            flash(_('Failed to upload files. Please try again later.'), 'danger')
+            return redirect(url_for('citizen.submit_report'))
             
         db.session.commit()
         flash(_('Report submitted successfully!'), 'success')

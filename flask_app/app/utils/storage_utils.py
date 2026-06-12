@@ -27,8 +27,7 @@ def upload_file(file, folder="civic_issue"):
     file_path = f"{folder}/{filename}"
 
     if not supabase:
-        print(f"Warning: Supabase client not initialized, falling back to local storage for {filename}.")
-        return upload_file_local(file, folder)
+        raise Exception("Supabase client not initialized. Cannot upload file.")
 
     bucket_name = current_app.config.get('SUPABASE_BUCKET', 'cirs-uploads')
     
@@ -44,7 +43,6 @@ def upload_file(file, folder="civic_issue"):
         print(f"Attempting Supabase upload to bucket '{bucket_name}', path '{file_path}'...")
         
         # Upload to Supabase
-        # In supabase-py v2, this returns a response object or raises an exception
         res = supabase.storage.from_(bucket_name).upload(
             path=file_path,
             file=file_content,
@@ -52,8 +50,6 @@ def upload_file(file, folder="civic_issue"):
         )
         
         # Get public URL
-        # In modern supabase-py (v2.x), get_public_url usually returns a string directly
-        # but in some sub-versions it might return an object with a public_url attribute.
         public_url = supabase.storage.from_(bucket_name).get_public_url(file_path)
         
         if not isinstance(public_url, str):
@@ -68,29 +64,6 @@ def upload_file(file, folder="civic_issue"):
         
     except Exception as e:
         print(f"Supabase Upload Error for {filename}: {e}")
-        # Log more details if available
         if hasattr(e, 'message'):
             print(f"Error Message: {e.message}")
-            
-        print("Falling back to local storage due to upload error.")
-        return upload_file_local(file, folder)
-
-def upload_file_local(file, folder="civic_issue"):
-    # Ensure folder structure exists in static/uploads
-    safe_folder = folder.replace('/', os.sep)
-    upload_dir = os.path.join(current_app.root_path, 'static', 'uploads', safe_folder)
-    
-    if not os.path.exists(upload_dir):
-        os.makedirs(upload_dir, exist_ok=True)
-    
-    ext = os.path.splitext(file.filename)[1]
-    filename = f"{uuid.uuid4().hex}{ext}"
-    full_path = os.path.join(upload_dir, filename)
-    
-    file.save(full_path)
-    
-    from flask import url_for
-    url_path = f'uploads/{folder}/{filename}'.replace('\\', '/')
-    local_url = url_for('static', filename=url_path)
-    
-    return local_url, f"local_{filename}"
+        raise Exception(f"Failed to upload file to Supabase: {e}")
