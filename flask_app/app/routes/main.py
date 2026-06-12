@@ -1,12 +1,21 @@
 from flask import render_template, jsonify, request, session, redirect, url_for, current_app
 from flask_login import login_required, current_user
 from . import main_bp
-from ..models.models import User, Report, Message, db
+from ..models.models import User, Report, Message, db, get_ist_time
+from datetime import timedelta
 
 @main_bp.route('/')
 def index():
     resolved_count = Report.query.filter_by(status='resolved').count()
-    active_users = User.query.filter_by(is_active=True).count()
+    
+    # Online users (active in last 5 minutes)
+    now = get_ist_time()
+    online_threshold = now - timedelta(minutes=5)
+    online_users = User.query.filter(User.last_seen >= online_threshold).count()
+    
+    # Total registered users
+    total_users = User.query.count()
+    
     cities_count = db.session.query(Report.city).filter(Report.city != None).distinct().count()
     
     # Fetch all reports for the public map
@@ -14,7 +23,8 @@ def index():
     
     return render_template('index.html', 
                            resolved=resolved_count, 
-                           users=active_users, 
+                           online_users=online_users,
+                           total_users=total_users,
                            cities=cities_count,
                            reports=all_reports)
 
