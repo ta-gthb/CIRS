@@ -272,7 +272,7 @@
     };
 
     captureBtn.onclick = () => {
-        if (openCameraBtn.classList.contains('disabled-by-location')) {
+        if (!window.isLocationActive || openCameraBtn.classList.contains('disabled-by-location')) {
             alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
             closeCameraBtn.click();
             return;
@@ -283,34 +283,61 @@
             return;
         }
 
+        // --- High-Accuracy Verification on Capture ---
+        captureBtn.disabled = true;
+        const originalText = captureBtn.innerText;
+        captureBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{ _("Verifying GPS...") }}';
+
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                // Verification Success
+                const verifiedLat = pos.coords.latitude;
+                const verifiedLng = pos.coords.longitude;
+                
+                // Update hidden fields and global vars
+                updateLocationFields(verifiedLat, verifiedLng);
+                currentLat = verifiedLat;
+                currentLng = verifiedLng;
+
+                // Perform Actual Capture
+                performCapture(verifiedLat, verifiedLng);
+                
+                // Reset button
+                captureBtn.disabled = false;
+                captureBtn.innerText = originalText;
+            },
+            (err) => {
+                // Verification Failure
+                alert("{{ _('Location verification failed. Please ensure GPS is enabled and has a clear signal.') }}");
+                captureBtn.disabled = false;
+                captureBtn.innerText = originalText;
+                if (typeof updateLocationUI === 'function') updateLocationUI(false);
+                closeCameraBtn.click();
+            },
+            { timeout: 5000, enableHighAccuracy: true }
+        );
+    };
+
+    function performCapture(lat, lng) {
         canvas.width = video.videoWidth;
         canvas.height = video.videoHeight;
         const ctx = canvas.getContext('2d');
         
-        // Mirror if front camera
         if (useFrontCamera) {
             ctx.translate(canvas.width, 0);
             ctx.scale(-1, 1);
         }
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
         if (useFrontCamera) {
-            ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
         }
 
-        // Add Watermark
         const now = new Date();
         const dateStr = now.toLocaleDateString();
         const timeStr = now.toLocaleTimeString();
-        const latStr = currentLat.toFixed(6);
-        const lngStr = currentLng.toFixed(6);
+        const latStr = lat.toFixed(6);
+        const lngStr = lng.toFixed(6);
         
-        if (currentLat === 0 && currentLng === 0) {
-            alert("{{ _('Location data missing. Cannot capture photo.') }}");
-            closeCameraBtn.click();
-            return;
-        }
-
-        // Watermark Background
         const padding = 20;
         const fontSize = Math.max(16, Math.floor(canvas.width / 40));
         const boxHeight = fontSize * 3.5;
@@ -339,23 +366,15 @@
                 closeCameraBtn.click();
             }
         }, 'image/jpeg', 0.85);
-    };
+    }
 
     // Final Submission Logic
     const submitBtn = document.getElementById('submitBtn');
     
-    submitBtn.onclick = async () => {
-        // 1. Check Global state
+    submitBtn.onclick = () => {
+        // Simple state checks for final submission
         if (!window.isLocationActive || submitBtn.classList.contains('disabled-by-location')) {
             alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
-            return;
-        }
-
-        // 2. Check Hidden Fields
-        const lat = document.getElementById('latitude').value;
-        const lng = document.getElementById('longitude').value;
-        if (!lat || !lng) {
-            alert("{{ _('Location data is missing. Please wait for GPS to lock or adjust the map.') }}");
             return;
         }
 
@@ -364,32 +383,14 @@
             return;
         }
 
-        // 3. Final Redundant Check (High Accuracy)
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{ _("Verifying Location...") }}';
-        
-        navigator.geolocation.getCurrentPosition(
-            (pos) => {
-                // Success - Final sync of fields
-                updateLocationFields(pos.coords.latitude, pos.coords.longitude);
-                prepareFilesAndSubmit();
-            },
-            (err) => {
-                // Failure - GPS turned off recently
-                alert("{{ _('Location verification failed. Please ensure GPS is enabled.') }}");
-                if (typeof updateLocationUI === 'function') updateLocationUI(false);
-                resetSubmitBtn();
-            },
-            { timeout: 4000, enableHighAccuracy: true }
-        );
-    };
+        const lat = document.getElementById('latitude').value;
+        const lng = document.getElementById('longitude').value;
+        if (!lat || !lng) {
+            alert("{{ _('Location data is missing. Please wait for GPS lock.') }}");
+            return;
+        }
 
-    function resetSubmitBtn() {
-        submitBtn.disabled = false;
-        submitBtn.innerText = "{{ _('Submit Report') }}";
-    }
-
-    function prepareFilesAndSubmit() {
+        // Prepare and submit instantly since verification happened at capture
         const dataTransfer = new DataTransfer();
         capturedFiles.forEach(file => dataTransfer.items.add(file));
         
@@ -405,7 +406,7 @@
         hiddenInput.files = dataTransfer.files;
         
         form.submit();
-    }
+    };
 
     // Camera Logic Harden
     openCameraBtn.onclick = () => {
