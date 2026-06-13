@@ -278,7 +278,7 @@
                 },
                 { 
                     enableHighAccuracy: true, 
-                    timeout: 2000, // Very short timeout to catch toggles instantly
+                    timeout: 4000, // Very short timeout to catch toggles instantly
                     maximumAge: 0   // Do not use cached data
                 }
             );
@@ -304,7 +304,7 @@
                         (e) => { 
                             updateLocationUI(false); 
                         },
-                        { timeout: 2000, enableHighAccuracy: true }
+                        { timeout: 3000, enableHighAccuracy: true }
                     );
                 }
                 
