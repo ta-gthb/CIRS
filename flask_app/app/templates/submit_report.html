@@ -107,6 +107,7 @@
     // --- Mapping Logic ---
     let map, marker;
     var currentLat = 0, currentLng = 0;
+    let mapInitialized = false;
 
     function initMap() {
         const defaultLocation = [22.5726, 88.3639];
@@ -114,19 +115,14 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
         marker = L.marker(defaultLocation, { draggable: true }).addTo(map);
 
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                const pos = [position.coords.latitude, position.coords.longitude];
-                currentLat = pos[0];
-                currentLng = pos[1];
-                map.setView(pos, 15);
-                marker.setLatLng(pos);
-                updateLocationFields(pos[0], pos[1]);
-            });
+        // Try initial sync with global state
+        if (window.lastKnownPos) {
+            syncMapWithGlobal(window.lastKnownPos);
         }
+
         marker.on('dragend', (e) => {
-            if (document.querySelector('.requires-location').classList.contains('disabled-by-location')) {
-                marker.setLatLng([currentLat, currentLng]); // Reset marker
+            if (!window.isLocationActive) {
+                if (window.lastKnownPos) syncMapWithGlobal(window.lastKnownPos);
                 alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
                 return;
             }
@@ -135,8 +131,9 @@
             currentLng = pos.lng;
             updateLocationFields(pos.lat, pos.lng);
         });
+
         map.on('click', (e) => {
-            if (document.querySelector('.requires-location').classList.contains('disabled-by-location')) {
+            if (!window.isLocationActive) {
                 alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
                 return;
             }
@@ -145,7 +142,27 @@
             currentLng = e.latlng.lng;
             updateLocationFields(e.latlng.lat, e.latlng.lng);
         });
+        
+        mapInitialized = true;
     }
+
+    function syncMapWithGlobal(pos) {
+        if (!map) return;
+        const latlng = [pos.lat, pos.lng];
+        currentLat = pos.lat;
+        currentLng = pos.lng;
+        map.setView(latlng, 15);
+        marker.setLatLng(latlng);
+        updateLocationFields(pos.lat, pos.lng);
+    }
+
+    // Listen for global location updates
+    window.addEventListener('locationUpdated', (e) => {
+        // Only auto-sync map if fields are empty (first lock) or not dragging
+        if (mapInitialized && (!document.getElementById("latitude").value)) {
+            syncMapWithGlobal(e.detail);
+        }
+    });
 
     function updateLocationFields(lat, lng) {
         document.getElementById("latitude").value = lat;
@@ -402,15 +419,8 @@
             return;
         }
 
-        // Final quick check before opening stream
-        navigator.geolocation.getCurrentPosition(
-            () => startCamera(),
-            () => {
-                alert("{{ _('Location lost. Camera cannot be opened.') }}");
-                if (typeof updateLocationUI === 'function') updateLocationUI(false);
-            },
-            { timeout: 3000, enableHighAccuracy: true }
-        );
+        // Location is already verified by global watchPosition
+        startCamera();
     };
 
     // --- Voice Logic ---

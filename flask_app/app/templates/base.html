@@ -227,6 +227,7 @@
     <script>
         // Global Location State
         window.isLocationActive = false;
+        window.lastKnownPos = null;
 
         // Network Status Monitoring
         function updateNetworkUI() {
@@ -257,21 +258,29 @@
                 navigator.geolocation.clearWatch(locationWatchId);
             }
 
-            // More aggressive monitoring
+            // Continuous high-accuracy monitoring
             locationWatchId = navigator.geolocation.watchPosition(
                 (position) => {
+                    window.lastKnownPos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
                     updateLocationUI(true);
                     stopRecoveryPolling();
+                    
+                    // Fire a custom event for child scripts (like mapping) to react
+                    window.dispatchEvent(new CustomEvent('locationUpdated', { detail: window.lastKnownPos }));
                 },
                 (error) => {
                     console.warn("Location error detected:", error.code, error.message);
+                    window.lastKnownPos = null;
                     updateLocationUI(false);
                     startRecoveryPolling();
                 },
                 { 
                     enableHighAccuracy: true, 
-                    timeout: 3000, 
-                    maximumAge: 0 
+                    timeout: 10000, // Increased timeout for better stability
+                    maximumAge: 5000 // Allow slightly cached data for performance
                 }
             );
             {% endif %}
@@ -279,21 +288,24 @@
 
         function startRecoveryPolling() {
             if (recoveryInterval === null) {
-                // Poll aggressively when location is off to detect re-enablement quickly
                 recoveryInterval = setInterval(() => {
                     navigator.geolocation.getCurrentPosition(
-                        () => {
+                        (position) => {
+                            window.lastKnownPos = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
                             updateLocationUI(true);
                             stopRecoveryPolling();
                             startLocationMonitoring(); 
                         },
                         (err) => {
-                            // Still off
+                            window.lastKnownPos = null;
                             updateLocationUI(false);
                         },
-                        { timeout: 2000, enableHighAccuracy: true }
+                        { timeout: 5000, enableHighAccuracy: true }
                     );
-                }, 2000);
+                }, 3000);
             }
         }
 
@@ -306,12 +318,17 @@
 
         function checkLocationStatusManually() {
             navigator.geolocation.getCurrentPosition(
-                () => {
+                (position) => {
+                    window.lastKnownPos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
                     updateLocationUI(true);
                     stopRecoveryPolling();
                     startLocationMonitoring();
                 },
                 (err) => {
+                    window.lastKnownPos = null;
                     updateLocationUI(false);
                     alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
                 },
@@ -339,7 +356,7 @@
                     if (btn.tagName === 'LABEL') btn.style.pointerEvents = 'none';
                 });
                 
-                // Aggressively clear inputs
+                // Clear fields
                 const latInput = document.getElementById('latitude');
                 const lngInput = document.getElementById('longitude');
                 if (latInput) latInput.value = '';
@@ -354,13 +371,6 @@
         window.addEventListener('DOMContentLoaded', () => {
             updateNetworkUI();
             startLocationMonitoring();
-        });
-        
-        // Handle visibility change
-        document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'visible') {
-                startLocationMonitoring();
-            }
         });
     </script>
 
