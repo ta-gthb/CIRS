@@ -104,12 +104,14 @@
         });
     </script>
 
-    <div id="locationWarning" class="location-warning-banner">
-        <i class="fas fa-map-marker-alt"></i> {{ _('Location is required. Please enable GPS and allow location access.') }}
-        <a href="javascript:void(0)" onclick="checkLocationStatusManually()" style="color: white; text-decoration: underline; margin-left: 10px; font-size: 0.8rem;">{{ _('Retry Now') }}</a>
-    </div>
-    <div id="networkWarning" class="network-warning-banner">
-        <i class="fas fa-wifi-slash"></i> {{ _('You are currently offline. Please check your internet connection.') }}
+    <div class="warning-container">
+        <div id="locationWarning" class="location-warning-banner">
+            <i class="fas fa-map-marker-alt"></i> {{ _('Location is required. Please enable GPS and allow location access.') }}
+            <a href="javascript:void(0)" onclick="checkLocationStatusManually()" style="color: white; text-decoration: underline; margin-left: 10px; font-size: 0.8rem;">{{ _('Retry Now') }}</a>
+        </div>
+        <div id="networkWarning" class="network-warning-banner">
+            <i class="fas fa-wifi-slash"></i> {{ _('You are currently offline. Please check your internet connection.') }}
+        </div>
     </div>
 
     <div class="container content">

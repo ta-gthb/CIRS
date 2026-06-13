@@ -557,39 +557,53 @@ img { max-width: 100%; height: auto; }
     filter: grayscale(1);
 }
 
+.warning-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    max-width: 500px;
+    pointer-events: none;
+}
+
 .location-warning-banner, .network-warning-banner {
     display: none;
     background: var(--danger-color);
     color: white;
     text-align: center;
-    padding: 0.75rem;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
-    z-index: 999;
+    padding: 1.25rem;
     font-weight: bold;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    animation: slideDown 0.3s ease-out;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    border-radius: 15px;
+    animation: bannerPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: auto;
+    border: 2px solid rgba(255,255,255,0.1);
 }
 
 .network-warning-banner {
-    background: #444; /* Different color to distinguish from location */
-    top: 120px; /* Offset from location banner if both are shown */
+    background: #333; /* Darker for better contrast */
 }
 
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
+@keyframes bannerPopIn {
+    from { 
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
     .location-warning-banner, .network-warning-banner {
-        top: 60px;
-        font-size: 0.85rem;
-    }
-    .network-warning-banner {
-        top: 100px;
+        padding: 1rem;
+        font-size: 0.9rem;
     }
 }
 
