@@ -283,38 +283,13 @@
             return;
         }
 
-        // --- High-Accuracy Verification on Capture ---
-        captureBtn.disabled = true;
-        const originalText = captureBtn.innerText;
-        captureBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{ _("Verifying GPS...") }}';
+        if (!window.lastKnownPos) {
+            alert("{{ _('Waiting for GPS lock...') }}");
+            return;
+        }
 
-        navigator.geolocation.getCurrentPosition(
-            (pos) => {
-                // Verification Success
-                const verifiedLat = pos.coords.latitude;
-                const verifiedLng = pos.coords.longitude;
-                
-                // IMPORTANT: We do NOT update hidden fields here anymore.
-                // Hidden fields (latitude/longitude) remain bound to the MAP MARKER.
-                // We only use verified coordinates for the WATERMARK to ensure truthfulness.
-
-                // Perform Actual Capture with verified coordinates for watermark
-                performCapture(verifiedLat, verifiedLng);
-                
-                // Reset button
-                captureBtn.disabled = false;
-                captureBtn.innerText = originalText;
-            },
-            (err) => {
-                // Verification Failure
-                alert("{{ _('Location verification failed. Please ensure GPS is enabled and has a clear signal.') }}");
-                captureBtn.disabled = false;
-                captureBtn.innerText = originalText;
-                if (typeof updateLocationUI === 'function') updateLocationUI(false);
-                closeCameraBtn.click();
-            },
-            { timeout: 5000, enableHighAccuracy: true }
-        );
+        // Perform Instant Capture using continuous background location
+        performCapture(window.lastKnownPos.lat, window.lastKnownPos.lng);
     };
 
     function performCapture(lat, lng) {
