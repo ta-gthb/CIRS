@@ -316,12 +316,16 @@
                 restrictedButtons.forEach(btn => {
                     btn.classList.remove('disabled-by-location');
                     if (btn.tagName === 'BUTTON') btn.disabled = false;
+                    // If it's a label (Upload Files), remove disabled-like appearance
+                    if (btn.tagName === 'LABEL') btn.style.pointerEvents = 'auto';
                 });
             } else {
                 banner.style.display = 'block';
                 restrictedButtons.forEach(btn => {
                     btn.classList.add('disabled-by-location');
                     if (btn.tagName === 'BUTTON') btn.disabled = true;
+                    // If it's a label (Upload Files), block interactions
+                    if (btn.tagName === 'LABEL') btn.style.pointerEvents = 'none';
                 });
                 
                 // Clear coordinates to prevent stale submissions if GPS is turned off
@@ -329,6 +333,10 @@
                 const lngInput = document.getElementById('longitude');
                 if (latInput) latInput.value = '';
                 if (lngInput) lngInput.value = '';
+                
+                // Also clear global variables in child scripts if they exist
+                if (typeof currentLat !== 'undefined') currentLat = 0;
+                if (typeof currentLng !== 'undefined') currentLng = 0;
             }
         }
 

@@ -45,8 +45,8 @@
                 <i class="fas fa-exclamation-triangle"></i> {{ _('Only the images captured by any geo-location based camera are acceptable for uploading !') }}
             </p>
             <div class="image-actions" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
-                <button type="button" id="openCamera" class="btn btn-secondary"><i class="fas fa-camera"></i> {{ _('Live Geo-Camera') }}</button>
-                <label class="btn btn-info" style="margin: 0; cursor: pointer;">
+                <button type="button" id="openCamera" class="btn btn-secondary requires-location"><i class="fas fa-camera"></i> {{ _('Live Geo-Camera') }}</button>
+                <label class="btn btn-info requires-location" style="margin: 0; cursor: pointer;">
                     <i class="fas fa-upload"></i> {{ _('Upload Files') }}
                     <input type="file" id="imageInput" multiple accept="image/*" style="display: none;">
                 </label>
@@ -106,7 +106,7 @@
 <script>
     // --- Mapping Logic ---
     let map, marker;
-    let currentLat = 0, currentLng = 0;
+    var currentLat = 0, currentLng = 0;
 
     function initMap() {
         const defaultLocation = [22.5726, 88.3639];
@@ -125,12 +125,21 @@
             });
         }
         marker.on('dragend', (e) => {
+            if (document.querySelector('.requires-location').classList.contains('disabled-by-location')) {
+                marker.setLatLng([currentLat, currentLng]); // Reset marker
+                alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
+                return;
+            }
             const pos = e.target.getLatLng();
             currentLat = pos.lat;
             currentLng = pos.lng;
             updateLocationFields(pos.lat, pos.lng);
         });
         map.on('click', (e) => {
+            if (document.querySelector('.requires-location').classList.contains('disabled-by-location')) {
+                alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
+                return;
+            }
             marker.setLatLng(e.latlng);
             currentLat = e.latlng.lat;
             currentLng = e.latlng.lng;
@@ -213,6 +222,10 @@
     let useFrontCamera = false;
 
     openCameraBtn.onclick = async () => {
+        if (openCameraBtn.classList.contains('disabled-by-location')) {
+            alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
+            return;
+        }
         if (capturedFiles.length >= 3) {
             alert("{{ _('Maximum 3 images reached') }}");
             return;
@@ -226,6 +239,7 @@
     };
 
     async function startCamera() {
+        if (openCameraBtn.classList.contains('disabled-by-location')) return;
         if (stream) {
             stream.getTracks().forEach(track => track.stop());
         }
@@ -249,10 +263,15 @@
             stream = null;
         }
         cameraContainer.style.display = 'none';
-        openCameraBtn.disabled = capturedFiles.length >= 3;
+        openCameraBtn.disabled = capturedFiles.length >= 3 || openCameraBtn.classList.contains('disabled-by-location');
     };
 
     captureBtn.onclick = () => {
+        if (openCameraBtn.classList.contains('disabled-by-location')) {
+            alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
+            closeCameraBtn.click();
+            return;
+        }
         if (capturedFiles.length >= 3) {
             alert("{{ _('Maximum 3 images reached') }}");
             closeCameraBtn.click();
@@ -280,6 +299,12 @@
         const latStr = currentLat.toFixed(6);
         const lngStr = currentLng.toFixed(6);
         
+        if (currentLat === 0 && currentLng === 0) {
+            alert("{{ _('Location data missing. Cannot capture photo.') }}");
+            closeCameraBtn.click();
+            return;
+        }
+
         // Watermark Background
         const padding = 20;
         const fontSize = Math.max(16, Math.floor(canvas.width / 40));
