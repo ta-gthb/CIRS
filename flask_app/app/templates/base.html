@@ -267,6 +267,9 @@
                     };
                     lastStatusCheck = Date.now();
                     updateLocationUI(true);
+                    
+                    // Dispatch event for child scripts
+                    window.dispatchEvent(new CustomEvent('locationUpdated', { detail: window.lastKnownPos }));
                 },
                 (error) => {
                     console.warn("Location error code:", error.code, "Message:", error.message);
@@ -288,8 +291,13 @@
                     // If no update received for 4s, force a check
                     navigator.geolocation.getCurrentPosition(
                         (p) => { 
+                            window.lastKnownPos = {
+                                lat: p.coords.latitude,
+                                lng: p.coords.longitude
+                            };
                             lastStatusCheck = Date.now();
                             updateLocationUI(true); 
+                            window.dispatchEvent(new CustomEvent('locationUpdated', { detail: window.lastKnownPos }));
                         },
                         (e) => { 
                             updateLocationUI(false); 
