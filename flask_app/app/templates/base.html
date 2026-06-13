@@ -288,7 +288,6 @@
             if (window.locationHardGuard) clearInterval(window.locationHardGuard);
             window.locationHardGuard = setInterval(() => {
                 if (Date.now() - lastStatusCheck > 4000) {
-                    // If no update received for 4s, force a check
                     navigator.geolocation.getCurrentPosition(
                         (p) => { 
                             window.lastKnownPos = {
@@ -296,7 +295,10 @@
                                 lng: p.coords.longitude
                             };
                             lastStatusCheck = Date.now();
-                            updateLocationUI(true); 
+                            if (!window.isLocationActive) {
+                                updateLocationUI(true); 
+                                startLocationMonitoring(); 
+                            }
                             window.dispatchEvent(new CustomEvent('locationUpdated', { detail: window.lastKnownPos }));
                         },
                         (e) => { 
@@ -306,17 +308,24 @@
                     );
                 }
                 
-                // Also verify permissions if supported
                 if (navigator.permissions && navigator.permissions.query) {
                     navigator.permissions.query({ name: 'geolocation' }).then(result => {
                         if (result.state === 'denied') {
                             updateLocationUI(false);
+                        } else if (result.state === 'granted' && !window.isLocationActive) {
+                            startLocationMonitoring();
                         }
                     });
                 }
             }, 3000);
             {% endif %}
         }
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                startLocationMonitoring();
+            }
+        });
 
         function checkLocationStatusManually() {
             // Force reset of monitor
