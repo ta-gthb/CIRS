@@ -245,7 +245,7 @@
 
         // Geolocation Continuous Monitoring
         let locationWatchId = null;
-        let recoveryInterval = null;
+        let lastStatusCheck = Date.now();
 
         function startLocationMonitoring() {
             {% if current_user.is_authenticated %}
@@ -258,65 +258,61 @@
                 navigator.geolocation.clearWatch(locationWatchId);
             }
 
-            // Continuous high-accuracy monitoring
+            // High-precision, high-frequency monitoring
             locationWatchId = navigator.geolocation.watchPosition(
                 (position) => {
                     window.lastKnownPos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
+                    lastStatusCheck = Date.now();
                     updateLocationUI(true);
-                    stopRecoveryPolling();
-                    
-                    // Fire a custom event for child scripts (like mapping) to react
-                    window.dispatchEvent(new CustomEvent('locationUpdated', { detail: window.lastKnownPos }));
                 },
                 (error) => {
-                    console.warn("Location error detected:", error.code, error.message);
+                    console.warn("Location error code:", error.code, "Message:", error.message);
                     window.lastKnownPos = null;
                     updateLocationUI(false);
-                    startRecoveryPolling();
                 },
                 { 
                     enableHighAccuracy: true, 
-                    timeout: 10000, // Increased timeout for better stability
-                    maximumAge: 5000 // Allow slightly cached data for performance
+                    timeout: 2000, // Very short timeout to catch toggles instantly
+                    maximumAge: 0   // Do not use cached data
                 }
             );
+
+            // Redundant polling backup to catch "silent" failures or OS-level toggles
+            // that some browsers don't immediately report via watchPosition
+            if (window.locationHardGuard) clearInterval(window.locationHardGuard);
+            window.locationHardGuard = setInterval(() => {
+                if (Date.now() - lastStatusCheck > 4000) {
+                    // If no update received for 4s, force a check
+                    navigator.geolocation.getCurrentPosition(
+                        (p) => { 
+                            lastStatusCheck = Date.now();
+                            updateLocationUI(true); 
+                        },
+                        (e) => { 
+                            updateLocationUI(false); 
+                        },
+                        { timeout: 2000, enableHighAccuracy: true }
+                    );
+                }
+                
+                // Also verify permissions if supported
+                if (navigator.permissions && navigator.permissions.query) {
+                    navigator.permissions.query({ name: 'geolocation' }).then(result => {
+                        if (result.state === 'denied') {
+                            updateLocationUI(false);
+                        }
+                    });
+                }
+            }, 3000);
             {% endif %}
         }
 
-        function startRecoveryPolling() {
-            if (recoveryInterval === null) {
-                recoveryInterval = setInterval(() => {
-                    navigator.geolocation.getCurrentPosition(
-                        (position) => {
-                            window.lastKnownPos = {
-                                lat: position.coords.latitude,
-                                lng: position.coords.longitude
-                            };
-                            updateLocationUI(true);
-                            stopRecoveryPolling();
-                            startLocationMonitoring(); 
-                        },
-                        (err) => {
-                            window.lastKnownPos = null;
-                            updateLocationUI(false);
-                        },
-                        { timeout: 5000, enableHighAccuracy: true }
-                    );
-                }, 3000);
-            }
-        }
-
-        function stopRecoveryPolling() {
-            if (recoveryInterval !== null) {
-                clearInterval(recoveryInterval);
-                recoveryInterval = null;
-            }
-        }
-
         function checkLocationStatusManually() {
+            // Force reset of monitor
+            updateLocationUI(false);
             navigator.geolocation.getCurrentPosition(
                 (position) => {
                     window.lastKnownPos = {
@@ -324,13 +320,11 @@
                         lng: position.coords.longitude
                     };
                     updateLocationUI(true);
-                    stopRecoveryPolling();
                     startLocationMonitoring();
                 },
                 (err) => {
-                    window.lastKnownPos = null;
                     updateLocationUI(false);
-                    alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
+                    alert("{{ _('Location is still disabled. Please enable GPS in your device settings.') }}");
                 },
                 { timeout: 5000, enableHighAccuracy: true }
             );
