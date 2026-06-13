@@ -388,41 +388,14 @@
             alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
             return;
         }
-        
+
         if (capturedFiles.length >= 3) {
             alert("{{ _('Maximum 3 images reached') }}");
             return;
         }
 
-        // --- High-Accuracy Verification on Camera Open ---
-        openCameraBtn.disabled = true;
-        const originalText = openCameraBtn.innerHTML;
-        openCameraBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{ _("Verifying GPS...") }}';
-
-        navigator.geolocation.getCurrentPosition(
-            (pos) => {
-                // Verification Success
-                window.lastKnownPos = {
-                    lat: pos.coords.latitude,
-                    lng: pos.coords.longitude
-                };
-                
-                // Open the camera stream
-                startCamera();
-                
-                // Reset button appearance
-                openCameraBtn.disabled = false;
-                openCameraBtn.innerHTML = originalText;
-            },
-            (err) => {
-                // Verification Failure
-                alert("{{ _('Location verification failed. Please ensure GPS is enabled and has a clear signal.') }}");
-                openCameraBtn.disabled = false;
-                openCameraBtn.innerHTML = originalText;
-                if (typeof updateLocationUI === 'function') updateLocationUI(false);
-            },
-            { timeout: 5000, enableHighAccuracy: true }
-        );
+        // Location is already verified by global watchPosition
+        startCamera();
     };
 
     // --- Voice Logic ---
