@@ -108,6 +108,7 @@
     let map, marker;
     var currentLat = 0, currentLng = 0;
     let mapInitialized = false;
+    let initialLocationSet = false;
 
     function initMap() {
         const defaultLocation = [22.5726, 88.3639];
@@ -116,7 +117,7 @@
         marker = L.marker(defaultLocation, { draggable: true }).addTo(map);
 
         // Try initial sync with global state
-        if (window.lastKnownPos) {
+        if (window.lastKnownPos && !initialLocationSet) {
             syncMapWithGlobal(window.lastKnownPos);
         }
 
@@ -130,6 +131,7 @@
             currentLat = pos.lat;
             currentLng = pos.lng;
             updateLocationFields(pos.lat, pos.lng);
+            initialLocationSet = true; // User manually adjusted, don't auto-sync anymore
         });
 
         map.on('click', (e) => {
@@ -141,25 +143,27 @@
             currentLat = e.latlng.lat;
             currentLng = e.latlng.lng;
             updateLocationFields(e.latlng.lat, e.latlng.lng);
+            initialLocationSet = true; // User manually adjusted, don't auto-sync anymore
         });
         
         mapInitialized = true;
     }
 
     function syncMapWithGlobal(pos) {
-        if (!map) return;
+        if (!map || initialLocationSet) return;
         const latlng = [pos.lat, pos.lng];
         currentLat = pos.lat;
         currentLng = pos.lng;
         map.setView(latlng, 15);
         marker.setLatLng(latlng);
         updateLocationFields(pos.lat, pos.lng);
+        initialLocationSet = true;
     }
 
     // Listen for global location updates
     window.addEventListener('locationUpdated', (e) => {
-        // Only auto-sync map if fields are empty (first lock) or not dragging
-        if (mapInitialized && (!document.getElementById("latitude").value)) {
+        // Only auto-sync map if not yet set
+        if (mapInitialized && !initialLocationSet) {
             syncMapWithGlobal(e.detail);
         }
     });
