@@ -92,6 +92,10 @@ def submit_report():
         lat_val = request.form.get('latitude')
         lng_val = request.form.get('longitude')
         
+        if not title or not description or not category:
+            flash(_('All fields (Title, Description, Category) are required.'), 'danger')
+            return redirect(url_for('citizen.submit_report'))
+        
         if not lat_val or not lng_val:
             flash(_('Location is required. Please enable GPS and allow location access.'), 'danger')
             return redirect(url_for('citizen.submit_report'))
@@ -187,6 +191,13 @@ def submit_report():
         
         # Handle Image Uploads
         images = request.files.getlist('images')
+        
+        # Check if at least one image is provided
+        has_valid_image = any(img.filename for img in images)
+        if not has_valid_image:
+            flash(_('Please upload or capture at least one image of the issue.'), 'danger')
+            return redirect(url_for('citizen.submit_report'))
+
         if len(images) > 3:
             flash(_('You can only upload up to 3 images.'), 'danger')
             return redirect(url_for('citizen.submit_report'))

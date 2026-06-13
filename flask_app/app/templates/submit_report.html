@@ -346,6 +346,11 @@
     const submitBtn = document.getElementById('submitBtn');
     
     submitBtn.onclick = () => {
+        // First check standard HTML5 validation (required fields)
+        if (!form.reportValidity()) {
+            return;
+        }
+
         // Simple state checks for final submission
         if (!window.isLocationActive || submitBtn.classList.contains('disabled-by-location')) {
             alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
