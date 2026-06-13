@@ -225,6 +225,9 @@
     </script>
 
     <script>
+        // Global Location State
+        window.isLocationActive = false;
+
         // Network Status Monitoring
         function updateNetworkUI() {
             const banner = document.getElementById('networkWarning');
@@ -254,33 +257,41 @@
                 navigator.geolocation.clearWatch(locationWatchId);
             }
 
+            // More aggressive monitoring
             locationWatchId = navigator.geolocation.watchPosition(
-                () => {
+                (position) => {
                     updateLocationUI(true);
                     stopRecoveryPolling();
                 },
                 (error) => {
-                    console.warn("Location error:", error.message);
+                    console.warn("Location error detected:", error.code, error.message);
                     updateLocationUI(false);
                     startRecoveryPolling();
                 },
-                { enableHighAccuracy: false, timeout: 5000, maximumAge: 0 }
+                { 
+                    enableHighAccuracy: true, 
+                    timeout: 3000, 
+                    maximumAge: 0 
+                }
             );
             {% endif %}
         }
 
         function startRecoveryPolling() {
             if (recoveryInterval === null) {
-                // Poll every 2 seconds when location is off to auto-detect re-entry
+                // Poll aggressively when location is off to detect re-enablement quickly
                 recoveryInterval = setInterval(() => {
                     navigator.geolocation.getCurrentPosition(
                         () => {
                             updateLocationUI(true);
                             stopRecoveryPolling();
-                            startLocationMonitoring(); // Restart watch
+                            startLocationMonitoring(); 
                         },
-                        null,
-                        { timeout: 2000 }
+                        (err) => {
+                            // Still off
+                            updateLocationUI(false);
+                        },
+                        { timeout: 2000, enableHighAccuracy: true }
                     );
                 }, 2000);
             }
@@ -301,13 +312,15 @@
                     startLocationMonitoring();
                 },
                 (err) => {
+                    updateLocationUI(false);
                     alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
                 },
-                { timeout: 5000 }
+                { timeout: 5000, enableHighAccuracy: true }
             );
         }
 
         function updateLocationUI(isOn) {
+            window.isLocationActive = isOn;
             const banner = document.getElementById('locationWarning');
             const restrictedButtons = document.querySelectorAll('.requires-location');
             
@@ -316,7 +329,6 @@
                 restrictedButtons.forEach(btn => {
                     btn.classList.remove('disabled-by-location');
                     if (btn.tagName === 'BUTTON') btn.disabled = false;
-                    // If it's a label (Upload Files), remove disabled-like appearance
                     if (btn.tagName === 'LABEL') btn.style.pointerEvents = 'auto';
                 });
             } else {
@@ -324,26 +336,27 @@
                 restrictedButtons.forEach(btn => {
                     btn.classList.add('disabled-by-location');
                     if (btn.tagName === 'BUTTON') btn.disabled = true;
-                    // If it's a label (Upload Files), block interactions
                     if (btn.tagName === 'LABEL') btn.style.pointerEvents = 'none';
                 });
                 
-                // Clear coordinates to prevent stale submissions if GPS is turned off
+                // Aggressively clear inputs
                 const latInput = document.getElementById('latitude');
                 const lngInput = document.getElementById('longitude');
                 if (latInput) latInput.value = '';
                 if (lngInput) lngInput.value = '';
                 
-                // Also clear global variables in child scripts if they exist
                 if (typeof currentLat !== 'undefined') currentLat = 0;
                 if (typeof currentLng !== 'undefined') currentLng = 0;
             }
         }
 
         // Initialize monitoring on load
-        window.addEventListener('DOMContentLoaded', startLocationMonitoring);
+        window.addEventListener('DOMContentLoaded', () => {
+            updateNetworkUI();
+            startLocationMonitoring();
+        });
         
-        // Handle visibility change (re-check when tab becomes active)
+        // Handle visibility change
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'visible') {
                 startLocationMonitoring();

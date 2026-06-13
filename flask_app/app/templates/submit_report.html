@@ -83,7 +83,7 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block btn-lg requires-location">{{ _('Submit Report') }}</button>
+        <button type="button" id="submitBtn" class="btn btn-primary btn-block btn-lg requires-location">{{ _('Submit Report') }}</button>
     </form>
 </div>
 <style>
@@ -221,18 +221,6 @@
     let stream = null;
     let useFrontCamera = false;
 
-    openCameraBtn.onclick = async () => {
-        if (openCameraBtn.classList.contains('disabled-by-location')) {
-            alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
-            return;
-        }
-        if (capturedFiles.length >= 3) {
-            alert("{{ _('Maximum 3 images reached') }}");
-            return;
-        }
-        startCamera();
-    };
-
     switchCameraBtn.onclick = () => {
         useFrontCamera = !useFrontCamera;
         startCamera();
@@ -337,25 +325,57 @@
     };
 
     // Final Submission Logic
-    form.onsubmit = (e) => {
-        // Double check location status
-        const submitBtn = document.querySelector('.requires-location');
-        if (submitBtn.classList.contains('disabled-by-location')) {
+    const submitBtn = document.getElementById('submitBtn');
+    
+    submitBtn.onclick = async () => {
+        // 1. Check Global state
+        if (!window.isLocationActive || submitBtn.classList.contains('disabled-by-location')) {
             alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
-            e.preventDefault();
-            return false;
+            return;
+        }
+
+        // 2. Check Hidden Fields
+        const lat = document.getElementById('latitude').value;
+        const lng = document.getElementById('longitude').value;
+        if (!lat || !lng) {
+            alert("{{ _('Location data is missing. Please wait for GPS to lock or adjust the map.') }}");
+            return;
         }
 
         if (capturedFiles.length === 0) {
             alert("{{ _('Please upload or capture at least one image of the issue.') }}");
-            e.preventDefault();
             return;
         }
 
+        // 3. Final Redundant Check (High Accuracy)
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{ _("Verifying Location...") }}';
+        
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                // Success - Final sync of fields
+                updateLocationFields(pos.coords.latitude, pos.coords.longitude);
+                prepareFilesAndSubmit();
+            },
+            (err) => {
+                // Failure - GPS turned off recently
+                alert("{{ _('Location verification failed. Please ensure GPS is enabled.') }}");
+                if (typeof updateLocationUI === 'function') updateLocationUI(false);
+                resetSubmitBtn();
+            },
+            { timeout: 4000, enableHighAccuracy: true }
+        );
+    };
+
+    function resetSubmitBtn() {
+        submitBtn.disabled = false;
+        submitBtn.innerText = "{{ _('Submit Report') }}";
+    }
+
+    function prepareFilesAndSubmit() {
         const dataTransfer = new DataTransfer();
         capturedFiles.forEach(file => dataTransfer.items.add(file));
         
-        // Create or find the images input
         let hiddenInput = form.querySelector('input[name="images"]');
         if (!hiddenInput) {
             hiddenInput = document.createElement('input');
@@ -366,6 +386,31 @@
             form.appendChild(hiddenInput);
         }
         hiddenInput.files = dataTransfer.files;
+        
+        form.submit();
+    }
+
+    // Camera Logic Harden
+    openCameraBtn.onclick = () => {
+        if (!window.isLocationActive || openCameraBtn.classList.contains('disabled-by-location')) {
+            alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
+            return;
+        }
+        
+        if (capturedFiles.length >= 3) {
+            alert("{{ _('Maximum 3 images reached') }}");
+            return;
+        }
+
+        // Final quick check before opening stream
+        navigator.geolocation.getCurrentPosition(
+            () => startCamera(),
+            () => {
+                alert("{{ _('Location lost. Camera cannot be opened.') }}");
+                if (typeof updateLocationUI === 'function') updateLocationUI(false);
+            },
+            { timeout: 3000, enableHighAccuracy: true }
+        );
     };
 
     // --- Voice Logic ---
