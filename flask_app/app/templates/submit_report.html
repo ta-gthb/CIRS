@@ -294,12 +294,11 @@
                 const verifiedLat = pos.coords.latitude;
                 const verifiedLng = pos.coords.longitude;
                 
-                // Update hidden fields and global vars
-                updateLocationFields(verifiedLat, verifiedLng);
-                currentLat = verifiedLat;
-                currentLng = verifiedLng;
+                // IMPORTANT: We do NOT update hidden fields here anymore.
+                // Hidden fields (latitude/longitude) remain bound to the MAP MARKER.
+                // We only use verified coordinates for the WATERMARK to ensure truthfulness.
 
-                // Perform Actual Capture
+                // Perform Actual Capture with verified coordinates for watermark
                 performCapture(verifiedLat, verifiedLng);
                 
                 // Reset button
