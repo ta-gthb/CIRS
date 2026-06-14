@@ -278,7 +278,7 @@
                 },
                 { 
                     enableHighAccuracy: true, 
-                    timeout: 10000, // Very short timeout to catch toggles instantly
+                    timeout: 8000, // Very short timeout to catch toggles instantly
                     maximumAge: 0   // Do not use cached data
                 }
             );
@@ -287,7 +287,7 @@
             // that some browsers don't immediately report via watchPosition
             if (window.locationHardGuard) clearInterval(window.locationHardGuard);
             window.locationHardGuard = setInterval(() => {
-                if (Date.now() - lastStatusCheck > 10000) {
+                if (Date.now() - lastStatusCheck > 8000) {
                     navigator.geolocation.getCurrentPosition(
                         (p) => { 
                             window.lastKnownPos = {
@@ -304,7 +304,7 @@
                         (e) => { 
                             updateLocationUI(false); 
                         },
-                        { timeout: 15000, enableHighAccuracy: true }
+                        { timeout: 10000, enableHighAccuracy: true }
                     );
                 }
                 
