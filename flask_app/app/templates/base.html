@@ -248,7 +248,6 @@
         let lastStatusCheck = Date.now();
 
         function startLocationMonitoring() {
-            {% if current_user.is_authenticated %}
             if (!navigator.geolocation) {
                 updateLocationUI(false);
                 return;
@@ -318,7 +317,6 @@
                     });
                 }
             }, 2000);
-            {% endif %}
         }
 
         document.addEventListener('visibilitychange', () => {

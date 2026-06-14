@@ -118,6 +118,36 @@
             const group = new L.featureGroup(reports.map(r => L.marker([r.lat, r.lng])));
             map.fitBounds(group.getBounds().pad(0.1));
         }
+
+        // User Location Marker
+        let userMarker = null;
+
+        function updateUserLocation(lat, lng) {
+            const userIcon = L.divIcon({
+                className: 'citizen-location-icon',
+                html: '<div class="pulse-ring"></div><div class="user-dot"></div>',
+                iconSize: [30, 30],
+                iconAnchor: [15, 15]
+            });
+
+            if (userMarker) {
+                userMarker.setLatLng([lat, lng]);
+            } else {
+                userMarker = L.marker([lat, lng], { icon: userIcon }).addTo(map);
+                userMarker.bindPopup("{{ _('You are here') }}");
+            }
+        }
+
+        // Listen for location updates from base.html
+        window.addEventListener('locationUpdated', (e) => {
+            const { lat, lng } = e.detail;
+            updateUserLocation(lat, lng);
+        });
+
+        // Initial check if location is already known
+        if (window.lastKnownPos) {
+            updateUserLocation(window.lastKnownPos.lat, window.lastKnownPos.lng);
+        }
     });
 </script>
 {% endblock %}
