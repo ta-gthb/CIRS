@@ -122,11 +122,6 @@
         }
 
         marker.on('dragend', (e) => {
-            if (!window.isLocationActive) {
-                if (window.lastKnownPos) syncMapWithGlobal(window.lastKnownPos);
-                alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
-                return;
-            }
             const pos = e.target.getLatLng();
             currentLat = pos.lat;
             currentLng = pos.lng;
@@ -135,10 +130,6 @@
         });
 
         map.on('click', (e) => {
-            if (!window.isLocationActive) {
-                alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
-                return;
-            }
             marker.setLatLng(e.latlng);
             currentLat = e.latlng.lat;
             currentLng = e.latlng.lng;
