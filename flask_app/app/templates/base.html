@@ -278,7 +278,7 @@
                 },
                 { 
                     enableHighAccuracy: true, 
-                    timeout: 5000, // Very short timeout to catch toggles instantly
+                    timeout: 6000, // Very short timeout to catch toggles instantly
                     maximumAge: 0   // Do not use cached data
                 }
             );
@@ -287,7 +287,7 @@
             // that some browsers don't immediately report via watchPosition
             if (window.locationHardGuard) clearInterval(window.locationHardGuard);
             window.locationHardGuard = setInterval(() => {
-                if (Date.now() - lastStatusCheck > 5000) {
+                if (Date.now() - lastStatusCheck > 6000) {
                     navigator.geolocation.getCurrentPosition(
                         (p) => { 
                             window.lastKnownPos = {
@@ -304,7 +304,7 @@
                         (e) => { 
                             updateLocationUI(false); 
                         },
-                        { timeout: 3000, enableHighAccuracy: true }
+                        { timeout: 7000, enableHighAccuracy: true }
                     );
                 }
                 
@@ -343,7 +343,7 @@
                     updateLocationUI(false);
                     alert("{{ _('Location is still disabled. Please enable GPS in your device settings.') }}");
                 },
-                { timeout: 5000, enableHighAccuracy: true }
+                { timeout: 6000, enableHighAccuracy: true }
             );
         }
 
