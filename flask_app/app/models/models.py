@@ -36,6 +36,7 @@ class User(UserMixin, db.Model):
     otp_expires_at = db.Column(db.DateTime)
     created_at = db.Column(db.DateTime, default=get_ist_time)
     citizen_id = db.Column(db.String(25), unique=True, index=True)
+    admin_id = db.Column(db.String(25), unique=True, index=True)
     last_seen = db.Column(db.DateTime, default=get_ist_time)
     
     reports = db.relationship('Report', backref='author', lazy=True, foreign_keys='Report.user_id')

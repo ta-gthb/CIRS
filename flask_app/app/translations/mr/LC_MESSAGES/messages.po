@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-15 19:36+0530\n"
+"POT-Creation-Date: 2026-06-15 20:37+0530\n"
 "PO-Revision-Date: 2026-06-07 10:13+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mr\n"
@@ -467,63 +467,74 @@ msgstr "नाव:"
 
 #: flask_app/app/templates/admin_profile.html:13
 #, fuzzy
+msgid "Admin ID:"
+msgstr "ॲडमिन पॅनेल"
+
+#: flask_app/app/templates/admin_profile.html:14
+#, fuzzy
 msgid "Username:"
 msgstr "नाव:"
 
-#: flask_app/app/templates/admin_profile.html:14
+#: flask_app/app/templates/admin_profile.html:15
 #, fuzzy
 msgid "Current Phone:"
 msgstr "फोन:"
 
-#: flask_app/app/templates/admin_profile.html:15
+#: flask_app/app/templates/admin_profile.html:16
 msgid "Role:"
 msgstr "भूमिका:"
 
-#: flask_app/app/templates/admin_profile.html:15
+#: flask_app/app/templates/admin_profile.html:16
 msgid "Authority / Admin Officer"
 msgstr "प्राधिकरण / प्रशासकीय अधिकारी"
 
-#: flask_app/app/templates/admin_profile.html:16
+#: flask_app/app/templates/admin_profile.html:17
 msgid "Assigned State:"
 msgstr "नियुक्त राज्य:"
 
-#: flask_app/app/templates/admin_profile.html:17
+#: flask_app/app/templates/admin_profile.html:18
 msgid "Assigned District:"
 msgstr "नियुक्त जिल्हा:"
 
-#: flask_app/app/templates/admin_profile.html:18
+#: flask_app/app/templates/admin_profile.html:19
 msgid "District Coordinates:"
 msgstr ""
 
-#: flask_app/app/templates/admin_profile.html:24
+#: flask_app/app/templates/admin_profile.html:25
 #, fuzzy
 msgid "Update Phone Number"
 msgstr "फोन नंबर"
 
-#: flask_app/app/templates/admin_profile.html:28
+#: flask_app/app/templates/admin_profile.html:29
 #, fuzzy
 msgid "New Phone Number (10 digits)"
 msgstr "कृपया १० अंक प्रविष्ट करा"
 
-#: flask_app/app/templates/admin_profile.html:31
+#: flask_app/app/templates/admin_profile.html:32
 #, fuzzy
 msgid "Update Phone"
 msgstr "प्रोफाइल अद्यतनित करा"
 
-#: flask_app/app/templates/admin_profile.html:37
-#: flask_app/app/templates/admin_profile.html:52
+#: flask_app/app/templates/admin_profile.html:38
+#: flask_app/app/templates/admin_profile.html:57
 msgid "Change Password"
 msgstr ""
 
 #: flask_app/app/templates/admin_profile.html:41
+msgid ""
+"Please keep and save your new password in safe custody, if you forget "
+"your password you won't be able to login to your account!"
+msgstr ""
+
+#: flask_app/app/templates/admin_profile.html:46
 msgid "Current Password"
 msgstr ""
 
-#: flask_app/app/templates/admin_profile.html:45
+#: flask_app/app/templates/admin_profile.html:50
 msgid "New Password"
 msgstr ""
 
-#: flask_app/app/templates/admin_profile.html:49
+#: flask_app/app/templates/admin_profile.html:54
 msgid "Confirm New Password"
 msgstr ""
 

@@ -10,6 +10,7 @@
             <h3><i class="fas fa-id-card"></i> {{ _('General Information') }}</h3>
             <div class="info-group">
                 <p><strong>{{ _('Name:') }}</strong> {{ user.name }}</p>
+                <p><strong>{{ _('Admin ID:') }}</strong> {{ user.admin_id or 'N/A' }}</p>
                 <p><strong>{{ _('Username:') }}</strong> {{ user.username }}</p>
                 <p><strong>{{ _('Current Phone:') }}</strong> {{ user.phone }}</p>
                 <p><strong>{{ _('Role:') }}</strong> {{ _('Authority / Admin Officer') }}</p>
@@ -35,6 +36,10 @@
         <!-- Change Password Card -->
         <div class="profile-card section-card">
             <h3><i class="fas fa-key"></i> {{ _('Change Password') }}</h3>
+            <div class="alert alert-warning" style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+                <i class="fas fa-exclamation-triangle"></i> 
+                {{ _("Please keep and save your new password in safe custody, if you forget your password you won't be able to login to your account!") }}
+            </div>
             <form action="{{ url_for('admin.profile') }}" method="POST">
                 <input type="hidden" name="action" value="change_password">
                 <div class="form-group">

@@ -17,6 +17,7 @@ try:
         if not admin:
             admin = User(
                 phone=admin_phone,
+                admin_id='CIRS10ADMN20260001',
                 username='kolkata_admin',
                 name='Kolkata Admin',
                 role='authority',
@@ -32,7 +33,7 @@ try:
             )
             admin.set_password('admin123')
             db.session.add(admin)
-            print(f"Admin seeded: {admin_phone} / kolkata_admin (Kolkata)")
+            print(f"Admin seeded: {admin_phone} / kolkata_admin / CIRS10ADMN20260001 (Kolkata)")
         else:
             print("Kolkata Admin already exists.")
 
@@ -42,6 +43,7 @@ try:
         if not howrah_admin:
             howrah_admin = User(
                 phone=howrah_phone,
+                admin_id='CIRS10ADMN20260002',
                 username='howrah_admin',
                 name='Howrah Admin',
                 role='authority',
@@ -57,7 +59,7 @@ try:
             )
             howrah_admin.set_password('admin123')
             db.session.add(howrah_admin)
-            print(f"Admin seeded: {howrah_phone} / howrah_admin (Howrah)")
+            print(f"Admin seeded: {howrah_phone} / howrah_admin / CIRS10ADMN20260002 (Howrah)")
         else:
             print("Howrah Admin already exists.")
             

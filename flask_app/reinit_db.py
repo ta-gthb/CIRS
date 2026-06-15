@@ -19,6 +19,7 @@ try:
         admins = [
             {
                 'phone': '9876543210',
+                'admin_id': 'CIRS10ADMN20260001',
                 'username': 'kolkata_admin',
                 'name': 'Kolkata Admin',
                 'assigned_district': 'Kolkata',
@@ -28,6 +29,7 @@ try:
             },
             {
                 'phone': '9876543211',
+                'admin_id': 'CIRS10ADMN20260002',
                 'username': 'howrah_admin',
                 'name': 'Howrah Admin',
                 'assigned_district': 'Howrah',
@@ -37,6 +39,7 @@ try:
             },
             {
                 'phone': '9876543212',
+                'admin_id': 'CIRS10ADMN20260003',
                 'username': 's24p_admin',
                 'name': 'South 24 Parganas Admin',
                 'assigned_district': 'South 24 Parganas',
@@ -49,6 +52,7 @@ try:
         for a in admins:
             admin = User(
                 phone=a['phone'],
+                admin_id=a['admin_id'],
                 username=a['username'],
                 name=a['name'],
                 role='authority',
