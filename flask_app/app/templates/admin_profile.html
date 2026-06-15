@@ -3,17 +3,67 @@
 {% block content %}
 <div class="profile-container">
     <h2>{{ _('Admin Officer Profile') }}</h2>
-    <div class="profile-card section-card">
-        <p><strong>{{ _('Name:') }}</strong> {{ user.name }}</p>
-        <p><strong>{{ _('Phone:') }}</strong> {{ user.phone }}</p>
-        <p><strong>{{ _('Role:') }}</strong> {{ _('Authority / Admin Officer') }}</p>
-        <p><strong>{{ _('Assigned State:') }}</strong> {{ _(user.assigned_state) }}</p>
-        <p><strong>{{ _('Assigned District:') }}</strong> {{ _(user.assigned_district) }}</p>
-        <p><strong>{{ _('District Coordinates:') }}</strong> {{ "%.6f"|format(user.latitude) if user.latitude else 'N/A' }}, {{ "%.6f"|format(user.longitude) if user.longitude else 'N/A' }}</p>
+    
+    <div class="profile-grid">
+        <!-- Info Card -->
+        <div class="profile-card section-card">
+            <h3><i class="fas fa-id-card"></i> {{ _('General Information') }}</h3>
+            <div class="info-group">
+                <p><strong>{{ _('Name:') }}</strong> {{ user.name }}</p>
+                <p><strong>{{ _('Username:') }}</strong> {{ user.username }}</p>
+                <p><strong>{{ _('Current Phone:') }}</strong> {{ user.phone }}</p>
+                <p><strong>{{ _('Role:') }}</strong> {{ _('Authority / Admin Officer') }}</p>
+                <p><strong>{{ _('Assigned State:') }}</strong> {{ _(user.assigned_state) }}</p>
+                <p><strong>{{ _('Assigned District:') }}</strong> {{ _(user.assigned_district) }}</p>
+                <p><strong>{{ _('District Coordinates:') }}</strong> {{ "%.6f"|format(user.latitude) if user.latitude else 'N/A' }}, {{ "%.6f"|format(user.longitude) if user.longitude else 'N/A' }}</p>
+            </div>
+        </div>
+
+        <!-- Update Phone Card -->
+        <div class="profile-card section-card">
+            <h3><i class="fas fa-phone"></i> {{ _('Update Phone Number') }}</h3>
+            <form action="{{ url_for('admin.profile') }}" method="POST">
+                <input type="hidden" name="action" value="update_phone">
+                <div class="form-group">
+                    <label for="phone">{{ _('New Phone Number (10 digits)') }}</label>
+                    <input type="text" name="phone" id="phone" class="form-control" required pattern="[0-9]{10}" maxlength="10">
+                </div>
+                <button type="submit" class="btn btn-primary">{{ _('Update Phone') }}</button>
+            </form>
+        </div>
+
+        <!-- Change Password Card -->
+        <div class="profile-card section-card">
+            <h3><i class="fas fa-key"></i> {{ _('Change Password') }}</h3>
+            <form action="{{ url_for('admin.profile') }}" method="POST">
+                <input type="hidden" name="action" value="change_password">
+                <div class="form-group">
+                    <label for="current_password">{{ _('Current Password') }}</label>
+                    <input type="password" name="current_password" id="current_password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="new_password">{{ _('New Password') }}</label>
+                    <input type="password" name="new_password" id="new_password" class="form-control" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">{{ _('Confirm New Password') }}</label>
+                    <input type="password" name="confirm_password" id="confirm_password" class="form-control" required minlength="6">
+                </div>
+                <button type="submit" class="btn btn-warning">{{ _('Change Password') }}</button>
+            </form>
+        </div>
     </div>
 </div>
 
 <style>
-    .profile-card { max-width: 600px; margin: 0 auto; }
+    .profile-container { max-width: 1000px; margin: 0 auto; }
+    .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+    .profile-card h3 { margin-bottom: 1.5rem; color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
+    .info-group p { margin-bottom: 0.8rem; font-size: 1rem; }
+    .profile-card:first-child { grid-column: 1 / -1; }
+    
+    @media (max-width: 768px) {
+        .profile-grid { grid-template-columns: 1fr; }
+    }
 </style>
 {% endblock %}

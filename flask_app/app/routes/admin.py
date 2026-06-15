@@ -61,11 +61,48 @@ def dashboard():
                            start_date=start_date,
                            end_date=end_date)
 
-@admin_bp.route('/profile')
+@admin_bp.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
     if current_user.role != 'authority':
         return redirect(url_for('main.index'))
+    
+    if request.method == 'POST':
+        # Check if it's a phone update or password update
+        action = request.form.get('action')
+        
+        if action == 'update_phone':
+            new_phone = request.form.get('phone')
+            if not new_phone or len(new_phone) != 10:
+                flash(_('Please enter a valid 10-digit phone number.'), 'danger')
+            else:
+                # Check if phone is already taken
+                existing_user = User.query.filter_by(phone=new_phone).first()
+                if existing_user and existing_user.id != current_user.id:
+                    flash(_('This phone number is already registered.'), 'danger')
+                else:
+                    current_user.phone = new_phone
+                    db.session.commit()
+                    flash(_('Phone number updated successfully.'), 'success')
+        
+        elif action == 'change_password':
+            current_pwd = request.form.get('current_password')
+            new_pwd = request.form.get('new_password')
+            confirm_pwd = request.form.get('confirm_password')
+            
+            if not current_user.check_password(current_pwd):
+                flash(_('Incorrect current password.'), 'danger')
+            elif new_pwd != confirm_pwd:
+                flash(_('New passwords do not match.'), 'danger')
+            elif len(new_pwd) < 6:
+                flash(_('New password must be at least 6 characters long.'), 'danger')
+            else:
+                current_user.set_password(new_pwd)
+                db.session.commit()
+                flash(_('Password updated successfully.'), 'success')
+        
+        return redirect(url_for('admin.profile'))
+
     return render_template('admin_profile.html', user=current_user)
 
 @admin_bp.route('/report-details/<int:report_id>')

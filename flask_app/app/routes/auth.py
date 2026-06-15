@@ -21,6 +21,12 @@ def login():
                     return redirect(url_for('auth.login'))
                 
                 login_user(user)
+                
+                # Security Check: Force password change if default
+                if password == 'admin123':
+                    flash(_('Security Warning: You are using the default password. Please change it immediately.'), 'warning')
+                    return redirect(url_for('admin.profile'))
+                
                 return redirect(url_for('admin.dashboard'))
             else:
                 flash(_('Invalid username or password.'), 'danger')

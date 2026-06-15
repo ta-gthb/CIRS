@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-06-12 22:27+0530\n"
+"POT-Creation-Date: 2026-06-15 19:36+0530\n"
 "PO-Revision-Date: 2026-06-07 10:30+0530\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: kn\n"
@@ -18,66 +18,118 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: app/routes/admin.py:75 app/routes/admin.py:122
+#: flask_app/app/routes/admin.py:77
+#, fuzzy
+msgid "Please enter a valid 10-digit phone number."
+msgstr "ದಯವಿಟ್ಟು 10 ಅಂಕಿಗಳನ್ನು ನಮೂದಿಸಿ"
+
+#: flask_app/app/routes/admin.py:82
+msgid "This phone number is already registered."
+msgstr ""
+
+#: flask_app/app/routes/admin.py:86
+#, fuzzy
+msgid "Phone number updated successfully."
+msgstr "ಪ್ರೊಫೈಲ್ ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರಿಸಲ್ಪಟ್ಟಿದೆ!"
+
+#: flask_app/app/routes/admin.py:94
+msgid "Incorrect current password."
+msgstr ""
+
+#: flask_app/app/routes/admin.py:96
+msgid "New passwords do not match."
+msgstr ""
+
+#: flask_app/app/routes/admin.py:98
+msgid "New password must be at least 6 characters long."
+msgstr ""
+
+#: flask_app/app/routes/admin.py:102
+#, fuzzy
+msgid "Password updated successfully."
+msgstr "ಪ್ರೊಫೈಲ್ ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರಿಸಲ್ಪಟ್ಟಿದೆ!"
+
+#: flask_app/app/routes/admin.py:112 flask_app/app/routes/admin.py:159
 msgid "Unauthorized"
 msgstr "ಅನಧಿಕೃತ"
 
-#: app/routes/admin.py:103
+#: flask_app/app/routes/admin.py:140
 msgid "Report approved."
 msgstr "ವರದಿ ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
-#: app/routes/admin.py:115
+#: flask_app/app/routes/admin.py:152
 msgid "Report resolved."
 msgstr "ವರದಿಯನ್ನು ಪರಿಹರಿಸಲಾಗಿದೆ."
 
-#: app/routes/admin.py:129
+#: flask_app/app/routes/admin.py:166
 msgid "Report rejected."
 msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲಾಗಿದೆ."
 
-#: app/routes/admin.py:146
+#: flask_app/app/routes/admin.py:183
 msgid "User deletion approved. Pending reports removed."
 msgstr "ಬಳಕೆದಾರರ ಅಳಿಸುವಿಕೆಯನ್ನು ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
-#: app/routes/admin.py:155
+#: flask_app/app/routes/admin.py:192
 msgid "User deletion request rejected."
 msgstr "ಬಳಕೆದಾರರ ಅಳಿಸುವಿಕೆಯನ್ನು ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
-#: app/routes/auth.py:21
+#: flask_app/app/routes/auth.py:20
+#, fuzzy
+msgid "Account is inactive."
+msgstr "ಖಾತೆಯು ನಿಷ್ಕ್ರಿಯವಾಗಿದೆ ಅಥವಾ ಅಳಿಸಲ್ಪಟ್ಟಿದೆ."
+
+#: flask_app/app/routes/auth.py:27
+msgid ""
+"Security Warning: You are using the default password. Please change it "
+"immediately."
+msgstr ""
+
+#: flask_app/app/routes/auth.py:32
+msgid "Invalid username or password."
+msgstr ""
+
+#: flask_app/app/routes/auth.py:44
 #, python-format
 msgid ""
 "You can register to the system again on %(date)s as your account is "
 "deleted recently"
 msgstr ""
 
-#: app/routes/auth.py:40
+#: flask_app/app/routes/auth.py:64
 msgid "Officer not registered. Contact administrator."
 msgstr "ಅಧಿಕಾರಿಯನ್ನು ನೋಂದಾಯಿಸಲಾಗಿಲ್ಲ. ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ."
 
-#: app/routes/auth.py:44
+#: flask_app/app/routes/auth.py:68
 #, python-format
 msgid "Number registered as %(role)s. Choose correct role."
 msgstr "ಸಂಖ್ಯೆಯು %(role)s ಆಗಿ ನೋಂದಾಯಿಸಲ್ಪಟ್ಟಿದೆ. ಸರಿಯಾದ ಪಾತ್ರವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
 
-#: app/routes/auth.py:48
+#: flask_app/app/routes/auth.py:72
 msgid "Account is inactive or deleted."
 msgstr "ಖಾತೆಯು ನಿಷ್ಕ್ರಿಯವಾಗಿದೆ ಅಥವಾ ಅಳಿಸಲ್ಪಟ್ಟಿದೆ."
 
-#: app/routes/auth.py:75
+#: flask_app/app/routes/auth.py:99
 msgid "Invalid or expired OTP."
 msgstr "ಅಮಾನ್ಯ ಅಥವಾ ಅವಧಿ ಮೀರಿದ OTP."
 
-#: app/routes/citizen.py:82
+#: flask_app/app/routes/citizen.py:82
 msgid "Profile updated successfully!"
 msgstr "ಪ್ರೊಫೈಲ್ ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರಿಸಲ್ಪಟ್ಟಿದೆ!"
 
-#: app/routes/citizen.py:96 app/templates/base.html:108
-#: app/templates/base.html:302 app/templates/submit_report.html:319
+#: flask_app/app/routes/citizen.py:96
+msgid "All fields (Title, Description, Category) are required."
+msgstr ""
+
+#: flask_app/app/routes/citizen.py:100 flask_app/app/templates/base.html:109
+#: flask_app/app/templates/submit_report.html:271
+#: flask_app/app/templates/submit_report.html:351
+#: flask_app/app/templates/submit_report.html:388
 msgid "Location is required. Please enable GPS and allow location access."
 msgstr ""
 "ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು GPS ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು "
 "ಅನುಮತಿಸಿ।"
 
-#: app/routes/citizen.py:166
+#: flask_app/app/routes/citizen.py:170
 msgid ""
 "A similar report already exists in this location. Your upvote has been "
 "added to it."
@@ -85,61 +137,66 @@ msgstr ""
 "ಈ ಸ್ಥಳದಲ್ಲಿ ಈಗಾಗಲೇ ಇದೇ ರೀತಿಯ ವರದಿ ಇದೆ. ನಿಮ್ಮ ಅಪ್‌ವೋಟ್ ಅನ್ನು ಅದಕ್ಕೆ "
 "ಸೇರಿಸಲಾಗಿದೆ."
 
-#: app/routes/citizen.py:168
+#: flask_app/app/routes/citizen.py:172
 msgid "A similar report already exists and you have already upvoted it."
 msgstr "ಈಗಾಗಲೇ ಇದೇ ರೀತಿಯ ವರದಿ ಇದೆ ಮತ್ತು ನೀವು ಅದಕ್ಕೆ ಈಗಾಗಲೇ ಅಪ್‌ವೋಟ್ ಮಾಡಿದ್ದೀರಿ."
 
-#: app/routes/citizen.py:170
+#: flask_app/app/routes/citizen.py:174
 msgid "You have already submitted a similar report in this location."
 msgstr "ಈ ಸ್ಥಳದಲ್ಲಿ ನೀವು ಈಗಾಗಲೇ ಇದೇ ರೀತಿಯ ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿದ್ದೀರಿ."
 
-#: app/routes/citizen.py:191
+#: flask_app/app/routes/citizen.py:198
+#: flask_app/app/templates/submit_report.html:356
+msgid "Please upload or capture at least one image of the issue."
+msgstr "ದಯವಿಟ್ಟು ಸಮಸ್ಯೆಯ ಕನಿಷ್ಠ ಒಂದು ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ಅಥವಾ ಸೆರೆಹಿಡಿಯಿರಿ."
+
+#: flask_app/app/routes/citizen.py:202
 msgid "You can only upload up to 3 images."
 msgstr "ನೀವು ಕೇವಲ 3 ಚಿತ್ರಗಳನ್ನು ಮಾತ್ರ ಅಪ್‌ಲೋಡ್ ಮಾಡಬಹುದು."
 
-#: app/routes/citizen.py:210
+#: flask_app/app/routes/citizen.py:221
 msgid "Failed to upload files. Please try again later."
 msgstr ""
 
-#: app/routes/citizen.py:214
+#: flask_app/app/routes/citizen.py:225
 msgid "Report submitted successfully!"
 msgstr "ವರದಿಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸಲ್ಲಿಸಲಾಗಿದೆ!"
 
-#: app/routes/citizen.py:225
+#: flask_app/app/routes/citizen.py:236
 msgid "You cannot upvote your own report."
 msgstr "ನಿಮ್ಮ ಸ್ವಂತ ವರದಿಗೆ ನೀವು ಅಪ್‌ವೋಟ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: app/routes/citizen.py:229
+#: flask_app/app/routes/citizen.py:240
 msgid "Already upvoted"
 msgstr "ಈಗಾಗಲೇ ಅಪ್‌ವೋಟ್ ಮಾಡಲಾಗಿದೆ"
 
-#: app/routes/citizen.py:248
+#: flask_app/app/routes/citizen.py:259
 msgid "Comment added."
 msgstr "ಕಾಮೆಂಟ್ ಸೇರಿಸಲಾಗಿದೆ."
 
-#: app/routes/citizen.py:256
+#: flask_app/app/routes/citizen.py:267
 msgid "Unauthorized."
 msgstr "ಅನಧಿಕೃತ."
 
-#: app/routes/citizen.py:263
+#: flask_app/app/routes/citizen.py:274
 msgid "Report cannot be reopened after 7 days of resolution."
 msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: app/routes/citizen.py:268
+#: flask_app/app/routes/citizen.py:279
 msgid "Report reopened."
 msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲಾಗಿದೆ."
 
-#: app/routes/citizen.py:270
+#: flask_app/app/routes/citizen.py:281
 msgid "Report cannot be reopened."
 msgstr "ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: app/routes/citizen.py:278
+#: flask_app/app/routes/citizen.py:289
 msgid ""
 "Please update your State and District in your profile before requesting "
 "account deletion."
 msgstr ""
 
-#: app/routes/citizen.py:283
+#: flask_app/app/routes/citizen.py:294
 msgid ""
 "Deletion request submitted to your assigned officer. Your account will be"
 " deleted after approval of Admin Officer."
@@ -147,834 +204,939 @@ msgstr ""
 "ಅಳಿಸುವಿಕೆ ವಿನಂತಿಯನ್ನು ನಿಮ್ಮ ನಿಯೋಜಿತ ಅಧಿಕಾರಿಗೆ ಸಲ್ಲಿಸಲಾಗಿದೆ. ಅಡ್ಮಿನ್ "
 "ಅಧಿಕಾರಿಯ ಅನುಮೋದನೆಯ ನಂತರ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ।"
 
-#: app/templates/admin_dashboard.html:5
+#: flask_app/app/templates/admin_dashboard.html:5
 msgid "Admin Officer Dashboard"
 msgstr "ನಿರ್ವಾಹಕ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
 
-#: app/templates/admin_dashboard.html:6
+#: flask_app/app/templates/admin_dashboard.html:6
 msgid "Welcome"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:6
+#: flask_app/app/templates/admin_dashboard.html:6
 msgid "Assigned to:"
 msgstr "ನಿಯೋಜಿತ ರಾಜ್ಯ:"
 
-#: app/templates/admin_dashboard.html:12 app/templates/live_map.html:70
-#: app/templates/status.html:41
+#: flask_app/app/templates/admin_dashboard.html:12
+#: flask_app/app/templates/live_map.html:70
+#: flask_app/app/templates/status.html:41
 msgid "Priority:"
 msgstr "ಆದ್ಯತೆ:"
 
-#: app/templates/admin_dashboard.html:14
+#: flask_app/app/templates/admin_dashboard.html:14
 msgid "All Priorities"
 msgstr "ಆದ್ಯತೆ"
 
-#: app/templates/admin_dashboard.html:15 app/templates/index.html:38
-#: app/templates/live_map.html:14
+#: flask_app/app/templates/admin_dashboard.html:15
+#: flask_app/app/templates/index.html:42
+#: flask_app/app/templates/live_map.html:14
 msgid "Critical"
 msgstr "ನಿರ್ಣಾಯಕ"
 
-#: app/templates/admin_dashboard.html:16 app/templates/index.html:39
-#: app/templates/live_map.html:15
+#: flask_app/app/templates/admin_dashboard.html:16
+#: flask_app/app/templates/index.html:43
+#: flask_app/app/templates/live_map.html:15
 msgid "High"
 msgstr "ಹೆಚ್ಚು"
 
-#: app/templates/admin_dashboard.html:17 app/templates/index.html:40
-#: app/templates/live_map.html:16
+#: flask_app/app/templates/admin_dashboard.html:17
+#: flask_app/app/templates/index.html:44
+#: flask_app/app/templates/live_map.html:16
 msgid "Medium"
 msgstr "ಮಧ್ಯಮ"
 
-#: app/templates/admin_dashboard.html:18 app/templates/index.html:41
-#: app/templates/live_map.html:17
+#: flask_app/app/templates/admin_dashboard.html:18
+#: flask_app/app/templates/index.html:45
+#: flask_app/app/templates/live_map.html:17
 msgid "Low"
 msgstr "ಕಡಿಮೆ"
 
-#: app/templates/admin_dashboard.html:22 app/templates/status.html:11
+#: flask_app/app/templates/admin_dashboard.html:22
+#: flask_app/app/templates/status.html:11
 msgid "From:"
 msgstr "ಇಂದ:"
 
-#: app/templates/admin_dashboard.html:26 app/templates/status.html:15
+#: flask_app/app/templates/admin_dashboard.html:26
+#: flask_app/app/templates/status.html:15
 msgid "To:"
 msgstr "ವರೆಗೆ:"
 
-#: app/templates/admin_dashboard.html:30 app/templates/status.html:19
+#: flask_app/app/templates/admin_dashboard.html:30
+#: flask_app/app/templates/status.html:19
 msgid "Filter"
 msgstr "ಫಿಲ್ಟರ್"
 
-#: app/templates/admin_dashboard.html:31 app/templates/status.html:20
+#: flask_app/app/templates/admin_dashboard.html:31
+#: flask_app/app/templates/status.html:20
 msgid "Clear"
 msgstr "ತೆರವುಗೊಳಿಸಿ"
 
-#: app/templates/admin_dashboard.html:39
+#: flask_app/app/templates/admin_dashboard.html:39
 msgid "Total Reports"
 msgstr "ವರದಿಗಳು"
 
-#: app/templates/admin_dashboard.html:43
+#: flask_app/app/templates/admin_dashboard.html:43
 msgid "Pending"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:47
+#: flask_app/app/templates/admin_dashboard.html:47
 msgid "Approved"
 msgstr "ವರದಿ ಅನುಮೋದಿಸಲಾಗಿದೆ."
 
-#: app/templates/admin_dashboard.html:51
+#: flask_app/app/templates/admin_dashboard.html:51
 msgid "Resolved"
 msgstr "ತೆಗೆದುಹಾಕಿ"
 
-#: app/templates/admin_dashboard.html:57
+#: flask_app/app/templates/admin_dashboard.html:57
 msgid "Manage Reports"
 msgstr "ವರದಿಗಳು"
 
-#: app/templates/admin_dashboard.html:63 app/templates/admin_dashboard.html:226
+#: flask_app/app/templates/admin_dashboard.html:63
+#: flask_app/app/templates/admin_dashboard.html:226
 msgid "Title"
 msgstr "ಫೈಲ್"
 
-#: app/templates/admin_dashboard.html:64 app/templates/admin_dashboard.html:110
-#: app/templates/profile.html:14
+#: flask_app/app/templates/admin_dashboard.html:64
+#: flask_app/app/templates/admin_dashboard.html:110
+#: flask_app/app/templates/profile.html:14
 msgid "Citizen ID"
 msgstr "ನಾಗರಿಕ ಐಡಿ"
 
-#: app/templates/admin_dashboard.html:65 app/templates/admin_dashboard.html:228
-#: app/templates/live_map.html:13
+#: flask_app/app/templates/admin_dashboard.html:65
+#: flask_app/app/templates/admin_dashboard.html:228
+#: flask_app/app/templates/live_map.html:13
 msgid "Priority"
 msgstr "ಆದ್ಯತೆ"
 
-#: app/templates/admin_dashboard.html:66 app/templates/admin_dashboard.html:229
-#: app/templates/base.html:69
+#: flask_app/app/templates/admin_dashboard.html:66
+#: flask_app/app/templates/admin_dashboard.html:229
+#: flask_app/app/templates/base.html:69
 msgid "Status"
 msgstr "ಸ್ಥಿತಿ"
 
-#: app/templates/admin_dashboard.html:67
+#: flask_app/app/templates/admin_dashboard.html:67
 msgid "Date"
 msgstr "ರಾಜ್ಯ"
 
-#: app/templates/admin_dashboard.html:68 app/templates/admin_dashboard.html:112
+#: flask_app/app/templates/admin_dashboard.html:68
+#: flask_app/app/templates/admin_dashboard.html:112
 msgid "Actions"
 msgstr "ಸ್ಥಳ"
 
-#: app/templates/admin_dashboard.html:75
+#: flask_app/app/templates/admin_dashboard.html:75
 msgid "N/A"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:80
+#: flask_app/app/templates/admin_dashboard.html:80
 msgid "View"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:82 app/templates/admin_dashboard.html:125
+#: flask_app/app/templates/admin_dashboard.html:82
+#: flask_app/app/templates/admin_dashboard.html:125
 msgid "Approve"
 msgstr "ತೆಗೆದುಹಾಕಿ"
 
-#: app/templates/admin_dashboard.html:83 app/templates/admin_dashboard.html:129
+#: flask_app/app/templates/admin_dashboard.html:83
+#: flask_app/app/templates/admin_dashboard.html:129
 msgid "Reject"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:86
+#: flask_app/app/templates/admin_dashboard.html:86
 msgid "Resolve"
 msgstr "ತೆಗೆದುಹಾಕಿ"
 
-#: app/templates/admin_dashboard.html:89 app/templates/status.html:68
+#: flask_app/app/templates/admin_dashboard.html:89
+#: flask_app/app/templates/status.html:68
 msgid "Message"
 msgstr "ಸಂದೇಶ"
 
-#: app/templates/admin_dashboard.html:98
+#: flask_app/app/templates/admin_dashboard.html:98
 msgid "No reports found matching filters."
 msgstr "ಮಾನದಂಡಗಳಿಗೆ ಹೊಂದಿಕೆಯಾಗುವ ಯಾವುದೇ ವರದಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
 
-#: app/templates/admin_dashboard.html:104
+#: flask_app/app/templates/admin_dashboard.html:104
 msgid "Pending Account Deletion Requests"
 msgstr "ಖಾತೆ ಅಳಿಸುವಿಕೆಯ ವಿನಂತಿಯು ಅನುಮೋದನೆಗಾಗಿ ಬಾಕಿ ಉಳಿದಿದೆ."
 
-#: app/templates/admin_dashboard.html:109
+#: flask_app/app/templates/admin_dashboard.html:109
 msgid "Name"
 msgstr "ಹೆಸರು:"
 
-#: app/templates/admin_dashboard.html:111
+#: flask_app/app/templates/admin_dashboard.html:111
 msgid "Phone"
 msgstr "ಫೋನ್:"
 
-#: app/templates/admin_dashboard.html:118 app/templates/public_forum.html:16
-#: app/templates/public_forum.html:33
+#: flask_app/app/templates/admin_dashboard.html:118
+#: flask_app/app/templates/public_forum.html:16
+#: flask_app/app/templates/public_forum.html:33
 msgid "Anonymous"
 msgstr "ಅನಾಮಧೇಯ"
 
-#: app/templates/admin_dashboard.html:124
+#: flask_app/app/templates/admin_dashboard.html:124
 msgid "Are you sure you want to approve this deletion? This action is permanent."
 msgstr "ನೀವು ಖಂಡಿತವಾಗಿಯೂ ಈ ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಬಯಸುವಿರಾ?"
 
-#: app/templates/admin_dashboard.html:145
+#: flask_app/app/templates/admin_dashboard.html:145
 msgid "Report Details"
 msgstr "ವರದಿಗಳು"
 
-#: app/templates/admin_dashboard.html:149 app/templates/public_forum.html:54
+#: flask_app/app/templates/admin_dashboard.html:149
+#: flask_app/app/templates/public_forum.html:54
 msgid "Close"
 msgstr "ಮುಚ್ಚು"
 
-#: app/templates/admin_dashboard.html:157
+#: flask_app/app/templates/admin_dashboard.html:157
 msgid "Resolve Report"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:159
+#: flask_app/app/templates/admin_dashboard.html:159
 msgid "Enter resolution notes..."
 msgstr ""
 
-#: app/templates/admin_dashboard.html:161
-#: app/templates/admin_dashboard.html:175
+#: flask_app/app/templates/admin_dashboard.html:161
+#: flask_app/app/templates/admin_dashboard.html:175
 msgid "Cancel"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:162
+#: flask_app/app/templates/admin_dashboard.html:162
 msgid "Mark as Resolved"
 msgstr "ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸಲಾಗಿದೆ"
 
-#: app/templates/admin_dashboard.html:171
-#: app/templates/admin_dashboard.html:176
+#: flask_app/app/templates/admin_dashboard.html:171
+#: flask_app/app/templates/admin_dashboard.html:176
 msgid "Reject Report"
 msgstr "ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ"
 
-#: app/templates/admin_dashboard.html:173
+#: flask_app/app/templates/admin_dashboard.html:173
 msgid "Enter rejection reason..."
 msgstr ""
 
-#: app/templates/admin_dashboard.html:216 app/templates/status.html:88
+#: flask_app/app/templates/admin_dashboard.html:216
+#: flask_app/app/templates/status.html:88
 msgid "Report Image"
 msgstr "ವರದಿ ಚಿತ್ರ"
 
-#: app/templates/admin_dashboard.html:227 app/templates/submit_report.html:14
+#: flask_app/app/templates/admin_dashboard.html:227
+#: flask_app/app/templates/submit_report.html:14
 msgid "Category"
 msgstr "ವರ್ಗ"
 
-#: app/templates/admin_dashboard.html:230
+#: flask_app/app/templates/admin_dashboard.html:230
 msgid "Submitted On"
 msgstr "ನಾನು ಸಲ್ಲಿಸಿದ ವರದಿಗಳು"
 
-#: app/templates/admin_dashboard.html:231
+#: flask_app/app/templates/admin_dashboard.html:231
 msgid "Description"
 msgstr "ಸಮಸ್ಯೆಯ ವಿವರಣೆ"
 
-#: app/templates/admin_dashboard.html:232 app/templates/submit_report.html:32
+#: flask_app/app/templates/admin_dashboard.html:232
+#: flask_app/app/templates/submit_report.html:32
 msgid "Location"
 msgstr "ಸ್ಥಳ"
 
-#: app/templates/admin_dashboard.html:236
+#: flask_app/app/templates/admin_dashboard.html:236
 msgid "Captured Images"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:237
+#: flask_app/app/templates/admin_dashboard.html:237
 msgid "No images uploaded"
 msgstr ""
 
-#: app/templates/admin_dashboard.html:240
+#: flask_app/app/templates/admin_dashboard.html:240
 msgid "Voice Notes"
 msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ"
 
-#: app/templates/admin_dashboard.html:241
+#: flask_app/app/templates/admin_dashboard.html:241
 msgid "No voice notes uploaded"
 msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ"
 
-#: app/templates/admin_dashboard.html:263
+#: flask_app/app/templates/admin_dashboard.html:263
 msgid "Failed to fetch report details"
 msgstr ""
 
-#: app/templates/admin_profile.html:5
+#: flask_app/app/templates/admin_profile.html:5
 msgid "Admin Officer Profile"
 msgstr "ನಿರ್ವಾಹಕ ಅಧಿಕಾರಿ ಪ್ರೊಫೈಲ್"
 
-#: app/templates/admin_profile.html:7
+#: flask_app/app/templates/admin_profile.html:10
+msgid "General Information"
+msgstr ""
+
+#: flask_app/app/templates/admin_profile.html:12
 msgid "Name:"
 msgstr "ಹೆಸರು:"
 
-#: app/templates/admin_profile.html:8
-msgid "Phone:"
+#: flask_app/app/templates/admin_profile.html:13
+#, fuzzy
+msgid "Username:"
+msgstr "ಹೆಸರು:"
+
+#: flask_app/app/templates/admin_profile.html:14
+#, fuzzy
+msgid "Current Phone:"
 msgstr "ಫೋನ್:"
 
-#: app/templates/admin_profile.html:9
+#: flask_app/app/templates/admin_profile.html:15
 msgid "Role:"
 msgstr "ಪಾತ್ರ:"
 
-#: app/templates/admin_profile.html:9
+#: flask_app/app/templates/admin_profile.html:15
 msgid "Authority / Admin Officer"
 msgstr "ಪ್ರಾಧಿಕಾರ / ನಿರ್ವಾಹಕ ಅಧಿಕಾರಿ"
 
-#: app/templates/admin_profile.html:10
+#: flask_app/app/templates/admin_profile.html:16
 msgid "Assigned State:"
 msgstr "ನಿಯೋಜಿತ ರಾಜ್ಯ:"
 
-#: app/templates/admin_profile.html:11
+#: flask_app/app/templates/admin_profile.html:17
 msgid "Assigned District:"
 msgstr "ನಿಯೋಜಿತ ಜಿಲ್ಲೆ:"
 
-#: app/templates/admin_profile.html:12
+#: flask_app/app/templates/admin_profile.html:18
 msgid "District Coordinates:"
 msgstr ""
 
-#: app/templates/base.html:24 app/templates/base.html:66
+#: flask_app/app/templates/admin_profile.html:24
+#, fuzzy
+msgid "Update Phone Number"
+msgstr "ಫೋನ್ ಸಂಖ್ಯೆ"
+
+#: flask_app/app/templates/admin_profile.html:28
+#, fuzzy
+msgid "New Phone Number (10 digits)"
+msgstr "ದಯವಿಟ್ಟು 10 ಅಂಕಿಗಳನ್ನು ನಮೂದಿಸಿ"
+
+#: flask_app/app/templates/admin_profile.html:31
+#, fuzzy
+msgid "Update Phone"
+msgstr "ಪ್ರೊಫೈಲ್ ನವೀಕರಿಸಿ"
+
+#: flask_app/app/templates/admin_profile.html:37
+#: flask_app/app/templates/admin_profile.html:52
+msgid "Change Password"
+msgstr ""
+
+#: flask_app/app/templates/admin_profile.html:41
+msgid "Current Password"
+msgstr ""
+
+#: flask_app/app/templates/admin_profile.html:45
+msgid "New Password"
+msgstr ""
+
+#: flask_app/app/templates/admin_profile.html:49
+msgid "Confirm New Password"
+msgstr ""
+
+#: flask_app/app/templates/base.html:24 flask_app/app/templates/base.html:66
 msgid "Dashboard"
 msgstr "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
 
-#: app/templates/base.html:25
+#: flask_app/app/templates/base.html:25
 msgid "Report Issue"
 msgstr "ಸಮಸ್ಯೆಯನ್ನು ವರದಿ ಮಾಡಿ"
 
-#: app/templates/base.html:26 app/templates/base.html:68
+#: flask_app/app/templates/base.html:26 flask_app/app/templates/base.html:68
 msgid "Forum"
 msgstr "ಫೋರಂ"
 
-#: app/templates/base.html:27
+#: flask_app/app/templates/base.html:27
 msgid "My Status"
 msgstr "ನನ್ನ ಸ್ಥಿತಿ"
 
-#: app/templates/base.html:28 app/templates/base.html:70
+#: flask_app/app/templates/base.html:28 flask_app/app/templates/base.html:70
 msgid "Map"
 msgstr "ನಕ್ಷೆ"
 
-#: app/templates/base.html:30 app/templates/base.html:71
+#: flask_app/app/templates/base.html:30 flask_app/app/templates/base.html:71
 msgid "Profile"
 msgstr "ಪ್ರೊಫೈಲ್"
 
-#: app/templates/base.html:33
+#: flask_app/app/templates/base.html:33
 msgid "Admin Panel"
 msgstr "ಅಡ್ಮಿನ್ ಪ್ಯಾನಲ್"
 
-#: app/templates/base.html:35 app/templates/base.html:74
+#: flask_app/app/templates/base.html:35 flask_app/app/templates/base.html:74
 msgid "Settings"
 msgstr "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
 
-#: app/templates/base.html:44
+#: flask_app/app/templates/base.html:44 flask_app/app/templates/login.html:114
 msgid "Login"
 msgstr "ಲಾಗಿನ್"
 
-#: app/templates/base.html:46
+#: flask_app/app/templates/base.html:46
 msgid "Toggle Light/Dark Mode"
 msgstr "ಲೈಟ್/ಡಾರ್ಕ್ ಮೋಡ್ ಬದಲಿಸಿ"
 
-#: app/templates/base.html:67
+#: flask_app/app/templates/base.html:67
 msgid "Report"
 msgstr ""
 
-#: app/templates/base.html:73
+#: flask_app/app/templates/base.html:73
 msgid "Admin"
 msgstr ""
 
-#: app/templates/base.html:76
+#: flask_app/app/templates/base.html:76
 msgid "Logout"
 msgstr "ಲೋಗೌಟ್"
 
-#: app/templates/base.html:109
+#: flask_app/app/templates/base.html:110
 msgid "Retry Now"
 msgstr "ಈಗಲೇ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ"
 
-#: app/templates/base.html:112
+#: flask_app/app/templates/base.html:113
 msgid "You are currently offline. Please check your internet connection."
 msgstr ""
 
-#: app/templates/base.html:128
+#: flask_app/app/templates/base.html:130
 msgid "Civic Issue Reporting System (CIRS). All rights reserved."
 msgstr ""
 "ನಾಗರಿಕ ಸಮಸ್ಯೆ ವರದಿ ಮಾಡುವ ವ್ಯವಸ್ಥೆ (CIRS). ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು "
 "ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ."
 
-#: app/templates/base.html:135
+#: flask_app/app/templates/base.html:137
 msgid "Report Chat"
 msgstr "ವರದಿ ಚಾಟ್"
 
-#: app/templates/base.html:142
+#: flask_app/app/templates/base.html:144
 msgid "Type a message..."
 msgstr "ಸಂದೇಶವನ್ನು ಟೈಪ್ ಮಾಡಿ..."
 
-#: app/templates/citizen_dashboard.html:6
+#: flask_app/app/templates/base.html:342
+#, fuzzy
+msgid "Location is still disabled. Please enable GPS in your device settings."
+msgstr ""
+"ಸ್ಥಳದ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು GPS ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಸ್ಥಳ ಪ್ರವೇಶವನ್ನು "
+"ಅನುಮತಿಸಿ।"
+
+#: flask_app/app/templates/citizen_dashboard.html:6
 msgid "Welcome to Your Dashboard"
 msgstr "ನಿಮ್ಮ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ಗೆ ಸ್ವಾಗತ"
 
-#: app/templates/citizen_dashboard.html:7
+#: flask_app/app/templates/citizen_dashboard.html:7
 msgid "Your portal for reporting and tracking civic issues in your community."
 msgstr ""
 "ನಿಮ್ಮ ಸಮುದಾಯದಲ್ಲಿನ ನಾಗರಿಕ ಸಮಸ್ಯೆಗಳನ್ನು ವರದಿ ಮಾಡಲು ಮತ್ತು ಟ್ರ್ಯಾಕ್ ಮಾಡಲು "
 "ನಿಮ್ಮ ಪೋರ್ಟಲ್."
 
-#: app/templates/citizen_dashboard.html:10 app/templates/submit_report.html:5
+#: flask_app/app/templates/citizen_dashboard.html:10
+#: flask_app/app/templates/submit_report.html:5
 msgid "Submit New Report"
 msgstr "ಹೊಸ ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ"
 
-#: app/templates/citizen_dashboard.html:17
+#: flask_app/app/templates/citizen_dashboard.html:17
 msgid "Trending/Nearby Issues"
 msgstr "ಟ್ರೆಂಡಿಂಗ್/ಹತ್ತಿರದ ಸಮಸ್ಯೆಗಳು"
 
-#: app/templates/citizen_dashboard.html:18
+#: flask_app/app/templates/citizen_dashboard.html:18
 msgid "High-priority and trending reports in the portal."
 msgstr "ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಹೆಚ್ಚಿನ ಆದ್ಯತೆಯ ಮತ್ತು ಟ್ರೆಂಡಿಂಗ್ ವರದಿಗಳು."
 
-#: app/templates/citizen_dashboard.html:30
+#: flask_app/app/templates/citizen_dashboard.html:30
 msgid "General"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: app/templates/citizen_dashboard.html:31
+#: flask_app/app/templates/citizen_dashboard.html:31
 msgid "Upvote"
 msgstr "ಅಪ್‌ವೋಟ್"
 
-#: app/templates/citizen_dashboard.html:36
+#: flask_app/app/templates/citizen_dashboard.html:36
 msgid "No issues reported yet."
 msgstr "ಇನ್ನೂ ಯಾವುದೇ ಸಮಸ್ಯೆಗಳು ವರದಿಯಾಗಿಲ್ಲ."
 
-#: app/templates/citizen_dashboard.html:40
+#: flask_app/app/templates/citizen_dashboard.html:40
 msgid "View All in Public Forum"
 msgstr "ಸಾರ್ವಜನಿಕ ವೇದಿಕೆಯಲ್ಲಿ ಎಲ್ಲವನ್ನೂ ನೋಡಿ"
 
-#: app/templates/citizen_dashboard.html:45
+#: flask_app/app/templates/citizen_dashboard.html:45
 msgid "Quick Links"
 msgstr "ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು"
 
-#: app/templates/citizen_dashboard.html:49
+#: flask_app/app/templates/citizen_dashboard.html:49
 msgid "Track My Reports"
 msgstr "ನನ್ನ ವರದಿಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ"
 
-#: app/templates/citizen_dashboard.html:53
+#: flask_app/app/templates/citizen_dashboard.html:53
 msgid "View Live Map"
 msgstr "ಲೈವ್ ಮ್ಯಾಪ್ ನೋಡಿ"
 
-#: app/templates/citizen_dashboard.html:57
+#: flask_app/app/templates/citizen_dashboard.html:57
 msgid "Manage Profile"
 msgstr "ಪ್ರೊಫೈಲ್ ನಿರ್ವಹಿಸಿ"
 
-#: app/templates/citizen_dashboard.html:91
+#: flask_app/app/templates/citizen_dashboard.html:91
 msgid "Upvoted"
 msgstr "ಅಪ್‌ವೋಟ್ ಮಾಡಲಾಗಿದೆ"
 
-#: app/templates/index.html:5
+#: flask_app/app/templates/index.html:5
 msgid "Welcome to CIRS !"
 msgstr "CIRS ಗೆ ಸ್ವಾಗತ!"
 
-#: app/templates/index.html:6
+#: flask_app/app/templates/index.html:6
 msgid "--Report today for a better tomorrow"
 msgstr "--ಉತ್ತಮ ನಾಳೆಗಾಗಿ ಇಂದು ವರದಿ ಮಾಡಿ"
 
-#: app/templates/index.html:7
+#: flask_app/app/templates/index.html:7
 msgid "Report, Track, and Resolve Local Issues Together"
 msgstr "ಸ್ಥಳೀಯ ಸಮಸ್ಯೆಗಳನ್ನು ಒಟ್ಟಾಗಿ ವರದಿ ಮಾಡಿ, ಟ್ರ್ಯಾಕ್ ಮಾಡಿ ಮತ್ತು ಪರಿಹರಿಸಿ"
 
-#: app/templates/index.html:11
+#: flask_app/app/templates/index.html:11
 msgid "Issues Resolved"
 msgstr "ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸಲಾಗಿದೆ"
 
-#: app/templates/index.html:15
+#: flask_app/app/templates/index.html:15
 msgid "Online Users"
 msgstr "ಸಕ್ರಿಯ ಬಳಕೆದಾರರು"
 
-#: app/templates/index.html:19
+#: flask_app/app/templates/index.html:19
 msgid "Registered Users"
 msgstr "ನೋಂದಾಯಿತ ಬಳಕೆದಾರರು"
 
-#: app/templates/index.html:23
+#: flask_app/app/templates/index.html:23
 msgid "Cities"
 msgstr "ನಗರಗಳು"
 
-#: app/templates/index.html:27
+#: flask_app/app/templates/index.html:27
 msgid "Get Started Now"
 msgstr "ಈಗಲೇ ಪ್ರಾರಂಭಿಸಿ"
 
-#: app/templates/index.html:33 app/templates/index.html:55
+#: flask_app/app/templates/index.html:33 flask_app/app/templates/index.html:59
 msgid "Live Map"
 msgstr "ಲೈವ್ ಮ್ಯಾಪ್ ನೋಡಿ"
 
-#: app/templates/index.html:34
+#: flask_app/app/templates/index.html:34
 msgid "Visualize all reported issues across districts in real-time."
 msgstr "ವರದಿಯಾದ ಸಮಸ್ಯೆಗಳನ್ನು ನೈಜ ಸಮಯದಲ್ಲಿ ವೀಕ್ಷಿಸಿ."
 
-#: app/templates/index.html:46
-msgid "Powerful Features"
-msgstr "ಶಕ್ತಿಯುತ ವೈಶಿಷ್ಟ್ಯಗಳು"
-
-#: app/templates/index.html:50
-msgid "Media Reporting"
-msgstr "ಮಾಧ್ಯಮ ವರದಿ"
-
-#: app/templates/index.html:51
-msgid "Capture issues with photos and voice notes."
-msgstr "ಫೋಟೋಗಳು ಮತ್ತು ಧ್ವನಿ ಟಿಪ್ಪಣಿಗಳೊಂದಿಗೆ ಸಮಸ್ಯೆಗಳನ್ನು ಸೆರೆಹಿಡಿಯಿರಿ."
-
-#: app/templates/index.html:56
-msgid "Visualize reported issues in real-time."
-msgstr "ವರದಿಯಾದ ಸಮಸ್ಯೆಗಳನ್ನು ನೈಜ ಸಮಯದಲ್ಲಿ ವೀಕ್ಷಿಸಿ."
-
-#: app/templates/index.html:60
-msgid "Analytics"
-msgstr "ಅನಾಲಿಟಿಕ್ಸ್"
-
-#: app/templates/index.html:61
-msgid "Track resolution status and response times."
-msgstr "ಪರಿಹಾರದ ಸ್ಥಿತಿ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ."
-
-#: app/templates/live_map.html:5
-msgid "Live Map - Community Issues"
-msgstr "ಲೈವ್ ಮ್ಯಾಪ್ - ಸಮುದಾಯ ಸಮಸ್ಯೆಗಳು"
-
-#: app/templates/live_map.html:8
+#: flask_app/app/templates/index.html:38
+#: flask_app/app/templates/live_map.html:8
 msgid "Where am I?"
 msgstr "ನಾನು ಎಲ್ಲಿದ್ದೇನೆ?"
 
-#: app/templates/live_map.html:69 app/templates/status.html:40
-msgid "Category:"
-msgstr "ವರ್ಗ:"
+#: flask_app/app/templates/index.html:50
+msgid "Powerful Features"
+msgstr "ಶಕ್ತಿಯುತ ವೈಶಿಷ್ಟ್ಯಗಳು"
 
-#: app/templates/live_map.html:71
-msgid "Status:"
-msgstr "ಸ್ಥಿತಿ:"
+#: flask_app/app/templates/index.html:54
+msgid "Media Reporting"
+msgstr "ಮಾಧ್ಯಮ ವರದಿ"
 
-#: app/templates/live_map.html:97
+#: flask_app/app/templates/index.html:55
+msgid "Capture issues with photos and voice notes."
+msgstr "ಫೋಟೋಗಳು ಮತ್ತು ಧ್ವನಿ ಟಿಪ್ಪಣಿಗಳೊಂದಿಗೆ ಸಮಸ್ಯೆಗಳನ್ನು ಸೆರೆಹಿಡಿಯಿರಿ."
+
+#: flask_app/app/templates/index.html:60
+msgid "Visualize reported issues in real-time."
+msgstr "ವರದಿಯಾದ ಸಮಸ್ಯೆಗಳನ್ನು ನೈಜ ಸಮಯದಲ್ಲಿ ವೀಕ್ಷಿಸಿ."
+
+#: flask_app/app/templates/index.html:64
+msgid "Analytics"
+msgstr "ಅನಾಲಿಟಿಕ್ಸ್"
+
+#: flask_app/app/templates/index.html:65
+msgid "Track resolution status and response times."
+msgstr "ಪರಿಹಾರದ ಸ್ಥಿತಿ ಮತ್ತು ಪ್ರತಿಕ್ರಿಯೆ ಸಮಯವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ."
+
+#: flask_app/app/templates/index.html:141
+#: flask_app/app/templates/live_map.html:97
 msgid "You are here"
 msgstr ""
 
-#: app/templates/login.html:5
+#: flask_app/app/templates/index.html:176
+msgid "Unable to retrieve your location. Please ensure GPS is enabled."
+msgstr ""
+
+#: flask_app/app/templates/live_map.html:5
+msgid "Live Map - Community Issues"
+msgstr "ಲೈವ್ ಮ್ಯಾಪ್ - ಸಮುದಾಯ ಸಮಸ್ಯೆಗಳು"
+
+#: flask_app/app/templates/live_map.html:69
+#: flask_app/app/templates/status.html:40
+msgid "Category:"
+msgstr "ವರ್ಗ:"
+
+#: flask_app/app/templates/live_map.html:71
+msgid "Status:"
+msgstr "ಸ್ಥಿತಿ:"
+
+#: flask_app/app/templates/login.html:5
 msgid "Login / Register"
 msgstr "ಲಾಗಿನ್ / ನೋಂದಣಿ"
 
-#: app/templates/login.html:8
+#: flask_app/app/templates/login.html:9
 msgid "Mobile Number"
 msgstr "ಮೊಬೈಲ್ ಸಂಖ್ಯೆ"
 
-#: app/templates/login.html:17
+#: flask_app/app/templates/login.html:21
+#, fuzzy
+msgid "Username"
+msgstr "ಹೆಸರು:"
+
+#: flask_app/app/templates/login.html:22
+#, fuzzy
+msgid "Enter username"
+msgstr "ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
+
+#: flask_app/app/templates/login.html:25
+msgid "Password"
+msgstr ""
+
+#: flask_app/app/templates/login.html:26
+msgid "Enter password"
+msgstr ""
+
+#: flask_app/app/templates/login.html:31
 msgid "I am a:"
 msgstr "ನಾನೊಬ್ಬ:"
 
-#: app/templates/login.html:20
+#: flask_app/app/templates/login.html:34
 msgid "Citizen"
 msgstr "ನಾಗರಿಕ"
 
-#: app/templates/login.html:22
+#: flask_app/app/templates/login.html:36
 msgid "Officer"
 msgstr "ಅಧಿಕಾರಿ"
 
-#: app/templates/login.html:25
+#: flask_app/app/templates/login.html:39 flask_app/app/templates/login.html:107
 msgid "Send OTP"
 msgstr "OTP ಕಳುಹಿಸಿ"
 
-#: app/templates/login.html:27
+#: flask_app/app/templates/login.html:41
 msgid "Demo OTP: 1234"
 msgstr "ಡೆಮೊ OTP: 1234"
 
-#: app/templates/login.html:84
+#: flask_app/app/templates/login.html:131
 msgid "Please enter 10 digits"
 msgstr "ದಯವಿಟ್ಟು 10 ಅಂಕಿಗಳನ್ನು ನಮೂದಿಸಿ"
 
-#: app/templates/profile.html:5
+#: flask_app/app/templates/profile.html:5
 msgid "User Profile"
 msgstr "ಬಳಕೆದಾರ ಪ್ರೊಫೈಲ್"
 
-#: app/templates/profile.html:9
+#: flask_app/app/templates/profile.html:9
 msgid "Full Name"
 msgstr "ಪೂರ್ಣ ಹೆಸರು"
 
-#: app/templates/profile.html:10
+#: flask_app/app/templates/profile.html:10
 msgid "Enter your full name"
 msgstr "ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರನ್ನು ನಮೂದಿಸಿ"
 
-#: app/templates/profile.html:15
+#: flask_app/app/templates/profile.html:15
 msgid "Not Assigned"
 msgstr "ನಿಯೋಜಿಸಲಾಗಿಲ್ಲ"
 
-#: app/templates/profile.html:19
+#: flask_app/app/templates/profile.html:19
 msgid "Phone Number"
 msgstr "ಫೋನ್ ಸಂಖ್ಯೆ"
 
-#: app/templates/profile.html:21
+#: flask_app/app/templates/profile.html:21
 msgid "Phone number cannot be changed."
 msgstr "ಫೋನ್ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 
-#: app/templates/profile.html:25
+#: flask_app/app/templates/profile.html:25
 msgid "Address"
 msgstr "ವಿಳಾಸ"
 
-#: app/templates/profile.html:26
+#: flask_app/app/templates/profile.html:26
 msgid "Enter your address"
 msgstr "ನಿಮ್ಮ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ"
 
-#: app/templates/profile.html:31
+#: flask_app/app/templates/profile.html:31
 msgid "State"
 msgstr "ರಾಜ್ಯ"
 
-#: app/templates/profile.html:33
+#: flask_app/app/templates/profile.html:33
 msgid "Select State"
 msgstr "ರಾಜ್ಯವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
-#: app/templates/profile.html:37
+#: flask_app/app/templates/profile.html:37
 msgid "District"
 msgstr "ಜಿಲ್ಲೆ"
 
-#: app/templates/profile.html:39 app/templates/profile.html:134
+#: flask_app/app/templates/profile.html:39
+#: flask_app/app/templates/profile.html:134
 msgid "Select District"
 msgstr "ಜಿಲ್ಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
-#: app/templates/profile.html:44
+#: flask_app/app/templates/profile.html:44
 msgid "Update Profile"
 msgstr "ಪ್ರೊಫೈಲ್ ನವೀಕರಿಸಿ"
 
-#: app/templates/profile.html:49
+#: flask_app/app/templates/profile.html:49
 msgid "Account Management"
 msgstr "ಖಾತೆ ನಿರ್ವಹಣೆ"
 
-#: app/templates/profile.html:52
+#: flask_app/app/templates/profile.html:52
 msgid ""
 "All your account associated data will be deleted from the system, are you"
 " sure you want to delete your account?"
 msgstr ""
 
-#: app/templates/profile.html:53 app/templates/profile.html:61
+#: flask_app/app/templates/profile.html:53
+#: flask_app/app/templates/profile.html:61
 msgid "Request Account Deletion"
 msgstr "ಖಾತೆ ಅಳಿಸುವಿಕೆಗೆ ವಿನಂತಿಸಿ"
 
-#: app/templates/profile.html:58
+#: flask_app/app/templates/profile.html:58
 msgid ""
 "Please update your State and District in your profile before you can "
 "raise an account deletion request."
 msgstr ""
 
-#: app/templates/profile.html:60
+#: flask_app/app/templates/profile.html:60
 msgid "Update profile to enable"
 msgstr "ಪ್ರೊಫೈಲ್ ನವೀಕರಿಸಿ"
 
-#: app/templates/profile.html:65
+#: flask_app/app/templates/profile.html:65
 msgid "Account deletion request is pending approval."
 msgstr "ಖಾತೆ ಅಳಿಸುವಿಕೆಯ ವಿನಂತಿಯು ಅನುಮೋದನೆಗಾಗಿ ಬಾಕಿ ಉಳಿದಿದೆ."
 
-#: app/templates/public_forum.html:5
+#: flask_app/app/templates/public_forum.html:5
 msgid "Public Forum"
 msgstr "ಸಾರ್ವಜನಿಕ ವೇದಿಕೆ"
 
-#: app/templates/public_forum.html:16
+#: flask_app/app/templates/public_forum.html:16
 msgid "Posted on"
 msgstr "ರಂದು ಪೋಸ್ಟ್ ಮಾಡಲಾಗಿದೆ"
 
-#: app/templates/public_forum.html:16
+#: flask_app/app/templates/public_forum.html:16
 msgid "by"
 msgstr "ಇವರಿಂದ"
 
-#: app/templates/public_forum.html:21
+#: flask_app/app/templates/public_forum.html:21
 msgid "Upvotes"
 msgstr "ಅಪ್‌ವೋಟ್‌ಗಳು"
 
-#: app/templates/public_forum.html:24
+#: flask_app/app/templates/public_forum.html:24
 msgid "View Location"
 msgstr "ಗುರುತಿಸಲಾದ ಸ್ಥಳವನ್ನು ನೋಡಿ"
 
-#: app/templates/public_forum.html:26 app/templates/public_forum.html:30
+#: flask_app/app/templates/public_forum.html:26
+#: flask_app/app/templates/public_forum.html:30
 msgid "Comments"
 msgstr "ಕಾಮೆಂಟ್‌ಗಳು"
 
-#: app/templates/public_forum.html:39
+#: flask_app/app/templates/public_forum.html:39
 msgid "Add a comment..."
 msgstr "ಒಂದು ಕಾಮೆಂಟ್ ಸೇರಿಸಿ..."
 
-#: app/templates/public_forum.html:40
+#: flask_app/app/templates/public_forum.html:40
 msgid "Post"
 msgstr "ಪೋಸ್ಟ್"
 
-#: app/templates/public_forum.html:51
+#: flask_app/app/templates/public_forum.html:51
 msgid "Report Location"
 msgstr "ವರದಿ ಚಾಟ್"
 
-#: app/templates/status.html:5
+#: flask_app/app/templates/status.html:5
 msgid "My Submitted Reports"
 msgstr "ನಾನು ಸಲ್ಲಿಸಿದ ವರದಿಗಳು"
 
-#: app/templates/status.html:27
+#: flask_app/app/templates/status.html:27
 msgid "No reports found matching the criteria."
 msgstr "ಮಾನದಂಡಗಳಿಗೆ ಹೊಂದಿಕೆಯಾಗುವ ಯಾವುದೇ ವರದಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
 
-#: app/templates/status.html:42
+#: flask_app/app/templates/status.html:42
 msgid "Location:"
 msgstr "ಸ್ಥಳ:"
 
-#: app/templates/status.html:42
+#: flask_app/app/templates/status.html:42
 msgid "Unknown"
 msgstr "ಅಜ್ಞಾತ"
 
-#: app/templates/status.html:43
+#: flask_app/app/templates/status.html:43
 msgid "Upvotes:"
 msgstr "ಅಪ್‌ವೋಟ್‌ಗಳು:"
 
-#: app/templates/status.html:51
+#: flask_app/app/templates/status.html:51
 msgid "Resolution Notes:"
 msgstr ""
 
-#: app/templates/status.html:53
+#: flask_app/app/templates/status.html:53
 msgid "Rejection Reason:"
 msgstr ""
 
-#: app/templates/status.html:55
+#: flask_app/app/templates/status.html:55
 msgid "Officer Feedback:"
 msgstr ""
 
-#: app/templates/status.html:64
+#: flask_app/app/templates/status.html:64
 msgid "View Marked Location"
 msgstr "ಗುರುತಿಸಲಾದ ಸ್ಥಳವನ್ನು ನೋಡಿ"
 
-#: app/templates/status.html:72
+#: flask_app/app/templates/status.html:72
 msgid "Are you sure you want to reopen this report?"
 msgstr "ನೀವು ಖಂಡಿತವಾಗಿಯೂ ಈ ವರದಿಯನ್ನು ಮತ್ತೆ ತೆರೆಯಲು ಬಯಸುವಿರಾ?"
 
-#: app/templates/status.html:74
+#: flask_app/app/templates/status.html:74
 msgid "Reopen"
 msgstr "ಮತ್ತೆ ತೆರೆಯಿರಿ"
 
-#: app/templates/status.html:85
+#: flask_app/app/templates/status.html:85
 msgid "Images:"
 msgstr "ಚಿತ್ರಗಳು:"
 
-#: app/templates/status.html:96
+#: flask_app/app/templates/status.html:96
 msgid "Voice Note:"
 msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ:"
 
-#: app/templates/status.html:100
+#: flask_app/app/templates/status.html:100
 msgid "Your browser does not support the audio element."
 msgstr "ನಿಮ್ಮ ಬ್ರೌಸರ್ ಆಡಿಯೊ ಎಲಿಮೆಂಟ್ ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ."
 
-#: app/templates/submit_report.html:8
+#: flask_app/app/templates/submit_report.html:8
 msgid "Issue Title"
 msgstr "ಸಮಸ್ಯೆಯ ಶೀರ್ಷಿಕೆ"
 
-#: app/templates/submit_report.html:9
+#: flask_app/app/templates/submit_report.html:9
 msgid "Brief title of the issue"
 msgstr "ಸಮಸ್ಯೆಯ ಸಂಕ್ಷಿಪ್ತ ಶೀರ್ಷಿಕೆ"
 
-#: app/templates/submit_report.html:16
+#: flask_app/app/templates/submit_report.html:16
 msgid "Select Category"
 msgstr "ವರ್ಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
-#: app/templates/submit_report.html:17
+#: flask_app/app/templates/submit_report.html:17
 msgid "Roads & Potholes"
 msgstr "ರಸ್ತೆಗಳು ಮತ್ತು ಗುಂಡಿಗಳು"
 
-#: app/templates/submit_report.html:18
+#: flask_app/app/templates/submit_report.html:18
 msgid "Water Supply"
 msgstr "ನೀರು ಸರಬರಾಜು"
 
-#: app/templates/submit_report.html:19
+#: flask_app/app/templates/submit_report.html:19
 msgid "Electricity"
 msgstr "ವಿದ್ಯುತ್"
 
-#: app/templates/submit_report.html:20
+#: flask_app/app/templates/submit_report.html:20
 msgid "Sanitation & Garbage"
 msgstr "ನೈರ್ಮಲ್ಯ ಮತ್ತು ಕಸ"
 
-#: app/templates/submit_report.html:21
+#: flask_app/app/templates/submit_report.html:21
 msgid "Other"
 msgstr "ಇತರ"
 
-#: app/templates/submit_report.html:27
+#: flask_app/app/templates/submit_report.html:27
 msgid "Issue Description"
 msgstr "ಸಮಸ್ಯೆಯ ವಿವರಣೆ"
 
-#: app/templates/submit_report.html:28
+#: flask_app/app/templates/submit_report.html:28
 msgid "Provide details about the issue..."
 msgstr "ಸಮಸ್ಯೆಯ ಬಗ್ಗೆ ವಿವರಗಳನ್ನು ಒದಗಿಸಿ..."
 
-#: app/templates/submit_report.html:33
+#: flask_app/app/templates/submit_report.html:33
 msgid "Location will be auto-fetched, but you can adjust it on the map."
 msgstr ""
 "ಸ್ಥಳವನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಪಡೆಯಲಾಗುತ್ತದೆ, ಆದರೆ ನೀವು ಅದನ್ನು ನಕ್ಷೆಯಲ್ಲಿ "
 "ಹೊಂದಿಸಬಹುದು."
 
-#: app/templates/submit_report.html:43
+#: flask_app/app/templates/submit_report.html:43
 msgid "Upload Images (Max 3, Max 5MB each)"
 msgstr "ಚಿತ್ರಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ (ಗರಿಷ್ಠ 3, ಪ್ರತಿಯೊಂದೂ ಗರಿಷ್ಠ 5MB)"
 
-#: app/templates/submit_report.html:45
+#: flask_app/app/templates/submit_report.html:45
 msgid ""
 "Only the images captured by any geo-location based camera are acceptable "
 "for uploading !"
 msgstr ""
 
-#: app/templates/submit_report.html:48
+#: flask_app/app/templates/submit_report.html:48
 msgid "Live Geo-Camera"
 msgstr "ಲೈವ್ ಜಿಯೋ-ಕ್ಯಾಮೆರಾ"
 
-#: app/templates/submit_report.html:50
+#: flask_app/app/templates/submit_report.html:50
 msgid "Upload Files"
 msgstr "ಫೈಲ್‌ಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
 
-#: app/templates/submit_report.html:59
+#: flask_app/app/templates/submit_report.html:59
 msgid "Capture Photo"
 msgstr "ಫೋಟೋ ಸೆರೆಹಿಡಿಯಿರಿ"
 
-#: app/templates/submit_report.html:60
+#: flask_app/app/templates/submit_report.html:60
 msgid "Switch"
 msgstr "ಬದಲಿಸಿ"
 
-#: app/templates/submit_report.html:61
+#: flask_app/app/templates/submit_report.html:61
 msgid "Close Camera"
 msgstr "ಕ್ಯಾಮೆರಾ ಮುಚ್ಚಿ"
 
-#: app/templates/submit_report.html:72
+#: flask_app/app/templates/submit_report.html:72
 msgid "Voice Note"
 msgstr "ಧ್ವನಿ ಟಿಪ್ಪಣಿ"
 
-#: app/templates/submit_report.html:74
+#: flask_app/app/templates/submit_report.html:74
 msgid "Record"
 msgstr "ರೆಕಾರ್ಡ್ ಮಾಡಿ"
 
-#: app/templates/submit_report.html:75
+#: flask_app/app/templates/submit_report.html:75
 msgid "Stop"
 msgstr "ನಿಲ್ಲಿಸಿ"
 
-#: app/templates/submit_report.html:78
+#: flask_app/app/templates/submit_report.html:78
 msgid "OR upload file"
 msgstr "ಅಥವಾ ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ"
 
-#: app/templates/submit_report.html:82
+#: flask_app/app/templates/submit_report.html:82
 msgid "Remove"
 msgstr "ತೆಗೆದುಹಾಕಿ"
 
-#: app/templates/submit_report.html:86
+#: flask_app/app/templates/submit_report.html:86
 msgid "Submit Report"
 msgstr "ವರದಿಯನ್ನು ಸಲ್ಲಿಸಿ"
 
-#: app/templates/submit_report.html:196
+#: flask_app/app/templates/submit_report.html:217
 msgid "File"
 msgstr "ಫೈಲ್"
 
-#: app/templates/submit_report.html:196
+#: flask_app/app/templates/submit_report.html:217
 msgid "exceeds 5MB limit"
 msgstr "5MB ಮಿತಿಯನ್ನು ಮೀರಿದೆ"
 
-#: app/templates/submit_report.html:217 app/templates/submit_report.html:257
-msgid "Maximum 3 images reached"
-msgstr "ಗರಿಷ್ಠ 3 ಚಿತ್ರಗಳನ್ನು ತಲುಪಲಾಗಿದೆ"
-
-#: app/templates/submit_report.html:241
+#: flask_app/app/templates/submit_report.html:255
 msgid "Camera access denied or not available"
 msgstr "ಕ್ಯಾಮೆರಾ ಪ್ರವೇಶವನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ ಅಥವಾ ಲಭ್ಯವಿಲ್ಲ"
 
-#: app/templates/submit_report.html:297
+#: flask_app/app/templates/submit_report.html:276
+#: flask_app/app/templates/submit_report.html:393
+msgid "Maximum 3 images reached"
+msgstr "ಗರಿಷ್ಠ 3 ಚಿತ್ರಗಳನ್ನು ತಲುಪಲಾಗಿದೆ"
+
+#: flask_app/app/templates/submit_report.html:282
+msgid "Waiting for GPS lock..."
+msgstr ""
+
+#: flask_app/app/templates/submit_report.html:323
 msgid "District assignment pending..."
 msgstr ""
 
-#: app/templates/submit_report.html:325
-msgid "Please upload or capture at least one image of the issue."
-msgstr "ದಯವಿಟ್ಟು ಸಮಸ್ಯೆಯ ಕನಿಷ್ಠ ಒಂದು ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ ಅಥವಾ ಸೆರೆಹಿಡಿಯಿರಿ."
+#: flask_app/app/templates/submit_report.html:363
+msgid "Location data is missing. Please wait for GPS lock."
+msgstr ""
 
-#: app/templates/submit_report.html:364
+#: flask_app/app/templates/submit_report.html:419
 msgid "Recording..."
 msgstr "ರೆಕಾರ್ಡಿಂಗ್ ಆಗುತ್ತಿದೆ..."
 
-#: app/templates/submit_report.html:379
+#: flask_app/app/templates/submit_report.html:434
 msgid "Microphone access denied"
 msgstr "ಮೈಕ್ರೊಫೋನ್ ಪ್ರವೇಶವನ್ನು ನಿರಾಕರಿಸಲಾಗಿದೆ"
 
-#: app/templates/verify_otp.html:5
+#: flask_app/app/templates/verify_otp.html:5
 msgid "Verify OTP"
 msgstr "OTP ಪರಿಶೀಲಿಸಿ"
 
-#: app/templates/verify_otp.html:6
+#: flask_app/app/templates/verify_otp.html:6
 msgid "Sent to:"
 msgstr "ಇವರಿಗೆ ಕಳುಹಿಸಲಾಗಿದೆ:"
 
-#: app/templates/verify_otp.html:9
+#: flask_app/app/templates/verify_otp.html:9
 msgid "Enter 4-Digit OTP"
 msgstr "4-ಅಂಕಿಯ OTP ನಮೂದಿಸಿ"
 
-#: app/templates/verify_otp.html:17
+#: flask_app/app/templates/verify_otp.html:17
 msgid "Verify & Login"
 msgstr "ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಲಾಗಿನ್ ಮಾಡಿ"
 
-#: app/templates/verify_otp.html:73
+#: flask_app/app/templates/verify_otp.html:73
 msgid "Please enter 4 digits"
 msgstr "ದಯವಿಟ್ಟು 4 ಅಂಕಿಗಳನ್ನು ನಮೂದಿಸಿ"
 
