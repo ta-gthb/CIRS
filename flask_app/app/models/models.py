@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta, timezone
 from flask_login import UserMixin
+from werkzeug.security import generate_password_hash, check_password_hash
 from .. import db, login_manager
 
 def get_ist_time():
@@ -13,6 +14,8 @@ def load_user(user_id):
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     phone = db.Column(db.String(15), unique=True, nullable=False, index=True)
+    username = db.Column(db.String(50), unique=True, index=True)
+    password_hash = db.Column(db.String(255))
     name = db.Column(db.String(100))
     role = db.Column(db.String(20), default='citizen') # citizen, authority
     state = db.Column(db.String(100))
@@ -38,6 +41,12 @@ class User(UserMixin, db.Model):
     reports = db.relationship('Report', backref='author', lazy=True, foreign_keys='Report.user_id')
     upvotes = db.relationship('Upvote', backref='user', lazy=True)
     comments = db.relationship('Comment', backref='user', lazy=True)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
 
 class Report(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -8,9 +8,26 @@ from ..models.models import User, db, get_ist_time
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        phone = request.form.get('phone')
         role = request.form.get('role') # citizen or authority
         
+        if role == 'authority':
+            username = request.form.get('username')
+            password = request.form.get('password')
+            user = User.query.filter_by(username=username, role='authority').first()
+            
+            if user and user.check_password(password):
+                if not user.is_active:
+                    flash(_('Account is inactive.'), 'danger')
+                    return redirect(url_for('auth.login'))
+                
+                login_user(user)
+                return redirect(url_for('admin.dashboard'))
+            else:
+                flash(_('Invalid username or password.'), 'danger')
+                return redirect(url_for('auth.login'))
+
+        # Citizen Flow (OTP)
+        phone = request.form.get('phone')
         user = User.query.filter_by(phone=phone).first()
         
         if user and user.account_deletion_status == 'approved':
@@ -37,6 +54,7 @@ def login():
                 db.session.add(user)
                 db.session.commit()
             else:
+                # This should theoretically not be reached with the new logic, but kept for safety
                 flash(_('Officer not registered. Contact administrator.'), 'danger')
                 return redirect(url_for('auth.login'))
         

@@ -17,6 +17,7 @@ try:
         if not admin:
             admin = User(
                 phone=admin_phone,
+                username='kolkata_admin',
                 name='Kolkata Admin',
                 role='authority',
                 assigned_state='West Bengal',
@@ -29,8 +30,9 @@ try:
                 lon_max=88.4500,
                 is_active=True
             )
+            admin.set_password('admin123')
             db.session.add(admin)
-            print(f"Admin seeded: {admin_phone} (Kolkata)")
+            print(f"Admin seeded: {admin_phone} / kolkata_admin (Kolkata)")
         else:
             print("Kolkata Admin already exists.")
 
@@ -40,6 +42,7 @@ try:
         if not howrah_admin:
             howrah_admin = User(
                 phone=howrah_phone,
+                username='howrah_admin',
                 name='Howrah Admin',
                 role='authority',
                 assigned_state='West Bengal',
@@ -52,8 +55,9 @@ try:
                 lon_max=88.3500,
                 is_active=True
             )
+            howrah_admin.set_password('admin123')
             db.session.add(howrah_admin)
-            print(f"Admin seeded: {howrah_phone} (Howrah)")
+            print(f"Admin seeded: {howrah_phone} / howrah_admin (Howrah)")
         else:
             print("Howrah Admin already exists.")
             

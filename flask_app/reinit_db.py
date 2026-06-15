@@ -19,6 +19,7 @@ try:
         admins = [
             {
                 'phone': '9876543210',
+                'username': 'kolkata_admin',
                 'name': 'Kolkata Admin',
                 'assigned_district': 'Kolkata',
                 'lat': 22.5726, 'lng': 88.3639,
@@ -27,6 +28,7 @@ try:
             },
             {
                 'phone': '9876543211',
+                'username': 'howrah_admin',
                 'name': 'Howrah Admin',
                 'assigned_district': 'Howrah',
                 'lat': 22.5958, 'lng': 88.2636,
@@ -35,6 +37,7 @@ try:
             },
             {
                 'phone': '9876543212',
+                'username': 's24p_admin',
                 'name': 'South 24 Parganas Admin',
                 'assigned_district': 'South 24 Parganas',
                 'lat': 22.1367, 'lng': 88.5565,
@@ -46,6 +49,7 @@ try:
         for a in admins:
             admin = User(
                 phone=a['phone'],
+                username=a['username'],
                 name=a['name'],
                 role='authority',
                 assigned_state='West Bengal',
@@ -58,6 +62,7 @@ try:
                 lon_max=a['lon_max'],
                 is_active=True
             )
+            admin.set_password('admin123')
             db.session.add(admin)
         
         db.session.commit()

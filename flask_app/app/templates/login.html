@@ -4,15 +4,29 @@
 <div class="auth-card">
     <h2>{{ _('Login / Register') }}</h2>
     <form method="POST" id="loginForm">
-        <div class="form-group">
-            <label>{{ _('Mobile Number') }}</label>
-            <div class="box-input-container phone-container">
-                {% for i in range(10) %}
-                <input type="text" class="box-input phone-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                {% endfor %}
+        <div id="phoneSection">
+            <div class="form-group">
+                <label>{{ _('Mobile Number') }}</label>
+                <div class="box-input-container phone-container">
+                    {% for i in range(10) %}
+                    <input type="text" class="box-input phone-box" maxlength="1" pattern="[0-9]" inputmode="numeric">
+                    {% endfor %}
+                </div>
+                <input type="hidden" name="phone" id="fullPhone">
             </div>
-            <input type="hidden" name="phone" id="fullPhone">
         </div>
+
+        <div id="adminSection" style="display: none;">
+            <div class="form-group">
+                <label>{{ _('Username') }}</label>
+                <input type="text" name="username" class="form-control" placeholder="{{ _('Enter username') }}">
+            </div>
+            <div class="form-group">
+                <label>{{ _('Password') }}</label>
+                <input type="password" name="password" class="form-control" placeholder="{{ _('Enter password') }}">
+            </div>
+        </div>
+
         <div class="form-group">
             <label>{{ _('I am a:') }}</label>
             <div class="role-selector">
@@ -22,9 +36,9 @@
                 <label for="authority">{{ _('Officer') }}</label>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">{{ _('Send OTP') }}</button>
+        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">{{ _('Send OTP') }}</button>
     </form>
-    <p class="hint">{{ _('Demo OTP: 1234') }}</p>
+    <p class="hint" id="demoHint">{{ _('Demo OTP: 1234') }}</p>
 </div>
 
 <style>
@@ -76,15 +90,49 @@
 
     setupBoxNavigation(phoneBoxes);
 
-    form.addEventListener('submit', (e) => {
-        let phoneVal = '';
-        phoneBoxes.forEach(box => phoneVal += box.value);
-        if (phoneVal.length !== 10) {
-            e.preventDefault();
-            alert("{{ _('Please enter 10 digits') }}");
+    // Role Toggle Logic
+    const citizenRadio = document.getElementById('citizen');
+    const authorityRadio = document.getElementById('authority');
+    const phoneSection = document.getElementById('phoneSection');
+    const adminSection = document.getElementById('adminSection');
+    const submitBtn = document.getElementById('submitBtn');
+    const demoHint = document.getElementById('demoHint');
+    const phoneInputs = document.querySelectorAll('.phone-box');
+    const adminInputs = adminSection.querySelectorAll('input');
+
+    function toggleRole() {
+        if (citizenRadio.checked) {
+            phoneSection.style.display = 'block';
+            adminSection.style.display = 'none';
+            submitBtn.innerText = "{{ _('Send OTP') }}";
+            demoHint.style.display = 'block';
+            phoneInputs.forEach(i => i.required = true);
+            adminInputs.forEach(i => i.required = false);
         } else {
-            fullPhone.value = phoneVal;
+            phoneSection.style.display = 'none';
+            adminSection.style.display = 'block';
+            submitBtn.innerText = "{{ _('Login') }}";
+            demoHint.style.display = 'none';
+            phoneInputs.forEach(i => i.required = false);
+            adminInputs.forEach(i => i.required = true);
+        }
+    }
+
+    citizenRadio.addEventListener('change', toggleRole);
+    authorityRadio.addEventListener('change', toggleRole);
+    toggleRole(); // Initial state
+
+    form.addEventListener('submit', (e) => {
+        if (citizenRadio.checked) {
+            let phoneVal = '';
+            phoneBoxes.forEach(box => phoneVal += box.value);
+            if (phoneVal.length !== 10) {
+                e.preventDefault();
+                alert("{{ _('Please enter 10 digits') }}");
+            } else {
+                fullPhone.value = phoneVal;
+            }
         }
     });
-</script>
-{% endblock %}
+    </script>
+    {% endblock %}
