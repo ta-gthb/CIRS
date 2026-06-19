@@ -8,6 +8,191 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Animated Splash Screen -->
+    <div id="cirs-splash" class="cirs-splash-overlay">
+        <div class="cirs-splash-content">
+            <div class="cirs-logo-outer-circle">
+                <div class="cirs-logo-pulse"></div>
+                <img src="{{ url_for('static', filename='CIRS_Logo.png') }}" class="cirs-splash-logo" alt="CIRS Logo">
+            </div>
+            <div class="cirs-splash-text">
+                <h1 class="cirs-splash-title">CIRS</h1>
+                <p class="cirs-splash-subtitle">Civic Issue Reporting System</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Immediately hide the splash if it has already been shown in this session */
+        .cirs-splash-hidden {
+            display: none !important;
+        }
+        
+        .cirs-splash-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999999;
+            opacity: 1;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .cirs-splash-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+        }
+        
+        .cirs-logo-outer-circle {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cirs-splash-logo {
+            width: 140px;
+            height: 140px;
+            object-fit: contain;
+            border-radius: 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            z-index: 2;
+            opacity: 0;
+            transform: scale(0.85);
+            animation: logoEntrance 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            animation-delay: 0.15s;
+        }
+        
+        .cirs-logo-pulse {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 32px;
+            border: 2.5px solid rgba(59, 130, 246, 0.5);
+            z-index: 1;
+            opacity: 0;
+            animation: pulseRing 2.2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+            animation-delay: 0.65s;
+        }
+        
+        .cirs-splash-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: #ffffff;
+        }
+        
+        .cirs-splash-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin: 0;
+            opacity: 0;
+            animation: textSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: 0.6s;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .cirs-splash-subtitle {
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            color: #94a3b8;
+            margin: 0;
+            opacity: 0;
+            animation: textSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: 0.8s;
+            text-transform: uppercase;
+        }
+        
+        @keyframes logoEntrance {
+            0% {
+                opacity: 0;
+                transform: scale(0.7) rotate(-8deg);
+                filter: drop-shadow(0 0 0px rgba(59, 130, 246, 0));
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+                filter: drop-shadow(0 0 25px rgba(59, 130, 246, 0.5));
+            }
+        }
+        
+        @keyframes pulseRing {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: scale(1.35);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes textSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        (function() {
+            const splashKey = 'cirs_splash_shown';
+            const splashEl = document.getElementById('cirs-splash');
+            
+            // Check if already shown in the current browser session
+            if (sessionStorage.getItem(splashKey)) {
+                if (splashEl) {
+                    splashEl.classList.add('cirs-splash-hidden');
+                }
+            } else {
+                // Lock scrolling while splash is active
+                document.documentElement.style.overflow = 'hidden';
+                document.body.style.overflow = 'hidden';
+                
+                // Hide splash after 2.2 seconds
+                setTimeout(function() {
+                    if (splashEl) {
+                        splashEl.style.opacity = '0';
+                        
+                        // Re-enable scrolling
+                        document.documentElement.style.overflow = '';
+                        document.body.style.overflow = '';
+                        
+                        // Save in sessionStorage
+                        sessionStorage.setItem(splashKey, 'true');
+                        
+                        // Remove element after transition completes
+                        setTimeout(function() {
+                            splashEl.remove();
+                        }, 500);
+                    }
+                }, 2200);
+            }
+        })();
+    </script>
+
     <nav class="navbar">
         <!-- Top bar: logo + controls -->
         <div class="container nav-wrapper">
