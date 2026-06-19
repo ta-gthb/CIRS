@@ -6,6 +6,11 @@
     <title>Civic Issue Reporting System (CIRS)</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        if (sessionStorage.getItem('cirs_splash_shown')) {
+            document.documentElement.classList.add('splash-already-shown');
+        }
+    </script>
 </head>
 <body>
     <!-- Animated Splash Screen -->
@@ -24,7 +29,8 @@
 
     <style>
         /* Immediately hide the splash if it has already been shown in this session */
-        .cirs-splash-hidden {
+        .cirs-splash-hidden,
+        .splash-already-shown #cirs-splash {
             display: none !important;
         }
         
