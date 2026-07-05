@@ -16,6 +16,9 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block">{{ _('Verify Email') }}</button>
     </form>
+    <form method="POST" action="{{ url_for('auth.resend_email_otp') }}" style="margin-top: 1rem;">
+        <button type="submit" class="btn btn-secondary btn-block">{{ _('Resend OTP') }}</button>
+    </form>
 </div>
 
 <style>

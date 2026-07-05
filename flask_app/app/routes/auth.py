@@ -4,7 +4,7 @@ from flask_babel import _
 from datetime import datetime, timedelta
 from . import auth_bp
 from ..models.models import User, db, get_ist_time
-from ..utils.email_utils import generate_otp, send_email_otp
+from ..utils.email_utils import generate_otp, queue_email_otp
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -134,6 +134,25 @@ def verify_email():
         flash(_('Invalid or expired OTP.'), 'danger')
 
     return render_template('verify_email.html', email=current_user.pending_email or current_user.email)
+
+
+@auth_bp.route('/resend-email-otp', methods=['POST'])
+@login_required
+def resend_email_otp():
+    target_email = current_user.pending_email or current_user.email
+    if not target_email:
+        flash(_('Please add an email id first.'), 'warning')
+        return redirect(url_for('citizen.profile') if current_user.role == 'citizen' else url_for('admin.profile'))
+
+    current_user.pending_email = target_email
+    current_user.email_verified = False
+    current_user.email_otp_code = generate_otp()
+    current_user.email_otp_expires_at = get_ist_time() + timedelta(minutes=10)
+    db.session.commit()
+
+    queue_email_otp(target_email, current_user.email_otp_code)
+    flash(_('A new verification OTP has been sent to your email id.'), 'success')
+    return redirect(url_for('auth.verify_email'))
 
 @auth_bp.route('/logout')
 @login_required

@@ -55,11 +55,15 @@ def queue_email_otp(recipient_email, otp_code):
 
     def _deliver():
         with app.app_context():
-            send_email_otp(recipient_email, otp_code)
+            try:
+                send_email_otp(recipient_email, otp_code)
+                current_app.logger.info('Email OTP sent to %s', recipient_email)
+            except Exception as exc:
+                current_app.logger.exception('Failed to send email OTP to %s: %s', recipient_email, exc)
 
     try:
-        import gevent
-        gevent.spawn(_deliver)
+        from .. import socketio
+        socketio.start_background_task(_deliver)
         return True
     except Exception:
         worker = threading.Thread(target=_deliver, daemon=True)
