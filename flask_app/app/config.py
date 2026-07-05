@@ -27,6 +27,7 @@ class Config:
     EMAIL_SMTP_USERNAME = os.environ.get('EMAIL_SMTP_USERNAME', EMAIL_SENDER)
     EMAIL_SMTP_PASSWORD = os.environ.get('EMAIL_SMTP_PASSWORD')
     EMAIL_SMTP_USE_TLS = os.environ.get('EMAIL_SMTP_USE_TLS', 'true').lower() in ('1', 'true', 'yes', 'on')
+    EMAIL_SMTP_TIMEOUT = int(os.environ.get('EMAIL_SMTP_TIMEOUT', '10'))
 
     # Supabase/Postgres URI handling
     db_url = os.environ.get('DATABASE_URL')

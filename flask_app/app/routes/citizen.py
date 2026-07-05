@@ -9,7 +9,7 @@ from . import citizen_bp
 from ..models.models import Report, User, db, ReportImage, VoiceNote, Upvote, Comment, get_ist_time
 from ..utils.storage_utils import upload_file
 from ..utils.geo_utils import reverse_geocode
-from ..utils.email_utils import generate_otp, send_email_otp, is_valid_email
+from ..utils.email_utils import generate_otp, queue_email_otp, is_valid_email
 from sqlalchemy import func
 
 def calculate_distance(lat1, lon1, lat2, lon2):
@@ -107,7 +107,6 @@ def update_profile():
     try:
         db.session.flush()
         if email_needs_verification:
-            send_email_otp(email_address, current_user.email_otp_code)
         db.session.commit()
     except Exception:
         db.session.rollback()
@@ -115,6 +114,7 @@ def update_profile():
         return redirect(url_for('citizen.profile'))
 
     if email_needs_verification:
+        queue_email_otp(email_address, current_user.email_otp_code)
         flash(_('A verification OTP has been sent to your email id.'), 'success')
         return redirect(url_for('auth.verify_email'))
 
