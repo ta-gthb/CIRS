@@ -21,6 +21,13 @@ class Config:
     FIREBASE_MESSAGING_SENDER_ID = os.environ.get('FIREBASE_MESSAGING_SENDER_ID')
     FIREBASE_APP_ID = os.environ.get('FIREBASE_APP_ID')
 
+    EMAIL_SENDER = os.environ.get('EMAIL_SENDER', 'cireportingsystem@gmail.com')
+    EMAIL_SMTP_HOST = os.environ.get('EMAIL_SMTP_HOST', 'smtp.gmail.com')
+    EMAIL_SMTP_PORT = int(os.environ.get('EMAIL_SMTP_PORT', '587'))
+    EMAIL_SMTP_USERNAME = os.environ.get('EMAIL_SMTP_USERNAME', EMAIL_SENDER)
+    EMAIL_SMTP_PASSWORD = os.environ.get('EMAIL_SMTP_PASSWORD')
+    EMAIL_SMTP_USE_TLS = os.environ.get('EMAIL_SMTP_USE_TLS', 'true').lower() in ('1', 'true', 'yes', 'on')
+
     # Supabase/Postgres URI handling
     db_url = os.environ.get('DATABASE_URL')
     if db_url and db_url.startswith("postgres://"):

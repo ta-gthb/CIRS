@@ -27,7 +27,8 @@ def create_app(config_class=Config):
     
     # Register models
     with app.app_context():
-        from .models.models import User, Report, Upvote, Comment, ReportImage, VoiceNote, Message
+        from .models.models import User, Report, Upvote, Comment, ReportImage, VoiceNote, Message, ensure_user_email_columns
+        ensure_user_email_columns(db.engine)
 
     login_manager.init_app(app)
     socketio.init_app(app, cors_allowed_origins="*")

@@ -4,6 +4,7 @@ from flask_babel import _
 from datetime import datetime, timedelta
 from . import auth_bp
 from ..models.models import User, db, get_ist_time
+from ..utils.email_utils import generate_otp, send_email_otp
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -25,6 +26,10 @@ def login():
                 # Security Check: Force password change if default
                 if password == 'admin123':
                     flash(_('Security Warning: You are using the default password. Please change it immediately.'), 'warning')
+                    return redirect(url_for('admin.profile'))
+
+                if user.role == 'authority' and not user.email_verified:
+                    flash(_('Please verify your email id before accessing administrative tasks.'), 'warning')
                     return redirect(url_for('admin.profile'))
                 
                 return redirect(url_for('admin.dashboard'))
@@ -93,12 +98,42 @@ def verify_otp():
             db.session.commit()
             login_user(user)
             if user.role == 'authority':
+                if not user.email_verified:
+                    flash(_('Please verify your email id before accessing administrative tasks.'), 'warning')
+                    return redirect(url_for('admin.profile'))
                 return redirect(url_for('admin.dashboard'))
             return redirect(url_for('citizen.dashboard'))
         else:
             flash(_('Invalid or expired OTP.'), 'danger')
             
     return render_template('verify_otp.html', phone=phone)
+
+
+@auth_bp.route('/verify-email', methods=['GET', 'POST'])
+@login_required
+def verify_email():
+    if request.method == 'POST':
+        otp = request.form.get('otp', '').strip()
+        if not current_user.email_otp_code or not current_user.email_otp_expires_at:
+            flash(_('No email verification is pending.'), 'warning')
+            return redirect(url_for('auth.verify_email'))
+
+        if otp and current_user.email_otp_code == otp and current_user.email_otp_expires_at > get_ist_time():
+            if current_user.pending_email:
+                current_user.email = current_user.pending_email
+            current_user.pending_email = None
+            current_user.email_verified = True
+            current_user.email_otp_code = None
+            current_user.email_otp_expires_at = None
+            db.session.commit()
+            flash(_('Email id verified successfully.'), 'success')
+            if current_user.role == 'authority':
+                return redirect(url_for('admin.dashboard'))
+            return redirect(url_for('citizen.profile'))
+
+        flash(_('Invalid or expired OTP.'), 'danger')
+
+    return render_template('verify_email.html', email=current_user.pending_email or current_user.email)
 
 @auth_bp.route('/logout')
 @login_required

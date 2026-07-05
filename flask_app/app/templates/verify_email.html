@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-card">
+    <h2>{{ _('Verify Email ID') }}</h2>
+    <p>{{ _('Sent to:') }} {{ email }}</p>
+    <form method="POST" id="emailOtpForm">
+        <div class="form-group">
+            <label>{{ _('Enter 6-Digit OTP') }}</label>
+            <div class="box-input-container">
+                {% for i in range(6) %}
+                <input type="text" class="box-input otp-box" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                {% endfor %}
+            </div>
+            <input type="hidden" name="otp" id="fullEmailOtp">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">{{ _('Verify Email') }}</button>
+    </form>
+</div>
+
+<style>
+    .auth-card { max-width: 450px; }
+    .box-input-container { display: flex; justify-content: center; gap: clamp(8px, 3vw, 15px); margin: 1.5rem 0; }
+    .box-input { width: clamp(44px, 14vw, 60px); height: clamp(52px, 16vw, 70px); text-align: center; font-size: clamp(1.2rem, 5vw, 1.8rem); border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-color); flex-shrink: 0; }
+    .box-input:focus { border-color: var(--primary-color); outline: none; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25); }
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const otpBoxes = document.querySelectorAll('.otp-box');
+    const fullOtp = document.getElementById('fullEmailOtp');
+    const form = document.getElementById('emailOtpForm');
+
+    function setupBoxNavigation(boxes) {
+        boxes.forEach((box, idx) => {
+            box.addEventListener('focus', () => box.select());
+
+            box.addEventListener('input', (e) => {
+                const val = e.target.value;
+                if (val.length === 1 && idx < boxes.length - 1) {
+                    boxes[idx + 1].focus();
+                }
+            });
+
+            box.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !box.value && idx > 0) {
+                    boxes[idx - 1].focus();
+                }
+            });
+        });
+    }
+
+    setupBoxNavigation(otpBoxes);
+
+    form.addEventListener('submit', (e) => {
+        let otpVal = '';
+        otpBoxes.forEach(box => otpVal += box.value);
+        if (otpVal.length !== 6) {
+            e.preventDefault();
+            alert("{{ _('Please enter 6 digits') }}");
+        } else {
+            fullOtp.value = otpVal;
+        }
+    });
+</script>
+{% endblock %}

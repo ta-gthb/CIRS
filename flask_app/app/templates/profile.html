@@ -3,6 +3,9 @@
 {% block content %}
 <div class="profile-container">
     <h2>{{ _('User Profile') }}</h2>
+    <div class="alert alert-info" style="margin-bottom: 1rem;">
+        <i class="fas fa-info-circle"></i> {{ _('Update/add your email id to receive important communications') }}
+    </div>
     <div class="profile-card section-card">
         <form action="{{ url_for('citizen.update_profile') }}" method="POST">
             <div class="form-group">
@@ -19,6 +22,16 @@
                 <label>{{ _('Phone Number') }}</label>
                 <input type="text" class="form-control" value="{{ user.phone }}" readonly style="background-color: var(--bg-color);">
                 <small class="text-muted">{{ _('Phone number cannot be changed.') }}</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">{{ _('Email ID') }}</label>
+                <input type="email" name="email" id="email" class="form-control" value="{{ user.pending_email or user.email or '' }}" placeholder="{{ _('Enter your email id') }}">
+                {% if user.pending_email and not user.email_verified %}
+                    <small class="text-warning">{{ _('A verification OTP has been sent to your new email id.') }}</small>
+                {% elif user.email_verified and user.email %}
+                    <small class="text-success">{{ _('Email id verified') }}</small>
+                {% endif %}
             </div>
 
             <div class="form-group">
