@@ -138,6 +138,7 @@ def profile():
                             send_email_otp(email_address, current_user.email_otp_code)
                             flash(_('A verification OTP has been sent to your email id.'), 'success')
                         except Exception:
+                            current_app.logger.exception('Failed to send email OTP to %s', email_address)
                             flash(_('OTP could not be sent. Please check email settings and try again.'), 'danger')
                         return redirect(url_for('auth.verify_email'))
 

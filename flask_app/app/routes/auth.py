@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, current_app
 from flask_login import login_user, logout_user, login_required, current_user
 from flask_babel import _
 from datetime import datetime, timedelta
@@ -154,6 +154,7 @@ def resend_email_otp():
         send_email_otp(target_email, current_user.email_otp_code)
         flash(_('A new verification OTP has been sent to your email id.'), 'success')
     except Exception as exc:
+        current_app.logger.exception('Failed to send email OTP to %s', target_email)
         flash(_('OTP could not be sent. Please check email settings and try again.'), 'danger')
     return redirect(url_for('auth.verify_email'))
 
