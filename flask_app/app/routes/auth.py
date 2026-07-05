@@ -4,7 +4,7 @@ from flask_babel import _
 from datetime import datetime, timedelta
 from . import auth_bp
 from ..models.models import User, db, get_ist_time
-from ..utils.email_utils import generate_otp, queue_email_otp
+from ..utils.email_utils import generate_otp, send_email_otp
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -150,8 +150,11 @@ def resend_email_otp():
     current_user.email_otp_expires_at = get_ist_time() + timedelta(minutes=10)
     db.session.commit()
 
-    queue_email_otp(target_email, current_user.email_otp_code)
-    flash(_('A new verification OTP has been sent to your email id.'), 'success')
+    try:
+        send_email_otp(target_email, current_user.email_otp_code)
+        flash(_('A new verification OTP has been sent to your email id.'), 'success')
+    except Exception as exc:
+        flash(_('OTP could not be sent. Please check email settings and try again.'), 'danger')
     return redirect(url_for('auth.verify_email'))
 
 @auth_bp.route('/logout')

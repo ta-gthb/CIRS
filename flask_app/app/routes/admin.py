@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import or_
 from . import admin_bp
 from ..models.models import Report, User, db, get_ist_time
-from ..utils.email_utils import generate_otp, queue_email_otp, is_valid_email
+from ..utils.email_utils import generate_otp, send_email_otp, is_valid_email
 
 
 @admin_bp.before_request
@@ -134,8 +134,11 @@ def profile():
                         return redirect(url_for('admin.profile'))
 
                     if email_needs_verification:
-                        queue_email_otp(email_address, current_user.email_otp_code)
-                        flash(_('A verification OTP has been sent to your email id.'), 'success')
+                        try:
+                            send_email_otp(email_address, current_user.email_otp_code)
+                            flash(_('A verification OTP has been sent to your email id.'), 'success')
+                        except Exception:
+                            flash(_('OTP could not be sent. Please check email settings and try again.'), 'danger')
                         return redirect(url_for('auth.verify_email'))
 
                     flash(_('Email id updated successfully.'), 'success')
