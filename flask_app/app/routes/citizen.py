@@ -106,7 +106,6 @@ def update_profile():
 
     try:
         db.session.flush()
-        if email_needs_verification:
         db.session.commit()
     except Exception:
         db.session.rollback()
