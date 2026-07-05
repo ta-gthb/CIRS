@@ -61,13 +61,16 @@ def ensure_user_email_columns(engine):
     if 'user' not in inspector.get_table_names():
         return
 
+    dialect_name = engine.dialect.name
+    timestamp_column_type = 'TIMESTAMP' if dialect_name == 'postgresql' else 'DATETIME'
+
     existing_columns = {column['name'] for column in inspector.get_columns('user')}
     column_statements = {
         'email': 'ALTER TABLE "user" ADD COLUMN email VARCHAR(255)',
         'pending_email': 'ALTER TABLE "user" ADD COLUMN pending_email VARCHAR(255)',
         'email_verified': 'ALTER TABLE "user" ADD COLUMN email_verified BOOLEAN DEFAULT FALSE',
         'email_otp_code': 'ALTER TABLE "user" ADD COLUMN email_otp_code VARCHAR(6)',
-        'email_otp_expires_at': 'ALTER TABLE "user" ADD COLUMN email_otp_expires_at DATETIME',
+        'email_otp_expires_at': f'ALTER TABLE "user" ADD COLUMN email_otp_expires_at {timestamp_column_type}',
     }
 
     with engine.begin() as connection:
