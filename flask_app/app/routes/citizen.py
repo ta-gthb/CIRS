@@ -4,12 +4,10 @@ from datetime import datetime, timedelta
 from flask import render_template, request, redirect, url_for, flash, jsonify, current_app
 from flask_login import login_required, current_user
 from flask_babel import _
-from sqlalchemy import or_
 from . import citizen_bp
 from ..models.models import Report, User, db, ReportImage, VoiceNote, Upvote, Comment, get_ist_time
 from ..utils.storage_utils import upload_file
 from ..utils.geo_utils import reverse_geocode
-from ..utils.email_utils import generate_otp, send_email_otp, is_valid_email
 from sqlalchemy import func
 
 def calculate_distance(lat1, lon1, lat2, lon2):
@@ -76,51 +74,11 @@ def profile():
 @citizen_bp.route('/profile/update', methods=['POST'])
 @login_required
 def update_profile():
-    email_address = (request.form.get('email') or '').strip().lower()
-    current_email = (current_user.email or '').strip().lower()
-    email_needs_verification = bool(email_address) and email_address != current_email
-
-    if email_address and not is_valid_email(email_address):
-        flash(_('Please enter a valid email id.'), 'danger')
-        return redirect(url_for('citizen.profile'))
-
-    if email_address:
-        existing_user = User.query.filter(
-            User.id != current_user.id,
-            or_(User.email == email_address, User.pending_email == email_address)
-        ).first()
-        if existing_user:
-            flash(_('This email id is already registered with another account.'), 'danger')
-            return redirect(url_for('citizen.profile'))
-
     current_user.name = request.form.get('name')
     current_user.address = request.form.get('address')
     current_user.state = request.form.get('state')
     current_user.district = request.form.get('district')
-
-    if email_needs_verification:
-        current_user.pending_email = email_address
-        current_user.email_verified = False
-        current_user.email_otp_code = generate_otp()
-        current_user.email_otp_expires_at = get_ist_time() + timedelta(minutes=10)
-
-    try:
-        db.session.flush()
-        db.session.commit()
-    except Exception:
-        db.session.rollback()
-        flash(_('Failed to send verification OTP to your email id. Please try again.'), 'danger')
-        return redirect(url_for('citizen.profile'))
-
-    if email_needs_verification:
-        try:
-            send_email_otp(email_address, current_user.email_otp_code)
-            flash(_('A verification OTP has been sent to your email id.'), 'success')
-        except Exception:
-            current_app.logger.exception('Failed to send email OTP to %s', email_address)
-            flash(_('OTP could not be sent. Please check email settings and try again.'), 'danger')
-        return redirect(url_for('auth.verify_email'))
-
+    db.session.commit()
     flash(_('Profile updated successfully!'), 'success')
     return redirect(url_for('citizen.profile'))
 

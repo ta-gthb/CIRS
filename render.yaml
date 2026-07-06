@@ -14,20 +14,6 @@ services:
         value: 3.11.6
       - key: FLASK_ENV
         value: production
-      - key: EMAIL_SENDER
-        value: cireportingsystem@gmail.com
-      - key: EMAIL_SMTP_HOST
-        value: smtp.gmail.com
-      - key: EMAIL_SMTP_PORT
-        value: 587
-      - key: EMAIL_SMTP_USERNAME
-        value: cireportingsystem@gmail.com
-      - key: EMAIL_SMTP_PASSWORD
-        sync: false
-      - key: EMAIL_SMTP_USE_TLS
-        value: true
-      - key: EMAIL_SMTP_TIMEOUT
-        value: 10
       - key: SUPABASE_URL
         sync: false
       - key: SUPABASE_KEY

@@ -39,9 +39,6 @@ def set_language(lang_code):
 def get_messages(report_id):
     report = Report.query.get_or_404(report_id)
     
-    if current_user.role == 'authority' and (not current_user.email_verified or not current_user.email or current_user.pending_email):
-        return jsonify({'error': _('Please verify your email id before accessing administrative tasks.')}), 403
-
     # Security: Author or Authority
     if current_user.role != 'authority' and report.user_id != current_user.id:
         return jsonify({'error': 'Unauthorized'}), 403
@@ -59,9 +56,6 @@ def get_messages(report_id):
 def send_message(report_id):
     report = Report.query.get_or_404(report_id)
     
-    if current_user.role == 'authority' and (not current_user.email_verified or not current_user.email or current_user.pending_email):
-        return jsonify({'error': _('Please verify your email id before accessing administrative tasks.')}), 403
-
     if current_user.role != 'authority' and report.user_id != current_user.id:
         return jsonify({'error': 'Unauthorized'}), 403
         

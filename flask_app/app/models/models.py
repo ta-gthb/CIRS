@@ -1,7 +1,6 @@
 from datetime import datetime, timedelta, timezone
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
-from sqlalchemy import inspect, text
 from .. import db, login_manager
 
 def get_ist_time():
@@ -17,11 +16,6 @@ class User(UserMixin, db.Model):
     phone = db.Column(db.String(15), unique=True, nullable=False, index=True)
     username = db.Column(db.String(50), unique=True, index=True)
     password_hash = db.Column(db.String(255))
-    email = db.Column(db.String(255))
-    pending_email = db.Column(db.String(255))
-    email_verified = db.Column(db.Boolean, default=False)
-    email_otp_code = db.Column(db.String(6))
-    email_otp_expires_at = db.Column(db.DateTime)
     name = db.Column(db.String(100))
     role = db.Column(db.String(20), default='citizen') # citizen, authority
     state = db.Column(db.String(100))
@@ -54,29 +48,6 @@ class User(UserMixin, db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
-
-
-def ensure_user_email_columns(engine):
-    inspector = inspect(engine)
-    if 'user' not in inspector.get_table_names():
-        return
-
-    dialect_name = engine.dialect.name
-    timestamp_column_type = 'TIMESTAMP' if dialect_name == 'postgresql' else 'DATETIME'
-
-    existing_columns = {column['name'] for column in inspector.get_columns('user')}
-    column_statements = {
-        'email': 'ALTER TABLE "user" ADD COLUMN email VARCHAR(255)',
-        'pending_email': 'ALTER TABLE "user" ADD COLUMN pending_email VARCHAR(255)',
-        'email_verified': 'ALTER TABLE "user" ADD COLUMN email_verified BOOLEAN DEFAULT FALSE',
-        'email_otp_code': 'ALTER TABLE "user" ADD COLUMN email_otp_code VARCHAR(6)',
-        'email_otp_expires_at': f'ALTER TABLE "user" ADD COLUMN email_otp_expires_at {timestamp_column_type}',
-    }
-
-    with engine.begin() as connection:
-        for column_name, statement in column_statements.items():
-            if column_name not in existing_columns:
-                connection.execute(text(statement))
 
 class Report(db.Model):
     id = db.Column(db.Integer, primary_key=True)

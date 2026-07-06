@@ -2,25 +2,8 @@ from flask import render_template, request, redirect, url_for, flash, jsonify
 from flask_login import login_required, current_user
 from flask_babel import _
 from datetime import datetime, timedelta
-from sqlalchemy import or_
 from . import admin_bp
 from ..models.models import Report, User, db, get_ist_time
-from ..utils.email_utils import generate_otp, send_email_otp, is_valid_email
-
-
-@admin_bp.before_request
-def ensure_verified_email_for_admin_tasks():
-    if not current_user.is_authenticated or current_user.role != 'authority':
-        return
-
-    if request.endpoint == 'admin.profile':
-        return
-
-    if current_user.email_verified and current_user.email and not current_user.pending_email:
-        return
-
-    flash(_('Please add and verify your email id to perform administrative tasks.'), 'warning')
-    return redirect(url_for('admin.profile'))
 
 @admin_bp.route('/dashboard')
 @login_required
@@ -101,48 +84,6 @@ def profile():
                     current_user.phone = new_phone
                     db.session.commit()
                     flash(_('Phone number updated successfully.'), 'success')
-
-        elif action == 'update_email':
-            email_address = (request.form.get('email') or '').strip().lower()
-            current_email = (current_user.email or '').strip().lower()
-            email_needs_verification = bool(email_address) and email_address != current_email
-
-            if not email_address:
-                flash(_('Please enter an email id.'), 'danger')
-            elif not is_valid_email(email_address):
-                flash(_('Please enter a valid email id.'), 'danger')
-            else:
-                existing_user = User.query.filter(
-                    User.id != current_user.id,
-                    or_(User.email == email_address, User.pending_email == email_address)
-                ).first()
-                if existing_user:
-                    flash(_('This email id is already registered with another account.'), 'danger')
-                else:
-                    if email_needs_verification:
-                        current_user.pending_email = email_address
-                        current_user.email_verified = False
-                        current_user.email_otp_code = generate_otp()
-                        current_user.email_otp_expires_at = get_ist_time() + timedelta(minutes=10)
-
-                    try:
-                        db.session.flush()
-                        db.session.commit()
-                    except Exception:
-                        db.session.rollback()
-                        flash(_('Failed to send verification OTP to your email id. Please try again.'), 'danger')
-                        return redirect(url_for('admin.profile'))
-
-                    if email_needs_verification:
-                        try:
-                            send_email_otp(email_address, current_user.email_otp_code)
-                            flash(_('A verification OTP has been sent to your email id.'), 'success')
-                        except Exception:
-                            current_app.logger.exception('Failed to send email OTP to %s', email_address)
-                            flash(_('OTP could not be sent. Please check email settings and try again.'), 'danger')
-                        return redirect(url_for('auth.verify_email'))
-
-                    flash(_('Email id updated successfully.'), 'success')
         
         elif action == 'change_password':
             current_pwd = request.form.get('current_password')

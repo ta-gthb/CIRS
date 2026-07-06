@@ -1,10 +1,9 @@
-from flask import render_template, request, redirect, url_for, flash, current_app
+from flask import render_template, request, redirect, url_for, flash
 from flask_login import login_user, logout_user, login_required, current_user
 from flask_babel import _
 from datetime import datetime, timedelta
 from . import auth_bp
 from ..models.models import User, db, get_ist_time
-from ..utils.email_utils import generate_otp, send_email_otp
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -26,10 +25,6 @@ def login():
                 # Security Check: Force password change if default
                 if password == 'admin123':
                     flash(_('Security Warning: You are using the default password. Please change it immediately.'), 'warning')
-                    return redirect(url_for('admin.profile'))
-
-                if user.role == 'authority' and not user.email_verified:
-                    flash(_('Please verify your email id before accessing administrative tasks.'), 'warning')
                     return redirect(url_for('admin.profile'))
                 
                 return redirect(url_for('admin.dashboard'))
@@ -98,65 +93,12 @@ def verify_otp():
             db.session.commit()
             login_user(user)
             if user.role == 'authority':
-                if not user.email_verified:
-                    flash(_('Please verify your email id before accessing administrative tasks.'), 'warning')
-                    return redirect(url_for('admin.profile'))
                 return redirect(url_for('admin.dashboard'))
             return redirect(url_for('citizen.dashboard'))
         else:
             flash(_('Invalid or expired OTP.'), 'danger')
             
     return render_template('verify_otp.html', phone=phone)
-
-
-@auth_bp.route('/verify-email', methods=['GET', 'POST'])
-@login_required
-def verify_email():
-    if request.method == 'POST':
-        otp = request.form.get('otp', '').strip()
-        if not current_user.email_otp_code or not current_user.email_otp_expires_at:
-            flash(_('No email verification is pending.'), 'warning')
-            return redirect(url_for('auth.verify_email'))
-
-        if otp and current_user.email_otp_code == otp and current_user.email_otp_expires_at > get_ist_time():
-            if current_user.pending_email:
-                current_user.email = current_user.pending_email
-            current_user.pending_email = None
-            current_user.email_verified = True
-            current_user.email_otp_code = None
-            current_user.email_otp_expires_at = None
-            db.session.commit()
-            flash(_('Email id verified successfully.'), 'success')
-            if current_user.role == 'authority':
-                return redirect(url_for('admin.dashboard'))
-            return redirect(url_for('citizen.profile'))
-
-        flash(_('Invalid or expired OTP.'), 'danger')
-
-    return render_template('verify_email.html', email=current_user.pending_email or current_user.email)
-
-
-@auth_bp.route('/resend-email-otp', methods=['POST'])
-@login_required
-def resend_email_otp():
-    target_email = current_user.pending_email or current_user.email
-    if not target_email:
-        flash(_('Please add an email id first.'), 'warning')
-        return redirect(url_for('citizen.profile') if current_user.role == 'citizen' else url_for('admin.profile'))
-
-    current_user.pending_email = target_email
-    current_user.email_verified = False
-    current_user.email_otp_code = generate_otp()
-    current_user.email_otp_expires_at = get_ist_time() + timedelta(minutes=10)
-    db.session.commit()
-
-    try:
-        send_email_otp(target_email, current_user.email_otp_code)
-        flash(_('A new verification OTP has been sent to your email id.'), 'success')
-    except Exception as exc:
-        current_app.logger.exception('Failed to send email OTP to %s', target_email)
-        flash(_('OTP could not be sent. Please check email settings and try again.'), 'danger')
-    return redirect(url_for('auth.verify_email'))
 
 @auth_bp.route('/logout')
 @login_required
