@@ -268,7 +268,17 @@
         // Theme Management
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = themeToggle.querySelector('i');
+        const navbar = document.querySelector('.navbar');
         const currentTheme = localStorage.getItem('theme') || 'light';
+
+        function syncNavbarOffset() {
+            if (!navbar) return;
+            const navHeight = navbar.offsetHeight;
+            document.documentElement.style.setProperty('--navbar-offset', `${navHeight}px`);
+        }
+
+        syncNavbarOffset();
+        window.addEventListener('resize', syncNavbarOffset);
 
         if (currentTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
