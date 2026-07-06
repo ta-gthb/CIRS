@@ -97,6 +97,25 @@
     .btn-lg { padding: 1rem; font-size: 1.2rem; margin-top: 2rem; width: 100%; }
     .camera-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
     .disabled { opacity: 0.6; cursor: not-allowed !important; pointer-events: none; }
+    .leaflet-control-whereami {
+        background: #ffffff;
+        border: 1px solid #cfd6de;
+        border-radius: 6px;
+        color: #1f2d3d;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        line-height: 1;
+        padding: 0.45rem 0.65rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    .leaflet-control-whereami:hover {
+        background: #f2f6fa;
+    }
+    .leaflet-control-whereami:disabled {
+        cursor: wait;
+        opacity: 0.75;
+    }
 </style>
 {% endblock %}
 
@@ -115,6 +134,7 @@
         map = L.map('map').setView(defaultLocation, 15);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
         marker = L.marker(defaultLocation, { draggable: true }).addTo(map);
+        addWhereAmIControl();
 
         // Try initial sync with global state
         if (window.lastKnownPos && !initialLocationSet) {
@@ -138,6 +158,64 @@
         });
         
         mapInitialized = true;
+    }
+
+    function setMapLocation(lat, lng) {
+        const latlng = [lat, lng];
+        currentLat = lat;
+        currentLng = lng;
+        map.setView(latlng, 17);
+        marker.setLatLng(latlng);
+        updateLocationFields(lat, lng);
+    }
+
+    function addWhereAmIControl() {
+        const whereAmIControl = L.control({ position: 'topright' });
+
+        whereAmIControl.onAdd = function() {
+            const container = L.DomUtil.create('div', 'leaflet-bar');
+            const button = L.DomUtil.create('button', 'leaflet-control-whereami', container);
+            button.type = 'button';
+            button.innerText = "{{ _('Where am I?') }}";
+
+            L.DomEvent.disableClickPropagation(container);
+            L.DomEvent.on(button, 'click', function(e) {
+                L.DomEvent.stop(e);
+                locateUser(button);
+            });
+
+            return container;
+        };
+
+        whereAmIControl.addTo(map);
+    }
+
+    function locateUser(button) {
+        if (!navigator.geolocation) {
+            alert("{{ _('Geolocation is not supported by your browser.') }}");
+            return;
+        }
+
+        const originalText = button.innerText;
+        button.disabled = true;
+        button.innerText = "{{ _('Locating...') }}";
+
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                const lat = pos.coords.latitude;
+                const lng = pos.coords.longitude;
+                setMapLocation(lat, lng);
+                initialLocationSet = true;
+                button.disabled = false;
+                button.innerText = originalText;
+            },
+            () => {
+                alert("{{ _('Unable to fetch your current location. Please check location permissions.') }}");
+                button.disabled = false;
+                button.innerText = originalText;
+            },
+            { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
+        );
     }
 
     function syncMapWithGlobal(pos) {
