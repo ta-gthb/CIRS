@@ -100,14 +100,18 @@ def submit_report():
             flash(_('Location is required. Please enable GPS and allow location access.'), 'danger')
             return redirect(url_for('citizen.submit_report'))
 
-        lat = float(lat_val) if lat_val else None
-        lng = float(lng_val) if lng_val else None
+        try:
+            lat = float(lat_val) if lat_val is not None else None
+            lng = float(lng_val) if lng_val is not None else None
+        except (TypeError, ValueError):
+            flash(_('Invalid location coordinates. Please mark the location again on the map.'), 'danger')
+            return redirect(url_for('citizen.submit_report'))
         city = request.form.get('city')
         state = request.form.get('state')
         address = ""
 
         # Try to get city (district), state and full address from coordinates
-        if lat and lng:
+        if lat is not None and lng is not None:
             geo_city, geo_state, geo_addr = reverse_geocode(lat, lng)
             if geo_city and not city:
                 city = geo_city
@@ -118,7 +122,7 @@ def submit_report():
 
         # If city/state still unknown, find nearest admin officer using border info (bounding boxes)
         # as a fallback to ensure the report is seen by SOMEONE
-        if lat and lng and (not city or not state):
+        if lat is not None and lng is not None and (not city or not state):
             admins = User.query.filter_by(role='authority').filter(User.latitude.isnot(None), User.longitude.isnot(None)).all()
             if admins:
                 # 1. Check if the point is inside any admin's district bounding box
@@ -151,7 +155,7 @@ def submit_report():
                     if not city: city = nearest_admin.assigned_district
                     if not state: state = nearest_admin.assigned_state
         
-        if lat and lng:
+        if lat is not None and lng is not None:
             # Check for duplicates within 100m and same category
             existing_reports = Report.query.filter_by(category=category, status='pending').all()
             for existing in existing_reports:

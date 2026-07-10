@@ -424,6 +424,14 @@
             return;
         }
 
+        // Always use current map pin as the source of truth at submit time.
+        if (marker) {
+            const pin = marker.getLatLng();
+            updateLocationFields(pin.lat, pin.lng);
+            currentLat = pin.lat;
+            currentLng = pin.lng;
+        }
+
         // Simple state checks for final submission
         if (!window.isLocationActive || submitBtn.classList.contains('disabled-by-location')) {
             alert("{{ _('Location is required. Please enable GPS and allow location access.') }}");
